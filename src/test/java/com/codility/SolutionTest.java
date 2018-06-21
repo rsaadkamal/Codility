@@ -1,0 +1,20 @@
+package com.codility;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+/**
+ * Unit test for simple Solution.
+ */
+public class SolutionTest
+{
+    /**
+     * Rigorous Test :-)
+     */
+    @Test
+    public void shouldAnswerWithTrue()
+    {
+        assertTrue( true );
+    }
+}
