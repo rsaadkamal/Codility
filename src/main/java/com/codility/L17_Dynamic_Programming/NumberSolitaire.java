@@ -76,7 +76,9 @@ public class NumberSolitaire {
 
         for (int spacesLeftBehind = 1; spacesLeftBehind < N; spacesLeftBehind++) {
 
-            // this is necessary to reduce the iteration and improve performance
+            /*
+            * Necessary to reduce the iteration and improve performance
+            * */
             max[spacesLeftBehind] = max[spacesLeftBehind - 1];
 
             for (int diceFace = 2; diceFace <= 6; diceFace++) {
