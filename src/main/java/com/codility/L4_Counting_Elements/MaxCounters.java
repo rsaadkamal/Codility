@@ -93,13 +93,21 @@ public class MaxCounters {
 
         for (int i = 0; i < A.length; i++) {
 
+            /*
+             * If A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X)
+             * */
             if (A[i] <= N) {
 
                 counters[A[i] - 1] = Math.max(currMin, counters[A[i] - 1]);
                 counters[A[i] - 1]++;
 
                 currMax = Math.max(currMax, counters[A[i] - 1]);
-            } else if (A[i] == N + 1) {
+            }
+
+            /*
+             * If A[K] = N + 1 then operation K is getMaxElement counter
+             * */
+            else if (A[i] == N + 1) {
                 currMin = currMax;
             }
         }
