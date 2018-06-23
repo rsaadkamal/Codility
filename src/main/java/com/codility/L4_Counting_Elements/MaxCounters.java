@@ -2,14 +2,15 @@ package com.codility.L4_Counting_Elements;
 
 
 /*
-* You are given N counters, initially set to 0, and you have two possible operations on them:
+* You are given N counters, initially set to 0, and you have two possible operations on
+* them:
 
 increase(X) − counter X is increased by 1,
-max counter − all counters are set to the maximum value of any counter.
+getMaxElement counter − all counters are set to the maximum value of any counter.
 A non-empty array A of M integers is given. This array represents consecutive operations:
 
 if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
-if A[K] = N + 1 then operation K is max counter.
+if A[K] = N + 1 then operation K is getMaxElement counter.
 For example, given integer N = 5 and array A such that:
 
     A[0] = 3
@@ -71,13 +72,14 @@ public class MaxCounters {
 
     /*
      * If A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
-     * If A[K] = N + 1 then operation K is max counter.
+     * If A[K] = N + 1 then operation K is getMaxElement counter.
      *
      * Assume that:
      *
      * N and M are integers within the range [1..100,000];
      * Each element of array A is an integer within the range [1..N + 1].
      * */
+
 
     /*
      * solution - a
@@ -88,7 +90,6 @@ public class MaxCounters {
 
         int currMax = 0;
         int currMin = 0;
-
 
         for (int i = 0; i < A.length; i++) {
 
@@ -118,10 +119,6 @@ public class MaxCounters {
 
         int P[] = new int[N];
 
-        for (int i = 0; i < N; i++) {
-            P[i] = 0;
-        }
-
         for (int i = 0; i < A.length; i++) {
 
             if (A[i] == N + 1) {
@@ -134,23 +131,31 @@ public class MaxCounters {
         return P;
     }
 
-
+    /*
+     * set max to all the elements of the matrix
+     * */
     public void maxCounter(int[] P) {
 
-        int maxNo = max(P);
+        int maxNo = getMaxElement(P);
 
         for (int i = 0; i < P.length; i++) {
             P[i] = maxNo;
         }
     }
 
-    public int max(int[] P) {
+    /*
+     * get the max value of the matrix
+     * */
+    public int getMaxElement(int[] P) {
+
         int largest = P[0];
+
         for (int i = 1; i < P.length; i++) {
             if (P[i] > largest) {
                 largest = P[i];
             }
         }
+
         return largest;
     }
 
@@ -164,7 +169,6 @@ public class MaxCounters {
      * round
      * */
     public int[] solution2(int N, int[] A) {
-
 
         int P[] = new int[N];
         int max = 0;
@@ -196,21 +200,21 @@ public class MaxCounters {
     /*
      * solution - d
      */
-    public int[] solution3(final int n, final int[] a) {
-
+    public int[] solution3(int N, int[] A) {
 
         int max = 0;
-        int setmax = 0;
+        int setMax = 0;
 
-        final int[] result = new int[n];
+        int[] result = new int[N];
 
-        for (final int value : a) {
+        for (int a : A) {
 
-            if (value >= 1 && value <= n) {
+            if (a >= 1 && a <= N) {
 
-                final int ci = value - 1;
-                if (result[ci] < setmax) {
-                    result[ci] = setmax;
+                int ci = a - 1;
+
+                if (result[ci] < setMax) {
+                    result[ci] = setMax;
                 }
 
                 result[ci]++;
@@ -218,18 +222,18 @@ public class MaxCounters {
                 if (result[ci] > max) {
                     max = result[ci];
                 }
-            } else if (value == n + 1) {
-                setmax = max;
+            } else if (a == N + 1) {
+                setMax = max;
             }
         }
 
+        for (int i = 0; i < N; i++) {
 
-        for (int i = 0; i < n; i++) {
-
-            if (result[i] < setmax) {
-                result[i] = setmax;
+            if (result[i] < setMax) {
+                result[i] = setMax;
             }
         }
+
         return result;
     }
 }

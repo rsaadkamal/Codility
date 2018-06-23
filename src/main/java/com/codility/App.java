@@ -8,7 +8,7 @@ public class App {
 
     /*
     * If A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
-	* If A[K] = N + 1 then operation K is max counter.
+	* If A[K] = N + 1 then operation K is getMaxElement counter.
     * */
     public static int[] solution(int N, int[] A) {
 
