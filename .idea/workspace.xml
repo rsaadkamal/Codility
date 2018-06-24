@@ -839,27 +839,6 @@
       <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java" />
       <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/user/controller/UserControllerTest.java" />
       <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/CountDiv.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/GenomicRangeQuery.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/MinAvgTwoSlice.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/PassingCars.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L10_PrimeNumbers.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L11_Sieve.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L12_Gcd.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L13_Fibonacci.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L14_BinarySearch.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L15_CaterpillarMethod.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L16_GreedyAlgorithms.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L17_DynamicProgramming.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L1_Iterations.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L2_Arrays.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L3_TimeComplexity.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L4_Counting_Elements.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L5_Prefix_Sums.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L6_Sorting.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L7_Stacks.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L8_Leader.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Resources/L9_MaxSlice.pdf" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/Solarized Light.icls" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/_@user_Default.icls" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/eye-fitted.icls" />
@@ -4548,8 +4527,6 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MaxCounters.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MaxCounters.java" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -5112,8 +5089,8 @@
       <file leaf-file-name="MinAvgTwoSlice.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/MinAvgTwoSlice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="111" column="16" lean-forward="false" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
+            <state relative-caret-position="216">
+              <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -5239,15 +5216,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codility" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="codility" type="462c0819:PsiDirectoryNode" />
-              <item name="L5_Prefix_Sums" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -5410,12 +5378,12 @@
       <updated>1529587941701</updated>
       <workItem from="1529587947202" duration="1614000" />
       <workItem from="1529633299703" duration="4030000" />
-      <workItem from="1529661280810" duration="18758000" />
+      <workItem from="1529661280810" duration="19265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24402000" />
+    <option name="totallyTimeSpent" value="24909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="787" extended-state="6" />
@@ -5431,7 +5399,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2803468" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2803468" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2539342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -5684,8 +5652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/MinAvgTwoSlice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="111" column="16" lean-forward="false" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
+        <state relative-caret-position="216">
+          <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
           <folding />
         </state>
       </provider>
