@@ -839,10 +839,10 @@
       <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java" />
       <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/user/controller/UserControllerTest.java" />
       <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/Solarized Light.icls" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/_@user_Default.icls" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/eye-fitted.icls" />
@@ -5090,12 +5090,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NumberOfDiscIntersections.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java">
+      <file leaf-file-name="Nesting.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="96" column="38" lean-forward="false" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="204">
+              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+              <folding>
+                <element signature="e#1234#1245#0" expanded="true" />
+                <element signature="e#2145#2156#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -5108,6 +5111,14 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lengthOfElements - 1</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>index</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -5152,6 +5163,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java" />
       </list>
     </option>
   </component>
@@ -5232,7 +5247,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
-              <item name="L6_Sorting" type="462c0819:PsiDirectoryNode" />
+              <item name="L7_Stacks_And_Queues" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -5395,12 +5410,12 @@
       <updated>1529587941701</updated>
       <workItem from="1529587947202" duration="1614000" />
       <workItem from="1529633299703" duration="4030000" />
-      <workItem from="1529661280810" duration="22033000" />
+      <workItem from="1529661280810" duration="28664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27677000" />
+    <option name="totallyTimeSpent" value="34308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="787" extended-state="6" />
@@ -5704,9 +5719,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="96" column="38" lean-forward="false" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
+        <state relative-caret-position="199">
+          <caret line="161" column="13" lean-forward="true" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="157" column="8" lean-forward="true" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
+          <folding>
+            <element signature="e#1655#1664#0" expanded="false" />
+            <element signature="e#3093#3102#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+          <folding>
+            <element signature="e#1489#1500#0" expanded="false" />
+            <element signature="e#2380#2391#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding>
+            <element signature="e#2746#2755#0" expanded="false" />
+            <element signature="e#3777#3786#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding>
+            <element signature="e#1234#1245#0" expanded="true" />
+            <element signature="e#2145#2156#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
