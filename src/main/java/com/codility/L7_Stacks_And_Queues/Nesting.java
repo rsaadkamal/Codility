@@ -114,20 +114,20 @@ public class Nesting {
      */
     public int solution3(String s) {
 
-        int n = 0;
+        int count = 0;
 
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
-                n++;
+                count++;
             } else {
-                n--;
+                count--;
             }
-            if (n < 0) {
+            if (count < 0) {
                 return 0;
             }
         }
 
-        if (n > 0) {
+        if (count > 0) {
             return 0;
         }
 
