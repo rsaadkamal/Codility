@@ -105,7 +105,8 @@ public class MaxCounters {
             }
 
             /*
-             * If A[K] = N + 1 then operation K is getMaxElement counter
+             * If A[K] = N + 1 then operation K is getMaxElement counter,
+             * use a storage to perform the lazy update
              * */
             else if (A[i] == N + 1) {
                 currMin = currMax;
