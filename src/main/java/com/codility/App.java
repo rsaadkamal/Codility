@@ -6,16 +6,20 @@ import java.util.*;
 public class App {
 
 
-    public static int gcd1(int a, int b) {
+    public static int fibonacci(int n) {
 
-        if (a % b == 0) {
-            return b;
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
         }
-        return gcd1(b, a % b);
     }
+
 
     public static void main(String[] args) {
 
-        System.out.println(gcd1(10, 4));
+        System.out.println(fibonacci(3));
     }
 }

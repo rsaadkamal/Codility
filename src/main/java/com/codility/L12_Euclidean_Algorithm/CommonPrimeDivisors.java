@@ -153,8 +153,6 @@ public class CommonPrimeDivisors {
     }
 
 
-
-
     /*
      * solution - b
      */
@@ -201,9 +199,6 @@ public class CommonPrimeDivisors {
         }
         return b == 1;
     }
-
-
-
 
 
     /*
@@ -289,5 +284,4 @@ public class CommonPrimeDivisors {
             return gcd1(b, a % b);
         }
     }
-
 }
