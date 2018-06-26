@@ -76,17 +76,19 @@ public class MinAvgTwoSlice {
         */
 
         /*
-         * initially, define a demo slice and minimal avegare for slice.
-         * Then, keep it updating by moving forward
+         * initially, define a demo slice and minimal
+         * average for slice. Then, keep it updating
+         * by moving forward.
          * */
+
         int startIndex = 0;
         int endIndex = 1;
 
-        int startIndexOfSlice = 0;
+        int resultIndex = 0;
         int currentSum = A[0] + A[1];
 
         double min = (double) currentSum / 2;
-        double tmpMin = min;
+        double temporaryMin = min;
 
         while (true) {
 
@@ -100,7 +102,7 @@ public class MinAvgTwoSlice {
                 endIndex++;
 
                 if (endIndex == A.length) {
-                    return startIndexOfSlice;
+                    return resultIndex;
                 }
 
                 currentSum += A[endIndex];
@@ -116,11 +118,11 @@ public class MinAvgTwoSlice {
                 startIndex++;
             }
 
-            tmpMin = (double) currentSum / (endIndex - startIndex + 1);
+            temporaryMin = (double) currentSum / (endIndex - startIndex + 1);
 
-            if (tmpMin < min) {
-                startIndexOfSlice = startIndex;
-                min = tmpMin;
+            if (temporaryMin < min) {
+                resultIndex = startIndex;
+                min = temporaryMin;
             }
         }
     }

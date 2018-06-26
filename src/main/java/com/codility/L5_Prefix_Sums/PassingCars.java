@@ -56,7 +56,7 @@ public class PassingCars {
      * */
     public static int solution(int[] A) {
 
-        int res = 0;
+        int result = 0;
         int ones = 0;
 
         for (int i = A.length - 1; i >= 0; i--) {
@@ -64,14 +64,15 @@ public class PassingCars {
             if (A[i] == 1) {
                 ones++;
             } else {
-                res += ones;
+                result += ones;
 
-                if (res > 1000000000) {
+                if (result > 1000000000) {
                     return -1;
                 }
             }
         }
-        return res;
+
+        return result;
     }
 
 
@@ -87,12 +88,16 @@ public class PassingCars {
         int counter = 0;
 
         for (int i = A.length - 1; i >= 0; i--) {
+
             counter++;
+
             if (A[i] == 1) {
                 countOne++;
             } else if (A[i] == 0) {
+
                 countZero++;
                 pair += counter - countZero;
+
                 if (pair > 1000000000) {
                     return -1;
                 }

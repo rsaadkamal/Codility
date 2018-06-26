@@ -62,9 +62,10 @@ public class GenomicRangeQuery {
      * */
     public int[] solution(String S, int[] P, int[] Q) {
 
-        int[] impactFactors = new int[P.length];
+        int N = P.length;
+        int[] impactFactors = new int[N];
 
-        for (int i = 0; i < P.length; i++) {
+        for (int i = 0; i < N; i++) {
             impactFactors[i] = getImpactFactor(S, P[i], Q[i]);
         }
 
@@ -90,8 +91,8 @@ public class GenomicRangeQuery {
      * */
     public static int[] solution1(String S, int[] P, int[] Q) {
 
-        Map<Integer, ArrayList<Integer>> prefSums = getPrefSum(S);
         int[] res = new int[P.length];
+        Map<Integer, ArrayList<Integer>> prefSums = getPrefSum(S);
 
         for (int i = 0; i < Q.length; i++) {
 
@@ -233,13 +234,14 @@ public class GenomicRangeQuery {
     /*
      * solution - d
      * */
-    public int[] solution3(String s, int[] p, int[] q) {
+    public int[] solution3(String S, int[] P, int[] Q) {
 
-        final int[] cnt = new int[(s.length() + 1) * 4];
 
-        for (int i = 0; i < s.length(); i++) {
+        final int[] cnt = new int[(S.length() + 1) * 4];
 
-            final char c = s.charAt(i);
+        for (int i = 0; i < S.length(); i++) {
+
+            final char c = S.charAt(i);
             final int k = (i + 1) * 4;
 
             cnt[k] = cnt[k - 4];
@@ -248,48 +250,53 @@ public class GenomicRangeQuery {
             cnt[k + 3] = cnt[k - 1];
 
             switch (c) {
+
                 case 'A':
                     cnt[k]++;
                     break;
+
                 case 'C':
                     cnt[k + 1]++;
                     break;
+
                 case 'G':
                     cnt[k + 2]++;
                     break;
+
                 case 'T':
                     cnt[k + 3]++;
                     break;
             }
         }
 
-        for (int i = 0; i < p.length; i++) {
+        for (int i = 0; i < P.length; i++) {
 
-            final int from = p[i];
-            final int to = q[i];
+            final int from = P[i];
+            final int to = Q[i];
 
             int m = 4 * from;
             int n = 4 * (to + 1);
 
             if (cnt[n] - cnt[m] > 0) {
-                p[i] = 1;
+                P[i] = 1;
                 continue;
             }
 
             if (cnt[n + 1] - cnt[m + 1] > 0) {
-                p[i] = 2;
+                P[i] = 2;
                 continue;
             }
 
             if (cnt[n + 2] - cnt[m + 2] > 0) {
-                p[i] = 3;
+                P[i] = 3;
                 continue;
             }
 
             if (cnt[n + 3] - cnt[m + 3] > 0) {
-                p[i] = 4;
+                P[i] = 4;
             }
         }
-        return p;
+
+        return P;
     }
 }

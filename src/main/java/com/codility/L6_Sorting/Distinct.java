@@ -55,6 +55,7 @@ public class Distinct {
      */
     public static int solution1(int[] A) {
 
+
         Integer[] boxedA = Arrays.stream(A).boxed().toArray(Integer[]::new);
 //        Integer[] boxedA1 = IntStream.of(A).boxed().toArray( Integer[]::new );
 
@@ -78,16 +79,16 @@ public class Distinct {
     public static int solution2(int[] A) {
 
         Arrays.sort(A);
-        int dupl = 0;
+        int dups = 0;
 
         for (int i = 1; i < A.length; i++) {
 
             if (A[i] == A[i - 1]) {
-                dupl++;
+                dups++;
             }
         }
 
-        return A.length - dupl;
+        return A.length - dups;
     }
 
 
@@ -101,12 +102,12 @@ public class Distinct {
         }
 
         Arrays.sort(A);
-        int previousElement = A[0], count = 1;
+        int prevElm = A[0], count = 1;
 
         for (int i = 1; i < A.length; i++) {
 
-            if (A[i] != previousElement) {
-                previousElement = A[i];
+            if (A[i] != prevElm) {
+                prevElm = A[i];
                 count++;
             }
         }

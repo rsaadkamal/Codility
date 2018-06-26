@@ -36,7 +36,6 @@ public class CountDiv {
         if (A % K == 0) {
             return 1 + (B - A) / K;
         }
-
         return B / K - A / K;
     }
 
