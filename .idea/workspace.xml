@@ -4526,8 +4526,15 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/second_example/output.txt" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/CountFactors.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/CountFactors.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/EquiLeader.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/EquiLeader.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxProfit.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxProfit.java" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -5086,18 +5093,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NumberOfDiscIntersections.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -5110,9 +5106,11 @@
     <findStrings>
       <find>lengthOfElements - 1</find>
       <find>fibo</find>
+      <find>A.length</find>
     </findStrings>
     <replaceStrings>
       <replace>index</replace>
+      <replace>N</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -5141,18 +5139,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MissingInteger.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/PermCheck.java" />
         <option value="$PROJECT_DIR$/README.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/Dominator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/EquiLeader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxProfit.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxDoubleSliceSum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/CountFactors.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/MinPerimeterRectangle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MaxCounters.java" />
@@ -5160,7 +5148,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountNonDivisible.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L12_Euclidean_Algorithm/ChocolatesByNumbers.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L12_Euclidean_Algorithm/CommonPrimeDivisors.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/CountTriangles.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/AbsDistinct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/MaxNonoverlappingSegments.java" />
@@ -5180,6 +5167,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/Dominator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/EquiLeader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxProfit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/CountFactors.java" />
       </list>
     </option>
   </component>
@@ -5262,7 +5260,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
-              <item name="L6_Sorting" type="462c0819:PsiDirectoryNode" />
+              <item name="L10_Prime_Composite_Num" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="codility" type="462c0819:PsiDirectoryNode" />
+              <item name="L11_Sieve_Of_Eratosthenes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
@@ -5445,16 +5452,15 @@
       <workItem from="1529587947202" duration="1614000" />
       <workItem from="1529633299703" duration="4030000" />
       <workItem from="1529661280810" duration="33093000" />
-      <workItem from="1529908170583" duration="14585000" />
+      <workItem from="1529908170583" duration="18424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53322000" />
+    <option name="totallyTimeSpent" value="57161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="787" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -5465,11 +5471,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32225433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24855492" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27456647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25433525" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2546495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2546495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32658958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -5584,139 +5590,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="157" column="8" lean-forward="true" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding>
-            <element signature="e#1234#1245#0" expanded="false" />
-            <element signature="e#2145#2156#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/Dominator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/EquiLeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="185" column="44" lean-forward="false" selection-start-line="185" selection-start-column="44" selection-end-line="185" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxProfit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxDoubleSliceSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/CountFactors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/MinPerimeterRectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1363">
-          <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MaxCounters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="104" column="13" lean-forward="true" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountSemiprimes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountNonDivisible.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-          <folding>
-            <element signature="e#5191#5200#0" expanded="false" />
-            <element signature="e#5785#5794#0" expanded="false" />
-            <element signature="e#5921#5935#0" expanded="false" />
-            <element signature="e#6030#6039#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -5740,14 +5618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="82" column="4" lean-forward="false" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -5895,8 +5765,144 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        <state relative-caret-position="7">
+          <caret line="250" column="0" lean-forward="false" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountSemiprimes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountNonDivisible.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1148">
+          <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="209" column="0" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="114" column="5" lean-forward="false" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/Dominator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1025">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/EquiLeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-914">
+          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxDoubleSliceSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxProfit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="82" column="12" lean-forward="false" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/CountFactors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/MinPerimeterRectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
           <folding />
         </state>
       </provider>

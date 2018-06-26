@@ -52,20 +52,11 @@ public class MaxProfit {
      */
     public static int solution(int[] A) {
 
-        if (A.length == 0) {
+        int N = A.length;
+
+        if (N == 0) {
             return 0;
         }
-
-        int[] array = new int[A.length];
-        array[0] = 0;
-
-        /*
-         * amount of profit if bought yesterday and sold the current day
-         * */
-        for (int i = 1; i < A.length; i++) {
-            array[i] = A[i] - A[i - 1];
-        }
-
 
         int max = Arrays.stream(A).max().getAsInt();
 
@@ -78,15 +69,18 @@ public class MaxProfit {
 
         /*
          * keep track of the current profit
+         * and reset to zero if gets negative
          * */
         int maxEnding = 0;
 
         /*
-         * keep track of max profit
+         * keep track of max profit which is the max
+         * value of anytime occured in maxEnding
          * */
         int maxSlice = 0;
 
         for (int i = 0; i < A.length; i++) {
+
             maxEnding = (maxEnding + A[i]) > 0 ? (maxEnding + A[i]) : 0;
             maxSlice = maxSlice > maxEnding ? maxSlice : maxEnding;
         }
@@ -105,6 +99,7 @@ public class MaxProfit {
         int maxEnding = 0;
 
         for (int i = 1; i < length; i++) {
+
             maxEnding = Math.max(0, maxEnding + A[i] - A[i - 1]);
             maxProfit = Math.max(maxEnding, maxProfit);
         }

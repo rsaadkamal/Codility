@@ -96,13 +96,11 @@ public class Brackets {
      */
     public int solution1(String S) {
 
-
         Stack<Character> stack = new Stack<Character>();
 
         for (int i = 0; i < S.length(); i++) {
 
             switch (S.charAt(i)) {
-
 
                 case '(':
                 case '[':
@@ -208,11 +206,15 @@ public class Brackets {
                     break;
                 }
             }
+
+            if (numOfParentheses < 0 || numOfBraces < 0 || numOfSquareBrackets < 0) {
+                return 0;
+            }
         }
 
         /*
-        * check if the count of all kind of brackets are zero
-        * */
+         * check if the count of all kind of brackets are zero
+         * */
         if (numOfParentheses == 0 && numOfBraces == 0 && numOfSquareBrackets == 0) {
             return 1;
         }

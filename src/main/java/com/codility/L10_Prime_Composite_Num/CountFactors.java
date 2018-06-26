@@ -33,7 +33,7 @@ public class CountFactors {
      */
     public static int solution(int N) {
 
-        int res = 0;
+        int result = 0;
 
         /*
          * to reduece the number of iterations
@@ -42,18 +42,18 @@ public class CountFactors {
         for (int i = 1; (long) i * i <= N; i++) {
 
             if (i * i == N) {
-                return ++res;
+                return ++result;
             }
 
             /*
              * we get 2 factors/ divisors
              * */
             else if (N % i == 0) {
-                res += 2;
+                result += 2;
             }
         }
 
-        return res;
+        return result;
     }
 
 

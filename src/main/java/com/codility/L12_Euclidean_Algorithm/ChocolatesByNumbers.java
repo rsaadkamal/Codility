@@ -58,7 +58,12 @@ public class ChocolatesByNumbers {
         int count = 0;
 
         while (X[i] == 0) {
+
+            /*
+            * eat the chocolate in the i-th index
+            * */
             X[i] = 1;
+
             i = (i + M) % N;
             count++;
         }
@@ -80,6 +85,7 @@ public class ChocolatesByNumbers {
         int a = gcd(N, M, 1);
         return N / a;
     }
+
 
     private static int gcd(int a, int b, int res) {
 

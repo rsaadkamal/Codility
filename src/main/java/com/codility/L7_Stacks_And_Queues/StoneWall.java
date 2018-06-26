@@ -48,7 +48,6 @@ public class StoneWall {
         int numOfBlocks = 1;
         stack.push(H[0]);
 
-
         /*
          * ALGORITHMS:
          * ----------
@@ -65,13 +64,17 @@ public class StoneWall {
                 continue;
             }
 
-            // higher
+            /*
+            * new height is higher than the previous height
+            * */
             else if (stack.peek() < H[i]) {
                 stack.push(H[i]);
                 numOfBlocks++;
             }
 
-            // lower
+            /*
+             * new height is lower than the previous height
+             * */
             else {
 
                 while (stack.size() > 0 && stack.peek() > H[i]) {
@@ -163,7 +166,6 @@ public class StoneWall {
              * reduce the lenOfElements by 1
              * */
             while (lenOfElements > 0 && storage[lenOfElements - 1] > a) {
-
                 lenOfElements--;
             }
 

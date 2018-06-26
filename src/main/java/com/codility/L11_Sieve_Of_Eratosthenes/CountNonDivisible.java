@@ -67,9 +67,10 @@ public class CountNonDivisible {
      */
     public static int[] solution(int[] A) {
 
+        int N = A.length;
 
-        int[][] D = new int[2 * A.length + 1][2];
-        int[] res = new int[A.length];
+        int[][] D = new int[2 * N + 1][2];
+        int[] result = new int[N];
 
 
         /*
@@ -89,13 +90,13 @@ public class CountNonDivisible {
                0 0
             ]
         * */
-        for (int i = 0; i < A.length; i++) {
+
+        for (int i = 0; i < N; i++) {
             D[A[i]][0]++;
             D[A[i]][1] = -1;
         }
 
-
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < N; i++) {
 
             /*
              * we find the indexes where A has elements
@@ -116,7 +117,10 @@ public class CountNonDivisible {
                     if (A[i] % j == 0) {
 
                         /*
-                         * "D[A[i]][1]" = quantity of num that are the divisors of A[i]
+                         * i. "D[A[i]][1]" stores quantity of num A has equals to A[i]
+                         *
+                         * ii. "D[A[i]][1]" stores quantity of num that are the divisors
+                         * of A[i]
                          * */
                         D[A[i]][1] += D[j][0];
 
@@ -131,12 +135,11 @@ public class CountNonDivisible {
             }
         }
 
-        for (int i = 0; i < A.length; i++) {
-
-            res[i] = A.length - D[A[i]][1];
+        for (int i = 0; i < N; i++) {
+            result[i] = N - D[A[i]][1];
         }
 
-        return res;
+        return result;
     }
 
 
@@ -161,9 +164,11 @@ public class CountNonDivisible {
                 for (int j = 1; j <= Math.sqrt(A[i]); j++) {
 
                     if (A[i] % j == 0 && A[i] / j != j) {
+
                         D[A[i]][1] += D[j][0];
                         D[A[i]][1] += D[A[i] / j][0];
                     } else if (A[i] % j == 0 && A[i] / j == j) {
+
                         D[A[i]][1] += D[j][0];
                     }
                 }

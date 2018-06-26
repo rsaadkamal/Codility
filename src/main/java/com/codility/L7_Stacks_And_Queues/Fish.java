@@ -83,6 +83,8 @@ public class Fish {
 
                     /*
                      * upstream fish eat the downstream fish
+                     * we will check if there are more  d/s
+                     * fish can be eaten by u/s
                      * */
                     stack.pop();
                 }
@@ -95,6 +97,7 @@ public class Fish {
                 stack.push(i);
             }
         }
+
         return numOfTotalFish - numOfDeadFish;
     }
 
@@ -111,6 +114,7 @@ public class Fish {
         for (int i = 0; i < A.length; i++) {
 
             if (B[i] == 0) {
+
                 while (!stack.isEmpty() && A[i] > stack.peek()) {
                     stack.pop();
                 }
@@ -145,6 +149,7 @@ public class Fish {
             } else {
 
                 while (true) {
+
                     if (lenOfElements == 0) {
                         break;
                     } else {

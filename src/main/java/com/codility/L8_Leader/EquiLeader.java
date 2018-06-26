@@ -58,8 +58,9 @@ public class EquiLeader {
      * An equi leader is an index S such that 0 ≤ S < N − 1 and two
      * sequences A[0], A[1], ..., A[S] and A[S + 1], A[S + 2], ...,
      * A[N − 1] have leaders of the same value. The goal is to count
-     * the number of equi leaders
+     * the number of equi leaders.
      * */
+
     /*
      * solution - a
      */
@@ -74,11 +75,11 @@ public class EquiLeader {
                 continue;
             }
 
-            if (stack.peek() == A[i])
+            if (stack.peek() == A[i]) {
                 stack.push(A[i]);
-
-            else
+            } else {
                 stack.pop();
+            }
         }
 
         /*
@@ -120,6 +121,10 @@ public class EquiLeader {
             }
 
             /*
+             * PREMISE: If certain number x has higher frequency than all other numbers of an
+             * array, x has occurance more than half of the total array size.
+             *
+             *
              *  Let the number X in section of L is C. So the number of other  elements in L
              *  is L-C. So we have C > L-C, which is the same as 2C > L, or C > L/2. So, if
              *  we can prove, x is greater than other types of element in a section, then x

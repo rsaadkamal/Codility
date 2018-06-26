@@ -73,7 +73,7 @@ public class Nesting {
             }
 
             /*
-             * check for the negatives
+             * check for the negatives input
              * */
             if (count < 0) {
                 return 0;
@@ -92,45 +92,25 @@ public class Nesting {
         Stack<Character> stack = new Stack<Character>();
 
         for (int i = 0; i < S.length(); i++) {
+
             switch (S.charAt(i)) {
+
                 case '(':
+
                     stack.push(S.charAt(i));
                     break;
+
                 case ')':
+
                     if (stack.isEmpty() || stack.peek() != '(') {
                         return 0;
                     } else {
                         stack.pop();
                     }
+
                     break;
             }
         }
         return stack.isEmpty() ? 1 : 0;
-    }
-
-
-    /*
-     * solution - d
-     */
-    public int solution3(String s) {
-
-        int count = 0;
-
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '(') {
-                count++;
-            } else {
-                count--;
-            }
-            if (count < 0) {
-                return 0;
-            }
-        }
-
-        if (count > 0) {
-            return 0;
-        }
-
-        return 1;
     }
 }
