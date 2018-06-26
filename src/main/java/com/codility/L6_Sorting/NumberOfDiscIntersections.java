@@ -47,7 +47,7 @@ public class NumberOfDiscIntersections {
 
 
     /*
-    *   -------------------------------------------------------------------
+        -------------------------------------------------------------------
         Type        Size        Bytes Range
         -------------------------------------------------------------------
         byte        1 byte      -128 to 127
@@ -59,7 +59,6 @@ public class NumberOfDiscIntersections {
         long        8 bytes     -9,223,372,036,854,775,808 to (9 x 10ˆ18)
         9,223,372,036,854,775,807
 
-
         float       4 bytes     approximately ±3.40282347E+38F
         (6-7 significant decimal digits)
         Java implements IEEE 754 standard
@@ -69,25 +68,27 @@ public class NumberOfDiscIntersections {
 
         char        2 byte      0 to 65,536 (unsigned)
 
-        boolean not precisely defined*  true or false
+        boolean not precisely defined   true or false
         -------------------------------------------------------------------
     * */
 
+
     /*
      * Compute the number of intersections in a sequence of discs.
-     * The J-th disc is drawn with its center at (J, 0) and radius A[J].
+     * The J-th disc is drawn with its center at (J, 0) and radius
+     * A[J].
      *
      * PREMISE: if (i + A[i]) > (j - A[j]), the intersection occurs.
      *
      * */
-
 
     /*
      * solution - a
      * */
     public static int solution(int[] A) {
 
-        int numOfIntersections = 0;
+
+        int intersections = 0;
 
         for (int i = 0; i < A.length - 1; i++) {
 
@@ -97,14 +98,17 @@ public class NumberOfDiscIntersections {
                  * intersection occurs between the disks
                  * */
                 if ((long) A[i] + i >= j - (long) A[j]) {
-                    numOfIntersections++;
-                    if (numOfIntersections > 10000000)
+
+                    intersections++;
+
+                    if (intersections > 10000000) {
                         return -1;
+                    }
                 }
             }
         }
 
-        return numOfIntersections;
+        return intersections;
     }
 
 
@@ -118,28 +122,28 @@ public class NumberOfDiscIntersections {
      * */
     public int solution1(int[] A) {
 
-        int n = A.length;
-        int[] sum = new int[n];
+        int N = A.length;
+        int[] sum = new int[N];
 
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < N; i++) {
 
             int right;
 
             /*
              * If The right point is lesser than the largest center
-             * or (i+A[i]) <= (n-1) let sum[i+A[i]]++, means there
+             * or (i+A[i]) <= (N-1) let sum[i+A[i]]++, means there
              * is one disk that i+A[i]
              * */
-            if (n - i - 1 >= A[i]) {
+            if (N - i - 1 >= A[i]) {
                 right = i + A[i];
             }
 
             /*
-             * IF i+A[i] > n-1
+             * IF i+A[i] > N-1
              * */
             else {
-                right = n - 1;
+                right = N - 1;
             }
 
             sum[right]++;
@@ -148,28 +152,30 @@ public class NumberOfDiscIntersections {
         /*
          * sum[i] means that there are sum[i] number of values that <= i
          * */
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < N; i++) {
             sum[i] += sum[i - 1];
         }
 
-        long ans = (long) n * (n - 1) / 2;
+        long ans = (long) N * (N - 1) / 2;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < N; i++) {
+
             int left;
 
             if (A[i] > i) {
                 left = 0;
             }
+
             /*
-             * Find the positive i-A[i]
+             * Find the positive i - A[i]
              * */
             else {
                 left = i - A[i];
             }
 
             /*
-             * Find the number that is smaller than 1-A[i], sum[n-1]
-             * will never be used as we only need sum[n-1-1] at most
+             * Find the number that is smaller than 1-A[i], sum[N-1]
+             * will never be used as we only need sum[N-1-1] at most
              * */
             if (left > 0) {
                 ans -= sum[left - 1];//.
@@ -187,58 +193,64 @@ public class NumberOfDiscIntersections {
     /*
      * solution - c
      * */
-    public int solution2(int[] a) {
+    public int solution2(int[] A) {
 
 
-        final long[] lefts = new long[a.length];
-        final long[] rights = new long[a.length];
+        int N = A.length;
 
-        for (int i = 0; i < a.length; i++) {
+        long[] lefts = new long[N];
+        long[] rights = new long[N];
 
-            lefts[i] = (long) i - (long) a[i];
-            rights[i] = (long) i + (long) a[i];
+        for (int i = 0; i < N; i++) {
+
+            lefts[i] = (long) i - (long) A[i];
+            rights[i] = (long) i + (long) A[i];
         }
 
         Arrays.sort(lefts);
         Arrays.sort(rights);
 
-        final int[] lm = new int[lefts.length];
+        int[] lm = new int[lefts.length];
         int v = 0;
 
         for (int i = lefts.length - 2; i >= 0; i--) {
+
             if (lefts[i] != lefts[i + 1]) {
                 v = lefts.length - i - 1;
             }
+
             lm[i] = v;
         }
 
         v = 0;
-        final int[] rl = new int[rights.length];
+        int[] rl = new int[rights.length];
 
         for (int i = 1; i < rights.length; i++) {
+
             if (rights[i - 1] != rights[i]) {
                 v = i;
             }
+
             rl[i] = v;
         }
 
         int c = 0;
 
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 0; i < N; i++) {
 
-            final long ar = (long) i + (long) a[i];
+            long ar = (long) i + (long) A[i];
 
             int idx = Arrays.binarySearch(lefts, ar);
             int e;
 
             if (idx < 0) {
                 idx = -1 - idx;
-                e = a.length - idx;
+                e = A.length - idx;
             } else {
                 e = lm[idx];
             }
 
-            final long al = (long) i - (long) a[i];
+            long al = (long) i - (long) A[i];
 
             idx = Arrays.binarySearch(rights, al);
 
@@ -249,7 +261,8 @@ public class NumberOfDiscIntersections {
                 e += rl[idx];
             }
 
-            c = c + (a.length - e - 1);
+            c = c + (A.length - e - 1);
+
             if (c > 20000000) {
                 return -1;
             }

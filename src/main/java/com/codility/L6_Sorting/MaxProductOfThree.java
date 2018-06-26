@@ -63,14 +63,14 @@ public class MaxProductOfThree {
         /*
          * all the elements are positives
          * */
-        int maxWithAllPos = A[A.length - 1] * A[A.length - 2] * A[A.length - 3];
+        int maxWithPositives = A[A.length - 1] * A[A.length - 2] * A[A.length - 3];
 
         /*
          * mix of positives and negatives
          * */
         int maxWithMixesOfPosAndNeg = A[A.length - 1] * A[0] * A[1];
 
-        return maxWithAllPos > maxWithMixesOfPosAndNeg ? maxWithAllPos : maxWithMixesOfPosAndNeg;
+        return maxWithPositives > maxWithMixesOfPosAndNeg ? maxWithPositives : maxWithMixesOfPosAndNeg;
     }
 
 
@@ -89,8 +89,6 @@ public class MaxProductOfThree {
          * */
         int[] mins = {Integer.MAX_VALUE, Integer.MAX_VALUE};
 
-
-        // O(n)
         for (int a : A) {
             updateMaxes(a, maxes);
             updateMins(a, mins);
@@ -135,7 +133,7 @@ public class MaxProductOfThree {
 
 
     /*
-     * soilution - c
+     * solution - c
      */
     /*
      * O(n) solution. O(n * log(n)) involves sorting, than calculation two
@@ -143,29 +141,30 @@ public class MaxProductOfThree {
      * negative and give product more than last - 2 and last - 1) and last-2,
      * last-1, last
      * */
-    public int solution2(int[] a) {
+    public int solution2(int[] A) {
 
 
-        int minOne = a[0] > a[1] ? a[1] : a[0];
-        int maxOne = a[0] > a[1] ? a[0] : a[1];
+        int minOne = A[0] > A[1] ? A[1] : A[0];
+        int maxOne = A[0] > A[1] ? A[0] : A[1];
 
-        int minTwo = a[0] * a[1];
-        int maxTwo = a[0] * a[1];
+        int minTwo = A[0] * A[1];
+        int maxTwo = A[0] * A[1];
 
         int result = Integer.MIN_VALUE;
 
-        for (int i = 2; i < a.length; i++) {
+        for (int i = 2; i < A.length; i++) {
 
             /*
              * find max triplet value
              * */
-            int tmp = minTwo * a[i];
+            int tmp = minTwo * A[i];
 
             if (tmp > result) {
                 result = tmp;
             }
 
-            tmp = maxTwo * a[i];
+            tmp = maxTwo * A[i];
+
             if (tmp > result) {
                 result = tmp;
             }
@@ -173,7 +172,7 @@ public class MaxProductOfThree {
             /*
              * find max/min duplets values
              * */
-            tmp = minOne * a[i];
+            tmp = minOne * A[i];
 
             if (tmp < minTwo) {
                 minTwo = tmp;
@@ -183,7 +182,7 @@ public class MaxProductOfThree {
                 maxTwo = tmp;
             }
 
-            tmp = maxOne * a[i];
+            tmp = maxOne * A[i];
 
             if (tmp < minTwo) {
                 minTwo = tmp;
@@ -196,14 +195,15 @@ public class MaxProductOfThree {
             /*
              * find max/min values;
              * */
-            if (a[i] < minOne) {
-                minOne = a[i];
+            if (A[i] < minOne) {
+                minOne = A[i];
             }
 
-            if (a[i] > maxOne) {
-                maxOne = a[i];
+            if (A[i] > maxOne) {
+                maxOne = A[i];
             }
         }
+
         return result;
     }
 }
