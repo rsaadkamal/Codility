@@ -71,6 +71,7 @@ public class PermMissingElem {
         for (final int a : A) {
             sum -= a;
         }
+
         return (int) sum;
     }
 
@@ -80,15 +81,15 @@ public class PermMissingElem {
      */
     public int solution2(int[] A) {
 
-        int realSum = 0;
+        int tSum = 0;
         int N = A.length;
 
         for (int i = 0; i < N; i++) {
-            realSum = realSum + A[i];
+            tSum = tSum + A[i];
         }
 
-        int originalSum = (N + 1) * (N + 2) / 2;
-        return (originalSum - realSum);
+        int sum = (N + 1) * (N + 2) / 2;
+        return (sum - tSum);
     }
 
 
@@ -96,9 +97,10 @@ public class PermMissingElem {
      * solution - d
      */
     /*
-     * If A[i]= n, then set A[n-1] = 0. The space j !=0, then return j+1 is missing
+     * If A[i]= n, then set A[n-1] = 0. The space j !=0, then return (j+1) is missing
      * */
     public int solution4(int[] A) {
+
 
         for (int i = 0; i < A.length; i++) {
 
@@ -106,14 +108,14 @@ public class PermMissingElem {
                 continue;
             }
 
-            int n = A[i] - 1;
+            int index = A[i] - 1;
 
-            while (n != -1 && n < A.length) {
+            while (index != -1 && index < A.length) {
 
-                int next = A[n] - 1;
+                int next = A[index] - 1;
 
-                A[n] = 0;
-                n = next;
+                A[index] = 0;
+                index = next;
             }
         }
 

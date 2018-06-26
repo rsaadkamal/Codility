@@ -101,10 +101,9 @@ public class CyclicRotation {
 
             if (index + K > N - 1) {
                 map.put(index + K - N, A[index]);
-                continue;
+            } else {
+                map.put(index + K, A[index]);
             }
-
-            map.put(index + K, A[index]);
         }
 
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {

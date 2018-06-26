@@ -62,7 +62,7 @@ public class FrogRiverOne {
      * */
     public static int solution(int[] A, int X) {
 
-        int distance = 0;
+        int distanceFilled = 0;
 
         boolean[] hasLeaf = new boolean[X + 1];
 
@@ -70,10 +70,10 @@ public class FrogRiverOne {
 
             if (!hasLeaf[A[i]] && A[i] <= X) {
                 hasLeaf[A[i]] = true;
-                distance++;
+                distanceFilled++;
             }
 
-            if (distance == X) {
+            if (distanceFilled == X) {
                 return i;
             }
         }
@@ -87,6 +87,7 @@ public class FrogRiverOne {
      * */
     public int solution1(int X, int[] A) {
 
+
         int count = X;
         int[] positions = new int[X];
 
@@ -95,7 +96,6 @@ public class FrogRiverOne {
         }
 
         for (int timeIndex = 0; timeIndex < A.length; timeIndex++) {
-
 
             if (positions[A[timeIndex] - 1] == -1) {
 
@@ -115,18 +115,17 @@ public class FrogRiverOne {
     /*
      * solution - c
      * */
-    public int solution(int x, int[] a) {
+    public int solution(int X, int[] A) {
 
-        final int[] positions = new int[x];
+        int[] positions = new int[X];
 
-        int distance = x;
-        int i = 0;
+        int distance = X;
+        int i;
 
-        for (; distance != 0 && i < a.length; i++) {
+        for (i = 0; distance != 0 && i < A.length; i++) {
 
-            if (a[i] <= x && positions[a[i] - 1] == 0) {
-
-                positions[a[i] - 1] = 1;
+            if (A[i] <= X && positions[A[i] - 1] == 0) {
+                positions[A[i] - 1] = 1;
                 distance--;
             }
         }
@@ -134,6 +133,7 @@ public class FrogRiverOne {
         if (distance > 0) {
             return -1;
         }
+
         return i - 1;
     }
 }

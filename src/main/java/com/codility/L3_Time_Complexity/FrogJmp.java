@@ -41,20 +41,21 @@ public class FrogJmp {
     /*
      * solution-a
      * */
-    public static int solution(int x, int y, int d) {
-        return (int) Math.ceil((double) (y - x) / d);
+    public static int solution(int X, int Y, int D) {
+
+        return (int) Math.ceil((float) (Y - X) / D);
     }
 
 
     /*
      * solution-b
      * */
-    public int solution1(int x, int y, int d) {
+    public int solution1(int X, int Y, int D) {
 
-        final int diff = y - x;
-        int result = diff / d;
+        int diff = Y - X;
+        int result = diff / D;
 
-        if (result * d != diff) {
+        if (result * D != diff) {
             result++;
         }
 
@@ -80,5 +81,4 @@ public class FrogJmp {
             return step;
         }
     }
-
 }

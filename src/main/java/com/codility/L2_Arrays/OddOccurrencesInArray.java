@@ -53,8 +53,8 @@ public class OddOccurrencesInArray {
 
         int result = arr[0];
 
-        for (int j = 1; j < arr.length; j++) {
-            result ^= arr[j];
+        for (int i = 1; i < arr.length; i++) {
+            result ^= arr[i];
         }
 
         return result;
@@ -71,12 +71,12 @@ public class OddOccurrencesInArray {
 
         List<Integer> list = new ArrayList<>();
 
-        for (int j = 0; j < arr.length; j++) {
+        for (int i = 0; i < arr.length; i++) {
 
-            if (!list.contains(arr[j])) {
-                list.add(arr[j]);
+            if (!list.contains(arr[i])) {
+                list.add(arr[i]);
             } else {
-                list.remove(arr[j]);
+                list.remove(arr[i]);
             }
         }
 
