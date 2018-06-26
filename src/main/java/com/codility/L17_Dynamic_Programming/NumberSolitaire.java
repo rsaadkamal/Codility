@@ -69,35 +69,40 @@ public class NumberSolitaire {
     public int solution(int[] A) {
 
         int N = A.length;
-        int[] max = new int[N];
+        int[] maximumSum = new int[N];
 
-        max[0] = A[0];
+        maximumSum[0] = A[0];
 
 
-        for (int spacesLeftBehind = 1; spacesLeftBehind < N; spacesLeftBehind++) {
+        for (int spacesIndex = 1; spacesIndex < N; spacesIndex++) {
 
             /*
-            * Necessary to reduce the iteration and improve performance
-            * */
-            max[spacesLeftBehind] = max[spacesLeftBehind - 1];
+             * Necessary to reduce the iteration and improve performance
+             * */
+            maximumSum[spacesIndex] = maximumSum[spacesIndex - 1];
 
             for (int diceFace = 2; diceFace <= 6; diceFace++) {
+
+                if(spacesIndex == 1){
+                    break;
+                }
 
                 /*
                  * we can only go backward whichever smaller
                  * of the spaces left behind or 6 dice faces.
                  * */
 
-                if (spacesLeftBehind >= diceFace) {
-                    max[spacesLeftBehind] = Math.max(max[spacesLeftBehind], max[spacesLeftBehind - diceFace]);
-                } else
+                if (spacesIndex >= diceFace) {
+                    maximumSum[spacesIndex] = Math.max(maximumSum[spacesIndex], maximumSum[spacesIndex - diceFace]);
+                } else {
                     break;
+                }
             }
 
-            max[spacesLeftBehind] += A[spacesLeftBehind];
+            maximumSum[spacesIndex] += A[spacesIndex];
         }
 
-        return max[N - 1];
+        return maximumSum[N - 1];
     }
 
 }

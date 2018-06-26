@@ -46,6 +46,7 @@ public class CommonPrimeDivisors {
      */
     private static int solution(int[] A, int[] B) {
 
+
         int count = 0;
         int N = A.length;
 

@@ -109,14 +109,15 @@ public class Ladder {
 
         fib[1] = 1;
 
-        for (int j = 0; j < N; j++) {
+        for (int i = 0; i < N; i++) {
 
             /*
              * Confirm that the fibonacci number will not
              * exceed the max integer value of 1<<n = 2^n
              * */
-            int i = j + 2;
-            fib[i] = (fib[i - 1] + fib[i - 2]) % (1 << 30);
+            int fIndex = i + 2;
+
+            fib[fIndex] = (fib[fIndex - 1] + fib[fIndex - 2]) % (1 << 30);
         }
 
         for (int i = 0; i < N; i++) {

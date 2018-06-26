@@ -66,15 +66,15 @@ public class CountTriangles {
             for (int j = i + 1; j < N - 1; j++) {
 
                 /*
-                 * if A[i] + A[j]) > A[front] satisfies, then the
-                 * values after j-th index will also satisfies the
-                 * condition
+                 * if A[i] + A[j]) > A[front] satisfies, then the higher
+                 * values of j > j of current will also satisfies the
+                 * condition till A[front]
                  * */
                 while (front < N && (A[i] + A[j]) > A[front]) {
                     front++;
                 }
 
-                result += front - j - 1;
+                result += front - (j + 1);
             }
         }
 
