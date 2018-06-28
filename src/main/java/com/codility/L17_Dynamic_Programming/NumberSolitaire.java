@@ -81,10 +81,12 @@ public class NumberSolitaire {
              * */
             maximumSum[spacesIndex] = maximumSum[spacesIndex - 1];
 
+            noNeedloop:
             for (int diceFace = 2; diceFace <= 6; diceFace++) {
 
-                if(spacesIndex == 1){
-                    break;
+                if (spacesIndex == 1) {
+
+                    break noNeedloop;
                 }
 
                 /*
