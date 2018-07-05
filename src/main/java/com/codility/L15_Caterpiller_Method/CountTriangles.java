@@ -36,10 +36,28 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 
 import java.util.Arrays;
 
+
+/*
+* Task Score 100%
+* Correctness 100%
+* Performance 100%
+* /
+
 /**
  * Created by Chaklader on 6/25/18.
  */
 public class CountTriangles {
+
+
+
+    /*
+     * CONDITIONS
+     * ----------
+     *
+     * i.   A[P] + A[Q] > A[R]
+     * ii.  A[Q] + A[R] > A[P]
+     * iii. A[R] + A[P] > A[Q]
+     * */
 
 
     /*
@@ -67,7 +85,7 @@ public class CountTriangles {
 
                 /*
                  * if A[i] + A[j]) > A[front] satisfies, then the higher
-                 * values of j > j of current will also satisfies the
+                 * values of j > j(current) will also satisfies the
                  * condition till A[front]
                  * */
                 while (front < N && (A[i] + A[j]) > A[front]) {
