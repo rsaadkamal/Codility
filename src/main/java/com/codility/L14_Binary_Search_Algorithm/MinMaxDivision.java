@@ -63,26 +63,32 @@ public class MinMaxDivision {
      * You should divide this array into K blocks of consecutive elements.
      * The size of the block is any integer between 0 and N. Every element
      * of the array should belong to some block. The goal is to minimize the
-     * large sum. In the above example, 6 is the minimal large sum.
+     * large sum.
      * */
+
     /*
      * solution -a
      */
     public static int solution(int K, int M, int[] A) {
 
+
         int sum = 0;
         int max = 0;
 
+        /*
+         * Get the sum and miximum value of the provided array
+         * */
         for (int i = 0; i < A.length; i++) {
             max = max >= A[i] ? max : A[i];
             sum += A[i];
         }
 
         /*
-         * get an approximate value for the
-         * minimized large sum for a block
+         * Get an approximate value for the large sum for
+         * a block. We will do the optimization later
          * */
         int idealMin = Math.max((int) Math.ceil((double) sum / K), max);
+
         return binarySearchIterative(idealMin, sum, A, K);
     }
 
@@ -92,46 +98,52 @@ public class MinMaxDivision {
      * */
     public static int binarySearchIterative(int min, int max, int[] A, int K) {
 
-        int res = 0;
+        int minimizedLargedSum = 0;
 
-        int beg = min;
-        int end = max;
+        int minimumValue = min;
+        int maximumValue = max;
 
-        while (beg <= end) {
+        while (minimumValue <= maximumValue) {
 
-            int middle = (beg + end) / 2;
+            int middle = (minimumValue + maximumValue) / 2;
 
             if (verifySolution(middle, A, K)) {
-                end = middle - 1;
-                res = middle;
+                maximumValue = middle - 1;
+                minimizedLargedSum = middle;
             } else {
-                beg = middle + 1;
+                minimumValue = middle + 1;
             }
         }
 
-        return res;
+        return minimizedLargedSum;
     }
 
 
+    /*
+     *
+     * */
     public static boolean verifySolution(int middle, int[] A, int K) {
 
-        int tmp = 0;
-        int count = 1;
+        int sliceSum = 0;
+
+        int countOfBlocks = 1;
+
+        int N = A.length;
 
         /*
          * check if we can divide the array in K parts with sum
          * of each part <= proposed value (ie middle)
          */
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < N; i++) {
 
-            if (tmp + A[i] <= middle) {
-                tmp += A[i];
+            if (sliceSum + A[i] <= middle) {
+                sliceSum += A[i];
             } else {
 
-                count++;
-                tmp = A[i];
+                countOfBlocks++;
+                sliceSum = A[i];
 
-                if (count > K) {
+                if (countOfBlocks > K) {
                     return false;
                 }
             }
@@ -140,6 +152,10 @@ public class MinMaxDivision {
         return true;
     }
 
+
+    /*
+     *
+     * */
     public static int binarySearchRecursive(int min, int max, int[] A, int K) {
 
         if (max - min < 2) {
