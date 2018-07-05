@@ -133,7 +133,7 @@ public class NailingPlanks {
 
         for (int i = 0; i < planksSize; i++) {
 
-            resultIndex = minIndex(A[i], B[i], sortedNails, resultIndex);
+            resultIndex = getMinimumLengthForNail(A[i], B[i], sortedNails, resultIndex);
 
             if (resultIndex == -1) {
                 return -1;
@@ -147,9 +147,9 @@ public class NailingPlanks {
 
 
     /*
-     * get the minimum index for the nail
+     * Get the nail with the minimum length
      */
-    public static int minIndex(int plankStart, int plankEnd, int[][] sortedNails, int oldIndex) {
+    public static int getMinimumLengthForNail(int plankStart, int plankEnd, int[][] sortedNails, int oldIndex) {
 
 
         int startIndex = 0;
@@ -190,6 +190,17 @@ public class NailingPlanks {
         if (resultIndex == -1 || sortedNails[resultIndex][0] > plankEnd) {
             return -1;
         }
+
+        return getMinimumIndex(resultIndex, sortedNails, plankEnd, oldIndex);
+    }
+
+
+    /*
+     * get the nail with the minimum index
+     * */
+    public static int getMinimumIndex(int resultIndex, int[][] sortedNails, int plankEnd, int oldIndex) {
+
+        int N = sortedNails.length;
 
         /*
          * get the real index for the nail in the sortedNails matrix
