@@ -54,6 +54,14 @@ expected worst-case time complexity is O(N*log(N+M));
 expected worst-case space complexity is O(1) (not counting the storage required for input arguments).
 * */
 
+
+/*
+* Task Score 100%
+* Correctness 100%
+* Performance 100%
+* /
+
+
 /**
  * Created by Chaklader on 6/28/18.
  */
@@ -89,14 +97,15 @@ public class MinMaxDivision {
          * */
         int idealMin = Math.max((int) Math.ceil((double) sum / K), max);
 
-        return binarySearchIterative(idealMin, sum, A, K);
+        return searchI(idealMin, sum, A, K);
     }
 
 
     /*
-     * The goal is to minimize the large sum
+     * conduct a binary search iteratively
+     * to minimize the large sum
      * */
-    public static int binarySearchIterative(int min, int max, int[] A, int K) {
+    public static int searchI(int min, int max, int[] A, int K) {
 
         int minimizedLargedSum = 0;
 
@@ -107,7 +116,7 @@ public class MinMaxDivision {
 
             int middle = (minimumValue + maximumValue) / 2;
 
-            if (verifySolution(middle, A, K)) {
+            if (verify(middle, A, K)) {
                 maximumValue = middle - 1;
                 minimizedLargedSum = middle;
             } else {
@@ -120,9 +129,30 @@ public class MinMaxDivision {
 
 
     /*
-     *
+     * conduct a binary search recursively
      * */
-    public static boolean verifySolution(int middle, int[] A, int K) {
+    public static int searchR(int min, int max, int[] A, int K) {
+
+        if (max - min < 2) {
+
+            if (verify(min, A, K)) {
+                return min;
+            } else {
+                return max;
+            }
+        }
+
+        int middle = (min + max) / 2;
+
+        if (verify(middle, A, K)) {
+            return searchR(min, middle, A, K);
+        } else {
+            return searchR(middle, max, A, K);
+        }
+    }
+
+
+    public static boolean verify(int middle, int[] A, int K) {
 
         int sliceSum = 0;
 
@@ -150,30 +180,6 @@ public class MinMaxDivision {
         }
 
         return true;
-    }
-
-
-    /*
-     *
-     * */
-    public static int binarySearchRecursive(int min, int max, int[] A, int K) {
-
-        if (max - min < 2) {
-
-            if (verifySolution(min, A, K)) {
-                return min;
-            } else {
-                return max;
-            }
-        }
-
-        int middle = (min + max) / 2;
-
-        if (verifySolution(middle, A, K)) {
-            return binarySearchRecursive(min, middle, A, K);
-        } else {
-            return binarySearchRecursive(middle, max, A, K);
-        }
     }
 
 
