@@ -17,6 +17,7 @@ For example, array A such that:
     A[5] = 5
     A[6] = -1
     A[7] = 2
+
 contains the following example double slices:
 
 double slice (0, 3, 6), sum is 2 + 6 + 4 + 5 = 17,
