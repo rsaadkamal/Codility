@@ -51,50 +51,52 @@ expected worst-case time complexity is O(N*log(N));
 expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
 * */
 
-
 import java.util.Arrays;
 
 public class MinAbsSumOfTwo {
 
 
     /*
+     * Find the minimal absolute value of a sum of two elements
+     * */
+
+    /*
      * solution - a
      */
     public static int solution(int[] A) {
 
-        /*
-         * int[] A = {1, 4, -3}
-         * */
         Arrays.sort(A);
 
-        return getMinSum(A);
-    }
-
-    public static int getMinSum(int[] A) {
-
         /*
-         * all positives
+         * if the first element is positive, that mean
+         * all the elements in the array are positives
          * */
         if (A[0] >= 0) {
             return A[0] * 2;
         }
 
         /*
-         * all negatives
+         * if the last element is negative, that mean
+         * all the elements in the array are negatives
          * */
         if (A[A.length - 1] <= 0) {
             return -A[A.length - 1] * 2;
         }
 
+        /*
+         * we have mixtures of positive and negative elements
+         * */
+
         int end = A.length - 1;
         int start = 0;
-        int min = Math.abs(A[start] + A[end]);
+
+        int tempMin = Math.abs(A[start] + A[end]);
 
         while (start <= end) {
 
             int tmp = Math.abs(A[start] + A[end]);
 
-            min = Math.min(min, tmp);
+            tempMin = Math.min(tempMin, tmp);
 
             if (Math.abs(A[start + 1] + A[end]) <= tmp) {
                 start++;
@@ -106,8 +108,9 @@ public class MinAbsSumOfTwo {
             }
         }
 
-        return min;
+        return tempMin;
     }
+
 
 
     /*
@@ -178,9 +181,8 @@ public class MinAbsSumOfTwo {
             minAbsSum = Math.min(minAbsSum, Math.abs(currentSum));
 
             /*
-             * If the sum has become positive, we
-             * should know that the head can be moved
-             * left
+             * If the sum has become positive, we should
+             * know that the head can be moved left.
              * */
             if (currentSum <= 0) {
                 tail++;
