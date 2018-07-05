@@ -1,9 +1,9 @@
 package com.codility.L15_Caterpiller_Method;
 
 /*
-* Let A be a non-empty array consisting of N integers.
+* Let A be A non-empty array consisting of N integers.
 
-The abs sum of two for a pair of indices (P, Q) is the absolute value |A[P] + A[Q]|, for 0 ≤ P ≤ Q < N.
+The abs sum of two for A pair of indices (P, Q) is the absolute value |A[P] + A[Q]|, for 0 ≤ P ≤ Q < N.
 
 For example, the following array A:
 
@@ -19,11 +19,11 @@ The abs sum of two for the pair (1, 1) is A[1] + A[1] = |4 + 4| = 8.
 The abs sum of two for the pair (1, 2) is A[1] + A[2] = |4 + (−3)| = 1.
 The abs sum of two for the pair (2, 2) is A[2] + A[2] = |(−3) + (−3)| = 6.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
-that, given a non-empty array A consisting of N integers, returns the minimal abs sum of two for any pair of indices in this array.
+that, given A non-empty array A consisting of N integers, returns the minimal abs sum of two for any pair of indices in this array.
 
 For example, given the following array A:
 
@@ -57,11 +57,11 @@ public class MinAbsSumOfTwo {
 
 
     /*
-     * Find the minimal absolute value of a sum of two elements
+     * Find the minimal absolute value of A sum of two elements
      * */
 
     /*
-     * solution - a
+     * solution - A
      */
     public static int solution(int[] A) {
 
@@ -114,7 +114,7 @@ public class MinAbsSumOfTwo {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public static int solution1(int[] A) {
 

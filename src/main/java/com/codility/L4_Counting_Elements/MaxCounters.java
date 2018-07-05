@@ -31,17 +31,17 @@ the values of the counters after each consecutive operation will be:
     (3, 2, 2, 4, 2)
 The goal is to calculate the value of every counter after all operations.
 
-Write a function:
+Write A function:
 
 class Solution { public int[] solution(int N, int[] A); }
 
-that, given an integer N and a non-empty array A consisting of M integers, returns a sequence of integers representing the values of the counters.
+that, given an integer N and A non-empty array A consisting of M integers, returns A sequence of integers representing the values of the counters.
 
 The sequence should be returned as:
 
-a structure Results (in C), or
-a vector of integers (in C++), or
-a record Results (in Pascal), or
+A structure Results (in C), or
+A vector of integers (in C++), or
+A record Results (in Pascal), or
 an array of integers (in any other programming language).
 For example, given:
 
@@ -82,7 +82,7 @@ public class MaxCounters {
 
 
     /*
-     * solution - a
+     * solution - A
      */
     public static int[] solution(int N, int[] A) {
 
@@ -106,7 +106,7 @@ public class MaxCounters {
 
             /*
              * If A[K] = N + 1 then operation K is getMaxElement counter,
-             * use a storage to perform the lazy update
+             * use A storage to perform the lazy update
              * */
             else if (A[i] == N + 1) {
                 currMin = currMax;
@@ -122,7 +122,7 @@ public class MaxCounters {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public int[] solution1(int N, int[] A) {
 

@@ -13,11 +13,11 @@ For example, consider array A such that:
   A[5] =  6
 The absolute distinct count of this array is 5, because there are 5 distinct absolute values among the elements of this array, namely 0, 1, 3, 5 and 6.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
-that, given a non-empty array A consisting of N numbers, returns absolute distinct count of array A.
+that, given A non-empty array A consisting of N numbers, returns absolute distinct count of array A.
 
 For example, given array A such that:
 
@@ -50,7 +50,7 @@ public class AbsDistinct {
 
 
     /*
-     * solution - a
+     * solution - A
      * */
     public static int solution(int[] A) {
 
@@ -59,7 +59,7 @@ public class AbsDistinct {
 
 
     /*
-     * solution - b
+     * solution - B
      * */
     public static int solution1(int[] A) {
 

@@ -19,17 +19,17 @@ A[1] = 1, the non-divisors are: 3, 2, 3, 6,
 A[2] = 2, the non-divisors are: 3, 3, 6,
 A[3] = 3, the non-divisors are: 2, 6,
 A[4] = 6, there aren't any non-divisors.
-Write a function:
+Write A function:
 
 class Solution { public int[] solution(int[] A); }
 
-that, given an array A consisting of N integers, returns a sequence of integers representing the amount of non-divisors.
+that, given an array A consisting of N integers, returns A sequence of integers representing the amount of non-divisors.
 
 The sequence should be returned as:
 
-a structure Results (in C), or
-a vector of integers (in C++), or
-a record Results (in Pascal), or
+A structure Results (in C), or
+A vector of integers (in C++), or
+A record Results (in Pascal), or
 an array of integers (in any other programming language).
 For example, given:
 
@@ -58,12 +58,12 @@ import java.util.*;
 public class CountNonDivisible {
 
     /*
-     * Given an array A consisting of N integers, returns a sequence
+     * Given an array A consisting of N integers, returns A sequence
      * of integers representing the amount of non-divisors
      * */
 
     /*
-     * solution - a
+     * solution - A
      */
     public static int[] solution(int[] A) {
 
@@ -112,7 +112,7 @@ public class CountNonDivisible {
                 for (int j = 1; j * j <= A[i]; j++) {
 
                     /*
-                     * we find a divisor for the A[i]
+                     * we find A divisor for the A[i]
                      * */
                     if (A[i] % j == 0) {
 
@@ -144,7 +144,7 @@ public class CountNonDivisible {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public static int[] solution1(int[] A) {
 
@@ -225,9 +225,9 @@ public class CountNonDivisible {
 
 
     /**
-     * Computes a list that contains for each i in [0...maxValue+1] a set
+     * Computes A list that contains for each i in [0...maxValue+1] A set
      * with all divisors of i. This is basically an "Eratosthenes Sieve".
-     * But in addition to setting the entries of a list to 'false' (indicating
+     * But in addition to setting the entries of A list to 'false' (indicating
      * that the respective numbers are non-prime), this methods inserts the
      * divisors into the corresponding set.
      */

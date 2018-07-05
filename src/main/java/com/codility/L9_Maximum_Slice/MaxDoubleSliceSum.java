@@ -3,7 +3,7 @@ package com.codility.L9_Maximum_Slice;
 /*
 * A non-empty array A consisting of N integers is given.
 
-A triplet (X, Y, Z), such that 0 ≤ X < Y < Z < N, is called a double slice.
+A triplet (X, Y, Z), such that 0 ≤ X < Y < Z < N, is called A double slice.
 
 The sum of double slice (X, Y, Z) is the total of A[X + 1] + A[X + 2] + ... + A[Y − 1] + A[Y + 1] + A[Y + 2] + ... + A[Z − 1].
 
@@ -24,11 +24,11 @@ double slice (0, 3, 7), sum is 2 + 6 + 4 + 5 − 1 = 16,
 double slice (3, 4, 5), sum is 0.
 The goal is to find the maximal sum of any double slice.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
-that, given a non-empty array A consisting of N integers, returns the maximal sum of any double slice.
+that, given A non-empty array A consisting of N integers, returns the maximal sum of any double slice.
 
 For example, given:
 
@@ -40,7 +40,7 @@ For example, given:
     A[5] = 5
     A[6] = -1
     A[7] = 2
-the function should return 17, because no double slice of array A has a sum of greater than 17.
+the function should return 17, because no double slice of array A has A sum of greater than 17.
 
 Assume that:
 
@@ -60,7 +60,7 @@ public class MaxDoubleSliceSum {
 
 
     /*
-     * solution - a
+     * solution - A
      */
     public static int solution(int[] A) {
 
@@ -88,7 +88,7 @@ public class MaxDoubleSliceSum {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public int solution1(int[] A) {
 

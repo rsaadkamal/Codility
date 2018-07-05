@@ -1,7 +1,7 @@
 package com.codility.L6_Sorting;
 
 /*
-* Write a function
+* Write A function
 
 class Solution { public int solution(int[] A); }
 
@@ -34,7 +34,7 @@ public class Distinct {
 
 
     /*
-     * solution - a
+     * solution - A
      */
     public static int solution(int[] A) {
 
@@ -51,7 +51,7 @@ public class Distinct {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public static int solution1(int[] A) {
 

@@ -3,7 +3,7 @@ package com.codility.L4_Counting_Elements;
 /*
 * A non-empty array A consisting of N integers is given.
 
-A permutation is a sequence containing each element from 1 to N once, and only once.
+A permutation is A sequence containing each element from 1 to N once, and only once.
 
 For example, array A such that:
 
@@ -11,20 +11,20 @@ For example, array A such that:
     A[1] = 1
     A[2] = 3
     A[3] = 2
-is a permutation, but array A such that:
+is A permutation, but array A such that:
 
     A[0] = 4
     A[1] = 1
     A[2] = 3
-is not a permutation, because value 2 is missing.
+is not A permutation, because value 2 is missing.
 
-The goal is to check whether array A is a permutation.
+The goal is to check whether array A is A permutation.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
-that, given an array A, returns 1 if array A is a permutation and 0 if it is not.
+that, given an array A, returns 1 if array A is A permutation and 0 if it is not.
 
 For example, given array A such that:
 
@@ -60,15 +60,17 @@ public class PermCheck {
 
 
     /*
-     * solution-a
+     * solution-A
      */
     public static int solution(int[] A) {
 
         Arrays.sort(A);
 
         for (int i = 0; i < A.length; i++) {
-            if (A[i] != i + 1)
+
+            if (A[i] != i + 1) {
                 return 0;
+            }
         }
 
         return 1;

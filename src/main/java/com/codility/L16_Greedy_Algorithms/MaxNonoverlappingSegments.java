@@ -1,11 +1,11 @@
 package com.codility.L16_Greedy_Algorithms;
 
 /*
-* Located on a line are N segments, numbered from 0 to N − 1, whose positions are given in arrays A and B. For each I (0 ≤ I < N) the position of segment I is from A[I] to B[I] (inclusive). The segments are sorted by their ends, which means that B[K] ≤ B[K + 1] for K such that 0 ≤ K < N − 1.
+* Located on A line are N segments, numbered from 0 to N − 1, whose positions are given in arrays A and B. For each I (0 ≤ I < N) the position of segment I is from A[I] to B[I] (inclusive). The segments are sorted by their ends, which means that B[K] ≤ B[K + 1] for K such that 0 ≤ K < N − 1.
 
 Two segments I and J, such that I ≠ J, are overlapping if they share at least one common point. In other words, A[I] ≤ A[J] ≤ B[I] or A[J] ≤ A[I] ≤ B[J].
 
-We say that the set of segments is non-overlapping if it contains no two overlapping segments. The goal is to find the size of a non-overlapping set containing the maximal number of segments.
+We say that the set of segments is non-overlapping if it contains no two overlapping segments. The goal is to find the size of A non-overlapping set containing the maximal number of segments.
 
 For example, consider arrays A, B such that:
 
@@ -18,13 +18,13 @@ The segments are shown in the figure below.
 
 
 
-The size of a non-overlapping set containing a maximal number of segments is 3. For example, possible sets are {0, 2, 3}, {0, 2, 4}, {1, 2, 3} or {1, 2, 4}. There is no non-overlapping set with four segments.
+The size of A non-overlapping set containing A maximal number of segments is 3. For example, possible sets are {0, 2, 3}, {0, 2, 4}, {1, 2, 3} or {1, 2, 4}. There is no non-overlapping set with four segments.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A, int[] B); }
 
-that, given two arrays A and B consisting of N integers, returns the size of a non-overlapping set containing a maximal number of segments.
+that, given two arrays A and B consisting of N integers, returns the size of A non-overlapping set containing A maximal number of segments.
 
 For example, given arrays A, B shown above, the function should return 3, as explained above.
 
@@ -48,7 +48,7 @@ public class MaxNonoverlappingSegments {
 
 
     /*
-     * solution - a
+     * solution - A
      * */
     public int solution(int A[], int B[]) {
 
@@ -82,7 +82,7 @@ public class MaxNonoverlappingSegments {
 
 
     /*
-     * solution - b
+     * solution - B
      * */
     public int solution1(int[] A, int[] B) {
 

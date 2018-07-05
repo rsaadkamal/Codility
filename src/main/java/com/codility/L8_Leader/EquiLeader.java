@@ -21,11 +21,11 @@ we can find two equi leaders:
 2, because sequences: (4, 3, 4) and (4, 4, 2) have the same leader, whose value is 4.
 The goal is to count the number of equi leaders.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
-that, given a non-empty array A consisting of N integers, returns the number of equi leaders.
+that, given A non-empty array A consisting of N integers, returns the number of equi leaders.
 
 For example, given:
 
@@ -62,7 +62,7 @@ public class EquiLeader {
      * */
 
     /*
-     * solution - a
+     * solution - A
      */
     public static int solution(int[] A) {
 
@@ -127,7 +127,7 @@ public class EquiLeader {
              *
              *  Let the number X in section of L is C. So the number of other  elements in L
              *  is L-C. So we have C > L-C, which is the same as 2C > L, or C > L/2. So, if
-             *  we can prove, x is greater than other types of element in a section, then x
+             *  we can prove, x is greater than other types of element in A section, then x
              *  will be the dominator.
              *
              *  Dominator is greater then half of current and rest section of the array.
@@ -143,7 +143,7 @@ public class EquiLeader {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public int solution1(int[] A) {
 

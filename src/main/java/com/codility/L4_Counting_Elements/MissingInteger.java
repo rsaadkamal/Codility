@@ -1,9 +1,9 @@
 package com.codility.L4_Counting_Elements;
 
 /*
-* This is a demo task.
+* This is A demo task.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
@@ -37,13 +37,14 @@ public class MissingInteger {
 
 
     /*
-     * solution - a
+     * solution - A
      * */
     public static int solution(int[] A) {
 
         ArrayList<Integer> numbers = IntStream.of(A).boxed()
                 .filter(x -> x > 0).sorted().distinct()
                 .collect(Collectors.toCollection(ArrayList<Integer>::new));
+
         if (numbers.size() == 0) {
             return 1;
         }
@@ -60,7 +61,7 @@ public class MissingInteger {
 
 
     /*
-     * solution - b
+     * solution - B
      * */
     public int solution1(int[] A) {
 
@@ -79,6 +80,7 @@ public class MissingInteger {
         }
 
         for (int j = 0; j < counter.length; j++) {
+
             if (!counter[j]) {
                 return j + 1;
             }

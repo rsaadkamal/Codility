@@ -18,11 +18,11 @@ contains the following example triplets:
 (2, 4, 5), product is 2 * 5 * 6 = 60
 Your goal is to find the maximal product of any triplet.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
-that, given a non-empty array A, returns the value of the maximal product of any triplet.
+that, given A non-empty array A, returns the value of the maximal product of any triplet.
 
 For example, given array A such that:
 
@@ -54,7 +54,7 @@ public class MaxProductOfThree {
 
 
     /*
-     * solution - a
+     * solution - A
      */
     public static int solution(int[] A) {
 
@@ -75,7 +75,7 @@ public class MaxProductOfThree {
 
 
     /*
-     * solution -b
+     * solution -B
      */
     public int solution1(int[] A) {
 

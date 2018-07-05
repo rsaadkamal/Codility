@@ -1,7 +1,7 @@
 package com.codility.L5_Prefix_Sums;
 
 /*
-* Write a function:
+* Write A function:
 
 class Solution { public int solution(int A, int B, int K); }
 
@@ -29,7 +29,7 @@ public class CountDiv {
 
 
     /*
-     * solution - a
+     * solution - A
      */
     public static int solution(int A, int B, int K) {
 
@@ -41,7 +41,7 @@ public class CountDiv {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public static int solution1(int A, int B, int K) {
 

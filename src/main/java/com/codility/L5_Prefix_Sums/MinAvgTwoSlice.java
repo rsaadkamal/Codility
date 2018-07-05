@@ -1,7 +1,7 @@
 package com.codility.L5_Prefix_Sums;
 
 /*
-* A non-empty array A consisting of N integers is given. A pair of integers (P, Q), such that 0 ≤ P < Q < N, is called a slice of array A (notice that the slice contains at least two elements). The average of a slice (P, Q) is the sum of A[P] + A[P + 1] + ... + A[Q] divided by the length of the slice. To be precise, the average equals (A[P] + A[P + 1] + ... + A[Q]) / (Q − P + 1).
+* A non-empty array A consisting of N integers is given. A pair of integers (P, Q), such that 0 ≤ P < Q < N, is called A slice of array A (notice that the slice contains at least two elements). The average of A slice (P, Q) is the sum of A[P] + A[P + 1] + ... + A[Q] divided by the length of the slice. To be precise, the average equals (A[P] + A[P + 1] + ... + A[Q]) / (Q − P + 1).
 
 For example, array A such that:
 
@@ -17,13 +17,13 @@ contains the following example slices:
 slice (1, 2), whose average is (2 + 2) / 2 = 2;
 slice (3, 4), whose average is (5 + 1) / 2 = 3;
 slice (1, 4), whose average is (2 + 2 + 5 + 1) / 4 = 2.5.
-The goal is to find the starting position of a slice whose average is minimal.
+The goal is to find the starting position of A slice whose average is minimal.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
-that, given a non-empty array A consisting of N integers, returns the starting position of the slice with the minimal average. If there is more than one slice with a minimal average, you should return the smallest starting position of such a slice.
+that, given A non-empty array A consisting of N integers, returns the starting position of the slice with the minimal average. If there is more than one slice with A minimal average, you should return the smallest starting position of such A slice.
 
 For example, given array A such that:
 
@@ -53,12 +53,12 @@ public class MinAvgTwoSlice {
 
     /*
      * The goal is to find the starting
-     * position of a slice whose average
+     * position of A slice whose average
      * is minimal.
      * */
 
     /*
-     * solution - a
+     * solution - A
      * */
     public static int solution(int[] A) {
 
@@ -76,7 +76,7 @@ public class MinAvgTwoSlice {
         */
 
         /*
-         * initially, define a demo slice and minimal
+         * initially, define A demo slice and minimal
          * average for slice. Then, keep it updating
          * by moving forward.
          * */
@@ -93,9 +93,9 @@ public class MinAvgTwoSlice {
         while (true) {
 
             /*
-             * when there is a slice with 2 element,
+             * when there is A slice with 2 element,
              * move forward the end index by one step
-             * and make a 3 element slice.
+             * and make A 3 element slice.
              * */
             if (endIndex - startIndex == 1) {
 
@@ -109,8 +109,8 @@ public class MinAvgTwoSlice {
             }
 
             /*
-             * we have a 3 element slice. Update that to
-             * a 2 element slice by removing the start
+             * we have A 3 element slice. Update that to
+             * A 2 element slice by removing the start
              * element
              * */
             else {
@@ -129,7 +129,7 @@ public class MinAvgTwoSlice {
 
 
     /*
-     * solution - b
+     * solution - B
      * */
     public static int solution1(int[] A) {
 

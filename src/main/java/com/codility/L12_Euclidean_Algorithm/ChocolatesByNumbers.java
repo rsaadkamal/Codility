@@ -2,9 +2,9 @@ package com.codility.L12_Euclidean_Algorithm;
 
 
 /*
-* Two positive integers N and M are given. Integer N represents the number of chocolates arranged in a circle, numbered from 0 to N − 1.
+* Two positive integers N and M are given. Integer N represents the number of chocolates arranged in A circle, numbered from 0 to N − 1.
 
-You start to eat the chocolates. After eating a chocolate you leave only a wrapper.
+You start to eat the chocolates. After eating A chocolate you leave only A wrapper.
 
 You begin with eating chocolate number 0. Then you omit the next M − 1 chocolates or wrappers on the circle, and eat the following one.
 
@@ -16,7 +16,7 @@ For example, given integers N = 10 and M = 4. You will eat the following chocola
 
 The goal is to count the number of chocolates that you will eat, following the above rules.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int N, int M); }
 
@@ -49,7 +49,7 @@ public class ChocolatesByNumbers {
      * of the integers.
      * */
     /*
-     * solution - a
+     * solution - A
      */
     public int solution1(int N, int M) {
 
@@ -73,7 +73,7 @@ public class ChocolatesByNumbers {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     private static int solution(int N, int M) {
 

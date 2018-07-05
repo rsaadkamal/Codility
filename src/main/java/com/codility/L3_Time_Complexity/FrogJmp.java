@@ -39,7 +39,7 @@ public class FrogJmp {
 
 
     /*
-     * solution-a
+     * solution-A
      * */
     public static int solution(int X, int Y, int D) {
 
@@ -48,7 +48,7 @@ public class FrogJmp {
 
 
     /*
-     * solution-b
+     * solution-B
      * */
     public int solution1(int X, int Y, int D) {
 

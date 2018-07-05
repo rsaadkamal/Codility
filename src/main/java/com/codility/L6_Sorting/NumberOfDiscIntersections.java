@@ -1,7 +1,7 @@
 package com.codility.L6_Sorting;
 
 /*
-* We draw N discs on a plane. The discs are numbered from 0 to N − 1. An array A of N non-negative integers, specifying the radiuses of the discs, is given. The J-th disc is drawn with its center at (J, 0) and radius A[J].
+* We draw N discs on A plane. The discs are numbered from 0 to N − 1. An array A of N non-negative integers, specifying the radiuses of the discs, is given. The J-th disc is drawn with its center at (J, 0) and radius A[J].
 
 We say that the J-th disc and K-th disc intersect if J ≠ K and the J-th and K-th discs have at least one common point (assuming that the discs contain their borders).
 
@@ -19,7 +19,7 @@ There are eleven (unordered) pairs of discs that intersect, namely:
 
 discs 1 and 4 intersect, and both intersect with all the other discs;
 disc 2 also intersects with discs 0 and 3.
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
@@ -74,7 +74,7 @@ public class NumberOfDiscIntersections {
 
 
     /*
-     * Compute the number of intersections in a sequence of discs.
+     * Compute the number of intersections in A sequence of discs.
      * The J-th disc is drawn with its center at (J, 0) and radius
      * A[J].
      *
@@ -83,10 +83,9 @@ public class NumberOfDiscIntersections {
      * */
 
     /*
-     * solution - a
+     * solution - A
      * */
     public static int solution(int[] A) {
-
 
         int intersections = 0;
 
@@ -113,7 +112,7 @@ public class NumberOfDiscIntersections {
 
 
     /*
-     * solution - b
+     * solution - B
      * */
     /*
      * Time complexity is O(N*log(N)) or O(N). The largest value of right-A[right]

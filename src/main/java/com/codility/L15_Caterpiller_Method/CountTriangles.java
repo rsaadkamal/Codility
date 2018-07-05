@@ -1,7 +1,7 @@
 package com.codility.L15_Caterpiller_Method;
 
 /*
-* An array A consisting of N integers is given. A triplet (P, Q, R) is triangular if it is possible to build a triangle with sides of lengths A[P], A[Q] and A[R]. In other words, triplet (P, Q, R) is triangular if 0 ≤ P < Q < R < N and:
+* An array A consisting of N integers is given. A triplet (P, Q, R) is triangular if it is possible to build A triangle with sides of lengths A[P], A[Q] and A[R]. In other words, triplet (P, Q, R) is triangular if 0 ≤ P < Q < R < N and:
 
 A[P] + A[Q] > A[R],
 A[Q] + A[R] > A[P],
@@ -12,7 +12,7 @@ For example, consider array A such that:
   A[3] = 1     A[4] = 8    A[5] = 12
 There are four triangular triplets that can be constructed from elements of this array, namely (0, 2, 4), (0, 2, 5), (0, 4, 5), and (2, 4, 5).
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
@@ -61,7 +61,7 @@ public class CountTriangles {
 
 
     /*
-     * solution - a
+     * solution - A
      * */
     public static int solution(int[] A) {
 
@@ -101,7 +101,7 @@ public class CountTriangles {
 
 
     /*
-     * solution - b
+     * solution - B
      * */
     public int solution3(int[] A) {
 

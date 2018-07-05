@@ -1,7 +1,7 @@
 package com.codility.L14_Binary_Search_Algorithm;
 
 /*
-* You are given integers K, M and a non-empty array A consisting of N integers. Every element of the array is not greater than M.
+* You are given integers K, M and A non-empty array A consisting of N integers. Every element of the array is not greater than M.
 
 You should divide this array into K blocks of consecutive elements. The size of the block is any integer between 0 and N. Every element of the array should belong to some block.
 
@@ -20,17 +20,17 @@ For example, you are given integers K = 3, M = 5 and array A such that:
   A[6] = 2
 The array can be divided, for example, into the following blocks:
 
-[2, 1, 5, 1, 2, 2, 2], [], [] with a large sum of 15;
-[2], [1, 5, 1, 2], [2, 2] with a large sum of 9;
-[2, 1, 5], [], [1, 2, 2, 2] with a large sum of 8;
-[2, 1], [5, 1], [2, 2, 2] with a large sum of 6.
+[2, 1, 5, 1, 2, 2, 2], [], [] with A large sum of 15;
+[2], [1, 5, 1, 2], [2, 2] with A large sum of 9;
+[2, 1, 5], [], [1, 2, 2, 2] with A large sum of 8;
+[2, 1], [5, 1], [2, 2, 2] with A large sum of 6.
 The goal is to minimize the large sum. In the above example, 6 is the minimal large sum.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int K, int M, int[] A); }
 
-that, given integers K, M and a non-empty array A consisting of N integers, returns the minimal large sum.
+that, given integers K, M and A non-empty array A consisting of N integers, returns the minimal large sum.
 
 For example, given K = 3, M = 5 and array A such that:
 
@@ -75,7 +75,7 @@ public class MinMaxDivision {
      * */
 
     /*
-     * solution -a
+     * solution -A
      */
     public static int solution(int K, int M, int[] A) {
 
@@ -93,7 +93,7 @@ public class MinMaxDivision {
 
         /*
          * Get an approximate value for the large sum for
-         * a block. We will do the optimization later
+         * A block. We will do the optimization later
          * */
         int idealMin = Math.max((int) Math.ceil((double) sum / K), max);
 
@@ -102,7 +102,7 @@ public class MinMaxDivision {
 
 
     /*
-     * conduct a binary search iteratively
+     * conduct A binary search iteratively
      * to minimize the large sum
      * */
     public static int searchI(int min, int max, int[] A, int K) {
@@ -129,7 +129,7 @@ public class MinMaxDivision {
 
 
     /*
-     * conduct a binary search recursively
+     * conduct A binary search recursively
      * */
     public static int searchR(int min, int max, int[] A, int K) {
 
@@ -184,7 +184,7 @@ public class MinMaxDivision {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public int solution1(int K, int M, int[] A) {
 

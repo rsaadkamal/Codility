@@ -3,17 +3,17 @@ package com.codility.L10_Prime_Composite_Num;
 /*
 * An integer N is given, representing the area of some rectangle.
 
-The area of a rectangle whose sides are of length A and B is A * B, and the perimeter is 2 * (A + B).
+The area of A rectangle whose sides are of length A and B is A * B, and the perimeter is 2 * (A + B).
 
 The goal is to find the minimal perimeter of any rectangle whose area equals N. The sides of this rectangle should be only integers.
 
 For example, given integer N = 30, rectangles of area 30 are:
 
-(1, 30), with a perimeter of 62,
-(2, 15), with a perimeter of 34,
-(3, 10), with a perimeter of 26,
-(5, 6), with a perimeter of 22.
-Write a function:
+(1, 30), with A perimeter of 62,
+(2, 15), with A perimeter of 34,
+(3, 10), with A perimeter of 26,
+(5, 6), with A perimeter of 22.
+Write A function:
 
 class Solution { public int solution(int N); }
 
@@ -37,7 +37,7 @@ public class MinPerimeterRectangle {
 
 
     /*
-     * solution -a
+     * solution -A
      */
     public static int solution(int N) {
 
@@ -55,7 +55,7 @@ public class MinPerimeterRectangle {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public int solution1(int N) {
 

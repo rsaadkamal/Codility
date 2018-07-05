@@ -1,9 +1,9 @@
 package com.codility.L11_Sieve_Of_Eratosthenes;
 
 /*
-* A prime is a positive integer X that has exactly two distinct divisors: 1 and X. The first few prime integers are 2, 3, 5, 7, 11 and 13.
+* A prime is A positive integer X that has exactly two distinct divisors: 1 and X. The first few prime integers are 2, 3, 5, 7, 11 and 13.
 
-A semiprime is a natural number that is the product of two (not necessarily distinct) prime numbers. The first few semiprimes are 4, 6, 9, 10, 14, 15, 21, 22, 25, 26.
+A semiprime is A natural number that is the product of two (not necessarily distinct) prime numbers. The first few semiprimes are 4, 6, 9, 10, 14, 15, 21, 22, 25, 26.
 
 You are given two non-empty arrays P and Q, each consisting of M integers. These arrays represent queries about the number of semiprimes within specified ranges.
 
@@ -19,7 +19,7 @@ The number of semiprimes within each of these ranges is as follows:
 (1, 26) is 10,
 (4, 10) is 4,
 (16, 20) is 0.
-Write a function:
+Write A function:
 
 class Solution { public int[] solution(int N, int[] P, int[] Q); }
 
@@ -50,17 +50,17 @@ expected worst-case space complexity is O(N+M) (not counting the storage require
 public class CountSemiprimes {
 
     /*
-     * sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up
+     * sieve of Eratosthenes is A simple, ancient algorithm for finding all prime numbers up
      * to any given limit.It does so by iteratively marking as composite (i.e., not prime)
      * the multiples of each prime, starting with the first prime number, 2. The multiples
-     * of a given prime are generated as a sequence of numbers starting from that prime, with
+     * of A given prime are generated as A sequence of numbers starting from that prime, with
      * constant difference between them that is equal to that prime. This is the sieve's
      * key distinction from using trial division to sequentially test each candidate number
      * for divisibility by each prime
      * */
 
     /*
-     * A semiprime is a natural number that is the product
+     * A semiprime is A natural number that is the product
      * of two (not necessarily distinct) prime numbers.
      * */
 

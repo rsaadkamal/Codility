@@ -1,9 +1,9 @@
 package com.codility.L9_Maximum_Slice;
 
 /*
-* A non-empty array A consisting of N integers is given. A pair of integers (P, Q), such that 0 ≤ P ≤ Q < N, is called a slice of array A. The sum of a slice (P, Q) is the total of A[P] + A[P+1] + ... + A[Q].
+* A non-empty array A consisting of N integers is given. A pair of integers (P, Q), such that 0 ≤ P ≤ Q < N, is called A slice of array A. The sum of A slice (P, Q) is the total of A[P] + A[P+1] + ... + A[Q].
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
@@ -15,9 +15,9 @@ A[0] = 3  A[1] = 2  A[2] = -6
 A[3] = 4  A[4] = 0
 the function should return 5 because:
 
-(3, 4) is a slice of A that has sum 4,
-(2, 2) is a slice of A that has sum −6,
-(0, 1) is a slice of A that has sum 5,
+(3, 4) is A slice of A that has sum 4,
+(2, 2) is A slice of A that has sum −6,
+(0, 1) is A slice of A that has sum 5,
 no other slice of A has sum greater than (0, 1).
 Assume that:
 
@@ -37,7 +37,7 @@ public class MaxSliceSum {
 
 
     /*
-     * solution - a
+     * solution - A
      */
     public static int solution(int[] A) {
 
@@ -65,7 +65,7 @@ public class MaxSliceSum {
          * i.  Keep incrementing the slice as long as the sum is greater than zero.
          *     If the sum of current slice becomes negative, reset the storage value
          *     to zero.
-         * ii. Use a second storage to hold the max value from the previous counting
+         * ii. Use A second storage to hold the max value from the previous counting
          * */
         for (int i = 0; i < A.length; i++) {
 
@@ -78,7 +78,7 @@ public class MaxSliceSum {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public int solution1(int[] A) {
 

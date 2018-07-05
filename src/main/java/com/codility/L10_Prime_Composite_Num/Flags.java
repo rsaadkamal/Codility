@@ -21,7 +21,7 @@ For example, the following array A:
     A[11] = 2
 has exactly four peaks: elements 1, 3, 5 and 10.
 
-You are going on a trip to a range of mountains whose relative heights are represented by array A, as shown in a figure below. You have to choose how many flags you should take with you. The goal is to set the maximum number of flags on the peaks, according to certain rules.
+You are going on A trip to A range of mountains whose relative heights are represented by array A, as shown in A figure below. You have to choose how many flags you should take with you. The goal is to set the maximum number of flags on the peaks, according to certain rules.
 
 
 
@@ -32,13 +32,13 @@ For example, given the mountain range represented by array A, above, with N = 12
 two flags, you can set them on peaks 1 and 5;
 three flags, you can set them on peaks 1, 5 and 10;
 four flags, you can set only three flags, on peaks 1, 5 and 10.
-You can therefore set a maximum of three flags in this case.
+You can therefore set A maximum of three flags in this case.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
-that, given a non-empty array A of N integers, returns the maximum number of flags that can be set on the peaks of the array.
+that, given A non-empty array A of N integers, returns the maximum number of flags that can be set on the peaks of the array.
 
 For example, the following array A:
 
@@ -77,7 +77,7 @@ public class Flags {
     * distance between any two flags should be greater than or equal to K. The
     * distance between indices P and Q is the absolute value |P − Q|.
     *
-    * Given a non-empty array A of N integers, returns the maximum number of flags
+    * Given A non-empty array A of N integers, returns the maximum number of flags
     * that can be set on the peaks of the array.
     * */
 

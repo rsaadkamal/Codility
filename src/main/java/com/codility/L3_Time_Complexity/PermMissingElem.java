@@ -5,7 +5,7 @@ package com.codility.L3_Time_Complexity;
 
 Your goal is to find that missing element.
 
-Write a function:
+Write A function:
 
 class Solution { public int solution(int[] A); }
 
@@ -38,7 +38,7 @@ public class PermMissingElem {
 
 
     /*
-     * solution - a
+     * solution - A
      * */
     public int solution(int[] A) {
 
@@ -61,7 +61,7 @@ public class PermMissingElem {
 
 
     /*
-     * solution - b
+     * solution - B
      * */
     public int solution1(int[] A) {
 

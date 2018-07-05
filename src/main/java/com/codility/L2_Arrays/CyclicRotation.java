@@ -89,7 +89,7 @@ public class CyclicRotation {
 
 
     /*
-     * solution-b
+     * solution-B
      * */
     public int[] solution1(int[] A, int K) {
 

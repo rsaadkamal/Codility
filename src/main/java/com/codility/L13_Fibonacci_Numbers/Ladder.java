@@ -1,7 +1,7 @@
 package com.codility.L13_Fibonacci_Numbers;
 
 /*
-* You have to climb up a ladder. The ladder has exactly N rungs, numbered from 1 to N. With each step, you can ascend by one or two rungs. More precisely:
+* You have to climb up A ladder. The ladder has exactly N rungs, numbered from 1 to N. With each step, you can ascend by one or two rungs. More precisely:
 
 with your first step you can stand on rung 1 or 2,
 if you are on rung K, you can move to rungs K + 1 or K + 2,
@@ -25,9 +25,9 @@ Given N = 5, you have eight different ways of climbing, ascending by:
 2, 1, 1 and 1 rungs,
 2, 1 and 2 rungs, and
 2, 2 and 1 rung.
-The number of different ways can be very large, so it is sufficient to return the result modulo 2P, for a given integer P.
+The number of different ways can be very large, so it is sufficient to return the result modulo 2P, for A given integer P.
 
-Write a function:
+Write A function:
 
 class Solution { public int[] solution(int[] A, int[] B); }
 
@@ -62,7 +62,7 @@ public class Ladder {
 
 
     /*
-     * solution - a
+     * solution - A
      */
     public static int[] solution(int[] A, int[] B) {
 
@@ -97,7 +97,7 @@ public class Ladder {
 
 
     /*
-     * solution - b
+     * solution - B
      */
     public int[] solution1(int[] A, int[] B) {
 

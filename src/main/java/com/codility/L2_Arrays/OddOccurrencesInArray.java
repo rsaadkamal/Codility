@@ -62,7 +62,7 @@ public class OddOccurrencesInArray {
 
 
     /*
-     * solution-b
+     * solution-B
      * */
     /*
      * It doesn't follow the expected worst-case space complexity is O(1)
