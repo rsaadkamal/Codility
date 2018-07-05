@@ -65,5 +65,290 @@ public class CountSemiprimes {
      * */
 
 
+    // Count the semiprime numbers in the given range [a..b]
+    /*
+     * solution - a
+     */
+    public static int[] solution(int[] A, int[] B, int N) {
 
+        int[] factArray = sieve(N);
+
+        int[] semiPrimes = new int[factArray.length];
+
+        for (int i = 0; i < semiPrimes.length; i++) {
+
+            if (factArray[i] != 0 && factArray[i / factArray[i]] == 0) {
+                semiPrimes[i] = 1;
+            }
+        }
+
+        int[] semiPrimesPreSum = prefixSum(semiPrimes);
+        int[] res = new int[A.length];
+
+        for (int i = 0; i < B.length; i++) {
+            res[i] = semiPrimesPreSum[B[i]] - semiPrimesPreSum[A[i] - 1];
+        }
+
+        return res;
+    }
+
+    //preparing array for factorization (array with primes)
+    // [0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 5, 2]
+    public static int[] sieve(int n) {
+
+        int[] F = new int[n + 1];
+
+        for (int i = 2; i * i <= n; i++) {
+
+            if (F[i] == 0) {
+
+                for (int k = i * i; k <= n; k += i) {
+
+                    if (F[k] == 0) {
+                        F[k] = i;
+                    }
+                }
+            }
+        }
+
+        return F;
+    }
+
+    public static int[] prefixSum(int[] A) {
+
+        int[] prefSum = new int[A.length];
+
+        for (int i = 0; i < A.length; i++) {
+            if (i == 0) {
+                prefSum[i] = A[i];
+            } else {
+                prefSum[i] = prefSum[i - 1] + A[i];
+            }
+        }
+
+        return prefSum;
+    }
+    // ENd of solution - a
+
+
+    /*
+     * solution - b
+     */
+    public int[] solution1(int N, int[] P, int[] Q) {
+
+        int length = P.length;
+        int[] prime = sieve1(N);
+
+        boolean[] semiprime = semiprime1(prime);
+        int[] result = new int[length];
+
+        for (int i = 0; i < length; i++) {
+
+            int primeNumber = countSemiprimes(P[i], Q[i], semiprime, N);
+            result[i] = primeNumber;
+        }
+
+        return result;
+    }
+
+
+    /*
+     * use the sieve to get factorized numbers
+     */
+    public int[] sieve1(int N) {
+
+        int[] prime = new int[N + 1];
+
+        for (int i = 2; i <= (double) Math.sqrt(N); i++) {
+
+            if (prime[i] == 0) {
+
+                int k = i * i;
+
+                while (k <= N) {
+
+                    if (prime[k] == 0) {
+                        prime[k] = i;
+                    }
+
+                    k += i;
+                }
+            }
+        }
+        return prime;
+    }
+
+
+    public boolean[] semiprime1(int[] prime) {
+
+        boolean semiprime[] = new boolean[prime.length];
+
+        for (int i = 0; i < prime.length; i++) {
+
+            if (prime[i] == 0) {
+                continue;
+            }
+
+            int firstFactor = prime[i];
+
+            if (prime[i / firstFactor] == 0) {
+                semiprime[i] = true;
+            }
+        }
+
+        return semiprime;
+    }
+
+
+    public int countSemiprimes(int P, int Q, boolean[] semiprime, int N) {
+
+        int count = 0;
+
+        if (P > Q || P > N || Q > N) {
+            return 0;
+        }
+
+        for (int i = P == 1 ? 2 : P; i <= Q; i++) {
+            if (semiprime[i]) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+
+    /*
+     * solution - c
+     */
+    public int[] solution2(int N, int[] P, int[] Q) {
+
+        int length = P.length;
+
+        int[] prime = sieve2(N);
+        int[] semiprime = semiprime(prime);
+
+        int[] result = new int[length];
+        int[] semiprimesAggreation = new int[N + 1];
+
+
+        for (int i = 1; i < N + 1; i++) {
+
+            semiprimesAggreation[i] = semiprime[i];
+            semiprimesAggreation[i] += semiprimesAggreation[i - 1];
+        }
+
+        for (int i = 0; i < length; i++) {
+
+            result[i] = semiprimesAggreation[Q[i]]
+                    - semiprimesAggreation[P[i]]
+                    + semiprime[P[i]];
+        }
+
+        return result;
+    }
+
+    public int[] sieve2(int N) {
+
+        int[] prime = new int[N + 1];
+
+        for (int i = 2; i <= (double) Math.sqrt(N); i++) {
+
+            if (prime[i] == 0) {
+
+                int k = i * i;
+
+                while (k <= N) {
+                    if (prime[k] == 0) {
+                        prime[k] = i;
+                    }
+                    k += i;
+                }
+            }
+        }
+        return prime;
+    }
+
+    public int[] semiprime(int[] prime) {
+
+        int semiprime[] = new int[prime.length];
+
+        for (int i = 0; i < prime.length; i++) {
+
+            if (prime[i] == 0) {
+                continue;
+            }
+
+            int firstFactor = prime[i];
+
+            if (prime[i / firstFactor] == 0) {
+                semiprime[i] = 1;
+            }
+        }
+        return semiprime;
+    }
+
+
+    /*
+     * solution - d
+     */
+    public int[] solution(int n, int[] p, int[] q) {
+
+        final int[] m = new int[n];
+        int i = 2;
+
+        // mark all non-prime numbers with minimal prime factor
+        while ((long) i * i <= n) {
+
+            int k = i * i;
+
+            while (k <= n) {
+
+                if (m[k - 1] == 0) {
+                    m[k - 1] = i;
+                }
+
+                k += i;
+            }
+
+            i++;
+        }
+
+        // if number / it's minimal prime factor is not a prime number, unmark
+        for (i = m.length - 1; i >= 0; i--) {
+
+            if (m[i] > 0 && m[(i + 1) / m[i] - 1] != 0) {
+                m[i] = 0;
+            }
+        }
+
+        // memorize number semiprimes from 0 to i
+        int c = 0;
+
+        for (i = 0; i < m.length; i++) {
+
+            if (m[i] > 0) {
+                c++;
+            }
+
+            m[i] = c;
+        }
+
+        // calculate result for ranges
+        int[] result = new int[p.length];
+
+        for (i = 0; i < p.length; i++) {
+
+            int from = p[i] - 1;
+            int to = q[i] - 1;
+
+            if (from == 0) {
+                result[i] = m[to];
+            } else {
+                result[i] = m[to] - m[from - 1];
+            }
+        }
+
+        return result;
+    }
 }

@@ -61,9 +61,56 @@ public class MaxDoubleSliceSum {
 
 
     /*
-     * solution - A
-     */
+     * A triplet (X, Y, Z), such that 0 ≤ X < Y < Z < N, is called a
+     * double slice. The sum of double slice (X, Y, Z) is the total
+     * of A[X + 1] + A[X + 2] + ... + A[Y − 1] + A[Y + 1] + A[Y + 2]
+     * + ... + A[Z − 1]. The goal is to find the maximal sum of any
+     * double slice.
+     * */
+
+
+    /*
+     * solution - a
+     * */
     public static int solution(int[] A) {
+
+        int N = A.length;
+
+        int[] maxStartingHere = new int[N];
+        int[] maxEndingHere = new int[N];
+
+        int maxSum = 0;
+
+        for (int i = 1; i < N - 1; ++i) {
+
+            maxSum = Math.max(0, A[i] + maxSum);
+            maxEndingHere[i] = maxSum;
+        }
+
+        maxSum = 0;
+
+        for (int i = N - 2; i > 0; --i) {
+
+            maxSum = Math.max(0, A[i] + maxSum);
+            maxStartingHere[i] = maxSum;
+        }
+
+
+
+        int maxDoubleSlice = 0;
+
+        for (int i = 0; i < N - 2; ++i) {
+            maxDoubleSlice = Math.max(maxDoubleSlice, maxEndingHere[i] + maxStartingHere[i + 2]);
+        }
+
+        return maxDoubleSlice;
+
+    }
+
+    /*
+     * solution - b
+     */
+    public static int solution1(int[] A) {
 
         int max = 0;
 
@@ -72,14 +119,26 @@ public class MaxDoubleSliceSum {
         int[] A1 = new int[N];
         int[] A2 = new int[N];
 
+        /*
+         * A1[i - 1] is the maximum sub array on the left of index i
+         * */
         for (int i = 1; i < N - 1; i++) {
             A1[i] = Math.max(A1[i - 1] + A[i], 0);
         }
 
+        /*
+         * A2[i + 1] is the maximum sub array on the right of index i
+         * */
         for (int i = N - 2; i >= 1; i--) {
             A2[i] = Math.max(A2[i + 1] + A[i], 0);
         }
 
+
+        /*
+         * A1[i - 1] is the maximum sub array on the left of
+         * index i and A2[i + 1] is the maximum sub array on
+         * the right of index i
+         * */
         for (int i = 1; i < N - 1; i++) {
             max = Math.max(max, A1[i - 1] + A2[i + 1]);
         }
@@ -89,18 +148,25 @@ public class MaxDoubleSliceSum {
 
 
     /*
-     * solution - B
+     * solution - c
      */
-    public int solution1(int[] A) {
+    public int solution2(int[] A) {
 
         int sum = 0;
-        int[] lms = new int[A.length];
+
+        int N = A.length;
+
+        int[] lms = new int[N];
 
         int minSum = Integer.MAX_VALUE;
 
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < N; i++) {
 
             sum += A[i];
+
+            /*
+             * sum will decrease in case of negative values
+             * */
             if (sum < minSum) {
                 minSum = sum;
             }
@@ -108,25 +174,29 @@ public class MaxDoubleSliceSum {
             lms[i] = minSum;
         }
 
-        int total = sum;
+        int totalSum = sum;
         sum = 0;
 
-        int[] rms = new int[A.length];
+        int[] rms = new int[N];
         minSum = Integer.MAX_VALUE;
 
-        for (int i = A.length - 1; i >= 0; i--) {
+        for (int i = N - 1; i >= 0; i--) {
+
             sum += A[i];
+
             if (sum < minSum) {
                 minSum = sum;
             }
+
             rms[i] = minSum;
         }
 
         int result = Integer.MIN_VALUE;
 
-        for (int i = 1; i < A.length - 1; i++) {
+        for (int i = 1; i < N - 1; i++) {
 
-            sum = total - A[i] - lms[i - 1] - rms[i + 1];
+            sum = totalSum - A[i] - lms[i - 1] - rms[i + 1];
+
             if (result < sum) {
                 result = sum;
             }
