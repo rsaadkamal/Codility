@@ -70,6 +70,44 @@ public class MaxDoubleSliceSum {
 
 
     /*
+    * EXPLANATION
+    * -----------
+
+    * The key here is that the code does not look for the maximum slice, only for its sum.
+    * The array maxStartingHere records at index i what maximum sum you'd reach if you
+    * combine contiguous items starting at i+1; maxEndingHere does the same in reverse.
+    * Let's look at an example for that:
+
+    i:             0  1  2  3  4
+    A:             1 -3  2 -1  ...
+    maxEndingHere: 0  1  0  2  1
+    Note that:
+
+    i=0: there are no elements left of i, so the sum is 0.
+    i=2: Taking A[0..1] is suboptimal, so the maximum of 0 is achieved by not summing anything at all.
+    i=4: Another negative element, but 2 + -1 is still better than 0. We're not considering 1 + -3 +
+    2 + -1 because we already know that the maximum we can reach left of the 2 is negative.
+    I hope you see that this array shows what can be achieved by choosing different X, but the concrete
+    choice of X is not recorded - just its consequence. Every i corresponds to a Y, and maxEndingHere[i-1]
+    corresponds to the consequence of choosing X optimally for a particular Y.
+
+    So we know what sums choosing X and Z optimally, for a particular Y, result in. That means it only remains
+    to choose the best Y (or more precisely: the sum resulting from the best Y). And that is what happens in
+    the third loop.
+
+    To reiterate:
+
+        What is the maximum you can get, ending anywhere, when starting from a particular item? That's
+        maxStartingHere.
+
+        What is the maximum you can get, starting anywhere, when ending at a particular item? That's
+        maxEndingHere.
+
+        What is the maximum you can get when ending/starting at a particular item? That's maxDoubleSlice.
+    * */
+
+
+    /*
      * solution - a
      * */
     public static int solution(int[] A) {
@@ -81,14 +119,30 @@ public class MaxDoubleSliceSum {
 
         int maxSum = 0;
 
+        /*
+        *   Index =           [0, 1, 2,  3, 4, 5,  6, 7]
+            A =               [3, 2, 6, -1, 4, 5, -1, 2]
+
+            maxEndingHere =   [0, 2, 8, 7, 11, 16, 15,0]
+            maxStartingHere = [0, 16, 14, 8, 9, 5, 0, 0]
+        * */
+        /*
+         * the maximum slice value between A[0] (excl.)
+         * and A[i] (incl.) contains in maxEndingHere[i]
+         * */
         for (int i = 1; i < N - 1; ++i) {
 
             maxSum = Math.max(0, A[i] + maxSum);
             maxEndingHere[i] = maxSum;
         }
 
+
         maxSum = 0;
 
+        /*
+         * the maximum slice value between A[N-1] (excl.)
+         * and A[i] (incl.) contains in maxStartingHere[i]
+         * */
         for (int i = N - 2; i > 0; --i) {
 
             maxSum = Math.max(0, A[i] + maxSum);
@@ -96,9 +150,11 @@ public class MaxDoubleSliceSum {
         }
 
 
-
         int maxDoubleSlice = 0;
 
+        /*
+         * point Y is indicated by the (i+1) index
+         * */
         for (int i = 0; i < N - 2; ++i) {
             maxDoubleSlice = Math.max(maxDoubleSlice, maxEndingHere[i] + maxStartingHere[i + 2]);
         }
@@ -110,6 +166,12 @@ public class MaxDoubleSliceSum {
     /*
      * solution - b
      */
+
+    /*
+     * A1[i - 1] is the maximum sub array on the left of index i
+     * and A2[i + 1] is the maximum sub array on the right of
+     * index i
+     * */
     public static int solution1(int[] A) {
 
         int max = 0;

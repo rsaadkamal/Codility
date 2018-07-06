@@ -75,14 +75,219 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 * */
 
 
+import java.util.ArrayList;
+
 /**
  * Created by Chaklader on 6/25/18.
  */
 public class Peaks {
 
     /*
-    * Every block should contain at least one peak. The goal is to
-    * find the maximum number of blocks into which the array A can
-    * be divided.
+     * We want to divide this array into blocks containing at least
+     * the same number of peaks (= 3)
+     *
+     *
+     * Every block should contain at least one peak. The goal is to
+     * find the maximum number of blocks into which the array A can
+     * be divided
+     *
+     *
+     * Divide an array into the maximum number of same-sized blocks,
+     * each of which should contain an index P such that A[P - 1] <
+     * A[P] > A[P + 1]
      * */
+
+    /*
+     * check https://en.wikipedia.org/wiki/Divisor_function
+     * and Robin's inequality The sum of divisors is O(N *
+     * log(log(N)))
+     * */
+
+    /*
+     * solution - a
+     */
+    public static int solution(int[] A) {
+
+        int peakCount = 0;
+
+        ArrayList<Integer> peaks = new ArrayList<Integer>();
+
+        /*
+         * add all the peaks of the segments in the list
+         * */
+        for (int i = 1; i < A.length - 1; i++) {
+
+            if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
+                peaks.add(i);
+                peakCount++;
+            }
+        }
+
+        int numOfPeaks = peaks.size();
+        int N = A.length;
+
+        for (int sizeOfBlock = 1; sizeOfBlock <= N; sizeOfBlock++) {
+
+            /*
+             * A block need atleast elements equal
+             * to or grater than of peak numbers
+             *
+             * ------------------------------------------------------
+             * i.   N = array length
+             * ii.  B = number of numOfBlocks
+             * iii. E = number of elements in a block >= num of peaks
+             * ------------------------------------------------------
+             *
+             * finally, B = N/(E >= num of peaks)
+             * */
+
+            int numOfBlocks = N / sizeOfBlock;
+
+            if (N % sizeOfBlock != 0 || numOfBlocks > peakCount) {
+                continue;
+            }
+
+            boolean success = true;
+            int threshold = 0;
+
+            for (int i = 0; i < numOfPeaks; i++) {
+
+                if (peaks.get(i) / sizeOfBlock > threshold) {
+                    success = false;
+                    break;
+                }
+
+                if (peaks.get(i) / sizeOfBlock == threshold) {
+                    threshold++;
+                }
+            }
+
+            if (threshold != numOfBlocks) {
+                success = false;
+            }
+
+            if (success) {
+                return numOfBlocks;
+            }
+        }
+
+        return 0;
+    }
+
+
+    /*
+     * solution - b
+     */
+    public static int solution1(int[] A) {
+
+        int N = A.length;
+
+        ArrayList<Integer> peaks = new ArrayList<Integer>();
+
+        for (int i = 1; i < N - 1; i++) {
+
+            if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
+                peaks.add(i);
+            }
+        }
+
+        for (int size = 1; size <= N; size++) {
+
+            if (N % size != 0) {
+                continue;
+            }
+
+            int find = 0;
+            int groups = N / size;
+            boolean ok = true;
+
+            /*
+             * find whether every group has a peak
+             * */
+            for (int peakIdx : peaks) {
+
+                if (peakIdx / size > find) {
+                    ok = false;
+                    break;
+                }
+
+                if (peakIdx / size == find) {
+                    find++;
+                }
+            }
+
+            if (find != groups) {
+                ok = false;
+            }
+
+            if (ok) return groups;
+        }
+
+        return 0;
+    }
+
+    /*
+     * solution - c
+     */
+    public static int solution2(int[] A) {
+
+        int N = A.length;
+
+        if (N < 3) {
+            return 0;
+        }
+
+        int[] P = new int[N];
+        P[0] = 0;
+
+        for (int i = 1; i < N - 1; i++) {
+
+            P[i] = P[i - 1];
+
+            if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
+                P[i]++;
+            }
+        }
+
+        P[N - 1] = P[N - 2];
+
+        if (P[N - 1] == 0) {
+            return 0;
+        }
+
+
+        for (int i = P[N - 1]; i > 1; i--) {
+
+            if (N % i == 0) {
+
+                int s = N / i;
+                boolean found = true;
+
+                int c = 0;
+
+                /*
+                 * the loop is performed only when i is A divisor of A.length each
+                 * time it performed divisor value times so in total it's performed
+                 * sum(divisors) times which is O(N * log(log(N))) outer loop is
+                 * performed O(N) times, so we ignore the cases when i is not A
+                 * divisor since it is O(N) and O(N) < O(N * log(log(N)))
+                 * */
+                for (int j = s - 1; j < N; j += s) {
+
+                    if (P[j] - c == 0) {
+                        found = false;
+                        break;
+                    }
+
+                    c = P[j];
+                }
+
+                if (found) {
+                    return i;
+                }
+            }
+        }
+
+        return 1;
+    }
 }
