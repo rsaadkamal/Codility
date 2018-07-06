@@ -152,6 +152,9 @@ public class Peaks {
 
             for (int i = 0; i < numOfPeaks; i++) {
 
+                /*
+                 * Peaks = [3, 5, 10]
+                 * */
                 if (peaks.get(i) / sizeOfBlock > threshold) {
                     success = false;
                     break;
