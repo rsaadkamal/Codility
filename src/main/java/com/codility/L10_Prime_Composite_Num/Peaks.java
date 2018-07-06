@@ -75,7 +75,7 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 * */
 
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Created by Chaklader on 6/25/18.
@@ -83,24 +83,24 @@ import java.util.ArrayList;
 public class Peaks {
 
     /*
-     * We want to divide this array into blocks containing at least
-     * the same number of peaks (= 3)
-     *
-     *
-     * Every block should contain at least one peak. The goal is to
-     * find the maximum number of blocks into which the array A can
-     * be divided
-     *
-     *
-     * Divide an array into the maximum number of same-sized blocks,
-     * each of which should contain an index P such that A[P - 1] <
-     * A[P] > A[P + 1]
-     * */
-
-    /*
      * check https://en.wikipedia.org/wiki/Divisor_function
      * and Robin's inequality The sum of divisors is O(N *
      * log(log(N)))
+     * */
+
+    /*
+     * CONDITIONS
+     * ----------
+     *
+     * i.    Every block should contain at least one peak.
+     * ii.   Each blocks should contain elements equal or greater than
+     *       the number of peaks
+     * iii.  Each block should have same number of elements
+     * iv.   N % sizeOfBlock == 0 where n = A.length
+     *
+     * The goal is to find the maximum number of blocks into which the
+     * array A can be divided.
+     *
      * */
 
     /*
