@@ -1,4 +1,4 @@
-package com.codility.Extra;
+package com.codility.Additional;
 
 import java.util.Stack;
 

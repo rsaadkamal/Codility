@@ -1,4 +1,4 @@
-package com.codility.Extra;
+package com.codility.Additional;
 
 /**
  * Created by Chaklader on 7/5/18.

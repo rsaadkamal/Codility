@@ -1,4 +1,4 @@
-package com.codility.Extra;
+package com.codility.Additional;
 
 /*
  * design an algorithm to compute the largest possible number
