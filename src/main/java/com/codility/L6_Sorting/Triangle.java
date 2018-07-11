@@ -16,7 +16,7 @@ Triplet (0, 2, 4) is triangular.
 
 Write A function:
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution1(int[] A); }
 
 that, given an array A consisting of N integers, returns 1 if there exists A triangular triplet for this array and returns 0 otherwise.
 
@@ -57,7 +57,7 @@ public class Triangle {
      * */
 
     /*
-     * solution - A
+     * solution1 - A
      */
     public static int solution(int[] A) {
 

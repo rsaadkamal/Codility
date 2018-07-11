@@ -7,7 +7,7 @@ The wall should be built of cuboid stone blocks (that is, all sides of such bloc
 
 Write A function:
 
-class Solution { public int solution(int[] H); }
+class Solution { public int solution1(int[] H); }
 
 that, given an array H of N positive integers specifying the height of the wall, returns the minimum number of blocks needed to build it.
 
@@ -39,7 +39,7 @@ public class StoneWall {
 
 
     /*
-     * solution - A
+     * solution1 - A
      */
     public static int solution(int[] H) {
 
@@ -98,7 +98,7 @@ public class StoneWall {
 
 
     /*
-     * solution - B
+     * solution1 - B
      */
     public int solution1(int[] H) {
 
@@ -149,7 +149,7 @@ public class StoneWall {
 
 
     /*
-     * solution - c
+     * solution1 - c
      */
     public int solution2(int[] A) {
 

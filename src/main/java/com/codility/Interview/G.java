@@ -172,7 +172,7 @@ public class G {
 
 
     /*
-    solution-b
+    solution1-b
     */
 
     private static int countUneatenLeaves1(int n, int[] a) {
@@ -258,7 +258,7 @@ public class G {
 
 
     /*
-    solution-c
+    solution1-c
     */
 
     public static int findUneatenLeaves(int[] array, int n) {
@@ -294,7 +294,7 @@ public class G {
 
 
     /*
-    solution-d
+    solution1-d
     */
 
     static int countUneatenLeaves2(int N, int[] A) {

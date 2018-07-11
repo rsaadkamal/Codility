@@ -21,7 +21,7 @@ A[3] = 3, the non-divisors are: 2, 6,
 A[4] = 6, there aren't any non-divisors.
 Write A function:
 
-class Solution { public int[] solution(int[] A); }
+class Solution { public int[] solution1(int[] A); }
 
 that, given an array A consisting of N integers, returns A sequence of integers representing the amount of non-divisors.
 
@@ -63,7 +63,7 @@ public class CountNonDivisible {
      * */
 
     /*
-     * solution - A
+     * solution1 - A
      */
     public static int[] solution(int[] A) {
 
@@ -144,7 +144,7 @@ public class CountNonDivisible {
 
 
     /*
-     * solution - B
+     * solution1 - B
      */
     public static int[] solution1(int[] A) {
 
@@ -182,7 +182,7 @@ public class CountNonDivisible {
 
 
     /*
-     * solution - c
+     * solution1 - c
      */
     public int[] solution2(int[] A) {
 
@@ -276,7 +276,7 @@ public class CountNonDivisible {
 
 
     /*
-     * solution - d
+     * solution1 - d
      */
     public int[] solution3(int[] A) {
 

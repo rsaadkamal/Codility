@@ -9,7 +9,7 @@ You are playing A game with N cards. On each side of each card A positive intege
 The score of the game is smallest positive integer that doesn't appear on the cards' front
 faces. You may decide which cards you want to flip over. Having flipped them, you then read
 the numbers on the front faces of all the cards. What is the minimum game score you can achieve?
-Write A function: class Solution { public int solution(int[] A, int[] B); } that, given two
+Write A function: class Solution { public int solution1(int[] A, int[] B); } that, given two
 arrays of integers A and B, both of length N, describing the numbers written on the fronts and
  backs of all the cards, returns the minimum possible game score. For example,
  given A = [1, 2, 4, 3] and B = [1, 3, 2, 3], your function should return 2, as we could

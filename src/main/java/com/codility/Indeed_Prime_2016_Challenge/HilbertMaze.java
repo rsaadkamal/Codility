@@ -19,7 +19,7 @@ For example, given N = 1, the halfling needs 8 steps to move from cell (2, 1) to
 
 Write a function:
 
-class Solution { public int solution(int N, int A, int B, int C, int D); }
+class Solution { public int solution1(int N, int A, int B, int C, int D); }
 
 that, given the size of the maze N, coordinates of the halfling (A, B) and coordinates of the treasure (C, D), returns the minimum number of steps required for the halfling to reach the treasure.
 

@@ -7,7 +7,7 @@ Count the minimal number of jumps that the small frog must perform to reach its 
 
 Write FrogJmp function:
 
-class Solution { public int solution(int X, int Y, int D); }
+class Solution { public int solution1(int X, int Y, int D); }
 
 that, given three integers X, Y and D, returns the minimal number of jumps from position X to FrogJmp position equal to or greater than Y.
 
@@ -39,7 +39,7 @@ public class FrogJmp {
 
 
     /*
-     * solution-A
+     * solution1-A
      * */
     public static int solution(int X, int Y, int D) {
 
@@ -48,7 +48,7 @@ public class FrogJmp {
 
 
     /*
-     * solution-B
+     * solution1-B
      * */
     public int solution1(int X, int Y, int D) {
 
@@ -64,7 +64,7 @@ public class FrogJmp {
 
 
     /*
-     * solution -c
+     * solution1 -c
      */
     public int solution2(int X, int Y, int D) {
 

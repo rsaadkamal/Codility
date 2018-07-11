@@ -29,7 +29,7 @@ The number of different ways can be very large, so it is sufficient to return th
 
 Write A function:
 
-class Solution { public int[] solution(int[] A, int[] B); }
+class Solution { public int[] solution1(int[] A, int[] B); }
 
 that, given two non-empty arrays A and B of L integers, returns an array consisting of L integers specifying the consecutive answers; position I should contain the number of different ways of climbing the ladder with A[I] rungs modulo 2B[I].
 
@@ -62,7 +62,7 @@ public class Ladder {
 
 
     /*
-     * solution - A
+     * solution1 - A
      */
     public static int[] solution(int[] A, int[] B) {
 
@@ -97,7 +97,7 @@ public class Ladder {
 
 
     /*
-     * solution - B
+     * solution1 - B
      */
     public int[] solution1(int[] A, int[] B) {
 
@@ -129,7 +129,7 @@ public class Ladder {
 
 
     /*
-     * solution - c
+     * solution1 - c
      */
     public int[] solution2(int[] A, int[] B) {
 

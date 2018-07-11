@@ -18,7 +18,7 @@ The goal is to count the number of chocolates that you will eat, following the a
 
 Write A function:
 
-class Solution { public int solution(int N, int M); }
+class Solution { public int solution1(int N, int M); }
 
 that, given two positive integers N and M, returns the number of chocolates that you will eat.
 
@@ -49,7 +49,7 @@ public class ChocolatesByNumbers {
      * of the integers.
      * */
     /*
-     * solution - A
+     * solution1 - A
      */
     public int solution1(int N, int M) {
 
@@ -73,7 +73,7 @@ public class ChocolatesByNumbers {
 
 
     /*
-     * solution - B
+     * solution1 - B
      */
     private static int solution(int N, int M) {
 
@@ -108,7 +108,7 @@ public class ChocolatesByNumbers {
 
 
     /*
-     * solution - c
+     * solution1 - c
      * */
     public int solution2(int N, int M) {
 

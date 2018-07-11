@@ -10,7 +10,7 @@ package com.codility.Interview;
 
 
 
-    /*  Running solution...
+    /*  Running solution1...
     Compilation successful.
 
     Example test:    '00-44  48 5555 8361'
@@ -29,7 +29,7 @@ import java.util.stream.IntStream;
  */
 public class D {
 
-    /*solution-a*/
+    /*solution1-a*/
     public static String formatPhoneNumber(String S) {
 
         if(S == null || S.isEmpty() || S.length() < 2){
@@ -88,10 +88,10 @@ public class D {
 
         return result;
     }
-    /*END of solution-a*/
+    /*END of solution1-a*/
 
 
-    /*solution-b*/
+    /*solution1-b*/
     public static String formatPhoneNumber1(String s) {
 
         if (s == null) {
@@ -104,11 +104,11 @@ public class D {
                                 "(\\d{3})(?!$)",          // non-final group of 3 digits,
                         "$1$2-");                 // insert separator.
     }
-    /*END of solution-b*/
+    /*END of solution1-b*/
 
 
 
-    /*solution-c*/
+    /*solution1-c*/
     // "Hello123 erere3435 efere 45 world.".replaceAll("[^\\d+]", "")
     public static String formatPhoneNumber3(String input) {
 
@@ -156,7 +156,7 @@ public class D {
 
         return phone.toString();
     }
-    /*END of solution-c*/
+    /*END of solution1-c*/
 
 
 

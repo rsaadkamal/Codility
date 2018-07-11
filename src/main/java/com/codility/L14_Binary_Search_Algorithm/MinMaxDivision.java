@@ -28,7 +28,7 @@ The goal is to minimize the large sum. In the above example, 6 is the minimal la
 
 Write A function:
 
-class Solution { public int solution(int K, int M, int[] A); }
+class Solution { public int solution1(int K, int M, int[] A); }
 
 that, given integers K, M and A non-empty array A consisting of N integers, returns the minimal large sum.
 
@@ -75,7 +75,7 @@ public class MinMaxDivision {
      * */
 
     /*
-     * solution -A
+     * solution1 -A
      */
     public static int solution(int K, int M, int[] A) {
 
@@ -184,7 +184,7 @@ public class MinMaxDivision {
 
 
     /*
-     * solution - B
+     * solution1 - B
      */
     public int solution1(int K, int M, int[] A) {
 
@@ -236,7 +236,7 @@ public class MinMaxDivision {
 
 
     /*
-     * solution - c
+     * solution1 - c
      */
     public int solution2(int K, int M, int[] A) {
 

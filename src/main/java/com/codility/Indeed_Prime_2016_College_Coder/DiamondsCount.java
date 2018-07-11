@@ -5,7 +5,7 @@ You are given N distinct points on a plane. Count the number of different diamon
 
 Write a function:
 
-class Solution { public int solution(int[] X, int[] Y); }
+class Solution { public int solution1(int[] X, int[] Y); }
 
 that, given two arrays X and Y, each containing N integers, representing N points (where X[K], Y[K] are the coordinates of the K-th point), returns the number of diamonds on the plane.
 

@@ -26,7 +26,7 @@ If, however, K = 5, the maximum number of cities we can select according to the 
 
 Write a function:
 
-class Solution { public int solution(int K, int[] C, int[] D); }
+class Solution { public int solution1(int K, int[] C, int[] D); }
 
 that, given the integer K and non-empty arrays C and D of length N describing a network of cities and their attractiveness, returns the maximum number of cities that can be included in a valid trip plan.
 

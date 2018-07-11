@@ -21,7 +21,7 @@ package com.codility.Interview;
     two of the elements of A[4..6] are different from X, namely A[4] and A[5].
     Write a function:
 
-    int solution(int X, int A[], int N);
+    int solution1(int X, int A[], int N);
 
     that, given an integer X and a non-empty zero-indexed array A consisting of N integers,
     returns the value of index K satisfying the above conditions. It can be shown such index
@@ -42,7 +42,7 @@ package com.codility.Interview;
     required for input arguments).
 
     Elements of input arrays can be modified.
-    Except of one edge case the solution is as simple as counting for a number of X within the A
+    Except of one edge case the solution1 is as simple as counting for a number of X within the A
     and then calculating K as that number substracted from an array length... Just think
     of it a bit:
 
@@ -58,7 +58,7 @@ package com.codility.Interview;
     problem at all! That only means that we have got for two less X on the left and for two less
     non-X on the right, thus anyway 2 of X on the left = 2 of non-X on the right;
 
-    As for an exception mentioned earlier, the described solution will fail when all the X values
+    As for an exception mentioned earlier, the described solution1 will fail when all the X values
     are grouped in one rightmost sequence, e.g. [3,5,5,5,5] -> [3 | 5,5,5,5] is wrong because for
     X=5 by cutting 4 elements from the right eventually we will get an index of 1 thus leaving
     no elements equal to X on the left at all. But as you may remember according to the condition
@@ -103,7 +103,7 @@ public class F {
 
         return (A[N-1]!=X || sum > seg) ? (N - sum) : N;
     }
-    /*END of solution:*/
+    /*END of solution1:*/
     /*eDreams ODIGEO*/
     /*================*/
 

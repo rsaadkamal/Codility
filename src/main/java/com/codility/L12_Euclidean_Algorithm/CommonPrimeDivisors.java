@@ -14,7 +14,7 @@ N = 10 and M = 30, the prime divisors aren't the same: {2, 5} is not equal to {2
 N = 9 and M = 5, the prime divisors aren't the same: {3} is not equal to {5}.
 Write A function:
 
-class Solution { public int solution(int[] A, int[] B); }
+class Solution { public int solution1(int[] A, int[] B); }
 
 that, given two non-empty arrays A and B of Z integers, returns the number of positions K for which the prime divisors of A[K] and B[K] are exactly the same.
 
@@ -42,7 +42,7 @@ public class CommonPrimeDivisors {
 
 
     /*
-     * solution - A
+     * solution1 - A
      */
     private static int solution(int[] A, int[] B) {
 
@@ -155,7 +155,7 @@ public class CommonPrimeDivisors {
 
 
     /*
-     * solution - B
+     * solution1 - B
      */
     public int solution1(int[] A, int[] B) {
 
@@ -203,7 +203,7 @@ public class CommonPrimeDivisors {
 
 
     /*
-     * solution - c
+     * solution1 - c
      */
     public int solution2(int[] A, int[] B) {
 

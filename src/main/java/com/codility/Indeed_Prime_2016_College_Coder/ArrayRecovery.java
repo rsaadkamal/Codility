@@ -9,7 +9,7 @@ Bob computed an array B and then mistakenly deleted A. He now intends to find ev
 
 Write a function:
 
-class Solution { public int solution(int[] B, int M); }
+class Solution { public int solution1(int[] B, int M); }
 
 that, given an integer M and an array B with N integers, returns the remainder from the division by 109+7 of the number of valid arrays A from which Bob would get B. You can assume that there is at least one such array.
 

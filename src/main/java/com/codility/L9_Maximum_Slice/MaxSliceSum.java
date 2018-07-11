@@ -5,7 +5,7 @@ package com.codility.L9_Maximum_Slice;
 
 Write A function:
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution1(int[] A); }
 
 that, given an array A consisting of N integers, returns the maximum sum of any slice of A.
 
@@ -37,7 +37,7 @@ public class MaxSliceSum {
 
 
     /*
-     * solution - A
+     * solution1 - A
      */
     public static int solution(int[] A) {
 
@@ -78,7 +78,7 @@ public class MaxSliceSum {
 
 
     /*
-     * solution - B
+     * solution1 - B
      */
     public int solution1(int[] A) {
 
@@ -97,7 +97,7 @@ public class MaxSliceSum {
 
 
     /*
-     * solution - c
+     * solution1 - c
      */
     public int solution2(int[] A) {
 

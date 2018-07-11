@@ -15,7 +15,7 @@ places more than once. He wonders how many journeys he must make before he is fo
 A triplet of rest stops that he has used previously. Write A function:
 
 
-class Solution { public int solution(int[] A, int[] B, int[] C); } that, given three non-empty
+class Solution { public int solution1(int[] A, int[] B, int[] C); } that, given three non-empty
 arrays A, B, C consisting of N integers each, denoting the locations of rest stops offering
 different types of food, returns the number of ways John can pick three stops in different
 locations (two locations are different if they have different distance from the beginning of

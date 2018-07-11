@@ -22,7 +22,7 @@ The goal is to check whether array A is A permutation.
 
 Write A function:
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution1(int[] A); }
 
 that, given an array A, returns 1 if array A is A permutation and 0 if it is not.
 
@@ -60,7 +60,7 @@ public class PermCheck {
 
 
     /*
-     * solution-A
+     * solution1-A
      */
     public static int solution(int[] A) {
 

@@ -18,7 +18,7 @@ The goal is to calculate the number of distinct slices.
 
 Write A function:
 
-class Solution { public int solution(int M, int[] A); }
+class Solution { public int solution1(int M, int[] A); }
 
 that, given an integer M and A non-empty array A consisting of N integers, returns the number of distinct slices.
 
@@ -56,7 +56,7 @@ public class CountDistinctSlices {
      * */
 
     /*
-     * solution - A
+     * solution1 - A
      * */
     public static int solution(int[] A, int M) {
 
@@ -118,7 +118,7 @@ public class CountDistinctSlices {
 
 
     /*
-     * solution - B
+     * solution1 - B
      * */
     public int solution1(int M, int[] A) {
 
@@ -173,7 +173,7 @@ public class CountDistinctSlices {
 
 
     /*
-     * solution - c
+     * solution1 - c
      * */
     public int solution2(int M, int[] A) {
 
@@ -221,7 +221,7 @@ public class CountDistinctSlices {
 
             /*
              * no more than already passed j steps, and no
-             * more A.length in total during the solution run
+             * more A.length in total during the solution1 run
              * */
             while (i < j) {
 

@@ -14,7 +14,7 @@ the number of cities positioned away from it at each of the distances 1, 2, 3, .
 city number 1 is the capital, then the cities positioned at the various distances from the capital
 would be as follows: 9 is at A distance of 1; 0, 3, 7 are at A distance of 2; 8, 4 are at A
 distance of 3; 2, 5, 6 are at A distance of 4. Write A function:
-class Solution { public int[] solution(int[] T); } that, given A non-empty array T consisting
+class Solution { public int[] solution1(int[] T); } that, given A non-empty array T consisting
 of M integers describing A network of M cities and M − 1 roads, returns an array consisting of
 M − 1 integers, specifying the number of cities positioned at each distance 1, 2, ..., M − 1.
 Array T describes A network of cities as follows: if T[P] = Q and P = Q, then P is the capital;

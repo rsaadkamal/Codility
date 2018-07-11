@@ -23,7 +23,7 @@ The goal is to count the number of equi leaders.
 
 Write A function:
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution1(int[] A); }
 
 that, given A non-empty array A consisting of N integers, returns the number of equi leaders.
 
@@ -62,7 +62,7 @@ public class EquiLeader {
      * */
 
     /*
-     * solution - A
+     * solution1 - A
      */
     public static int solution(int[] A) {
 
@@ -143,7 +143,7 @@ public class EquiLeader {
 
 
     /*
-     * solution - B
+     * solution1 - B
      */
     public int solution1(int[] A) {
 

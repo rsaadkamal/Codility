@@ -21,7 +21,7 @@ package com.codility.Interview;
       A[5] = 17
 
     Write a function:
-    class Solution { public int solution(int N); }
+    class Solution { public int solution1(int N); }
     that, given a positive integer N, returns the length of the shortest possible
     sequence of integers satisfying the above conditions and ending with N.
     For example, given N = 17, the function should return 6, as explained above.
@@ -71,5 +71,5 @@ public class E {
         // System.out.println(list.toString());
         return list.size();
     }
-    /*END of solution*/
+    /*END of solution1*/
 }

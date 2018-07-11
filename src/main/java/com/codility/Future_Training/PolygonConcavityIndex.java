@@ -31,7 +31,7 @@ class Point2D {
 
 Write a function:
 
-class Solution { public int solution(Point2D[] A); }
+class Solution { public int solution1(Point2D[] A); }
 
 that, given a non-empty array A consisting of N elements describing a polygon, returns −1 if the polygon is convex. Otherwise, the function should return the index of any point that doesn't belong to the convex hull border. Note that consecutive edges of the polygon may be collinear (that is, the polygon might have 180−degrees angles).
 

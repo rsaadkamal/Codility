@@ -5,7 +5,7 @@ How many games can be hosted in parallel simultaneously?
 
 Write a function:
 
-class Solution { public int solution(int P, int C); }
+class Solution { public int solution1(int P, int C); }
 
 that, given the number of players P and the number of reserved courts C, returns the maximum number of games that can be played in parallel.
 
@@ -16,5 +16,5 @@ Given P = 10 players and C = 3 courts, the function should return 3, as at most 
 Assume that:
 
 P and C are integers within the range [1..30,000].
-In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
+In your solution1, focus on correctness. The performance of your solution1 will not be the focus of the assessment.
 */

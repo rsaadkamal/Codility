@@ -27,7 +27,7 @@ The goal is to find the maximal sum of any double slice.
 
 Write A function:
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution1(int[] A); }
 
 that, given A non-empty array A consisting of N integers, returns the maximal sum of any double slice.
 
@@ -108,7 +108,7 @@ public class MaxDoubleSliceSum {
 
 
     /*
-     * solution - a
+     * solution1 - a
      * */
     public static int solution(int[] A) {
 
@@ -164,7 +164,7 @@ public class MaxDoubleSliceSum {
     }
 
     /*
-     * solution - b
+     * solution1 - b
      */
 
     /*
@@ -210,7 +210,7 @@ public class MaxDoubleSliceSum {
 
 
     /*
-     * solution - c
+     * solution1 - c
      */
     public int solution2(int[] A) {
 

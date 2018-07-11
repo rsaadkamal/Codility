@@ -15,7 +15,7 @@ If A share was bought on day 0 and sold on day 2, A loss of 2048 would occur bec
 
 Write A function,
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution1(int[] A); }
 
 that, given an array A consisting of N integers containing daily prices of A stock share for A period of N consecutive days, returns the maximum possible profit from one transaction during this period. The function should return 0 if it was impossible to gain any profit.
 
@@ -48,7 +48,7 @@ public class MaxProfit {
 
 
     /*
-     * solution - A
+     * solution1 - A
      */
     public static int solution(int[] A) {
 
@@ -90,7 +90,7 @@ public class MaxProfit {
 
 
     /*
-     * solution - B
+     * solution1 - B
      */
     public int solution1(int[] A) {
 
@@ -109,7 +109,7 @@ public class MaxProfit {
 
 
     /*
-     * solution - c
+     * solution1 - c
      */
     /*
      * PREMISE: To gain the max profit from A temporal series
@@ -138,7 +138,7 @@ public class MaxProfit {
 
 
     /*
-     * solution - d
+     * solution1 - d
      */
     public int solution3(int[] A) {
 

@@ -21,7 +21,7 @@ The goal is to find the sequence of travel targets. In the above example we have
 
 Write a function:
 
-class Solution { public int[] solution(int K, int[] T); }
+class Solution { public int[] solution1(int K, int[] T); }
 
 that, given a non-empty array T consisting of N integers describing a network of N cities and N − 1 roads, returns the sequence of travel targets.
 

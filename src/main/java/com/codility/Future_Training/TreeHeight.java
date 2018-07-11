@@ -1,8 +1,8 @@
 package com.codility.Future_Training;
 
 /*
-
 1. TreeHeight
+
 Compute the height of a binary tree.
 Task description
 In this problem we consider binary trees, represented by pointer data structures.
@@ -21,7 +21,7 @@ Problem
 
 Write a function:
 
-class Solution { public int solution(Tree T); }
+class Solution { public int solution1(Tree T); }
 
 that, given a non-empty binary tree T consisting of N nodes, returns its height. For example, given tree T shown in the figure above, the function should return 2, as explained above. Note that the values contained in the nodes are not relevant in this task.
 
@@ -69,5 +69,26 @@ public class TreeHeight {
             return 0;
         }
         return Math.max(s(t.l), s(t.r)) + 1;
+    }
+
+    /*
+     * solution - b
+     * */
+    public int solution1(TreeHeight.TreeI T) {
+        return getTreeHeight(T, -1);
+    }
+
+    private int getTreeHeight(TreeHeight.TreeI tree, int current) {
+        if (tree == null) {
+            return current;
+        }
+        current++;
+        return Math.max(getTreeHeight(tree.l, current), getTreeHeight(tree.r, current));
+    }
+
+    class TreeI {
+        public int x;
+        public TreeHeight.TreeI l;
+        public TreeHeight.TreeI r;
     }
 }

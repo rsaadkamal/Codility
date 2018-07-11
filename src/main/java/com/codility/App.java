@@ -2,86 +2,112 @@ package com.codility;
 
 
 import java.util.*;
-import java.util.stream.IntStream;
+
 
 public class App {
 
 
-    public static int solution(int[] A) {
+    static class Graph {
 
-        int peakCount = 0;
+        private int numberOfVertices;
+        private LinkedList<Integer>[] adjacencyList;
 
-        ArrayList<Integer> peaks = new ArrayList<Integer>();
+        public Graph(int v) {
+
+            this.numberOfVertices = v;
+            this.adjacencyList = new LinkedList[v];
+
+            for (int i = 0; i < numberOfVertices; i++) {
+                adjacencyList[i] = new LinkedList<>();
+            }
+        }
+
+        public void addEdge(int v, int w) {
+            adjacencyList[v].add(w);
+        }
 
         /*
-         * add all the peaks of the segments in the list
+         * perform the breadth first search from the Node "S"
          * */
-        for (int i = 1; i < A.length - 1; i++) {
+        public void performBFS(int S) {
 
-            if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
-                peaks.add(i);
-                peakCount++;
+            boolean[] visited = new boolean[numberOfVertices];
+            Queue<Integer> queue = new LinkedList<>();
+
+            visited[S] = true;
+            queue.add(S);
+
+            while (!queue.isEmpty()) {
+
+                int M = queue.poll();
+                System.out.println(" " + M);
+
+                Iterator<Integer> iterator = adjacencyList[M].listIterator();
+
+                while (iterator.hasNext()) {
+
+                    int N = iterator.next();
+
+                    if (!visited[N]) {
+
+                        visited[N] = true;
+                        queue.add(N);
+                    }
+                }
             }
         }
 
-        int numOfPeaks = peaks.size();
-        int N = A.length;
 
-        for (int sizeOfBlock = 1; sizeOfBlock <= N; sizeOfBlock++) {
+        /*
+         * perform the depth first search
+         * */
+        public void performDFS(int S) {
 
-            /*
-             * A block need atleast elements equal
-             * to or grater than of peak numbers
-             *
-             * ------------------------------------------------------
-             * i.   N = array length
-             * ii.  B = number of numOfBlocks
-             * iii. E = number of elements in a block >= num of peaks
-             * ------------------------------------------------------
-             *
-             * finally, B = N/(E >= num of peaks)
-             * */
+            boolean[] visited = new boolean[S];
+            helperDFS(S, visited);
+        }
 
-            int numOfBlocks = N / sizeOfBlock;
+        public void helperDFS(int S, boolean[] visited) {
 
-            if (N % sizeOfBlock != 0 || numOfBlocks > peakCount) {
-                continue;
-            }
+            visited[S] = true;
+            System.out.print(S + " ");
 
-            boolean success = true;
-            int threshold = 0;
+            Iterator<Integer> i = adjacencyList[S].listIterator();
 
-            for (int i = 0; i < numOfPeaks; i++) {
+            while (i.hasNext()) {
 
-                /*
-                 * Peaks = [3, 5, 10]
-                 * */
-                if (peaks.get(i) / sizeOfBlock > threshold) {
-                    success = false;
-                    break;
+                int N = i.next();
+
+                if (!visited[N]) {
+                    helperDFS(N, visited);
                 }
-
-                if (peaks.get(i) / sizeOfBlock == threshold) {
-                    threshold++;
-                }
-            }
-
-            if (threshold != numOfBlocks) {
-                success = false;
-            }
-
-            if (success) {
-                return numOfBlocks;
             }
         }
 
-        return 0;
-    }
+
+        class Node {
+
+            Node left;
+            Node right;
+
+            boolean isLeft() {
+                return true;
+            }
+        }
+
+        public static void main(String[] args) {
+
+            Graph g = new Graph(6);
+
+            g.addEdge(0, 1);
+            g.addEdge(0, 2);
+            g.addEdge(0, 3);
+
+            g.addEdge(3, 4);
+            g.addEdge(4, 5);
 
 
-    public static void main(String[] args) {
-
-        int[] A = {1, 2, 3, 4, 3, 4, 1, 2, 3, 4, 6, 2};
-        System.out.println(solution(A));
+            g.performBFS(3);
+        }
     }
 }

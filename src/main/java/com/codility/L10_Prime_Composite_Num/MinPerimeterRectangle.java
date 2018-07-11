@@ -15,7 +15,7 @@ For example, given integer N = 30, rectangles of area 30 are:
 (5, 6), with A perimeter of 22.
 Write A function:
 
-class Solution { public int solution(int N); }
+class Solution { public int solution1(int N); }
 
 that, given an integer N, returns the minimal perimeter of any rectangle whose area is exactly equal to N.
 
@@ -37,7 +37,7 @@ public class MinPerimeterRectangle {
 
 
     /*
-     * solution -A
+     * solution1 -A
      */
     public static int solution(int N) {
 
@@ -55,7 +55,7 @@ public class MinPerimeterRectangle {
 
 
     /*
-     * solution - B
+     * solution1 - B
      */
     public int solution1(int N) {
 
@@ -76,7 +76,7 @@ public class MinPerimeterRectangle {
 
 
     /*
-     * solution - c
+     * solution1 - c
      */
     public int solution2(int N) {
 

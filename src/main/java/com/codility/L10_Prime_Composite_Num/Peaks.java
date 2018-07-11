@@ -42,7 +42,7 @@ The maximum number of blocks that array A can be divided into is three.
 
 Write A function:
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution1(int[] A); }
 
 that, given A non-empty array A consisting of N integers, returns the maximum number of blocks into which A can be divided.
 
@@ -104,7 +104,7 @@ public class Peaks {
      * */
 
     /*
-     * solution - a
+     * solution1 - a
      */
     public static int solution(int[] A) {
 
@@ -179,7 +179,7 @@ public class Peaks {
 
 
     /*
-     * solution - b
+     * solution1 - b
      */
     public static int solution1(int[] A) {
 
@@ -230,7 +230,7 @@ public class Peaks {
     }
 
     /*
-     * solution - c
+     * solution1 - c
      */
     public static int solution2(int[] A) {
 

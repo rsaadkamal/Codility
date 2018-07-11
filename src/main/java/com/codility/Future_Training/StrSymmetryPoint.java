@@ -7,7 +7,7 @@ Find a symmetry point of a string, if any.
 Task description
 Write a function:
 
-class Solution { public int solution(String S); }
+class Solution { public int solution1(String S); }
 
 that, given a string S, returns the index (counting from 0) of a character such that the part of the string to the left of that character is a reversal of the part of the string to its right. The function should return ?1 if no such index exists.
 
@@ -36,16 +36,46 @@ expected worst-case space complexity is O(1) (not counting the storage required 
 
  */
 public class StrSymmetryPoint {
+
+    /*
+     * solution - a
+     * */
     public int solution(String s) {
+
         if ((s.length() & 1) == 0) {
             return -1;
         }
+
         final int result = s.length() / 2;
+
         for (int i = result, j = result; j >= 0; i++, j--) {
             if (s.charAt(i) != s.charAt(j)) {
                 return -1;
             }
         }
+
         return result;
+    }
+
+
+    /*
+    * solution - b
+    * */
+    public int solution1(String S) {
+        if (S.length() == 1) {
+            return 0;
+        }
+        if (S.length() % 2 == 0) {
+            return -1;
+        }
+        int mid = S.length() / 2;
+        for (int i = 0; i < S.length() / 2 + 1; i++) {
+            int left = mid - i;
+            int right = mid + i;
+            if (S.charAt(left) != S.charAt(right)) {
+                return -1;
+            }
+        }
+        return mid;
     }
 }

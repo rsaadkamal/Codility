@@ -17,7 +17,7 @@ The part between positions 5 and 5 contains A single nucleotide T, whose impact 
 The part between positions 0 and 6 (the whole string) contains all nucleotides, in particular nucleotide A whose impact getImpactFactor is 1, so the answer is 1.
 Write A function:
 
-class Solution { public int[] solution(String S, int[] P, int[] Q); }
+class Solution { public int[] solution1(String S, int[] P, int[] Q); }
 
 that, given A non-empty string S consisting of N characters and two non-empty arrays P and Q consisting of M integers, returns an array consisting of M integers specifying the consecutive answers to all queries.
 
@@ -58,7 +58,7 @@ public class GenomicRangeQuery {
 
 
     /*
-     * solution - A
+     * solution1 - A
      * */
     public int[] solution(String S, int[] P, int[] Q) {
 
@@ -87,7 +87,7 @@ public class GenomicRangeQuery {
 
 
     /*
-     * solution - B
+     * solution1 - B
      * */
     public static int[] solution1(String S, int[] P, int[] Q) {
 
@@ -155,10 +155,10 @@ public class GenomicRangeQuery {
 
 
     /*
-     * solution - c
+     * solution1 - c
      * */
     /*
-     * This solution uses prefix. Time complexity is O(N + M)
+     * This solution1 uses prefix. Time complexity is O(N + M)
      * */
     public int[] solution2(String S, int[] P, int[] Q) {
 
@@ -232,7 +232,7 @@ public class GenomicRangeQuery {
 
 
     /*
-     * solution - d
+     * solution1 - d
      * */
     public int[] solution3(String S, int[] P, int[] Q) {
 

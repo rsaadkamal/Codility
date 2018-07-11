@@ -5,7 +5,7 @@ package com.codility.L4_Counting_Elements;
 
 Write A function:
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution1(int[] A); }
 
 that, given an array A of N integers, returns the smallest positive integer (greater than 0) that does not occur in A.
 
@@ -37,7 +37,7 @@ public class MissingInteger {
 
 
     /*
-     * solution - A
+     * solution1 - A
      * */
     public static int solution(int[] A) {
 
@@ -61,7 +61,7 @@ public class MissingInteger {
 
 
     /*
-     * solution - B
+     * solution1 - B
      * */
     public int solution1(int[] A) {
 

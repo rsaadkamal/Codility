@@ -24,7 +24,7 @@ P = 3, difference = |6 − 7| = 1
 P = 4, difference = |10 − 3| = 7
 Write A function:
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution1(int[] A); }
 
 that, given A non-empty array A of N integers, returns the minimal difference that can be achieved.
 
@@ -59,7 +59,7 @@ public class TapeEquilibrium {
 
 
     /*
-     * solution - A
+     * solution1 - A
      * */
     public static int solution(int[] A) {
 
@@ -81,7 +81,7 @@ public class TapeEquilibrium {
 
 
     /*
-     * solution-B
+     * solution1-B
      * */
     public int solution1(int[] A) {
 
@@ -123,7 +123,7 @@ public class TapeEquilibrium {
 
 
     /*
-     * solution - c
+     * solution1 - c
      * */
     public int solution3(int[] A) {
 

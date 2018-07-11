@@ -15,7 +15,7 @@ The absolute distinct count of this array is 5, because there are 5 distinct abs
 
 Write A function:
 
-class Solution { public int solution(int[] A); }
+class Solution { public int solution1(int[] A); }
 
 that, given A non-empty array A consisting of N numbers, returns absolute distinct count of array A.
 
@@ -50,7 +50,7 @@ public class AbsDistinct {
 
 
     /*
-     * solution - A
+     * solution1 - A
      * */
     public static int solution(int[] A) {
 
@@ -59,7 +59,7 @@ public class AbsDistinct {
 
 
     /*
-     * solution - B
+     * solution1 - B
      * */
     public static int solution1(int[] A) {
 
@@ -87,7 +87,7 @@ public class AbsDistinct {
 
 
     /*
-     * solution - c
+     * solution1 - c
      * */
     public int solution2(int[] A) {
 
@@ -148,7 +148,7 @@ public class AbsDistinct {
 
 
     /*
-     * solution - d
+     * solution1 - d
      * */
     public int solution3(int[] A) {
 
