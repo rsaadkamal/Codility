@@ -1,4 +1,5 @@
 package com.codility.Indeed_Prime_2016_Challenge;/*
+
 A company of dwarfs is travelling across the New Zealand. On reaching the Clutha River the dwarfs need to get across, but recent storms have washed away the bridge. Luckily, a small ferry, in the form of a square raft, is operating.
 
 The raft is square and has N rows of seats, numbered from 1 to N. Each row contains N seats, labeled with consecutive letters (A, B, C, etc.). Each seat is identified by a string composed of its row number followed by its column number; for example, "9C" denotes the third seat in the 9th row.
@@ -44,13 +45,16 @@ import java.util.stream.IntStream;
 
 public class DwarfsRafting{
 
+
     private int[] dwarfs;
     private int[] capacity;
 
     public int solution(int N, String S, String T) {
+
         if (N % 2 == 1) {
             return -1;
         }
+
         S = S.toLowerCase();
         T = T.toLowerCase();
         int[] barrels = parseString(S, N);
@@ -72,7 +76,9 @@ public class DwarfsRafting{
     }
 
     private int getBalanced(int left, int right) {
+
         int balance = Math.min(capacity[left], capacity[right]);
+
         if (balance < Math.max(dwarfs[left], dwarfs[right])) {
             return -1;
         } else {
@@ -81,12 +87,16 @@ public class DwarfsRafting{
     }
 
     private int[] parseString(String in, int N) {
+
         if (in.isEmpty()) {
             return new int[4];
         }
+
         int[] data = new int[4];
         String[] chunks = in.split(" ");
+
         for (String chunk : chunks) {
+
             int column = Integer.parseInt(chunk.substring(0, chunk.length() - 1));
             int row = charToInt(chunk.charAt(chunk.length() - 1));
             if (column <= N / 2) {

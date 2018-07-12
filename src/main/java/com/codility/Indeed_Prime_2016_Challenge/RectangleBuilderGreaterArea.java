@@ -39,8 +39,12 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class RectangleBuilderGreaterArea{
+public class RectangleBuilderGreaterArea {
 
+
+    /*
+     * solution - a
+     * */
     public int solution(int[] A, int X) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int a : A) {
@@ -79,7 +83,11 @@ public class RectangleBuilderGreaterArea{
         return result;
     }
 
-    public int nativeSolution(int[] A, int X) {
+
+    /*
+     * solution - b
+     * */
+    public int solution1(int[] A, int X) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < A.length; i++) {
             if (map.get(A[i]) == null) {
