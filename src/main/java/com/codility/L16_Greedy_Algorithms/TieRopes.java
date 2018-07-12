@@ -62,8 +62,8 @@ public class TieRopes {
 
 
     /*
-    * solution1 - A
-    * */
+     * solution - a
+     * */
     public static int solution(int[] A, int K) {
 
         int count = 0;
@@ -85,9 +85,8 @@ public class TieRopes {
     }
 
 
-
     /*
-     * solution1 - B
+     * solution - b
      * */
     public int solution1(int K, int[] A) {
 
@@ -107,5 +106,26 @@ public class TieRopes {
         }
 
         return count;
+    }
+
+
+    /*
+     * solution - c
+     * */
+    public int solution2(int K, int[] A) {
+
+        int counter = 0;
+        int sum = 0;
+
+        for (int i : A) {
+
+            sum += i;
+            if (sum >= K) {
+                sum = 0;
+                counter++;
+            }
+        }
+
+        return counter;
     }
 }
