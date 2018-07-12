@@ -60,7 +60,6 @@ expected worst-case space complexity is O(1).. 1po
 
 */
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,7 +67,6 @@ import java.util.List;
  * Created by Chaklader on 7/5/18.
  */
 public class ShortestSequence {
-
 
     /*
      * solution - a

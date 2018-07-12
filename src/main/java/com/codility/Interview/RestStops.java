@@ -104,7 +104,13 @@ public class RestStops {
              * */
             int minIndex = minimumIndex(C, B[j]);
 
-            if (maxIndex == -1 || minIndex == -1) {
+            /*
+             * A = [40, 50, 60]; B = [10, 45, 55]; C = [70, 80, 90] (please, notice that B[0] == 10
+             *
+             * The idea is that John can't stop at A[0] - it's too early for him to eat pizza: you
+             * get 0 (as expected) but you should keep on looping.
+             * */
+            if (minIndex == -1) {
                 return count;
             }
 
