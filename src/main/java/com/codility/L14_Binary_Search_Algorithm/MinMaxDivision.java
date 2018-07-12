@@ -55,6 +55,8 @@ expected worst-case space complexity is O(1) (not counting the storage required 
 * */
 
 
+import java.util.stream.IntStream;
+
 /*
 * Task Score 100%
 * Correctness 100%
@@ -75,7 +77,7 @@ public class MinMaxDivision {
      * */
 
     /*
-     * solution1 -A
+     * solution1 - a
      */
     public static int solution(int K, int M, int[] A) {
 
@@ -236,7 +238,7 @@ public class MinMaxDivision {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int solution2(int K, int M, int[] A) {
 
@@ -319,5 +321,42 @@ public class MinMaxDivision {
         }
 
         return stepsLeft >= 0;
+    }
+
+
+    /*
+     * solution - d
+     */
+    public int solution3(int K, int M, int[] A) {
+
+        int min = IntStream.of(A).max().getAsInt();
+        int max = IntStream.of(A).sum();
+        int result = max;
+
+        while (min <= max) {
+            int mid = (min + max) / 2;
+            if (check(A, mid, K - 1)) {
+                max = mid - 1;
+                result = mid;
+            } else {
+                min = mid + 1;
+            }
+        }
+        return result;
+    }
+
+    private boolean check(int[] A, int mid, int K) {
+        int sum = 0;
+        for (int i = 0; i < A.length; i++) {
+            sum += A[i];
+            if (sum > mid) {
+                sum = A[i];
+                K--;
+            }
+            if (K < 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -41,6 +41,7 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 * */
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.stream.IntStream;
 
 /**
@@ -50,7 +51,7 @@ public class AbsDistinct {
 
 
     /*
-     * solution1 - A
+     * solution - a
      * */
     public static int solution(int[] A) {
 
@@ -59,7 +60,7 @@ public class AbsDistinct {
 
 
     /*
-     * solution1 - B
+     * solution1 - b
      * */
     public static int solution1(int[] A) {
 
@@ -148,7 +149,7 @@ public class AbsDistinct {
 
 
     /*
-     * solution1 - d
+     * solution - d
      * */
     public int solution3(int[] A) {
 
@@ -189,5 +190,24 @@ public class AbsDistinct {
         }
 
         return result;
+    }
+
+
+    /*
+     * solution - e
+     * */
+    public int solution4(int[] A) {
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < A.length; i++) {
+            int key = Math.abs(A[i]);
+            if (map.containsKey(key)) {
+                map.put(Math.abs(key), map.get(key) + 1);
+            } else {
+                map.put(key, 0);
+            }
+        }
+        return map.size();
     }
 }

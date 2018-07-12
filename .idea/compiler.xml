@@ -9,7 +9,7 @@
         <module name="Codility" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="Codility" target="1.8" />
     </bytecodeTargetLevel>
   </component>

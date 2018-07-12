@@ -101,7 +101,7 @@ public class CountTriangles {
 
 
     /*
-     * solution1 - B
+     * solution - b
      * */
     public int solution3(int[] A) {
 
@@ -123,6 +123,32 @@ public class CountTriangles {
                 }
 
                 result = result + r - q;
+            }
+        }
+
+        return result;
+    }
+
+
+
+    /*
+     * solution - c
+     * */
+    public int solution4(int[] A) {
+
+        if (A.length < 3) {
+            return 0;
+        }
+
+        Arrays.sort(A);
+        int result = 0;
+
+        for (int first = 0; first < A.length; first++) {
+            int third = first + 1;
+            for (int second = first + 1; second < A.length; second++) {
+                while (third < A.length && A[first] + A[second] > A[third])
+                    third++;
+                result += third - second - 1;
             }
         }
 

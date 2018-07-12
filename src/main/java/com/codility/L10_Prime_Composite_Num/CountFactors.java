@@ -29,7 +29,7 @@ public class CountFactors {
 
 
     /*
-     * solution1 - A
+     * solution1 - a
      */
     public static int solution(int N) {
 
@@ -58,7 +58,7 @@ public class CountFactors {
 
 
     /*
-     * solution1 - B
+     * solution1 - b
      */
     public int solution1(int N) {
 
@@ -86,8 +86,8 @@ public class CountFactors {
         int result = 0;
 
         /*
-        * we only check behind the N
-        * */
+         * we only check behind the N
+         * */
         while ((long) i * i < N) {
 
             if (N % i == 0) {
@@ -101,6 +101,30 @@ public class CountFactors {
             result++;
         }
         return result;
+    }
+
+
+    /*
+     * solution1 - d
+     */
+    public int solution3(int N) {
+
+        if (N <= 0) {
+            return 0;
+        }
+        if (N == 1) {
+            return 1;
+        }
+        int counter = 0;
+        for (int i = 1; i <= Math.sqrt(N); i++) {
+            if (N % i == 0) {
+                counter += 2;
+            }
+        }
+        if (Math.sqrt(N) % 1 == 0.0) {
+            counter--;
+        }
+        return counter;
     }
 
 

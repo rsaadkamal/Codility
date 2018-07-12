@@ -37,7 +37,7 @@ public class MinPerimeterRectangle {
 
 
     /*
-     * solution1 -A
+     * solution1 - a
      */
     public static int solution(int N) {
 
@@ -55,7 +55,7 @@ public class MinPerimeterRectangle {
 
 
     /*
-     * solution1 - B
+     * solution1 - b
      */
     public int solution1(int N) {
 
@@ -99,5 +99,22 @@ public class MinPerimeterRectangle {
         }
 
         return result;
+    }
+
+
+    /*
+     * solution1 - d
+     */
+    public int solution3(int N) {
+
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 1; i * i <= N; i++) {
+
+            if (N % i == 0) {
+                min = Math.min(min, 2 * (i + (N / i)));
+            }
+        }
+        return min;
     }
 }
