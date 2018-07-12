@@ -11,7 +11,7 @@ For a given array A, we are looking for such a sequence S that minimizes val(A,S
 
 Write a function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given an array A of N integers, computes the minimum value of val(A,S) from all possible values of val(A,S) for all possible sequences S of N integers from the set {−1, 1}.
 
@@ -46,7 +46,7 @@ public class MinAbsSum {
      * */
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public int solution(int[] A) {
 

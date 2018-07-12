@@ -14,7 +14,7 @@ You are given a map of the network in the form of two arrays A, B of length N. F
 
 Write a function:
 
-class Solution { public String solution1(int[] A, int[] B); }
+class Solution { public String solution(int[] A, int[] B); }
 
 that, given two arrays A and B of N integers, returns the largest possible result. Since the result can be large, you should return it as a string.
 

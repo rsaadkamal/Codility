@@ -22,7 +22,7 @@ The size of A non-overlapping set containing A maximal number of segments is 3. 
 
 Write A function:
 
-class Solution { public int solution1(int[] A, int[] B); }
+class Solution { public int solution(int[] A, int[] B); }
 
 that, given two arrays A and B consisting of N integers, returns the size of A non-overlapping set containing A maximal number of segments.
 
@@ -51,7 +51,7 @@ public class MaxNonoverlappingSegments {
 
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public int solution(int A[], int B[]) {
 

@@ -33,7 +33,7 @@ The goal is to calculate the value of every counter after all operations.
 
 Write A function:
 
-class Solution { public int[] solution1(int N, int[] A); }
+class Solution { public int[] solution(int N, int[] A); }
 
 that, given an integer N and A non-empty array A consisting of M integers, returns A sequence of integers representing the values of the counters.
 
@@ -82,7 +82,7 @@ public class MaxCounters {
 
 
     /*
-     * solution1 - A
+     * solution - A
      */
     public static int[] solution(int N, int[] A) {
 
@@ -122,7 +122,7 @@ public class MaxCounters {
 
 
     /*
-     * solution1 - B
+     * solution - B
      */
     public int[] solution1(int N, int[] A) {
 
@@ -170,7 +170,7 @@ public class MaxCounters {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     /*
      * Improve the previous method, time complexity is O(N+M).
@@ -207,7 +207,7 @@ public class MaxCounters {
 
 
     /*
-     * solution1 - d
+     * solution - d
      */
     public int[] solution3(int N, int[] A) {
 

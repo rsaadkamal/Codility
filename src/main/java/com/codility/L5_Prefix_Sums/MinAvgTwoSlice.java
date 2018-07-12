@@ -21,7 +21,7 @@ The goal is to find the starting position of A slice whose average is minimal.
 
 Write A function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given A non-empty array A consisting of N integers, returns the starting position of the slice with the minimal average. If there is more than one slice with A minimal average, you should return the smallest starting position of such A slice.
 
@@ -58,7 +58,7 @@ public class MinAvgTwoSlice {
      * */
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public static int solution(int[] A) {
 
@@ -129,7 +129,7 @@ public class MinAvgTwoSlice {
 
 
     /*
-     * solution1 - B
+     * solution - B
      * */
     public static int solution1(int[] A) {
 
@@ -158,7 +158,7 @@ public class MinAvgTwoSlice {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int solution2(int[] A) {
 

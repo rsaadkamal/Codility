@@ -13,7 +13,7 @@ If Bob's washing machine can clean at most K = 2 socks, then he can take a maxim
 
 Write a function:
 
-class Solution { public int solution1(int K, int[] C, int[] D); }
+class Solution { public int solution(int K, int[] C, int[] D); }
 
 that, given an integer K (the number of socks that the washing machine can clean), two arrays C and D (containing the color representations of N clean and M dirty socks respectively), returns the maximum number of pairs of socks that Bob can take on the trip.
 
@@ -24,5 +24,5 @@ Assume that:
 K is an integer within the range [0..50];
 each element of arrays C, D is an integer within the range [1..50];
 C and D are not empty and each of them contains at most 50 elements.
-In your solution1, focus on correctness. The performance of your solution1 will not be the focus of the assessment.
+In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 */

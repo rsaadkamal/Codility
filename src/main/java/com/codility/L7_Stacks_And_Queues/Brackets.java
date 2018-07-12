@@ -10,7 +10,7 @@ For example, the string "{[()()]}" is properly nested but "([)()]" is not.
 
 Write A function:
 
-class Solution { public int solution1(String S); }
+class Solution { public int solution(String S); }
 
 that, given A string S consisting of N characters, returns 1 if S is properly nested and 0 otherwise.
 
@@ -48,7 +48,7 @@ public class Brackets {
      * String "{[()()]}" is properly nested but "([)()]" is not.
      * */
     /*
-     * solution1 - A
+     * solution - A
      */
     public static int solution(String S) {
 
@@ -92,7 +92,7 @@ public class Brackets {
 
 
     /*
-     * solution1 - B
+     * solution - B
      */
     public int solution1(String S) {
 
@@ -143,7 +143,7 @@ public class Brackets {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int solution2(String s) {
 

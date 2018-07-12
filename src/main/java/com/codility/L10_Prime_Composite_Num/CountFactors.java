@@ -7,7 +7,7 @@ For example, 6 is A factor of 24, because M = 4 satisfies the above condition (2
 
 Write A function:
 
-class Solution { public int solution1(int N); }
+class Solution { public int solution(int N); }
 
 that, given A positive integer N, returns the number of its factors.
 
@@ -29,7 +29,7 @@ public class CountFactors {
 
 
     /*
-     * solution1 - a
+     * solution - a
      */
     public static int solution(int N) {
 
@@ -58,7 +58,7 @@ public class CountFactors {
 
 
     /*
-     * solution1 - b
+     * solution - b
      */
     public int solution1(int N) {
 
@@ -78,7 +78,7 @@ public class CountFactors {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int solution2(int N) {
 
@@ -105,7 +105,7 @@ public class CountFactors {
 
 
     /*
-     * solution1 - d
+     * solution - d
      */
     public int solution3(int N) {
 

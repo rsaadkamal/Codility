@@ -1,47 +1,30 @@
 package com.codility.Interview;
 
+
+/*
+String[] votes = { "Victor", "Veronica", "Ryan", "Dave", "Maria",
+                      "Maria", "Farah", "Farah","Ryan",  "Veronica"};
+Answer: Veronica
+* */
+
 import java.util.*;
 
 /**
  * Created by Chaklader on 7/5/18.
  */
-public class I {
-
-
-    // problem - lll
-    // -------------
+public class ElectionWinner {
 
     /*
-        Victor
-        Veronica
-        Ryan
-        Dave
-        Maria
-        Maria
-        Farah
-        Farah
-        Ryan
-        Veronica
+     * solution - a
+     * */
+    public static String solution(String[] votes) {
 
-        ================
-        answer: Veronica
-        ================
-    */
-
-    // String[] votes = { "Victor", "Veronica", "Ryan", "Dave", "Maria",
-    //                      "Maria", "Farah", "Farah","Ryan",  "Veronica"};
-
-    public static String electionWinner(String[] votes) {
-
-        // TreeMap will put the values in the ascending order
         Map<String, Integer> map = new TreeMap<String, Integer>();
 
         for (String vote : votes) {
 
-            String key = vote;
-            Integer value = map.containsKey(key) ? map.get(key) + 1 : 1;
-
-            map.put(key, value);
+            Integer value = map.containsKey(vote) ? map.get(vote) + 1 : 1;
+            map.put(vote, value);
         }
 
         List<String> keys = new ArrayList<String>();
@@ -55,15 +38,20 @@ public class I {
             }
         }
 
-        // the list is already sorded in the ascending order due
-        // to the use of TreeMap
+        /*
+         * the list is already sorded in the lexicographically
+         * due to the use of TreeMap
+         * */
+        String result = keys.get(keys.size() - 1);
 
-        String rst = keys.get(keys.size() - 1);
-        return rst;
+        return result;
     }
 
 
-    public static String electionWinner1(String[] votes) {
+    /*
+     * solution - b
+     * */
+    public static String solution1(String[] votes) {
 
         // TreeMap will put the values in the ascending order
         TreeMap<String, Integer> map = new TreeMap<String, Integer>();
@@ -90,7 +78,6 @@ public class I {
         }
 
         // System.out.println(map.lastEntry());
-
         return map.lastKey();
     }
 
@@ -100,24 +87,4 @@ public class I {
             System.out.println("Key : " + entry.getKey() + " Value : " + entry.getValue());
         }
     }
-    /* END ofsolution -III*/
-
-
-    public static void mySetTest() {
-
-        Set<Integer> set = new TreeSet<Integer>();
-
-        set.add(3);
-        set.add((int) 3.0);
-        set.add(2);
-        set.add(2);
-
-        set.add(new Integer(2));
-        set.add(Integer.parseInt("2"));
-
-        System.out.println(set);
-        // [2, 3]
-    }
-    /*END of solution1*/
-
 }

@@ -21,7 +21,7 @@ discs 1 and 4 intersect, and both intersect with all the other discs;
 disc 2 also intersects with discs 0 and 3.
 Write A function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given an array A describing N discs as explained above, returns the number of (unordered) pairs of intersecting discs. The function should return −1 if the number of intersecting pairs exceeds 10,000,000.
 
@@ -83,7 +83,7 @@ public class NumberOfDiscIntersections {
      * */
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public static int solution(int[] A) {
 
@@ -112,7 +112,7 @@ public class NumberOfDiscIntersections {
 
 
     /*
-     * solution1 - B
+     * solution - B
      * */
     /*
      * Time complexity is O(N*log(N)) or O(N). The largest value of right-A[right]
@@ -190,7 +190,7 @@ public class NumberOfDiscIntersections {
 
 
     /*
-     * solution1 - c
+     * solution - c
      * */
     public int solution2(int[] A) {
 

@@ -36,7 +36,7 @@ You can therefore set A maximum of three flags in this case.
 
 Write A function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given A non-empty array A of N integers, returns the maximum number of flags that can be set on the peaks of the array.
 
@@ -86,7 +86,7 @@ public class Flags {
     // int[] A = {1,5,3,4,3,4,1,2,3,4,6,2}
 
     /*
-     * solution1 -a
+     * solution -a
      */
     public static int solution(int[] A) {
 
@@ -178,7 +178,7 @@ public class Flags {
 
 
     /*
-     * solution1 - b
+     * solution - b
      */
     public int solution1(int[] A) {
 
@@ -245,7 +245,7 @@ public class Flags {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int solution2(int[] A) {
 
@@ -322,7 +322,7 @@ public class Flags {
 
 
     /*
-     * solution1 - d
+     * solution - d
      */
     public int solution3(int[] A) {
 

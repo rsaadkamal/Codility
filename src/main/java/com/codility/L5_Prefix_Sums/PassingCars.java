@@ -20,7 +20,7 @@ We have five pairs of passing cars: (0, 1), (0, 3), (0, 4), (2, 3), (2, 4).
 
 Write A function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given A non-empty array A of N integers, returns the number of pairs of passing cars.
 
@@ -52,7 +52,7 @@ public class PassingCars {
 
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public static int solution(int[] A) {
 
@@ -77,7 +77,7 @@ public class PassingCars {
 
 
     /*
-     * solution1 - B
+     * solution - B
      * */
     public int solution1(int[] A) {
 

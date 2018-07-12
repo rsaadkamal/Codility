@@ -12,7 +12,7 @@ For example, given "test 5 a0A pass007 ?xy1", there are five words and three of 
 
 Write a function:
 
-class Solution { public int solution1(String S); }
+class Solution { public int solution(String S); }
 
 that, given a non-empty string S consisting of N characters, returns the length of the longest word from the string that is a valid password. If there is no such word, your function should return −1.
 
@@ -22,7 +22,7 @@ Assume that:
 
 N is an integer within the range [1..200];
 string S consists only of printable ASCII characters and spaces.
-In your solution1, focus on correctness. The performance of your solution1 will not be the focus of the assessment.
+In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 * */
 
 /**

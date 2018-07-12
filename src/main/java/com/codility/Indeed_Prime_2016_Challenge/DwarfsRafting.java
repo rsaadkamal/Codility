@@ -25,7 +25,7 @@ The raft is then balanced: both left and right halves have the same number of dw
 
 Write a function:
 
-class Solution { public int solution1(int N, String S, String T); }
+class Solution { public int solution(int N, String S, String T); }
 
 that, given the size of the raft N and two strings S, T that describes the positions of barrels and occupied seats, respectively, returns the maximum number of dwarfs that can fit on the raft. If it is not possible to balance the raft with dwarfs, your function should return -1.
 
@@ -37,7 +37,7 @@ N is an even integer within the range [2..26];
 strings S, T consist of valid seat numbers, separated with spaces;
 each seat number can appear no more than once in the strings;
 no seat number can appear in both S and T simultaneously.
-In your solution1, focus on correctness. The performance of your solution1 will not be the focus of the assessment.
+In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 */
 
 import java.util.stream.IntStream;

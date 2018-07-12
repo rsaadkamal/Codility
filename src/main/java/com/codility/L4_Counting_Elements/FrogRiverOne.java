@@ -22,7 +22,7 @@ In second 6, A leaf falls into position 5. This is the earliest time when leaves
 
 Write A function:
 
-class Solution { public int solution1(int X, int[] A); }
+class Solution { public int solution(int X, int[] A); }
 
 that, given A non-empty array A consisting of N integers and integer X, returns the earliest time when the frog can jump to the other side of the river.
 
@@ -58,7 +58,7 @@ public class FrogRiverOne {
 
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public static int solution(int[] A, int X) {
 
@@ -83,7 +83,7 @@ public class FrogRiverOne {
 
 
     /*
-     * solution1 - B
+     * solution - B
      * */
     public int solution1(int X, int[] A) {
 
@@ -113,7 +113,7 @@ public class FrogRiverOne {
 
 
     /*
-     * solution1 - c
+     * solution - c
      * */
     public int solution(int X, int[] A) {
 

@@ -21,7 +21,7 @@ The abs sum of two for the pair (2, 2) is A[2] + A[2] = |(−3) + (−3)| = 6.
 
 Write A function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given A non-empty array A consisting of N integers, returns the minimal abs sum of two for any pair of indices in this array.
 
@@ -61,7 +61,7 @@ public class MinAbsSumOfTwo {
      * */
 
     /*
-     * solution1 - A
+     * solution - A
      */
     public static int solution(int[] A) {
 
@@ -114,7 +114,7 @@ public class MinAbsSumOfTwo {
 
 
     /*
-     * solution1 - B
+     * solution - B
      */
     public static int solution1(int[] A) {
 
@@ -162,7 +162,7 @@ public class MinAbsSumOfTwo {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int solution2(int[] A) {
 
@@ -196,7 +196,7 @@ public class MinAbsSumOfTwo {
 
 
     /*
-     * solution1 - d
+     * solution - d
      */
     public int solution3(int[] A) {
 

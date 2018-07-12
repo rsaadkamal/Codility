@@ -26,7 +26,7 @@ The gray area is the rock floor described by the array A above and the blue area
 
 Write a function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given a non-empty array A consisting of N integers, returns the maximum depth of water.
 

@@ -26,7 +26,7 @@ Initially all the fish are alive and all except fish number 1 are moving upstrea
 
 Write A function:
 
-class Solution { public int solution1(int[] A, int[] B); }
+class Solution { public int solution(int[] A, int[] B); }
 
 that, given two non-empty arrays A and B consisting of N integers, returns the number of fish that will stay alive.
 
@@ -53,7 +53,7 @@ public class Fish {
 
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public static int solution(int[] A, int[] B) {
 
@@ -103,7 +103,7 @@ public class Fish {
 
 
     /*
-     * solution1 - B
+     * solution - B
      */
     public int solution1(int[] A, int[] B) {
 
@@ -133,7 +133,7 @@ public class Fish {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int solution2(int[] A, int[] B) {
 

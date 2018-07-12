@@ -33,7 +33,7 @@ The picture above illustrates the example track with N = 13 gates and a course t
 
 Write a function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given an array A consisting of N integers, describing the positions of the gates on the track, returns the maximum number of gates that you can pass during one ski run.
 

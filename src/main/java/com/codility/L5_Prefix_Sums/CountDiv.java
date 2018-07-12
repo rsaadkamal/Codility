@@ -3,7 +3,7 @@ package com.codility.L5_Prefix_Sums;
 /*
 * Write A function:
 
-class Solution { public int solution1(int A, int B, int K); }
+class Solution { public int solution(int A, int B, int K); }
 
 that, given three integers A, B and K, returns the number of integers within the range [A..B] that are divisible by K, i.e.:
 
@@ -29,7 +29,7 @@ public class CountDiv {
 
 
     /*
-     * solution1 - A
+     * solution - A
      */
     public static int solution(int A, int B, int K) {
 
@@ -41,7 +41,7 @@ public class CountDiv {
 
 
     /*
-     * solution1 - B
+     * solution - B
      */
     public static int solution1(int A, int B, int K) {
 
@@ -56,7 +56,7 @@ public class CountDiv {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int solution2(int a, int b, int k) {
 

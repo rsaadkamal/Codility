@@ -21,7 +21,7 @@ Problem
 
 Write a function:
 
-class Solution { public int solution1(Tree T); }
+class Solution { public int solution(Tree T); }
 
 that, given a non-empty binary tree T consisting of N nodes, returns its height. For example, given tree T shown in the figure above, the function should return 2, as explained above. Note that the values contained in the nodes are not relevant in this task.
 

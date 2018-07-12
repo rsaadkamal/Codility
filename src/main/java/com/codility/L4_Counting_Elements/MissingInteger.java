@@ -5,7 +5,7 @@ package com.codility.L4_Counting_Elements;
 
 Write A function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given an array A of N integers, returns the smallest positive integer (greater than 0) that does not occur in A.
 
@@ -27,6 +27,7 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -37,7 +38,7 @@ public class MissingInteger {
 
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public static int solution(int[] A) {
 
@@ -61,7 +62,7 @@ public class MissingInteger {
 
 
     /*
-     * solution1 - B
+     * solution - b
      * */
     public int solution1(int[] A) {
 
@@ -87,6 +88,51 @@ public class MissingInteger {
         }
 
         return A.length + 1;
+    }
+
+
+    /*
+     * solution - c
+     * */
+    public static int solution2(int[] A) {
+
+        int N = A.length;
+
+        /*
+         * Mark A[i] as visited by making A[A[i] - 1] negative.
+         * Note that 1 is subtracted because index start from 0 and
+         * positive numbers start from 1
+         * */
+        for (int i = 0; i < N; i++) {
+
+            int index = Math.abs(A[i]) - 1;
+            // int index = A[i] - 1;
+
+            if (index < N && A[index] > 0) {
+                A[index] = -A[index];
+            }
+        }
+
+        System.out.println(Arrays.toString(A));
+
+        /*
+         * Return the first index value at which is positive
+         * */
+        for (int i = 0; i < N; i++) {
+
+            if (A[i] > 0) {
+
+                /*
+                 * 1 is added becuase indexes
+                 * */
+                return i + 1;
+            }
+        }
+
+        /*
+         * start from 0
+         * */
+        return N + 1;
     }
 
 }

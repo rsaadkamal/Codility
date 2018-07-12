@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class SolutionTest {
+public class CyclicRotationTest {
     @Test
     public void solution() throws Exception {
         assertArrayEquals(new int[]{9, 7, 6, 3, 8}, new Solution().solution(new int[]{3, 8, 9, 7, 6}, 3));

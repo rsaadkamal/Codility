@@ -10,7 +10,7 @@ For example, string "(()(())())" is properly nested but string "())" isn't.
 
 Write A function:
 
-class Solution { public int solution1(String S); }
+class Solution { public int solution(String S); }
 
 that, given A string S consisting of N characters, returns 1 if string S is properly nested and 0 otherwise.
 
@@ -38,7 +38,7 @@ public class Nesting {
      * String "(()(())())" is properly nested but string "())" is not
      * */
     /*
-     * solution1 - A
+     * solution - A
      */
     public static int solution(String S) {
 
@@ -58,7 +58,7 @@ public class Nesting {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public static int solution1(String S) {
 
@@ -85,7 +85,7 @@ public class Nesting {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int solution2(String S) {
 

@@ -41,7 +41,7 @@ class Solution {
         return (double) (df[Q] - sub) / (double) (Q - P + 1);
     }
 
-    // its native solution1 n**2
+    // its native solution n**2
     public int nativeSolution(int[] A) {
         double minAvg = Double.MAX_VALUE;
         int minIndex = 0;

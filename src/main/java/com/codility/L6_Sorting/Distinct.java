@@ -3,7 +3,7 @@ package com.codility.L6_Sorting;
 /*
 * Write A function
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given an array A consisting of N integers, returns the number of distinct values in array A.
 
@@ -34,7 +34,7 @@ public class Distinct {
 
 
     /*
-     * solution1 - A
+     * solution - A
      */
     public static int solution(int[] A) {
 
@@ -51,7 +51,7 @@ public class Distinct {
 
 
     /*
-     * solution1 - B
+     * solution - B
      */
     public static int solution1(int[] A) {
 
@@ -74,7 +74,7 @@ public class Distinct {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public static int solution2(int[] A) {
 
@@ -93,7 +93,7 @@ public class Distinct {
 
 
     /*
-     * solution1 - d
+     * solution - d
      */
     public int solution3(int[] A) {
 

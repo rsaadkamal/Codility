@@ -9,7 +9,7 @@ A zero-indexed array A consisting of N integers is given. An inversion is a pair
 
 Write a function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that computes the number of inversions in A, or returns ?1 if it exceeds 1,000,000,000.
 

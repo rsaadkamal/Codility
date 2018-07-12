@@ -5,7 +5,7 @@ Woolly is interested in the number of different ways in which he can build a pen
 
 Write a function:
 
-class Solution { public int solution1(int[] A, int X); }
+class Solution { public int solution(int[] A, int X); }
 
 that, given an array A of N integers (containing the lengths of the available pieces of fence) and an integer X, returns the number of different ways of building a rectangular pen satisfying the above conditions. The function should return −1 if the result exceeds 1,000,000,000.
 

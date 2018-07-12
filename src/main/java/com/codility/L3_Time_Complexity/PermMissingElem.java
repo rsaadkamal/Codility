@@ -7,7 +7,7 @@ Your goal is to find that missing element.
 
 Write A function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given an array A, returns the value of the missing element.
 
@@ -38,7 +38,7 @@ public class PermMissingElem {
 
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public int solution(int[] A) {
 
@@ -61,7 +61,7 @@ public class PermMissingElem {
 
 
     /*
-     * solution1 - B
+     * solution - B
      * */
     public int solution1(int[] A) {
 
@@ -77,7 +77,7 @@ public class PermMissingElem {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int solution2(int[] A) {
 
@@ -94,7 +94,7 @@ public class PermMissingElem {
 
 
     /*
-     * solution1 - d
+     * solution - d
      */
     /*
      * If A[i]= n, then set A[n-1] = 0. The space j !=0, then return (j+1) is missing

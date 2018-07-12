@@ -1,69 +1,100 @@
 package com.codility.Interview;
 
 
-
-// ==============================
-// Hasso Plattner Institute (HPI)
-// ==============================
-
-
-
 /*
-Inclusion–exclusion principle
+Inclusion Exclusion Principle
 -----------------------------
 
-Venn diagram showing the union of sets A and B as everything not in white
-In combinatorics (combinatorial mathematics), the inclusion–exclusion principle is a counting technique which generalizes the familiar method of obtaining the number of elements in the union of two finite sets; symbolically expressed as
+Venn diagram showing the union of sets A and B as everything not in white In combinatorics
+
+(combinatorial mathematics), the inclusion–exclusion principle is a counting technique which
+
+generalizes the familiar method of obtaining the number of elements in the union of two finite
+
+sets; symbolically expressed as
+
+
 
 |A\cup B|=|A|+|B|-|A\cap B|,} |A\cup B|=|A|+|B|-|A\cap B|,
+
 where A and B are two finite sets and |S| indicates the cardinality of a set S
+
 (which may be considered as the number of elements of the set, if the set is finite).
+
 The formula expresses the fact that the sum of the sizes of the two sets may be too
+
 large since some elements may be counted twice. The double-counted elements are those
+
 in the intersection of the two sets and the count is corrected by subtracting the size
+
 of the intersection.
 
-The principle is more clearly seen in the case of three sets, which for the sets A, B and C is given by
+
+
+The principle is more clearly seen in the case of three sets, which for the sets A, B and C is give
+n by
+
 
 |A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|.} |A\cup B\cup
-C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|.
+
+C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|
 */
 
 
 /*
 K caterpillars are eating their way through N leaves, each caterpillar falls from
+
 leaf to leaf in a unique sequence, all caterpillars start at a twig at position 0
+
 and falls onto the leaves at position between 1 and N. Each caterpillar j has as
+
 associated jump number Aj. A caterpillar with jump number j eats leaves at positions
+
 that are multiple of j. It will proceed in the order j, 2j, 3j…. till it reaches the
+
 end of the leaves and it stops and build its cocoon. Given a set A of K elements
+
 K<-15, N<=10^9, we need to determine the number of uneaten leaves.
+
+
 
 Input:
 
+
+
 N = No of uneaten leaves
+
 K = No. of caterpillars
+
 A = Array of integer jump numbers
+
 Output:
+
+
 
 The integer nu. Of uneaten leaves
 
+
+
 Sample Input:
+
+
 
 10
 3
 2
 4
 5
-Output:
 
+Output:
 4
+
 Explanation:
 
 [2, 4, 5] is a j member jump numbers, all leaves which are multiple of 2, 4, and 5 are
+
 eaten, leaves 1,3,7,9 are left, and thus the no. 4
 */
-
 
 
 import java.util.*;
@@ -71,12 +102,13 @@ import java.util.*;
 /**
  * Created by Chaklader on 7/5/18.
  */
-public class G {
+public class CountUneatenLeaves {
 
 
-    // problem - l
-    // -----------
-    public static int countUneatenLeaves(int N, int[] A) {
+    /*
+     * solution - a
+     * */
+    public static int solution(int N, int[] A) {
 
         int total = 0;
 
@@ -112,6 +144,7 @@ public class G {
     }
 
     private static int findGCD(int number1, int number2) {
+
         //base case
         if (number2 == 0) {
             return number1;
@@ -167,19 +200,19 @@ public class G {
         }
         return total;
     }
-    /* END ofsolution - l*/
+
+
 
 
 
     /*
-    solution1-b
-    */
-
-    private static int countUneatenLeaves1(int n, int[] a) {
+     * solution - b
+     * */
+    private static int solution1(int N, int[] A) {
 
         int factors = 0;
         Map<Integer, List<Integer>> map = new HashMap<>();
-        findFactorialsOfAllCombinations(0, a, 0, new int[a.length], map, n);
+        findFactorialsOfAllCombinations(0, A, 0, new int[A.length], map, N);
         for (int key : map.keySet()) {
             if ((key & 1) != 1) {
                 List<Integer> list = map.get(key);
@@ -194,12 +227,14 @@ public class G {
             }
         }
 
-        return n - factors;
+        return N - factors;
     }
 
 
     private static void findFactorialsOfAllCombinations(int start, int[] array, int K, int[] result, Map<Integer, List<Integer>> map, int N) {
+
         if (K > 0) {
+
             if (!map.containsKey(K)) {
                 map.put(K, new ArrayList<Integer>());
             }
@@ -217,7 +252,9 @@ public class G {
 
 
     private static int lcm1(int[] input) {
+
         int result = input[0];
+
         for (int i = 1; i < input.length; i++) {
             result = lcm2(result, input[i]);
         }
@@ -257,11 +294,11 @@ public class G {
 
 
 
-    /*
-    solution1-c
-    */
 
-    public static int findUneatenLeaves(int[] array, int n) {
+    /*
+     * solution - c
+     * */
+    public static int solution2(int[] array, int n) {
 
         ArrayList<Integer> uneatenLeaves = new ArrayList<Integer>();
         ArrayList<Integer> eatenLeaves = new ArrayList<Integer>();
@@ -294,10 +331,10 @@ public class G {
 
 
     /*
-    solution1-d
-    */
+     * solution - d
+     * */
+    public static int solution3(int N, int[] A) {
 
-    static int countUneatenLeaves2(int N, int[] A) {
         if (N <= 0)
             return 0;
         if (A == null || A.length == 0)
@@ -306,31 +343,34 @@ public class G {
         int length = A.length;
         Set<Integer> eaten = new HashSet<Integer>();
         Arrays.sort(A);
+
         for (int i = 0; i < length; i++) {
+
             if (A[i] == 1)
                 return 0;
+
             else if (eaten.contains(A[i]))
                 continue;
+
             else
                 eatingLeaves(eaten, A[i], N);
-
         }
         return (N - eaten.size());
     }
 
-    static void eatingLeaves(Set<Integer> eaten, int catter, int numberOfLeaves) {
+    public static void eatingLeaves(Set<Integer> eaten, int catter, int numberOfLeaves) {
+
         if (catter <= 0)
             return;
 
         int nextLeave = catter;
+
         while (nextLeave <= numberOfLeaves) {
+
             if (!eaten.contains(nextLeave))
                 eaten.add(nextLeave);
+
             nextLeave += catter;
         }
     }
-    /*
-     */
-
-
 }

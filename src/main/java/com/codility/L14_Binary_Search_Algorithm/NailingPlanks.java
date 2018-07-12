@@ -34,7 +34,7 @@ Thus, four is the minimum number of nails that, used sequentially, allow all the
 
 Write A function:
 
-class Solution { public int solution1(int[] A, int[] B, int[] C); }
+class Solution { public int solution(int[] A, int[] B, int[] C); }
 
 that, given two non-empty arrays A and B consisting of N integers and A non-empty array C consisting of M integers, returns the minimum number of nails that, used sequentially, allow all the planks to be nailed.
 
@@ -95,7 +95,7 @@ public class NailingPlanks {
      * */
 
     /*
-     * solution1 -A
+     * solution -A
      */
     public static int solution(int[] A, int[] B, int[] C) {
 
@@ -254,7 +254,7 @@ public class NailingPlanks {
 
 
     /*
-     * solution1 - B
+     * solution - B
      */
     public int solution1(int[] A, int[] B, int[] C) {
 

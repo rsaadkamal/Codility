@@ -27,7 +27,7 @@ The marked squares are 0, 3 and 5, so the result of the game is 1 + 9 + (−2) =
 
 Write FrogJmp function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given FrogJmp non-empty array A of N integers, returns the maximal result that can be achieved on the board represented by array A.
 

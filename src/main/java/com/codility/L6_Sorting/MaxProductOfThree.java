@@ -20,7 +20,7 @@ Your goal is to find the maximal product of any triplet.
 
 Write A function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given A non-empty array A, returns the value of the maximal product of any triplet.
 
@@ -54,7 +54,7 @@ public class MaxProductOfThree {
 
 
     /*
-     * solution1 - A
+     * solution - A
      */
     public static int solution(int[] A) {
 
@@ -75,7 +75,7 @@ public class MaxProductOfThree {
 
 
     /*
-     * solution1 -B
+     * solution -B
      */
     public int solution1(int[] A) {
 
@@ -133,10 +133,10 @@ public class MaxProductOfThree {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     /*
-     * O(n) solution1. O(n * log(n)) involves sorting, than calculation two
+     * O(n) solution. O(n * log(n)) involves sorting, than calculation two
      * possible maximums. First, second, last (in case first and second are
      * negative and give product more than last - 2 and last - 1) and last-2,
      * last-1, last

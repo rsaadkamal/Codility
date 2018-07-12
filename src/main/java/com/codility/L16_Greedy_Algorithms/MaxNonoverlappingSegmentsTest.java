@@ -11,7 +11,7 @@
 //    }
 //
 //    @Test()
-//    public void solution1() {
+//    public void solution() {
 //        assertEquals(1, new MaxNonoverlappingSegments.Solution().solution(new int[]{1,1,1,1,1}, new int[]{1,1,1,1,1}));
 //    }
 //}

@@ -14,7 +14,7 @@ There are four triangular triplets that can be constructed from elements of this
 
 Write A function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given an array A consisting of N integers, returns the number of triangular triplets in this array.
 
@@ -61,7 +61,7 @@ public class CountTriangles {
 
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public static int solution(int[] A) {
 

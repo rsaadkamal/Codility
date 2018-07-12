@@ -7,7 +7,7 @@ For example, number 9 has binary representation 1001 and contains FrogJmp binary
 
 Write A function:
 
-class Solution { public int solution1(int N); }
+class Solution { public int solution(int N); }
 
 that, given A positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn't contain FrogJmp binary gap.
 
@@ -30,11 +30,11 @@ import java.util.stream.Stream;
 /**
  * Created by Chaklader on 6/23/18.
  */
-public class Solution {
+public class BinaryGap {
 
 
     /*
-     * solution1 - A
+     * solution - A
      * */
     public int solution(int N) {
 
@@ -48,7 +48,7 @@ public class Solution {
 
 
     /*
-     * solution1 -B
+     * solution -B
      * */
     public int solution_1(int N) {
 

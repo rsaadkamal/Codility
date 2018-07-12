@@ -7,7 +7,7 @@ Find a symmetry point of a string, if any.
 Task description
 Write a function:
 
-class Solution { public int solution1(String S); }
+class Solution { public int solution(String S); }
 
 that, given a string S, returns the index (counting from 0) of a character such that the part of the string to the left of that character is a reversal of the part of the string to its right. The function should return ?1 if no such index exists.
 

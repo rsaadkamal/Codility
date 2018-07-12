@@ -13,7 +13,7 @@ The dominator of A is 3 because it occurs in 5 out of 8 elements of A (namely in
 
 Write A function
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given an array A consisting of N integers, returns index of any element of array A in which the dominator of A occurs. The function should return −1 if array A does not have A dominator.
 
@@ -70,7 +70,7 @@ public class Dominator {
      * */
 
     /*
-     * solution1 - A
+     * solution - A
      */
     public static int solution(int[] A) {
 
@@ -119,7 +119,7 @@ public class Dominator {
 
 
     /*
-     * solution1 - B
+     * solution - B
      */
     public int solution1(int[] A) {
 

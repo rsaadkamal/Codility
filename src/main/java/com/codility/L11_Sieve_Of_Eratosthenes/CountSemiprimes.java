@@ -21,7 +21,7 @@ The number of semiprimes within each of these ranges is as follows:
 (16, 20) is 0.
 Write A function:
 
-class Solution { public int[] solution1(int N, int[] P, int[] Q); }
+class Solution { public int[] solution(int N, int[] P, int[] Q); }
 
 that, given an integer N and two non-empty arrays P and Q consisting of M integers, returns an array consisting of M elements specifying the consecutive answers to all the queries.
 
@@ -67,7 +67,7 @@ public class CountSemiprimes {
 
     // Count the semiprime numbers in the given range [a..b]
     /*
-     * solution1 - a
+     * solution - a
      */
     public static int[] solution(int[] A, int[] B, int N) {
 
@@ -128,11 +128,11 @@ public class CountSemiprimes {
 
         return prefSum;
     }
-    // ENd of solution1 - a
+    // ENd of solution - a
 
 
     /*
-     * solution1 - b
+     * solution - b
      */
     public int[] solution1(int N, int[] P, int[] Q) {
 
@@ -219,7 +219,7 @@ public class CountSemiprimes {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     public int[] solution2(int N, int[] P, int[] Q) {
 
@@ -290,7 +290,7 @@ public class CountSemiprimes {
 
 
     /*
-     * solution1 - d
+     * solution - d
      */
     public int[] solution(int n, int[] p, int[] q) {
 

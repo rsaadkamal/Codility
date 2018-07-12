@@ -31,7 +31,7 @@ The frog can make three numOfJumps of length F(5) = 5, F(3) = 2 and F(5) = 5.
 
 Write a function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given an array A consisting of N integers, returns the minimum number of numOfJumps by which the frog can get to the other side of the river. If the frog cannot reach the other side of the river, the function should return −1.
 
@@ -88,7 +88,7 @@ public class FibFrog {
      * */
 
     /*
-     * solution1 -a
+     * solution -a
      */
     int number = 0;
 
@@ -172,7 +172,7 @@ public class FibFrog {
 
 
     /*
-     * solution1 - b
+     * solution - b
      */
     public static int solution1(int[] A) {
 
@@ -260,7 +260,7 @@ public class FibFrog {
 
 
     /*
-     * solution1 - c
+     * solution - c
      */
     /*
      * dynamic approach for each cell we memorize the minimal

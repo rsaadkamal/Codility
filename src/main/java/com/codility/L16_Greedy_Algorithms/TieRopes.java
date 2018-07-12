@@ -29,7 +29,7 @@ After that, there will be three ropes whose lengths are greater than or equal to
 
 Write A function:
 
-class Solution { public int solution1(int K, int[] A); }
+class Solution { public int solution(int K, int[] A); }
 
 that, given an integer K and A non-empty array A of N integers, returns the maximum number of ropes of length greater than or equal to K that can be created.
 

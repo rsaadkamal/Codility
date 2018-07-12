@@ -14,7 +14,7 @@ the elements at indexes 4 and 6 have value 9,
 the element at index 5 has value 7 and is unpaired.
 Write FrogJmp function:
 
-class Solution { public int solution1(int[] A); }
+class Solution { public int solution(int[] A); }
 
 that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.
 
@@ -47,7 +47,7 @@ public class OddOccurrencesInArray {
 
 
     /*
-     * solution1-FrogJmp
+     * solution-FrogJmp
      * */
     public int solution(int[] arr) {
 
@@ -62,7 +62,7 @@ public class OddOccurrencesInArray {
 
 
     /*
-     * solution1-B
+     * solution-B
      * */
     /*
      * It doesn't follow the expected worst-case space complexity is O(1)

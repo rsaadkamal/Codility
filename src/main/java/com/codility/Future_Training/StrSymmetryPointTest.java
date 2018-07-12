@@ -6,17 +6,17 @@
 //
 //public class StrSymmetryPointTest {
 //    @Test
-//    public void solution1() throws Exception {
-//        assertEquals(3, new StrSymmetryPoint.Solution().solution1("racecar"));
+//    public void solution() throws Exception {
+//        assertEquals(3, new StrSymmetryPoint.Solution().solution("racecar"));
 //    }
 //
 //    @Test
 //    public void solution2() throws Exception {
-//        assertEquals(1, new StrSymmetryPoint.Solution().solution1("aba"));
+//        assertEquals(1, new StrSymmetryPoint.Solution().solution("aba"));
 //    }
 //
 //    @Test
 //    public void solution3() throws Exception {
-//        assertEquals(-1, new StrSymmetryPoint.Solution().solution1("abb"));
+//        assertEquals(-1, new StrSymmetryPoint.Solution().solution("abb"));
 //    }
 //}

@@ -2,7 +2,6 @@ package com.codility.Interview;
 
 public class Task122 {
 
-
     public int solution(int[] a, int[] b) {
 
         int c = 0;
