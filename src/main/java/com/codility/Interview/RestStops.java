@@ -105,6 +105,11 @@ public class RestStops {
             int minIndex = minimumIndex(C, B[j]);
 
             /*
+             *
+             * [maxIndex == -1] is true that mean this value if lesser than all the values of array.
+             * However, as we sort ascending order, then larger value in the next iteration can still
+             * be in the array.
+             *
              * A = [40, 50, 60]; B = [10, 45, 55]; C = [70, 80, 90] (please, notice that B[0] == 10
              *
              * The idea is that John can't stop at A[0] - it's too early for him to eat pizza: you

@@ -37,7 +37,7 @@ M − 1 integers, specifying the number of cities positioned at each distance 1,
 
 Array T describes A network of cities as follows: if T[P] = Q and P = Q, then P is the capital;
 
-if T[P] = Q and P ≠ Q, then there is A direct road between cities P and Q. For example, given
+if T[P] = Q and P ≠ Q, then there is a direct road between cities P and Q. For example, given
 
 the following array T consisting of ten elements:
 
@@ -88,6 +88,10 @@ public class CountCities {
     /*
      * the goal is to count the number of cities positioned
      * away from the capital at each of the distances 1, 2,
-     * 3, ..., M − 1
+     * 3, ..., M − 1. if T[P] = Q and P = Q, then P is the
+     * capital; if T[P] = Q and P ≠ Q, then there is A direct
+     * road between cities P and Q
      * */
+
+
 }
