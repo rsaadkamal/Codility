@@ -67,7 +67,7 @@ Greedy Algorithm
 
 Greedy algorithms determine minimum number of coins to give while making change. These are the steps a
 human would take to emulate a greedy algorithm to represent 36 cents using only coins with values {1, 5,
-10, 20}. The coin of the highest value, less than the remaining change owed, is the local optimum. (In
+10, 20}. The coin of the highest key, less than the remaining change owed, is the local optimum. (In
 general the change-making problem requires dynamic programming to find an optimal solution; however,
 most currency systems, including the Euro and US Dollar, are special cases where the greedy strategy
 does find an optimal solution.)
@@ -86,7 +86,7 @@ import java.util.*;
 /**
  * Created by Chaklader on 7/5/18.
  */
-public class TripPlanning{
+public class TripPlanning {
 
 
 
@@ -132,20 +132,23 @@ public class TripPlanning{
     */
 
 
+    /*
+     * the building block for the graph
+     * */
     private static class TreeNode {
 
-        private int value;
+        private int key;
 
         private ArrayList<TreeNode> children;
-        private TreeNode deepestReachingChild;
+        private TreeNode deepestChild;
 
         public TreeNode(int nodeValue) {
-            this.value = nodeValue;
+            this.key = nodeValue;
             this.children = new ArrayList<TreeNode>();
         }
 
-        public int getValue() {
-            return this.value;
+        public int getKey() {
+            return this.key;
         }
 
         public void addChild(TreeNode child) {
@@ -157,12 +160,12 @@ public class TripPlanning{
             return this.children;
         }
 
-        public TreeNode getDeepestReachingChild() {
-            return this.deepestReachingChild;
+        public TreeNode getDeepestChild() {
+            return this.deepestChild;
         }
 
-        public void setDeepestReachingChild(TreeNode child) {
-            this.deepestReachingChild = child;
+        public void setDeepestChild(TreeNode child) {
+            this.deepestChild = child;
         }
     }
 
@@ -187,130 +190,62 @@ public class TripPlanning{
     }
 
 
-    public static int deepestChild(TreeNode root) {
-        return deepestChild(root, 0);
-    }
-
-    public static int deepestChild(TreeNode root, int depth) {
-
-        int maxDepth = 0;
-        TreeNode maxChild = null;
-
-        ArrayList<TreeNode> children = root.getChildren();
-        int sizeOfChildren = children.size();
-
-        if (sizeOfChildren == 0) {
-            return depth;
-        }
-
-        for (int i = 0; i < sizeOfChildren; i++) {
-
-            TreeNode currentChild = children.get(i);
-            int currentChildDepth = deepestChild(currentChild, depth + 1);
-
-            if (maxChild == null || currentChildDepth > maxDepth
-                    || (currentChildDepth == maxDepth && currentChild.getValue() < maxChild.getValue())) {
-
-                maxDepth = currentChildDepth;
-                maxChild = currentChild;
-            }
-        }
-
-        root.setDeepestReachingChild(maxChild);
-        return maxDepth;
-    }
-
-
-    public static TreeNode createGraph(int[] T, int K) {
-
-        final int N = T.length;
-
-        TreeNode[] nodes = new TreeNode[N];
-
-        for (int i = 0; i < N; i++) {
-            nodes[i] = new TreeNode(i);
-        }
-
-        /*
-       T[children] = parent if the children != K
-
-            T[0] = 1
-            T[1] = 2
-            T[2] = 3
-            T[3] = 3
-            T[4] = 2
-            T[5] = 1
-            T[6] = 4
-
-                 2 - 3
-                / \
-               1   4
-              / |  |
-             0  5  6
-        * */
-
-        TreeNode root = nodes[K];
-        int value = root.getValue();
-
-        if (T[K] != K) {
-            nodes[K].addChild(nodes[T[K]]);
-        }
-
-        for (int i = 0; i < T.length; ++i) {
-
-            if (K == i) {
-                continue;
-            }
-
-            if (T[i] != i) {
-                nodes[T[i]].addChild(nodes[i]);
-            }
-        }
-
-        return root;
-    }
-
-
     public static int[] solution(int K, int[] T) {
-
 
         int N = T.length;
 
+        int[] valueToRank = new int[N];
+        int[] rankToIndex = new int[N];
+
+        boolean[] isLeaf = new boolean[N];
+
+
         TreeNode root = createGraph(T, 2);
 
-
         deepestChild(root);
-
 
         Queue<NodeRank> queue = new LinkedList<NodeRank>();
         queue.offer(new NodeRank(root, 0));
 
 
         List<List<Integer>> rank = new ArrayList<List<Integer>>(N);
-        boolean[] isLeaf = new boolean[N];
-
-
-        int[] valueToRank = new int[N];
-        int[] rankToIndex = new int[N];
 
         for (int i = 0; i < N; i++) {
             rank.add(new ArrayList<Integer>());
         }
 
+
         while (!queue.isEmpty()) {
 
-            NodeRank dequeued = queue.poll();
-            TreeNode currentNode = dequeued.getNode();
+            NodeRank rankedNode = queue.poll();
+            TreeNode currentNode = rankedNode.getNode();
 
-            int currentValue = currentNode.getValue();
-            int currentRank = dequeued.getRank();
+            int currentValue = currentNode.getKey();
+            int currentRank = rankedNode.getRank();
 
             ArrayList<TreeNode> children = currentNode.getChildren();
-            TreeNode deepestReachingChild = currentNode.getDeepestReachingChild();
+            TreeNode deepestChildren = currentNode.getDeepestChild();
 
             int sizeOfChildren = children.size();
 
+            
+            /*
+            rank = 0 rank = none
 
+            rank = 1 rank = 3
+            rank = 1 rank = 5
+
+            rank = 2 rank = 0
+            rank = 2 rank = 6
+
+            rank = 3 rank = none
+            rank = 4 rank = none
+            rank = 5 rank = none
+            rank = 6 rank = none
+            * */
+            /*
+             * we are at the leaf
+             * */
             if (sizeOfChildren == 0) {
 
                 List<Integer> rankList = rank.get(currentRank);
@@ -320,16 +255,56 @@ public class TripPlanning{
                 isLeaf[currentValue] = true;
             }
 
+
+            /*
+            node = 2, deep =  1
+            node =  3
+            node =  1 Deepest =  0
+
+            node =  4 Deepest =  6
+
+            node =  0
+            node =  5
+            node =  6
+
+            // node 5 has rank 1 as the deepest node for the node 1 is 0 (0 < 5 though the paths are same)
+            valueToRank = [2, 0, 0, 1, 0, 1, 2]
+
+            isLeaf = [true, false, false, true, false, true, true]
+            * */
+
+            /*
+                     2 - 3
+                    / \
+                   1   4
+                  / |  |
+                 0  5  6
+            * */
+
             for (int i = 0; i < sizeOfChildren; i++) {
 
                 TreeNode currentChild = children.get(i);
-                int currentChildRank = 1 + ((currentChild == deepestReachingChild) ? currentRank : 0);
+                int currentChildRank = 1 + ((currentChild == deepestChildren) ? currentRank : 0);
 
                 queue.offer(new NodeRank(currentChild, currentChildRank));
             }
         }
 
 
+        /*
+        rank = 0 rank = none
+
+        rank = 1 rank = 3
+        rank = 1 rank = 5
+
+        rank = 2 rank = 0
+        rank = 2 rank = 6
+
+        rank = 3 rank = none
+        rank = 4 rank = none
+        rank = 5 rank = none
+        rank = 6 rank = none
+        * */
         for (int i = N - 1, currentIndex = 0; i >= 0; i--) {
 
             List<Integer> rankList = rank.get(i);
@@ -369,31 +344,121 @@ public class TripPlanning{
         for (int i = 0; i <= highestIndexSet; i++) {
 
             result[i + 1] = answer[i];
-//            System.out.print(answer[i] + " ");
         }
-
-//        System.out.println(Arrays.toString(result));
 
         return result;
     }
 
 
-    public static void main(String[] args) {
+    /*
+     * create graph from the provided array and starting node
+     * */
+    public static TreeNode createGraph(int[] T, int K) {
 
-        int[] T = new int[7];
-        int N = T.length;
+        final int N = T.length;
 
-        T[0] = 1;
-        T[1] = 2;
-        T[2] = 3;
-        T[3] = 3;
-        T[4] = 2;
-        T[5] = 1;
-        T[6] = 4;
+        TreeNode[] nodes = new TreeNode[N];
 
+        for (int i = 0; i < N; i++) {
+            nodes[i] = new TreeNode(i);
+        }
 
-        int[] res = solution(2, T);
+        /*
+       T[children] = parent if the children != K
 
-        System.out.println(Arrays.toString(res));
+            T[0] = 1
+            T[1] = 2
+            T[2] = 3
+            T[3] = 3
+            T[4] = 2
+            T[5] = 1
+            T[6] = 4
+
+                 2 - 3
+                / \
+               1   4
+              / |  |
+             0  5  6
+        * */
+
+        TreeNode root = nodes[K];
+        int value = root.getKey();
+
+        if (T[K] != K) {
+            nodes[K].addChild(nodes[T[K]]);
+        }
+
+        for (int i = 0; i < T.length; ++i) {
+
+            if (K == i) {
+                continue;
+            }
+
+            if (T[i] != i) {
+                nodes[T[i]].addChild(nodes[i]);
+            }
+        }
+
+        return root;
     }
+
+
+    /*
+     * set the deepest children for all the nodes. If a node has
+     * more than one children that has the same depth, set the
+     * children with minimum key as the deepest children
+     * */
+    public static int deepestChild(TreeNode root) {
+        return deepestChildHelper(root, 0);
+    }
+
+    /*
+     * helper function to set the deepest children for all the nodes
+     * */
+    public static int deepestChildHelper(TreeNode node, int depth) {
+
+        int maxDepth = 0;
+        TreeNode maxChild = null;
+
+        ArrayList<TreeNode> children = node.getChildren();
+        int sizeOfChildren = children.size();
+
+        if (sizeOfChildren == 0) {
+            return depth;
+        }
+
+        for (int i = 0; i < sizeOfChildren; i++) {
+
+            TreeNode currentChild = children.get(i);
+            int currentChildDepth = deepestChildHelper(currentChild, depth + 1);
+
+            if (maxChild == null || currentChildDepth > maxDepth
+                    || (currentChildDepth == maxDepth && currentChild.getKey() < maxChild.getKey())) {
+
+                maxDepth = currentChildDepth;
+                maxChild = currentChild;
+            }
+        }
+
+        node.setDeepestChild(maxChild);
+        return maxDepth;
+    }
+
+
+//    public static void main(String[] args) {
+//
+//        int[] T = new int[7];
+//        int N = T.length;
+//
+//        T[0] = 1;
+//        T[1] = 2;
+//        T[2] = 3;
+//        T[3] = 3;
+//        T[4] = 2;
+//        T[5] = 1;
+//        T[6] = 4;
+//
+//        int[] res = solution(2, T);
+//        System.out.println(Arrays.toString(res));
+//    }
 }

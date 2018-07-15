@@ -15,831 +15,7 @@
       <change beforePath="" afterPath="$USER_HOME$/.idea/uiDesigner.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/vcs.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/Mockito/1_Getting_started_with_Mockito.pdf" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/Mockito/2_Mocks,_Spies,_Partial_Mocks_and_Stubbing.pdf" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/Mockito/3_Mockito_Verification.pdf" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/Mockito/4_Hamcrest_matchers_tutorial.pdf" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/Mockito/5_Custom_Hamcrest_Matchers.pdf" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/Mockito/Mockito_Cookbook.pdf" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/Mockito/Outline.pdf" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/PowerMock/README.txt" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/README.txt" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/README.md" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/introduction/CollaboratorForPartialMocking.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/introduction/CollaboratorWithFinalMethods.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/introduction/CollaboratorWithStaticMethods.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/introduction/PowerMockitoIntegrationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/mockito/MockitoAnnotationIntegrationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/mockito/MockitoConfigExamplesIntegrationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/mockito/MockitoMockIntegrationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/mockito/MockitoSpyIntegrationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/mockito/MockitoVerifyExamplesIntegrationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/mockito/MyDictionary.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito/mockito/MyList.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/ArgumentMatcherWithLambdaUnitTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/ArgumentMatcherWithoutLambdaUnitTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/CustomAnswerWithLambdaUnitTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/CustomAnswerWithoutLambdaUnitTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/JobPosition.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/JobService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/JobServiceUnitTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/Person.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/README.md" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/UnemploymentService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/UnemploymentServiceImpl.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Eugen/Mockito2/UnemploymentServiceImplUnitTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/CalculatorTest/Calculator.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/CalculatorTest/CalculatorTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Cucumber/User.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Cucumber/UserSteps.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Cucumber/UserTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Cucumber/user.feature" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/FixMethodOrder/FixMethodOrderTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/GroupTest/ClassATest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/GroupTest/ClassBTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/GroupTest/ClassCTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/GroupTest/ClassTestSuite.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/GroupTest/PerformanceTests.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/GroupTest/PerformanceTestsSuite.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/GroupTest/SlowTests.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/GroupTest/SlowTestsSuite.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/HSQL_Db/JUnitHSqlDBTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Hamcrest/Employee.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Hamcrest/JUnitHamcrestTestClass.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/IntegrationTests/IntegrationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/IntegrationTests/IntegrationTestSampleTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/IntegrationTests/JUnitAssertEqualsServiceExample.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/IntegrationTests/NonIntegrationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/IntegrationTests/ServiceObject.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/KeyboardInput/LeapYear.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/KeyboardInput/LeapYearTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/ListTestCase/ListTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/ListTestCase/MyTestCase.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Multithread/CountCheck.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Multithread/CountCheckTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Multithread/CountCheckThreadCountTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Order_of_Execution.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Parameterized/Addition.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Parameterized/JunitAdditionTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Parameterized/JunitAdditionTestRunner.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/QuickCheck/QuickCheck.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Rules/JUnitRules.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/RunListener/OurListener.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/RunListener/TestClassA.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/RunListener/TestClassB.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/RunListener/TestClassRun.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Timeout/Bank.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Timeout/TestTimeout.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Timeout/TestTimeoutGlobal.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/Timeout/TestTimeoutGlobalClass.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/UltimateGuide/Calculate.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/UltimateGuide/CalculateTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/UltimateGuide/FirstDayAtSchool.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/VoidMethod/MyList.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/VoidMethod/MyListTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/WebApp/JWebUnitTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/WebApp/JWebUnit_Architecture.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/WebApp/home.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/WebApp/index.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/JUnit/WebApp/web.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/1_Getting_Started/README.txt" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/Customer/Customer.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/Customer/CustomerDAO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/Customer/CustomerDAOTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/ImageProcessor/ImageProcessor.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/ImageProcessor/ImageProcessorTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/ListMatcher/ListContainsMatcher.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/ListMatcher/ListContainsMatcherTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/ListMatcher/MatchersTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/Printer/Printer.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/Printer/PrinterNotConnectedException.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/Printer/StringProcessor.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/Printer/StringProcessorTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/2_Stubbing/Printer/SysoutPrinter.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/3_Verification/First.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/3_Verification/Printer.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/3_Verification/PrinterDiagnostics.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/3_Verification/PrinterDiagnosticsTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/3_Verification/PrinterTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/4_Hamcrest_Matchers/HamcrestMatchers.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/6_TDD/IReportGenerator.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/6_TDD/ReportEntity.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/6_TDD/ReportGeneratorService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/6_TDD/ReportGeneratorServiceTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/7_DB_Conn/DBConnection.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/7_DB_Conn/DBConnectionTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/7_DB_Conn/MyDao.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/7_DB_Conn/MyEntity.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/7_DB_Conn/MyService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/Mockito/7_DB_Conn/MyServiceTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/powermock/FinalClazzUser.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/powermock/MockFinalClassTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/powermock/SimpleFinalClazz.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/powermock/constructor/PowerMockConstructorExample.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/powermock/constructor/PowerMockConstructorExampleTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/powermock/constructor/SimpleClass.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/user/controller/UserController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/user/domain/User.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/user/service/DefaultUserService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/user/service/UserService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/user/test/UserControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/0_Beginners/user/util/TestPowerMock.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/2_Static_Method/DatabaseReader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/2_Static_Method/DatabaseReaderTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/3_Private_Method/MockPrivateMethodExample.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/3_Private_Method/MockPrivateMethodTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/4_Constructor/PowerMockConstructorExample.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/4_Constructor/PowerMockConstructorExampleTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/4_Constructor/SimpleClass.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/6_Spy/PowerMockSpyExample.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/6_Spy/PowerMockSpyExampleTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/constructor/Car.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/constructor/mockito/CarFactoryMockito.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/constructor/powermock/CarFactoryPowerMock.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/finalclass/Plane.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/finalclass/powermock/Pilot.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/finalmethod/Bike.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/finalmethod/powermockito/Rider.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/privatemethod/mockito/Train.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/privatemethod/powermock/Truck.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/staticmethod/Athmosphere.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/staticmethod/mockito/HumanityMockito.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/staticmethod/powermock/HumanityPowerMock.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/test/constructor/mockito/CarFactoryMockitoTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/test/constructor/powermock/CarFactoryPowerMockTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/test/finalclass/powermock/PilotTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/test/finalmethod/powermock/RiderTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/test/privatemethod/mockito/TrainTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/test/privatemethod/powermock/TruckTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/test/staticmethod/mockito/HumanityMockitoTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/7_Final_class/test/staticmethod/powermock/HumanityPowerMockTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/8_Integration/PowerMockitoIntegrationExample.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/8_Integration/PowerMockitoStaticMethodExample.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/8_Integration/PowerMockitoStaticVoidMethodExample.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/8_Integration/PowerMockitoStubPrivateMethodExample.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/8_Integration/PowerMockitoVerifyPrivateMethodExample.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/8_Integration/Service.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/8_Integration/ServiceListener.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/JC_Geeks/PowerMock/8_Integration/SomeSystem.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/README.md" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/LICENSE" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/README" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/pom.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/profiles/dev/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/profiles/integration-test/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/integration-test/java/net/petrikainulainen/spring/testmvc/controller/ITHomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/integration-test/java/net/petrikainulainen/spring/testmvc/controller/ITStandaloneHomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/integration-test/java/org/springframework/test/web/server/samples/context/GenericWebContextLoader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/integration-test/java/org/springframework/test/web/server/samples/context/WebContextLoader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationConfig.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/java/net/petrikainulainen/spring/testmvc/controller/HomeController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/resources/exampleApplicationContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/resources/i18n/messages.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/WEB-INF/layout/layout.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/WEB-INF/sitemesh3.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/static/css/bootstrap-responsive.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/static/css/bootstrap.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/static/css/example.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/static/img/glyphicons-halflings-white.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/static/img/glyphicons-halflings.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/static/js/bootstrap-collapse.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/static/js/bootstrap-transition.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/static/js/bootstrap.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/main/webapp/static/js/jquery-1.8.2.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/configuration/src/test/java/net/petrikainulainen/spring/testmvc/controller/HomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/LICENSE" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/README" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/pom.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/profiles/dev/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/profiles/integration-test/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/integration-test/java/net/petrikainulainen/spring/testmvc/todo/controller/ITTodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-add-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-delete-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-update-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/common/controller/ErrorController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationConfig.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/config/PersistenceContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/config/WebAppContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/TodoDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/TodoNotFoundException.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/model/Todo.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/repository/TodoRepository.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/TodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/resources/exampleApplicationContext-persistence.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/resources/exampleApplicationContext-web.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/resources/exampleApplicationContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/resources/i18n/messages.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/WEB-INF/jsp/error/404.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/WEB-INF/jsp/error/error.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/WEB-INF/jsp/todo/add.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/WEB-INF/jsp/todo/list.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/WEB-INF/jsp/todo/update.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/WEB-INF/jsp/todo/view.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/WEB-INF/layout/layout.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/WEB-INF/sitemesh3.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/css/bootstrap-responsive.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/css/bootstrap.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/css/example.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/img/glyphicons-halflings-white.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/img/glyphicons-halflings.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/js/todo.form.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/js/todo.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/js/todo.view.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/js/vendor/bootstrap-collapse.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/js/vendor/bootstrap-transition.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/js/vendor/bootstrap.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/js/vendor/handlebars-1.0.rc.1.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/main/webapp/static/js/vendor/jquery-1.8.2.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/java/net/petrikainulainen/spring/testmvc/common/controller/ErrorControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/java/net/petrikainulainen/spring/testmvc/config/TestContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/TestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/WebTestConstants.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/controller/StandaloneTodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/controller/WebApplicationContextTodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/dto/TodoDTOBuilder.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/model/TodoBuilder.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/model/TodoTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers-unittest/src/test/resources/testContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/LICENSE" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/README" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/pom.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/profiles/dev/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/profiles/integration-test/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/integration-test/java/net/petrikainulainen/spring/testmvc/todo/controller/ITTodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/integration-test/java/org/springframework/test/web/server/samples/context/GenericWebContextLoader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/integration-test/java/org/springframework/test/web/server/samples/context/WebContextLoader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-add-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-delete-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-update-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/common/controller/ErrorController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationConfig.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/config/PersistenceContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/TodoDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/TodoNotFoundException.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/todo/model/Todo.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/todo/repository/TodoRepository.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/TodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/resources/exampleApplicationContext-persistence.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/resources/exampleApplicationContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/resources/i18n/messages.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/WEB-INF/jsp/error/404.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/WEB-INF/jsp/error/error.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/WEB-INF/jsp/todo/add.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/WEB-INF/jsp/todo/list.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/WEB-INF/jsp/todo/update.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/WEB-INF/jsp/todo/view.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/WEB-INF/layout/layout.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/WEB-INF/sitemesh3.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/css/bootstrap-responsive.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/css/bootstrap.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/css/example.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/img/glyphicons-halflings-white.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/img/glyphicons-halflings.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/js/todo.form.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/js/todo.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/js/todo.view.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/js/vendor/bootstrap-collapse.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/js/vendor/bootstrap-transition.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/js/vendor/bootstrap.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/js/vendor/handlebars-1.0.rc.1.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/main/webapp/static/js/vendor/jquery-1.8.2.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/test/java/net/petrikainulainen/spring/testmvc/common/controller/ErrorControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/test/java/net/petrikainulainen/spring/testmvc/todo/TodoTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/test/java/net/petrikainulainen/spring/testmvc/todo/config/UnitTestContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/test/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/test/java/net/petrikainulainen/spring/testmvc/todo/model/TodoTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/controllers/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/LICENSE" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/README" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/pom.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/profiles/dev/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/profiles/integration-test/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/integration-test/java/net/petrikainulainen/spring/testmvc/IntegrationTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/integration-test/java/net/petrikainulainen/spring/testmvc/common/controller/ITHomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/integration-test/java/net/petrikainulainen/spring/testmvc/todo/controller/ITTodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/integration-test/java/net/petrikainulainen/spring/testmvc/user/ITAuthenticationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/integration-test/java/net/petrikainulainen/spring/testmvc/user/controller/ITUserControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/integration-test/java/org/springframework/test/web/server/samples/context/SecurityRequestPostProcessors.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-add-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-delete-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-update-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/common/controller/HomeController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/common/util/LocaleContextHolderWrapper.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationConfig.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/config/PersistenceContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationEntryPoint.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationFailureHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationSuccessHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestLogoutSuccessHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/security/authorization/TodoPermissionEvaluator.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/security/util/SecurityContextUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FieldValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FormValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/TodoDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/FormValidationError.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/TodoNotFoundException.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/todo/model/Todo.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/todo/repository/TodoRepository.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/TodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/user/controller/UserController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/user/dto/SecurityRole.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/java/net/petrikainulainen/spring/testmvc/user/dto/UserDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/resources/exampleApplicationContext-persistence.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/resources/exampleApplicationContext-security.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/resources/exampleApplicationContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/resources/i18n/messages.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/css/bootstrap-responsive.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/css/bootstrap.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/css/example.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/img/glyphicons-halflings-white.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/img/glyphicons-halflings.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/app.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/error/error.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/error/error.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/error/error.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/error/error.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/todo/todo.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/todo/todo.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/todo/todo.i18n.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/todo/todo.models.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/todo/todo.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/todo/todo.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/user/user.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/user/user.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/user/user.models.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/user/user.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/app/user/user.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/Backbone.ModelBinder.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/backbone.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/backbone.marionette.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/bootstrap-collapse.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/bootstrap-transition.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/bootstrap.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/handlebars-1.0.rc.1.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/i18next-1.5.8.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/jquery-1.8.2.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/spin.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/main/webapp/static/js/vendor/underscore.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/common/controller/HomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/common/util/LocaleContextHolderWrapperTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationEntryPointTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationFailureHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationSuccessHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestLogoutSuccessHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/security/authorization/TodoPermissionEvaluatorTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/security/util/SecurityContextUtilTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/todo/TodoTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/todo/config/UnitTestContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/todo/dto/FormValidationErrorDTOTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/todo/model/TodoTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-jsonpath/src/test/java/net/petrikainulainen/spring/testmvc/user/controller/UserControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/LICENSE" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/README" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/pom.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/profiles/dev/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/profiles/integration-test/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/integration-test/java/net/petrikainulainen/spring/testmvc/common/controller/ITHomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/integration-test/java/net/petrikainulainen/spring/testmvc/todo/controller/ITTodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-add-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-delete-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-update-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/common/controller/HomeController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationConfig.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/config/PersistenceContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/config/WebAppContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/controller/RestErrorHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FieldErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/TodoDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/ValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/TodoNotFoundException.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/model/Todo.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/repository/TodoRepository.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/TodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/resources/exampleApplicationContext-persistence.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/resources/exampleApplicationContext-web.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/resources/exampleApplicationContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/resources/i18n/messages.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/css/bootstrap-responsive.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/css/bootstrap.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/css/example.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/img/glyphicons-halflings-white.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/img/glyphicons-halflings.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/app.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/error/error.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/error/error.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/error/error.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/error/error.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/todo/todo.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/todo/todo.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/todo/todo.i18n.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/todo/todo.models.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/todo/todo.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/app/todo/todo.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/Backbone.ModelBinder.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/backbone.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/backbone.marionette.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/bootstrap-collapse.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/bootstrap-transition.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/bootstrap.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/handlebars-1.0.rc.1.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/i18next-1.5.8.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/jquery-1.8.2.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/spin.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/main/webapp/static/js/vendor/underscore.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/java/net/petrikainulainen/spring/testmvc/common/controller/HomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/java/net/petrikainulainen/spring/testmvc/config/TestContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/TestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/dto/TodoDTOBuilder.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/dto/ValidationErrorDTOTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/model/TodoBuilder.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/model/TodoTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest-unittest/src/test/resources/testContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/LICENSE" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/README" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/pom.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/profiles/dev/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/profiles/integration-test/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/integration-test/java/net/petrikainulainen/spring/testmvc/IntegrationTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/integration-test/java/net/petrikainulainen/spring/testmvc/todo/controller/ITTodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/integration-test/java/org/springframework/test/web/server/samples/context/GenericWebContextLoader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/integration-test/java/org/springframework/test/web/server/samples/context/WebContextLoader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-add-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-delete-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-update-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/common/controller/HomeController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/common/util/LocaleContextHolderWrapper.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationConfig.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/config/PersistenceContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FieldValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FormValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/TodoDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/FormValidationError.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/TodoNotFoundException.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/todo/model/Todo.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/todo/repository/TodoRepository.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/TodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/resources/exampleApplicationContext-persistence.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/resources/exampleApplicationContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/resources/i18n/messages.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/css/bootstrap-responsive.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/css/bootstrap.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/css/example.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/img/glyphicons-halflings-white.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/img/glyphicons-halflings.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/app.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/error/error.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/error/error.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/error/error.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/error/error.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/todo/todo.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/todo/todo.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/todo/todo.i18n.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/todo/todo.models.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/todo/todo.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/app/todo/todo.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/Backbone.ModelBinder.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/backbone.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/backbone.marionette.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/bootstrap-collapse.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/bootstrap-transition.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/bootstrap.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/handlebars-1.0.rc.1.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/i18next-1.5.8.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/jquery-1.8.2.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/spin.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/main/webapp/static/js/vendor/underscore.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/test/java/net/petrikainulainen/spring/testmvc/todo/TodoTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/test/java/net/petrikainulainen/spring/testmvc/todo/config/UnitTestContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/test/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/test/java/net/petrikainulainen/spring/testmvc/todo/dto/FormValidationErrorDTOTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/test/java/net/petrikainulainen/spring/testmvc/todo/model/TodoTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/rest/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/LICENSE" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/README" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/pom.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/profiles/dev/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/profiles/integration-test/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/java/net/petrikainulainen/spring/testmvc/IntegrationTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/java/net/petrikainulainen/spring/testmvc/common/controller/ITHomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/java/net/petrikainulainen/spring/testmvc/todo/controller/ITTodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/java/net/petrikainulainen/spring/testmvc/user/ITAuthenticationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/java/net/petrikainulainen/spring/testmvc/user/controller/ITUserControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/java/org/springframework/test/web/server/samples/context/GenericWebContextLoader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/java/org/springframework/test/web/server/samples/context/SecurityRequestPostProcessors.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/java/org/springframework/test/web/server/samples/context/WebContextLoader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-add-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-delete-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-update-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/common/controller/HomeController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/common/util/LocaleContextHolderWrapper.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationConfig.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/config/PersistenceContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationEntryPoint.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationFailureHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationSuccessHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestLogoutSuccessHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/security/authorization/TodoPermissionEvaluator.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/security/util/SecurityContextUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FieldValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FormValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/TodoDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/FormValidationError.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/TodoNotFoundException.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/todo/model/Todo.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/todo/repository/TodoRepository.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/TodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/user/controller/UserController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/user/dto/SecurityRole.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/java/net/petrikainulainen/spring/testmvc/user/dto/UserDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/resources/exampleApplicationContext-persistence.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/resources/exampleApplicationContext-security.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/resources/exampleApplicationContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/resources/i18n/messages.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/css/bootstrap-responsive.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/css/bootstrap.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/css/example.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/img/glyphicons-halflings-white.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/img/glyphicons-halflings.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/app.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/error/error.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/error/error.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/error/error.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/error/error.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/todo/todo.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/todo/todo.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/todo/todo.i18n.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/todo/todo.models.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/todo/todo.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/todo/todo.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/user/user.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/user/user.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/user/user.models.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/user/user.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/app/user/user.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/Backbone.ModelBinder.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/backbone.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/backbone.marionette.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/bootstrap-collapse.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/bootstrap-transition.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/bootstrap.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/handlebars-1.0.rc.1.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/i18next-1.5.8.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/jquery-1.8.2.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/spin.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/main/webapp/static/js/vendor/underscore.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/common/controller/HomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/common/util/LocaleContextHolderWrapperTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationEntryPointTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationFailureHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationSuccessHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestLogoutSuccessHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/security/authorization/TodoPermissionEvaluatorTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/security/util/SecurityContextUtilTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/todo/TodoTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/todo/config/UnitTestContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/todo/dto/FormValidationErrorDTOTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/todo/model/TodoTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-annotations/src/test/java/net/petrikainulainen/spring/testmvc/user/controller/UserControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/LICENSE" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/README" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/pom.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/profiles/dev/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/profiles/integration-test/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/java/net/petrikainulainen/spring/testmvc/IntegrationTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/java/net/petrikainulainen/spring/testmvc/common/controller/ITHomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/java/net/petrikainulainen/spring/testmvc/todo/controller/ITTodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/java/net/petrikainulainen/spring/testmvc/user/ITAuthenticationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/java/net/petrikainulainen/spring/testmvc/user/controller/ITUserControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/java/org/springframework/test/web/server/samples/context/GenericWebContextLoader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/java/org/springframework/test/web/server/samples/context/SecurityRequestPostProcessors.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/java/org/springframework/test/web/server/samples/context/WebContextLoader.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-add-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-delete-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-update-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/common/controller/HomeController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/common/util/LocaleContextHolderWrapper.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationConfig.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/config/PersistenceContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationEntryPoint.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationFailureHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationSuccessHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestLogoutSuccessHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/security/util/SecurityContextUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FieldValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FormValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/TodoDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/FormValidationError.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/TodoNotFoundException.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/todo/model/Todo.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/todo/repository/TodoRepository.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/TodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/user/controller/UserController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/user/dto/SecurityRole.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/java/net/petrikainulainen/spring/testmvc/user/dto/UserDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/resources/exampleApplicationContext-persistence.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/resources/exampleApplicationContext-security.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/resources/exampleApplicationContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/resources/i18n/messages.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/css/bootstrap-responsive.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/css/bootstrap.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/css/example.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/img/glyphicons-halflings-white.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/img/glyphicons-halflings.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/app.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/error/error.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/error/error.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/error/error.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/error/error.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/todo/todo.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/todo/todo.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/todo/todo.i18n.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/todo/todo.models.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/todo/todo.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/todo/todo.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/user/user.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/user/user.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/user/user.models.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/user/user.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/app/user/user.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/Backbone.ModelBinder.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/backbone.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/backbone.marionette.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/bootstrap-collapse.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/bootstrap-transition.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/bootstrap.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/handlebars-1.0.rc.1.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/i18next-1.5.8.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/jquery-1.8.2.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/spin.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/main/webapp/static/js/vendor/underscore.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/common/controller/HomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/common/util/LocaleContextHolderWrapperTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationEntryPointTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationFailureHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationSuccessHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestLogoutSuccessHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/security/util/SecurityContextUtilTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/todo/TodoTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/todo/config/UnitTestContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/todo/dto/FormValidationErrorDTOTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/todo/model/TodoTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/security-url-based/src/test/java/net/petrikainulainen/spring/testmvc/user/controller/UserControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/LICENSE" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/README" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/pom.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/profiles/dev/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/profiles/integration-test/config.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/integration-test/java/net/petrikainulainen/spring/testmvc/IntegrationTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/integration-test/java/net/petrikainulainen/spring/testmvc/common/controller/ITHomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/integration-test/java/net/petrikainulainen/spring/testmvc/todo/controller/ITTodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/integration-test/java/net/petrikainulainen/spring/testmvc/user/ITAuthenticationTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/integration-test/java/net/petrikainulainen/spring/testmvc/user/controller/ITUserControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/integration-test/java/org/springframework/test/web/server/samples/context/SecurityRequestPostProcessors.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-add-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-delete-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData-update-expected.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/integration-test/resources/net/petrikainulainen/spring/testmvc/todo/controller/toDoData.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/common/controller/HomeController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/common/util/LocaleContextHolderWrapper.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationConfig.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/config/ExampleApplicationContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/config/PersistenceContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationEntryPoint.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationFailureHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationSuccessHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/security/authentication/RestLogoutSuccessHandler.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/security/authorization/TodoPermissionEvaluator.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/security/util/SecurityContextUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FieldValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/FormValidationErrorDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/todo/dto/TodoDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/FormValidationError.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/todo/exception/TodoNotFoundException.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/todo/model/Todo.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/todo/repository/TodoRepository.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/todo/service/TodoService.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/user/controller/UserController.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/user/dto/SecurityRole.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/java/net/petrikainulainen/spring/testmvc/user/dto/UserDTO.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/resources/application.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/resources/exampleApplicationContext-persistence.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/resources/exampleApplicationContext-security.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/resources/exampleApplicationContext.xml" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/resources/i18n/messages.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/resources/log4j.properties" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/css/bootstrap-responsive.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/css/bootstrap.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/css/example.css" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/img/glyphicons-halflings-white.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/img/glyphicons-halflings.png" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/app.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/error/error.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/error/error.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/error/error.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/error/error.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/todo/todo.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/todo/todo.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/todo/todo.i18n.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/todo/todo.models.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/todo/todo.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/todo/todo.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/user/user.controller.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/user/user.events.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/user/user.models.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/user/user.routing.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/app/user/user.views.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/Backbone.ModelBinder.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/backbone.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/backbone.marionette.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/bootstrap-collapse.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/bootstrap-transition.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/bootstrap.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/handlebars-1.0.rc.1.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/i18next-1.5.8.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/jquery-1.8.2.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/spin.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/main/webapp/static/js/vendor/underscore.js" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/common/controller/HomeControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/common/util/LocaleContextHolderWrapperTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationEntryPointTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationFailureHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestAuthenticationSuccessHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/security/authentication/RestLogoutSuccessHandlerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/security/authorization/TodoPermissionEvaluatorTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/security/util/SecurityContextUtilTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/todo/TodoTestUtil.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/todo/config/UnitTestContext.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/todo/controller/TodoControllerTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/todo/dto/FormValidationErrorDTOTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/todo/model/TodoTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/todo/service/RepositoryTodoServiceTest.java" />
-      <change beforePath="" afterPath="$USER_HOME$/Documents/Education/Software Testing/tCode/Petri/Spring-Mvc-Test-Examples/spring-32/src/test/java/net/petrikainulainen/spring/testmvc/user/controller/UserControllerTest.java" />
       <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.pdf" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/Solarized Light.icls" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/_@user_Default.icls" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/eye-fitted.icls" />
@@ -4528,12 +3704,11 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TravelingGreedyAlgorythm.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Geeks_For_Geeks/Graph/Graph.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Geeks_For_Geeks/Graph/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/HilbertMaze.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/HilbertMaze.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountCities.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountCities.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/RestStops.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/RestStops.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Resources/Algorithm.pdf" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -5093,17 +4268,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TripPlanning.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java">
+      <file leaf-file-name="MinAbsSum.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="94" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-              <folding>
-                <element signature="e#6027#6028#0" expanded="true" />
-                <element signature="e#6067#6068#0" expanded="true" />
-                <element signature="e#6127#6128#0" expanded="true" />
-                <element signature="e#6171#6172#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="317">
+              <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -5137,10 +4307,12 @@
       <find>goal</find>
       <find>nativeSolution</find>
       <find>*</find>
+      <find>i</find>
     </findStrings>
     <replaceStrings>
       <replace>index</replace>
       <replace>N</replace>
+      <replace>rank</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -5170,7 +4342,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire/NumberSolitaireTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSumTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaireTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/MaxNonoverlappingSegments/SolutionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/MaxNonoverlappingSegments/MaxNonoverlappingSegmentsTest.java" />
@@ -5212,6 +4383,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountCities.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/RestStops.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java" />
       </list>
     </option>
   </component>
@@ -5228,7 +4400,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1424" />
     <option name="height" value="776" />
@@ -5251,10 +4423,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -5295,16 +4467,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
-              <item name="Fluorum_2014" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codility" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="codility" type="462c0819:PsiDirectoryNode" />
-              <item name="Interview" type="462c0819:PsiDirectoryNode" />
+              <item name="L17_Dynamic_Programming" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
@@ -5593,15 +4756,22 @@
       <workItem from="1531464124343" duration="3800000" />
       <workItem from="1531482253043" duration="40000" />
       <workItem from="1531482351511" duration="2085000" />
-      <workItem from="1531490120870" duration="17000" />
+      <workItem from="1531490120870" duration="139000" />
+      <workItem from="1531492885796" duration="952000" />
+      <workItem from="1531497211496" duration="20000" />
+      <workItem from="1531497289075" duration="321000" />
+      <workItem from="1531498343854" duration="4000" />
+      <workItem from="1531498383788" duration="182000" />
+      <workItem from="1531499483870" duration="209000" />
+      <workItem from="1531626794039" duration="1321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159968000" />
+    <option name="totallyTimeSpent" value="163099000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="788" extended-state="6" />
+    <frame x="0" y="23" width="1424" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -5613,10 +4783,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3001443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30983847" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30837005" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30329043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33357453" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -5705,13 +4875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -5947,31 +5110,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TravelingGreedyAlgorythm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1256">
-          <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TravelingGreedyAlgorythm.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/CountCities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        <state relative-caret-position="248">
+          <caret line="305" column="26" lean-forward="false" selection-start-line="305" selection-start-column="26" selection-end-line="305" selection-end-column="26" />
           <folding>
-            <element signature="e#6027#6028#0" expanded="true" />
-            <element signature="e#6067#6068#0" expanded="true" />
-            <element signature="e#6127#6128#0" expanded="true" />
-            <element signature="e#6171#6172#0" expanded="true" />
+            <element signature="e#6036#6037#0" expanded="false" />
+            <element signature="e#6076#6077#0" expanded="false" />
+            <element signature="e#6410#6420#0" expanded="false" />
+            <element signature="e#6518#6533#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
