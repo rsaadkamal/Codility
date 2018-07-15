@@ -31,6 +31,8 @@ expected worst-case space complexity is O(1) (not counting the storage required 
 * */
 
 
+import java.math.BigInteger;
+
 /**
  * Created by Chaklader on 6/23/18.
  */
@@ -127,5 +129,19 @@ public class PermMissingElem {
         }
 
         return A.length + 1;
+    }
+
+
+    public int solution5(int[] A) {
+
+        int n = A.length + 1;
+        //https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF
+        //BigInteger is cheating
+        BigInteger formula = BigInteger.valueOf(n).multiply(BigInteger.valueOf((n + 1))).divide(BigInteger.valueOf(2));
+        BigInteger sum = BigInteger.valueOf(0);
+        for (int number : A) {
+            sum = sum.add(BigInteger.valueOf(number));
+        }
+        return formula.subtract(sum).intValue();
     }
 }

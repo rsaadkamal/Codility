@@ -81,4 +81,10 @@ public class FrogJmp {
             return step;
         }
     }
+
+
+    public int solution4(int X, int Y, int D) {
+
+        return (int) Math.ceil(((double) Y - (double) X) / (double) D);
+    }
 }

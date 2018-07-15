@@ -50,7 +50,7 @@ public class MinAbsSum {
     /*
      * solution - a
      * */
-    public int solution(int[] A) {
+    public static int solution(int[] A) {
 
         int N = A.length;
 
@@ -59,13 +59,14 @@ public class MinAbsSum {
         }
 
         int sum = 0;
+
         int max = Integer.MIN_VALUE;
 
         /*
          * change all the value of the array to the
          * absolute values and find max absolute value
          * */
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < N; i++) {
 
             int value = Math.abs(A[i]);
 
@@ -88,11 +89,13 @@ public class MinAbsSum {
             counts[value]++;
         }
 
-        // O(sum(abs(A)))
-        int[] r = new int[sum + 1];
+        /*
+         * O(sum(abs(A)))
+         * */
+        int[] Total = new int[sum + 1];
 
-        for (int i = 1; i < r.length; i++) {
-            r[i] = -1;
+        for (int i = 1; i < Total.length; i++) {
+            Total[i] = -1;
         }
 
         /*
@@ -106,16 +109,16 @@ public class MinAbsSum {
              * value with previous steps, so no need to spend current if it's less
              * than 0, spend 1 current number if r[j - i] has been reached
              * */
-            for (int j = 0; j < r.length; j++) {
+            for (int j = 0; j < Total.length; j++) {
 
                 /*
                  * negative value means we haven't reached this
                  * value, so we have to spend 1 current if we can
                  * */
-                if (r[j] >= 0) {
-                    r[j] = counts[i];
-                } else if (j - i >= 0 && r[j - i] > 0) {
-                    r[j] = r[j - i] - 1;
+                if (Total[j] >= 0) {
+                    Total[j] = counts[i];
+                } else if (j - i >= 0 && Total[j - i] > 0) {
+                    Total[j] = Total[j - i] - 1;
                 }
 
                 /*
@@ -132,10 +135,12 @@ public class MinAbsSum {
          * if it's reachable then (sum - i) - reachable as well. so if the value
          * is reachable then the difference is abs(i - (sum - i)), which is the
          * same as abs(sum - 2 * i)
+         *
+         * BODMAS_RULE = {Brackets, Orders, Division, Multiplication, Addition, Subtraction}
          * */
-        for (int i = 0; i < r.length / 2 + 1; i++) {
+        for (int i = 0; i < Total.length / 2 + 1; i++) {
 
-            if (r[i] >= 0 && result > Math.abs(sum - 2 * i)) {
+            if (Total[i] >= 0 && result > Math.abs(sum - 2 * i)) {
                 result = Math.abs(sum - 2 * i);
             }
         }
@@ -147,39 +152,106 @@ public class MinAbsSum {
     /*
      * solution - b
      * */
-    public int solution1(int[] A) {
+    public static int solution1(int[] A) {
 
+        int N = A.length;
 
         int sum = 0;
         int max = 0;
 
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < N; i++) {
+
             A[i] = Math.abs(A[i]);
             sum += A[i];
+
             max = Math.max(A[i], max);
         }
 
 
-        int[] map = new int[sum + 1];
-        int[] count = new int[max + 1];
+        int[] counts = new int[max + 1];
 
-        Arrays.fill(count, 0);
-        Arrays.fill(map, -1);
-
-        for (int i = 0; i < A.length; i++) {
-            count[A[i]] += 1;
+        for (int i = 0; i < N; i++) {
+            counts[A[i]] += 1;
         }
 
-        map[0] = 0;
+        int[] Total = new int[sum + 1];
 
-        for (int a = 1; a <= max; a++) {
+        Arrays.fill(Total, -1);
+        Total[0] = 0;
 
-            if (count[a] > 0) {
+
+        /*
+         * SUBSET SUM PROBLEM
+         * ------------------
+         *
+         * Given a set (or multiset) of integers, is there a non-empty subset whose sum is zero?
+         *
+         * For example, given the set {−7, −3, −2, 5, 8}, the answer is yes because the subset
+         *
+         * {−3, −2, 5} sums to zero. The problem is NP-complete, meaning roughly that while it
+         *
+         * is easy to confirm whether a proposed solution is valid, it may inherently be prohibi
+         * tively
+         * difficult to determine in the first place whether any solution exists.
+         *
+         *
+         * An equivalent problem: given a set of integers and an integer s, does any non-empty subset
+         * sum to s?
+         *
+         *
+         *
+         * KNAPSACK PROBLEM
+         * ----------------
+         * Given a set of items, each with a weight and a value, determine the number of each item
+         *
+         * included in a collection so that the total weight is less than or equal to a given limit
+         *
+         * and the total value is as large as possible.
+         *
+         *
+         *
+         *
+         * PARTITION PROBLEM
+         * -----------------
+         *
+         * It is the task of deciding whether a given multiset S of positive integers can be partitioned
+         *
+         * into two subsets S1 and S2 such that the sum of the numbers in S1 equals the sum of the numbe
+         * rs
+         * in S2. Although the partition problem is NP-complete, there is a pseudo-polynomial time dynam
+         * ic
+         * programming solution, and there are heuristics that solve the problem in many instances, eith
+         * er
+         * optimally or approximately. For this reason, it has been called "the easiest NP-hard problem"
+         * .
+         * There is an optimization version of the partition problem, which is to partition the multiset
+         * S
+         * into two subsets S1, S2 such that the difference between the sum of elements in S1 and the su
+         * m
+         * of elements in S2 is minimized. The optimization version is NP-hard but can be solved efficie
+         * ntly in practice.
+         *
+         *
+         * */
+
+        for (int i = 1; i <= max; i++) {
+
+            if (counts[i] > 0) {
+
                 for (int j = 0; j <= sum; j++) {
-                    if (map[j] >= 0) {
-                        map[j] = count[a];
-                    } else if (j >= a && map[j - a] > 0) {
-                        map[j] = map[j - a] - 1;
+
+                    /*
+                     * j th index is zero or positive
+                     * */
+                    if (Total[j] >= 0) {
+                        Total[j] = counts[i];
+                    }
+
+                    /*
+                     * (i-j) th index is positive
+                     * */
+                    else if ((j - i) >= 0 && Total[j - i] > 0) {
+                        Total[j] = Total[j - i] - 1;
                     }
                 }
             }
@@ -188,11 +260,23 @@ public class MinAbsSum {
         int result = sum;
 
         for (int i = 0; i < sum / 2 + 1; i++) {
-            if (map[i] >= 0) {
+
+            /*
+             * i- th index if zero or positive
+             * BODMAS = {Brackets, Orders, Division, Multiplication, Addition, Subtraction}
+             * */
+            if (Total[i] >= 0) {
                 result = Math.min(result, sum - 2 * i);
             }
         }
 
         return result;
+    }
+
+
+    public static void main(String[] args) {
+
+        int[] A = {1, 5, 2, -2};
+        solution1(A);
     }
 }

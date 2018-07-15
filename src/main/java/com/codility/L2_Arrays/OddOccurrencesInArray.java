@@ -38,7 +38,9 @@ expected worst-case space complexity is O(1) (not counting the storage required 
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Chaklader on 6/23/18.
@@ -81,5 +83,24 @@ public class OddOccurrencesInArray {
         }
 
         return list.size() == 1 ? list.get(0) : -1;
+    }
+
+
+    public int solution4(int[] A) {
+
+        HashMap<Integer, Integer> map = new HashMap();
+        for (int i = 0; i < A.length; i++) {
+            if (!map.containsKey(A[i])) {
+                map.put(A[i], 1);
+            } else {
+                map.put(A[i], map.get(A[i]) + 1);
+            }
+        }
+        for (Map.Entry pair : map.entrySet()) {
+            if (1 == (int) pair.getValue() % 2) {
+                return (int) pair.getKey();
+            }
+        }
+        return -1;
     }
 }

@@ -51,6 +51,8 @@ expected worst-case space complexity is O(X) (not counting the storage required 
 * */
 
 
+import java.util.Arrays;
+
 /**
  * Created by Chaklader on 6/23/18.
  */
@@ -135,5 +137,24 @@ public class FrogRiverOne {
         }
 
         return i - 1;
+    }
+
+
+    public int solution4(int X, int[] A) {
+
+        int path[] = new int[X];
+        int sum = X * (X + 1) / 2;
+        int pathSum = 0;
+        Arrays.fill(path, -1);
+        for (int i = 0; i < A.length; i++) {
+            if (path[A[i] - 1] == -1) {
+                path[A[i] - 1] = A[i];
+                pathSum += A[i];
+            }
+            if (pathSum == sum) {
+                return i;
+            }
+        }
+        return -1;
     }
 }

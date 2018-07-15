@@ -38,7 +38,7 @@ public class MissingInteger {
 
 
     /*
-     * solution - A
+     * solution - a
      * */
     public static int solution(int[] A) {
 
@@ -133,6 +133,28 @@ public class MissingInteger {
          * start from 0
          * */
         return N + 1;
+    }
+
+
+    /*
+     * solution - d
+     * */
+    public int solution3(int[] A) {
+
+
+        int[] map = new int[A.length];
+        Arrays.fill(map, -1);
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] > 0 && A[i] <= A.length) {
+                map[A[i] - 1] = A[i];
+            }
+        }
+        for (int i = 0; i < map.length; i++) {
+            if (map[i] == -1) {
+                return i + 1;
+            }
+        }
+        return A.length + 1;
     }
 
 }

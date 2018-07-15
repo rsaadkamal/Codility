@@ -60,7 +60,7 @@ public class PermCheck {
 
 
     /*
-     * solution-A
+     * solution- a
      */
     public static int solution(int[] A) {
 
@@ -73,6 +73,31 @@ public class PermCheck {
             }
         }
 
+        return 1;
+    }
+
+
+    /*
+     * solution- b
+     */
+    public int solution1(int[] A) {
+
+        int[] map = new int[A.length];
+        Arrays.fill(map, -1);
+
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] > A.length) {
+                return 0;
+            }
+            if (map[A[i] - 1] == -1) {
+                map[A[i] - 1] = A[i];
+            }
+        }
+        for (int i = 0; i < map.length; i++) {
+            if (map[i] == -1) {
+                return 0;
+            }
+        }
         return 1;
     }
 }
