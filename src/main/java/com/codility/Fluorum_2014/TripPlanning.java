@@ -135,7 +135,7 @@ public class TripPlanning {
     /*
      * class to define the tree node
      * */
-    private  class Node {
+    private class Node {
 
         private int key;
 
@@ -171,7 +171,7 @@ public class TripPlanning {
     /*
      * class to define the rank for the tree node
      * */
-    private  class Rank {
+    private class Rank {
 
         private Node node;
         private int rank;
@@ -191,7 +191,7 @@ public class TripPlanning {
     }
 
 
-    public  int[] solution(int K, int[] T) {
+    public int[] solution(int K, int[] T) {
 
         int N = T.length;
 
@@ -200,7 +200,7 @@ public class TripPlanning {
 
         boolean[] isLeaf = new boolean[N];
 
-        Node root = createGraph(T, 2);
+        Node root = createGraph1(T, 2);
 
         deepestChild(root);
 
@@ -288,7 +288,6 @@ public class TripPlanning {
                   / |  |
                  0  5  6
             * */
-
             for (int i = 0; i < sizeOfChildren; i++) {
 
                 Node currentChild = children.get(i);
@@ -348,7 +347,36 @@ public class TripPlanning {
     /*
      * create graph from the provided array and starting node
      * */
-    public  Node createGraph(int[] T, int K) {
+    public Node createGraph1(int[] T, int K) {
+
+        final int N = T.length;
+
+        Node[] nodes = new Node[N];
+
+        for (int i = 0; i < N; i++) {
+            nodes[i] = new Node(i);
+        }
+
+
+        Node root = null;
+
+        for (int i = 0; i < T.length; ++i) {
+
+            if (T[i] == i) {
+                root = nodes[i];
+            } else {
+                nodes[T[i]].addChild(nodes[i]);
+            }
+        }
+
+        return root;
+    }
+
+
+    /*
+     * create graph from the provided array and starting node
+     * */
+    public Node createGraph(int[] T, int K) {
 
 
         /*
@@ -419,7 +447,7 @@ public class TripPlanning {
      * more than one children that has the same depth, set the
      * children with minimum key as the deepest children
      * */
-    public  int deepestChild(Node root) {
+    public int deepestChild(Node root) {
         return deepestChildHelper(root, 0);
     }
 
@@ -429,7 +457,7 @@ public class TripPlanning {
      * have 2 nodes with the same depth, the node with the lesser value will be set
      * as the deepest node
      * */
-    public  int deepestChildHelper(Node node, int depth) {
+    public int deepestChildHelper(Node node, int depth) {
 
         int maxDepth = 0;
         Node maxChild = null;
@@ -471,7 +499,7 @@ public class TripPlanning {
         T[4] = 2;
         T[5] = 1;
         T[6] = 4;
-        
+
 
         TripPlanning t = new TripPlanning();
 

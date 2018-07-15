@@ -10,6 +10,7 @@ Each city also has its own attractiveness level, which will be denoted by an int
 You are planning a trip to visit some of the most attractive cities. You want to select cities to visit based on the following requirements:
 
 At most K cities can be included in the trip plan.
+
 It must be possible to travel among the cities included in the trip plan without having to travel through cities that have been excluded from the trip plan.
 None of the cities included in the trip plan can be less attractive than any of the excluded cities. City attractiveness levels do not have to be unique, though, so it is permissible to visit only a subset of cities that are equally attractive.
 The goal is to maximize the number of cities selected while satisfying the above requirements.

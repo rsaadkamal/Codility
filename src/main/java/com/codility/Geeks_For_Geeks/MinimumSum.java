@@ -19,8 +19,10 @@ public class MinimumSum {
 
         // Calculate sum of all elements
         int sum = 0;
-        for (int i = 0; i < n; i++)
+
+        for (int i = 0; i < n; i++) {
             sum += arr[i];
+        }
 
         // Create an array to store
         // results of subproblems

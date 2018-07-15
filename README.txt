@@ -13,3 +13,8 @@ find the solutions over online and write them myself. Obviously, These solutions
 to use. I will attain some tournament and update the repo overtime.
 
 
+i.  Geeks for geeks
+
+ii. Project Euler
+
+
