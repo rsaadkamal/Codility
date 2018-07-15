@@ -174,10 +174,7 @@ public class MinAbsSum {
             counts[A[i]] += 1;
         }
 
-        int[] Total = new int[sum + 1];
 
-        Arrays.fill(Total, -1);
-        Total[0] = 0;
 
 
         /*
@@ -234,6 +231,13 @@ public class MinAbsSum {
          *
          * */
 
+        int[] Total = new int[sum + 1];
+
+        Arrays.fill(Total, -1);
+//        Arrays.fill(Total, 1, Total.length, -1);
+        Total[0] = 0;
+
+
         for (int i = 1; i <= max; i++) {
 
             if (counts[i] > 0) {
@@ -263,7 +267,7 @@ public class MinAbsSum {
 
             /*
              * i- th index if zero or positive
-             * BODMAS = {Brackets, Orders, Division, Multiplication, Addition, Subtraction}
+             * BODMAS  =  {Brackets, Orders, Division, Multiplication, Addition, Subtraction}
              * */
             if (Total[i] >= 0) {
                 result = Math.min(result, sum - 2 * i);
