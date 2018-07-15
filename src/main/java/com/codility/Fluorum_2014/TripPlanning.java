@@ -133,54 +133,55 @@ public class TripPlanning {
 
 
     /*
-     * the building block for the graph
+     * class to define the tree node
      * */
-    private static class TreeNode {
+    private  class Node {
 
         private int key;
 
-        private ArrayList<TreeNode> children;
-        private TreeNode deepestChild;
+        private ArrayList<Node> children;
+        private Node deepestChild;
 
-        public TreeNode(int nodeValue) {
-            this.key = nodeValue;
-            this.children = new ArrayList<TreeNode>();
+        public Node(int key) {
+            this.key = key;
+            this.children = new ArrayList<Node>();
         }
 
         public int getKey() {
             return this.key;
         }
 
-        public void addChild(TreeNode child) {
+        public void addChild(Node child) {
             this.children.add(child);
         }
 
-
-        public ArrayList<TreeNode> getChildren() {
+        public ArrayList<Node> getChildren() {
             return this.children;
         }
 
-        public TreeNode getDeepestChild() {
+        public Node getDeepestChild() {
             return this.deepestChild;
         }
 
-        public void setDeepestChild(TreeNode child) {
+        public void setDeepestChild(Node child) {
             this.deepestChild = child;
         }
     }
 
+    /*
+     * class to define the rank for the tree node
+     * */
+    private  class Rank {
 
-    private static class NodeRank {
-
-        private TreeNode node;
+        private Node node;
         private int rank;
 
-        public NodeRank(TreeNode node, int rank) {
+        public Rank(Node node, int rank) {
             this.node = node;
             this.rank = rank;
         }
 
-        public TreeNode getNode() {
+        public Node getNode() {
             return this.node;
         }
 
@@ -190,7 +191,7 @@ public class TripPlanning {
     }
 
 
-    public static int[] solution(int K, int[] T) {
+    public  int[] solution(int K, int[] T) {
 
         int N = T.length;
 
@@ -199,13 +200,12 @@ public class TripPlanning {
 
         boolean[] isLeaf = new boolean[N];
 
-
-        TreeNode root = createGraph(T, 2);
+        Node root = createGraph(T, 2);
 
         deepestChild(root);
 
-        Queue<NodeRank> queue = new LinkedList<NodeRank>();
-        queue.offer(new NodeRank(root, 0));
+        Queue<Rank> queue = new LinkedList<Rank>();
+        queue.offer(new Rank(root, 0));
 
 
         List<List<Integer>> rank = new ArrayList<List<Integer>>(N);
@@ -217,32 +217,17 @@ public class TripPlanning {
 
         while (!queue.isEmpty()) {
 
-            NodeRank rankedNode = queue.poll();
-            TreeNode currentNode = rankedNode.getNode();
+            Rank rankedNode = queue.poll();
+            Node currentNode = rankedNode.getNode();
 
             int currentValue = currentNode.getKey();
             int currentRank = rankedNode.getRank();
 
-            ArrayList<TreeNode> children = currentNode.getChildren();
-            TreeNode deepestChildren = currentNode.getDeepestChild();
+            ArrayList<Node> children = currentNode.getChildren();
+            Node deepestChildren = currentNode.getDeepestChild();
 
             int sizeOfChildren = children.size();
 
-            
-            /*
-            rank = 0 rank = none
-
-            rank = 1 rank = 3
-            rank = 1 rank = 5
-
-            rank = 2 rank = 0
-            rank = 2 rank = 6
-
-            rank = 3 rank = none
-            rank = 4 rank = none
-            rank = 5 rank = none
-            rank = 6 rank = none
-            * */
             /*
              * we are at the leaf
              * */
@@ -257,23 +242,46 @@ public class TripPlanning {
 
 
             /*
-            node = 2, deep =  1
+
+                     2 - 3
+                    / \
+                   1   4
+                  / |  |
+                 0  5  6
+
+
+            node = 2, deep =  1 (not 4 as 1 < 4)
             node =  3
+
+            Note: the deepest node is 0 not 5 because, 0 < 5
             node =  1 Deepest =  0
 
-            node =  4 Deepest =  6
+            node =  4 Deepest =  6 (only one choice)
 
             node =  0
             node =  5
             node =  6
 
-            // node 5 has rank 1 as the deepest node for the node 1 is 0 (0 < 5 though the paths are same)
-            valueToRank = [2, 0, 0, 1, 0, 1, 2]
+            node 5 has rank 1 as the deepest node for the
+            node 1 is 0 (0 < 5 though the paths are same)
 
+
+            valueToRank = [2, 0, 0, 1, 0, 1, 2]
             isLeaf = [true, false, false, true, false, true, true]
             * */
 
             /*
+            node = 2 rank = 0
+
+            node = 3 rank = 1
+            node = 5 rank = 1
+
+            node = 0 rank = 2
+            node = 6 rank = 2
+
+            node = 4 rank = 1
+
+
                      2 - 3
                     / \
                    1   4
@@ -283,32 +291,18 @@ public class TripPlanning {
 
             for (int i = 0; i < sizeOfChildren; i++) {
 
-                TreeNode currentChild = children.get(i);
+                Node currentChild = children.get(i);
                 int currentChildRank = 1 + ((currentChild == deepestChildren) ? currentRank : 0);
 
-                queue.offer(new NodeRank(currentChild, currentChildRank));
+                queue.offer(new Rank(currentChild, currentChildRank));
             }
         }
 
-
-        /*
-        rank = 0 rank = none
-
-        rank = 1 rank = 3
-        rank = 1 rank = 5
-
-        rank = 2 rank = 0
-        rank = 2 rank = 6
-
-        rank = 3 rank = none
-        rank = 4 rank = none
-        rank = 5 rank = none
-        rank = 6 rank = none
-        * */
         for (int i = N - 1, currentIndex = 0; i >= 0; i--) {
 
             List<Integer> rankList = rank.get(i);
             int rankListSize = rankList.size();
+
 
             if (rankListSize == 0) {
                 continue;
@@ -318,13 +312,15 @@ public class TripPlanning {
             currentIndex += rankListSize;
         }
 
-
         int[] answer = new int[N];
         int highestIndexSet = 0;
 
 
         for (int i = 0; i < N; i++) {
 
+            /*
+             * move downward if the node is a leaf
+             * */
             if (!isLeaf[i]) {
                 continue;
             }
@@ -342,7 +338,6 @@ public class TripPlanning {
         result[0] = K;
 
         for (int i = 0; i <= highestIndexSet; i++) {
-
             result[i + 1] = answer[i];
         }
 
@@ -353,19 +348,35 @@ public class TripPlanning {
     /*
      * create graph from the provided array and starting node
      * */
-    public static TreeNode createGraph(int[] T, int K) {
+    public  Node createGraph(int[] T, int K) {
+
+
+        /*
+         * Algorithm
+         * ---------
+         *
+         * 0.     Generally, T[children] = parent
+         *
+         * i.     If K is locus, define as root
+         *
+         * ii.    If T[K] = P and K != P, K will be the parent node
+         *        for P children as an exception
+         *
+         * iii.   establish the parent and child relationships for
+         *        T[children] = parent if K != children
+         *
+         * iii. If T[j] = j, we will not add an edge
+         * */
 
         final int N = T.length;
 
-        TreeNode[] nodes = new TreeNode[N];
+        Node[] nodes = new Node[N];
 
         for (int i = 0; i < N; i++) {
-            nodes[i] = new TreeNode(i);
+            nodes[i] = new Node(i);
         }
 
         /*
-       T[children] = parent if the children != K
-
             T[0] = 1
             T[1] = 2
             T[2] = 3
@@ -381,7 +392,7 @@ public class TripPlanning {
              0  5  6
         * */
 
-        TreeNode root = nodes[K];
+        Node root = nodes[K];
         int value = root.getKey();
 
         if (T[K] != K) {
@@ -408,19 +419,22 @@ public class TripPlanning {
      * more than one children that has the same depth, set the
      * children with minimum key as the deepest children
      * */
-    public static int deepestChild(TreeNode root) {
+    public  int deepestChild(Node root) {
         return deepestChildHelper(root, 0);
     }
 
+
     /*
-     * helper function to set the deepest children for all the nodes
+     * helper function to set the deepest children for all the nodes. In case, we
+     * have 2 nodes with the same depth, the node with the lesser value will be set
+     * as the deepest node
      * */
-    public static int deepestChildHelper(TreeNode node, int depth) {
+    public  int deepestChildHelper(Node node, int depth) {
 
         int maxDepth = 0;
-        TreeNode maxChild = null;
+        Node maxChild = null;
 
-        ArrayList<TreeNode> children = node.getChildren();
+        ArrayList<Node> children = node.getChildren();
         int sizeOfChildren = children.size();
 
         if (sizeOfChildren == 0) {
@@ -429,7 +443,7 @@ public class TripPlanning {
 
         for (int i = 0; i < sizeOfChildren; i++) {
 
-            TreeNode currentChild = children.get(i);
+            Node currentChild = children.get(i);
             int currentChildDepth = deepestChildHelper(currentChild, depth + 1);
 
             if (maxChild == null || currentChildDepth > maxDepth
@@ -445,20 +459,23 @@ public class TripPlanning {
     }
 
 
-//    public static void main(String[] args) {
-//
-//        int[] T = new int[7];
-//        int N = T.length;
-//
-//        T[0] = 1;
-//        T[1] = 2;
-//        T[2] = 3;
-//        T[3] = 3;
-//        T[4] = 2;
-//        T[5] = 1;
-//        T[6] = 4;
-//
-//        int[] res = solution(2, T);
-//        System.out.println(Arrays.toString(res));
-//    }
+    public static void main(String[] args) {
+
+        int[] T = new int[7];
+        int N = T.length;
+
+        T[0] = 1;
+        T[1] = 2;
+        T[2] = 3;
+        T[3] = 3;
+        T[4] = 2;
+        T[5] = 1;
+        T[6] = 4;
+        
+
+        TripPlanning t = new TripPlanning();
+
+        int[] res = t.solution(2, T);
+        System.out.println(Arrays.toString(res));
+    }
 }
