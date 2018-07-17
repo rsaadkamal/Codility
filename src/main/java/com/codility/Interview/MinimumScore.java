@@ -73,14 +73,23 @@ public class MinimumScore {
 
         for (int i = 0; i < N; i++) {
 
-            if (A[i] == B[i] || A[i] > B[i]) {
+            /*
+             * i.  if B[i] = A[i] its still the same array
+             *
+             * ii. when B[i] < A[i] the situation doesn't change at all
+             * as we already run to find the min value. So, even
+             * B[i] < A[i], its still B[i] > smallestPositive.
+             * */
+            if (A[i] == B[i] || B[i] < A[i]) {
                 continue;
             }
 
             /*
-             * A[i] is smaller than B[i]
+             * B[i] is greater than A[i] which opens the slot of A[i]. We need to update only if A[i] < smallestPositive
              * */
-            smallestPositive = A[i];
+            if (A[i] < smallestPositive) {
+                smallestPositive = A[i];
+            }
         }
 
         return smallestPositive;

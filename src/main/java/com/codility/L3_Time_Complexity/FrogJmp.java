@@ -39,7 +39,7 @@ public class FrogJmp {
 
 
     /*
-     * solution-A
+     * solution - a
      * */
     public static int solution(int X, int Y, int D) {
 
@@ -48,7 +48,7 @@ public class FrogJmp {
 
 
     /*
-     * solution-B
+     * solution - b
      * */
     public int solution1(int X, int Y, int D) {
 
@@ -64,9 +64,29 @@ public class FrogJmp {
 
 
     /*
-     * solution -c
-     */
+     * solution - c
+     * */
     public int solution2(int X, int Y, int D) {
+
+        int res = 0;
+        int diff = Y - X;
+
+        if (diff % D == 0) {
+
+            res = diff / D;
+            return res;
+        } else {
+
+            res = diff / D + 1;
+            return res;
+        }
+    }
+
+
+    /*
+     * solution - d
+     */
+    public int solution3(int X, int Y, int D) {
 
         if (X >= Y) {
             return 0;
@@ -82,9 +102,17 @@ public class FrogJmp {
         }
     }
 
-
+    /*
+     * solution - e
+     */
     public int solution4(int X, int Y, int D) {
 
-        return (int) Math.ceil(((double) Y - (double) X) / (double) D);
+        return (int) Math.ceil((double) (Y - X) / D);
+    }
+
+
+    public static void main(String[] args) {
+
+        System.out.println("Miami");
     }
 }

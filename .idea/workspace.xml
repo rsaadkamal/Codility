@@ -3702,7 +3702,7 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/second_example/output.txt" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/FrogJmp.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/FrogJmp.java" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -4261,20 +4261,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="OddOccurrencesInArray.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="116" column="12" lean-forward="false" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="24" />
-              <folding>
-                <element signature="e#3425#3441#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -4309,6 +4296,7 @@
       <find>solution</find>
       <find>createGraph1</find>
       <find>createGraph</find>
+      <find>(double)</find>
     </findStrings>
     <replaceStrings>
       <replace>index</replace>
@@ -4359,7 +4347,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/FlagsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/PeaksTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/FrogJmp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/PermMissingElem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/TapeEquilibrium.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/FrogRiverOne.java" />
@@ -4385,6 +4372,7 @@
         <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/FrogJmp.java" />
       </list>
     </option>
   </component>
@@ -4459,15 +4447,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codility" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="codility" type="462c0819:PsiDirectoryNode" />
-              <item name="L2_Arrays" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
@@ -4558,7 +4537,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.OddOccurrencesInArray">
+  <component name="RunManager" selected="Application.FrogJmp">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -4603,14 +4582,14 @@
       <module name="Codility" />
       <envs />
     </configuration>
-    <configuration name="MinimumSlice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="FrogJmp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.codility.Geeks_For_Geeks.*" />
+          <option name="PATTERN" value="com.codility.L3_Time_Complexity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.codility.Geeks_For_Geeks.MinimumSlice" />
+      <option name="MAIN_CLASS_NAME" value="com.codility.L3_Time_Complexity.FrogJmp" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -4736,18 +4715,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.App" />
-      <item index="1" class="java.lang.String" itemvalue="Application.MinimumSlice" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TripPlanning" />
-      <item index="3" class="java.lang.String" itemvalue="Application.BinaryGap" />
-      <item index="4" class="java.lang.String" itemvalue="Application.OddOccurrencesInArray" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TripPlanning" />
+      <item index="2" class="java.lang.String" itemvalue="Application.BinaryGap" />
+      <item index="3" class="java.lang.String" itemvalue="Application.OddOccurrencesInArray" />
+      <item index="4" class="java.lang.String" itemvalue="Application.FrogJmp" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.OddOccurrencesInArray" />
-        <item index="1" class="java.lang.String" itemvalue="Application.BinaryGap" />
-        <item index="2" class="java.lang.String" itemvalue="Application.App" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TripPlanning" />
-        <item index="4" class="java.lang.String" itemvalue="Application.MinimumSlice" />
+        <item index="0" class="java.lang.String" itemvalue="Application.FrogJmp" />
+        <item index="1" class="java.lang.String" itemvalue="Application.OddOccurrencesInArray" />
+        <item index="2" class="java.lang.String" itemvalue="Application.BinaryGap" />
+        <item index="3" class="java.lang.String" itemvalue="Application.App" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TripPlanning" />
       </list>
     </recent_temporary>
   </component>
@@ -4807,16 +4786,15 @@
       <workItem from="1531629938480" duration="126000" />
       <workItem from="1531630112957" duration="20265000" />
       <workItem from="1531755788596" duration="544000" />
-      <workItem from="1531791038106" duration="4141000" />
+      <workItem from="1531791038106" duration="5274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189845000" />
+    <option name="totallyTimeSpent" value="190978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="776" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -5160,13 +5138,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation1/Solution.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray1/Solution.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/FrogJmp1/Solution.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/FrogJmp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="86" column="8" lean-forward="false" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/PermMissingElem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -5418,11 +5389,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="116" column="12" lean-forward="false" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="24" />
-          <folding>
-            <element signature="e#3425#3441#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="346">
+          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/FrogJmp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
