@@ -37,10 +37,7 @@ expected worst-case space complexity is O(1) (not counting the storage required 
 * */
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Chaklader on 6/23/18.
@@ -49,12 +46,15 @@ public class OddOccurrencesInArray {
 
 
     /*
-     * solution-FrogJmp
+     * solution - a
      * */
     public int solution(int[] arr) {
 
         int result = arr[0];
 
+        /*
+         * the equal elements will cancel each other
+         * */
         for (int i = 1; i < arr.length; i++) {
             result ^= arr[i];
         }
@@ -64,10 +64,10 @@ public class OddOccurrencesInArray {
 
 
     /*
-     * solution-B
+     * solution - b
      * */
     /*
-     * It doesn't follow the expected worst-case space complexity is O(1)
+     * it doesn't follow the expected worst-case space complexity is O(1)
      * */
     public int solution1(int[] arr) {
 
@@ -86,21 +86,42 @@ public class OddOccurrencesInArray {
     }
 
 
-    public int solution4(int[] A) {
+    /*
+     * solution - c
+     * */
+    public int solution2(int[] A) {
 
-        HashMap<Integer, Integer> map = new HashMap();
-        for (int i = 0; i < A.length; i++) {
+        int N = A.length;
+
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+
+        for (int i = 0; i < N; i++) {
+
             if (!map.containsKey(A[i])) {
                 map.put(A[i], 1);
             } else {
-                map.put(A[i], map.get(A[i]) + 1);
+                map.remove(A[i]);
             }
         }
-        for (Map.Entry pair : map.entrySet()) {
-            if (1 == (int) pair.getValue() % 2) {
-                return (int) pair.getKey();
-            }
+
+        if (map.size() == 1) {
+
+            Integer value = (new ArrayList<Integer>(map.values())).get(0);
+            return value;
         }
+
         return -1;
+    }
+
+
+    public static void printMap(Map map) {
+
+        System.out.println(Arrays.toString(map.entrySet().toArray()));
+    }
+
+
+    public static void main(String[] args) {
+
+        System.out.println("Berlin");
     }
 }
