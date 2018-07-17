@@ -139,4 +139,21 @@ public class MaxSliceSum {
 
         return (int) result;
     }
+
+
+    /*
+     * solution - a
+     * */
+    public int solution4(int[] A) {
+
+        int end = A[0];
+        int start = A[0];
+
+        for (int i = 1; i < A.length; i++) {
+            end = Math.max(A[i], end + A[i]);
+            start = Math.max(start, end);
+        }
+
+        return start;
+    }
 }

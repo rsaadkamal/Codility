@@ -33,6 +33,8 @@ expected worst-case time complexity is O(log(N+M));
 expected worst-case space complexity is O(log(N+M)).
 * */
 
+import java.util.HashMap;
+
 /**
  * Created by Chaklader on 6/25/18.
  */
@@ -126,5 +128,39 @@ public class ChocolatesByNumbers {
     private static int lcm(int a, int b) {
 
         return a * (b / gcd1(a, b));
+    }
+
+
+
+
+
+    /*
+    * solution - a
+    * */
+    public int solution4(int N, int M) {
+        return (int) (lcm(N, M) / M);
+    }
+
+    public int nativeSolution(int N, int M) {
+        HashMap<Integer, Boolean> visited = new HashMap<>();
+        int position = 0;
+        int result = 0;
+        while (!visited.containsKey(position)) {
+            visited.put(position, true);
+            position = (position + M) % N;
+            result++;
+        }
+        return result;
+    }
+
+    private long gcd(long p, long q) {
+        if (q == 0) {
+            return (int) p;
+        }
+        return gcd(q, p % q);
+    }
+
+    private long lcm(long p, long q) {
+        return p * (q / gcd(p, q));
     }
 }

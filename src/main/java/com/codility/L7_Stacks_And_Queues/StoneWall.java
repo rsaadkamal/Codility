@@ -65,8 +65,8 @@ public class StoneWall {
             }
 
             /*
-            * new height is higher than the previous height
-            * */
+             * new height is higher than the previous height
+             * */
             else if (stack.peek() < H[i]) {
                 stack.push(H[i]);
                 numOfBlocks++;
@@ -184,5 +184,31 @@ public class StoneWall {
         }
 
         return numOfBlocks;
+    }
+
+
+    /*
+     * solution -  a
+     * */
+    public static int solution4(int[] A) {
+
+        int[] stack = new int[A.length];
+
+        int counter = 0;
+        int result = 0;
+
+        for (int i : A) {
+
+            while (counter > 0 && stack[counter - 1] > i) {
+                counter -= 1;
+            }
+
+            if (!(counter > 0 && stack[counter - 1] == i)) {
+                stack[counter] = i;
+                result++;
+                counter++;
+            }
+        }
+        return result;
     }
 }

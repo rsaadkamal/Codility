@@ -206,4 +206,11 @@ public class MaxProductOfThree {
 
         return result;
     }
+
+
+
+    public int solution4(int[] A) {
+        Arrays.sort(A);
+        return Math.max(A[0] * A[1] * A[A.length - 1], A[A.length - 1] * A[A.length - 2] * A[A.length - 3]);
+    }
 }
