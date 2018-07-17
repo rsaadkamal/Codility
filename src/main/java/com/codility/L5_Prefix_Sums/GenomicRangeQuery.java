@@ -58,27 +58,34 @@ public class GenomicRangeQuery {
 
 
     /*
-     * solution - A
+     * solution - a
      * */
     public int[] solution(String S, int[] P, int[] Q) {
 
         int N = P.length;
-        int[] impactFactors = new int[N];
+        int[] C = new int[N];
 
         for (int i = 0; i < N; i++) {
-            impactFactors[i] = getImpactFactor(S, P[i], Q[i]);
+            C[i] = getImpactFactor(S, P[i], Q[i]);
         }
 
-        return impactFactors;
+        return C;
     }
 
+
+    /*
+     *  Nucleotides of types A, C, G and T
+     *  have impact factors of 1, 2, 3 and 4
+     * */
     public int getImpactFactor(String S, int i, int j) {
 
-        if (S.substring(i, j + 1).contains("A")) {
+        String temp = S.substring(i, j + 1);
+
+        if (temp.contains("A")) {
             return 1;
-        } else if (S.substring(i, j + 1).contains("C")) {
+        } else if (temp.contains("C")) {
             return 2;
-        } else if (S.substring(i, j + 1).contains("G")) {
+        } else if (temp.contains("G")) {
             return 3;
         }
 
@@ -87,12 +94,12 @@ public class GenomicRangeQuery {
 
 
     /*
-     * solution - B
+     * solution - b
      * */
     public static int[] solution1(String S, int[] P, int[] Q) {
 
-        int[] res = new int[P.length];
-        Map<Integer, ArrayList<Integer>> prefSums = getPrefSum(S);
+        int[] C = new int[P.length];
+        Map<Integer, ArrayList<Integer>> prefSums = getPrefixSum(S);
 
         for (int i = 0; i < Q.length; i++) {
 
@@ -102,28 +109,32 @@ public class GenomicRangeQuery {
                 int low = P[i] == 0 ? 0 : prefSums.get(j).get(P[i] - 1);
 
                 if (high - low > 0) {
-                    res[i] = j;
+                    C[i] = j;
                     break;
                 }
             }
         }
-        return res;
+
+        return C;
     }
 
 
-    public static Map<Integer, ArrayList<Integer>> getPrefSum(String s) {
+    /*
+     * map contains the nucleotides value and their frequencies
+     * */
+    public static Map<Integer, ArrayList<Integer>> getPrefixSum(String S) {
 
-        Map<Integer, ArrayList<Integer>> prefSums = new HashMap<Integer, ArrayList<Integer>>();
+        Map<Integer, ArrayList<Integer>> prefixSum = new HashMap<Integer, ArrayList<Integer>>();
 
         for (int j = 0; j < 4; j++) {
-            prefSums.put(j + 1, new ArrayList<Integer>());
+            prefixSum.put(j + 1, new ArrayList<Integer>());
         }
 
         int[] counters = new int[4];
 
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < S.length(); i++) {
 
-            switch (s.charAt(i)) {
+            switch (S.charAt(i)) {
 
                 case 'A':
                     counters[0]++;
@@ -146,11 +157,11 @@ public class GenomicRangeQuery {
             }
 
             for (int j = 0; j < 4; j++) {
-                prefSums.get(j + 1).add(counters[j]);
+                prefixSum.get(j + 1).add(counters[j]);
             }
         }
 
-        return prefSums;
+        return prefixSum;
     }
 
 
@@ -236,63 +247,64 @@ public class GenomicRangeQuery {
      * */
     public int[] solution3(String S, int[] P, int[] Q) {
 
+        int N = S.length();
+        int[] C = new int[(N + 1) * 4];
 
-        final int[] cnt = new int[(S.length() + 1) * 4];
+        for (int i = 0; i < N; i++) {
 
-        for (int i = 0; i < S.length(); i++) {
+            char c = S.charAt(i);
+            int k = (i + 1) * 4;
 
-            final char c = S.charAt(i);
-            final int k = (i + 1) * 4;
+            C[k] = C[k - 4];
 
-            cnt[k] = cnt[k - 4];
-            cnt[k + 1] = cnt[k - 3];
-            cnt[k + 2] = cnt[k - 2];
-            cnt[k + 3] = cnt[k - 1];
+            C[k + 1] = C[k - 3];
+            C[k + 2] = C[k - 2];
+            C[k + 3] = C[k - 1];
 
             switch (c) {
 
                 case 'A':
-                    cnt[k]++;
+                    C[k]++;
                     break;
 
                 case 'C':
-                    cnt[k + 1]++;
+                    C[k + 1]++;
                     break;
 
                 case 'G':
-                    cnt[k + 2]++;
+                    C[k + 2]++;
                     break;
 
                 case 'T':
-                    cnt[k + 3]++;
+                    C[k + 3]++;
                     break;
             }
         }
 
         for (int i = 0; i < P.length; i++) {
 
-            final int from = P[i];
-            final int to = Q[i];
+            int from = P[i];
+            int to = Q[i];
 
             int m = 4 * from;
             int n = 4 * (to + 1);
 
-            if (cnt[n] - cnt[m] > 0) {
+            if (C[n] - C[m] > 0) {
                 P[i] = 1;
                 continue;
             }
 
-            if (cnt[n + 1] - cnt[m + 1] > 0) {
+            if (C[n + 1] - C[m + 1] > 0) {
                 P[i] = 2;
                 continue;
             }
 
-            if (cnt[n + 2] - cnt[m + 2] > 0) {
+            if (C[n + 2] - C[m + 2] > 0) {
                 P[i] = 3;
                 continue;
             }
 
-            if (cnt[n + 3] - cnt[m + 3] > 0) {
+            if (C[n + 3] - C[m + 3] > 0) {
                 P[i] = 4;
             }
         }
@@ -301,45 +313,59 @@ public class GenomicRangeQuery {
     }
 
 
+    /*
+     * solution - e
+     * */
     public int[] solution4(String S, int[] P, int[] Q) {
 
-        int[] data = new int[S.length()];
+        int[] C = new int[S.length()];
+
         for (int i = 0; i < S.length(); i++) {
+
             switch (S.charAt(i)) {
+
                 case 'A':
-                    data[i] = 0;
+                    C[i] = 0;
                     break;
                 case 'C':
-                    data[i] = 1;
+                    C[i] = 1;
                     break;
                 case 'G':
-                    data[i] = 2;
+                    C[i] = 2;
                     break;
                 case 'T':
-                    data[i] = 3;
+                    C[i] = 3;
                     break;
             }
         }
-        int[][] map = new int[4][data.length + 1];
-        map[data[0]][0] = 1;
+
+        int[][] D = new int[4][C.length + 1];
+        D[C[0]][0] = 1;
+
         for (int i = 0; i < 4; i++) {
-            for (int j = 1; j < data.length; j++) {
-                if (data[j] == i) {
-                    map[i][j] = map[i][j - 1] + 1;
+
+            for (int j = 1; j < C.length; j++) {
+
+                if (C[j] == i) {
+                    D[i][j] = D[i][j - 1] + 1;
                 } else {
-                    map[i][j] = map[i][j - 1];
+                    D[i][j] = D[i][j - 1];
                 }
             }
         }
+
         int[] result = new int[P.length];
+
         for (int i = 0; i < P.length; i++) {
+
             for (int j = 0; j < 4; j++) {
-                if (map[j][Q[i]] - (P[i] - 1 >= 0 ? map[j][P[i] - 1] : 0) > 0) {
+                if (D[j][Q[i]] - (P[i] - 1 >= 0 ? D[j][P[i] - 1] : 0) > 0) {
                     result[i] = j + 1;
                     break;
                 }
             }
         }
+
         return result;
     }
 }

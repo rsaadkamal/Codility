@@ -29,36 +29,38 @@ public class CountDiv {
 
 
     /*
-     * solution - A
+     * f(i) = { i : A ≤ i ≤ B, i mod K = 0 }
+     *
+     *
+     * CONDITIONS
+     * ----------
+     *
+     * i.   A and B are integers within the range [0..2,000,000,000]
+     *
+     * ii.  K is an integer within the range [1..2,000,000,000]
+     *
+     * iii. A ≤ B.
+     *
+     * */
+
+
+    /*
+     * solution - a
      */
     public static int solution(int A, int B, int K) {
 
         if (A % K == 0) {
             return 1 + (B - A) / K;
         }
-        return B / K - A / K;
+
+        return (B - A) / K;
     }
 
 
     /*
-     * solution - B
+     * solution - b
      */
-    public static int solution1(int A, int B, int K) {
-
-        int b = B / K;
-        int a = (A > 0 ? (A - 1) / K : 0);
-
-        if (A == 0) {
-            b++;
-        }
-        return b - a;
-    }
-
-
-    /*
-     * solution - c
-     */
-    public int solution2(int a, int b, int k) {
+    public static int solution1(int a, int b, int k) {
 
         int result = b / k - a / k;
 
@@ -69,7 +71,33 @@ public class CountDiv {
         return result;
     }
 
-    public int solution3(int A, int B, int K) {
-        return B / K - (A / K) + (A % K == 0 ? 1 : 0);
+
+    /*
+     * solution - c
+     */
+    public static int solution2(int A, int B, int K) {
+
+        int b = B / K;
+
+        int a = (A > 0 ? (A - 1) / K : 0);
+
+
+        /*
+         * if A > 0,
+         *
+         * result is (B - A + 1)/K
+         * */
+
+        if (A == 0) {
+            b++;
+        }
+
+        return b - a;
+    }
+
+
+    public static void main(String[] args) {
+
+        solution2(6, 11, 2);
     }
 }

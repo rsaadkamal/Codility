@@ -52,7 +52,7 @@ public class PassingCars {
 
 
     /*
-     * solution - A
+     * solution - a
      * */
     public static int solution(int[] A) {
 
@@ -77,7 +77,7 @@ public class PassingCars {
 
 
     /*
-     * solution - B
+     * solution - b
      * */
     public int solution1(int[] A) {
 
@@ -92,7 +92,7 @@ public class PassingCars {
             counter++;
 
             if (A[i] == 1) {
-                countOne++;
+//                countOne++;
             } else if (A[i] == 0) {
 
                 countZero++;
@@ -108,23 +108,29 @@ public class PassingCars {
     }
 
 
-    private final static int MAXIMUM = 1000000000;
-
-    public int solution4(int[] A) {
+    /*
+     * solution - c
+     * */
+    public int solution2(int[] A) {
 
         int zerosCount = 0;
         int sum = 0;
 
         for (int i = 0; i < A.length; i++) {
+
             if (A[i] == 0) {
                 zerosCount++;
             } else {
                 sum += zerosCount;
             }
-            if (sum > MAXIMUM) {
+
+            if (sum > 1000000000) {
                 return -1;
             }
         }
+
         return sum;
     }
+
+
 }
