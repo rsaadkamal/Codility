@@ -59,7 +59,11 @@ public class TapeEquilibrium {
 
 
     /*
-     * solution - A
+     * solution - a
+     * */
+    /*
+     * expected worst-case time complexity is O(N) and
+     * expected worst-case space complexity is O(N)
      * */
     public static int solution(int[] A) {
 
@@ -76,48 +80,55 @@ public class TapeEquilibrium {
             tmp += A[i];
             res = Math.min(res, Math.abs(tmp - (sum - tmp)));
         }
+
         return res;
     }
 
 
     /*
-     * solution-B
+     * solution - b
      * */
     public int solution1(int[] A) {
 
         int N = A.length;
+
         if (N == 1) {
             return A[0];
         }
 
         int sum = 0;
 
+        int left = 0;
+
+
         for (int i = 0; i < N; i++) {
             sum += A[i];
         }
 
-        int least = Math.abs(A[0] - (sum - A[0]));
-
-        int leftSum = 0;
+        int result = Math.abs(A[0] - (sum - A[0]));
 
         for (int i = 1; i < A.length; i++) {
 
             for (int j = 0; j < i; j++) {
-                leftSum += A[j];
+                left += A[j];
             }
 
-            least = less(least, Math.abs(leftSum - (sum - leftSum)));
-            leftSum = 0;
+            result = less(result, Math.abs(left - (sum - left)));
+            left = 0;
         }
 
-        return least;
+        return result;
     }
 
-    public int less(int i, int j) {
-        if (i <= j) {
-            return i;
+    /*
+     * get the lesser value between the provided two values
+     * */
+    public int less(int a, int b) {
+
+        if (a <= b) {
+            return a;
         } else {
-            return j;
+            return b;
         }
     }
 
@@ -142,10 +153,6 @@ public class TapeEquilibrium {
             left += A[i - 1];
             right -= A[i - 1];
 
-//            if (Math.abs(right - left) < result) {
-//                result = Math.abs(right - left);
-//            }
-
             result = Math.max(Math.abs(right - left), result);
         }
 
@@ -153,21 +160,32 @@ public class TapeEquilibrium {
     }
 
 
+    /*
+     * solution - d
+     * */
     public int solution4(int[] A) {
-        int[] df = new int[A.length];
-        df[0] = A[0];
+
+        int[] C = new int[A.length];
+        C[0] = A[0];
+
         for (int i = 1; i < A.length; i++) {
-            df[i] = A[i] + df[i - 1];
+            C[i] = A[i] + C[i - 1];
         }
-        int[] df2 = new int[A.length];
-        df2[df2.length - 1] = A[df2.length - 1];
+
+        int[] D = new int[A.length];
+        D[D.length - 1] = A[D.length - 1];
+
+
         for (int i = A.length - 2; i >= 0; i--) {
-            df2[i] = df2[i + 1] + A[i];
+            D[i] = D[i + 1] + A[i];
         }
+
         int min = Integer.MAX_VALUE;
+
         for (int i = 1; i < A.length; i++) {
-            min = Math.min(min, Math.abs(df[i - 1] - df2[i]));
+            min = Math.min(min, Math.abs(C[i - 1] - D[i]));
         }
+
         return min;
     }
 }

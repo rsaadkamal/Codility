@@ -58,12 +58,55 @@ import java.util.Arrays;
  */
 public class PermCheck {
 
+    /*
+     * Expected worst-case time complexity is O(N) and
+     * expected worst-case space complexity is O(N)
+     * */
+
 
     /*
-     * solution- a
+     * solution - a
      */
     public static int solution(int[] A) {
 
+        for (int i = 0; i < A.length; i++) {
+
+            if (A[i] > A.length) {
+                return 0;
+            }
+
+            if (A[i] == 0) {
+                continue;
+            }
+
+            int j = A[i] - 1;
+
+            while (j < A.length && A[j] > 0) {
+
+                int updatedIndex = A[j] - 1;
+                A[j] = 0;
+
+                j = updatedIndex;
+            }
+        }
+
+        for (int i = 0; i < A.length; i++) {
+
+            if (A[i] != 0) {
+                return 0;
+            }
+        }
+
+        return 1;
+    }
+
+
+    /*
+     * solution - b
+     */
+    public static int solution1(int[] A) {
+
+        // O(N*log(N))
         Arrays.sort(A);
 
         for (int i = 0; i < A.length; i++) {
@@ -78,26 +121,41 @@ public class PermCheck {
 
 
     /*
-     * solution- b
+     * solution - c
      */
-    public int solution1(int[] A) {
+    public int solution2(int[] A) {
 
-        int[] map = new int[A.length];
-        Arrays.fill(map, -1);
+        int[] C = new int[A.length];
+        Arrays.fill(C, -1);
 
         for (int i = 0; i < A.length; i++) {
+
             if (A[i] > A.length) {
                 return 0;
             }
-            if (map[A[i] - 1] == -1) {
-                map[A[i] - 1] = A[i];
+
+            // convert the value to index
+            int index = A[i] - 1;
+
+            if (C[index] == -1) {
+                C[index] = A[i];
             }
         }
-        for (int i = 0; i < map.length; i++) {
-            if (map[i] == -1) {
+
+        for (int i = 0; i < C.length; i++) {
+
+            if (C[i] == -1) {
                 return 0;
             }
         }
+
         return 1;
+    }
+
+
+    public static void main(String[] args) {
+
+        int[] A = {4, 1, 3, 2};
+        solution(A);
     }
 }

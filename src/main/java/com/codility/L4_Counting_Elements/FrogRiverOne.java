@@ -51,7 +51,7 @@ expected worst-case space complexity is O(X) (not counting the storage required 
 * */
 
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Created by Chaklader on 6/23/18.
@@ -60,22 +60,27 @@ public class FrogRiverOne {
 
 
     /*
-     * solution - A
+     * solution - a
      * */
     public static int solution(int[] A, int X) {
 
-        int distanceFilled = 0;
+        int distance = 0;
 
         boolean[] hasLeaf = new boolean[X + 1];
 
         for (int i = 0; i < A.length; i++) {
 
-            if (!hasLeaf[A[i]] && A[i] <= X) {
+            /*
+             * the distance is lesser or equal than X
+             * and no leaf is cover on the distance
+             * */
+            if (A[i] <= X && !hasLeaf[A[i]]) {
+
                 hasLeaf[A[i]] = true;
-                distanceFilled++;
+                distance++;
             }
 
-            if (distanceFilled == X) {
+            if (distance == X) {
                 return i;
             }
         }
@@ -85,10 +90,9 @@ public class FrogRiverOne {
 
 
     /*
-     * solution - B
+     * solution - b
      * */
     public int solution1(int X, int[] A) {
-
 
         int count = X;
         int[] positions = new int[X];
@@ -117,7 +121,7 @@ public class FrogRiverOne {
     /*
      * solution - c
      * */
-    public int solution(int X, int[] A) {
+    public static int solution2(int X, int[] A) {
 
         int[] positions = new int[X];
 
@@ -140,21 +144,30 @@ public class FrogRiverOne {
     }
 
 
-    public int solution4(int X, int[] A) {
+    /*
+     * solution - d
+     * */
+    public int solution3(int X, int[] A) {
 
-        int path[] = new int[X];
+        int C[] = new int[X];
+
         int sum = X * (X + 1) / 2;
         int pathSum = 0;
-        Arrays.fill(path, -1);
+
+        Arrays.fill(C, -1);
+
         for (int i = 0; i < A.length; i++) {
-            if (path[A[i] - 1] == -1) {
-                path[A[i] - 1] = A[i];
+
+            if (C[A[i] - 1] == -1) {
+                C[A[i] - 1] = A[i];
                 pathSum += A[i];
             }
+
             if (pathSum == sum) {
                 return i;
             }
         }
+
         return -1;
     }
 }
