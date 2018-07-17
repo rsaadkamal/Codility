@@ -73,26 +73,65 @@ public class BinaryGap {
     }
 
 
-
     /*
      * solution - c
      * */
-    public int solution2(int N) {
+    public static int solution2(int N) {
 
         String binary = Integer.toBinaryString(N);
-        System.out.println(binary);
+
+        int len = binary.length();
+
+        /*
+         * Start with 1 because leading element is always '1'
+         *
+         * Binary 5 is 101. You can write it as 0101. The same.
+         * Or 00000101, which is still the same. If you want,
+         * you can write it as 0000000000000101. Still means "5"
+         * in binary.
+         * */
+
+        /*
+         *
+         * Algorithm
+         * ---------
+         *
+         *
+         * */
+
+
+        int j = 0;
+
+        for (int i = 0; i < len; i++, j++) {
+
+            if (binary.charAt(i) == '0') {
+                continue;
+            } else {
+                break;
+            }
+        }
+
+
         int max = 0;
         int zerosCount = 0;
-        // star with 1 because leading element is always '1'
-        for (int i = 1; i < binary.length(); i++) {
-            if (binary.charAt(i) == '0') {
+
+        for (j = j + 1; j < len; j++) {
+
+            if (binary.charAt(j) == '0') {
                 zerosCount++;
             } else {
                 max = Math.max(zerosCount, max);
                 zerosCount = 0;
             }
         }
+
         return max;
+    }
+
+
+    public static void main(String[] args) {
+
+        System.out.println(solution2(1041));
     }
 }
 
