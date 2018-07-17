@@ -54,9 +54,22 @@ public class CyclicRotation {
      * */
     public int[] solution(int[] A, int K) {
 
+        /*
+         * this is the only solution that you can do in place
+         * and you don't need to use additional storage
+         * */
+
         if (A == null || K > A.length) {
             return null;
         }
+
+        /*
+         * Algorithm
+         * ---------
+         * i.   reverse the whole array O(n) time complexity (TC)
+         * ii.  reverse the array from 0 to (K-1)-th index
+         * iii. reverse the array from K to end
+         * */
 
         reverse(A, 0, A.length - 1);
         reverse(A, 0, K - 1);
@@ -65,23 +78,29 @@ public class CyclicRotation {
         return A;
     }
 
-
+    /*
+     * time complexity of O(n)
+     * */
     public static void reverse(int[] A, int start, int end) {
 
         int i = start, j = end;
 
         while (i < j) {
 
-//            A[i] = swap(A[j], A[j] = A[i]);
+            if (A[i] != A[j]) {
 
-            A[i] ^= A[j];
-            A[j] ^= A[i];
-            A[i] ^= A[j];
+                // A[i] = swap(A[j], A[j] = A[i]);
+
+                A[i] ^= A[j];
+                A[j] ^= A[i];
+                A[i] ^= A[j];
+            }
 
             i++;
             j--;
         }
     }
+
 
     public static int swap(int itself, int dummy) {
 
@@ -98,17 +117,17 @@ public class CyclicRotation {
 
         int N = A.length;
 
-        for (int index = 0; index < N; index++) {
+        for (int i = 0; i < N; i++) {
 
-            if (index + K > N - 1) {
-                map.put(index + K - N, A[index]);
+            if (i + K > N - 1) {
+                map.put(i + K - N, A[i]);
             } else {
-                map.put(index + K, A[index]);
+                map.put(i + K, A[i]);
             }
         }
 
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            A[entry.getKey()] = entry.getValue();
+        for (Map.Entry<Integer, Integer> e : map.entrySet()) {
+            A[e.getKey()] = e.getValue();
         }
 
         return A;
@@ -118,12 +137,17 @@ public class CyclicRotation {
     /*
      * solution - c
      * */
-    public int[] solution4(int[] A, int K) {
+    public int[] solution2(int[] A, int K) {
 
         int[] result = new int[A.length];
-        for (int i = 0; i < A.length; i++) {
-            result[(i + K) % A.length] = A[i];
+
+        int N = A.length;
+
+
+        for (int i = 0; i < N; i++) {
+            result[(i + K) % N] = A[i];
         }
+
         return result;
     }
 }
