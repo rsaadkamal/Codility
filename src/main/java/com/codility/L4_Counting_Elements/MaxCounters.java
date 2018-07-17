@@ -6,11 +6,11 @@ package com.codility.L4_Counting_Elements;
 * them:
 
 increase(X) − counter X is increased by 1,
-getMaxElement counter − all counters are set to the maximum value of any counter.
+getMax counter − all counters are set to the maximum value of any counter.
 A non-empty array A of M integers is given. This array represents consecutive operations:
 
 if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
-if A[K] = N + 1 then operation K is getMaxElement counter.
+if A[K] = N + 1 then operation K is getMax counter.
 For example, given integer N = 5 and array A such that:
 
     A[0] = 3
@@ -71,8 +71,14 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 public class MaxCounters {
 
     /*
-     * If A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
-     * If A[K] = N + 1 then operation K is getMaxElement counter.
+     * expected worst-case time complexity is O(N+M) and expected worst-case space complexity is O(N)
+     * */
+    /*
+     * Algorithm
+     * ---------
+     *
+     * i.  if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X)
+     * ii. if A[K] = N + 1 then operation K is getMax counter.
      *
      * Assume that:
      *
@@ -82,11 +88,14 @@ public class MaxCounters {
 
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int[] solution(int N, int[] A) {
 
-        int[] counters = new int[N];
+        /*
+         * given N counters, initially set to 0
+         * */
+        int[] C = new int[N];
 
         int currMax = 0;
         int currMin = 0;
@@ -94,37 +103,97 @@ public class MaxCounters {
         for (int i = 0; i < A.length; i++) {
 
             /*
-             * If A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X)
+             * if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X)
+             *
+             * Condition
+             * ---------
+             * 1 ≤ A[K] ≤ N. As the 1 <= A[k]
+             * already defined, we only need to check A[K] <= N
+             *
+             * each element of array A is an integer within the range [1..N + 1]
              * */
             if (A[i] <= N) {
 
-                counters[A[i] - 1] = Math.max(currMin, counters[A[i] - 1]);
-                counters[A[i] - 1]++;
+                C[A[i] - 1] = Math.max(currMin, C[A[i] - 1]);
+                C[A[i] - 1]++;
 
-                currMax = Math.max(currMax, counters[A[i] - 1]);
+                /*
+                 * store and update the max value in the currMax
+                 * */
+                currMax = Math.max(currMax, C[A[i] - 1]);
             }
 
             /*
-             * If A[K] = N + 1 then operation K is getMaxElement counter,
-             * use A storage to perform the lazy update
+             * If A[K] = N + 1 then operation K is getMax counter,
+             * use A storage to perform the lazy update to keep O(N)
              * */
             else if (A[i] == N + 1) {
                 currMin = currMax;
             }
         }
 
-        for (int i = 0; i < counters.length; i++) {
-            counters[i] = Math.max(counters[i], currMin);
+        /*
+         * update the indexes where its required
+         * */
+        for (int i = 0; i < C.length; i++) {
+            C[i] = Math.max(C[i], currMin);
         }
 
-        return counters;
+        return C;
     }
 
 
     /*
-     * solution - B
+     * solution - b
      */
+    /*
+     * improve the previous method, time complexity is O(N+M).
+     * Keep the lastUpdate as the lasgest value in the last round
+     * */
     public int[] solution1(int N, int[] A) {
+
+        int C[] = new int[N];
+
+        int max = 0;
+        int currMin = 0;
+
+        for (int i = 0; i < A.length; i++) {
+
+            // it's already 1 <= A[i] and hence, no need to check
+            if (A[i] <= N) {
+
+                if (C[A[i] - 1] < currMin) {
+                    C[A[i] - 1] = currMin;
+                }
+
+                C[A[i] - 1]++;
+
+                max = Math.max(max, C[A[i] - 1]);
+            }
+
+            /*
+             * perform for the cindition of A[K] == N + 1
+             * */
+            else if (A[i] == N + 1) {
+                currMin = max;
+            }
+        }
+
+        /*
+         * update the indexes where its required
+         * */
+        for (int i = 0; i < C.length; i++) {
+            C[i] = Math.max(C[i], currMin);
+        }
+
+        return C;
+    }
+
+
+    /*
+     * solution - c
+     */
+    public int[] solution2(int N, int[] A) {
 
         int P[] = new int[N];
 
@@ -132,7 +201,7 @@ public class MaxCounters {
 
             if (A[i] == N + 1) {
                 maxCounter(P);
-            } else {
+            } else if (A[i] <= N) {
                 P[A[i] - 1]++;
             }
         }
@@ -145,7 +214,7 @@ public class MaxCounters {
      * */
     public void maxCounter(int[] P) {
 
-        int maxNo = getMaxElement(P);
+        int maxNo = getMax(P);
 
         for (int i = 0; i < P.length; i++) {
             P[i] = maxNo;
@@ -155,122 +224,16 @@ public class MaxCounters {
     /*
      * get the max value of the matrix
      * */
-    public int getMaxElement(int[] P) {
+    public int getMax(int[] P) {
 
-        int largest = P[0];
+        int max = P[0];
 
         for (int i = 1; i < P.length; i++) {
-            if (P[i] > largest) {
-                largest = P[i];
+            if (P[i] > max) {
+                max = P[i];
             }
         }
 
-        return largest;
-    }
-
-
-    /*
-     * solution - c
-     */
-    /*
-     * Improve the previous method, time complexity is O(N+M).
-     * Keep the lastUpdate as the lasgest value in the last
-     * round
-     * */
-    public int[] solution2(int N, int[] A) {
-
-        int P[] = new int[N];
-        int max = 0;
-        int lastUpdate = 0;
-
-        for (int i = 0; i < A.length; i++) {
-
-            if (A[i] < N + 1) {
-                if (P[A[i] - 1] < lastUpdate) {
-                    P[A[i] - 1] = lastUpdate + 1;
-                } else {
-                    P[A[i] - 1]++;
-                }
-                max = Math.max(max, P[A[i] - 1]);
-            } else if (A[i] == N + 1) {
-                lastUpdate = max;
-            }
-        }
-
-        for (int i = 0; i < N; i++) {
-            if (P[i] < lastUpdate) {
-                P[i] = lastUpdate;
-            }
-        }
-        return P;
-    }
-
-
-    /*
-     * solution - d
-     */
-    public int[] solution3(int N, int[] A) {
-
-        int max = 0;
-        int setMax = 0;
-
-        int[] result = new int[N];
-
-        for (int a : A) {
-
-            if (a >= 1 && a <= N) {
-
-                int ci = a - 1;
-
-                if (result[ci] < setMax) {
-                    result[ci] = setMax;
-                }
-
-                result[ci]++;
-
-                if (result[ci] > max) {
-                    max = result[ci];
-                }
-            } else if (a == N + 1) {
-                setMax = max;
-            }
-        }
-
-        for (int i = 0; i < N; i++) {
-
-            if (result[i] < setMax) {
-                result[i] = setMax;
-            }
-        }
-
-        return result;
-    }
-
-
-
-
-    public int[] solution4(int N, int[] A) {
-
-        int[] table = new int[N];
-        int max = 0;
-        int currentMax = 0;
-        for (int i = 0; i < A.length; i++) {
-            if (A[i] <= N) {
-                if (table[A[i] - 1] < currentMax) {
-                    table[A[i] - 1] = currentMax + 1;
-                } else {
-                    table[A[i] - 1]++;
-                }
-                max = Math.max(table[A[i] - 1], max);
-            } else if (A[i] == N + 1) {
-                currentMax = max;
-            }
-        }
-        for (int i = 0; i < table.length; i++) {
-            if (table[i] < currentMax) {
-                table[i] = currentMax;
-            }
-        }
-        return table;
+        return max;
     }
 }

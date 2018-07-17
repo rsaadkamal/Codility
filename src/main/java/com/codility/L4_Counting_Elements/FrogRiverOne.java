@@ -95,21 +95,19 @@ public class FrogRiverOne {
     public int solution1(int X, int[] A) {
 
         int count = X;
-        int[] positions = new int[X];
+        int[] P = new int[X];
 
-        for (int spaceIndex = 0; spaceIndex < X; spaceIndex++) {
-            positions[spaceIndex] = -1;
-        }
+        Arrays.fill(P, -1);
 
-        for (int timeIndex = 0; timeIndex < A.length; timeIndex++) {
+        for (int i = 0; i < A.length; i++) {
 
-            if (positions[A[timeIndex] - 1] == -1) {
+            if (P[A[i] - 1] == -1) {
 
-                positions[A[timeIndex] - 1] = 1;
+                P[A[i] - 1] = 1;
                 count--;
 
                 if (count == 0) {
-                    return timeIndex;
+                    return i;
                 }
             }
         }
@@ -123,16 +121,20 @@ public class FrogRiverOne {
      * */
     public static int solution2(int X, int[] A) {
 
-        int[] positions = new int[X];
+        int[] P = new int[X];
 
         int distance = X;
         int i;
 
-        for (i = 0; distance != 0 && i < A.length; i++) {
+        for (i = 0; i < A.length; i++) {
 
-            if (A[i] <= X && positions[A[i] - 1] == 0) {
-                positions[A[i] - 1] = 1;
+            if (A[i] <= X && P[A[i] - 1] == 0) {
+                P[A[i] - 1] = 1;
                 distance--;
+            }
+
+            if (distance <= 0) {
+                break;
             }
         }
 
@@ -149,17 +151,17 @@ public class FrogRiverOne {
      * */
     public int solution3(int X, int[] A) {
 
-        int C[] = new int[X];
+        int P[] = new int[X];
 
         int sum = X * (X + 1) / 2;
         int pathSum = 0;
 
-        Arrays.fill(C, -1);
+        Arrays.fill(P, -1);
 
         for (int i = 0; i < A.length; i++) {
 
-            if (C[A[i] - 1] == -1) {
-                C[A[i] - 1] = A[i];
+            if (P[A[i] - 1] == -1) {
+                P[A[i] - 1] = A[i];
                 pathSum += A[i];
             }
 

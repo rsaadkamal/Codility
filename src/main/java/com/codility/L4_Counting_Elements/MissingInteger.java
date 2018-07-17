@@ -57,6 +57,9 @@ public class MissingInteger {
             }
         }
 
+        /*
+         * all the numbers are in sequence
+         * */
         return numbers.size() + 1;
     }
 
@@ -64,7 +67,7 @@ public class MissingInteger {
     /*
      * solution - b
      * */
-    public int solution1(int[] A) {
+    public static int solution1(int[] A) {
 
         boolean[] counter = new boolean[A.length + 1];
 
@@ -90,30 +93,55 @@ public class MissingInteger {
         return A.length + 1;
     }
 
-
     /*
      * solution - c
      * */
-    public static int solution2(int[] A) {
+    public int solution2(int[] A) {
+
+        int[] C = new int[A.length];
+
+        for (int i = 0; i < A.length; i++) {
+
+            if (A[i] > 0 && A[i] <= A.length) {
+                C[A[i] - 1] = A[i];
+            }
+        }
+
+        for (int i = 0; i < C.length; i++) {
+
+            if (C[i] == 0) {
+                return i + 1;
+            }
+        }
+
+        return A.length + 1;
+    }
+
+
+    /*
+     * solution - d
+     * */
+    public static int solution3(int[] A) {
 
         int N = A.length;
 
         /*
          * Mark A[i] as visited by making A[A[i] - 1] negative.
-         * Note that 1 is subtracted because index start from 0 and
-         * positive numbers start from 1
+         * Note that 1 is subtracted because index start from 0
+         * and positive numbers start from 1
          * */
         for (int i = 0; i < N; i++) {
 
+            /*
+             * this will make sure the array index will not cross any boundary
+             * */
             int index = Math.abs(A[i]) - 1;
-            // int index = A[i] - 1;
+//             int index = A[i] - 1;
 
-            if (index < N && A[index] > 0) {
+            if (index >= 0 && index < N && A[index] > 0) {
                 A[index] = -A[index];
             }
         }
-
-        System.out.println(Arrays.toString(A));
 
         /*
          * Return the first index value at which is positive
@@ -136,25 +164,11 @@ public class MissingInteger {
     }
 
 
-    /*
-     * solution - d
-     * */
-    public int solution3(int[] A) {
+    public static void main(String[] args) {
 
+        // this would return 1 as this is the missign smallest positive integer
+        int[] A = {3, 0, 14, 78, 90};
 
-        int[] map = new int[A.length];
-        Arrays.fill(map, -1);
-        for (int i = 0; i < A.length; i++) {
-            if (A[i] > 0 && A[i] <= A.length) {
-                map[A[i] - 1] = A[i];
-            }
-        }
-        for (int i = 0; i < map.length; i++) {
-            if (map[i] == -1) {
-                return i + 1;
-            }
-        }
-        return A.length + 1;
     }
 
 }
