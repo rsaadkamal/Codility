@@ -13,8 +13,8 @@ find the solutions over online and write them myself. Obviously, These solutions
 to use. I will attain some tournament and update the repo overtime.
 
 
-i.  Geeks for geeks
+Geeks for geeks: The is collected for the educational purpose from their website.
 
-ii. Project Euler
+Project Euler: The is collected for the educational purpose.
 
 

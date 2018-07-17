@@ -50,7 +50,7 @@ public class CyclicRotation {
 
 
     /*
-     * solution-FrogJmp, Not very good performance
+     * solution - a
      * */
     public int[] solution(int[] A, int K) {
 
@@ -84,12 +84,13 @@ public class CyclicRotation {
     }
 
     public static int swap(int itself, int dummy) {
+
         return itself;
     }
 
 
     /*
-     * solution-B
+     * solution - b
      * */
     public int[] solution1(int[] A, int K) {
 
@@ -114,7 +115,9 @@ public class CyclicRotation {
     }
 
 
-
+    /*
+     * solution - c
+     * */
     public int[] solution4(int[] A, int K) {
 
         int[] result = new int[A.length];
