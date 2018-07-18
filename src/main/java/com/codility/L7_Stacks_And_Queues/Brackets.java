@@ -27,10 +27,7 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 * */
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Created by Chaklader on 6/24/18.
@@ -38,12 +35,12 @@ import java.util.Stack;
 public class Brackets {
 
     /*
-    Name of the brackets
-    --------------------
-    i.   Parentheses ( )
-    ii.  Square brackets [ ]
-    iii. Braces { }
-    iv.  Angle brackets ⟨ ⟩
+        Name of the brackets
+        --------------------
+        i.   Parentheses ( )
+        ii.  Square brackets [ ]
+        iii. Braces { }
+        iv.  Angle brackets ⟨ ⟩
     */
 
 
@@ -51,10 +48,9 @@ public class Brackets {
      * String "{[()()]}" is properly nested but "([)()]" is not.
      * */
     /*
-     * solution - A
+     * solution - a
      */
     public static int solution(String S) {
-
 
         Stack<Character> stack = new Stack<Character>();
 
@@ -70,6 +66,7 @@ public class Brackets {
                 }
             }
         }
+
         return stack.size() == 0 ? 1 : 0;
     }
 
@@ -95,7 +92,7 @@ public class Brackets {
 
 
     /*
-     * solution - B
+     * solution - b
      */
     public int solution1(String S) {
 
@@ -111,7 +108,6 @@ public class Brackets {
 
                     stack.push(S.charAt(i));
                     break;
-
 
                 case ')':
                     if (stack.isEmpty() || stack.peek() != '(') {
@@ -141,6 +137,7 @@ public class Brackets {
                     break;
             }
         }
+
         return stack.isEmpty() ? 1 : 0;
     }
 
@@ -148,16 +145,18 @@ public class Brackets {
     /*
      * solution - c
      */
-    public int solution2(String s) {
+    public int solution2(String S) {
+
+        int N = S.length();
 
         int numOfParentheses = 0;
         int numOfBraces = 0;
         int numOfSquareBrackets = 0;
 
-        char[] storage = new char[s.length()];
+        char[] storage = new char[N];
         int index = 0;
 
-        for (char ch : s.toCharArray()) {
+        for (char ch : S.toCharArray()) {
 
             switch (ch) {
 
@@ -226,9 +225,12 @@ public class Brackets {
     }
 
 
+    /*
+     * solution - d
+     */
     public int solution4(String S) {
 
-        HashMap<Character, Character> brackets = new HashMap<>();
+        Map<Character, Character> brackets = new HashMap<>();
 
         brackets.put(')', '(');
         brackets.put(']', '[');
@@ -237,8 +239,11 @@ public class Brackets {
         Stack<Character> stack = new Stack<>();
 
         for (int i = 0; i < S.length(); i++) {
+
             char bracket = S.charAt(i);
+
             if (isClosingBracket(bracket)) {
+
                 if (stack.size() == 0) {
                     return 0;
                 }
@@ -259,5 +264,19 @@ public class Brackets {
 
     private boolean isClosingBracket(char bracket) {
         return new ArrayList<>(Arrays.asList(')', ']', '}')).contains(bracket);
+    }
+
+
+    public static void main(String[] args) {
+
+        Stack<Character> stack = new Stack<>();
+
+        stack.push('(');
+        stack.push('{');
+        stack.push('[');
+
+        // peek and lastElement are the same
+        System.out.println(stack.peek());
+        System.out.println(stack.lastElement());
     }
 }

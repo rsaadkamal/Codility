@@ -22,6 +22,7 @@ For example, consider arrays A and B such that:
   A[2] = 2    B[2] = 0
   A[3] = 1    B[3] = 0
   A[4] = 5    B[4] = 0
+
 Initially all the fish are alive and all except fish number 1 are moving upstream. Fish number 1 meets fish number 2 and eats it, then it meets fish number 3 and eats it too. Finally, it meets fish number 4 and is eaten by it. The remaining two fish, number 0 and 4, never meet and therefore stay alive.
 
 Write A function:
@@ -53,17 +54,23 @@ public class Fish {
 
 
     /*
-     * solution - A
+     * solution - a
      * */
     public static int solution(int[] A, int[] B) {
 
 
         Stack<Integer> stack = new Stack<Integer>();
 
-        int numOfDeadFish = 0;
-        int numOfTotalFish = A.length;
+        int deadFish = 0;
+        int totalFish = A.length;
 
-        for (int i = 0; i < numOfTotalFish; i++) {
+
+        /*
+         * 0 represents A fish flowing upstream
+         *
+         * 1 represents A fish flowing downstream
+         * */
+        for (int i = 0; i < totalFish; i++) {
 
             /*
              * fish flowing upstream
@@ -72,7 +79,7 @@ public class Fish {
 
                 while (!stack.isEmpty()) {
 
-                    numOfDeadFish++;
+                    deadFish++;
 
                     /*
                      * downstream fish eat the upstream fish
@@ -98,37 +105,51 @@ public class Fish {
             }
         }
 
-        return numOfTotalFish - numOfDeadFish;
+        return totalFish - deadFish;
     }
 
 
     /*
-     * solution - B
+     * solution - b
      */
     public int solution1(int[] A, int[] B) {
 
+        int upstreamFish = 0;
+
+        int total = A.length;
+
         Stack<Integer> stack = new Stack<Integer>();
 
-        int numOfUpstreamFish = 0;
 
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < total; i++) {
 
+            /*
+             * we have a upstream fish
+             * */
             if (B[i] == 0) {
 
+                /*
+                 * upstream fish is eating the downstream fish
+                 * */
                 while (!stack.isEmpty() && A[i] > stack.peek()) {
                     stack.pop();
                 }
 
                 if (stack.isEmpty()) {
-                    numOfUpstreamFish++;
+                    upstreamFish++;
                 }
-            } else {
+            }
+
+            /*
+             * we have a downstream fish
+             * */
+            else {
                 stack.push(A[i]);
             }
         }
 
         int numOfDownstreamFish = stack.size();
-        return numOfUpstreamFish + numOfDownstreamFish;
+        return upstreamFish + numOfDownstreamFish;
     }
 
 
@@ -169,15 +190,24 @@ public class Fish {
     }
 
 
-    public int solution4(int[] A, int[] B) {
+    /*
+     * solution - d
+     */
+    public int solution3(int[] A, int[] B) {
 
         Stack<Integer> upStream = new Stack<>();
         int survive = 0;
+
         for (int i = 0; i < A.length; i++) {
+
             if (B[i] == 0) {
+
                 if (upStream.size() > 0) {
+
                     boolean eaten = false;
+
                     while (upStream.size() > 0 && !eaten) {
+
                         if (A[i] > upStream.lastElement()) {
                             upStream.pop();
                             if (upStream.size() == 0) {
@@ -194,6 +224,7 @@ public class Fish {
                 upStream.push(A[i]);
             }
         }
+
         return upStream.size() + survive;
     }
 }

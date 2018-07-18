@@ -34,26 +34,30 @@ import java.util.Stack;
  */
 public class Nesting {
 
+
     /*
      * String "(()(())())" is properly nested but string "())" is not
      * */
+
     /*
      * solution - A
      */
     public static int solution(String S) {
 
-        Stack<Character> chars = new Stack<Character>();
+        Stack<Character> stack = new Stack<Character>();
 
         for (int i = 0; i < S.length(); i++) {
 
             if (S.charAt(i) == '(') {
-                chars.push(S.charAt(i));
-            } else if (S.charAt(i) == ')' && chars.size() > 0) {
-                chars.pop();
-            } else return 0;
+                stack.push(S.charAt(i));
+            } else if (S.charAt(i) == ')' && stack.size() > 0) {
+                stack.pop();
+            } else {
+                return 0;
+            }
         }
 
-        return chars.size() == 0 ? 1 : 0;
+        return stack.size() == 0 ? 1 : 0;
     }
 
 
@@ -63,8 +67,9 @@ public class Nesting {
     public static int solution1(String S) {
 
         int count = 0;
+        char[] chars = S.toCharArray();
 
-        for (char c : S.toCharArray()) {
+        for (char c : chars) {
 
             if (c == '(') {
                 count++;
@@ -73,7 +78,7 @@ public class Nesting {
             }
 
             /*
-             * check for the negatives input
+             * check for the negatives input, for example [)((())] is balanced but not a properly nested string
              * */
             if (count < 0) {
                 return 0;
@@ -111,25 +116,29 @@ public class Nesting {
                     break;
             }
         }
+
         return stack.isEmpty() ? 1 : 0;
     }
 
 
     /*
-    * solution - d
-    * */
+     * solution - d
+     * */
     public int solution4(String S) {
 
         char closing = ')';
         int sum = 0;
 
         for (int i = 0; i < S.length(); i++) {
+
             char currentSymbol = S.charAt(i);
+
             if (currentSymbol == closing) {
                 sum--;
             } else {
                 sum++;
             }
+
             if (sum < 0) {
                 return 0;
             }

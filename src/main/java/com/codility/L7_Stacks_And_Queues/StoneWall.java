@@ -39,23 +39,28 @@ public class StoneWall {
 
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int solution(int[] H) {
 
+
         Stack<Integer> stack = new Stack<Integer>();
 
-        int numOfBlocks = 1;
+        int count = 1;
         stack.push(H[0]);
 
         /*
          * ALGORITHMS:
          * ----------
-         * i.   Set the block count = 1
+         * i.   Set block count = 1
+         *
          * ii.  If the height is same as previous block, keep going
+         *
          * iii. If the current height is higher, push that in the stack and increase count
+         *
          * iv.  If the current height is lower, keep poping till the current height >= peek
          *      Afterwards, if the stack size = 0 or higher, increase the block count by 1
+         *
          * */
         for (int i = 1; i < H.length; i++) {
 
@@ -69,7 +74,7 @@ public class StoneWall {
              * */
             else if (stack.peek() < H[i]) {
                 stack.push(H[i]);
-                numOfBlocks++;
+                count++;
             }
 
             /*
@@ -82,28 +87,21 @@ public class StoneWall {
                 }
 
                 stack.push(H[i]);
-                numOfBlocks++;
-
-                /*
-                if (stack.size() == 0 || stack.peek() != H[i]) {
-                    stack.push(H[i]);
-                    numOfBlocks++;
-                }
-                */
+                count++;
             }
         }
 
-        return numOfBlocks;
+        return count;
     }
 
 
     /*
-     * solution - B
+     * solution - b
      */
     public int solution1(int[] H) {
 
+        int count = 0;
 
-        int numOfBlocks = 0;
         Stack<Integer> stack = new Stack<Integer>();
 
         for (int i = 0; i < H.length; i++) {
@@ -111,13 +109,13 @@ public class StoneWall {
             if (stack.isEmpty()) {
 
                 stack.push(H[i]);
-                numOfBlocks++;
+                count++;
             }
 
             // higher
             else if (stack.peek() < H[i]) {
                 stack.push(H[i]);
-                numOfBlocks++;
+                count++;
             }
 
             // lower
@@ -126,34 +124,26 @@ public class StoneWall {
                 while (!stack.isEmpty() && H[i] <= stack.peek()) {
 
                     if (H[i] == stack.peek()) {
-                        numOfBlocks--;
+                        count--;
                     }
                     stack.pop();
                 }
 
                 stack.push(H[i]);
-                numOfBlocks++;
-
-//                if (stack.isEmpty()) {
-//                    stack.push(H[i]);
-//                    numOfBlocks++;
-//                } else {
-//                    stack.push(H[i]);
-//                    numOfBlocks++;
-//                }
+                count++;
             }
         }
 
-        return numOfBlocks;
+        return count;
     }
 
 
     /*
      * solution - c
      */
-    public int solution2(int[] A) {
+    public static int solution2(int[] A) {
 
-        int[] storage = new int[A.length];
+        int[] C = new int[A.length];
 
         int lenOfElements = 0;
         int numOfBlocks = 0;
@@ -165,7 +155,7 @@ public class StoneWall {
              * than the higher lenOfElements element of storage,
              * reduce the lenOfElements by 1
              * */
-            while (lenOfElements > 0 && storage[lenOfElements - 1] > a) {
+            while (lenOfElements > 0 && C[lenOfElements - 1] > a) {
                 lenOfElements--;
             }
 
@@ -173,10 +163,10 @@ public class StoneWall {
              * Height of the current height is higher
              * than the higher lenOfElements element of storage
              * */
-            if (lenOfElements == 0 || storage[lenOfElements - 1] < a) {
+            if (lenOfElements == 0 || C[lenOfElements - 1] < a) {
 
                 numOfBlocks++;
-                storage[lenOfElements] = a;
+                C[lenOfElements] = a;
                 lenOfElements++;
             }
 
@@ -188,27 +178,28 @@ public class StoneWall {
 
 
     /*
-     * solution -  a
+     * solution -  d
      * */
-    public static int solution4(int[] A) {
+    public static int solution3(int[] A) {
 
-        int[] stack = new int[A.length];
+        int[] C = new int[A.length];
 
         int counter = 0;
         int result = 0;
 
-        for (int i : A) {
+        for (int a : A) {
 
-            while (counter > 0 && stack[counter - 1] > i) {
-                counter -= 1;
+            while (counter > 0 && C[counter - 1] > a) {
+                counter--;
             }
 
-            if (!(counter > 0 && stack[counter - 1] == i)) {
-                stack[counter] = i;
+            if (counter == 0 || C[counter - 1] < a) {
+                C[counter] = a;
                 result++;
                 counter++;
             }
         }
+
         return result;
     }
 }
