@@ -48,6 +48,19 @@ public class NumberOfDiscIntersections {
 
 
     /*
+     * The J-th disc is drawn with its center at (J, 0) and radius A[J]
+     *
+     *
+     * We say that the J-th disc and K-th disc intersect if J ≠ K and
+     * the J-th and K-th discs have at least one common point (assuming
+     * that the discs contain their borders)
+     *
+     *
+     * Find the number of (unordered) pairs of intersecting discs
+     *
+     * */
+
+    /*
         -------------------------------------------------------------------
         Type        Size        Bytes Range
         -------------------------------------------------------------------
@@ -75,20 +88,22 @@ public class NumberOfDiscIntersections {
 
 
     /*
-     * Compute the number of intersections in A sequence of discs.
+     * Compute the number of intersections in a sequence of discs.
      * The J-th disc is drawn with its center at (J, 0) and radius
-     * A[J].
+     * A[J]
      *
-     * PREMISE: if (i + A[i]) > (j - A[j]), the intersection occurs.
+     * PREMISE
+     * -------
+     * if (i + A[i]) > (j - A[j]) where j > i, the intersection occurs.
      *
+     * The disks have centers of range [0, 1, 2, 3, ......., N-1]
      * */
-
     /*
      * solution - a
      * */
     public static int solution(int[] A) {
 
-        int intersections = 0;
+        int count = 0;
 
         for (int i = 0; i < A.length - 1; i++) {
 
@@ -99,16 +114,16 @@ public class NumberOfDiscIntersections {
                  * */
                 if ((long) A[i] + i >= j - (long) A[j]) {
 
-                    intersections++;
+                    count++;
 
-                    if (intersections > 10000000) {
+                    if (count > 10000000) {
                         return -1;
                     }
                 }
             }
         }
 
-        return intersections;
+        return count;
     }
 
 
@@ -117,7 +132,7 @@ public class NumberOfDiscIntersections {
      * */
     /*
      * Time complexity is O(N*log(N)) or O(N). The largest value of right-A[right]
-     * is n-1. We just need to find right-A[right] > 0 and how many i+A[i] is smaller
+     * is N-1. We just need to find right-A[right] > 0 and how many i+A[i] is smaller
      * than it.
      * */
     public int solution1(int[] A) {
@@ -135,7 +150,7 @@ public class NumberOfDiscIntersections {
              * or (i+A[i]) <= (N-1) let sum[i+A[i]]++, means there
              * is one disk that i+A[i]
              * */
-            if (N - i - 1 >= A[i]) {
+            if (N - 1 >= A[i] + i) {
                 right = i + A[i];
             }
 
@@ -194,7 +209,6 @@ public class NumberOfDiscIntersections {
      * solution - c
      * */
     public int solution2(int[] A) {
-
 
         int N = A.length;
 
@@ -283,10 +297,14 @@ public class NumberOfDiscIntersections {
 
     public static int getIntersectionCount(Slice[] slices) {
 
-        //sort slices by ends
+        /*
+         * sort the slices by end points
+         * */
         Arrays.sort(slices, new Comparator<Slice>() {
+
             @Override
             public int compare(Slice o1, Slice o2) {
+
                 if (o1.end < o2.end) {
                     return 1;
                 } else if (o2.end == o1.end) {
@@ -297,7 +315,7 @@ public class NumberOfDiscIntersections {
             }
         });
 
-        int intersectionsCount = 0;
+        int count = 0;
 
         for (int i = 0; i < slices.length; i++) {
 
@@ -307,8 +325,10 @@ public class NumberOfDiscIntersections {
             while (j < slices.length) {
 
                 if (currentSlice.start <= slices[j].end) {
-                    intersectionsCount++;
-                    if (intersectionsCount > 1e7) {
+
+                    count++;
+
+                    if (count > 1e7) {
                         return -1;
                     }
                 } else {
@@ -319,7 +339,7 @@ public class NumberOfDiscIntersections {
             }
         }
 
-        return intersectionsCount;
+        return count;
     }
 
 
@@ -344,16 +364,21 @@ public class NumberOfDiscIntersections {
     }
 
     public static boolean isIntersect(Slice a, Slice b) {
-        return b.start <= a.end && b.end >= a.end || a.start <= b.end && a.end >= b.end;
+
+        return b.start <= a.end && b.end >= a.end
+                || a.start <= b.end && a.end >= b.end;
     }
 
     public static Slice[] initSlices(int[] A) {
+
         Slice[] slices = new Slice[A.length];
+
         for (int i = 0; i < A.length; i++) {
             long end = (long) i + A[i];
             long start = (long) i - A[i];
             slices[i] = new Slice(start, end);
         }
+
         return slices;
     }
 }
