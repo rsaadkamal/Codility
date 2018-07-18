@@ -34,10 +34,14 @@ public class Distinct {
 
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int solution(int[] A) {
 
+
+        /*
+         * time complexity: O(N * log(N)) > O(N)
+         * */
         Map<Integer, Integer> frequencies = new HashMap<>();
 
         for (int i = 0; i < A.length; i++) {
@@ -51,7 +55,7 @@ public class Distinct {
 
 
     /*
-     * solution - B
+     * solution - b
      */
     public static int solution1(int[] A) {
 
@@ -78,6 +82,15 @@ public class Distinct {
      */
     public static int solution2(int[] A) {
 
+        /*
+         * ---------------------------------------------
+         *  Sorting       Best            Worst
+         * ---------------------------------------------
+         * Quicksort	    Ω(n log(n))	    O(n^2)
+         * Mergesort	    Ω(n log(n))	    O(n log(n))
+         * ---------------------------------------------
+         * */
+
         Arrays.sort(A);
         int dups = 0;
 
@@ -97,37 +110,19 @@ public class Distinct {
      */
     public int solution3(int[] A) {
 
-        if (A.length <= 0) {
-            return 0;
-        }
-
-        Arrays.sort(A);
-        int prevElm = A[0], count = 1;
-
-        for (int i = 1; i < A.length; i++) {
-
-            if (A[i] != prevElm) {
-                prevElm = A[i];
-                count++;
-            }
-        }
-
-        return count;
-    }
-
-
-
-    public int solution4(int[] A) {
         if (A.length == 0) {
             return 0;
         }
+
         Arrays.sort(A);
         int counter = 1;
+
         for (int i = 1; i < A.length; i++) {
             if (A[i - 1] < A[i]) {
                 counter++;
             }
         }
+
         return counter;
     }
 }

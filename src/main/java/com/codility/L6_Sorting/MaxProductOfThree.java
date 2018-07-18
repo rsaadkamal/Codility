@@ -54,7 +54,7 @@ public class MaxProductOfThree {
 
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int solution(int[] A) {
 
@@ -63,19 +63,19 @@ public class MaxProductOfThree {
         /*
          * all the elements are positives
          * */
-        int maxWithPositives = A[A.length - 1] * A[A.length - 2] * A[A.length - 3];
+        int allPositiv = A[A.length - 1] * A[A.length - 2] * A[A.length - 3];
 
         /*
          * mix of positives and negatives
          * */
         int maxWithMixesOfPosAndNeg = A[A.length - 1] * A[0] * A[1];
 
-        return maxWithPositives > maxWithMixesOfPosAndNeg ? maxWithPositives : maxWithMixesOfPosAndNeg;
+        return allPositiv > maxWithMixesOfPosAndNeg ? allPositiv : maxWithMixesOfPosAndNeg;
     }
 
 
     /*
-     * solution -B
+     * solution - b
      */
     public int solution1(int[] A) {
 
@@ -100,11 +100,9 @@ public class MaxProductOfThree {
         return Math.max(obvious, twoBigNegs);
     }
 
+
     private static void updateMaxes(int a, int[] maxes) {
 
-        /*
-         * Found new max, shift down
-         * */
         if (a >= maxes[2]) {
 
             maxes[0] = maxes[1];
@@ -118,11 +116,9 @@ public class MaxProductOfThree {
         }
     }
 
+
     private static void updateMins(int a, int[] mins) {
 
-        /*
-         * Found new min, shift down
-         * */
         if (a <= mins[0]) {
             mins[1] = mins[0];
             mins[0] = a;
@@ -205,12 +201,5 @@ public class MaxProductOfThree {
         }
 
         return result;
-    }
-
-
-
-    public int solution4(int[] A) {
-        Arrays.sort(A);
-        return Math.max(A[0] * A[1] * A[A.length - 1], A[A.length - 1] * A[A.length - 2] * A[A.length - 3]);
     }
 }

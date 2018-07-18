@@ -38,7 +38,6 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 * */
 
 
-
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -85,7 +84,7 @@ public class NumberOfDiscIntersections {
      * */
 
     /*
-     * solution - A
+     * solution - a
      * */
     public static int solution(int[] A) {
 
@@ -114,7 +113,7 @@ public class NumberOfDiscIntersections {
 
 
     /*
-     * solution - B
+     * solution - b
      * */
     /*
      * Time complexity is O(N*log(N)) or O(N). The largest value of right-A[right]
@@ -273,22 +272,17 @@ public class NumberOfDiscIntersections {
     }
 
 
-
-
-
-
-
-
     /*
-    * solution -
-    * */
-    public int solution4(int[] A) {
+     * solution - d
+     * */
+    public static int solution3(int[] A) {
 
         Slice[] slices = initSlices(A);
         return getIntersectionCount(slices);
     }
 
-    public int getIntersectionCount(Slice[] slices) {
+    public static int getIntersectionCount(Slice[] slices) {
+
         //sort slices by ends
         Arrays.sort(slices, new Comparator<Slice>() {
             @Override
@@ -302,11 +296,16 @@ public class NumberOfDiscIntersections {
                 }
             }
         });
+
         int intersectionsCount = 0;
+
         for (int i = 0; i < slices.length; i++) {
+
             Slice currentSlice = slices[i];
             int j = i + 1;
+
             while (j < slices.length) {
+
                 if (currentSlice.start <= slices[j].end) {
                     intersectionsCount++;
                     if (intersectionsCount > 1e7) {
@@ -315,30 +314,40 @@ public class NumberOfDiscIntersections {
                 } else {
                     break;
                 }
+
                 j++;
             }
         }
+
         return intersectionsCount;
     }
 
-    public int nativeSolution(int[] A) {
+
+    /*
+     * solution - e
+     * */
+    public static int solution4(int[] A) {
+
         Slice[] slices = initSlices(A);
         int counter = 0;
+
         for (int i = 0; i < slices.length; i++) {
+
             for (int j = i + 1; j < slices.length; j++) {
                 if (isIntersect(slices[i], slices[j])) {
                     counter++;
                 }
             }
         }
+
         return counter;
     }
 
-    public boolean isIntersect(Slice a, Slice b) {
+    public static boolean isIntersect(Slice a, Slice b) {
         return b.start <= a.end && b.end >= a.end || a.start <= b.end && a.end >= b.end;
     }
 
-    public Slice[] initSlices(int[] A) {
+    public static Slice[] initSlices(int[] A) {
         Slice[] slices = new Slice[A.length];
         for (int i = 0; i < A.length; i++) {
             long end = (long) i + A[i];

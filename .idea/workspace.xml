@@ -3701,9 +3701,11 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/CountDiv.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/CountDiv.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/GenomicRangeQuery.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/GenomicRangeQuery.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/MinAvgTwoSlice.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/MinAvgTwoSlice.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -4262,7 +4264,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="MaxProductOfThree.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="199" column="0" lean-forward="true" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -4351,11 +4364,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/FrogRiverOne.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MissingInteger.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MaxCounters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/PassingCars.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java" />
@@ -4364,7 +4372,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/EquiLeader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxDoubleSliceSum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxProfit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountNonDivisible.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountSemiprimes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L12_Euclidean_Algorithm/ChocolatesByNumbers.java" />
@@ -4374,6 +4381,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/CountDiv.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/GenomicRangeQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/MinAvgTwoSlice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/PassingCars.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java" />
       </list>
     </option>
   </component>
@@ -4456,7 +4469,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
-              <item name="L5_Prefix_Sums" type="462c0819:PsiDirectoryNode" />
+              <item name="L6_Sorting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
@@ -4787,15 +4800,16 @@
       <workItem from="1531629938480" duration="126000" />
       <workItem from="1531630112957" duration="20265000" />
       <workItem from="1531755788596" duration="544000" />
-      <workItem from="1531791038106" duration="25570000" />
+      <workItem from="1531791038106" duration="27649000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211274000" />
+    <option name="totallyTimeSpent" value="213353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -4807,10 +4821,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29913294" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23806079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23806079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32599118" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -5151,22 +5165,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MaxCounters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/CountDiv1/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/GenomicRangeQuery1/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -5191,26 +5189,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/PassingCars.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="117" column="8" lean-forward="false" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct1/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="119" column="24" lean-forward="false" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -5223,36 +5205,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="211" column="24" lean-forward="false" selection-start-line="211" selection-start-column="24" selection-end-line="211" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="282" column="17" lean-forward="false" selection-start-line="282" selection-start-column="17" selection-end-line="282" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections1/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="80" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="84" column="17" lean-forward="false" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -5399,14 +5355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="5" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="151" column="8" lean-forward="false" selection-start-line="151" selection-start-column="8" selection-end-line="151" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -5561,6 +5509,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2093">
           <caret line="259" column="0" lean-forward="true" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/PassingCars.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="82" column="6" lean-forward="true" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/CountTriangles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/TieRopes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="110" column="24" lean-forward="false" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="199" column="0" lean-forward="true" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -57,7 +57,7 @@ public class Triangle {
      * */
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int solution(int[] A) {
 
@@ -80,10 +80,9 @@ public class Triangle {
     }
 
 
-
     /*
-    * solution -
-    * */
+     * solution - b
+     * */
     public int solution4(int[] A) {
 
         if (A.length < 3) {

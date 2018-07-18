@@ -37,7 +37,7 @@ public class MaxSliceSum {
 
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int solution(int[] A) {
 
@@ -78,9 +78,9 @@ public class MaxSliceSum {
 
 
     /*
-     * solution - B
+     * solution - b
      */
-    public int solution1(int[] A) {
+    public static int solution1(int[] A) {
 
         int N = A.length;
         int maxEnding = A[0];
@@ -99,7 +99,7 @@ public class MaxSliceSum {
     /*
      * solution - c
      */
-    public int solution2(int[] A) {
+    public static int solution2(int[] A) {
 
         int N = A.length;
 
@@ -142,14 +142,15 @@ public class MaxSliceSum {
 
 
     /*
-     * solution - a
+     * solution - d
      * */
-    public int solution4(int[] A) {
+    public static int solution3(int[] A) {
 
         int end = A[0];
         int start = A[0];
 
         for (int i = 1; i < A.length; i++) {
+
             end = Math.max(A[i], end + A[i]);
             start = Math.max(start, end);
         }
