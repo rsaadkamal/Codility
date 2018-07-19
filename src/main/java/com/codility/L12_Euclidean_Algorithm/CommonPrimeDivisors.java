@@ -60,7 +60,7 @@ public class CommonPrimeDivisors {
 
             while (x != 1) {
 
-                gcdTmp = gcd(x, gcd, 1);
+                gcdTmp = gcd(x, gcd);
 
                 if (gcdTmp == 1) {
                     break;
@@ -74,10 +74,13 @@ public class CommonPrimeDivisors {
             }
 
             while (y != 1) {
+
                 gcdTmp = gcd(y, gcd, 1);
+
                 if (gcdTmp == 1) {
                     break;
                 }
+
                 y /= gcdTmp;
             }
 
@@ -112,7 +115,7 @@ public class CommonPrimeDivisors {
 
         while (x != 1) {
 
-            gcdTmp = gcd(x, gcd, 1);
+            gcdTmp = gcd(x, gcd);
 
             if (gcdTmp == 1) {
                 break;
@@ -126,10 +129,13 @@ public class CommonPrimeDivisors {
         }
 
         while (y != 1) {
-            gcdTmp = gcd(y, gcd, 1);
+
+            gcdTmp = gcd(y, gcd);
+
             if (gcdTmp == 1) {
                 break;
             }
+
             y /= gcdTmp;
         }
 
@@ -187,9 +193,13 @@ public class CommonPrimeDivisors {
         int gcdB;
 
         while (a != 1) {
+
             gcdA = gcd(a, gcdValue);
-            if (gcdA == 1)
+
+            if (gcdA == 1) {
                 break;
+            }
+
             a = a / gcdA;
         }
 
@@ -198,11 +208,16 @@ public class CommonPrimeDivisors {
         }
 
         while (b != 1) {
+
             gcdB = gcd(b, gcdValue);
-            if (gcdB == 1)
+
+            if (gcdB == 1) {
                 break;
+            }
+
             b = b / gcdB;
         }
+
         return b == 1;
     }
 
@@ -225,7 +240,7 @@ public class CommonPrimeDivisors {
              * Two numbers n and m may have the same set of prime factors only
              * if (n / gcd1) and (m / gcd1) contain only factors included into gcd1
              * */
-            int g = gcd1(A[i], B[i]);
+            int g = gcd(A[i], B[i]);
 
             int m = A[i] / g;
             int gcm = g;
@@ -259,7 +274,6 @@ public class CommonPrimeDivisors {
             while (true) {
 
                 if (gcm % m == 0) {
-
                     containsB = true;
                     break;
                 } else {
@@ -311,17 +325,17 @@ public class CommonPrimeDivisors {
 
     private boolean hasCommonPrimeDivisors(int A, int B) {
 
-        long commonGCD = gcd(A, B);
-        long divisorA = A / commonGCD;
-        long gcdA = gcd(commonGCD, divisorA);
+        int commonGCD = gcd(A, B);
+        int divisorA = A / commonGCD;
+        int gcdA = gcd(commonGCD, divisorA);
 
         while (gcdA != 1) {
             divisorA /= gcdA;
             gcdA = gcd(commonGCD, divisorA);
         }
 
-        long divisorB = B / commonGCD;
-        long gcdB = gcd(commonGCD, divisorB);
+        int divisorB = B / commonGCD;
+        int gcdB = gcd(commonGCD, divisorB);
 
         while (gcdB != 1) {
             divisorB /= gcdB;
@@ -331,12 +345,9 @@ public class CommonPrimeDivisors {
         return divisorA == 1 && divisorB == 1;
     }
 
-    private long gcd(long p, long q) {
 
-        if (q == 0) {
-            return (int) p;
-        }
+    public static void main(String[] args) {
 
-        return gcd(q, p % q);
+        System.out.println(gcd(15, 75));
     }
 }

@@ -6,13 +6,35 @@ package com.codility.L13_Fibonacci_Numbers;
     F(0) = 0
     F(1) = 1
     F(M) = F(M - 1) + F(M - 2) if M >= 2
-A small frog wants to get to the other side of a river. The frog is initially located at one bank of the river (position −1) and wants to get to the other bank (position N). The frog can jump over any distance F(K), where F(K) is the K-th Fibonacci number. Luckily, there are many leaves on the river, and the frog can jump between the leaves, but only in the direction of the bank at position N.
 
-The leaves on the river are represented in an array A consisting of N integers. Consecutive elements of array A represent consecutive positions from 0 to N − 1 on the river. Array A contains only 0s and/or 1s:
 
-0 represents a position without a leaf;
-1 represents a position containing a leaf.
-The goal is to count the minimum number of numOfJumps in which the frog can get to the other side of the river (from position −1 to position N). The frog can jump between positions −1 and N (the banks of the river) and every position containing a leaf.
+A small frog wants to get to the other side of a river. The frog is initially located at one bank of the river (position −1)
+
+and wants to get to the other bank (position N). The frog can jump over any distance F(K), where F(K) is the K-th Fibonacci
+
+number. Luckily, there are many leaves on the river, and the frog can jump between the leaves, but only in the direction of
+
+the bank at position N.
+
+
+
+The leaves on the river are represented in an array A consisting of N integers. Consecutive elements of array A represent
+
+consecutive positions from 0 to N − 1 on the river. Array A contains only 0s and/or 1s:
+
+
+
+0 represents a position without a leaf
+
+1 represents a position containing a leaf
+
+
+
+
+The goal is to count the minimum number of numOfJumps in which the frog can get to the other side of the river (from position
+
+−1 to position N). The frog can jump between positions −1 and N (the banks of the river) and every position containing a leaf.
+
 
 For example, consider array A such that:
 
@@ -27,13 +49,22 @@ For example, consider array A such that:
     A[8] = 0
     A[9] = 0
     A[10] = 0
-The frog can make three numOfJumps of length F(5) = 5, F(3) = 2 and F(5) = 5.
+
+
+The frog can make 3 jumps of length F(5) = 5, F(3) = 2 and F(5) = 5.
 
 Write a function:
 
-class Solution { public int solution(int[] A); }
+    class Solution {
 
-that, given an array A consisting of N integers, returns the minimum number of numOfJumps by which the frog can get to the other side of the river. If the frog cannot reach the other side of the river, the function should return −1.
+            public int solution(int[] A){
+
+            }
+    }
+
+
+that, given an array A consisting of N integers, returns the minimum number of numOfJumps by which the frog can get to the other
+side of the river. If the frog cannot reach the other side of the river, the function should return −1.
 
 For example, given:
 
@@ -48,38 +79,31 @@ For example, given:
     A[8] = 0
     A[9] = 0
     A[10] = 0
+
 the function should return 3, as explained above.
 
 Assume that:
 
+
 N is an integer within the range [0..100,000];
 each element of array A is an integer that can have one of the following values: 0, 1.
-Complexity:
 
-expected worst-case time complexity is O(N*log(N));
-expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
+Complexity
+----------
+
+Expected worst-case time complexity is O(N*log(N));
+
+Expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
 * */
 
+
 import java.util.*;
+
 
 /**
  * Created by Chaklader on 7/6/18.
  */
 public class FibFrog {
-
-
-    public static class Jump {
-
-        int pos;
-        int numOfJumps;
-
-        Jump(int pos, int numOfJumps) {
-
-            this.pos = pos;
-            this.numOfJumps = numOfJumps;
-        }
-    }
-
 
     /*
      * Given an array A consisting of N integers, returns the minimum number of
@@ -88,9 +112,21 @@ public class FibFrog {
      * */
 
     /*
-     * solution -a
+     * solution - a
      */
     int number = 0;
+
+    private static class Jump {
+
+        int position;
+        int numOfJumps;
+
+        Jump(int position, int numOfJumps) {
+
+            this.position = position;
+            this.numOfJumps = numOfJumps;
+        }
+    }
 
     /*
      * count the minimum number of numOfJumps required
@@ -104,9 +140,10 @@ public class FibFrog {
 
         Stack<Jump> stack = new Stack<Jump>();
 
-        // positio and number of numOfJumps
+        /*
+         * position and number of numOfJumps
+         * */
         stack.push(new Jump(-1, 0));
-
 
         /*
         The frog can jump between positions −1 and N (the
@@ -116,7 +153,7 @@ public class FibFrog {
         while (!stack.isEmpty()) {
 
             /*
-             * take the top of the stack
+             * take the top of the stack (the firstElement and peek is the same)
              * */
             Jump currJump = stack.firstElement();
             stack.remove(0);
@@ -126,20 +163,25 @@ public class FibFrog {
             /*
              * we get the index in the left side. we will be
              * out of the while loop if left value > A.length
+             * means we reached in the other bank
              * */
-            while (currJump.pos + fibs.get(i) <= A.length) {
+            while (currJump.position + fibs.get(i) <= A.length) {
 
                 /*
-                 * just crossed the river
+                 * it will take just one more jump when we
+                 * are at the index of (N-1) ie the last leaf
                  * */
-                if (currJump.pos + fibs.get(i) == A.length) {
+                if (currJump.position + fibs.get(i) == A.length) {
                     return currJump.numOfJumps + 1;
                 }
 
-                if (A[currJump.pos + fibs.get(i)] == 1 && !visited[currJump.pos + fibs.get(i)]) {
+                /*
+                 * we are at a leaf and this position is not visited yet
+                 * */
+                if (A[currJump.position + fibs.get(i)] == 1 && !visited[currJump.position + fibs.get(i)]) {
 
-                    stack.push(new Jump(fibs.get(i) + currJump.pos, currJump.numOfJumps + 1));
-                    visited[fibs.get(i) + currJump.pos] = true;
+                    stack.push(new Jump(currJump.position + fibs.get(i), currJump.numOfJumps + 1));
+                    visited[currJump.position + fibs.get(i)] = true;
                 }
 
                 i++;
@@ -186,23 +228,25 @@ public class FibFrog {
 
         List<Jump> jumps = new ArrayList<Jump>();
 
-        /*
-         * add the first jump
-         * */
         jumps.add(new Jump(-1, 0));
 
         Jump currentJump = null;
-        int listIndex = 0;
+
+        int index = 0;
 
 
         while (true) {
 
-            if (listIndex == jumps.size()) {
+
+            /*
+             * we were not able to add any new jump from the previous
+             * for loop and hence, continuation is worthless
+             * */
+            if (index == jumps.size()) {
                 return -1;
             }
 
-            currentJump = jumps.get(listIndex);
-            listIndex++;
+            currentJump = jumps.get(index);
 
 
             /*
@@ -217,17 +261,19 @@ public class FibFrog {
                  * -1 + (N+1) = N for index basis calculation
                  * to cross just opposite the river
                  * */
-                if (currentJump.pos + fib == A.length) {
+                if (currentJump.position + fib == A.length) {
                     return currentJump.numOfJumps + 1;
-                } else if (currentJump.pos + fib > A.length || A[currentJump.pos + fib] == 0
-                        || visited[currentJump.pos + fib]) {
+                } else if (currentJump.position + fib > A.length || A[currentJump.position + fib] == 0
+                        || visited[currentJump.position + fib]) {
 
                     continue;
                 }
 
-                jumps.add(new Jump(currentJump.pos + fib, currentJump.numOfJumps + 1));
-                visited[currentJump.pos + fib] = true;
+                jumps.add(new Jump(currentJump.position + fib, currentJump.numOfJumps + 1));
+                visited[currentJump.position + fib] = true;
             }
+
+            index++;
         }
     }
 
@@ -238,18 +284,19 @@ public class FibFrog {
      * forward: [1, 2, 3, 5, 8, 13]
      * reverse: [13, 8, 5, 3, 2, 1]
      * */
-    public static List<Integer> getFibonaci(int max) {
+    public static List<Integer> getFibonaci(int N) {
 
         List<Integer> fibs = new ArrayList<Integer>();
 
         fibs.add(1);
         fibs.add(1);
 
-        int f = 1;
+        int index = 1;
 
-        while (fibs.get(f) <= max) {
-            fibs.add(fibs.get(f) + fibs.get(f - 1));
-            f++;
+        while (fibs.get(index) <= N) {
+
+            fibs.add(fibs.get(index) + fibs.get(index - 1));
+            index++;
         }
 
         fibs.remove(0);
@@ -269,18 +316,18 @@ public class FibFrog {
      * */
     public static int solution2(int[] A) {
 
+
         int N = A.length;
-        final int[] fibs = new int[N < 2 ? 2 : N + 1];
+        int[] fibs = new int[N < 2 ? 2 : N + 1];
 
         fibs[0] = 1;
         fibs[1] = 2;
 
-
         /*
          * N = 11
          *
-         * fibs = [1, 2, 3, 5, 8, 13, 0, 0, 0, 0, 0, 0]
-         * A =    [0, 0, 0, 1, 1, 0,  1, 0, 0, 0, 0]
+         *  fibs = [1, 2, 3, 5, 8, 13, 0, 0, 0, 0, 0, 0]
+         *  A =    [0, 0, 0, 1, 1, 0,  1, 0, 0, 0, 0]
          * */
         int fIndex = 2;
 
@@ -291,7 +338,6 @@ public class FibFrog {
         }
 
         int result = -1;
-
 
         /*
          * N = 11
@@ -312,7 +358,7 @@ public class FibFrog {
                  * */
                 for (int j = 0; j < fIndex && fibs[j] <= i + 1; j++) {
 
-                    final int from = i - fibs[j];
+                    int from = i - fibs[j];
 
                     if (from == -1) {
                         min = 1;
@@ -324,12 +370,14 @@ public class FibFrog {
                 }
 
                 if (i < N) {
+
                     if (min == Integer.MAX_VALUE) {
                         A[i] = 0;
                     } else {
                         A[i] = min;
                     }
                 } else {
+
                     if (min != Integer.MAX_VALUE) {
                         result = min;
                     }
@@ -342,110 +390,67 @@ public class FibFrog {
 
 
     /**
-     * The task is very similar with the coin changing problem. It's a classical dynamic programming problem.
-     * The recurrence  relation in this case is:
+     * The task is very similar with the coin changing problem. It's a classical dynamic programming problem. The recurrence
+     * relation in this case is:
+     * <p>
      * K[i] = 0, if i == 0;
+     * <p>
      * K[i] = min(j<=F.length)(K[i-F[j]]+1), if i > 0  and ( A[i] == 1 or i == A.length)
-     * where K[i] is a number of jumps on i'th position
-     * F - fibonacci sequence
-     * A - the map of banks
+     * <p>
+     * Where K[i] is a number of jumps on i'th position F - fibonacci sequence A - the map of banks
      */
+
+    /*
+     * solution - d
+     * */
     public int solution4(int A[]) {
+
         if (A.length <= 2) {
             return 1;
         }
+
         int[] fibonacciSequence = getFibonacciSequence(A.length + 1);
-        int[] dynamicalMap = new int[A.length + 2];
-        Arrays.fill(dynamicalMap, -1);
-        dynamicalMap[0] = 0;
+        int[] Container = new int[A.length + 2];
+
+        Arrays.fill(Container, -1);
+        Container[0] = 0;
+
         for (int i = 0; i <= A.length; i++) {
+
             int min = Integer.MAX_VALUE;
+
             for (int fibSequenceElement : fibonacciSequence) {
+
                 int index = i - fibSequenceElement + 1;
+
                 if (index < 0) {
                     break;
                 }
-                if (dynamicalMap[index] != -1 && (i == A.length || A[i] == 1)) {
-                    min = Math.min(dynamicalMap[index] + 1, min);
+
+                if (Container[index] != -1 && (i == A.length || A[i] == 1)) {
+                    min = Math.min(Container[index] + 1, min);
                 }
             }
+
             if (min != Integer.MAX_VALUE) {
-                dynamicalMap[i + 1] = min;
+                Container[i + 1] = min;
             }
         }
-        return dynamicalMap[A.length + 1];
+
+        return Container[A.length + 1];
     }
 
     private int[] getFibonacciSequence(int n) {
-        ArrayList<Integer> result = new ArrayList<>();
-        result.add(1);
-        result.add(2);
-        int i = 2;
-        while (result.get(i - 1) < n) {
-            result.add(result.get(i - 1) + result.get(i - 2));
-            i++;
-        }
-        return result.stream().mapToInt(a -> a).toArray();
-    }
-
-
-
-    /*
-    * solution - a
-    * */
-    /**
-     * The task is very similar with the coin changing problem. It's a classical dynamic programming problem.
-     * The recurrence  relation in this case is:
-     * K[i] = 0, if i == 0;
-     * K[i] = min(j<=F.length)(K[i-F[j]]+1), if i > 0  and ( A[i] == 1 or i == A.length)
-     * where K[i] is a number of jumps on i'th position
-     * F - fibonacci sequence
-     * A - the map of banks
-     */
-    public int solution6(int A[]) {
-
-        if (A.length <= 2) {
-            return 1;
-        }
-
-        int[] fibonacciSequence = getFibonacciSeq(A.length + 1);
-        int[] dynamicalMap = new int[A.length + 2];
-
-        Arrays.fill(dynamicalMap, -1);
-        dynamicalMap[0] = 0;
-
-        for (int i = 0; i <= A.length; i++) {
-
-            int min = Integer.MAX_VALUE;
-
-            for (int fibSequenceElement : fibonacciSequence) {
-
-                int index = i - fibSequenceElement + 1;
-                if (index < 0) {
-                    break;
-                }
-
-                if (dynamicalMap[index] != -1 && (i == A.length || A[i] == 1)) {
-                    min = Math.min(dynamicalMap[index] + 1, min);
-                }
-            }
-
-            if (min != Integer.MAX_VALUE) {
-                dynamicalMap[i + 1] = min;
-            }
-        }
-        return dynamicalMap[A.length + 1];
-    }
-
-    private int[] getFibonacciSeq(int n) {
 
         ArrayList<Integer> result = new ArrayList<>();
+
         result.add(1);
         result.add(2);
 
         int i = 2;
 
         while (result.get(i - 1) < n) {
+
             result.add(result.get(i - 1) + result.get(i - 2));
             i++;
         }
