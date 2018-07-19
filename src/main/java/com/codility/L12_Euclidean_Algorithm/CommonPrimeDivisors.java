@@ -42,7 +42,7 @@ public class CommonPrimeDivisors {
 
 
     /*
-     * solution - A
+     * solution - a
      */
     private static int solution(int[] A, int[] B) {
 
@@ -55,7 +55,7 @@ public class CommonPrimeDivisors {
             int x = A[i];
             int y = B[i];
 
-            int gcd = gcd(x, y, 1);
+            int gcd = gcd(x, y);
             int gcdTmp = 0;
 
             while (x != 1) {
@@ -89,6 +89,16 @@ public class CommonPrimeDivisors {
         }
 
         return count;
+    }
+
+
+    public static int gcd(int a, int b) {
+
+        if (a % b == 0) {
+            return b;
+        }
+
+        return gcd(b, a % b);
     }
 
 
@@ -155,7 +165,7 @@ public class CommonPrimeDivisors {
 
 
     /*
-     * solution - B
+     * solution - b
      */
     public int solution1(int[] A, int[] B) {
 
@@ -168,11 +178,6 @@ public class CommonPrimeDivisors {
             }
         }
         return count;
-    }
-
-    public int gcd(int a, int b) {
-        if (a % b == 0) return b;
-        return gcd(b, a % b);
     }
 
     public boolean hasSamePrimeDivisors(int a, int b) {
@@ -288,12 +293,14 @@ public class CommonPrimeDivisors {
 
 
     /*
-     * solution - a
+     * solution - d
      * */
     public int solution4(int[] A, int[] B) {
 
         int counter = 0;
+
         for (int i = 0; i < A.length; i++) {
+
             if (hasCommonPrimeDivisors(A[i], B[i])) {
                 counter++;
             }
@@ -303,26 +310,33 @@ public class CommonPrimeDivisors {
     }
 
     private boolean hasCommonPrimeDivisors(int A, int B) {
+
         long commonGCD = gcd(A, B);
         long divisorA = A / commonGCD;
         long gcdA = gcd(commonGCD, divisorA);
+
         while (gcdA != 1) {
             divisorA /= gcdA;
             gcdA = gcd(commonGCD, divisorA);
         }
+
         long divisorB = B / commonGCD;
         long gcdB = gcd(commonGCD, divisorB);
+
         while (gcdB != 1) {
             divisorB /= gcdB;
             gcdB = gcd(commonGCD, divisorB);
         }
+
         return divisorA == 1 && divisorB == 1;
     }
 
     private long gcd(long p, long q) {
+
         if (q == 0) {
             return (int) p;
         }
+
         return gcd(q, p % q);
     }
 }

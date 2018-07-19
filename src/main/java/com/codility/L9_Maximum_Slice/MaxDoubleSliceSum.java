@@ -54,6 +54,8 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 * */
 
 
+import java.util.Arrays;
+
 /**
  * Created by Chaklader on 6/24/18.
  */
@@ -120,15 +122,18 @@ public class MaxDoubleSliceSum {
         int maxSum = 0;
 
         /*
-        *   Index =           [0, 1, 2,  3, 4, 5,  6, 7]
+            Index =           [0, 1, 2,  3, 4, 5,  6, 7]
             A =               [3, 2, 6, -1, 4, 5, -1, 2]
 
             maxEndingHere =   [0, 2, 8, 7, 11, 16, 15,0]
             maxStartingHere = [0, 16, 14, 8, 9, 5, 0, 0]
         * */
+
         /*
          * the maximum slice value between A[0] (excl.)
          * and A[i] (incl.) contains in maxEndingHere[i]
+         *
+         * prepare for the prefix sum
          * */
         for (int i = 1; i < N - 1; ++i) {
 
@@ -142,6 +147,9 @@ public class MaxDoubleSliceSum {
         /*
          * the maximum slice value between A[N-1] (excl.)
          * and A[i] (incl.) contains in maxStartingHere[i]
+         *
+         * prepare for the suffix sum
+         *
          * */
         for (int i = N - 2; i > 0; --i) {
 
@@ -212,7 +220,7 @@ public class MaxDoubleSliceSum {
     /*
      * solution - c
      */
-    public int solution2(int[] A) {
+    public static int solution2(int[] A) {
 
         int sum = 0;
 
@@ -220,8 +228,16 @@ public class MaxDoubleSliceSum {
 
         int[] lms = new int[N];
 
+        int[] rms = new int[N];
+
+
         int minSum = Integer.MAX_VALUE;
 
+        /*
+         * the minimum possible value from X (excl.) till the i-th
+         * index (inclusive) forward where X is a variable changes
+         * with i
+         * */
         for (int i = 0; i < N; i++) {
 
             sum += A[i];
@@ -239,9 +255,13 @@ public class MaxDoubleSliceSum {
         int totalSum = sum;
         sum = 0;
 
-        int[] rms = new int[N];
         minSum = Integer.MAX_VALUE;
 
+        /*
+         * the minimum possible value from Z (excl.) till the i-th
+         * index (inclusive) backward where Z is a variable changes
+         * with i
+         * */
         for (int i = N - 1; i >= 0; i--) {
 
             sum += A[i];
@@ -268,25 +288,20 @@ public class MaxDoubleSliceSum {
     }
 
 
-    /*
-     * solution - a
-     * */
-    public int solution4(int[] A) {
+    public static void main(String[] args) {
 
-        int[] df = new int[A.length];
-        int[] df2 = new int[A.length];
-        for (int i = 1; i < A.length - 1; i++) {
-            df[i] = Math.max(df[i - 1] + A[i], 0);
-        }
+        int[] A = new int[8];
 
-        for (int i = A.length - 2; i > 0; i--) {
-            df2[i] = Math.max(df2[i + 1] + A[i], 0);
-        }
+        A[0] = 3;
+        A[1] = 2;
+        A[2] = 6;
+        A[3] = -1;
+        A[4] = 4;
+        A[5] = 5;
+        A[6] = -1;
+        A[7] = 2;
 
-        int max = 0;
-        for (int i = 1; i < A.length - 1; i++) {
-            max = Math.max(max, df[i - 1] + df2[i + 1]);
-        }
-        return max;
+
+        System.out.println(solution2(A));
     }
 }

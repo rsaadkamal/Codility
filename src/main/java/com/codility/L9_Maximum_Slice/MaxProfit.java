@@ -48,7 +48,7 @@ public class MaxProfit {
 
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int solution(int[] A) {
 
@@ -90,11 +90,12 @@ public class MaxProfit {
 
 
     /*
-     * solution - B
+     * solution - b
      */
     public int solution1(int[] A) {
 
         int length = A.length;
+
         int maxProfit = 0;
         int maxEnding = 0;
 
@@ -120,7 +121,7 @@ public class MaxProfit {
         int min = Integer.MAX_VALUE;
         int result = 0;
 
-        for (final int value : A) {
+        for (int value : A) {
 
             if (value < min) {
                 min = value;
@@ -166,23 +167,28 @@ public class MaxProfit {
 
 
     /*
-     * solution - a
+     * solution - e
      * */
     public int solution4(int[] A) {
 
         if (A.length == 0) {
             return 0;
         }
-        int[] df = new int[A.length - 1];
+
+        int[] C = new int[A.length - 1];
+
         for (int i = 1; i < A.length; i++) {
-            df[i - 1] = A[i] - A[i - 1];
+            C[i - 1] = A[i] - A[i - 1];
         }
+
         int maxEnding = 0;
         int maxSlice = 0;
-        for (int i = 0; i < df.length; i++) {
-            maxEnding = Math.max(maxEnding + df[i], 0);
+
+        for (int i = 0; i < C.length; i++) {
+            maxEnding = Math.max(maxEnding + C[i], 0);
             maxSlice = Math.max(maxEnding, maxSlice);
         }
+
         return Math.max(maxSlice, 0);
     }
 }

@@ -57,11 +57,10 @@ public class MinAbsSumOfTwo {
 
 
     /*
-     * Find the minimal absolute value of A sum of two elements
+     * Find the minimal absolute value of a sum of two elements
      * */
-
     /*
-     * solution - A
+     * solution - a
      */
     public static int solution(int[] A) {
 
@@ -112,9 +111,8 @@ public class MinAbsSumOfTwo {
     }
 
 
-
     /*
-     * solution - B
+     * solution - b
      */
     public static int solution1(int[] A) {
 
@@ -230,7 +228,6 @@ public class MinAbsSumOfTwo {
     }
 
 
-
     /*
      * solution - e
      */
@@ -256,12 +253,16 @@ public class MinAbsSumOfTwo {
 
 
     public int nativeSolution(int[] A) {
+
         int min = Integer.MAX_VALUE;
+
         for (int i = 0; i < A.length; i++) {
+
             for (int j = i; j < A.length; j++) {
                 min = Math.min(min, Math.abs(A[i] + A[j]));
             }
         }
+
         return min;
     }
 }

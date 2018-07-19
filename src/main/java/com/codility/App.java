@@ -46,7 +46,7 @@ public class App {
 
         int[] A = {1, 5, 2, -2};
 
-        System.out.println("Miami");
+        System.out.println("Mietschuldenfreiheitsbescheinigung".length());
     }
 }
 

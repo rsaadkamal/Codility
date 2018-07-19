@@ -49,20 +49,22 @@ import java.util.stream.IntStream;
 public class Dominator {
 
 
-
     /*
-    * ALGORITHMS
-    * ----------
-    *
-    * Get the element with maximum occurance from the array
-    *
-    * i.   If the stack is empty, push inside
-    * ii.  If not empty and same element as previous,
-		   push again
-	* iii. If stack is not empty and doesn't not contain the
-	*      same element, pop the stack
-    *
-    * */
+     * ALGORITHM
+     * ---------
+     *
+     *
+     * Get the element with maximum occurance from the array
+     *
+     * i.   If the stack is empty, push inside
+     *
+     * ii.  If not empty and same element as previous, push
+     * again
+     *
+     * iii. If stack is not empty and doesn't not contain the
+     *      same element, pop the stack
+     *
+     * */
 
 
     /*
@@ -72,21 +74,22 @@ public class Dominator {
      * */
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int solution(int[] A) {
 
 
         Stack<Integer> stack = new Stack<Integer>();
 
-        for (int i = 0; i < A.length; i++) {
+        for (Integer a : A) {
 
             if (stack.isEmpty()) {
-                stack.push(A[i]);
+                stack.push(a);
                 continue;
             }
-            if (stack.peek() == A[i]) {
-                stack.push(A[i]);
+
+            if (stack.peek() == a) {
+                stack.push(a);
             } else {
                 stack.pop();
             }
@@ -121,7 +124,7 @@ public class Dominator {
 
 
     /*
-     * solution - B
+     * solution - b
      */
     public int solution1(int[] A) {
 
@@ -179,35 +182,43 @@ public class Dominator {
 
 
     /*
-     * solution - a
+     * solution - c
      * */
-    public int solution4(int[] A) {
+    public int solution2(int[] A) {
 
-        HashMap<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < A.length; i++) {
+
             if (!map.containsKey(A[i])) {
                 map.put(A[i], 1);
             } else {
                 map.put(A[i], map.get(A[i]) + 1);
             }
         }
+
         int max = Integer.MIN_VALUE;
         int maxElement = -1;
+
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+
             if (entry.getValue() > max) {
                 max = entry.getValue();
                 maxElement = entry.getKey();
             }
         }
+
         if (A.length / 2 >= max) {
             return -1;
         }
+
         for (int i = 0; i < A.length; i++) {
+
             if (A[i] == maxElement) {
                 return i;
             }
         }
+
         return -1;
     }
 }

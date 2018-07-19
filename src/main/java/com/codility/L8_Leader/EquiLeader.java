@@ -62,7 +62,7 @@ public class EquiLeader {
      * */
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int solution(int[] A) {
 
@@ -121,8 +121,12 @@ public class EquiLeader {
             }
 
             /*
-             * PREMISE: If certain number x has higher frequency than all other numbers of an
-             * array, x has occurance more than half of the total array size.
+             * PREMISE
+             * -------
+             *
+             * if certain number x has higher frequency than all other numbers of an
+             * array, x has occurance more than half of the total array size and is
+             * a dominator
              *
              *
              *  Let the number X in section of L is C. So the number of other  elements in L
@@ -143,7 +147,7 @@ public class EquiLeader {
 
 
     /*
-     * solution - B
+     * solution - b
      */
     public int solution1(int[] A) {
 
@@ -154,11 +158,15 @@ public class EquiLeader {
         int value = A[0];
         int size = 0;
 
+
         for (int i = 0; i < A.length; i++) {
+
             if (size == 0) {
+
                 size++;
                 value = A[i];
             } else {
+
                 if (A[i] == value) {
                     size++;
                 } else {
@@ -204,13 +212,14 @@ public class EquiLeader {
 
 
     /*
-     * solution - a
+     * solution - c
      * */
-    public int solution4(int[] A) {
+    public int solution2(int[] A) {
 
         Stack<Integer> stack = new Stack<>();
 
         for (int i = 0; i < A.length; i++) {
+
             if (stack.isEmpty()) {
                 stack.push(A[i]);
             } else {
@@ -229,6 +238,7 @@ public class EquiLeader {
         int total = 0;
 
         for (int i = 0; i < A.length; i++) {
+
             if (A[i] == stack.lastElement()) {
                 total++;
             }

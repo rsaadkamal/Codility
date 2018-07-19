@@ -55,22 +55,23 @@ public class MaxSliceSum {
         }
 
         int maxSliceSum = 0;
-        int currentSum = 0;
+        int currSum = 0;
 
 
         /*
          * ALGORITHMS
          * ----------
          *
-         * i.  Keep incrementing the slice as long as the sum is greater than zero.
+         * i.  Keep incrementing the slice as int as the sum is greater than zero.
          *     If the sum of current slice becomes negative, reset the storage value
          *     to zero.
+         *
          * ii. Use A second storage to hold the max value from the previous counting
          * */
         for (int i = 0; i < A.length; i++) {
 
-            currentSum = (currentSum + A[i]) > 0 ? (currentSum + A[i]) : 0;
-            maxSliceSum = currentSum > maxSliceSum ? currentSum : maxSliceSum;
+            currSum = (currSum + A[i]) > 0 ? (currSum + A[i]) : 0;
+            maxSliceSum = currSum > maxSliceSum ? currSum : maxSliceSum;
         }
 
         return maxSliceSum;
@@ -83,6 +84,7 @@ public class MaxSliceSum {
     public static int solution1(int[] A) {
 
         int N = A.length;
+
         int maxEnding = A[0];
         int maxSlice = A[0];
 
@@ -103,41 +105,49 @@ public class MaxSliceSum {
 
         int N = A.length;
 
-        final long[] lms = new long[N];
-        final long[] rms = new long[N];
+        int[] lms = new int[N];
+        int[] rms = new int[N];
 
-        long minSum = 0;
-        long sum = 0;
+        int minSum = 0;
+        int sum = 0;
 
         for (int i = 0; i < A.length; i++) {
+
             lms[i] = minSum;
-            sum += (long) A[i];
+            sum += (int) A[i];
+
             if (sum < minSum) {
                 minSum = sum;
             }
         }
 
-        long total = sum;
+        int total = sum;
+
         minSum = 0;
         sum = 0;
 
         for (int i = A.length - 1; i >= 0; i--) {
+
             rms[i] = minSum;
-            sum += (long) A[i];
+            sum += (int) A[i];
+
             if (sum < minSum) {
                 minSum = sum;
             }
         }
 
-        long result = Integer.MIN_VALUE;
+        int result = Integer.MIN_VALUE;
+
         for (int i = 0; i < A.length; i++) {
+
             sum = total - lms[i] - rms[i];
+
             if (sum > result) {
                 result = sum;
             }
         }
 
-        return (int) result;
+        return result;
     }
 
 

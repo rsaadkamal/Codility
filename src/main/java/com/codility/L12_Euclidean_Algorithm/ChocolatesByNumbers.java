@@ -34,6 +34,7 @@ expected worst-case space complexity is O(log(N+M)).
 * */
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Chaklader on 6/25/18.
@@ -62,8 +63,8 @@ public class ChocolatesByNumbers {
         while (X[i] == 0) {
 
             /*
-            * eat the chocolate in the i-th index
-            * */
+             * eat the chocolate in the i-th index
+             * */
             X[i] = 1;
 
             i = (i + M) % N;
@@ -75,7 +76,7 @@ public class ChocolatesByNumbers {
 
 
     /*
-     * solution - B
+     * solution - b
      */
     private static int solution(int N, int M) {
 
@@ -83,11 +84,25 @@ public class ChocolatesByNumbers {
          * LCM(x, y) * GCD(x, y) = x * y
          * LCM(x, y) = (x * y) / GCD(x, y)
          * */
+        int a = gcd(N, M);
 
-        int a = gcd(N, M, 1);
         return N / a;
     }
 
+
+    public static int gcd(int a, int b) {
+
+        if (a % b == 0) {
+            return b;
+        }
+
+        return gcd(b, a % b);
+    }
+
+    private static int lcm(int a, int b) {
+
+        return a * (b / gcd(a, b));
+    }
 
     private static int gcd(int a, int b, int res) {
 
@@ -107,53 +122,46 @@ public class ChocolatesByNumbers {
     }
 
 
-
-
     /*
      * solution - c
      * */
     public int solution2(int N, int M) {
 
-        return N / gcd1(N, M);
+        return N / gcd(N, M);
     }
-
-    public static int gcd1(int a, int b) {
-
-        if (a % b == 0) {
-            return b;
-        }
-        return gcd1(b, a % b);
-    }
-
-    private static int lcm(int a, int b) {
-
-        return a * (b / gcd1(a, b));
-    }
-
-
-
-
 
     /*
-    * solution - a
-    * */
-    public int solution4(int N, int M) {
+     * solution - d
+     * */
+    public int solution3(int N, int M) {
+
         return (int) (lcm(N, M) / M);
     }
 
-    public int nativeSolution(int N, int M) {
-        HashMap<Integer, Boolean> visited = new HashMap<>();
-        int position = 0;
+
+    /*
+     * solution - e
+     * */
+    public int solution4(int N, int M) {
+
+        Map<Integer, Boolean> visited = new HashMap<>();
+
+        int pos = 0;
         int result = 0;
-        while (!visited.containsKey(position)) {
-            visited.put(position, true);
-            position = (position + M) % N;
+
+        while (!visited.containsKey(pos)) {
+
+            visited.put(pos, true);
+            pos = (pos + M) % N;
+
             result++;
         }
+
         return result;
     }
 
     private long gcd(long p, long q) {
+
         if (q == 0) {
             return (int) p;
         }
@@ -161,6 +169,14 @@ public class ChocolatesByNumbers {
     }
 
     private long lcm(long p, long q) {
+
         return p * (q / gcd(p, q));
+    }
+
+
+    public static void main(String[] args) {
+
+        System.out.println("Helsinki");
+        System.out.println(gcd(4, 10));
     }
 }
