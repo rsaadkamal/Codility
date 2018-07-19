@@ -7,17 +7,17 @@ The abs sum of two for A pair of indices (P, Q) is the absolute value |A[P] + A[
 
 For example, the following array A:
 
-  A[0] =  1
-  A[1] =  4
-  A[2] = -3
+      A[0] =  1
+      A[1] =  4
+      A[2] = -3
 
-has pairs of indices (0, 0), (0, 1), (0, 2), (1, 1), (1, 2), (2, 2).
-The abs sum of two for the pair (0, 0) is A[0] + A[0] = |1 + 1| = 2.
-The abs sum of two for the pair (0, 1) is A[0] + A[1] = |1 + 4| = 5.
-The abs sum of two for the pair (0, 2) is A[0] + A[2] = |1 + (−3)| = 2.
-The abs sum of two for the pair (1, 1) is A[1] + A[1] = |4 + 4| = 8.
-The abs sum of two for the pair (1, 2) is A[1] + A[2] = |4 + (−3)| = 1.
-The abs sum of two for the pair (2, 2) is A[2] + A[2] = |(−3) + (−3)| = 6.
+    has pairs of indices (0, 0), (0, 1), (0, 2), (1, 1), (1, 2), (2, 2).
+    The abs sum of two for the pair (0, 0) is A[0] + A[0] = |1 + 1| = 2.
+    The abs sum of two for the pair (0, 1) is A[0] + A[1] = |1 + 4| = 5.
+    The abs sum of two for the pair (0, 2) is A[0] + A[2] = |1 + (−3)| = 2.
+    The abs sum of two for the pair (1, 1) is A[1] + A[1] = |4 + 4| = 8.
+    The abs sum of two for the pair (1, 2) is A[1] + A[2] = |4 + (−3)| = 1.
+    The abs sum of two for the pair (2, 2) is A[2] + A[2] = |(−3) + (−3)| = 6.
 
 Write A function:
 
@@ -30,6 +30,7 @@ For example, given the following array A:
   A[0] =  1
   A[1] =  4
   A[2] = -3
+
 the function should return 1, as explained above.
 
 Given array A:
@@ -39,15 +40,19 @@ Given array A:
   A[2] =  5
   A[3] =-10
   A[4] =  3
+
 the function should return |(−8) + 5| = 3.
 
 Assume that:
 
 N is an integer within the range [1..100,000];
 each element of array A is an integer within the range [−1,000,000,000..1,000,000,000].
-Complexity:
+
+Complexity
+----------
 
 expected worst-case time complexity is O(N*log(N));
+
 expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
 * */
 
@@ -239,8 +244,10 @@ public class MinAbsSumOfTwo {
         int min = Integer.MAX_VALUE;
 
         while (back <= front) {
+
             int current = A[back] + A[front];
             min = Math.min(min, Math.abs(current));
+
             if (current <= 0) {
                 back++;
             } else {
@@ -248,11 +255,15 @@ public class MinAbsSumOfTwo {
             }
 
         }
+
         return min;
     }
 
 
-    public int nativeSolution(int[] A) {
+    /*
+     * solution - f
+     * */
+    public int solution5(int[] A) {
 
         int min = Integer.MAX_VALUE;
 

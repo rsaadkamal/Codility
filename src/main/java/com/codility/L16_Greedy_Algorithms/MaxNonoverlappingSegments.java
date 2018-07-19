@@ -51,9 +51,9 @@ public class MaxNonoverlappingSegments {
 
 
     /*
-     * solution - A
+     * solution - a
      * */
-    public int solution(int A[], int B[]) {
+    public static int solution(int A[], int B[]) {
 
         int N = A.length;
 
@@ -61,25 +61,38 @@ public class MaxNonoverlappingSegments {
             return N;
         }
 
+//        int count = 0;
         int count = 1;
-        int previousEnd = B[0];
+        int previous = B[0];
 
-        int currentSegment;
+        int i;
+        boolean check = false;
 
-        for (currentSegment = 1; currentSegment < N; currentSegment++) {
+
+        for (i = 1; i < N; i++) {
 
             /*
             if the next segments start > prvious
             segments end there will be no overlapping
             */
-            if (A[currentSegment] > previousEnd) {
+            if (A[i] > previous) {
+
+                if (!check) {
+                    check = true;
+                }
 
                 count++;
-                previousEnd = B[currentSegment];
+                previous = B[i];
             }
         }
 
+
         return count;
+
+        /*
+         * we will return 0 if there is no non-overlapping segments
+         * */
+//        return check ? count + 1 : 0;
     }
 
 
@@ -93,13 +106,14 @@ public class MaxNonoverlappingSegments {
         }
 
         int result = 0;
-        int besti = 0;
+        int j = 0;
 
         for (int i = 1; i < A.length; i++) {
 
-            if (A[i] > B[besti]) {
+            if (A[i] > B[j]) {
+
                 result++;
-                besti = i;
+                j = i;
             }
         }
 
@@ -154,5 +168,28 @@ public class MaxNonoverlappingSegments {
         }
 
         return counter;
+    }
+
+    public static void main(String[] args) {
+
+
+        int[] A = new int[2];
+        int[] B = new int[2];
+
+        A[0] = 1;
+        B[0] = 5;
+
+        A[1] = 3;
+        B[1] = 6;
+
+        System.out.println(solution(A, B));
+
+
+//        A[2] = 7;
+//        B[2] = 8;
+//        A[3] = 9;
+//        B[3] = 9;
+//        A[4] = 9;
+//        B[4] = 10;
     }
 }

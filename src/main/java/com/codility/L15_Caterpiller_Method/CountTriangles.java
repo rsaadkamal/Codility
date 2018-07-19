@@ -61,10 +61,9 @@ public class CountTriangles {
 
 
     /*
-     * solution - A
+     * solution - a
      * */
     public static int solution(int[] A) {
-
 
         int N = A.length;
         int result = 0;
@@ -92,7 +91,10 @@ public class CountTriangles {
                     front++;
                 }
 
-                result += front - (j + 1);
+                /*
+                 * (front -1) is the index till the condition is full-filled
+                 * */
+                result += (front - 1) - j;
             }
         }
 
@@ -130,7 +132,6 @@ public class CountTriangles {
     }
 
 
-
     /*
      * solution - c
      * */
@@ -144,10 +145,15 @@ public class CountTriangles {
         int result = 0;
 
         for (int first = 0; first < A.length; first++) {
+
             int third = first + 1;
+
             for (int second = first + 1; second < A.length; second++) {
-                while (third < A.length && A[first] + A[second] > A[third])
+
+                while (third < A.length && A[first] + A[second] > A[third]) {
                     third++;
+                }
+
                 result += third - second - 1;
             }
         }

@@ -68,64 +68,18 @@ public class TieRopes {
 
         int count = 0;
 
-        int adjoinedLength = 0;
-
-        for (int i = 0; i < A.length; i++) {
-
-            adjoinedLength += A[i];
-
-            if (adjoinedLength >= K) {
-
-                count++;
-                adjoinedLength = 0;
-            }
-        }
-
-        return count;
-    }
-
-
-    /*
-     * solution - b
-     * */
-    public int solution1(int K, int[] A) {
-
-        int N = A.length;
-
-        int count = 0;
-        int length = 0;
+        int len = 0;
 
         for (int rope : A) {
 
-            length += rope;
+            len += rope;
 
-            if (length >= K) {
+            if (len >= K) {
                 count++;
-                length = 0;
+                len = 0;
             }
         }
 
         return count;
-    }
-
-
-    /*
-     * solution - c
-     * */
-    public int solution2(int K, int[] A) {
-
-        int counter = 0;
-        int sum = 0;
-
-        for (int i : A) {
-
-            sum += i;
-            if (sum >= K) {
-                sum = 0;
-                counter++;
-            }
-        }
-
-        return counter;
     }
 }

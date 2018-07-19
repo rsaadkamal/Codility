@@ -55,7 +55,7 @@ public class AbsDistinct {
      * */
     public static int solution(int[] A) {
 
-        return (int) IntStream.of(A).map(i -> Math.abs(i)).distinct().count();
+        return (int) IntStream.of(A).map(value -> Math.abs(value)).distinct().count();
     }
 
 
@@ -64,7 +64,7 @@ public class AbsDistinct {
      * */
     public static int solution1(int[] A) {
 
-        int numOfDups = 0;
+        int dups = 0;
         int N = A.length;
 
         for (int i = 0; i < N; i++) {
@@ -79,11 +79,11 @@ public class AbsDistinct {
         for (int i = 1; i < N; i++) {
 
             if (A[i] == A[i - 1]) {
-                numOfDups++;
+                dups++;
             }
         }
 
-        return N - numOfDups;
+        return N - dups;
     }
 
 
@@ -94,52 +94,52 @@ public class AbsDistinct {
 
         int N = A.length;
 
-        int head = 0;
-        int tail = N - 1;
+        int tail = 0;
+        int head = N - 1;
+
         int result = 1;
 
         /*
          * the current maximal value
          * */
-        int currMaxValue = Math.max(Math.abs(A[head]), Math.abs(A[tail]));
+        int currMaxValue = Math.max(Math.abs(A[tail]), Math.abs(A[head]));
 
 
-        if (A[head] == Integer.MIN_VALUE) {
-            currMaxValue = Math.abs(A[head]);
+        if (A[tail] == Integer.MIN_VALUE) {
+            currMaxValue = Math.abs(A[tail]);
         }
 
-        while (head <= tail) {
+        while (tail <= head) {
 
-            int currHead = Math.abs(A[head]);
+            int currHead = Math.abs(A[tail]);
 
             /*
              * Same value of the current maximal value should not be counted
              * */
             if (currHead == currMaxValue) {
-                head++;
+                tail++;
                 continue;
             }
 
-            int currTail = Math.abs(A[tail]);
+            int currTail = Math.abs(A[head]);
 
             /*
              * Same value of the current maximal value should not be counted
              * */
             if (currTail == currMaxValue) {
-                tail--;
+                head--;
                 continue;
             }
-
 
             /*
              * get the new current maximal value
              * */
             if (currHead >= currTail) {
                 currMaxValue = currHead;
-                head++;
+                tail++;
             } else {
                 currMaxValue = currTail;
-                tail--;
+                head--;
             }
 
             result++;
@@ -182,6 +182,7 @@ public class AbsDistinct {
             }
 
             if (j < 0 || negatives[j] != A[i]) {
+
                 if (prev != A[i]) {
                     result++;
                     prev = A[i];
@@ -201,13 +202,16 @@ public class AbsDistinct {
         HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < A.length; i++) {
+
             int key = Math.abs(A[i]);
+
             if (map.containsKey(key)) {
                 map.put(Math.abs(key), map.get(key) + 1);
             } else {
                 map.put(key, 0);
             }
         }
+
         return map.size();
     }
 }

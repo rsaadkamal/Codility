@@ -62,7 +62,7 @@ public class Ladder {
 
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int[] solution(int[] A, int[] B) {
 
@@ -76,7 +76,6 @@ public class Ladder {
         fibs[0] = new BigInteger("0");
         fibs[1] = new BigInteger("1");
 
-
         /*
          * fibs = [0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597, ....., ...]
          * */
@@ -88,6 +87,9 @@ public class Ladder {
 
         for (int i = 0; i < B.length; i++) {
 
+            /*
+             * Each element of array A is an integer within the range [1, 2, 3, 4......, N] where N = array size
+             * */
             BigInteger currPow = new BigInteger(String.valueOf((long) Math.pow(2, B[i])));
             result[i] = fibs[A[i] + 1].mod(currPow).intValue();
         }
@@ -97,7 +99,7 @@ public class Ladder {
 
 
     /*
-     * solution - B
+     * solution - b
      */
     public int[] solution1(int[] A, int[] B) {
 
@@ -163,36 +165,44 @@ public class Ladder {
 
 
     /*
-     * solution - a
+     * solution - d
      * */
 
     /**
      * Again it's a variant of the classical problem about coins and quantity of change variants.
      * Common recurrence function is:
+     * <p>
      * F(n) = sum (j<=Coins.length) ( n - coins[j] )
-     * In that case we will sum F(n) = F(n-1) + F(n-2)
-     * That is exact fibonacci recurrence relation.
+     * <p>
+     * In that case we will sum F(n) = F(n-1) + F(n-2) That is exact fibonacci recurrence relation.
      * So we can use the fibonacci sequence
      */
     public int[] solution4(int A[], int B[]) {
 
         int[] fibonacciSequence = getFibSequence(B.length + 2);
         int[] result = new int[B.length];
+
         for (int i = 0; i < B.length; i++) {
             result[i] = fibonacciSequence[A[i]] % (1 << B[i]);
         }
+
         return result;
     }
 
+
     public int[] getFibSequence(int n) {
+
         int[] result = new int[n + 1];
+
         result[0] = 0;
         result[1] = 1;
         result[2] = 2;
+
         for (int i = 3; i <= n; i++) {
             //we don't care about a start of a number
             result[i] = (result[i - 1] + result[i - 2]) % 1073741824;
         }
+
         return result;
     }
 }

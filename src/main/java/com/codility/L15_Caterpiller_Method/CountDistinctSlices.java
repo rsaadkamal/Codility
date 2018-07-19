@@ -54,9 +54,8 @@ public class CountDistinctSlices {
     /*
      * The goal is to calculate the number of distinct slices
      * */
-
     /*
-     * solution - A
+     * solution - a
      * */
     public static int solution(int[] A, int M) {
 
@@ -85,8 +84,8 @@ public class CountDistinctSlices {
             while (front < N && !visited[A[front]]) {
 
                 /*
-                 * for the n-th element of the array,
-                 * we add n additional entries
+                 * for the n-th element of the array, we add n additional
+                 * entries
                  * */
                 result += front - back + 1;
 
@@ -98,7 +97,9 @@ public class CountDistinctSlices {
             }
 
             /*
-             * break just before the back reached to the front
+             * break when we get the same element
+             *
+             * A = [3, 4, 5, 5, 2]
              * */
             while (front < N && back < N && A[back] != A[front]) {
                 visited[A[back]] = false;
@@ -118,9 +119,9 @@ public class CountDistinctSlices {
 
 
     /*
-     * solution - B
+     * solution - b
      * */
-    public int solution1(int M, int[] A) {
+    public static int solution1(int M, int[] A) {
 
 
         /*
@@ -183,7 +184,7 @@ public class CountDistinctSlices {
         int j = 0;
         int k = -1;
 
-        long result = 0;
+        int result = 0;
 
 
         /*
@@ -191,8 +192,8 @@ public class CountDistinctSlices {
          * */
         while (j < A.length) {
 
-            long c = 0;
-            long n;
+            int c = 0;
+            int n;
 
             /*
              * there will be repeated slices. remove them
@@ -200,7 +201,7 @@ public class CountDistinctSlices {
             if (k >= 0) {
 
                 n = k - i;
-                c = c - (n * (n + 1) / 2l);
+                c = c - (n * (n + 1) / 2);
             }
 
             while (j < A.length && !D[A[j]]) {
@@ -216,7 +217,7 @@ public class CountDistinctSlices {
              * count all slices for A fragment. repeated already removed
              * */
 
-            c = c + (n * (n + 1) / 2l);
+            c = c + (n * (n + 1) / 2);
             result += c;
 
             /*
@@ -243,7 +244,6 @@ public class CountDistinctSlices {
     }
 
 
-
     /*
      * solution - d
      * */
@@ -257,6 +257,7 @@ public class CountDistinctSlices {
         for (int front = 0; front < A.length; front++) {
 
             while (found[A[front]]) {
+
                 found[A[back]] = false;
                 back++;
             }
@@ -268,7 +269,26 @@ public class CountDistinctSlices {
                 return 1000000000;
             }
         }
+
         return count;
     }
 
+
+    public static void main(String[] args) {
+
+//        int[] A = new int[5];
+
+//        A[0] = 3;
+//        A[1] = 4;
+//        A[2] = 5;
+//        A[3] = 5;
+//        A[4] = 2;
+
+//        int[] A = {3, 4, 5, 5, 2};
+        int[] A = {5, 3, 4, 5, 2};
+
+        int M = 6;
+
+        solution(A, M);
+    }
 }
