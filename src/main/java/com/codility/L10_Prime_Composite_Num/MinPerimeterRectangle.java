@@ -43,10 +43,16 @@ public class MinPerimeterRectangle {
 
         int min = Integer.MAX_VALUE;
 
+        /*
+         * we include the square root if exist
+         * */
         for (int i = 1; i * i <= N; i++) {
 
             if (N % i == 0) {
-                min = 2 * (i + N / i) < min ? 2 * (i + N / i) : min;
+
+                int area = 2 * (i + N / i);
+
+                min = area < min ? area : min;
             }
         }
 

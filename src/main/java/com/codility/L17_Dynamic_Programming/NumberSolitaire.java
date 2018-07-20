@@ -59,56 +59,59 @@ public class NumberSolitaire {
 
 
     /*
-     * The goal of the game is to move the pebble to square number N − 1.
-     * The result of the game is the sum of the numbers written on all
-     * marked squares.
-     *
-     * Given FrogJmp non-empty array A of N integers, returns the maximal result
-     * that can be achieved on the board represented by array A.
+     * In a given array, find the subset of maximal sum in which
+     * the distance between consecutive elements is at most 6
      * */
-
     /*
      * solution - a
      * */
     public int solution(int[] A) {
 
         int N = A.length;
-        int[] maximumSum = new int[N];
+        int[] max = new int[N];
 
-        maximumSum[0] = A[0];
+        max[0] = A[0];
 
-
-        for (int spacesIndex = 1; spacesIndex < N; spacesIndex++) {
+        for (int i = 1; i < N; i++) {
 
             /*
-             * Necessary to reduce the iteration and improve performance
+             * necessary to reduce the iteration and improve performance
              * */
-            maximumSum[spacesIndex] = maximumSum[spacesIndex - 1];
+            max[i] = max[i - 1];
 
-            noNeedloop:
-            for (int diceFace = 2; diceFace <= 6; diceFace++) {
-
-                if (spacesIndex == 1) {
-
-                    break noNeedloop;
-                }
+            for (int j = 2; j <= 6; j++) {
 
                 /*
-                 * we can only go backward whichever smaller
-                 * of the spaces left behind or 6 dice faces.
+                 *
+                 * PREMISE
+                 * -------
+                 *
+                 * we can arrive in the current square only maximum 6 step behind,
+                 * where, i = previous steps and j = number on the dice face
+                 *
+                 * i.   we already know the maximum value of the previous square
+                 *
+                 * ii.  we need to know the values from the previous 2 to 6 square
+                 *
+                 * iii. store the maximum value of the previous 6 squares in the
+                 * i-th index
                  * */
 
-                if (spacesIndex >= diceFace) {
-                    maximumSum[spacesIndex] = Math.max(maximumSum[spacesIndex], maximumSum[spacesIndex - diceFace]);
+                if (i == 1) {
+                    break;
+                }
+
+                if (i >= j) {
+                    max[i] = Math.max(max[i], max[i - j]);
                 } else {
                     break;
                 }
             }
 
-            maximumSum[spacesIndex] += A[spacesIndex];
+            max[i] += A[i];
         }
 
-        return maximumSum[N - 1];
+        return max[N - 1];
     }
 
 
@@ -121,23 +124,26 @@ public class NumberSolitaire {
             return 0;
         }
 
-        int[] dp = new int[A.length];
-        dp[0] = A[0];
+        int[] max = new int[A.length];
+        max[0] = A[0];
 
         for (int i = 1; i < A.length; i++) {
 
-            dp[i] = dp[i - 1];
+            max[i] = max[i - 1];
+
             for (int minus = 2; minus <= 6; minus++) {
+
                 if (i >= minus) {
-                    dp[i] = Math.max(dp[i], dp[i - minus]);
+                    max[i] = Math.max(max[i], max[i - minus]);
                 } else {
                     break;
                 }
             }
-            dp[i] += A[i];
+
+            max[i] += A[i];
         }
 
-        return dp[A.length - 1];
+        return max[A.length - 1];
     }
 }
 

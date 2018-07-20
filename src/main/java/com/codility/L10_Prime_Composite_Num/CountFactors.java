@@ -41,12 +41,15 @@ public class CountFactors {
          * */
         for (int i = 1; (long) i * i <= N; i++) {
 
+            /*
+             * we only have one factor
+             * */
             if (i * i == N) {
                 return ++result;
             }
 
             /*
-             * we get 2 factors/ divisors
+             * we get 2 factors/ divisors ie i and (N/i)
              * */
             else if (N % i == 0) {
                 result += 2;
@@ -100,6 +103,7 @@ public class CountFactors {
         if (i * i == N) {
             result++;
         }
+
         return result;
     }
 
@@ -112,20 +116,24 @@ public class CountFactors {
         if (N <= 0) {
             return 0;
         }
+
         if (N == 1) {
             return 1;
         }
+
         int counter = 0;
+
         for (int i = 1; i <= Math.sqrt(N); i++) {
+
             if (N % i == 0) {
                 counter += 2;
             }
         }
+
         if (Math.sqrt(N) % 1 == 0.0) {
             counter--;
         }
+
         return counter;
     }
-
-
 }
