@@ -58,12 +58,13 @@ import java.util.*;
 public class CountNonDivisible {
 
     /*
-     * Given an array A consisting of N integers, returns A sequence
-     * of integers representing the amount of non-divisors
+     * Given an array A consisting of N integers, returns a
+     * sequence of integers representing the amount of non
+     * divisors
      * */
 
     /*
-     * solution - A
+     * solution - a
      */
     public static int[] solution(int[] A) {
 
@@ -144,7 +145,7 @@ public class CountNonDivisible {
 
 
     /*
-     * solution - B
+     * solution - b
      */
     public static int[] solution1(int[] A) {
 
@@ -195,19 +196,21 @@ public class CountNonDivisible {
         for (int i = 0; i < A.length; i++) {
 
             int value = A[i];
-            Set<Integer> d = divisors.get(value);
+            Set<Integer> divisor = divisors.get(value);
 
             int totalOccurances = 0;
 
-            for (Integer divisor : d) {
+            for (Integer d : divisor) {
 
-                if (setA.contains(divisor)) {
+                if (setA.contains(d)) {
 
-                    totalOccurances += occurrences[divisor];
+                    totalOccurances += occurrences[d];
                 }
             }
+
             nonDivisors[i] = A.length - totalOccurances;
         }
+
         return nonDivisors;
     }
 
@@ -217,9 +220,9 @@ public class CountNonDivisible {
         Set<Integer> result = new HashSet<Integer>();
 
         for (int value : A) {
-
             result.add(value);
         }
+
         return result;
     }
 
@@ -334,32 +337,47 @@ public class CountNonDivisible {
 
 
     /*
-     * solution - a
+     * solution - e
      * */
     public int[] solution4(int[] A) {
 
         int[] copy = A.clone();
+
         Arrays.sort(copy);
+
         HashMap<Integer, ArrayList<Integer>> factors = new HashMap<>();
+
         for (int i = 0; i < A.length; i++) {
-            //find all factors for a number
+
+            /*
+             * find all factors for a number
+             * */
             ArrayList<Integer> currentFactors = new ArrayList<>();
+
             for (int j = 1; j <= Math.sqrt(A[i]); j++) {
+
                 if (A[i] % j == 0) {
+
                     currentFactors.add(j);
+
                     if (j != A[i] / j) {
                         currentFactors.add(A[i] / j);
                     }
                 }
             }
+
             factors.put(A[i], currentFactors);
         }
+
         ArrayList<Integer> one = new ArrayList<Integer>();
+
         one.add(1);
         factors.put(1, one);
 
         HashMap<Integer, Integer> distinct = new HashMap<>();
+
         for (int i = 0; i < A.length; i++) {
+
             if (distinct.containsKey(A[i])) {
                 distinct.put(A[i], distinct.get(A[i]) + 1);
             } else {
@@ -369,14 +387,19 @@ public class CountNonDivisible {
 
         int[] answer = new int[A.length];
         Arrays.fill(answer, A.length);
+
         for (int i = 0; i < A.length; i++) {
+
             ArrayList<Integer> currentFactors = factors.get(A[i]);
+
             for (int j = 0; j < currentFactors.size(); j++) {
+
                 if (Arrays.binarySearch(copy, currentFactors.get(j)) >= 0) {
                     answer[i] -= distinct.get(currentFactors.get(j));
                 }
             }
         }
+
         return answer;
     }
 }

@@ -97,8 +97,10 @@ public class CountSemiprimes {
         return res;
     }
 
-    //preparing array for factorization (array with primes)
-    // [0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 5, 2]
+    /*
+     * preparing array for factorization (array with primes)
+     * [0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 5, 2]
+     * */
     public static int[] sieve(int n) {
 
         int[] F = new int[n + 1];
