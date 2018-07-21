@@ -85,17 +85,16 @@ public class NailingPlanks {
 
 
     /*
-     * Count the minimum number of nails that allow A series of planks
+     * count the minimum number of nails that allow A series of planks
      * to be nailed. We will get the number till the last usable nails
      * for the purpose
      *
-     * A plank (A[K], B[K]) is nailed if there exists A nail C[I] such that A[K] ≤ C[I] ≤ B[K].
+     * a plank (A[K], B[K]) is nailed if there exists A nail C[I] such that A[K] ≤ C[I] ≤ B[K].
      * The goal is to find the minimum number of nails that must be used until all the planks
      * are nailed.
      * */
-
     /*
-     * solution -A
+     * solution - a
      */
     public static int solution(int[] A, int[] B, int[] C) {
 
@@ -103,10 +102,10 @@ public class NailingPlanks {
          * A and B are also in the ascending sorted
          * order. Otherwise, do the soring please
          * */
-        int planksSize = A.length;
-        int nailsSize = C.length;
+        int P = A.length;
+        int N = C.length;
 
-        int[][] sortedNails = new int[nailsSize][2];
+        int[][] sortedNails = new int[N][2];
 
 		/*
             |------------------|
@@ -128,8 +127,7 @@ public class NailingPlanks {
             |    10 3          |
             --------------------
         */
-        for (int i = 0; i < nailsSize; i++) {
-
+        for (int i = 0; i < N; i++) {
             sortedNails[i][0] = C[i];
             sortedNails[i][1] = i;
         }
@@ -139,31 +137,34 @@ public class NailingPlanks {
          * */
         Arrays.sort(sortedNails, (int[] x, int[] y) -> (Integer.compare(x[0], y[0])));
 
-        int resultIndex = 0;
+        int index = 0;
 
-        for (int i = 0; i < planksSize; i++) {
+        for (int i = 0; i < P; i++) {
 
-            resultIndex = getMinimumLengthForNail(A[i], B[i], sortedNails, resultIndex);
+            index = getMinimumIndex(A[i], B[i], sortedNails, index);
 
-            if (resultIndex == -1) {
+            if (index == -1) {
                 return -1;
             }
         }
 
-        int minNumberOfNails = resultIndex + 1;
+        /*
+         * we search through the consecutive indexes
+         * */
+        int result = index + 1;
 
-        return minNumberOfNails;
+        return result;
     }
 
 
     /*
      * Get the nail with the minimum length
      */
-    public static int getMinimumLengthForNail(int plankStart, int plankEnd, int[][] sortedNails, int oldIndex) {
+    public static int getMinimumIndex(int plankStart, int plankEnd, int[][] sortedNails, int oldIndex) {
 
 
-        int startIndex = 0;
-        int endIndex = sortedNails.length - 1;
+        int low = 0;
+        int high = sortedNails.length - 1;
 
         int N = sortedNails.length;
 
@@ -175,42 +176,45 @@ public class NailingPlanks {
         int resultIndex = -1;
 
         /*
-         * find the minimum index of the
-         * nail for provided plank using
-         * binary search
+         * find the minimum index of the nail for provided planks using binary search
          * */
-        while (startIndex <= endIndex) {
+        while (low <= high) {
 
-            int middle = (startIndex + endIndex) / 2;
+            /*
+             * we will try to condition with the value and update
+             * it as result if conditions meet
+             * */
+            int middle = (low + high) / 2;
 
             if (sortedNails[middle][0] < plankStart) {
-                startIndex = middle + 1;
+                low = middle + 1;
             } else if (sortedNails[middle][0] > plankEnd) {
-                endIndex = middle - 1;
+                high = middle - 1;
             } else {
 
                 /*
-                 * we try to find the minimum length for the nail
+                 * the nails are sorted in the ascending order and we try to find the
+                 * minimum length for the nail. Hence, we try to find a nail with lower
+                 * index that attain the condition based
                  * */
-                endIndex = middle - 1;
+                high = middle - 1;
                 resultIndex = middle;
             }
         }
 
+
+        /*
+         * i.   low and middle value will be upper and same
+         *
+         * ii.  high will be 1 less from the low and middle
+         *      value
+         *
+         * iii. result is the middle (= low) value means have
+         *      the upper limit and provides larger nail value
+         * */
         if (resultIndex == -1 || sortedNails[resultIndex][0] > plankEnd) {
             return -1;
         }
-
-        return getMinimumIndex(resultIndex, sortedNails, plankEnd, oldIndex);
-    }
-
-
-    /*
-     * get the nail with the minimum index
-     * */
-    public static int getMinimumIndex(int resultIndex, int[][] sortedNails, int plankEnd, int oldIndex) {
-
-        int N = sortedNails.length;
 
         /*
          * get the real index for the nail in the sortedNails matrix
@@ -218,30 +222,41 @@ public class NailingPlanks {
         int minIndex = sortedNails[resultIndex][1];
 
         /*
-         *
          * PURPOSE
          * -------
+         *
          * find the nail with lower index than the one found with binary search
          *
+         * ALGORITHM
+         * ---------
          *
-         * ALGORITHMS
+         * i.    result index is less than N and nails length should be less
+         *       than the planks end
+         *
+         * ii.   compare with the current index and find the minimum of them
+         *
+         * iii.  if the found nail has index less then or equal to the old
+         *       Index, return the old index
+         *
+         *
+         * MOTIVATION
          * ----------
          *
-         * i.    ResultIndex is less than N and nails length should be less
-         *       than the planks end
-         * ii.   Compare with the current index and find the minimum of them
-         * iii.  If the found nail has index less then or equal to the old
-         *       Index, return the old index
+         * The intention is to minimize the nail index that attains the general
+         * conditions and has index higher than previous index. the old result
+         * fits with the other planks of higher length and the lower min index
+         * wont be sufficient for that.
+         *
          * */
         while (resultIndex < N && sortedNails[resultIndex][0] <= plankEnd) {
 
+            /*
+             * sortedNails[resultIndex][1] will provides the nail with higher
+             * length in the respective iteration and we will try to find the
+             * min index by comparing
+             * */
             minIndex = Math.min(minIndex, sortedNails[resultIndex][1]);
 
-            /*
-             * the old result fits with the other planks of
-             * higher length and the lower min index wont
-             * sufis that
-             * */
             if (minIndex <= oldIndex) {
                 return oldIndex;
             }
@@ -254,7 +269,57 @@ public class NailingPlanks {
 
 
     /*
-     * solution - B
+     * get the nail with the minimum index
+     * */
+//    public static int getMinimumIndex(int resultIndex, int[][] sortedNails, int plankEnd, int oldIndex) {
+//
+//        int N = sortedNails.length;
+//
+//        /*
+//         * get the real index for the nail in the sortedNails matrix
+//         * */
+//        int minIndex = sortedNails[resultIndex][1];
+//
+//        /*
+//         *
+//         * PURPOSE
+//         * -------
+//         * find the nail with lower index than the one found with binary search
+//         *
+//         *
+//         * ALGORITHMS
+//         * ----------
+//         *
+//         * i.    result index is less than N and nails length should be less
+//         *       than the planks end
+//         *
+//         * ii.   compare with the current index and find the minimum of them
+//         *
+//         * iii.  if the found nail has index less then or equal to the old
+//         *       Index, return the old index
+//         * */
+//        while (resultIndex < N && sortedNails[resultIndex][0] <= plankEnd) {
+//
+//            minIndex = Math.min(minIndex, sortedNails[resultIndex][1]);
+//
+//            /*
+//             * the old result fits with the other planks of
+//             * higher length and the lower min index wont
+//             * sufis that
+//             * */
+//            if (minIndex <= oldIndex) {
+//                return oldIndex;
+//            }
+//
+//            resultIndex++;
+//        }
+//
+//        return minIndex;
+//    }
+
+
+    /*
+     * solution - b
      */
     public int solution1(int[] A, int[] B, int[] C) {
 
@@ -423,7 +488,7 @@ public class NailingPlanks {
 
 
     /*
-     * Displays A 2d array in the console, one line per row
+     * displays A 2d array in the console, one line per row
      * */
     static void printMatrix(int[][] grid) {
 
@@ -479,10 +544,13 @@ public class NailingPlanks {
         }
 
         Collections.sort(planks, (o1, o2) -> o1.getStart() - o2.getStart());
+
         ArrayList<Integer> starts = this.toArrayList(A);
         ArrayList<Integer> ends = this.toArrayList(B);
+
         Collections.sort(starts);
         Collections.sort(ends);
+
         int count = 0;
 
         for (int i = 0; i < C.length; i++) {
@@ -528,11 +596,16 @@ public class NailingPlanks {
     }
 
     public int getMid(ArrayList<Integer> data, int key) {
+
         int right = 0;
+
         int left = data.size() - 1;
         int mid = -1;
+
         while (right <= left) {
+
             mid = right + (left - right) / 2;
+
             if (key < data.get(mid)) {
                 left = mid - 1;
             } else if (key > data.get(mid)) {
@@ -541,29 +614,41 @@ public class NailingPlanks {
                 return mid;
             }
         }
+
         return mid;
     }
 
+
     public int getEndsQuantity(ArrayList<Integer> ends, int point) {
+
         int mid = getMid(ends, point);
         if (mid != ends.size() - 1) {
             mid++;
         }
+
         if (mid == ends.size() - 1 && ends.get(mid) < point) {
             return ends.size();
         }
+
         for (int i = mid; i > 0; i--) {
             if (ends.get(i - 1) < point && ends.get(i) >= point) {
                 return i;
             }
         }
+
         return 0;
     }
 
     public int getStartsQuantity(ArrayList<Integer> starts, int point) {
+
         int mid = getMid(starts, point) - 1;
-        if (mid < 0) mid = 0;
+
+        if (mid < 0) {
+            mid = 0;
+        }
+
         int count = mid;
+
         for (int i = mid; i < starts.size(); i++) {
             if (starts.get(i) <= point) {
                 count++;
@@ -575,26 +660,41 @@ public class NailingPlanks {
     }
 
     public int nativeSolution(int[] A, int[] B, int[] C) {
+
         ArrayList<Plank> planks = new ArrayList<>();
+
         for (int i = 0; i < B.length; i++) {
             Plank plank = new Plank(A[i], B[i]);
             planks.add(plank);
         }
+
         int counter = 0;
+
         for (int i = 0; i < C.length; i++) {
+
             for (int j = 0; j < planks.size(); j++) {
+
                 if (planks.get(j).isNailed()) {
                     continue;
                 }
+
                 if (planks.get(j).getStart() <= C[i] && planks.get(j).getEnd() >= C[i]) {
                     planks.get(j).nail();
                     counter++;
                 }
+
                 if (A.length - counter == 0) {
                     return i + 1;
                 }
             }
         }
+
         return -1;
+    }
+
+
+    public static void main(String[] args) {
+
+        System.out.println((0 + 1) / 2);
     }
 }
