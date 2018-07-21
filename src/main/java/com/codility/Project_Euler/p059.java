@@ -15,9 +15,11 @@ public final class p059 implements EulerSolution {
 	
 	
 	public String run() {
+
 		byte[] bestKey = null;
 		byte[] bestDecrypted = null;
 		double bestScore = Double.NaN;
+
 		for (byte x = 'a'; x <= 'z'; x++) {
 			for (byte y = 'a'; y <= 'z'; y++) {
 				for (byte z = 'a'; z <= 'z'; z++) {
