@@ -3701,6 +3701,7 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/second_example/output.txt" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
@@ -4277,16 +4278,18 @@
       <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="515" column="0" lean-forward="true" selection-start-line="515" selection-start-column="0" selection-end-line="515" selection-end-column="0" />
+            <state relative-caret-position="224">
+              <caret line="733" column="34" lean-forward="false" selection-start-line="733" selection-start-column="34" selection-end-line="733" selection-end-column="34" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#7927#7933#0" expanded="true" />
-                <element signature="e#9833#9839#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#395#396#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+                <element signature="e#7869#7875#0" expanded="true" />
+                <element signature="e#9775#9781#0" expanded="true" />
+                <element signature="e#12088#12106#0" expanded="true" />
+                <element signature="e#12160#12166#0" expanded="true" />
+                <element signature="e#13461#13479#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -4844,12 +4847,12 @@
       <workItem from="1532087874285" duration="3421000" />
       <workItem from="1532143591085" duration="9781000" />
       <workItem from="1532190575140" duration="81000" />
-      <workItem from="1532235023064" duration="2627000" />
+      <workItem from="1532235023064" duration="3703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253462000" />
+    <option name="totallyTimeSpent" value="254538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -5579,16 +5582,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="515" column="0" lean-forward="true" selection-start-line="515" selection-start-column="0" selection-end-line="515" selection-end-column="0" />
+        <state relative-caret-position="224">
+          <caret line="733" column="34" lean-forward="false" selection-start-line="733" selection-start-column="34" selection-end-line="733" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#7927#7933#0" expanded="true" />
-            <element signature="e#9833#9839#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#7869#7875#0" expanded="true" />
+            <element signature="e#9775#9781#0" expanded="true" />
+            <element signature="e#12088#12106#0" expanded="true" />
+            <element signature="e#12160#12166#0" expanded="true" />
+            <element signature="e#13461#13479#0" expanded="true" />
           </folding>
         </state>
       </provider>
