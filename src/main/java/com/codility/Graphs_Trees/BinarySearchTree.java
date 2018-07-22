@@ -926,7 +926,6 @@ public class BinarySearchTree {
         findSum(node.leftChild, sum, path, level + 1);
         findSum(node.rightChild, sum, path, level + 1);
 
-
         /*
          * remove current node from path
          * */
