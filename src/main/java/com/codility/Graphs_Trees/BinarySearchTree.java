@@ -244,6 +244,108 @@ public class BinarySearchTree {
     }
 
 
+
+    /*
+    Usage of the Pre-Order, In-order or Post-Order
+    ----------------------------------------------
+
+    The traversal strategy the programmer selects depends on the specific needs of the
+    algorithm being designed. The goal is speed, so pick the strategy that brings you
+    the nodes you require the fastest.
+
+        i.   If you know you need to explore the roots before inspecting any leaves, you
+        pick pre-order because you will encounter all the roots before all of the leaves.
+
+        ii.  If you know you need to explore all the leaves before any nodes, you select
+        post-order because you don't waste any time inspecting roots in search for leaves.
+
+        iii. If you know that the tree has an inherent sequence in the nodes, and you want
+        to flatten the tree back into its original sequence, than an in-order traversal
+        should be used. The tree would be flattened in the same way it was created. A
+        pre-order or post-order traversal might not unwind the tree back into the sequence
+        which was used to create it.
+    */
+
+
+    // METHODS FOR THE TREE TRAVERSAL
+
+    // inOrderTraverseTree : i) X.left ii) X iii) X.right
+    /* this prints the integers in ascending order */
+    public void inOrderTraverseTree(Node focusNode) {
+
+        if (focusNode != null) {
+
+            inOrderTraverseTree(focusNode.leftChild);
+            System.out.print(focusNode);
+            inOrderTraverseTree(focusNode.rightChild);
+        }
+    }
+
+
+    /*In-order traversal w/ iteration*/
+    public static void inOrderTraverseTree2(Node root) {
+
+        if (root == null) {
+            return;
+        }
+
+        Node node = root;
+        Stack<Node> stack = new Stack<Node>();
+
+        // take all the left nodes
+        while (node != null) {
+
+            stack.push(node);
+            node = node.leftChild;
+        }
+
+        while (stack.size() > 0) {
+
+            Node nod = stack.pop();
+            System.out.println(nod);
+
+            if (nod.rightChild == null) {
+                continue;
+            }
+
+            nod = nod.rightChild;
+
+            while (nod != null) {
+
+                stack.push(nod);
+                nod = nod.leftChild;
+            }
+
+        }
+    }
+	/*END of solution: In-order
+    traversal w/ iteration*/
+
+
+    // preOrderTraverseTree : i) X ii) X.left iii) X.right
+    public void preorderTraverseTree(Node focusNode) {
+
+        if (focusNode != null) {
+
+            System.out.println(focusNode);
+            preorderTraverseTree(focusNode.leftChild);
+            preorderTraverseTree(focusNode.rightChild);
+        }
+    }
+
+
+    // postOrderTraverseTree : i) X.left ii) X.right iii) X
+    public void postOrderTraverseTree(Node focusNode) {
+
+        if (focusNode != null) {
+
+            preorderTraverseTree(focusNode.leftChild);
+            preorderTraverseTree(focusNode.rightChild);
+            System.out.println(focusNode);
+        }
+    }
+
+
     public static boolean isWithinTree(int n) {
 
         if (n == root.key) {

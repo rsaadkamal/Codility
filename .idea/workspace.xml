@@ -12,15 +12,6 @@
       <change beforePath="" afterPath="$USER_HOME$/.idea/uiDesigner.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/vcs.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/BinaryHeap.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/IHeap.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/MaxHeap.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/MaxPQ.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/MinHeap.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/RadixTree.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/SuffixTree.java" />
       <change beforePath="" afterPath="$USER_HOME$/Library/Preferences/CLion2018.1/options/editor.xml" />
       <change beforePath="" afterPath="$USER_HOME$/Library/Preferences/CLion2018.1/options/runner.layout.xml" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/Solarized Light.icls" />
@@ -3711,9 +3702,15 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/BinaryHeap.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/BinaryHeap.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/IHeap.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/IHeap.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/BinaryHeap.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/MaxHeap.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/MaxPQ.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/MinHeap.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/RadixTree.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/SuffixTree.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Trie.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -3732,7 +3729,6 @@
       <change beforePath="$PROJECT_DIR$/../Multithreading/src/test/java/com/multi/CarTest.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../draglet-backend/.idea/vcs.xml" afterPath="" />
       <change beforePath="$USER_HOME$/Library/Preferences/IntelliJIdea15/options/git.xml" afterPath="$USER_HOME$/Library/Preferences/IntelliJIdea15/options/git.xml" />
-      <change beforePath="$APPLICATION_CONFIG_DIR$/options/baseRefactoring.xml" afterPath="" />
       <change beforePath="$USER_HOME$/draglet-balser/pom.xml" afterPath="" />
       <change beforePath="$USER_HOME$/draglet-balser/src/main/java/com/draglet/batch/BalanceService.java" afterPath="" />
       <change beforePath="$USER_HOME$/draglet-balser/src/main/java/com/draglet/batch/BalserAdmin.java" afterPath="" />
@@ -4273,12 +4269,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BinaryHeap.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/BinaryHeap.java">
+      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="398">
+              <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+              <folding>
+                <element signature="e#368#369#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#891#892#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
+                <element signature="e#1214#1223#0" expanded="true" />
+                <element signature="e#2651#2660#0" expanded="true" />
+                <element signature="e#5201#5210#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -4295,8 +4301,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>A.length</find>
-      <find>//</find>
       <find>countUneatenLeaves</find>
       <find>lcm</find>
       <find>3</find>
@@ -4325,6 +4329,8 @@
       <find>data</find>
       <find>left</find>
       <find>right</find>
+      <find>recursive</find>
+      <find>recursiveBFS</find>
     </findStrings>
     <replaceStrings>
       <replace>index</replace>
@@ -4396,8 +4402,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Extra/BinarySearchTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Trie.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BTreePrinter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/RadixTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/SuffixTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/MaxPQ.java" />
@@ -4407,6 +4411,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/AStar.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/IHeap.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/BinaryHeap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java" />
       </list>
     </option>
   </component>
@@ -4482,15 +4488,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codility" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="codility" type="462c0819:PsiDirectoryNode" />
-              <item name="Data_Structures" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
@@ -4846,12 +4843,12 @@
       <workItem from="1532087874285" duration="3421000" />
       <workItem from="1532143591085" duration="9781000" />
       <workItem from="1532190575140" duration="81000" />
-      <workItem from="1532235023064" duration="12837000" />
+      <workItem from="1532235023064" duration="14366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263672000" />
+    <option name="totallyTimeSpent" value="265201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -5228,7 +5225,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java</url>
-          <line>931</line>
+          <line>1033</line>
           <properties />
           <option name="timeStamp" value="143" />
         </line-breakpoint>
@@ -5521,13 +5518,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="119" column="9" lean-forward="true" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
-          <folding>
-            <element signature="e#293#314#0" expanded="false" />
-            <element signature="e#391#392#0" expanded="false" />
-            <element signature="e#425#426#0" expanded="false" />
-            <element signature="e#865#866#0" expanded="false" />
-            <element signature="e#902#903#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5537,24 +5528,6 @@
           <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding>
             <element signature="e#875#901#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="923" column="0" lean-forward="true" selection-start-line="923" selection-start-column="0" selection-end-line="923" selection-end-column="0" />
-          <folding>
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#7869#7875#0" expanded="true" />
-            <element signature="e#9775#9781#0" expanded="true" />
-            <element signature="e#12792#12810#0" expanded="true" />
-            <element signature="e#12864#12870#0" expanded="true" />
-            <element signature="e#14165#14183#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5574,11 +5547,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#12071#12093#0" expanded="false" />
-            <element signature="e#15405#15427#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5586,10 +5555,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <element signature="e#749#766#0" expanded="false" />
-            <element signature="e#821#830#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5605,21 +5571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#382#383#0" expanded="false" />
-            <element signature="e#412#413#0" expanded="false" />
-            <element signature="e#450#451#0" expanded="false" />
-            <element signature="e#482#483#0" expanded="false" />
-            <element signature="e#521#522#0" expanded="false" />
-            <element signature="e#557#558#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -5650,9 +5601,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/BinaryHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="311" column="0" lean-forward="true" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
+          <folding>
+            <element signature="e#7010#7016#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding>
+            <element signature="e#368#369#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#1214#1223#0" expanded="true" />
+            <element signature="e#2651#2660#0" expanded="true" />
+            <element signature="e#5201#5210#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
