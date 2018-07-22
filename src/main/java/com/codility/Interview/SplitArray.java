@@ -90,44 +90,6 @@ public class SplitArray {
      * */
     public int solution(int X, int[] A) {
 
-        if (A == null || A.length == 0) {
-            return -1;
-        }
-
-        if (X < 0 || X > 100000) {
-            return -1;
-        }
-
-        int N = A.length;
-
-        if (N < 1 || N > 100000) return -1;
-
-        int sum = 0, segment = 0;
-
-        for (int j = 0; j < N; j++) {
-
-            if (A[j] < 0 || A[j] > 100000) {
-                return -1;
-            }
-
-            if (A[j] == X) {
-
-                sum++;
-                segment++;
-            } else {
-                segment = 0;
-            }
-        }
-
-        return (A[N - 1] != X || sum > segment) ? (N - sum) : N;
-    }
-
-
-    /*
-     * solution - b
-     * */
-    public int solution1(int X, int[] A) {
-
         int leftCount = 0, rightCount = 0;
 
         int N = A.length;
@@ -150,10 +112,10 @@ public class SplitArray {
             }
 
             /*
-            *
-            * */
+             *
+             * */
             if (leftCount == (N - (i + 1)) - rightCount) {
-                return (i+1);
+                return (i + 1);
             }
 
 
@@ -164,4 +126,46 @@ public class SplitArray {
 
         return -1;
     }
+
+
+    /*
+     * solution - b
+     * */
+    public int solution1(int X, int[] A) {
+
+        if (A == null || A.length == 0) {
+            return -1;
+        }
+
+        if (X < 0 || X > 100000) {
+            return -1;
+        }
+
+        int N = A.length;
+
+        if (N < 1 || N > 100000) {
+            return -1;
+        }
+
+        int sum = 0, segment = 0;
+
+        for (int j = 0; j < N; j++) {
+
+            if (A[j] < 0 || A[j] > 100000) {
+                return -1;
+            }
+
+            if (A[j] == X) {
+
+                sum++;
+                segment++;
+            } else {
+                segment = 0;
+            }
+        }
+
+        return (A[N - 1] != X || sum > segment) ? (N - sum) : N;
+    }
+
+
 }
