@@ -44,7 +44,7 @@ the following array T consisting of ten elements:
 
 
 
-T[children] = parent
+T[adjacents] = parent
 
 T[0] = 9
 
@@ -94,19 +94,204 @@ Expected worst-case time complexity is O(M); expected worst-case space complexit
 */
 
 
+import java.util.*;
+
 /**
  * Created by Chaklader on 7/5/18.
  */
 public class CountCities {
 
 
+    private static class Node {
+
+        private int key;
+        private ArrayList<Node> adjacents;
+
+        public Node(int nodeValue) {
+            this.key = nodeValue;
+            this.adjacents = new ArrayList<Node>();
+        }
+
+        public int getKey() {
+            return this.key;
+        }
+
+        public void addAdjacentNode(Node child) {
+            this.adjacents.add(child);
+        }
+
+        public ArrayList<Node> getAdjacents() {
+            return this.adjacents;
+        }
+    }
+
+
+    private static Node root = null;
+
+    public static Node createGraphNetwork(int[] T) {
+
+        int N = T.length;
+        Node[] nodes = new Node[N];
+
+        for (int i = 0; i < N; i++) {
+            nodes[i] = new Node(i);
+        }
+
+        for (int i = 0; i < T.length; ++i) {
+
+            if (T[i] == i) {
+                root = nodes[i];
+            } else {
+                nodes[T[i]].addAdjacentNode(nodes[i]);
+            }
+        }
+
+        return root;
+    }
+
+
     /*
-     * the goal is to count the number of cities positioned
-     * away from the capital at each of the distances 1, 2,
-     * 3, ..., M − 1. if T[P] = Q and P = Q, then P is the
-     * capital; if T[P] = Q and P ≠ Q, then there is A direct
-     * road between cities P and Q
+     * get the nodes in the graph same distances from the capital using BSF
      * */
+    public static ArrayList<LinkedList<Node>> getSameLevelNodes(Node root) {
+
+        ArrayList<LinkedList<Node>> result = new ArrayList<LinkedList<Node>>();
+
+        LinkedList<Node> current = new LinkedList<Node>();
+
+        if (root != null) {
+            current.add(root);
+        }
+
+        while (current.size() > 0) {
+
+            result.add(current); // Add previous level
+            LinkedList<Node> parents = current; // Go to next level
+
+            current = new LinkedList<Node>();
+
+            for (Node node : parents) {
+
+                for (Node node1 : node.getAdjacents()) {
+
+                    if (node1 != null) {
+                        current.add(node1);
+                    }
+                }
+            }
+
+        }
+
+        result.remove(0);
+        return result;
+    }
 
 
+    /*
+     * get the nodes in the graph same distances from the capital using DSF
+     * */
+    public static ArrayList<LinkedList<Node>> getSameLevelNodes1(Node root) {
+
+        ArrayList<LinkedList<Node>> lists = new ArrayList<LinkedList<Node>>();
+
+        getSameLevelNodes1(root, lists, 0);
+        lists.remove(0);
+
+        return lists;
+    }
+
+    public static void getSameLevelNodes1(Node root, ArrayList<LinkedList<Node>> lists, int level) {
+
+        /*
+            ALGORITHM
+            ---------
+
+            i.   if the list size is the same as the level, create a new instance of list
+
+            ii.  otherwise, get the list using the level
+
+            iii. add the node in the list
+
+            iv. continue the recursive process till where is no child
+        */
+
+
+        if (root == null) {
+            return;
+        }
+
+        LinkedList<Node> list = null;
+
+        if (lists.size() == level) {
+            list = new LinkedList<Node>();
+            lists.add(list);
+        } else {
+            list = lists.get(level);
+        }
+
+        list.add(root);
+
+        for (Node node : root.getAdjacents()) {
+            getSameLevelNodes1(node, lists, level + 1);
+        }
+    }
+
+
+    public static int[] solution(int[] T) {
+
+        Node root = createGraphNetwork(T);
+        ArrayList<LinkedList<Node>> v = getSameLevelNodes(root);
+
+        int index = 0;
+        int N = T.length;
+
+        int[] result = new int[N - 1];
+
+        for (LinkedList<Node> l : v) {
+
+            int count = 0;
+
+            for (Node node : l) {
+                count++;
+            }
+
+            result[index++] = count;
+        }
+
+        return result;
+    }
+
+
+    public static void main(String[] args) {
+
+
+        /*
+                 1
+                 |
+                 9
+               / | \
+              3  0  7
+                / \
+               4   8
+             / \  /
+            2  5 6
+        * */
+
+
+        int[] T = new int[10];
+
+        T[0] = 9;
+        T[1] = 1;
+        T[2] = 4;
+        T[3] = 9;
+        T[4] = 0;
+        T[5] = 4;
+        T[6] = 8;
+        T[7] = 9;
+        T[8] = 0;
+        T[9] = 1;
+
+        int[] result = solution(T);
+        System.out.println(Arrays.toString(result));
+    }
 }
