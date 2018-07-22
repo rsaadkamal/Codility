@@ -496,6 +496,32 @@ public class BinarySearchTree {
     /*
      * create minimum binary search tree  from  a  sorted   array
      * */
+
+    /*
+    *
+                      10
+                      / \
+                     /   \
+                    /     \
+                   /       \
+                  /         \
+                 /           \
+                /             \
+               /               \
+               5               15
+              / \             / \
+             /   \           /   \
+            /     \         /     \
+           /       \       /       \
+           2       7       12       18
+          / \     / \     / \     / \
+         /   \   /   \   /   \   /   \
+         1   3   6   8   11   13   16   19
+              \       \       \   \   \
+              4       9       14   17   20
+    * */
+
+
     public static Node createBalancedTree(int array[]) {
 
         Arrays.sort(array);
@@ -627,9 +653,8 @@ public class BinarySearchTree {
      * design an algorithm to find the ‘next’ node (e.g., in-order
      * successor) of a given node in a binary search tree
      * */
-    public Node inorderSucc(Node n) {
-
-
+    public static Node inOrderSuccessor(Node node) {
+        
         /*
         ALGORITHM
         ---------
@@ -641,20 +666,20 @@ public class BinarySearchTree {
         ii. if have parent and don't have the right child,
         */
 
-        if (n == null) {
+        if (node == null) {
             return null;
         }
 
-        if (getParent(n.key) == null || n.rightChild != null) {
-            return leftMostChild(n.rightChild);
+        if (getParent(node.key) == null || node.rightChild != null) {
+            return leftMostChild(node.rightChild);
         }
 
         /*
-         * have parent and dont have the right child
+         * have parent but no right child
          * */
         else {
 
-            Node child = n;
+            Node child = node;
             Node parent = getParent(child.key);
 
             while (parent != null && parent.leftChild != child) {
@@ -670,7 +695,7 @@ public class BinarySearchTree {
     /*
      * get the smallest node of the right sub-tree
      */
-    public Node leftMostChild(Node n) {
+    public static Node leftMostChild(Node n) {
 
         if (n == null) {
             return null;
@@ -687,27 +712,20 @@ public class BinarySearchTree {
     /*
      * find out the common ancestor of the two nodes
      * */
-    public static Node commonAncestor2(Node root, Node p, Node q) {
+    /*
+     * solution - a
+     * */
+    public static Node commonAncestor(Node root, Node p, Node q) {
 
-        /*
-         * one or both of the nodes are not inside the tree
-         * */
-        if (!covers2(root, p) || !covers2(root, q)) {
+
+        if (!covers(root, p) || !covers(root, q)) {
             return null;
         }
 
-        /*
-         * both nodes are inside the tree, now find their common ancestor
-         * put a condition here: if both nodes are the same, call a new
-         * method to find their parent and return else, call this method
-         * */
         return commonAncestorHelper(root, p, q);
     }
 
-    /*
-     * find a node from a bst by key using recursive method
-     * */
-    public static boolean covers2(Node root, Node node) {
+    public static boolean covers(Node root, Node node) {
 
         if (root == null) {
             return false;
@@ -715,80 +733,74 @@ public class BinarySearchTree {
             return true;
         }
 
-        /*
-         * if we have a true here, the return will be true
-         * */
-        return covers2(root.leftChild, node) || covers2(root.rightChild, node);
+        return covers(root.leftChild, node) || covers(root.rightChild, node);
     }
 
-    public static Node commonAncestorHelper(Node root, Node p, Node q) {
+    public static Node commonAncestorHelper(Node node, Node p, Node q) {
 
-        if (root == null) return null;
+        if (node == null) {
+            return null;
+        }
 
-        boolean isponleft = covers2(root.leftChild, p);
-        boolean isqonleft = covers2(root.leftChild, q);
+        boolean p_OnLeft = covers(node.leftChild, p);
+        boolean q_OnLeft = covers(node.leftChild, q);
 
-        if (isponleft != isqonleft) return root;
+        if (p_OnLeft != q_OnLeft) {
+            return node;
+        }
 
         /*
-         * nodes are the same sides
+         * both of the nodes are in the same sides of root. Check
+         * if they are in the left or right side of the root
          * */
-        Node childside = isponleft ? root.leftChild : root.rightChild;
-        return commonAncestorHelper(childside, p, q);
+        Node childSide = p_OnLeft ? node.leftChild : node.rightChild;
+
+        return commonAncestorHelper(childSide, p, q);
     }
 
 
-    static int TWO_NODE_FOUND = 2;
-    static int ONE_NODE_FOUND = 1;
-    static int NO_NODE_FOUND = 0;
+    /*
+     * solution - b
+     * */
+    public static Node commonAncestor1(Node root, Node p, Node q) {
 
-    public static Node commonAncestor(Node root, Node p, Node q) {
-
-        if (q == p && (root.leftChild == q || root.rightChild == q))
+        if (q == p && (root.leftChild == q || root.rightChild == q)) {
             return root;
+        }
 
-        /*
-         * checks every nodes of the left-subtree of the root
-         * */
-        int nodesFromLeft = covers(root.leftChild, p, q);
+        int nodesFromLeft = covers1(root.leftChild, p, q);
 
-        /*
-         * both of the nodes are in the left sub-tree of the
-         * original root
-         * */
-        if (nodesFromLeft == TWO_NODE_FOUND) {
+        if (nodesFromLeft == 2) {
 
             if (root.leftChild == p || root.leftChild == q) {
                 return root.leftChild;
             } else {
-                return commonAncestor(root.leftChild, p, q);
+                return commonAncestor1(root.leftChild, p, q);
             }
         }
 
         /*
-         * one of the node exists in the left sub-tree if the other node present
-         * is the root || exists in the right sub-tree, then, the root is common
-         * ancestor
+         * nodes are in opposite sides of the tree. Check if
+         * one of them is root
          * */
-        else if (nodesFromLeft == ONE_NODE_FOUND) {
+        else if (nodesFromLeft == 1) {
 
-            if (root == p) return p;
-            else if (root == q) return q;
+            if (p == root || q == root) {
+                return root;
+            }
         }
 
-        /*
-         * check every nodes of the right side of the root node
-         * */
-        int nodesFromRight = covers(root.rightChild, p, q);
 
-        if (nodesFromRight == TWO_NODE_FOUND) {
+        int nodesFromRight = covers1(root.rightChild, p, q);
+
+        if (nodesFromRight == 2) {
 
             if (root.rightChild == p || root.rightChild == q)
                 return root.rightChild;
 
             else
-                return commonAncestor(root.rightChild, p, q);
-        } else if (nodesFromRight == ONE_NODE_FOUND) {
+                return commonAncestor1(root.rightChild, p, q);
+        } else if (nodesFromRight == 1) {
 
             if (root == p)
                 return p;
@@ -797,7 +809,7 @@ public class BinarySearchTree {
                 return q;
         }
 
-        if (nodesFromLeft == ONE_NODE_FOUND && nodesFromRight == ONE_NODE_FOUND) {
+        if (nodesFromLeft == 1 && nodesFromRight == 1) {
             return root;
         } else {
             return null;
@@ -805,22 +817,25 @@ public class BinarySearchTree {
     }
 
 
-    public static int covers(Node root, Node p, Node q) {
+    public static int covers1(Node node, Node p, Node q) {
 
-        int ret = NO_NODE_FOUND;
+        int count = 0;
 
-        if (root == null)
-            return ret;
+        if (node == null) {
+            return count;
+        }
 
-        if (root == p || root == q)
-            ret += 1;
+        if (node == p || node == q) {
+            count += 1;
+        }
 
-        ret += covers(root.leftChild, p, q);
+        count += covers1(node.leftChild, p, q);
 
-        if (ret == TWO_NODE_FOUND)
-            return ret;
+        if (count == 2) {
+            return count;
+        }
 
-        return ret + covers(root.rightChild, p, q);
+        return count + covers1(node.rightChild, p, q);
     }
 
 
@@ -829,73 +844,54 @@ public class BinarySearchTree {
      * with hundreds of nodes. Create an algorithm to decide if T2 is a
      * subtree of T1
      * */
-    public static boolean containsTree(Node t1, Node t2) {
+    public static boolean containsTree(Node big, Node small) {
 
-        if (t2 == null) {
+        if (small == null) {
             return true;
         } else {
-            return subTree(t1, t2);
+            return subTree(big, small);
         }
     }
 
-    /*
-     * r1 is the big tree, r2 is the small tree
-     * */
-    public static boolean subTree(Node Node1, Node Node2) {
 
-        /*
-         * big tree empty & subtree still not found.
-         * */
-        if (Node1 == null) {
+    public static boolean subTree(Node big, Node small) {
+
+        if (big == null) {
             return false;
         }
 
-        /*
-         * root is the same
-         * */
-        if (Node1.key == Node2.key) {
+        if (big.key == small.key) {
 
-            if (matchTree(Node1, Node2)) {
+            if (matchTree(big, small)) {
                 return true;
             }
         }
 
-        return subTree(Node1.leftChild, Node2) || subTree(Node1.rightChild, Node2);
+        return subTree(big.leftChild, small) || subTree(big.rightChild, small);
     }
 
+    public static boolean matchTree(Node big, Node small) {
 
-    public static boolean matchTree(Node r1, Node r2) {
-
-        /*
-         * for the sub-tree, leaf-to-leaf match needed nothing left
-         * in the subtree
-         * */
-        if (r1 == null && r2 == null) {
+        if (big == null && small == null) {
             return true;
         }
 
-        /*
-         * big tree empty & subtree still not found
-         * */
-        if (r1 == null || r2 == null) {
+        if (big == null || small == null) {
             return false;
         }
 
-        /*
-         * data doesn’t match
-         * */
-        if (r1.key != r2.key) {
+        if (big.key != small.key) {
             return false;
         }
 
-        return (matchTree(r1.leftChild, r2.leftChild) &&
-                matchTree(r1.rightChild, r2.rightChild));
+        return (matchTree(big.leftChild, small.leftChild) &&
+                matchTree(big.rightChild, small.rightChild));
     }
 
 
     /*
-     * design an algorithm to find all the paths of a BST which sums
-     * are equal to certain value
+     * design an algorithm to find all the paths of
+     * a BST which sums are equal to certain value
      * */
     public static void findSum(Node node, int sum) {
 
@@ -923,13 +919,13 @@ public class BinarySearchTree {
             t += path[i];
 
             if (t == sum) {
-
                 print(path, i, level);
             }
         }
 
         findSum(node.leftChild, sum, path, level + 1);
         findSum(node.rightChild, sum, path, level + 1);
+
 
         /*
          * remove current node from path
@@ -947,11 +943,14 @@ public class BinarySearchTree {
 
     public static void main(String[] args) {
 
-        int[] A = {555, 876, 100, 90, 5, 3, 1, 4, 8, 45, 77, 2, 6, 56};
+        int[] A = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+
+
         Node root = createBalancedTree(A);
-
-
         BTreePrinter.printNode(root);
+
+
+        findSum(root, 22);
     }
 }
 
