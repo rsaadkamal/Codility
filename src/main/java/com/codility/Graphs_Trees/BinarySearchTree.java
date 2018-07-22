@@ -1,8 +1,6 @@
 package com.codility.Graphs_Trees;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * Created by Chaklader on 7/22/18.
@@ -523,11 +521,461 @@ public class BinarySearchTree {
     }
 
 
+    //////////////////////////////////////////////////////////////////
+    	/*question 4-4 create linked list
+    of the same level of the tree*/
+
+    /*solution - a, with "breadth first search"*/
+    public static ArrayList<LinkedList<Node>> createLevelLinkedList(Node root) {
+
+
+        ArrayList<LinkedList<Node>> result = new ArrayList<LinkedList<Node>>();
+
+        /* "Visit" the root */
+        LinkedList<Node> current = new LinkedList<Node>();
+
+        if (root != null) {
+            current.add(root);
+        }
+
+        while (current.size() > 0) {
+
+            /*
+                ALGORITHM
+                ---------
+
+                i. add current nodes to the parent
+                ii create a new instance of current to adjoin the childs of the parent
+            */
+
+            result.add(current); // Add previous level
+            LinkedList<Node> parents = current; // Go to next level
+
+            current = new LinkedList<Node>();
+
+            for (Node parent : parents) {
+
+                if (parent.leftChild != null) {
+                    current.add(parent.leftChild);
+                }
+
+                if (parent.rightChild != null) {
+                    current.add(parent.rightChild);
+                }
+            }
+        }
+
+        return result;
+    }
+
+
+    // print values in the same level of the tree gradually
+    public static void printResult(ArrayList<LinkedList<Node>> result) {
+
+        int depth = 0;
+
+        for (LinkedList<Node> entry : result) {
+
+            Iterator<Node> i = entry.listIterator();
+            System.out.print("Link list at depth " + depth + ":");
+
+            while (i.hasNext()) {
+
+                System.out.print(" " + ((Node) i.next()).key);
+            }
+
+            System.out.println();
+            depth++;
+        }
+    }
+    /*END solution -a : BFS*/
+
+
+    /*solution -b : w/ depth first search (DFS)*/
+    public static ArrayList<LinkedList<Node>> createLevelLinkedList1(Node root) {
+
+        ArrayList<LinkedList<Node>> lists = new ArrayList<LinkedList<Node>>();
+
+        createLevelLinkedList1(root, lists, 0);
+        return lists;
+    }
+
+    public static void createLevelLinkedList1(Node root, ArrayList<LinkedList<Node>> lists, int level) {
+
+        /*
+        ALGORITHM
+        ---------
+
+            i.   if the list size is the same as the level, create a new instance of list
+
+            ii.  otherwise, get the list using the level
+
+            iii. add the node in the list
+
+            iv. continue the recursive process till where is no child
+        */
+
+
+        if (root == null) {
+            return;
+        }
+
+        LinkedList<Node> list = null;
+
+        if (lists.size() == level) {
+            list = new LinkedList<Node>();
+            lists.add(list);
+        } else {
+            list = lists.get(level);
+        }
+
+        list.add(root);
+
+        createLevelLinkedList1(root.leftChild, lists, level + 1);
+        createLevelLinkedList1(root.rightChild, lists, level + 1);
+    }
+    /* END of solution -b */
+
+	/*ENd of solution 4-4:create linked list
+	of the same level of the tree*/
+
+
+    /*question 4-5: design an algorithm to find
+    the ‘next’ node (e.g., in-order successor) of
+    a given node in a binary search tree*/
+    public Node inorderSucc(Node n) {
+
+
+        /*
+        In-order successor of a node is the next
+        node in Inorder traversal of the binary
+        tree
+
+                     7
+                    / \
+                   /   \
+                  /     \
+                 /       \
+                 5       14
+                / \     / \
+               /   \   /   \
+               4   6   8   18
+                       \
+                        9
+        */
+
+        /*
+        ALGORITHM
+        ---------
+
+        i.  if the parent node  not exist or the right clid exist,
+        retrun the left most child of right child
+
+        ii. if have parent and don't have the right child,
+        */
+
+
+        if (n == null) {
+            return null;
+        }
+
+        if (getParent(n.key) == null || n.rightChild != null) {
+            return leftMostChild(n.rightChild);
+        }
+
+        // have parent and dont have the right child
+        else {
+
+            Node child = n;
+            Node parent = getParent(child.key);
+
+            while (parent != null && parent.leftChild != child) {
+                child = parent;
+                parent = getParent(parent.key);
+            }
+
+            return parent;
+        }
+    }
+
+
+    /*
+     * get the smallest node of the right sub-tree
+     */
+    public Node leftMostChild(Node n) {
+
+        if (n == null) {
+            return null;
+        }
+
+        while (n.leftChild != null) {
+            n = n.leftChild;
+        }
+
+        return n;
+    }
+	/*END of solution 4-5: design an algorithm to find
+    the ‘next’ node (e.g., in-order successor) of
+    a given node in a binary search tree where each
+    node has a link to its parent.*/
+
+
+
+
+
+
+
+
+
+	/*question 4-6 : find out the common
+	ancestor of the two nodes*/
+
+	/*solution - a: we use this function to check
+	whether a node is inside of the tree BETTER SOLUTION*/
+
+    // How to deal if the p and q is the same node ?
+    public static Node commonAncestor2(Node root, Node p, Node q) {
+
+        // one or both of the nodes are not inside the tree
+        if (!covers2(root, p) || !covers2(root, q)) {
+            return null;
+        }
+
+        // both nodes are inside the tree,
+        // now find their common ancestor
+
+        // put a conditon here: if both nodes are the same,
+        // call a new method to find their parent and return
+
+        // else, call this method
+        return commonAncestorHelper(root, p, q);
+    }
+
+    // find a node from a bst by key using recursive method
+    public static boolean covers2(Node root, Node node) {
+
+        if (root == null) return false;
+        if (root == node) return true;
+
+        // if we have a true here, the return will be true
+        return covers2(root.leftChild, node) || covers2(root.rightChild, node);
+    }
+
+    public static Node commonAncestorHelper(Node root, Node p, Node q) {
+
+        if (root == null) return null;
+
+        boolean isponleft = covers2(root.leftChild, p);
+        boolean isqonleft = covers2(root.leftChild, q);
+
+        if (isponleft != isqonleft) return root;
+
+        // nodes are the same sides
+        Node childside = isponleft ? root.leftChild : root.rightChild;
+        return commonAncestorHelper(childside, p, q);
+    }
+    /*END solution - a*/
+
+
+    /*solution - b*/
+    static int TWONODESFOUND = 2;
+    static int ONENODEFOUND = 1;
+    static int NONODESFOUND = 0;
+
+    public static Node commonAncestor(Node root, Node p, Node q) {
+
+        if (q == p && (root.leftChild == q || root.rightChild == q))
+            return root;
+
+        // checks every nodes of the left-subtree of the root
+        int nodesFromLeft = covers(root.leftChild, p, q); // Check left side
+
+        // both of the nodes are in the left
+        // sub-tree of the original root
+        if (nodesFromLeft == TWONODESFOUND) {
+
+            if (root.leftChild == p || root.leftChild == q)
+                return root.leftChild;
+
+            else
+                return commonAncestor(root.leftChild, p, q);
+        }
+
+        // one of the node exists in the left sub-tree
+        // if the other node present is the root || exists
+        // in the right sub-tree, then, the root is common ancestor
+        else if (nodesFromLeft == ONENODEFOUND) {
+
+            if (root == p) return p;
+            else if (root == q) return q;
+        }
+
+        // check every nodes of the
+        // right side of the root node
+        int nodesFromRight = covers(root.rightChild, p, q); // Check right side
+
+        if (nodesFromRight == TWONODESFOUND) {
+
+            if (root.rightChild == p || root.rightChild == q)
+                return root.rightChild;
+
+            else
+                return commonAncestor(root.rightChild, p, q);
+        } else if (nodesFromRight == ONENODEFOUND) {
+
+            if (root == p)
+                return p;
+
+            else if (root == q)
+                return q;
+        }
+
+        if (nodesFromLeft == ONENODEFOUND && nodesFromRight == ONENODEFOUND)
+            return root;
+
+        else
+            return null;
+    }
+
+
+    public static int covers(Node root, Node p, Node q) {
+
+        int ret = NONODESFOUND;
+
+        if (root == null)
+            return ret;
+
+        if (root == p || root == q)
+            ret += 1;
+
+        ret += covers(root.leftChild, p, q);
+
+        if (ret == TWONODESFOUND)
+            return ret;
+
+        return ret + covers(root.rightChild, p, q);
+    }
+    /*END solution - b*/
+
+	/*END of solution 4-6: find out the
+	common ancestor of the two nodes*/
+
+
+    /*question 4-7: two very large binary
+    trees: T1, with millions of nodes, and
+    T2, with hundreds of nodes. Create an
+    algorithm to decide if T2 is a subtree
+    of T1.*/
+    public static boolean containsTree(Node t1, Node t2) {
+
+        if (t2 == null)
+            return true;
+
+        else
+            return subTree(t1, t2);
+    }
+
+    // r1 is the big tree, r2 is the small tree
+    public static boolean subTree(Node Node1, Node Node2) {
+
+        if (Node1 == null) return false; // big tree empty & subtree still not found.
+
+        /* root is the same */
+        if (Node1.key == Node2.key) {
+
+            if (matchTree(Node1, Node2)) return true;
+        }
+
+        return subTree(Node1.leftChild, Node2) || subTree(Node1.rightChild, Node2);
+    }
+
+
+    public static boolean matchTree(Node r1, Node r2) {
+
+        // for the sub-tree, leaf-to-leaf match needed
+        // nothing left in the subtree
+        if (r1 == null && r2 == null) {
+            return true;
+        }
+
+        //  big tree empty & subtree still not found
+        if (r1 == null || r2 == null) {
+            return false;
+        }
+
+        // data doesn’t match
+        if (r1.key != r2.key) {
+            return false;
+        }
+
+        return (matchTree(r1.leftChild, r2.leftChild)
+                &&
+                matchTree(r1.rightChild, r2.rightChild));
+
+    }
+
+	/* END solution 4-7:two very large binary
+    trees: T1, with millions of nodes, and
+    T2, with hundreds of nodes. Create an
+    algorithm to decide if T2 is a subtree
+    of T1.*/
+
+
+    /*question 4-8 : design an algorithm to
+    find all the paths of a BST which sums
+    are equal to certain value*/
+    public static void findSum(Node node, int sum) {
+
+        int depth = depth(node);
+
+        // primitives initiated with zeros
+        int[] path = new int[depth];
+        findSum(node, sum, path, 0);
+    }
+
+    public static void findSum(Node node, int sum, int[] path, int level) {
+
+        if (node == null) {
+            return;
+        }
+
+        path[level] = node.key;
+        int t = 0;
+
+        for (int i = level; i >= 0; i--) {
+
+            t += path[i];
+
+            if (t == sum) {
+
+                print(path, i, level);
+            }
+        }
+
+        findSum(node.leftChild, sum, path, level + 1);
+        findSum(node.rightChild, sum, path, level + 1);
+
+        //Remove current node from path.
+        path[level] = Integer.MIN_VALUE;
+    }
+
+    private static void print(int[] path, int start, int end) {
+
+        for (int i = start; i <= end; i++) {
+
+            System.out.print(path[i] + " ");
+        }
+
+        System.out.println();
+    }
+	/* END solution 4-8 : design an algorithm to find all the
+	paths which sums are equal to certain value */
+
+
     public static void main(String[] args) {
 
         int[] A = {555, 876, 100, 90, 5, 3, 1, 4, 8, 45, 77, 2, 6, 56};
         Node root = createBalancedTree(A);
-
 
 
         BTreePrinter.printNode(root);
