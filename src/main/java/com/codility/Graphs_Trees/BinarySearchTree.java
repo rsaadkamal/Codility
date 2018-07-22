@@ -650,7 +650,7 @@ public class BinarySearchTree {
 
 
     /*
-     * create linked list of the same level of the tree with BFS
+     * create linked list of the same level of the tree with performBFS
      * */
     public static ArrayList<LinkedList<Node>> createLevelLinkedList(Node root) {
 

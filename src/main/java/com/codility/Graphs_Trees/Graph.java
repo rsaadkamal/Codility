@@ -2,12 +2,48 @@ package com.codility.Graphs_Trees;
 
 import java.util.*;
 
+/*
+Adjacency Matrix
+----------------
+
+Adjacency Matrix is a 2D array of size V x V where V is the number of vertices in a graph. Let
+the 2D array be adj[][], a slot adj[i][j] = 1 indicates that there is an edge from vertex i to
+vertex j. Adjacency matrix for undirected graph is always symmetric. Adjacency Matrix is also
+used to represent weighted graphs. If adj[i][j] = w, then there is an edge from vertex i to vertex
+j with weight w.
+
+
+Pros
+----
+Representation is easier to implement and follow. Removing an edge takes O(1) time. Queries like
+whether there is an edge from vertex ‘u’ to vertex ‘v’ are efficient and can be done O(1).
+
+Cons
+----
+Consumes more space O(V^2). Even if the graph is sparse(contains less number of edges), it consumes
+the same space. Adding a vertex is O(V^2) time.
+
+
+
+Adjacency List
+--------------
+
+An array of linked lists is used. Size of the array is equal to the number of vertices. Let the array
+be array[]. An entry array[i] represents the linked list of vertices adjacent to the ith vertex. This
+representation can also be used to represent a weighted graph. The weights of edges can be stored in
+nodes of linked lists. Following is adjacency list representation of the above graph.
+* */
+
+
 /**
  * Created by Chaklader on 7/22/18.
  */
 public class Graph {
 
 
+    /*
+     * node for creating graph with adjacent nodes
+     * */
     private static class Node {
 
         public int index;
@@ -29,17 +65,21 @@ public class Graph {
     }
 
 
-    ///////////////////////////////////////////
-    private int V;
+    /*
+     * breadth frist search and depth frist search
+     * in a graph using the adjacency list
+     * */
+    private static int count;
 
-    private LinkedList<Integer> adj[];
 
-    Graph(int v) {
+    private static LinkedList<Integer> adj[];
 
-        this.V = v;
-        this.adj = new LinkedList[v];
+    Graph(int index) {
 
-        for (int i = 0; i < v; ++i) {
+        this.count = index;
+        this.adj = new LinkedList[index];
+
+        for (int i = 0; i < index; ++i) {
             adj[i] = new LinkedList();
         }
     }
@@ -51,33 +91,28 @@ public class Graph {
         adj[v].add(w);
     }
 
-
     /*
-     * prints BFS traversal from a given source S
+     * prints performBFS traversal from a given
+     * source S
      * */
-    public void BFS(int S) {
+    public void performBFS(int S) {
 
         /*
-         * Mark all the vertices as not visited(By default set as false)
+         * mark all the vertices as not visited(By
+         * default set as false)
          * */
-        boolean visited[] = new boolean[V];
+        boolean visited[] = new boolean[count];
 
         LinkedList<Integer> queue = new LinkedList<Integer>();
 
         visited[S] = true;
         queue.add(S);
 
-
         while (queue.size() != 0) {
 
-            // Dequeue a vertex from queue and print it
             S = queue.poll();
             System.out.print(S + " ");
 
-
-            // Get all adjacent vertices of the dequeued vertex S
-            // If a adjacent has not been visited, then mark it
-            // visited and enqueue it
             Iterator<Integer> i = adj[S].listIterator();
 
             while (i.hasNext()) {
@@ -94,13 +129,13 @@ public class Graph {
     }
 
 
-    void performDFS(int v) {
+    public static void performDFS(int v) {
 
-        boolean visited[] = new boolean[V];
+        boolean visited[] = new boolean[count];
         DFSUtil(v, visited);
     }
 
-    void DFSUtil(int v, boolean visited[]) {
+    public static void DFSUtil(int v, boolean visited[]) {
 
         visited[v] = true;
         System.out.print(v + " ");
@@ -118,11 +153,9 @@ public class Graph {
     }
 
 
-    ///////////////////////////////////////////
-
-
-    /*solution-a*/
-    // use the adjacency matrix for the DFS
+    /*
+     * depth first search in a graph with recursive algorithm
+     * */
     public static void depthFirstSearch(int[][] mat, int start) {
 
         // we will count node# from 1 upwards
@@ -132,24 +165,15 @@ public class Graph {
 
         Stack<Integer> stack = new Stack<Integer>();
 
-        // columns
         int numOfCols = mat[0].length;
         int row, col;
 
         int[] visited = new int[numOfCols];
 
-        // may be, row =  strat - 1
-        // then, use the value of row
-
-        visited[start - 1] = 1;
+        visited[start] = 1;
         stack.push(start - 1);
 
-        System.out.println();
-        System.out.print(start + "\t");
 
-        /*
-         * check if the stack is empty
-         */
         while (!stack.isEmpty()) {
 
             row = stack.peek();
@@ -175,42 +199,15 @@ public class Graph {
 
             stack.pop();
         }
-
-
-        boolean isTraverse = isFullTraverse(visited);
     }
 
 
-    public static boolean isFullTraverse(int[] visited) {
-
-        for (int i = 0; i < visited.length; i++) {
-
-            if (visited[i] == 0) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-    /*END of solution -a*/
-
-
-
-
-
-
-
-    /*solution-b*/
-    // web link: <http://www.mathcs.emory.edu/~cheung/Courses/323/Syllabus/Graph/dfs. l>
-
-    // primitives are initiated with values,
-    // for the booelan it will be false
-    // boolean [] bol =  new boolean[10];
     public static void depthFirstSearch1(int i, int[][] mat) {
 
-        // we will need to provide i-1 as it will be used inside the
-        // adjcency matrix
-        // i >= 0
+        if (i < 0) {
+            return;
+        }
+
         dfsHelper(i, mat, new boolean[mat[0].length]);
     }
 
@@ -218,39 +215,38 @@ public class Graph {
 
         if (!visited[row]) {
 
-            visited[row] = true; // Mark node as "visited"
+            visited[row] = true;
             System.out.print((row + 1) + " ");
 
             for (int col = 0; col < mat[row].length; col++) {
 
                 if (mat[row][col] == 1 && !visited[col]) {
-                    dfsHelper(col, mat, visited); // Visit node
+                    dfsHelper(col, mat, visited);
                 }
             }
         }
     }
-    /*END fo solution -b*/
-
-	/* END OF SOLUTION: depth first search
-	with uni-directional */
 
 
-    /*solution-a*/
+    /*
+     * breadth first search using the adjacency matrix
+     * */
     public static void breadthFirstSearch(int[][] mat, int start) {
 
+        if (start < 0) {
+            return;
+        }
 
         int numOfCols = mat[0].length;
         int row, col;
 
-        // array to keep track of visiting
         int[] visited = new int[numOfCols];
 
         Queue<Integer> queue = new LinkedList<Integer>();
 
-        visited[start - 1] = 1;
-        queue.add(start - 1);
+        visited[start] = 1;
+        queue.add(start);
 
-        System.out.println();
 
         while (!queue.isEmpty()) {
 
@@ -270,24 +266,21 @@ public class Graph {
                 col++;
             }
         }
-
-        System.out.println();
     }
 
 
-    /* question: write an algorithm to
-    perform breadth first search recursively*/
+    /*
+     * breadth frist search in a graph with recursive algorithm
+     * */
     public void recursiveBFS(Node root) {
 
         LinkedList<Node> queue = new LinkedList<>();
         queue.add(root);
 
-        BfsHelper(queue);
+        recursiveBFSHelper(queue);
     }
 
-
-    // breadth frist search in a graph with recursive algorithm
-    public void BfsHelper(LinkedList<Node> queue) {
+    public void recursiveBFSHelper(LinkedList<Node> queue) {
 
         while (!queue.isEmpty()) {
 
@@ -299,7 +292,7 @@ public class Graph {
                 queue.push(n);
             }
 
-            BfsHelper(queue);
+            recursiveBFSHelper(queue);
         }
     }
 
@@ -318,7 +311,7 @@ public class Graph {
         System.out.println("Following is Breadth First Traversal " +
                 "(starting from vertex 2)");
 
-        g.BFS(2);
+        g.performBFS(2);
         g.performDFS(2);
     }
 }
