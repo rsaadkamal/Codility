@@ -125,7 +125,7 @@ public final class p103 implements EulerSolution {
 		// and the next element to be added is at least startVal. Returns null if no such set exists.
 		private static SpecialSumSet makeSet(SpecialSumSet set, int sizeRemain, int sumRemain, int startVal) {
 			// In summary, this procedure takes a partial answer (prefix) and some parameters,
-			// and tries to extend the answer by performing depth-first search through recursion.
+			// and tries to extend the answer by performing depth1-first search through recursion.
 			
 			if (sizeRemain == 0)  // Base case - success
 				return set;

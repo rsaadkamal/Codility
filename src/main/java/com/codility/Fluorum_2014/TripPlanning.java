@@ -444,7 +444,7 @@ public class TripPlanning {
 
     /*
      * set the deepest children for all the nodes. If a node has
-     * more than one children that has the same depth, set the
+     * more than one children that has the same depth1, set the
      * children with minimum key as the deepest children
      * */
     public int deepestChild(Node root) {
@@ -454,7 +454,7 @@ public class TripPlanning {
 
     /*
      * helper function to set the deepest children for all the nodes. In case, we
-     * have 2 nodes with the same depth, the node with the lesser value will be set
+     * have 2 nodes with the same depth1, the node with the lesser value will be set
      * as the deepest node
      * */
     public int deepestChildHelper(Node node, int depth) {

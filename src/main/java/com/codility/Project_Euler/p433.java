@@ -40,7 +40,7 @@ public final class p433 implements EulerSolution {
 	 * - (3, 2): 2 steps from root; (2, 1) with k=1 yields 1 + 1*2 = 3
 	 * - (13, 3): 3 steps from root; (3, 2) with k=5 yields 3 + 5*2 = 13
 	 * 
-	 * To explore the pairs, we start from each root (z, 0) (where z >= 1) and use depth-first search by reverse stepping
+	 * To explore the pairs, we start from each root (z, 0) (where z >= 1) and use depth1-first search by reverse stepping
 	 * until x > LIMIT, at which point the pair (and any deeper ones) is outside of the range of the problem statement.
 	 * Because Euclid's algorithm ensures that repeated forward stepping on any pair will lead to a root,
 	 * this aforementioned reverse stepping search will necessarily visit every pair exactly once.

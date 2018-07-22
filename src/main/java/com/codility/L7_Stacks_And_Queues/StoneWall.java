@@ -1,7 +1,7 @@
 package com.codility.L7_Stacks_And_Queues;
 
 /*
-* You are going to build A stone wall. The wall should be straight and N meters long, and its thickness should be constant; however, it should have different heights in different places. The height of the wall is specified by an array H of N positive integers. H[I] is the height of the wall from I to I+1 meters to the right of its left end. In particular, H[0] is the height of the wall's left end and H[N−1] is the height of the wall's right end.
+* You are going to build A stone wall. The wall should be straight and N meters long, and its thickness should be constant; however, it should have different heights in different places. The depth of the wall is specified by an array H of N positive integers. H[I] is the depth of the wall from I to I+1 meters to the right of its left end. In particular, H[0] is the depth of the wall's left end and H[N−1] is the depth of the wall's right end.
 
 The wall should be built of cuboid stone blocks (that is, all sides of such blocks are rectangular). Your task is to compute the minimum number of blocks needed to build the wall.
 
@@ -9,7 +9,7 @@ Write A function:
 
 class Solution { public int solution(int[] H); }
 
-that, given an array H of N positive integers specifying the height of the wall, returns the minimum number of blocks needed to build it.
+that, given an array H of N positive integers specifying the depth of the wall, returns the minimum number of blocks needed to build it.
 
 For example, given array H containing N = 9 integers:
 
@@ -54,11 +54,11 @@ public class StoneWall {
          * ----------
          * i.   Set block count = 1
          *
-         * ii.  If the height is same as previous block, keep going
+         * ii.  If the depth is same as previous block, keep going
          *
-         * iii. If the current height is higher, push that in the stack and increase count
+         * iii. If the current depth is higher, push that in the stack and increase count
          *
-         * iv.  If the current height is lower, keep poping till the current height >= peek
+         * iv.  If the current depth is lower, keep poping till the current depth >= peek
          *      Afterwards, if the stack size = 0 or higher, increase the block count by 1
          *
          * */
@@ -70,7 +70,7 @@ public class StoneWall {
             }
 
             /*
-             * new height is higher than the previous height
+             * new depth is higher than the previous depth
              * */
             else if (stack.peek() < H[i]) {
                 stack.push(H[i]);
@@ -78,7 +78,7 @@ public class StoneWall {
             }
 
             /*
-             * new height is lower than the previous height
+             * new depth is lower than the previous depth
              * */
             else {
 
@@ -151,7 +151,7 @@ public class StoneWall {
         for (final int a : A) {
 
             /*
-             * If height of the current height is lesser
+             * If depth of the current depth is lesser
              * than the higher lenOfElements element of storage,
              * reduce the lenOfElements by 1
              * */
@@ -160,7 +160,7 @@ public class StoneWall {
             }
 
             /*
-             * Height of the current height is higher
+             * Height of the current depth is higher
              * than the higher lenOfElements element of storage
              * */
             if (lenOfElements == 0 || C[lenOfElements - 1] < a) {

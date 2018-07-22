@@ -36,11 +36,11 @@ public final class p122 implements EulerSolution {
 	 * the shortest addition chain that produces 12509 is shorter than the shortest star chain that produces it.
 	 * This is unfortunate because searching star chains is much faster than searching general addition chains.
 	 * 
-	 * The overall strategy of this solution is to explore all addition chains by brute force using depth-first search.
+	 * The overall strategy of this solution is to explore all addition chains by brute force using depth1-first search.
 	 * We start with the base chain of {1}, progressively add elements that are the sum of some two earlier elements,
 	 * and backtrack at each stage. No memoization or breadth-first search is performed because the search space is large.
 	 * 
-	 * An important detail is that we perform depth-limited search of the full search space, with depth = 1, 2, 3, etc.
+	 * An important detail is that we perform depth1-limited search of the full search space, with depth1 = 1, 2, 3, etc.
 	 * This gives us the benefit of breadth-first search without its high memory usage - namely, the first time
 	 * we visit a sum of n, we can be sure that it has been reached with the smallest possible chain length.
 	 * 
@@ -66,7 +66,7 @@ public final class p122 implements EulerSolution {
 		minOperations[1] = 0;
 		numUnknown = LIMIT - 1;
 		
-		// Perform bounded depth-first search with incrementing depth
+		// Perform bounded depth1-first search with incrementing depth1
 		for (int ops = 1; numUnknown > 0; ops++) {
 			IntStack chain = new IntStack(ops + 1);
 			chain.push(1);
@@ -99,7 +99,7 @@ public final class p122 implements EulerSolution {
 					chain.push(x);
 					if (minOperations[x] == -1) {
 						// For each unique value of x, we set minOperations[x] only once
-						// because we do progressive deepening in the depth-first search
+						// because we do progressive deepening in the depth1-first search
 						minOperations[x] = chain.size - 1;
 						numUnknown--;
 					}
