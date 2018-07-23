@@ -305,8 +305,6 @@ public class CountCities {
             if (children.size() == 0) {
                 break;
             }
-
-
             parent = children;
         }
 
