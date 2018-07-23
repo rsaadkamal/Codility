@@ -128,26 +128,12 @@ public class Peaks {
 
         for (int i = 1; i <= N; i++) {
 
-            /*
-             * A block need atleast elements equal
-             * to or grater than of peak numbers
-             *
-             * ------------------------------------------------------
-             * i.   N = array length
-             * ii.  B = number of numOfBlocks
-             * iii. E = number of elements in a block >= num of peaks
-             * ------------------------------------------------------
-             *
-             * finally, B = N/(E >= num of peaks)
-             * */
-
             int blocks = N / i;
 
             if (N % i != 0 || blocks > count) {
                 continue;
             }
 
-            boolean success = true;
             int threshold = 0;
 
             for (int j = 0; j < numOfPeaks; j++) {
@@ -156,7 +142,6 @@ public class Peaks {
                  * Peaks = [3, 5, 10]
                  * */
                 if (peaks.get(j) / i > threshold) {
-                    success = false;
                     break;
                 }
 
@@ -355,7 +340,6 @@ public class Peaks {
         A[10] = 6;
         A[11] = 2;
 
-
-        solution(A);
+        System.out.println(solution(A));
     }
 }
