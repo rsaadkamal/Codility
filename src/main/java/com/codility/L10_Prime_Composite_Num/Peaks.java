@@ -110,20 +110,17 @@ public class Peaks {
 
         int count = 0;
 
-        ArrayList<Integer> peaks = new ArrayList<Integer>();
+        ArrayList<Integer> peak = new ArrayList<Integer>();
 
-        /*
-         * add all the peaks of the segments in the list
-         * */
         for (int i = 1; i < A.length - 1; i++) {
 
             if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
-                peaks.add(i);
+                peak.add(i);
                 count++;
             }
         }
 
-        int numOfPeaks = peaks.size();
+        int peaks = peak.size();
         int N = A.length;
 
         for (int i = 1; i <= N; i++) {
@@ -134,23 +131,36 @@ public class Peaks {
                 continue;
             }
 
-            int threshold = 0;
+            int approximation = 0;
 
-            for (int j = 0; j < numOfPeaks; j++) {
+            for (int j = 0; j < peaks; j++) {
 
                 /*
-                 * Peaks = [3, 5, 10]
+                 * no peak till the i-th index, we have peaks at [3, 5, 10] and N = 12
                  * */
-                if (peaks.get(j) / i > threshold) {
+                if (peak.get(j) / i > approximation) {
                     break;
                 }
 
-                if (peaks.get(j) / i == threshold) {
-                    threshold++;
+                if (peak.get(j) / i == approximation) {
+                    approximation++;
                 }
+
+
+//                if (temp < peaks.get(j)) {
+//                    break;
+//                }
+//
+//                approximation += 1;
+//                temp += temp;
             }
 
-            if (threshold == blocks) {
+            /*
+             * as we gradually decreasing the peak numbers, we can return the result
+             * whenever we meet the condition and the solution will provide the maximum
+             * number of blocks
+             * */
+            if (approximation == blocks) {
                 return blocks;
             }
         }

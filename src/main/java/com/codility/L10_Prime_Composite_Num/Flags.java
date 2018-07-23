@@ -83,111 +83,14 @@ public class Flags {
      * that can be set on the peaks of the array.
      * */
 
-    // int[] A = {1,5,3,4,3,4,1,2,3,4,6,2}
 
     /*
-     * solution -a
+     * solution - a
      */
     public static int solution(int[] A) {
 
-        int N = A.length;
-
-        /*
-         * next =  [1, 1, 3, 3, 5, 5, 10, 10, 10, 10, 10, -1]
-         * */
-        int[] next = nextPeak(A);
-
-        int i = 1;
-        int result = 0;
-
-
-        /*
-         * This is for reducing the number of iteration
-         * when N = 12 this will provide all the devisors
-         * of N and i * i <= N or i <= N will also work.
-         *
-         * For i*i <= N, [1, 4, 9, 16, 25, 36, 49, 64, 81]
-         * For i* (i-1) <= N, [0, 2, 6, 12, 20, 30, 42, 56, 72]
-         * */
-        while ((i - 1) * i <= N) {
-
-            int posIndex = 0;
-            int numberOfFlags = 0;
-
-            while (posIndex < N && numberOfFlags < i) {
-
-                /*
-                 * next =  [1, 1, 3, 3, 5, 5, 10, 10, 10, 10, 10, -1]
-                 * */
-                posIndex = next[posIndex];
-
-                /*
-                 * we reached in the end
-                 * */
-                if (posIndex == -1) {
-                    break;
-                }
-
-                numberOfFlags += 1;
-                posIndex += i;
-            }
-
-            /*
-             * maximize the number of flags for the whole segment
-             * */
-            result = Math.max(result, numberOfFlags);
-            i++;
-        }
-
-        return result;
-    }
-
-
-    public static int[] nextPeak(int[] A) {
-
-        int N = A.length;
-
-        ArrayList<Integer> peaks = new ArrayList<Integer>();
-
-        /*
-         * List addition is deterministic and sequential
-         * */
-        for (int i = 1; i < A.length - 1; i++) {
-
-            if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
-                peaks.add(i);
-            }
-        }
-
-        int[] next = new int[N];
-        next[N - 1] = -1;
-
-        /*
-         * result array [1, 1, 3, 3, 5, 5, 10, 10, 10, 10, 10, -1]
-         * */
-        for (int i = N - 2; i >= 0; i--) {
-            if (peaks.contains(i)) {
-                next[i] = i;
-            } else {
-                next[i] = next[i + 1];
-            }
-        }
-
-        return next;
-    }
-
-
-    /*
-     * solution - b
-     */
-    public int solution1(int[] A) {
-
-
         ArrayList<Integer> list = new ArrayList<Integer>();
 
-        /*
-         * add all the peaks in the list
-         * */
         for (int i = 1; i < A.length - 1; i++) {
 
             if (A[i - 1] < A[i] && A[i + 1] < A[i]) {
@@ -195,14 +98,14 @@ public class Flags {
             }
         }
 
-        int N = list.size();
+        int M = list.size();
 
-        if (N == 0 || N == 1) {
-            return list.size();
+        if (M == 0 || M == 1) {
+            return M;
         }
 
-        int startFlag = 1;
-        int endFlag = N;
+        int start = 1;
+        int end = M;
 
         int result = 1;
 
@@ -210,22 +113,22 @@ public class Flags {
          * the number of flags will be between [1
          * to endFlag] and we use a binary search
          * */
-        while (startFlag <= endFlag) {
+        while (start <= end) {
 
-            int middleFlag = (startFlag + endFlag) / 2;
+            int middle = (start + end) / 2;
             boolean success = false;
 
-            int numOfUsedFlag = 0;
-            int markedIndex = list.get(0);
+            int count = 0;
+            int marked = list.get(0);
 
-            for (int i = 0; i < N; i++) {
+            for (int i = 0; i < M; i++) {
 
-                if (list.get(i) >= markedIndex) {
+                if (list.get(i) >= marked) {
 
-                    numOfUsedFlag++;
-                    markedIndex = list.get(i) + middleFlag;
+                    count++;
+                    marked = list.get(i) + middle;
 
-                    if (numOfUsedFlag == middleFlag) {
+                    if (count == middle) {
                         success = true;
                         break;
                     }
@@ -233,11 +136,56 @@ public class Flags {
             }
 
             if (success) {
-                result = middleFlag;
-                startFlag = middleFlag + 1;
+                result = middle;
+                start = middle + 1;
             } else {
-                endFlag = middleFlag - 1;
+                end = middle - 1;
             }
+        }
+
+        return result;
+    }
+
+    /*
+     * solution - b
+     * */
+    public static int solution1(int[] A) {
+
+        int N = A.length;
+
+        /*
+         * P =  [1, 1, 3, 3, 5, 5, 10, 10, 10, 10, 10, -1]
+         * */
+        int[] P = nextPeak(A);
+
+        int K = 1;
+        int result = 0;
+
+        while ((K - 1) * K <= N) {
+
+            int index = 0;
+            int flags = 0;
+
+            while (index < N && flags < K) {
+
+                /*
+                 * P =  [1, 1, 3, 3, 5, 5, 10, 10, 10, 10, 10, -1]
+                 * */
+                index = P[index];
+
+                if (index == -1) {
+                    break;
+                }
+
+                flags += 1;
+                index += K;
+            }
+
+            /*
+             * maximize the number of flags for the whole segment
+             * */
+            result = Math.max(result, flags);
+            K++;
         }
 
         return result;
@@ -245,9 +193,92 @@ public class Flags {
 
 
     /*
+     * A = [1, 1, 3, 3, 5, 5, 10, 10, 10, 10, 10, -1]
+     * */
+    public static int[] nextPeak(int[] P) {
+
+        int N = P.length;
+
+        ArrayList<Integer> peaks = new ArrayList<Integer>();
+
+        for (int i = 1; i < P.length - 1; i++) {
+
+            if (P[i] > P[i - 1] && P[i] > P[i + 1]) {
+                peaks.add(i);
+            }
+        }
+
+        int[] A = new int[N];
+        A[N - 1] = -1;
+
+
+        for (int i = N - 2; i >= 0; i--) {
+
+            if (peaks.contains(i)) {
+                A[i] = i;
+            } else {
+                A[i] = A[i + 1];
+            }
+        }
+
+        return A;
+    }
+
+
+    /*
      * solution - c
      */
-    public int solution2(int[] A) {
+    public static int solution2(int[] A) {
+
+        int N = A.length;
+
+        ArrayList<Integer> peak = new ArrayList<Integer>();
+
+        for (int i = 1; i < A.length - 1; i++) {
+
+            if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
+                peak.add(i);
+            }
+        }
+
+        int i = 1;
+        int result = 0;
+
+        /*
+         * To set i Flags with a distance of i than the total distance
+         * would be [i*(i-1)]
+         * */
+        while ((i - 1) * i <= N) {
+
+            int count = 0;
+
+            for (int j = 0; j < peak.size(); j++) {
+
+                // has exactly four peaks: elements 1, 3, 5 and 10.
+                /*
+                 * it breaks the premise to have a flag (peak) in each i segment
+                 * */
+                if (peak.get(j) / i > count) {
+                    break;
+                }
+
+                if (peak.get(j) / i == count) {
+                    count++;
+                }
+            }
+
+            result = Math.max(result, count);
+            i++;
+        }
+
+        return result;
+    }
+
+
+    /*
+     * solution - d
+     */
+    public int solution3(int[] A) {
 
         if (A.length < 3) {
             return 0;
@@ -322,9 +353,9 @@ public class Flags {
 
 
     /*
-     * solution - d
+     * solution - e
      */
-    public int solution3(int[] A) {
+    public int solution4(int[] A) {
 
         ArrayList<Integer> peaks = new ArrayList<>();
         if (A.length <= 2) {
@@ -386,5 +417,50 @@ public class Flags {
             }
         }
         return -1;
+    }
+
+
+    public static void main(String[] args) {
+
+        int[] A = new int[12];
+
+        A[0] = 1;
+        A[1] = 5;
+        A[2] = 3;
+        A[3] = 4;
+        A[4] = 3;
+        A[5] = 4;
+        A[6] = 1;
+        A[7] = 2;
+        A[8] = 3;
+        A[9] = 4;
+
+
+        A[10] = 6;
+        A[11] = 2;
+
+
+//        System.out.println(9/2);
+        System.out.println(solution(A));
+
+//        int i = 1;
+//        while (i <= 12) {
+//            System.out.println(i);
+//
+//            i++;
+//        }
+
+
+//        while ((i-1) * i <= 12) {
+//            System.out.println(i);
+//
+//            i++;
+//        }
+
+
+//        while ((i) * i <= 12) {
+//            System.out.println(i);
+//            i++;
+//        }
     }
 }
