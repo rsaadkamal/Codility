@@ -84,62 +84,76 @@ public class Flags {
      * */
 
 
+    // ------------------ //
+    // BETTER PERFORMANCE //
+    // ------------------ //
+
     /*
      * solution - a
      */
     public static int solution(int[] A) {
 
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> flags = new ArrayList<Integer>();
 
         for (int i = 1; i < A.length - 1; i++) {
 
             if (A[i - 1] < A[i] && A[i + 1] < A[i]) {
-                list.add(i);
+                flags.add(i);
             }
         }
 
-        int M = list.size();
+        int P = flags.size();
 
-        if (M == 0 || M == 1) {
-            return M;
+        if (P == 0 || P == 1) {
+            return P;
         }
 
-        int start = 1;
-        int end = M;
+        int low = 1;
+        int high = P;
 
         int result = 1;
 
         /*
-         * the number of flags will be between [1
-         * to endFlag] and we use a binary search
+         * we can have flags between low to high
          * */
-        while (start <= end) {
+        while (low <= high) {
 
-            int middle = (start + end) / 2;
-            boolean success = false;
+            /*
+             * we try with K flags so the distance between the flags will be >= K
+             * */
+            int K = (low + high) / 2;
 
             int count = 0;
-            int marked = list.get(0);
+            int marked = flags.get(0);
 
-            for (int i = 0; i < M; i++) {
+            for (int i = 0; i < P; i++) {
 
-                if (list.get(i) >= marked) {
+                if (flags.get(i) >= marked) {
 
                     count++;
-                    marked = list.get(i) + middle;
 
-                    if (count == middle) {
-                        success = true;
+                    /*
+                     * for K flags, distance between any two flags should be greater than or equal to K
+                     * */
+                    marked = flags.get(i) + K;
+
+                    // the distance will be equal or greater then the number of flags, K
+                    // for maximization its equality
+                    if (count == K) {
                         break;
                     }
                 }
             }
 
-            if (success) {
-                result = middle;
-                start = middle + 1;
+            if (count == K) {
+
+                result = K;
+
+                // we want to maximize the number of flags so increase the flags
+                low = K + 1;
             } else {
-                end = middle - 1;
+
+                high = K - 1;
             }
         }
 
@@ -158,15 +172,20 @@ public class Flags {
          * */
         int[] P = nextPeak(A);
 
-        int K = 1;
+        int k = 1;
         int result = 0;
 
-        while ((K - 1) * K <= N) {
+
+        /*
+         * To set k Flags with a distance of k than the total distance
+         * would be [k * (k-1)]
+         * */
+        while ((k - 1) * k <= N) {
 
             int index = 0;
             int flags = 0;
 
-            while (index < N && flags < K) {
+            while (index < N && flags < k) {
 
                 /*
                  * P =  [1, 1, 3, 3, 5, 5, 10, 10, 10, 10, 10, -1]
@@ -178,14 +197,14 @@ public class Flags {
                 }
 
                 flags += 1;
-                index += K;
+                index += k;
             }
 
             /*
              * maximize the number of flags for the whole segment
              * */
             result = Math.max(result, flags);
-            K++;
+            k++;
         }
 
         return result;
