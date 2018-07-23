@@ -70,6 +70,9 @@ public class CountNonDivisible {
 
         int N = A.length;
 
+        /*
+         * each element of array A is an integer within the range [1..2 * N]
+         * */
         int[][] D = new int[2 * N + 1][2];
         int[] result = new int[N];
 
@@ -78,17 +81,17 @@ public class CountNonDivisible {
         * A = [3,1,2,3,6]
 
         D = [
-               0 0
-               1 -1
-               1 -1
-               2 -1
-               0 0
-               0 0
-               1 -1
-               0 0
-               0 0
-               0 0
-               0 0
+               0 -1
+               1  0
+               1  0
+               2  0
+               0 -1
+               0 -1
+               1  0
+               0 -1
+               0 -1
+               0 -1
+               0 -1
             ]
         * */
 
@@ -99,29 +102,16 @@ public class CountNonDivisible {
 
         for (int i = 0; i < N; i++) {
 
-            /*
-             * we find the indexes where A has elements
-             * */
             if (D[A[i]][1] == -1) {
 
                 D[A[i]][1] = 0;
 
-                /*
-                 * Reduce the number of iteration to find
-                 * divisors for the i-th index of A Array
-                 * */
                 for (int j = 1; j * j <= A[i]; j++) {
 
-                    /*
-                     * we find A divisor for the A[i]
-                     * */
                     if (A[i] % j == 0) {
 
                         /*
-                         * i. "D[A[i]][1]" stores quantity of num A has equals to A[i]
-                         *
-                         * ii. "D[A[i]][1]" stores quantity of num that are the divisors
-                         * of A[i]
+                         * update the number of divisors for A[i]
                          * */
                         D[A[i]][1] += D[j][0];
 
@@ -129,7 +119,10 @@ public class CountNonDivisible {
                          * j is not the square root of A[i]
                          * */
                         if (A[i] / j != j) {
-                            D[A[i]][1] += D[A[i] / j][0];
+
+                            int k = A[i] / j;
+
+                            D[A[i]][1] += D[k][0];
                         }
                     }
                 }
