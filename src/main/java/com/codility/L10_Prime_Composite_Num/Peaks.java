@@ -108,7 +108,7 @@ public class Peaks {
      */
     public static int solution(int[] A) {
 
-        int peakCount = 0;
+        int count = 0;
 
         ArrayList<Integer> peaks = new ArrayList<Integer>();
 
@@ -119,14 +119,14 @@ public class Peaks {
 
             if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
                 peaks.add(i);
-                peakCount++;
+                count++;
             }
         }
 
         int numOfPeaks = peaks.size();
         int N = A.length;
 
-        for (int sizeOfBlock = 1; sizeOfBlock <= N; sizeOfBlock++) {
+        for (int i = 1; i <= N; i++) {
 
             /*
              * A block need atleast elements equal
@@ -141,36 +141,32 @@ public class Peaks {
              * finally, B = N/(E >= num of peaks)
              * */
 
-            int numOfBlocks = N / sizeOfBlock;
+            int blocks = N / i;
 
-            if (N % sizeOfBlock != 0 || numOfBlocks > peakCount) {
+            if (N % i != 0 || blocks > count) {
                 continue;
             }
 
             boolean success = true;
             int threshold = 0;
 
-            for (int i = 0; i < numOfPeaks; i++) {
+            for (int j = 0; j < numOfPeaks; j++) {
 
                 /*
                  * Peaks = [3, 5, 10]
                  * */
-                if (peaks.get(i) / sizeOfBlock > threshold) {
+                if (peaks.get(j) / i > threshold) {
                     success = false;
                     break;
                 }
 
-                if (peaks.get(i) / sizeOfBlock == threshold) {
+                if (peaks.get(j) / i == threshold) {
                     threshold++;
                 }
             }
 
-            if (threshold != numOfBlocks) {
-                success = false;
-            }
-
-            if (success) {
-                return numOfBlocks;
+            if (threshold == blocks) {
+                return blocks;
             }
         }
 
@@ -202,7 +198,7 @@ public class Peaks {
 
             int find = 0;
             int groups = N / size;
-            boolean ok = true;
+            boolean sucess = true;
 
             /*
              * find whether every group has a peak
@@ -210,7 +206,7 @@ public class Peaks {
             for (int peakIdx : peaks) {
 
                 if (peakIdx / size > find) {
-                    ok = false;
+                    sucess = false;
                     break;
                 }
 
@@ -220,10 +216,12 @@ public class Peaks {
             }
 
             if (find != groups) {
-                ok = false;
+                sucess = false;
             }
 
-            if (ok) return groups;
+            if (sucess) {
+                return groups;
+            }
         }
 
         return 0;
@@ -336,5 +334,28 @@ public class Peaks {
             return false;
         }
         return true;
+    }
+
+
+    public static void main(String[] args) {
+
+
+        int[] A = new int[12];
+
+        A[0] = 1;
+        A[1] = 2;
+        A[2] = 3;
+        A[3] = 4;
+        A[4] = 3;
+        A[5] = 4;
+        A[6] = 1;
+        A[7] = 2;
+        A[8] = 3;
+        A[9] = 4;
+        A[10] = 6;
+        A[11] = 2;
+
+
+        solution(A);
     }
 }
