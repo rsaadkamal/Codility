@@ -34,7 +34,9 @@ expected worst-case time complexity is O(N*max(abs(A))2);
 expected worst-case space complexity is O(N+sum(abs(A))) (not counting the storage required for input arguments).
 * */
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Chaklader on 7/6/18.
@@ -44,9 +46,6 @@ public class App {
 
     public static void main(String[] args) {
 
-        int[] A = {1, 5, 2, -2};
-
-        System.out.println("Mietschuldenfreiheitsbescheinigung".length());
     }
 }
 

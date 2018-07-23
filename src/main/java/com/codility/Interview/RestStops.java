@@ -150,6 +150,8 @@ public class RestStops {
         int low = 0;
         int high = N - 1;
 
+        int result = -1;
+
         while (low <= high) {
 
             int middle = (high + low) / 2;
@@ -159,6 +161,9 @@ public class RestStops {
             } else if (x > A[middle]) {
                 low = middle + 1;
             } else {
+
+//                high = middle - 1;
+//                resultIndex = middle;
 
                 /*
                  * we have a match A[middle] equals x

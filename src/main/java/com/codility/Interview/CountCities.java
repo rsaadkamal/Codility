@@ -237,6 +237,9 @@ public class CountCities {
     }
 
 
+    /*
+     * solution - a
+     * */
     public static int[] solution(int[] T) {
 
         Node root = createGraphNetwork(T);
@@ -261,6 +264,54 @@ public class CountCities {
         return result;
     }
 
+
+    /*
+     * solution - b
+     * */
+    public static int[] solution1(int[] T) {
+
+        Node root = createGraphNetwork(T);
+        int N = T.length;
+
+        int[] result = new int[N - 1];
+
+        List<Node> parent = new ArrayList<>();
+        List<Node> children = null;
+
+        /*
+         * get the node in the next level of root
+         * */
+        for (Node node : root.getAdjacents()) {
+            parent.add(node);
+        }
+
+        int index = 0;
+
+        while (true) {
+
+            result[index++] = parent.size();
+
+            children = new ArrayList<>();
+
+            for (Node node : parent) {
+
+                if (node.getAdjacents() == null) {
+                    continue;
+                }
+
+                children.addAll(node.getAdjacents());
+            }
+
+            if (children.size() == 0) {
+                break;
+            }
+
+
+            parent = children;
+        }
+
+        return result;
+    }
 
     public static void main(String[] args) {
 
@@ -292,6 +343,9 @@ public class CountCities {
         T[9] = 1;
 
         int[] result = solution(T);
+        int[] result1 = solution1(T);
+
         System.out.println(Arrays.toString(result));
+        System.out.println(Arrays.toString(result1));
     }
 }
