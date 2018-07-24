@@ -47,6 +47,18 @@ import java.util.Comparator;
 public class NumberOfDiscIntersections {
 
 
+    private static class Slice {
+
+        int start;
+        int end;
+
+        public Slice(int start, int end) {
+            this.start = start;
+            this.end = end;
+        }
+    }
+
+
     /*
      * The J-th disc is drawn with its center at (J, 0) and radius A[J]
      *
@@ -70,7 +82,7 @@ public class NumberOfDiscIntersections {
 
         int         4 bytes     -2,147,483,648 to 2,147,483, 647 (2 x 10ˆ9)
 
-        long        8 bytes     -9,223,372,036,854,775,808 to (9 x 10ˆ18)
+        int        8 bytes     -9,223,372,036,854,775,808 to (9 x 10ˆ18)
         9,223,372,036,854,775,807
 
         float       4 bytes     approximately ±3.40282347E+38F
@@ -98,6 +110,13 @@ public class NumberOfDiscIntersections {
      *
      * The disks have centers of range [0, 1, 2, 3, ......., N-1]
      * */
+
+    /*
+     * for j > i and max value of center is N-1, we have intersection when the right
+     * most point of i-th circle is greater than or eqaul to left most point of j-th
+     * circle
+     * */
+
     /*
      * solution - a
      * */
@@ -109,10 +128,8 @@ public class NumberOfDiscIntersections {
 
             for (int j = i + 1; j < A.length; j++) {
 
-                /*
-                 * intersection occurs between the disks
-                 * */
-                if ((long) A[i] + i >= j - (long) A[j]) {
+
+                if (A[i] + i >= j - A[j]) {
 
                     count++;
 
@@ -135,7 +152,7 @@ public class NumberOfDiscIntersections {
      * is N-1. We just need to find right-A[right] > 0 and how many i+A[i] is smaller
      * than it.
      * */
-    public int solution1(int[] A) {
+    public static int solution1(int[] A) {
 
         int N = A.length;
         int[] sum = new int[N];
@@ -145,11 +162,6 @@ public class NumberOfDiscIntersections {
 
             int right;
 
-            /*
-             * If The right point is lesser than the largest center
-             * or (i+A[i]) <= (N-1) let sum[i+A[i]]++, means there
-             * is one disk that i+A[i]
-             * */
             if (N - 1 >= A[i] + i) {
                 right = i + A[i];
             }
@@ -164,20 +176,19 @@ public class NumberOfDiscIntersections {
             sum[right]++;
         }
 
-        /*
-         * sum[i] means that there are sum[i] number of values that <= i
-         * */
         for (int i = 1; i < N; i++) {
             sum[i] += sum[i - 1];
         }
 
-        long ans = (long) N * (N - 1) / 2;
+        // the total circle we have
+        int result = N * (N - 1) / 2;
 
-        for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
 
             int left;
 
-            if (A[i] > i) {
+//            if (A[j] > j) {
+            if (j - A[j] < 0) {
                 left = 0;
             }
 
@@ -185,7 +196,7 @@ public class NumberOfDiscIntersections {
              * Find the positive i - A[i]
              * */
             else {
-                left = i - A[i];
+                left = j - A[j];
             }
 
             /*
@@ -193,15 +204,15 @@ public class NumberOfDiscIntersections {
              * will never be used as we only need sum[N-1-1] at most
              * */
             if (left > 0) {
-                ans -= sum[left - 1];//.
+                result -= sum[left - 1];//.
             }
         }
 
-        if (ans > 10000000) {
+        if (result > 10000000) {
             return -1;
         }
 
-        return (int) ans;
+        return result;
     }
 
 
@@ -212,13 +223,13 @@ public class NumberOfDiscIntersections {
 
         int N = A.length;
 
-        long[] lefts = new long[N];
-        long[] rights = new long[N];
+        int[] lefts = new int[N];
+        int[] rights = new int[N];
 
         for (int i = 0; i < N; i++) {
 
-            lefts[i] = (long) i - (long) A[i];
-            rights[i] = (long) i + (long) A[i];
+            lefts[i] = i - A[i];
+            rights[i] = i + A[i];
         }
 
         Arrays.sort(lefts);
@@ -252,7 +263,7 @@ public class NumberOfDiscIntersections {
 
         for (int i = 0; i < N; i++) {
 
-            long ar = (long) i + (long) A[i];
+            int ar = i + A[i];
 
             int idx = Arrays.binarySearch(lefts, ar);
             int e;
@@ -264,7 +275,7 @@ public class NumberOfDiscIntersections {
                 e = lm[idx];
             }
 
-            long al = (long) i - (long) A[i];
+            int al = i - A[i];
 
             idx = Arrays.binarySearch(rights, al);
 
@@ -374,23 +385,30 @@ public class NumberOfDiscIntersections {
         Slice[] slices = new Slice[A.length];
 
         for (int i = 0; i < A.length; i++) {
-            long end = (long) i + A[i];
-            long start = (long) i - A[i];
+            int end = i + A[i];
+            int start = i - A[i];
             slices[i] = new Slice(start, end);
         }
 
         return slices;
     }
-}
 
 
-class Slice {
+    public static void main(String[] args) {
 
-    long start;
-    long end;
+        int[] A = new int[6];
 
-    public Slice(long start, long end) {
-        this.start = start;
-        this.end = end;
+        A[0] = 1;
+        A[1] = 5;
+        A[2] = 2;
+        A[3] = 1;
+        A[4] = 4;
+        A[5] = 0;
+
+        System.out.println(solution(A));
+        System.out.println(solution1(A));
     }
 }
+
+
+
