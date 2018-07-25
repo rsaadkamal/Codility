@@ -38,12 +38,53 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 * */
 
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.math.BigInteger;
+import java.util.*;
 
 /**
  * Created by Chaklader on 6/24/18.
  */
+
+
+/*
+After prefix sum, The sum[i] stores the number of discs with the rightmost point within 0 to i
+
+(inclusive). If i = N-1, then it stores disc count of within 0 to i or higher (inclusive)
+
+
+
+In the last loop, left is the value of the leftmost point for the disc and the sum[left -1] is
+
+the count for discs have rightmost point within 0 to (left-1). So, for that particular disc,
+
+there is no possibility for intersection with those discs and we need to deduct the count from
+
+the maximum possible intersection.
+
+
+
+
+Our intention is to find for a particular disc, the number of discs it doesn't intersect. For a
+
+particular disc with j-th index, the leftmost point would be j - A[j] and for all the discs with
+
+the center of i (variable), it wont intersect if i+ A[i] < j - A[j] suffices.
+
+
+
+In terms of prefix array, if j is the leftmost point of a disc, it doesn't intersect with a total
+
+of sum[j-1] discs.
+
+
+
+
+If disc x0 doesn't intersect with the discs y0, y1, y2, it has the count affect if the disc y1 doesn't
+
+interest with the discs of x0, x5 and x10. In every way, the count will be the same. We only need to
+
+make sure we don't perform the double count.
+* */
 public class NumberOfDiscIntersections {
 
 
@@ -53,6 +94,7 @@ public class NumberOfDiscIntersections {
         int end;
 
         public Slice(int start, int end) {
+
             this.start = start;
             this.end = end;
         }
@@ -60,58 +102,12 @@ public class NumberOfDiscIntersections {
 
 
     /*
-     * The J-th disc is drawn with its center at (J, 0) and radius A[J]
-     *
-     *
-     * We say that the J-th disc and K-th disc intersect if J ≠ K and
-     * the J-th and K-th discs have at least one common point (assuming
-     * that the discs contain their borders)
-     *
-     *
-     * Find the number of (unordered) pairs of intersecting discs
-     *
-     * */
-
-    /*
-        -------------------------------------------------------------------
-        Type        Size        Bytes Range
-        -------------------------------------------------------------------
-        byte        1 byte      -128 to 127
-
-        short       2 bytes     -32,768 to 32,767
-
-        int         4 bytes     -2,147,483,648 to 2,147,483, 647 (2 x 10ˆ9)
-
-        int        8 bytes     -9,223,372,036,854,775,808 to (9 x 10ˆ18)
-        9,223,372,036,854,775,807
-
-        float       4 bytes     approximately ±3.40282347E+38F
-        (6-7 significant decimal digits)
-        Java implements IEEE 754 standard
-
-        double      8 Bytes     approximately ±1.79769313486231570E+308
-        (15 significant decimal digits)
-
-        char        2 byte      0 to 65,536 (unsigned)
-
-        boolean not precisely defined   true or false
-        -------------------------------------------------------------------
-    * */
-
-
-    /*
      * solution - a
-     * */
-    /*
-     * Time complexity is O(N*log(N)) or O(N). The largest value of right-A[right]
-     * is N-1. We just need to find right-A[right] > 0 and how many i+A[i] is smaller
-     * than it.
      * */
     public static int solution(int[] A) {
 
         int N = A.length;
         int[] sum = new int[N];
-
 
         for (int i = 0; i < N; i++) {
 
@@ -119,12 +115,7 @@ public class NumberOfDiscIntersections {
 
             if (N - 1 >= A[i] + i) {
                 right = i + A[i];
-            }
-
-            /*
-             * IF i+A[i] > N-1
-             * */
-            else {
+            } else {
                 right = N - 1;
             }
 
@@ -135,29 +126,19 @@ public class NumberOfDiscIntersections {
             sum[i] += sum[i - 1];
         }
 
-        // the total circle we have
         int result = N * (N - 1) / 2;
+//        int result1 = combination(6,2);
 
         for (int j = 0; j < N; j++) {
 
             int left;
 
-//            if (A[j] > j) {
-            if (j - A[j] < 0) {
+            if (j - A[j] <= 0) {
                 left = 0;
-            }
-
-            /*
-             * Find the positive i - A[i]
-             * */
-            else {
+            } else {
                 left = j - A[j];
             }
 
-            /*
-             * Find the number that is smaller than 1-A[i], sum[N-1]
-             * will never be used as we only need sum[N-1-1] at most
-             * */
             if (left > 0) {
                 result -= sum[left - 1];//.
             }
@@ -170,6 +151,21 @@ public class NumberOfDiscIntersections {
         return result;
     }
 
+
+    /*
+     * find the combination of C(N,R) = N!/(R!* (N−R)!)
+     * */
+    public static int combination(int N, int R) {
+
+        BigInteger ret = BigInteger.ONE;
+
+        for (int k = 0; k < R; k++) {
+            ret = ret.multiply(BigInteger.valueOf(N - k))
+                    .divide(BigInteger.valueOf(k + 1));
+        }
+
+        return ret.intValue();
+    }
 
     /*
      * Compute the number of intersections in a sequence of discs.
@@ -406,7 +402,54 @@ public class NumberOfDiscIntersections {
         A[5] = 0;
 
         System.out.println(solution(A));
-        System.out.println(solution1(A));
+    }
+}
+
+
+class Main {
+
+    public static void test() {
+
+        List<Marker> l = new ArrayList<Marker>();
+
+        l.add(new Marker(0, true));
+        l.add(new Marker(10, false));
+
+        l.add(new Marker(5, true));
+        l.add(new Marker(20, false));
+
+        l.add(new Marker(2, true));
+        l.add(new Marker(30, false));
+
+        Collections.sort(l);
+        int total = -1, overlaps = 0;
+
+
+        for (int i = 0; i < l.size(); i++) {
+            if (l.get(i).green) {
+                total++;
+                if (total > 0) overlaps += total;
+            } else {
+                total--;
+            }
+        }
+
+        System.out.println(overlaps);
+    }
+}
+
+class Marker implements Comparable<Marker> {
+
+    int n;
+    boolean green;
+
+    public Marker(int a, boolean b) {
+        n = a;
+        green = b;
+    }
+
+    public int compareTo(Marker other) {
+        return n < other.n ? -1 : (n > other.n ? 1 : (green ? -1 : 1));
     }
 }
 
