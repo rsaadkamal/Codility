@@ -84,6 +84,18 @@ If disc x0 doesn't intersect with the discs y0, y1, y2, it has the count affect 
 interest with the discs of x0, x5 and x10. In every way, the count will be the same. We only need to
 
 make sure we don't perform the double count.
+
+
+
+If the leftmost is lesser then 0, we set it as 0 and if the rightmost point of the discs is greater then
+
+N-1, we set it as N-1. because, if the leftmost point is lesser than 0, to be intersectable, the rightmost
+
+point of the same discs will be in => 0 (= in case of a point). So at the time when comparing for discs for
+
+not to be intractable, this discs will be considered. Similar logic applies when we set the rightmost point
+
+as N-1 when its > N-1
 * */
 public class NumberOfDiscIntersections {
 
