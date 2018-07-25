@@ -104,6 +104,11 @@ public class NumberOfDiscIntersections {
     /*
      * solution - a
      * */
+    /*
+     * if a disc has leftmost point <= 0, their rightmost point is > 0. We
+     * consider other discs leftmost to compare the the rightmost points of
+     * these discs
+     * */
     public static int solution(int[] A) {
 
         int N = A.length;
@@ -126,6 +131,10 @@ public class NumberOfDiscIntersections {
             sum[i] += sum[i - 1];
         }
 
+        /*
+         * from N discs, if we pick 2 discs the maximum possible
+         * number of intersection will be combination of C(N,R)
+         * */
         int result = N * (N - 1) / 2;
 //        int result1 = combination(6,2);
 
