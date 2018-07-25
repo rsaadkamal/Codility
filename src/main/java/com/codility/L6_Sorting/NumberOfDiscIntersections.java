@@ -167,6 +167,35 @@ public class NumberOfDiscIntersections {
         return ret.intValue();
     }
 
+
+    /*
+     * function to multiply two numbers using bitwise operation
+     * */
+    public static int multiplyTwoNumbers(int a, int b) {
+
+        int res = 0;
+
+        /*
+         * while second number doesn't become 1
+         * */
+        while (b > 0) {
+
+            /*
+             * if second number becomes odd, add the first number to result
+             * */
+            if ((b & 1) != 0)
+                res = res + a;
+
+            /*
+             * double the first number and halve the second number
+             * */
+            a = a << 1;
+            b = b >> 1;
+        }
+
+        return res;
+    }
+
     /*
      * Compute the number of intersections in a sequence of discs.
      * The J-th disc is drawn with its center at (J, 0) and radius
