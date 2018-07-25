@@ -8,13 +8,13 @@ package com.codility.L13_Fibonacci_Numbers;
     F(M) = F(M - 1) + F(M - 2) if M >= 2
 
 
-A small frog wants to get to the other side of a river. The frog is initially located at one bank of the river (position −1)
+A small frog wants to get to the other side of a river. The frog is initially located at one bank of the river (pos −1)
 
-and wants to get to the other bank (position N). The frog can jump over any distance F(K), where F(K) is the K-th Fibonacci
+and wants to get to the other bank (pos N). The frog can jump over any distance F(K), where F(K) is the K-th Fibonacci
 
 number. Luckily, there are many leaves on the river, and the frog can jump between the leaves, but only in the direction of
 
-the bank at position N.
+the bank at pos N.
 
 
 
@@ -24,16 +24,16 @@ consecutive positions from 0 to N − 1 on the river. Array A contains only 0s a
 
 
 
-0 represents a position without a leaf
+0 represents a pos without a leaf
 
-1 represents a position containing a leaf
-
-
+1 represents a pos containing a leaf
 
 
-The goal is to count the minimum number of numOfJumps in which the frog can get to the other side of the river (from position
 
-−1 to position N). The frog can jump between positions −1 and N (the banks of the river) and every position containing a leaf.
+
+The goal is to count the minimum number of jumps in which the frog can get to the other side of the river (from pos
+
+−1 to pos N). The frog can jump between positions −1 and N (the banks of the river) and every pos containing a leaf.
 
 
 For example, consider array A such that:
@@ -63,7 +63,7 @@ Write a function:
     }
 
 
-that, given an array A consisting of N integers, returns the minimum number of numOfJumps by which the frog can get to the other
+that, given an array A consisting of N integers, returns the minimum number of jumps by which the frog can get to the other
 side of the river. If the frog cannot reach the other side of the river, the function should return −1.
 
 For example, given:
@@ -96,9 +96,7 @@ Expected worst-case time complexity is O(N*log(N));
 Expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
 * */
 
-
 import java.util.*;
-
 
 /**
  * Created by Chaklader on 7/6/18.
@@ -107,7 +105,7 @@ public class FibFrog {
 
     /*
      * Given an array A consisting of N integers, returns the minimum number of
-     * numOfJumps by which the frog can get to the other side of the river. If the
+     * jumps by which the frog can get to the other side of the river. If the
      * frog cannot reach the other side of the river, the function should return −1.
      * */
 
@@ -118,18 +116,18 @@ public class FibFrog {
 
     private static class Jump {
 
-        int position;
-        int numOfJumps;
+        int pos;
+        int jumps;
 
-        Jump(int position, int numOfJumps) {
+        Jump(int pos, int jumps) {
 
-            this.position = position;
-            this.numOfJumps = numOfJumps;
+            this.pos = pos;
+            this.jumps = jumps;
         }
     }
 
     /*
-     * count the minimum number of numOfJumps required
+     * count the minimum number of jumps required
      * for a frog to get to the other side of a river.
      * */
     public static int solution(int[] A) {
@@ -141,50 +139,47 @@ public class FibFrog {
         Stack<Jump> stack = new Stack<Jump>();
 
         /*
-         * position and number of numOfJumps
+         * pos and number of jumps
          * */
         stack.push(new Jump(-1, 0));
 
         /*
-        The frog can jump between positions −1 and N (the
-        banks of the river) and every position containing
-        a leaf.
-        */
+         * The frog can jump between positions −1 and N (the
+         * banks of the river) and every pos containing a leaf.
+         * */
         while (!stack.isEmpty()) {
 
             /*
              * take the top of the stack (the firstElement and peek is the same)
              * */
-            Jump currJump = stack.firstElement();
+            Jump curr = stack.firstElement();
             stack.remove(0);
 
             int i = 0;
 
-            /*
-             * we get the index in the left side. we will be
-             * out of the while loop if left value > A.length
-             * means we reached in the other bank
-             * */
-            while (currJump.position + fibs.get(i) <= A.length) {
+            int next = curr.pos + fibs.get(0);
+
+
+            while (next <= A.length) {
 
                 /*
-                 * it will take just one more jump when we
-                 * are at the index of (N-1) ie the last leaf
+                 * we start from -1, hence, with a jump of (N+1) we
+                 * would reached the opposite bank ie [(-1) + (N+1) = N]
                  * */
-                if (currJump.position + fibs.get(i) == A.length) {
-                    return currJump.numOfJumps + 1;
+                if (next == A.length) {
+                    return curr.jumps + 1;
                 }
 
                 /*
-                 * we are at a leaf and this position is not visited yet
+                 * we are at a leaf and this pos is not visited yet
                  * */
-                if (A[currJump.position + fibs.get(i)] == 1 && !visited[currJump.position + fibs.get(i)]) {
-
-                    stack.push(new Jump(currJump.position + fibs.get(i), currJump.numOfJumps + 1));
-                    visited[currJump.position + fibs.get(i)] = true;
+                if (A[next] == 1 && !visited[next]) {
+                    stack.push(new Jump(next, curr.jumps + 1));
+                    visited[next] = true;
                 }
 
                 i++;
+                next = curr.pos + fibs.get(i);
             }
         }
 
@@ -192,7 +187,7 @@ public class FibFrog {
     }
 
 
-    public static List<Integer> getFibonaciUpTo(int n) {
+    public static List<Integer> getFibonaciUpTo(int N) {
 
         List<Integer> fibs = new ArrayList<Integer>();
 
@@ -201,7 +196,8 @@ public class FibFrog {
 
         int i = 2;
 
-        while (fibs.get(fibs.size() - 1) <= n) {
+        // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+        while (fibs.get(fibs.size() - 1) <= N) {
             fibs.add(fibs.get(i - 1) + fibs.get(i - 2));
             i++;
         }
@@ -237,7 +233,6 @@ public class FibFrog {
 
         while (true) {
 
-
             /*
              * we were not able to add any new jump from the previous
              * for loop and hence, continuation is worthless
@@ -261,16 +256,16 @@ public class FibFrog {
                  * -1 + (N+1) = N for index basis calculation
                  * to cross just opposite the river
                  * */
-                if (currentJump.position + fib == A.length) {
-                    return currentJump.numOfJumps + 1;
-                } else if (currentJump.position + fib > A.length || A[currentJump.position + fib] == 0
-                        || visited[currentJump.position + fib]) {
+                if (currentJump.pos + fib == A.length) {
+                    return currentJump.jumps + 1;
+                } else if (currentJump.pos + fib > A.length || A[currentJump.pos + fib] == 0
+                        || visited[currentJump.pos + fib]) {
 
                     continue;
                 }
 
-                jumps.add(new Jump(currentJump.position + fib, currentJump.numOfJumps + 1));
-                visited[currentJump.position + fib] = true;
+                jumps.add(new Jump(currentJump.pos + fib, currentJump.jumps + 1));
+                visited[currentJump.pos + fib] = true;
             }
 
             index++;
@@ -311,8 +306,8 @@ public class FibFrog {
      */
     /*
      * dynamic approach for each cell we memorize the minimal
-     * amount of numOfJumps based on the previous cells minimal
-     * numOfJumps
+     * amount of jumps based on the previous cells minimal
+     * jumps
      * */
     public static int solution2(int[] A) {
 
@@ -397,7 +392,7 @@ public class FibFrog {
      * <p>
      * K[i] = min(j<=F.length)(K[i-F[j]]+1), if i > 0  and ( A[i] == 1 or i == A.length)
      * <p>
-     * Where K[i] is a number of jumps on i'th position F - fibonacci sequence A - the map of banks
+     * Where K[i] is a number of jumps on i'th pos F - fibonacci sequence A - the map of banks
      */
 
     /*
@@ -456,5 +451,27 @@ public class FibFrog {
         }
 
         return result.stream().mapToInt(a -> a).toArray();
+    }
+
+
+    public static void main(String[] args) {
+
+
+        int[] A = new int[11];
+
+        A[0] = 0;
+        A[1] = 0;
+        A[2] = 0;
+        A[3] = 1;
+        A[4] = 1;
+        A[5] = 0;
+        A[6] = 1;
+        A[7] = 0;
+        A[8] = 0;
+        A[9] = 0;
+        A[10] = 0;
+
+
+        System.out.println(solution(A));
     }
 }

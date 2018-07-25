@@ -138,6 +138,17 @@ public class CountNonDivisible {
 
 
     /*
+     * print 2-D matrix as each row
+     * */
+    public static void print(int[][] A) {
+
+        for (int[] a : A) {
+            System.out.println(Arrays.toString(a));
+        }
+    }
+
+
+    /*
      * solution - b
      */
     public static int[] solution1(int[] A) {

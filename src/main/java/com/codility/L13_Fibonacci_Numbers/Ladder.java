@@ -31,7 +31,7 @@ Write A function:
 
 class Solution { public int[] solution(int[] A, int[] B); }
 
-that, given two non-empty arrays A and B of L integers, returns an array consisting of L integers specifying the consecutive answers; position I should contain the number of different ways of climbing the ladder with A[I] rungs modulo 2B[I].
+that, given two non-empty arrays A and B of L integers, returns an array consisting of L integers specifying the consecutive answers; pos I should contain the number of different ways of climbing the ladder with A[I] rungs modulo 2B[I].
 
 For example, given L = 5 and:
 
@@ -114,6 +114,10 @@ public class Ladder {
         for (int i = 0; i < N; i++) {
 
             /*
+             *
+             * 2^32-1 is the maximum value for a 32-bit unsigned integer
+             * (32 binary digits). 2^32 is the number of possible values
+             *
              * Confirm that the fibonacci number will not
              * exceed the max integer value of 1<<n = 2^n
              * */

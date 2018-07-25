@@ -34,6 +34,8 @@ expected worst-case time complexity is O(N*max(abs(A))2);
 expected worst-case space complexity is O(N+sum(abs(A))) (not counting the storage required for input arguments).
 * */
 
+import com.codility.L1_Iterations.BinaryGap;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -48,59 +50,12 @@ public class App {
 
     public static int solution(int[] A) {
 
-        int N = A.length;
-
-        int[] sum = new int[N];
-
-        for (int i = 0; i < N; i++) {
-
-            int right;
-
-            if (i + A[i] <= N - 1) {
-                right = i + A[i];
-            } else {
-                right = N - 1;
-            }
-
-            sum[right]++;
-        }
-
-
-        for (int i = 1; i < N; i++) {
-            sum[i] += sum[i - 1];
-        }
-
-        int total = (N * (N - 1)) / 2;
-
-        for (int j = 0; j < N; j++) {
-
-            int left;
-
-            if (j - A[j] < 0) {
-                left = 0;
-            } else {
-                left = j - A[j];
-            }
-
-            if (left > 0) {
-                total -= sum[left - 1];
-            }
-        }
-
-        return total;
+        return -1;
     }
-
 
     public static void main(String[] args) {
 
-        int[] A = new int[6];
-
-        A[0] = 1;
-        A[1] = 5;
-        A[2] = 2;
-        A[3] = 1;
-        A[4] = 4;
-        A[5] = 0;
+        System.out.println("Miami");
     }
 }
 
