@@ -100,59 +100,14 @@ public class NumberOfDiscIntersections {
 
 
     /*
-     * Compute the number of intersections in a sequence of discs.
-     * The J-th disc is drawn with its center at (J, 0) and radius
-     * A[J]
-     *
-     * PREMISE
-     * -------
-     * if (i + A[i]) > (j - A[j]) where j > i, the intersection occurs.
-     *
-     * The disks have centers of range [0, 1, 2, 3, ......., N-1]
-     * */
-
-    /*
-     * for j > i and max value of center is N-1, we have intersection when the right
-     * most point of i-th circle is greater than or eqaul to left most point of j-th
-     * circle
-     * */
-
-    /*
      * solution - a
-     * */
-    public static int solution(int[] A) {
-
-        int count = 0;
-
-        for (int i = 0; i < A.length - 1; i++) {
-
-            for (int j = i + 1; j < A.length; j++) {
-
-
-                if (A[i] + i >= j - A[j]) {
-
-                    count++;
-
-                    if (count > 10000000) {
-                        return -1;
-                    }
-                }
-            }
-        }
-
-        return count;
-    }
-
-
-    /*
-     * solution - b
      * */
     /*
      * Time complexity is O(N*log(N)) or O(N). The largest value of right-A[right]
      * is N-1. We just need to find right-A[right] > 0 and how many i+A[i] is smaller
      * than it.
      * */
-    public static int solution1(int[] A) {
+    public static int solution(int[] A) {
 
         int N = A.length;
         int[] sum = new int[N];
@@ -213,6 +168,51 @@ public class NumberOfDiscIntersections {
         }
 
         return result;
+    }
+
+
+    /*
+     * Compute the number of intersections in a sequence of discs.
+     * The J-th disc is drawn with its center at (J, 0) and radius
+     * A[J]
+     *
+     * PREMISE
+     * -------
+     * if (i + A[i]) > (j - A[j]) where j > i, the intersection occurs.
+     *
+     * The disks have centers of range [0, 1, 2, 3, ......., N-1]
+     * */
+
+    /*
+     * for j > i and max value of center is N-1, we have intersection when the right
+     * most point of i-th circle is greater than or eqaul to left most point of j-th
+     * circle
+     * */
+
+    /*
+     * solution - b
+     * */
+    public static int solution1(int[] A) {
+
+        int count = 0;
+
+        for (int i = 0; i < A.length - 1; i++) {
+
+            for (int j = i + 1; j < A.length; j++) {
+
+
+                if (A[i] + i >= j - A[j]) {
+
+                    count++;
+
+                    if (count > 10000000) {
+                        return -1;
+                    }
+                }
+            }
+        }
+
+        return count;
     }
 
 
