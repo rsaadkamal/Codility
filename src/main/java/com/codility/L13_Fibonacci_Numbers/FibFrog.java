@@ -154,13 +154,12 @@ public class FibFrog {
             Jump curr = stack.peek();
 
             /*
-             * remove delete the first pushed entity
+             * LIFO - remove delete the first pushed entity
              * */
             stack.remove(0);
 
             int i = 0;
             int index = curr.pos + fibs.get(0);
-
 
             /*
              * ALGORITHM
@@ -170,7 +169,7 @@ public class FibFrog {
              *      bank. Leave the loop if not possible and remove the entity from where we
              *      tried to make the jump.
              *
-             * ii.  in the meanwhile, add all the entities with leaves in the stack
+             * ii.  Meanwhile, store all the entities with leaves in the stack
              *
              * we do it for finding the minimum jumps to reach the opposite bank
              * */
@@ -319,7 +318,6 @@ public class FibFrog {
                            \
                            11
                 * */
-
 
                 jumps.add(new Jump(index, current.jumps + 1));
                 visited[index] = true;
@@ -526,6 +524,6 @@ public class FibFrog {
 //        int[] A = {0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0};
         int[] A = {0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0};
 
-        System.out.println(solution1(A));
+        System.out.println(solution(A));
     }
 }
