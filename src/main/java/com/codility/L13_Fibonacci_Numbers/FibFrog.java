@@ -213,91 +213,6 @@ public class FibFrog {
     }
 
 
-    //    /*
-//     * count the minimum number of jumps required
-//     * for a frog to get to the other side of a river.
-//     * */
-//    public static int solution(int[] A) {
-//
-//        List<Integer> fibs = getFibonaciNumbers(A.length + 1);
-//        boolean[] visited = new boolean[A.length];
-//
-//        Stack<Jump> stack = new Stack<Jump>();
-//
-//        /*
-//         * pos and number of jumps
-//         * */
-//        stack.push(new Jump(-1, 0));
-//
-//        /*
-//         * The frog can jump between positions −1 and N (the
-//         * banks of the river) and every pos containing a leaf.
-//         * */
-//        while (!stack.isEmpty()) {
-//
-//            Jump curr = stack.pop();
-////            /*
-////             * peek or the firstElement acquire the last pushed entity
-////             * */
-////            Jump curr = stack.peek();
-////
-////            /*
-////             * LIFO - remove delete the first pushed entity
-////             * */
-////            stack.remove(0);
-//
-//            int i = 0;
-//            int index = curr.pos + fibs.get(0);
-//
-//            /*
-//             * ALGORITHM
-//             * ---------
-//             *
-//             * To find the minimum steps to reach the opposite bank,
-//             *
-//             * i.    try to make the longest jump from the current position to reach opposite
-//             *       bank. Leave the loop if not possible and remove the entity from where we
-//             *       tried to make the jump.
-//             *
-//             * ii.   meanwhile, store all the entities with leaves in the stack
-//             *
-//             * iii.  if you use the Stack, keep the data in the ascending order and if you use
-//             *       the List or Queue, keep the data in the descending order
-//             * */
-//
-//            /*
-//             * A    = [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0] and N = 11
-//             * A    = [0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0] and N = 11
-//             * fibs = [1, 2, 3, 5, 8, 13]
-//             * */
-//            while (index <= A.length) {
-//
-//                /*
-//                 * we start from -1, hence, with a jump of (N+1) we
-//                 * would reached the opposite bank ie [(-1) + (N+1) = N]
-//                 * index is the index value of array "A"
-//                 * */
-//                if (index == A.length) {
-//                    return curr.jumps + 1;
-//                }
-//
-//                /*
-//                 * we are at a leaf and this pos is not visited yet
-//                 * */
-//                if (A[index] == 1 && !visited[index]) {
-//                    stack.push(new Jump(index, curr.jumps + 1));
-//                    visited[index] = true;
-//                }
-//
-//                i++;
-//                index = curr.pos + fibs.get(i);
-//            }
-//        }
-//
-//        return -1;
-//    }
-
-
     /*
      * the maximum value for the fibonacci number
      * required is (N+1) where N = A.length
@@ -341,7 +256,8 @@ public class FibFrog {
      * */
     public static int solution1(int[] A) {
 
-        List<Integer> fibs = getFibonacci(A.length + 1);
+        List<Integer> fibs = getFibonaciNumbers(A.length + 1);
+        Collections.reverse(fibs);
 
         boolean[] visited = new boolean[A.length];
         List<Jump> jumps = new ArrayList<Jump>();
@@ -415,28 +331,6 @@ public class FibFrog {
         }
 
         return -1;
-    }
-
-
-    public static List<Integer> getFibonacci(int N) {
-
-        List<Integer> fibs = new ArrayList<Integer>();
-
-        fibs.add(1);
-        fibs.add(1);
-
-        int index = 1;
-
-        while (fibs.get(index) <= N) {
-
-            fibs.add(fibs.get(index) + fibs.get(index - 1));
-            index++;
-        }
-
-        fibs.remove(0);
-        Collections.reverse(fibs);
-
-        return fibs;
     }
 
 
@@ -544,7 +438,9 @@ public class FibFrog {
             return 1;
         }
 
-        int[] fibonacciSequence = getFibonacciSequence(A.length + 1);
+        List<Integer> result = getFibonaciNumbers(A.length + 1);
+        int[] fibs = result.stream().mapToInt(a -> a).toArray();
+
         int[] Container = new int[A.length + 2];
 
         Arrays.fill(Container, -1);
@@ -554,9 +450,9 @@ public class FibFrog {
 
             int min = Integer.MAX_VALUE;
 
-            for (int fibSequenceElement : fibonacciSequence) {
+            for (int f : fibs) {
 
-                int index = i - fibSequenceElement + 1;
+                int index = i - f + 1;
 
                 if (index < 0) {
                     break;
@@ -573,24 +469,6 @@ public class FibFrog {
         }
 
         return Container[A.length + 1];
-    }
-
-    private int[] getFibonacciSequence(int n) {
-
-        ArrayList<Integer> result = new ArrayList<>();
-
-        result.add(1);
-        result.add(2);
-
-        int i = 2;
-
-        while (result.get(i - 1) < n) {
-
-            result.add(result.get(i - 1) + result.get(i - 2));
-            i++;
-        }
-
-        return result.stream().mapToInt(a -> a).toArray();
     }
 
 
