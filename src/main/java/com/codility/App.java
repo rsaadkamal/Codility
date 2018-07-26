@@ -48,14 +48,9 @@ import java.util.stream.IntStream;
 public class App {
 
 
-    public int solution(int[] A) {
-
-        return -1;
-    }
-
-
     public static void main(String[] args) {
 
+        System.out.println("Miami");
     }
 }
 
