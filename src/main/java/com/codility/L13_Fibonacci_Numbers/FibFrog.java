@@ -132,8 +132,7 @@ public class FibFrog {
      * */
     public static int solution(int[] A) {
 
-
-        List<Integer> fibs = getFibonaciUpTo(A.length + 1);
+        List<Integer> fibs = getFibonaciNumbers(A.length + 1);
         boolean[] visited = new boolean[A.length];
 
         Stack<Jump> stack = new Stack<Jump>();
@@ -150,36 +149,58 @@ public class FibFrog {
         while (!stack.isEmpty()) {
 
             /*
-             * take the top of the stack (the firstElement and peek is the same)
+             * peek or the firstElement acquire the last pushed entity
              * */
-            Jump curr = stack.firstElement();
+            Jump curr = stack.peek();
+
+            /*
+             * remove delete the first pushed entity
+             * */
             stack.remove(0);
 
             int i = 0;
+            int index = curr.pos + fibs.get(0);
 
-            int next = curr.pos + fibs.get(0);
 
+            /*
+             * ALGORITHM
+             * ---------
+             *
+             * i.   try to make the longest jump from the current position to reach opposite
+             *      bank. Leave the loop if not possible and remove the entity from where we
+             *      tried to make the jump.
+             *
+             * ii.  in the meanwhile, add all the entities with leaves in the stack
+             *
+             * we do it for finding the minimum jumps to reach the opposite bank
+             * */
 
-            while (next <= A.length) {
+            /*
+             * A    = [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0] and N = 11
+             * A    = [0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0] and N = 11
+             * fibs = [1, 2, 3, 5, 8, 13]
+             * */
+            while (index <= A.length) {
 
                 /*
                  * we start from -1, hence, with a jump of (N+1) we
                  * would reached the opposite bank ie [(-1) + (N+1) = N]
+                 * index is the index value of array "A"
                  * */
-                if (next == A.length) {
+                if (index == A.length) {
                     return curr.jumps + 1;
                 }
 
                 /*
                  * we are at a leaf and this pos is not visited yet
                  * */
-                if (A[next] == 1 && !visited[next]) {
-                    stack.push(new Jump(next, curr.jumps + 1));
-                    visited[next] = true;
+                if (A[index] == 1 && !visited[index]) {
+                    stack.push(new Jump(index, curr.jumps + 1));
+                    visited[index] = true;
                 }
 
                 i++;
-                next = curr.pos + fibs.get(i);
+                index = curr.pos + fibs.get(i);
             }
         }
 
@@ -187,7 +208,11 @@ public class FibFrog {
     }
 
 
-    public static List<Integer> getFibonaciUpTo(int N) {
+    /*
+     * the maximum value for the fibonacci number
+     * required is (N+1) where N = A.length
+     * */
+    public static List<Integer> getFibonaciNumbers(int N) {
 
         List<Integer> fibs = new ArrayList<Integer>();
 
@@ -212,74 +237,100 @@ public class FibFrog {
     /*
      * solution - b
      */
+    /*
+     * ALGORITHM
+     * ---------
+     *
+     * i.   from any point, try to jump to the opposite bank
+     *
+     * ii.  if not possible, add the leaves matches with fibonacci numbers in the descending order
+     *      (largest to the smallest)
+     *
+     * iii.  store all the data in a list, after th for loop increase the index and keep iterating
+     *
+     * */
     public static int solution1(int[] A) {
 
-        /*
-         * forward: [1, 2, 3, 5, 8, 13, 21]
-         * reverse: [21, 13, 8, 5, 3, 2, 1]
-         * */
-        List<Integer> fibs = getFibonaci(A.length);
+        List<Integer> fibs = getFibonacci(A.length + 1);
 
         boolean[] visited = new boolean[A.length];
-
         List<Jump> jumps = new ArrayList<Jump>();
 
         jumps.add(new Jump(-1, 0));
+        Jump current = null;
 
-        Jump currentJump = null;
-
-        int index = 0;
-
+        int i = 0;
 
         while (true) {
 
             /*
-             * we were not able to add any new jump from the previous
-             * for loop and hence, continuation is worthless
+             * no jumps are added in the previous iteration
              * */
-            if (index == jumps.size()) {
+            if (i == jumps.size()) {
                 return -1;
             }
 
-            currentJump = jumps.get(index);
-
+            current = jumps.get(i);
 
             /*
-             * A = [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-             *
-             * forward: [1, 2, 3, 5, 8, 13]
-             * reverse: [13, 8, 5, 3, 2, 1]
+             * the fibs are sorted reversely so that
+             * we can add the largest spatial jump
              * */
-            for (int fib : fibs) {
+            for (int f : fibs) {
 
+
+                int index = current.pos + f;
                 /*
-                 * -1 + (N+1) = N for index basis calculation
+                 * [(-1) + (N+1) = N] for index basis calculation
                  * to cross just opposite the river
                  * */
-                if (currentJump.pos + fib == A.length) {
-                    return currentJump.jumps + 1;
-                } else if (currentJump.pos + fib > A.length || A[currentJump.pos + fib] == 0
-                        || visited[currentJump.pos + fib]) {
+                if (index == A.length) {
+                    return current.jumps + 1;
+                }
 
+                /*
+                 * we will be far out of the opposite bank if
+                 * this step is taken
+                 * */
+                else if (index > A.length) {
                     continue;
                 }
 
-                jumps.add(new Jump(currentJump.pos + fib, currentJump.jumps + 1));
-                visited[currentJump.pos + fib] = true;
+                /*
+                 * no leave or already visited step
+                 * */
+                else if (A[index] == 0 || visited[index]) {
+                    continue;
+                }
+
+
+                /*
+                Indexs =  [-1, 7, 4, 9, 11]
+                A = [0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0]
+
+                    Indexes Tree
+                    ------------
+
+                        -1
+                       /  \
+                      4   7
+                           \
+                           9
+                           \
+                           11
+                * */
+
+
+                jumps.add(new Jump(index, current.jumps + 1));
+                visited[index] = true;
             }
 
-            index++;
+            i++;
         }
     }
 
 
-    /*
-     * A = [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-     *
-     * forward: [1, 2, 3, 5, 8, 13]
-     * reverse: [13, 8, 5, 3, 2, 1]
-     * */
-    public static List<Integer> getFibonaci(int N) {
+    public static List<Integer> getFibonacci(int N) {
 
         List<Integer> fibs = new ArrayList<Integer>();
 
@@ -358,6 +409,7 @@ public class FibFrog {
                     if (from == -1) {
                         min = 1;
                     } else if (A[from] > 0) {
+
                         if (A[from] + 1 < min) {
                             min = A[from] + 1;
                         }
@@ -457,21 +509,23 @@ public class FibFrog {
     public static void main(String[] args) {
 
 
-        int[] A = new int[11];
+//        int[] A = new int[11];
+//
+//        A[0] = 0;
+//        A[1] = 0;
+//        A[2] = 0;
+//        A[3] = 1;
+//        A[4] = 1;
+//        A[5] = 0;
+//        A[6] = 1;
+//        A[7] = 0;
+//        A[8] = 0;
+//        A[9] = 0;
+//        A[10] = 0;
 
-        A[0] = 0;
-        A[1] = 0;
-        A[2] = 0;
-        A[3] = 1;
-        A[4] = 1;
-        A[5] = 0;
-        A[6] = 1;
-        A[7] = 0;
-        A[8] = 0;
-        A[9] = 0;
-        A[10] = 0;
+//        int[] A = {0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0};
+        int[] A = {0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0};
 
-
-        System.out.println(solution(A));
+        System.out.println(solution1(A));
     }
 }

@@ -230,7 +230,9 @@ public class MinMaxDivision {
         while (min <= max) {
 
             int mid = (min + max) / 2;
-            if (divisionSolvable(mid, K - 1, A)) {
+
+            if (verify1(mid, K - 1, A)) {
+
                 max = mid - 1;
                 result = mid;
             } else {
@@ -242,16 +244,19 @@ public class MinMaxDivision {
     }
 
 
-    private boolean divisionSolvable(int mid, int k, int[] a) {
+    private boolean verify1(int mid, int k, int[] a) {
 
         int sum = 0;
 
         for (int i = 0; i < a.length; i++) {
+
             sum += a[i];
+
             if (sum > mid) {
                 sum = a[i];
                 k--;
             }
+
             if (k < 0) {
                 return false;
             }

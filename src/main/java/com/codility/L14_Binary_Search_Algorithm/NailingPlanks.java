@@ -404,14 +404,8 @@ public class NailingPlanks {
      * */
     static void printMatrix(int[][] grid) {
 
-        for (int r = 0; r < grid.length; r++) {
-
-            for (int c = 0; c < grid[r].length; c++) {
-
-                System.out.print(grid[r][c] + " ");
-            }
-
-            System.out.println();
+        for (int[] g : grid) {
+            System.out.println(Arrays.toString(g));
         }
     }
 
@@ -469,6 +463,7 @@ public class NailingPlanks {
 
             int startsQuantity = this.getStartsQuantity(starts, C[i]);
             int endsQuantity = this.getEndsQuantity(ends, C[i]);
+
             ArrayList<Integer> planksToRemove = new ArrayList<>();
 
             for (int j = endsQuantity; j < startsQuantity; j++) {
