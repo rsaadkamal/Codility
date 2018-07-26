@@ -187,9 +187,8 @@ public class FibFrog {
              *
              * ii.   meanwhile, store all the entities with leaves in the stack
              *
-             * iii.  if you use the Stack, keep the data in the ascending order
-             *
-             * iv.   if you use the List or Queue, keep the data in the descending order
+             * iii.  if you use the Stack, keep the data in the ascending order and if you use
+             *       the List or Queue, keep the data in the descending order
              * */
 
             /*
