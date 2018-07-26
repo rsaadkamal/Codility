@@ -103,6 +103,19 @@ import java.util.*;
  */
 public class FibFrog {
 
+
+    /*
+     *
+     * ALGORITHM
+     * ---------
+     *
+     * to find the minimum steps,
+     *
+     * i.  if you use the Stack, keep the data in the ascending order
+     *
+     * ii. if you use the List or Queue, keep the data in the descending order
+     * */
+
     /*
      * Given an array A consisting of N integers, returns the minimum number of
      * jumps by which the frog can get to the other side of the river. If the
@@ -148,15 +161,16 @@ public class FibFrog {
          * */
         while (!stack.isEmpty()) {
 
-            /*
-             * peek or the firstElement acquire the last pushed entity
-             * */
-            Jump curr = stack.peek();
-
-            /*
-             * LIFO - remove delete the first pushed entity
-             * */
-            stack.remove(0);
+            Jump curr = stack.pop();
+//            /*
+//             * peek or the firstElement acquire the last pushed entity
+//             * */
+//            Jump curr = stack.peek();
+//
+//            /*
+//             * LIFO - remove delete the first pushed entity
+//             * */
+//            stack.remove(0);
 
             int i = 0;
             int index = curr.pos + fibs.get(0);
@@ -165,13 +179,17 @@ public class FibFrog {
              * ALGORITHM
              * ---------
              *
-             * i.   try to make the longest jump from the current position to reach opposite
-             *      bank. Leave the loop if not possible and remove the entity from where we
-             *      tried to make the jump.
+             * To find the minimum steps to reach the opposite bank,
              *
-             * ii.  Meanwhile, store all the entities with leaves in the stack
+             * i.    try to make the longest jump from the current position to reach opposite
+             *       bank. Leave the loop if not possible and remove the entity from where we
+             *       tried to make the jump.
              *
-             * we do it for finding the minimum jumps to reach the opposite bank
+             * ii.   meanwhile, store all the entities with leaves in the stack
+             *
+             * iii.  if you use the Stack, keep the data in the ascending order
+             *
+             * iv.   if you use the List or Queue, keep the data in the descending order
              * */
 
             /*
