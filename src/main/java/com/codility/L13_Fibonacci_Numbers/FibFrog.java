@@ -139,10 +139,6 @@ public class FibFrog {
         }
     }
 
-    /*
-     * count the minimum number of jumps required
-     * for a frog to get to the other side of a river.
-     * */
     public static int solution(int[] A) {
 
         List<Integer> fibs = getFibonaciNumbers(A.length + 1);
@@ -162,18 +158,6 @@ public class FibFrog {
         while (!stack.isEmpty()) {
 
             Jump curr = stack.pop();
-//            /*
-//             * peek or the firstElement acquire the last pushed entity
-//             * */
-//            Jump curr = stack.peek();
-//
-//            /*
-//             * LIFO - remove delete the first pushed entity
-//             * */
-//            stack.remove(0);
-
-            int i = 0;
-            int index = curr.pos + fibs.get(0);
 
             /*
              * ALGORITHM
@@ -181,14 +165,16 @@ public class FibFrog {
              *
              * To find the minimum steps to reach the opposite bank,
              *
-             * i.    try to make the longest jump from the current position to reach opposite
-             *       bank. Leave the loop if not possible and remove the entity from where we
-             *       tried to make the jump.
+             * i.    Try to make the longest jump from the current position to reach opposite
+             *       bank. If possible, return the jump number as result
              *
-             * ii.   meanwhile, store all the entities with leaves in the stack
+             * ii.   Otherwise, remove the current position
              *
-             * iii.  if you use the Stack, keep the data in the ascending order and if you use
-             *       the List or Queue, keep the data in the descending order
+             * iii.  Meanwhile, store all the entities with leaves in the stack
+             *
+             * iv.   Start investigation from the longest entity from the set of current addition
+             *
+             * v.    Repeat the entire process
              * */
 
             /*
@@ -196,7 +182,13 @@ public class FibFrog {
              * A    = [0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0] and N = 11
              * fibs = [1, 2, 3, 5, 8, 13]
              * */
-            while (index <= A.length) {
+            for (int f : fibs) {
+
+                int index = curr.pos + f;
+
+                if (index > A.length) {
+                    break;
+                }
 
                 /*
                  * we start from -1, hence, with a jump of (N+1) we
@@ -214,14 +206,96 @@ public class FibFrog {
                     stack.push(new Jump(index, curr.jumps + 1));
                     visited[index] = true;
                 }
-
-                i++;
-                index = curr.pos + fibs.get(i);
             }
         }
 
         return -1;
     }
+
+
+    //    /*
+//     * count the minimum number of jumps required
+//     * for a frog to get to the other side of a river.
+//     * */
+//    public static int solution(int[] A) {
+//
+//        List<Integer> fibs = getFibonaciNumbers(A.length + 1);
+//        boolean[] visited = new boolean[A.length];
+//
+//        Stack<Jump> stack = new Stack<Jump>();
+//
+//        /*
+//         * pos and number of jumps
+//         * */
+//        stack.push(new Jump(-1, 0));
+//
+//        /*
+//         * The frog can jump between positions −1 and N (the
+//         * banks of the river) and every pos containing a leaf.
+//         * */
+//        while (!stack.isEmpty()) {
+//
+//            Jump curr = stack.pop();
+////            /*
+////             * peek or the firstElement acquire the last pushed entity
+////             * */
+////            Jump curr = stack.peek();
+////
+////            /*
+////             * LIFO - remove delete the first pushed entity
+////             * */
+////            stack.remove(0);
+//
+//            int i = 0;
+//            int index = curr.pos + fibs.get(0);
+//
+//            /*
+//             * ALGORITHM
+//             * ---------
+//             *
+//             * To find the minimum steps to reach the opposite bank,
+//             *
+//             * i.    try to make the longest jump from the current position to reach opposite
+//             *       bank. Leave the loop if not possible and remove the entity from where we
+//             *       tried to make the jump.
+//             *
+//             * ii.   meanwhile, store all the entities with leaves in the stack
+//             *
+//             * iii.  if you use the Stack, keep the data in the ascending order and if you use
+//             *       the List or Queue, keep the data in the descending order
+//             * */
+//
+//            /*
+//             * A    = [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0] and N = 11
+//             * A    = [0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0] and N = 11
+//             * fibs = [1, 2, 3, 5, 8, 13]
+//             * */
+//            while (index <= A.length) {
+//
+//                /*
+//                 * we start from -1, hence, with a jump of (N+1) we
+//                 * would reached the opposite bank ie [(-1) + (N+1) = N]
+//                 * index is the index value of array "A"
+//                 * */
+//                if (index == A.length) {
+//                    return curr.jumps + 1;
+//                }
+//
+//                /*
+//                 * we are at a leaf and this pos is not visited yet
+//                 * */
+//                if (A[index] == 1 && !visited[index]) {
+//                    stack.push(new Jump(index, curr.jumps + 1));
+//                    visited[index] = true;
+//                }
+//
+//                i++;
+//                index = curr.pos + fibs.get(i);
+//            }
+//        }
+//
+//        return -1;
+//    }
 
 
     /*
@@ -277,14 +351,11 @@ public class FibFrog {
 
         int i = 0;
 
-        while (true) {
-
-            /*
-             * no jumps are added in the previous iteration
-             * */
-            if (i == jumps.size()) {
-                return -1;
-            }
+        /*
+         * break if no jumps are added in the previous iteration
+         * and no more entities to investigate
+         * */
+        while (i != jumps.size()) {
 
             current = jumps.get(i);
 
@@ -342,6 +413,8 @@ public class FibFrog {
 
             i++;
         }
+
+        return -1;
     }
 
 
@@ -541,6 +614,5 @@ public class FibFrog {
 //        int[] A = {0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0};
         int[] A = {0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0};
 
-        System.out.println(solution(A));
     }
 }
