@@ -80,15 +80,16 @@ public class MinMaxDivision {
      */
     public static int solution(int K, int M, int[] A) {
 
-        int sum = 0;
-        int max = 0;
+        int sum0 = 0;
+        int max0 = 0;
 
         /*
          * Get the sum and miximum value of the provided array
          * */
         for (int i = 0; i < A.length; i++) {
-            max = max >= A[i] ? max : A[i];
-            sum += A[i];
+
+            max0 = max0 >= A[i] ? max0 : A[i];
+            sum0 += A[i];
         }
 
         /*
@@ -96,31 +97,19 @@ public class MinMaxDivision {
          * a block. Its the maximum value of a block that
          * we will need to minimize
          * */
-        int tempMin = Math.max((int) Math.ceil((double) sum / K), max);
-
-        return search(A, tempMin, sum, K);
-    }
+        int min = Math.max((int) Math.ceil((double) sum0 / K), max0);
+        int max = sum0;
 
 
-    /*
-     * conduct A binary search iteratively to minimize the large sum
-     * */
-    public static int search(int[] A, int minimum, int maximum, int K) {
-
-        /*
-         * the value of minimized largest sum
-         * */
         int sum = 0;
-
-        int min = minimum;
-        int max = maximum;
 
         /*
          * ALGORITHM
          * ---------
          *
          * i.  we will set the block value to the average and check if
-         *     it provides a valid solution
+         *     it provides a valid solution as the average value of a
+         *     block
          *
          * ii. in case of valid solution, we will gradually decrease the
          *     maximum block value with the intention to minimize block
@@ -133,7 +122,12 @@ public class MinMaxDivision {
             if (verify(A, middle, K)) {
 
                 /*
-                 * i.  we need to minimize the maximum sum so decrease gradually by 1 from the average
+                 *
+                 * ALGORITHM
+                 * ---------
+                 *
+                 * i.  we need to minimize the maximum sum so decrease
+                 *     gradually by 1 from the average
                  *
                  * ii. update the block value to middle
                  * */
@@ -173,7 +167,8 @@ public class MinMaxDivision {
                 sum = A[i];
 
                 /*
-                 * we are not able to iterate over all the array elements
+                 * we are not able to iterate over all the array
+                 * elements but already atop of K blocks
                  * */
                 if (block > K) {
                     return false;
@@ -182,6 +177,58 @@ public class MinMaxDivision {
         }
 
         return true;
+    }
+
+
+    /*
+     * conduct A binary search iteratively to minimize the large sum
+     * */
+    public static int search(int[] A, int minimum, int maximum, int K) {
+
+        /*
+         * the value of minimized largest sum
+         * */
+        int s = 0;
+
+        int min1 = minimum;
+        int max1 = maximum;
+
+        /*
+         * ALGORITHM
+         * ---------
+         *
+         * i.  we will set the block value to the average and check if
+         *     it provides a valid solution as the average value of a
+         *     block
+         *
+         * ii. in case of valid solution, we will gradually decrease the
+         *     maximum block value with the intention to minimize block
+         *     section
+         * */
+        while (min1 <= max1) {
+
+            int middle = (min1 + max1) / 2;
+
+            if (verify(A, middle, K)) {
+
+                /*
+                 *
+                 * ALGORITHM
+                 * ---------
+                 *
+                 * i.  we need to minimize the maximum sum so decrease
+                 *     gradually by 1 from the average
+                 *
+                 * ii. update the block value to middle
+                 * */
+                max1 = middle - 1;
+                s = middle;
+            } else {
+                min1 = middle + 1;
+            }
+        }
+
+        return s;
     }
 
 

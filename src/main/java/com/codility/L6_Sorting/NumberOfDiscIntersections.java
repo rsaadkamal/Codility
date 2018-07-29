@@ -160,6 +160,12 @@ public class NumberOfDiscIntersections {
                 left = j - A[j];
             }
 
+
+            /*
+             * sum[i] is the count of the discs have rigthmost points in the range
+             * of [0,..., i]. If we find that a disc has leftmost point (i+1), then
+             * they wont intersect with all the sum[i] discs
+             * */
             if (left > 0) {
                 result -= sum[left - 1];//.
             }
