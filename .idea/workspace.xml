@@ -3704,9 +3704,8 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/MaxNonoverlappingSegments.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/MaxNonoverlappingSegments.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/TieRopes.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/TieRopes.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire.java" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -4268,11 +4267,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="47" column="4" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="72" selection-end-column="5" />
+            <state relative-caret-position="402">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -4280,11 +4279,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NumberSolitaire.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire.java">
+      <file leaf-file-name="Peaks.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="93" column="6" lean-forward="true" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -4377,7 +4376,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/CountTriangles.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/CountFactors.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/MinPerimeterRectangle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountSemiprimes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p059.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Extra/BinarySearchTree.java" />
@@ -4398,7 +4396,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/SplitArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/RestStops.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountCities.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/StrSymmetryPoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountNonDivisible.java" />
@@ -4413,6 +4410,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/MaxNonoverlappingSegments.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/TieRopes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
       </list>
     </option>
@@ -4493,7 +4492,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
-              <item name="L16_Greedy_Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="L10_Prime_Composite_Num" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
@@ -4850,12 +4849,12 @@
       <workItem from="1532519463033" duration="22241000" />
       <workItem from="1532598651917" duration="5239000" />
       <workItem from="1532739285164" duration="206000" />
-      <workItem from="1532837371559" duration="23921000" />
+      <workItem from="1532837371559" duration="25228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354412000" />
+    <option name="totallyTimeSpent" value="355719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -4870,7 +4869,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29768786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29768786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -4947,42 +4946,6 @@
           <line>186</line>
           <properties />
           <option name="timeStamp" value="304" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/App.java</url>
-          <line>65</line>
-          <properties />
-          <option name="timeStamp" value="307" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/App.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="308" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/App.java</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="309" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/App.java</url>
-          <line>61</line>
-          <properties />
-          <option name="timeStamp" value="310" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/App.java</url>
-          <line>57</line>
-          <properties />
-          <option name="timeStamp" value="311" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/App.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="312" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -5077,13 +5040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/CountFactors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/MinPerimeterRectangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -5167,13 +5123,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -5337,19 +5286,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/CountFactors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="47" column="4" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="72" selection-end-column="5" />
+        <state relative-caret-position="402">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="93" column="6" lean-forward="true" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

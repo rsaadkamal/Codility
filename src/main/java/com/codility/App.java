@@ -45,46 +45,23 @@ import java.util.*;
 public class App {
 
 
-    public static int solution(int[] A) {
-
-        int N = A.length;
-
-        int[] result = new int[N];
-
-        result[0] = A[0];
-
-        for (int i = 1; i < N; i++) {
-
-            result[i] = result[i - 1];
-
-            for (int j = 2; j <= 6; j++) {
-
-                if (i - j < 0) {
-                    break;
-                }
-
-                result[i] = Math.max(result[i], result[i - j]);
-            }
-
-            result[i] += A[i];
-        }
-
-        return result[N - 1];
-    }
-
     public static void main(String[] args) {
 
-        int[] A = new int[6];
-
+        int[] A = new int[12];
 
         A[0] = 1;
-        A[1] = -2;
-        A[2] = 0;
-        A[3] = 9;
-        A[4] = -1;
-        A[5] = -2;
+        A[1] = 2;
+        A[2] = 3;
+        A[3] = 4;
+        A[4] = 3;
+        A[5] = 4;
+        A[6] = 1;
+        A[7] = 2;
+        A[8] = 3;
+        A[9] = 4;
+        A[10] = 6;
+        A[11] = 2;
 
-        System.out.println(solution(A));
     }
 }
 

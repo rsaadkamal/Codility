@@ -145,38 +145,6 @@ public class NumberSolitaire {
 
         return max[N - 1];
     }
-
-
-    /*
-     * solution - c
-     * */
-    public int solution2(int[] A) {
-
-        if (A.length == 0) {
-            return 0;
-        }
-
-        int[] max = new int[A.length];
-        max[0] = A[0];
-
-        for (int i = 1; i < A.length; i++) {
-
-            max[i] = max[i - 1];
-
-            for (int minus = 2; minus <= 6; minus++) {
-
-                if (i >= minus) {
-                    max[i] = Math.max(max[i], max[i - minus]);
-                } else {
-                    break;
-                }
-            }
-
-            max[i] += A[i];
-        }
-
-        return max[A.length - 1];
-    }
 }
 
 

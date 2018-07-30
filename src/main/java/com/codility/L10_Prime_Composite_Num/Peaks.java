@@ -89,18 +89,8 @@ public class Peaks {
      * */
 
     /*
-     * CONDITIONS
-     * ----------
-     *
-     * i.    Every block should contain at least one peak.
-     * ii.   Each blocks should contain elements equal or greater than
-     *       the number of peaks
-     * iii.  Each block should have same number of elements
-     * iv.   N % sizeOfBlock == 0 where n = A.length
-     *
      * The goal is to find the maximum number of blocks into which the
      * array A can be divided.
-     *
      * */
 
     /*
@@ -108,51 +98,43 @@ public class Peaks {
      */
     public static int solution(int[] A) {
 
-        int count = 0;
 
-        ArrayList<Integer> peak = new ArrayList<Integer>();
+        int N = A.length;
+
+        ArrayList<Integer> peaks = new ArrayList<Integer>();
 
         for (int i = 1; i < A.length - 1; i++) {
 
             if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
-                peak.add(i);
-                count++;
+                peaks.add(i);
             }
         }
 
-        int peaks = peak.size();
-        int N = A.length;
-
+        /*
+         * i is the number of elements in the block
+         * */
         for (int i = 1; i <= N; i++) {
 
             int blocks = N / i;
 
-            if (N % i != 0 || blocks > count) {
+            if (N % i != 0 || blocks > peaks.size()) {
                 continue;
             }
 
-            int approximation = 0;
+            int count = 0;
 
-            for (int j = 0; j < peaks; j++) {
+            for (int p : peaks) {
 
                 /*
                  * no peak till the i-th index, we have peaks at [3, 5, 10] and N = 12
                  * */
-                if (peak.get(j) / i > approximation) {
+                if (p / i > count) {
                     break;
                 }
 
-                if (peak.get(j) / i == approximation) {
-                    approximation++;
+                if (p / i == count) {
+                    count++;
                 }
-
-
-//                if (temp < peaks.get(j)) {
-//                    break;
-//                }
-//
-//                approximation += 1;
-//                temp += temp;
             }
 
             /*
@@ -160,7 +142,7 @@ public class Peaks {
              * whenever we meet the condition and the solution will provide the maximum
              * number of blocks
              * */
-            if (approximation == blocks) {
+            if (count == blocks) {
                 return blocks;
             }
         }
@@ -173,59 +155,6 @@ public class Peaks {
      * solution - b
      */
     public static int solution1(int[] A) {
-
-        int N = A.length;
-
-        ArrayList<Integer> peaks = new ArrayList<Integer>();
-
-        for (int i = 1; i < N - 1; i++) {
-
-            if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
-                peaks.add(i);
-            }
-        }
-
-        for (int size = 1; size <= N; size++) {
-
-            if (N % size != 0) {
-                continue;
-            }
-
-            int find = 0;
-            int groups = N / size;
-            boolean sucess = true;
-
-            /*
-             * find whether every group has a peak
-             * */
-            for (int peakIdx : peaks) {
-
-                if (peakIdx / size > find) {
-                    sucess = false;
-                    break;
-                }
-
-                if (peakIdx / size == find) {
-                    find++;
-                }
-            }
-
-            if (find != groups) {
-                sucess = false;
-            }
-
-            if (sucess) {
-                return groups;
-            }
-        }
-
-        return 0;
-    }
-
-    /*
-     * solution - c
-     */
-    public static int solution2(int[] A) {
 
         int N = A.length;
 
@@ -289,9 +218,9 @@ public class Peaks {
 
 
     /*
-     * solution - d
+     * solution - c
      */
-    public int solution3(int[] A) {
+    public int solution2(int[] A) {
 
 
         ArrayList<Integer> peaks = new ArrayList<>();
@@ -316,7 +245,9 @@ public class Peaks {
     }
 
     public boolean checkSlices(int sliceLength, ArrayList<Integer> peaks, int total) {
+
         int count = 0;
+
         for (int i = 0; i < peaks.size(); i++) {
             if (peaks.get(i) / sliceLength > count) {
                 return false;
@@ -325,9 +256,11 @@ public class Peaks {
                 count++;
             }
         }
+
         if (count != total / sliceLength) {
             return false;
         }
+
         return true;
     }
 
