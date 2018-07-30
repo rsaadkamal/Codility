@@ -61,8 +61,8 @@ public class CountDistinctSlices {
 
         int result = 0;
 
-        int front = 0;
         int back = 0;
+        int front = 0;
 
         int N = A.length;
 
@@ -140,10 +140,25 @@ public class CountDistinctSlices {
 
         int result = 0;
 
+        /*
+         * ALGORITHM
+         * ---------
+         *
+         * i.   increase the front till find a duplicate where front < N
+         *
+         * ii.  calculate the result as the subtraction of front and back
+         *
+         * iii. increase the back and set 0 in the counter where back < N.
+         *      when the back will set 0 for the dups, the front can move
+         *      froward again
+         * */
+
         while (back < N) {
 
             /*
              * find the most right end of the array for each back
+             *
+             * A = [5, 3, 4, 5, 2]
              * */
             while (front < N && counters[A[front]] != 2) {
 
@@ -285,10 +300,11 @@ public class CountDistinctSlices {
 //        A[4] = 2;
 
 //        int[] A = {3, 4, 5, 5, 2};
-        int[] A = {5, 3, 4, 5, 2};
+//        int[] A = {5, 3, 4, 5, 2};
+        int[] A = {3, 5, 4, 5, 2};
 
         int M = 6;
 
-        solution(A, M);
+        System.out.println(solution1(M, A));
     }
 }

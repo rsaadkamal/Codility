@@ -48,56 +48,23 @@ import java.util.stream.IntStream;
 public class App {
 
 
-    // 0 ≤ X < Y < Z <= (N-1), is called a double slice.
+    public static int solution(int[] A){
 
-    public static int solution(int[] A) {
+        Arrays.sort(A);
 
         int N = A.length;
 
-        int[] A1 = new int[N];
-        int[] A2 = new int[N];
+        for (int i = 2; i < N; i++) {
 
 
-        int max = 0;
 
-        for (int i = 1; i < (N - 2); i++) {
-            max = (A[i] + max) > 0 ? (A[i] + max) : 0;
-            A1[i] = max;
         }
 
-        max = 0;
-
-        for (int i = N - 2; i > 1; i--) {
-            max = (A[i] + max) > 0 ? (A[i] + max) : 0;
-            A2[i] = max;
-        }
-
-
-        max = 0;
-
-        for (int i = 1; i < N - 1; i++) {
-            max = Math.max(A1[i - 1] + A2[i + 1], max);
-        }
-
-        return max;
+        return -1;
     }
 
     public static void main(String[] args) {
 
-
-        int[] A = new int[8];
-
-
-        A[0] = 3;
-        A[1] = 2;
-        A[2] = 6;
-        A[3] = -1;
-        A[4] = 4;
-        A[5] = 5;
-        A[6] = -1;
-        A[7] = 2;
-
-        System.out.println(solution(A));
     }
 }
 
