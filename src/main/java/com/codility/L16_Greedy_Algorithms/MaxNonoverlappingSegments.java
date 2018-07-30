@@ -61,38 +61,22 @@ public class MaxNonoverlappingSegments {
             return N;
         }
 
-//        int count = 0;
         int count = 1;
         int previous = B[0];
 
         int i;
         boolean check = false;
 
-
         for (i = 1; i < N; i++) {
 
-            /*
-            if the next segments start > prvious
-            segments end there will be no overlapping
-            */
             if (A[i] > previous) {
-
-                if (!check) {
-                    check = true;
-                }
 
                 count++;
                 previous = B[i];
             }
         }
 
-
         return count;
-
-        /*
-         * we will return 0 if there is no non-overlapping segments
-         * */
-//        return check ? count + 1 : 0;
     }
 
 

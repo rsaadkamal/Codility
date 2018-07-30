@@ -62,10 +62,42 @@ public class NumberSolitaire {
      * In a given array, find the subset of maximal sum in which
      * the distance between consecutive elements is at most 6
      * */
+
+
     /*
      * solution - a
      * */
-    public int solution(int[] A) {
+    public static int solution(int[] A) {
+
+        int N = A.length;
+
+        int[] result = new int[N];
+
+        result[0] = A[0];
+
+        for (int i = 1; i < N; i++) {
+
+            result[i] = result[i - 1];
+
+            for (int j = 2; j <= 6; j++) {
+
+                if (i - j < 0) {
+                    break;
+                }
+
+                result[i] = Math.max(result[i], result[i - j]);
+            }
+
+            result[i] += A[i];
+        }
+
+        return result[N - 1];
+    }
+
+    /*
+     * solution - b
+     * */
+    public int solution1(int[] A) {
 
         int N = A.length;
         int[] max = new int[N];
@@ -116,9 +148,9 @@ public class NumberSolitaire {
 
 
     /*
-     * solution - b
+     * solution - c
      * */
-    public int solution1(int[] A) {
+    public int solution2(int[] A) {
 
         if (A.length == 0) {
             return 0;

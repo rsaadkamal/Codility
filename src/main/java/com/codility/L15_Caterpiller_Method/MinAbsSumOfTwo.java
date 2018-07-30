@@ -71,6 +71,8 @@ public class MinAbsSumOfTwo {
 
         Arrays.sort(A);
 
+        int N = A.length;
+
         /*
          * if the first element is positive, that mean
          * all the elements in the array are positives
@@ -83,36 +85,36 @@ public class MinAbsSumOfTwo {
          * if the last element is negative, that mean
          * all the elements in the array are negatives
          * */
-        if (A[A.length - 1] <= 0) {
-            return -A[A.length - 1] * 2;
+        if (A[N - 1] <= 0) {
+            return -A[N - 1] * 2;
         }
 
         /*
          * we have mixtures of positive and negative elements
          * */
 
-        int end = A.length - 1;
-        int start = 0;
+        int low = 0;
+        int high = N - 1;
 
-        int tempMin = Math.abs(A[start] + A[end]);
+        int min = Math.abs(A[low] + A[high]);
 
-        while (start <= end) {
+        while (low <= high) {
 
-            int tmp = Math.abs(A[start] + A[end]);
+            int sum = Math.abs(A[low] + A[high]);
 
-            tempMin = Math.min(tempMin, tmp);
+            min = Math.min(min, sum);
 
-            if (Math.abs(A[start + 1] + A[end]) <= tmp) {
-                start++;
-            } else if (Math.abs(A[start] + A[end - 1]) <= tmp) {
-                end--;
+            if (Math.abs(A[low + 1] + A[high]) <= sum) {
+                low++;
+            } else if (Math.abs(A[low] + A[high - 1]) <= sum) {
+                high--;
             } else {
-                start++;
-                end--;
+                low++;
+                high--;
             }
         }
 
-        return tempMin;
+        return min;
     }
 
 
@@ -121,11 +123,13 @@ public class MinAbsSumOfTwo {
      */
     public static int solution1(int[] A) {
 
+        int N = A.length;
+
         Arrays.sort(A);
 
         int min = Integer.MAX_VALUE;
 
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < N; i++) {
             min = Math.min(min, Math.abs(A[i] + findBestMatch(-A[i], A)));
         }
 
@@ -134,29 +138,31 @@ public class MinAbsSumOfTwo {
 
     public static int findBestMatch(int target, int[] A) {
 
-        if (A.length == 1) {
+        int N = A.length;
+
+        if (N == 1) {
             return A[0];
         }
 
-        int begin = 0;
-        int end = A.length - 1;
+        int low = 0;
+        int high = N - 1;
 
-        while (begin <= end) {
+        while (low <= high) {
 
-            int middle = (begin + end) / 2;
+            int middle = (low + high) / 2;
 
             if (A[middle] == target) {
                 return A[middle];
             }
 
-            if (end - begin == 1) {
-                return Math.abs(A[end] - target) < Math.abs(A[begin] - target) ? A[end] : A[begin];
+            if (high - low == 1) {
+                return Math.abs(A[high] - target) < Math.abs(A[low] - target) ? A[high] : A[low];
             }
 
             if (A[middle] > target) {
-                end = middle;
+                high = middle;
             } else {
-                begin = middle;
+                low = middle;
             }
         }
 
@@ -172,29 +178,29 @@ public class MinAbsSumOfTwo {
         int N = A.length;
         Arrays.sort(A);
 
-        int tail = 0;
-        int head = N - 1;
+        int low = 0;
+        int high = N - 1;
 
-        int minAbsSum = Math.abs(A[tail] + A[head]);
+//        int min = Math.abs(A[low] + A[high]);
+        int min = Integer.MAX_VALUE;
 
-        while (tail <= head) {
+        while (low <= high) {
 
-            int currentSum = A[tail] + A[head];
+            int sum = A[low] + A[high];
 
-            minAbsSum = Math.min(minAbsSum, Math.abs(currentSum));
+            min = Math.min(min, Math.abs(sum));
 
             /*
-             * If the sum has become positive, we should
-             * know that the head can be moved left.
+             * we move forward the sum towards 0
              * */
-            if (currentSum <= 0) {
-                tail++;
+            if (sum <= 0) {
+                low++;
             } else {
-                head--;
+                high--;
             }
         }
 
-        return minAbsSum;
+        return min;
     }
 
 
@@ -203,8 +209,10 @@ public class MinAbsSumOfTwo {
      */
     public int solution3(int[] A) {
 
+        int N = A.length;
+
         Arrays.sort(A);
-        int j = A.length - 1;
+        int j = N - 1;
 
         int result = Integer.MAX_VALUE;
 
@@ -238,8 +246,10 @@ public class MinAbsSumOfTwo {
      */
     public int solution4(int[] A) {
 
+        int N = A.length;
         Arrays.sort(A);
-        int front = A.length - 1;
+
+        int front = N - 1;
         int back = 0;
         int min = Integer.MAX_VALUE;
 
@@ -265,11 +275,12 @@ public class MinAbsSumOfTwo {
      * */
     public int solution5(int[] A) {
 
+        int N = A.length;
         int min = Integer.MAX_VALUE;
 
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < N; i++) {
 
-            for (int j = i; j < A.length; j++) {
+            for (int j = i; j < N; j++) {
                 min = Math.min(min, Math.abs(A[i] + A[j]));
             }
         }

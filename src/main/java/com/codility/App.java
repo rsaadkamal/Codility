@@ -36,11 +36,8 @@ expected worst-case space complexity is O(N+sum(abs(A))) (not counting the stora
 
 import com.codility.L1_Iterations.BinaryGap;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
+import java.math.*;
+import java.util.*;
 
 /**
  * Created by Chaklader on 7/6/18.
@@ -48,23 +45,46 @@ import java.util.stream.IntStream;
 public class App {
 
 
-    public static int solution(int[] A){
-
-        Arrays.sort(A);
+    public static int solution(int[] A) {
 
         int N = A.length;
 
-        for (int i = 2; i < N; i++) {
+        int[] result = new int[N];
 
+        result[0] = A[0];
 
+        for (int i = 1; i < N; i++) {
 
+            result[i] = result[i - 1];
+
+            for (int j = 2; j <= 6; j++) {
+
+                if (i - j < 0) {
+                    break;
+                }
+
+                result[i] = Math.max(result[i], result[i - j]);
+            }
+
+            result[i] += A[i];
         }
 
-        return -1;
+        return result[N - 1];
     }
 
     public static void main(String[] args) {
 
+        int[] A = new int[6];
+
+
+        A[0] = 1;
+        A[1] = -2;
+        A[2] = 0;
+        A[3] = 9;
+        A[4] = -1;
+        A[5] = -2;
+
+        System.out.println(solution(A));
     }
 }
 

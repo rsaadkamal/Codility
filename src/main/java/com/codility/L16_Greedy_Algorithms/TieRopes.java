@@ -75,6 +75,7 @@ public class TieRopes {
             len += rope;
 
             if (len >= K) {
+
                 count++;
                 len = 0;
             }
