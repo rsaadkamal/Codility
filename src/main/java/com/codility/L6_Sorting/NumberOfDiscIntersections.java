@@ -47,13 +47,14 @@ import java.util.*;
 
 
 /*
-After prefix sum, The sum[i] stores the number of discs with the rightmost point within 0 to i
+
+a. After prefix sum, The sum[i] stores the number of discs with the rightmost point within 0 to i
 
 (inclusive). If i = N-1, then it stores disc count of within 0 to i or higher (inclusive)
 
 
 
-In the last loop, left is the value of the leftmost point for the disc and the sum[left -1] is
+b. In the last loop, left is the value of the leftmost point for the disc and the sum[left -1] is
 
 the count for discs have rightmost point within 0 to (left-1). So, for that particular disc,
 
@@ -89,13 +90,27 @@ make sure we don't perform the double count.
 
 If the leftmost is lesser then 0, we set it as 0 and if the rightmost point of the discs is greater then
 
-N-1, we set it as N-1. because, if the leftmost point is lesser than 0, to be intersectable, the rightmost
+N-1, we set it as N-1. because, if the leftmost point is lesser than 0, to be interpretable, the rightmost
 
 point of the same discs will be in => 0 (= in case of a point). So at the time when comparing for discs for
 
 not to be intractable, this discs will be considered. Similar logic applies when we set the rightmost point
 
 as N-1 when its > N-1
+* */
+
+
+/*
+*
+After prefix sum, The sum[i] stores the number of discs with the rightmost point within 0 to i (inclusive). If i = N-1, then it stores disc count of within 0 to i or higher (inclusive)
+
+In the last loop, left is the value of the leftmost point for the disc and the sum[left -1] is the count for discs have rightmost point within 0 to (left-1). So, for that particular disc, there is no possibility for intersection with those discs and we need to deduct the count from the maximum possible intersection.
+
+Our intention is to find for a particular disc, the number of discs it doesn't intersect. For a particular disc with j-th index, the leftmost point would be j - A[j] and for all the discs with the center of i (variable), it wont intersect if i+ A[i] < j - A[j] suffices.
+
+In terms of prefix array, if j is the leftmost point of a disc, it doesn't intersect with a total of sum[j-1] discs.
+
+If the leftmost is lesser then 0, we set it as 0 and if the rightmost point of the discs is greater then N-1, we set it as N-1. because, if the leftmost point is lesser than 0, to be intersectable, the rightmost point of the same discs will be in => 0 (= in case of a point). So at the time when comparing for discs for not to be intractable, this discs will be considered. Similar logic applies when we set the rightmost point as N-1 when its > N-1
 * */
 public class NumberOfDiscIntersections {
 

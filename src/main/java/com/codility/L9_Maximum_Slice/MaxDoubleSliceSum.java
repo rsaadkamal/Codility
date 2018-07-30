@@ -34,13 +34,25 @@ that, given A non-empty array A consisting of N integers, returns the maximal su
 For example, given:
 
     A[0] = 3
+
     A[1] = 2
+
     A[2] = 6
+
     A[3] = -1
+
     A[4] = 4
+
     A[5] = 5
+
     A[6] = -1
+
     A[7] = 2
+
+
+
+
+
 the function should return 17, because no double slice of array A has A sum of greater than 17.
 
 Assume that:
@@ -116,6 +128,42 @@ public class MaxDoubleSliceSum {
 
         int N = A.length;
 
+        int[] A1 = new int[N];
+        int[] A2 = new int[N];
+
+
+        int max = 0;
+
+        for (int i = 1; i < (N - 2); i++) {
+            max = (A[i] + max) > 0 ? (A[i] + max) : 0;
+            A1[i] = max;
+        }
+
+        max = 0;
+
+        for (int i = N - 2; i > 1; i--) {
+            max = (A[i] + max) > 0 ? (A[i] + max) : 0;
+            A2[i] = max;
+        }
+
+
+        max = 0;
+
+        for (int i = 1; i < N - 1; i++) {
+            max = Math.max(A1[i - 1] + A2[i + 1], max);
+        }
+
+        return max;
+    }
+
+
+    /*
+     * solution - b
+     * */
+    public static int solution1(int[] A) {
+
+        int N = A.length;
+
         int[] maxStartingHere = new int[N];
         int[] maxEndingHere = new int[N];
 
@@ -150,6 +198,11 @@ public class MaxDoubleSliceSum {
          *
          * prepare for the suffix sum
          *
+         * A triplet (X, Y, Z), such that 0 ≤ X < Y < Z < N, is called a double slice.
+         *
+         * The sum of double slice (X, Y, Z) is the total of A[X + 1] + A[X + 2] + ...
+         * + A[Y − 1] + A[Y + 1] + A[Y + 2] + ... + A[Z − 1]
+         *
          * */
         for (int i = N - 2; i > 0; --i) {
 
@@ -172,7 +225,7 @@ public class MaxDoubleSliceSum {
     }
 
     /*
-     * solution - b
+     * solution - c
      */
 
     /*
@@ -180,7 +233,7 @@ public class MaxDoubleSliceSum {
      * and A2[i + 1] is the maximum sub array on the right of
      * index i
      * */
-    public static int solution1(int[] A) {
+    public static int solution2(int[] A) {
 
         int max = 0;
 
@@ -218,9 +271,9 @@ public class MaxDoubleSliceSum {
 
 
     /*
-     * solution - c
+     * solution - d
      */
-    public static int solution2(int[] A) {
+    public static int solution3(int[] A) {
 
         int sum = 0;
 
@@ -301,7 +354,6 @@ public class MaxDoubleSliceSum {
         A[6] = -1;
         A[7] = 2;
 
-
-        System.out.println(solution2(A));
+        System.out.println(solution(A));
     }
 }
