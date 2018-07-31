@@ -3,9 +3,9 @@ CODILITY
 ————————
 
 The repo is for the solutions of the problems in the Codility platform. Generally, Codility
-problems are formed with more than one arguments and helps to improve the abstract thinking.
-However, unless specified, these problems may not be suitable to prepare for the general
-coding interviews.
+problems comprehensive, formed with multiple arguments and helps to improve the abstract
+thinking. However, unless specified, these problems may not be suitable to prepare for the
+general coding interviews.
 
 I haven't write the solutions and are primarily collected for the educational purpose.
 However, I refactored the code and changed the logic if necessary. Occasionally, I don't

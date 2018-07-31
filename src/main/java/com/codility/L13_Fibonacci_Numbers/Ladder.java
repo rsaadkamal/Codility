@@ -121,6 +121,14 @@ public class Ladder {
              * Confirm that the fibonacci number will not
              * exceed the max integer value of 1<<n = 2^n
              * */
+
+            /*
+             * SIGNED INTEGER VALUE
+             * --------------------
+             *
+             * Integer.MAX_VALUE =  ((1 << 31) - 1)
+             * Integer.MIN_VALUE =  (1 << 31)
+             * */
             int fIndex = i + 2;
 
             fib[fIndex] = (fib[fIndex - 1] + fib[fIndex - 2]) % (1 << 30);

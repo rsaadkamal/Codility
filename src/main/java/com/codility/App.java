@@ -45,12 +45,68 @@ import java.util.*;
 public class App {
 
 
+    public static int solution(int[] A) {
+
+        int N = A.length;
+
+        List<Integer> peaks = new ArrayList<>();
+
+        int size = 0;
+
+        for (int i = 1; i < N - 1; i++) {
+
+            if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
+                peaks.add(i);
+                size++;
+            }
+        }
+
+        int low = 1;
+        int high = size;
+
+        int result = 0;
+
+        while (low <= high) {
+
+            int k = (low + high) / 2;
+
+            int marked = peaks.get(0);
+
+            int count = 0;
+
+
+            for (int i = 0; i < size; i++) {
+
+                if (peaks.get(i) >= marked) {
+
+                    count++;
+                    marked = peaks.get(i) + k;
+
+                    if (count == k) {
+                        break;
+                    }
+                }
+            }
+
+            if (count == k) {
+                result = count;
+                low = k + 1;
+            } else {
+                high = k - 1;
+            }
+        }
+
+        return result;
+    }
+
+
     public static void main(String[] args) {
+
 
         int[] A = new int[12];
 
         A[0] = 1;
-        A[1] = 2;
+        A[1] = 5;
         A[2] = 3;
         A[3] = 4;
         A[4] = 3;
@@ -62,6 +118,8 @@ public class App {
         A[10] = 6;
         A[11] = 2;
 
+
+        System.out.println(solution(A));
     }
 }
 

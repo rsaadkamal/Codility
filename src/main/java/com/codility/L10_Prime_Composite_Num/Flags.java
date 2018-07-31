@@ -19,6 +19,8 @@ For example, the following array A:
     A[9] = 4
     A[10] = 6
     A[11] = 2
+
+
 has exactly four peaks: elements 1, 3, 5 and 10.
 
 You are going on A trip to A range of mountains whose relative heights are represented by array A, as shown in A figure below. You have to choose how many flags you should take with you. The goal is to set the maximum number of flags on the peaks, according to certain rules.
@@ -54,6 +56,7 @@ For example, the following array A:
     A[9] = 4
     A[10] = 6
     A[11] = 2
+
 the function should return 3, as explained above.
 
 Assume that:
@@ -83,17 +86,13 @@ public class Flags {
      * that can be set on the peaks of the array.
      * */
 
-
-    // ------------------ //
-    // BETTER PERFORMANCE //
-    // ------------------ //
-
     /*
      * solution - a
      */
     public static int solution(int[] A) {
 
-        ArrayList<Integer> flags = new ArrayList<Integer>();
+
+        List<Integer> flags = new ArrayList<Integer>();
 
         for (int i = 1; i < A.length - 1; i++) {
 
@@ -131,14 +130,8 @@ public class Flags {
                 if (flags.get(i) >= marked) {
 
                     count++;
-
-                    /*
-                     * for K flags, distance between any two flags should be greater than or equal to K
-                     * */
                     marked = flags.get(i) + K;
 
-                    // the distance will be equal or greater then the number of flags, K
-                    // for maximization its equality
                     if (count == K) {
                         break;
                     }
@@ -146,19 +139,16 @@ public class Flags {
             }
 
             if (count == K) {
-
-                result = K;
-
-                // we want to maximize the number of flags so increase the flags
+                result = count;
                 low = K + 1;
             } else {
-
                 high = K - 1;
             }
         }
 
         return result;
     }
+
 
     /*
      * solution - b
@@ -172,39 +162,39 @@ public class Flags {
          * */
         int[] P = nextPeak(A);
 
-        int k = 1;
+        int i = 1;
         int result = 0;
 
 
         /*
-         * To set k Flags with a distance of k than the total distance
-         * would be [k * (k-1)]
+         * To set i Flags with a distance of i than the total distance
+         * would be [i * (i-1)]
          * */
-        while ((k - 1) * k <= N) {
+        while (i * (i - 1) <= N) {
 
-            int index = 0;
+            int j = 0;
             int flags = 0;
 
-            while (index < N && flags < k) {
+            while (j < N && flags < i) {
 
                 /*
                  * P =  [1, 1, 3, 3, 5, 5, 10, 10, 10, 10, 10, -1]
                  * */
-                index = P[index];
+                j = P[j];
 
-                if (index == -1) {
+                if (j == -1) {
                     break;
                 }
 
                 flags += 1;
-                index += k;
+                j += i;
             }
 
             /*
              * maximize the number of flags for the whole segment
              * */
             result = Math.max(result, flags);
-            k++;
+            i++;
         }
 
         return result;
@@ -218,7 +208,7 @@ public class Flags {
 
         int N = P.length;
 
-        ArrayList<Integer> peaks = new ArrayList<Integer>();
+        List<Integer> peaks = new ArrayList<Integer>();
 
         for (int i = 1; i < P.length - 1; i++) {
 
@@ -230,7 +220,9 @@ public class Flags {
         int[] A = new int[N];
         A[N - 1] = -1;
 
-
+        /*
+         * array has 4 peaks, [1, 3, 5, 10]
+         * */
         for (int i = N - 2; i >= 0; i--) {
 
             if (peaks.contains(i)) {
@@ -251,42 +243,110 @@ public class Flags {
 
         int N = A.length;
 
-        ArrayList<Integer> peak = new ArrayList<Integer>();
+        List<Integer> peaks = getPeaks(A, N);
 
-        for (int i = 1; i < A.length - 1; i++) {
+        int P = peaks.size();
 
-            if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
-                peak.add(i);
+        int i = 2;
+        int result = 0;
+
+        while (i * (i - 1) < N) {
+
+//            if (peaks.get(P - 1) - peaks.get(0) < i) {
+//                i++;
+//                continue;
+//            }
+
+            int flags = 0;
+
+            int marked = peaks.get(0);
+
+            /*
+             * P = [1, 3, 5, 10]
+             * */
+            for (int j = 0; j < P; j++) {
+
+                if (peaks.get(j) >= marked) {
+
+                    flags++;
+                    marked = peaks.get(j) + i;
+
+                    if (flags == i) {
+                        break;
+                    }
+                }
+            }
+
+            result = Math.max(flags, result);
+            i++;
+        }
+
+        return result;
+    }
+
+    private static List<Integer> getPeaks(int[] A, int N) {
+
+        List<Integer> peaks = new ArrayList<>();
+
+        for (int i = 1; i < N - 1; i++) {
+
+            if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
+                peaks.add(i++);
             }
         }
 
-        int i = 1;
+        return peaks;
+    }
+
+
+    /*
+     * solution - d
+     */
+    public static int solution3(int[] A) {
+
+        int N = A.length;
+
+        List<Integer> peaks = peaks(A, N);
+
+        int P = peaks.size();
+
+        int i = 2;
+
         int result = 0;
 
-        /*
-         * To set i Flags with a distance of i than the total distance
-         * would be [i*(i-1)]
-         * */
-        while ((i - 1) * i <= N) {
+        while (i * (i - 1) < N) {
 
-            int count = 0;
+            if (peaks.get(P - 1) - peaks.get(0) < i) {
+                i++;
+                continue;
+            }
 
-            for (int j = 0; j < peak.size(); j++) {
+            int flags = 0;
+            int k = 0;
 
-                // has exactly four peaks: elements 1, 3, 5 and 10.
-                /*
-                 * it breaks the premise to have a flag (peak) in each i segment
-                 * */
-                if (peak.get(j) / i > count) {
+            while (k < P - 1) {
+
+                int x = k + 1;
+
+                while (x < P - 1 && peaks.get(x) - peaks.get(k) < i) {
+                    x++;
+                }
+
+                if (x > P - 1) {
                     break;
                 }
 
-                if (peak.get(j) / i == count) {
-                    count++;
-                }
+                k = x;
+                flags++;
             }
 
-            result = Math.max(result, count);
+            flags++;
+
+            if (i <= flags) {
+                flags = i;
+            }
+
+            result = Math.max(flags, result);
             i++;
         }
 
@@ -294,10 +354,25 @@ public class Flags {
     }
 
 
+    private static List<Integer> peaks(int[] A, int N) {
+
+        List<Integer> peaks = new ArrayList<>();
+
+        for (int i = 1; i < N - 1; i++) {
+
+            if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
+                peaks.add(i++);
+            }
+        }
+
+        return peaks;
+    }
+
+
     /*
-     * solution - d
+     * solution - e
      */
-    public int solution3(int[] A) {
+    public int solution4(int[] A) {
 
         if (A.length < 3) {
             return 0;
@@ -372,9 +447,9 @@ public class Flags {
 
 
     /*
-     * solution - e
+     * solution - f
      */
-    public int solution4(int[] A) {
+    public int solution5(int[] A) {
 
         ArrayList<Integer> peaks = new ArrayList<>();
         if (A.length <= 2) {
@@ -415,12 +490,17 @@ public class Flags {
 
     //binary search for next peak
     private int getNextPeak(int currentPeakIndex, ArrayList<Integer> peaks, int step) {
+
         int low = currentPeakIndex;
         int high = peaks.size() - 1;
+
         int key = peaks.get(currentPeakIndex) + step;
         int mid = -1;
+
         while (low <= high) {
+
             mid = low + (high - low) / 2;
+
             if (key < peaks.get(mid)) {
                 high = mid - 1;
             } else if (key > peaks.get(mid)) {
@@ -431,10 +511,12 @@ public class Flags {
         }
 
         for (int i = mid; i < peaks.size(); i++) {
+
             if (peaks.get(i) >= key) {
                 return i;
             }
         }
+
         return -1;
     }
 

@@ -3704,8 +3704,8 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/Ladder.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/Ladder.java" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -4270,8 +4270,8 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="227">
+              <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -4279,11 +4279,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Peaks.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java">
+      <file leaf-file-name="Flags.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="93" column="6" lean-forward="true" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+            <state relative-caret-position="159">
+              <caret line="254" column="14" lean-forward="true" selection-start-line="254" selection-start-column="14" selection-end-line="257" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -4362,7 +4362,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Triangle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Fish.java" />
@@ -4396,10 +4395,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/SplitArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/RestStops.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountCities.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/StrSymmetryPoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountNonDivisible.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/Ladder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L14_Binary_Search_Algorithm/NailingPlanks.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L14_Binary_Search_Algorithm/MinMaxDivision.java" />
@@ -4412,7 +4409,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L16_Greedy_Algorithms/TieRopes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/NumberSolitaire.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/Ladder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
+        <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java" />
       </list>
     </option>
   </component>
@@ -4849,12 +4849,12 @@
       <workItem from="1532519463033" duration="22241000" />
       <workItem from="1532598651917" duration="5239000" />
       <workItem from="1532739285164" duration="206000" />
-      <workItem from="1532837371559" duration="25228000" />
+      <workItem from="1532837371559" duration="39008000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355719000" />
+    <option name="totallyTimeSpent" value="369499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -4951,7 +4951,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="313" />
+      <option name="time" value="322" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -5005,13 +5005,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="254" column="0" lean-forward="true" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxProfit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -5119,13 +5112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/PhoneNumber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -5172,13 +5158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="136" column="5" lean-forward="true" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/Ladder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -5300,20 +5279,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/Ladder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="137" column="29" lean-forward="false" selection-start-line="137" selection-start-column="29" selection-end-line="137" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="238" column="13" lean-forward="true" selection-start-line="238" selection-start-column="13" selection-end-line="238" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="227">
+          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="93" column="6" lean-forward="true" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+        <state relative-caret-position="159">
+          <caret line="254" column="14" lean-forward="true" selection-start-line="254" selection-start-column="14" selection-end-line="257" selection-end-column="15" />
           <folding />
         </state>
       </provider>
