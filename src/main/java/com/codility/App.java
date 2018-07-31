@@ -51,52 +51,41 @@ public class App {
 
         List<Integer> peaks = new ArrayList<>();
 
-        int size = 0;
-
         for (int i = 1; i < N - 1; i++) {
 
             if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
                 peaks.add(i);
-                size++;
             }
         }
 
-        int low = 1;
-        int high = size;
+        int P = peaks.size();
 
-        int result = 0;
+        for (int i = P; i >= 1; i--) {
 
-        while (low <= high) {
+            if (N % i != 0) {
+                continue;
+            }
 
-            int k = (low + high) / 2;
-
-            int marked = peaks.get(0);
-
+            int size = N / i;
             int count = 0;
 
+            for (int p : peaks) {
 
-            for (int i = 0; i < size; i++) {
+                if (p / size > count) {
+                    break;
+                }
 
-                if (peaks.get(i) >= marked) {
-
+                if (p / size == count) {
                     count++;
-                    marked = peaks.get(i) + k;
-
-                    if (count == k) {
-                        break;
-                    }
                 }
             }
 
-            if (count == k) {
-                result = count;
-                low = k + 1;
-            } else {
-                high = k - 1;
+            if (i == count) {
+                return count;
             }
         }
 
-        return result;
+        return 0;
     }
 
 

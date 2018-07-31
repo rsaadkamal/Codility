@@ -153,8 +153,55 @@ public class Peaks {
 
     /*
      * solution - b
-     */
+     * */
     public static int solution1(int[] A) {
+
+        int N = A.length;
+
+        List<Integer> peaks = new ArrayList<>();
+
+        for (int i = 1; i < N - 1; i++) {
+
+            if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
+                peaks.add(i);
+            }
+        }
+
+        int P = peaks.size();
+
+        for (int i = P; i >= 1; i--) {
+
+            if (N % i != 0) {
+                continue;
+            }
+
+            int size = N / i;
+            int count = 0;
+
+            for (int p : peaks) {
+
+                if (p / size > count) {
+                    break;
+                }
+
+                if (p / size == count) {
+                    count++;
+                }
+            }
+
+            if (i == count) {
+                return count;
+            }
+        }
+
+        return 0;
+    }
+
+
+    /*
+     * solution - c
+     */
+    public static int solution2(int[] A) {
 
         int N = A.length;
 
@@ -218,9 +265,9 @@ public class Peaks {
 
 
     /*
-     * solution - c
+     * solution - d
      */
-    public int solution2(int[] A) {
+    public int solution3(int[] A) {
 
 
         ArrayList<Integer> peaks = new ArrayList<>();
