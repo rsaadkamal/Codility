@@ -42,15 +42,19 @@ public class MissingInteger {
      * */
     public static int solution(int[] A) {
 
+        int N = A.length;
+
+        if (N == 0) {
+            return 1;
+        }
+
         ArrayList<Integer> numbers = IntStream.of(A).boxed()
                 .filter(x -> x > 0).sorted().distinct()
                 .collect(Collectors.toCollection(ArrayList<Integer>::new));
 
-        if (numbers.size() == 0) {
-            return 1;
-        }
+        int M = numbers.size();
 
-        for (int i = 0; i < numbers.size(); i++) {
+        for (int i = 0; i < M; i++) {
 
             if (numbers.get(i) != i + 1) {
                 return i + 1;
@@ -60,7 +64,7 @@ public class MissingInteger {
         /*
          * all the numbers are in sequence
          * */
-        return numbers.size() + 1;
+        return M + 1;
     }
 
 
@@ -69,29 +73,35 @@ public class MissingInteger {
      * */
     public static int solution1(int[] A) {
 
-        boolean[] counter = new boolean[A.length + 1];
+        int N = A.length;
+
+        boolean[] counter = new boolean[N + 1];
+
+        int M = counter.length;
 
         for (int a : A) {
 
             /*
-             * Each element of array A is an integer within the range [−1,000,000..1,000,000]
-             * However, we will need to find the smallest positive integer and hence, don't need
-             * to consider all the numbers.
+             * Given A = [1, 2, 3], the function should return 4
              * */
-            if (a > 0 && a < counter.length) {
-                counter[a - 1] = true;
+            if (a > 0 && a < M) {
+
+                int j = a - 1;
+                counter[j] = true;
             }
         }
 
-        for (int j = 0; j < counter.length; j++) {
+        for (int i = 0; i < counter.length; i++) {
 
-            if (!counter[j]) {
-                return j + 1;
+            if (!counter[i]) {
+
+                return i + 1;
             }
         }
 
-        return A.length + 1;
+        return N + 1;
     }
+
 
     /*
      * solution - c
@@ -102,6 +112,9 @@ public class MissingInteger {
 
         for (int i = 0; i < A.length; i++) {
 
+            /*
+             * Given A = [1, 2, 3], the function should return 4
+             * */
             if (A[i] > 0 && A[i] <= A.length) {
                 C[A[i] - 1] = A[i];
             }
@@ -126,40 +139,29 @@ public class MissingInteger {
         int N = A.length;
 
         /*
-         * Mark A[i] as visited by making A[A[i] - 1] negative.
-         * Note that 1 is subtracted because index start from 0
-         * and positive numbers start from 1
+         * Mark A[i] as visited by making A[A[i] - 1] negative
          * */
         for (int i = 0; i < N; i++) {
 
             /*
-             * this will make sure the array index will not cross any boundary
+             * we need the absolute value for the duplicates
              * */
-            int index = Math.abs(A[i]) - 1;
-//             int index = A[i] - 1;
+            int j = Math.abs(A[i]) - 1;
 
-            if (index >= 0 && index < N && A[index] > 0) {
-                A[index] = -A[index];
+            if (j >= 0 && j < N && A[j] > 0) {
+                A[j] = -A[j];
             }
         }
 
-        /*
-         * Return the first index value at which is positive
-         * */
+
         for (int i = 0; i < N; i++) {
 
             if (A[i] > 0) {
 
-                /*
-                 * 1 is added becuase indexes
-                 * */
                 return i + 1;
             }
         }
 
-        /*
-         * start from 0
-         * */
         return N + 1;
     }
 

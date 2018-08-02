@@ -81,14 +81,11 @@ public class Dominator {
 
         Stack<Integer> stack = new Stack<Integer>();
 
-        for (Integer a : A) {
+        for (int a : A) {
 
             if (stack.isEmpty()) {
                 stack.push(a);
-                continue;
-            }
-
-            if (stack.peek() == a) {
+            } else if (stack.peek() == a) {
                 stack.push(a);
             } else {
                 stack.pop();
@@ -99,15 +96,16 @@ public class Dominator {
             return -1;
         }
 
-        int domCandidate = stack.peek();
-        int numOfOccurance = 0;
-        int randomIndex = -1;
+        int dom = stack.peek();
+        int count = 0;
+        int index = -1;
 
         for (int i = 0; i < A.length; i++) {
 
-            if (A[i] == domCandidate) {
-                numOfOccurance++;
-                randomIndex = i;
+            if (A[i] == dom) {
+
+                count++;
+                index = i;
             }
         }
 
@@ -119,7 +117,7 @@ public class Dominator {
         int indexOfTwo = ArrayUtils.indexOf(A, domCandidate);
         */
 
-        return numOfOccurance > A.length / 2 ? randomIndex : -1;
+        return count > A.length / 2 ? index : -1;
     }
 
 
@@ -176,7 +174,6 @@ public class Dominator {
         if (count > A.length / 2) {
             return index;
         }
-
         return -1;
     }
 

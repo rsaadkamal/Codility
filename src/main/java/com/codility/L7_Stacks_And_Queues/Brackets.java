@@ -145,42 +145,42 @@ public class Brackets {
     /*
      * solution - c
      */
-    public int solution2(String S) {
+    public int solution2(String str) {
 
-        int N = S.length();
+        int N = str.length();
 
-        int numOfParentheses = 0;
-        int numOfBraces = 0;
-        int numOfSquareBrackets = 0;
+        int P = 0;
+        int B = 0;
+        int S = 0;
 
         char[] storage = new char[N];
         int index = 0;
 
-        for (char ch : S.toCharArray()) {
+        for (char ch : str.toCharArray()) {
 
             switch (ch) {
 
                 case '(': {
-                    numOfParentheses++;
+                    P++;
                     storage[index++] = ch;
                     break;
                 }
 
                 case '{': {
-                    numOfBraces++;
+                    B++;
                     storage[index++] = ch;
                     break;
                 }
 
                 case '[': {
-                    numOfSquareBrackets++;
+                    S++;
                     storage[index++] = ch;
                     break;
                 }
 
                 case ')': {
                     if (index > 0 && storage[index - 1] == '(') {
-                        numOfParentheses--;
+                        P--;
                         index--;
                     } else {
                         return 0;
@@ -190,7 +190,7 @@ public class Brackets {
 
                 case '}': {
                     if (index > 0 && storage[index - 1] == '{') {
-                        numOfBraces--;
+                        B--;
                         index--;
                     } else {
                         return 0;
@@ -200,7 +200,7 @@ public class Brackets {
 
                 case ']': {
                     if (index > 0 && storage[index - 1] == '[') {
-                        numOfSquareBrackets--;
+                        S--;
                         index--;
                     } else {
                         return 0;
@@ -209,7 +209,7 @@ public class Brackets {
                 }
             }
 
-            if (numOfParentheses < 0 || numOfBraces < 0 || numOfSquareBrackets < 0) {
+            if (P < 0 || B < 0 || S < 0) {
                 return 0;
             }
         }
@@ -217,7 +217,7 @@ public class Brackets {
         /*
          * check if the count of all kind of brackets are zero
          * */
-        if (numOfParentheses == 0 && numOfBraces == 0 && numOfSquareBrackets == 0) {
+        if (P == 0 && B == 0 && S == 0) {
             return 1;
         }
 

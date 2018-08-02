@@ -30,13 +30,10 @@ N is an integer within the range [0..20,000];
 each element of array A is an integer within the range [−100..100].
 Complexity:
 
-expected worst-case time complexity is O(N*max(abs(A))2);
-expected worst-case space complexity is O(N+sum(abs(A))) (not counting the storage required for input arguments).
+expected worst-case time complexity is O(N * max(abs(A))2);
+expected worst-case space complexity is O(N + sum(abs(A))) (not counting the storage required for input arguments).
 * */
 
-import com.codility.L1_Iterations.BinaryGap;
-
-import java.math.*;
 import java.util.*;
 
 /**
@@ -49,65 +46,35 @@ public class App {
 
         int N = A.length;
 
-        List<Integer> peaks = new ArrayList<>();
+        /*
+         * Mark A[i] as visited by making A[A[i] - 1] negative
+         * */
+        for (int i = 0; i < N; i++) {
 
-        for (int i = 1; i < N - 1; i++) {
+            /*
+             * we need the absolute value for the duplicates
+             * */
+            int j = Math.abs(A[i]) - 1;
 
-            if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
-                peaks.add(i);
+            if (j >= 0 && j < N && A[j] > 0) {
+                A[j] = -A[j];
             }
         }
 
-        int P = peaks.size();
 
-        for (int i = P; i >= 1; i--) {
+        for (int i = 0; i < N; i++) {
 
-            if (N % i != 0) {
-                continue;
-            }
-
-            int size = N / i;
-            int count = 0;
-
-            for (int p : peaks) {
-
-                if (p / size > count) {
-                    break;
-                }
-
-                if (p / size == count) {
-                    count++;
-                }
-            }
-
-            if (i == count) {
-                return count;
+            if (A[i] > 0) {
+                return i + 1;
             }
         }
 
-        return 0;
+        return N + 1;
     }
-
 
     public static void main(String[] args) {
 
-
-        int[] A = new int[12];
-
-        A[0] = 1;
-        A[1] = 5;
-        A[2] = 3;
-        A[3] = 4;
-        A[4] = 3;
-        A[5] = 4;
-        A[6] = 1;
-        A[7] = 2;
-        A[8] = 3;
-        A[9] = 4;
-        A[10] = 6;
-        A[11] = 2;
-
-
+        int[] A = {1, 3, 3, 4, 1, 2};
         System.out.println(solution(A));
     }
 }

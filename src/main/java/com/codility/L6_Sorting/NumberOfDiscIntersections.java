@@ -115,19 +115,6 @@ If the leftmost is lesser then 0, we set it as 0 and if the rightmost point of t
 public class NumberOfDiscIntersections {
 
 
-    private static class Slice {
-
-        int start;
-        int end;
-
-        public Slice(int start, int end) {
-
-            this.start = start;
-            this.end = end;
-        }
-    }
-
-
     /*
      * solution - a
      * */
@@ -154,6 +141,9 @@ public class NumberOfDiscIntersections {
             sum[right]++;
         }
 
+        /*
+         * the count of the rightmost ends discs in the range of 0 to i (inclusive)
+         * */
         for (int i = 1; i < N; i++) {
             sum[i] += sum[i - 1];
         }
@@ -174,7 +164,6 @@ public class NumberOfDiscIntersections {
             } else {
                 left = j - A[j];
             }
-
 
             /*
              * sum[i] is the count of the discs have rigthmost points in the range
@@ -367,6 +356,19 @@ public class NumberOfDiscIntersections {
     /*
      * solution - d
      * */
+    private static class Slice {
+
+        int start;
+        int end;
+
+        public Slice(int start, int end) {
+
+            this.start = start;
+            this.end = end;
+        }
+    }
+
+
     public static int solution3(int[] A) {
 
         Slice[] slices = initSlices(A);

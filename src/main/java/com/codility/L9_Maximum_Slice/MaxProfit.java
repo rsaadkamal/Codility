@@ -54,69 +54,27 @@ public class MaxProfit {
 
         int N = A.length;
 
-        if (N == 0) {
-            return 0;
+        int result = 0;
+        int max = 0;
+
+        for (int i = 1; i < N; i++) {
+
+            max = Math.max(0, max + A[i] - A[i - 1]);
+            result = Math.max(max, result);
         }
 
-        int max = Arrays.stream(A).max().getAsInt();
-
-        /*
-         * impossible to gain any profit
-         * */
-        if (max < 0) {
-            return 0;
-        }
-
-        /*
-         * keep track of the current profit
-         * and reset to zero if gets negative
-         * */
-        int maxEnding = 0;
-
-        /*
-         * keep track of max profit which is the max
-         * value of anytime occured in maxEnding
-         * */
-        int maxSlice = 0;
-
-        for (int i = 0; i < A.length; i++) {
-
-            maxEnding = (maxEnding + A[i]) > 0 ? (maxEnding + A[i]) : 0;
-            maxSlice = maxSlice > maxEnding ? maxSlice : maxEnding;
-        }
-
-        return maxSlice;
+        return result > 0 ? result : 0;
     }
 
 
     /*
      * solution - b
      */
-    public int solution1(int[] A) {
-
-        int length = A.length;
-
-        int maxProfit = 0;
-        int maxEnding = 0;
-
-        for (int i = 1; i < length; i++) {
-
-            maxEnding = Math.max(0, maxEnding + A[i] - A[i - 1]);
-            maxProfit = Math.max(maxEnding, maxProfit);
-        }
-
-        return maxProfit > 0 ? maxProfit : 0;
-    }
-
-
-    /*
-     * solution - c
-     */
     /*
      * PREMISE: To gain the max profit from A temporal series
      * of stock prices, it requires to buy with the min price.
      * */
-    public int solution2(int[] A) {
+    public static int solution1(int[] A) {
 
         int min = Integer.MAX_VALUE;
         int result = 0;
@@ -127,7 +85,7 @@ public class MaxProfit {
                 min = value;
             }
 
-            final int diff = value - min;
+            int diff = value - min;
 
             if (diff > result) {
                 result = diff;
@@ -139,9 +97,9 @@ public class MaxProfit {
 
 
     /*
-     * solution - d
+     * solution - c
      */
-    public int solution3(int[] A) {
+    public static int solution2(int[] A) {
 
         if (A == null || A.length < 2) {
             return 0;
@@ -167,9 +125,9 @@ public class MaxProfit {
 
 
     /*
-     * solution - e
+     * solution - d
      * */
-    public int solution4(int[] A) {
+    public static int solution3(int[] A) {
 
         if (A.length == 0) {
             return 0;
@@ -190,5 +148,20 @@ public class MaxProfit {
         }
 
         return Math.max(maxSlice, 0);
+    }
+
+
+    public static void main(String[] args) {
+
+        int[] A = new int[6];
+
+        A[0] = 23171;
+        A[1] = 21011;
+        A[2] = 21123;
+        A[3] = 21366;
+        A[4] = 21013;
+        A[5] = 21367;
+
+        System.out.println(solution(A));
     }
 }

@@ -78,7 +78,8 @@ public class Nesting {
             }
 
             /*
-             * check for the negatives input, for example [)((())] is balanced but not a properly nested string
+             * check for the negatives input, for example [)((())]
+             * is balanced but not a properly nested string
              * */
             if (count < 0) {
                 return 0;

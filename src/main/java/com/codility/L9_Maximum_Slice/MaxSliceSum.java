@@ -41,11 +41,9 @@ public class MaxSliceSum {
      */
     public static int solution(int[] A) {
 
-        int max = Integer.MIN_VALUE;
+//        int max = Integer.MIN_VALUE;
+        int max = (1 << 31);
 
-        /*
-         * find the max value
-         * */
         for (int i = 0; i < A.length; i++) {
             max = A[i] > max ? A[i] : max;
         }
@@ -54,27 +52,16 @@ public class MaxSliceSum {
             return max;
         }
 
-        int maxSliceSum = 0;
-        int currSum = 0;
+        int result = 0;
+        int sum = 0;
 
-
-        /*
-         * ALGORITHMS
-         * ----------
-         *
-         * i.  Keep incrementing the slice as int as the sum is greater than zero.
-         *     If the sum of current slice becomes negative, reset the storage value
-         *     to zero.
-         *
-         * ii. Use A second storage to hold the max value from the previous counting
-         * */
         for (int i = 0; i < A.length; i++) {
 
-            currSum = (currSum + A[i]) > 0 ? (currSum + A[i]) : 0;
-            maxSliceSum = currSum > maxSliceSum ? currSum : maxSliceSum;
+            sum = (sum + A[i]) > 0 ? (sum + A[i]) : 0;
+            result = sum > result ? sum : result;
         }
 
-        return maxSliceSum;
+        return result;
     }
 
 

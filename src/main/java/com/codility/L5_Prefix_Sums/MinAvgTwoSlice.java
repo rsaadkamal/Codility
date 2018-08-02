@@ -92,48 +92,44 @@ public class MinAvgTwoSlice {
          * by moving forward.
          * */
 
-        int tailIndex = 0;
-        int headIndex = 1;
+        int tail = 0;
+        int head = 1;
 
-        int resultIndex = 0;
-        int currentSum = A[0] + A[1];
+        int result = 0;
+        int sum = A[0] + A[1];
 
-        double min = (double) currentSum / 2;
-        double tempMin = min;
+        double min = (double) sum / 2;
+        double temp = min;
 
         while (true) {
 
             /*
-             * when there is A slice with 2 element,
-             * move forward the end index by one step
-             * and make A 3 element slice.
+             * 2 elements in the slice
              * */
-            if (headIndex - tailIndex == 1) {
+            if (head - tail == 1) {
 
-                headIndex++;
+                head++;
 
-                if (headIndex == A.length) {
-                    return resultIndex;
+                if (head == A.length) {
+                    return result;
                 }
 
-                currentSum += A[headIndex];
+                sum += A[head];
             }
 
             /*
-             * we have A 3 element slice. Update that to
-             * A 2 element slice by removing the start
-             * element
+             * we have A 3 element slice
              * */
             else {
-                currentSum -= A[tailIndex];
-                tailIndex++;
+                sum -= A[tail];
+                tail++;
             }
 
-            tempMin = (double) currentSum / (headIndex - tailIndex + 1);
+            temp = (double) sum / (head - tail + 1);
 
-            if (tempMin < min) {
-                resultIndex = tailIndex;
-                min = tempMin;
+            if (temp < min) {
+                result = tail;
+                min = temp;
             }
         }
     }

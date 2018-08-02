@@ -129,7 +129,7 @@ public class EquiLeader {
              * a dominator
              *
              *
-             *  Let the number X in section of L is C. So the number of other  elements in L
+             *  Let the occurance of X in section of L is C. So the number of other  elements in L
              *  is L-C. So we have C > L-C, which is the same as 2C > L, or C > L/2. So, if
              *  we can prove, x is greater than other types of element in A section, then x
              *  will be the dominator.

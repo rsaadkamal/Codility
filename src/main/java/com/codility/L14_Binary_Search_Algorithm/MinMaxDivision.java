@@ -64,6 +64,7 @@ import java.util.stream.IntStream;
  */
 public class MinMaxDivision {
 
+
     /*
      * You should divide this array into K blocks of consecutive elements.
      * The size of the block is any integer between 0 and N. Every element
@@ -92,14 +93,8 @@ public class MinMaxDivision {
             sum0 += A[i];
         }
 
-        /*
-         * Get an approximate value for the large sum for
-         * a block. Its the maximum value of a block that
-         * we will need to minimize
-         * */
         int min = Math.max((int) Math.ceil((double) sum0 / K), max0);
         int max = sum0;
-
 
         int sum = 0;
 
@@ -125,7 +120,6 @@ public class MinMaxDivision {
                  *
                  * ALGORITHM
                  * ---------
-                 *
                  * i.  we need to minimize the maximum sum so decrease
                  *     gradually by 1 from the average
                  *

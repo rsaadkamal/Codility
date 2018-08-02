@@ -65,18 +65,15 @@ public class FrogRiverOne {
     public static int solution(int[] A, int X) {
 
         int distance = 0;
+        int N = A.length;
 
-        boolean[] hasLeaf = new boolean[X + 1];
+        boolean[] visited = new boolean[X + 1];
 
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < N; i++) {
 
-            /*
-             * the distance is lesser or equal than X
-             * and no leaf is cover on the distance
-             * */
-            if (A[i] <= X && !hasLeaf[A[i]]) {
+            if (A[i] <= X && !visited[A[i]]) {
 
-                hasLeaf[A[i]] = true;
+                visited[A[i]] = true;
                 distance++;
             }
 
@@ -94,55 +91,27 @@ public class FrogRiverOne {
      * */
     public int solution1(int X, int[] A) {
 
-        int count = X;
+        int distance = X;
         int[] P = new int[X];
 
         Arrays.fill(P, -1);
 
         for (int i = 0; i < A.length; i++) {
 
-            if (P[A[i] - 1] == -1) {
+            int index = A[i] - 1;
 
-                P[A[i] - 1] = 1;
-                count--;
+            if (P[index] == -1) {
 
-                if (count == 0) {
+                P[index] = 1;
+                distance--;
+
+                if (distance == 0) {
                     return i;
                 }
             }
         }
 
         return -1;
-    }
-
-
-    /*
-     * solution - c
-     * */
-    public static int solution2(int X, int[] A) {
-
-        int[] P = new int[X];
-
-        int distance = X;
-        int i;
-
-        for (i = 0; i < A.length; i++) {
-
-            if (A[i] <= X && P[A[i] - 1] == 0) {
-                P[A[i] - 1] = 1;
-                distance--;
-            }
-
-            if (distance <= 0) {
-                break;
-            }
-        }
-
-        if (distance > 0) {
-            return -1;
-        }
-
-        return i - 1;
     }
 
 
@@ -154,18 +123,21 @@ public class FrogRiverOne {
         int P[] = new int[X];
 
         int sum = X * (X + 1) / 2;
-        int pathSum = 0;
+        int path = 0;
 
         Arrays.fill(P, -1);
 
         for (int i = 0; i < A.length; i++) {
 
-            if (P[A[i] - 1] == -1) {
-                P[A[i] - 1] = A[i];
-                pathSum += A[i];
+            int index = A[i] - 1;
+
+            if (P[index] == -1) {
+
+                P[index] = A[i];
+                path += A[i];
             }
 
-            if (pathSum == sum) {
+            if (path == sum) {
                 return i;
             }
         }

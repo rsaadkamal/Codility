@@ -11,11 +11,13 @@ For example, array A such that:
     A[1] = 1
     A[2] = 3
     A[3] = 2
+
 is A permutation, but array A such that:
 
     A[0] = 4
     A[1] = 1
     A[2] = 3
+
 is not A permutation, because value 2 is missing.
 
 The goal is to check whether array A is A permutation.
@@ -75,6 +77,10 @@ public class PermCheck {
                 return 0;
             }
 
+            /*
+             * each element of array A is an integer within the range [1..1,000,000,000]
+             * but we need the condition for the next steps
+             * */
             if (A[i] == 0) {
                 continue;
             }
@@ -83,10 +89,10 @@ public class PermCheck {
 
             while (j < A.length && A[j] > 0) {
 
-                int updatedIndex = A[j] - 1;
+                int k = A[j] - 1;
                 A[j] = 0;
 
-                j = updatedIndex;
+                j = k;
             }
         }
 
@@ -106,7 +112,9 @@ public class PermCheck {
      */
     public static int solution1(int[] A) {
 
-        // O(N*log(N))
+        /*
+         * the time complexity is O(N*log(N))
+         * */
         Arrays.sort(A);
 
         for (int i = 0; i < A.length; i++) {

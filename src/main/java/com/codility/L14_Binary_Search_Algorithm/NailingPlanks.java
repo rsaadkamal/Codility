@@ -200,6 +200,10 @@ public class NailingPlanks {
             }
         }
 
+        /*
+         * is it possble that sortedNails[resultIndex][0] <= plankEnd and result != -1
+         * but sortedNails[resultIndex][0] < plankStart
+         * */
 
         /*
          * low and middle value will be upper end and equal and

@@ -29,7 +29,7 @@ public class CountDiv {
 
 
     /*
-     * f(i) = { i : A ≤ i ≤ B, i mod K = 0 }
+     * f(i) = { i : A ≤ i ≤ B, i % K = 0 }
      *
      *
      * CONDITIONS

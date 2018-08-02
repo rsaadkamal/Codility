@@ -60,17 +60,13 @@ public class MaxProductOfThree {
 
         Arrays.sort(A);
 
-        /*
-         * all the elements are positives
-         * */
-        int allPositiv = A[A.length - 1] * A[A.length - 2] * A[A.length - 3];
+        int N = A.length;
 
-        /*
-         * mix of positives and negatives
-         * */
-        int maxWithMixesOfPosAndNeg = A[A.length - 1] * A[0] * A[1];
+        int all = A[N - 1] * A[N - 2] * A[N - 3];
 
-        return allPositiv > maxWithMixesOfPosAndNeg ? allPositiv : maxWithMixesOfPosAndNeg;
+        int mixtures = A[N - 1] * A[0] * A[1];
+
+        return all > mixtures ? all : mixtures;
     }
 
 
@@ -78,6 +74,8 @@ public class MaxProductOfThree {
      * solution - b
      */
     public int solution1(int[] A) {
+
+        int N = A.length;
 
         /*
          * Invariant: maxes[0] <= maxes[1] <= maxes[2]
@@ -90,6 +88,7 @@ public class MaxProductOfThree {
         int[] mins = {Integer.MAX_VALUE, Integer.MAX_VALUE};
 
         for (int a : A) {
+
             updateMaxes(a, maxes);
             updateMins(a, mins);
         }
@@ -109,9 +108,11 @@ public class MaxProductOfThree {
             maxes[1] = maxes[2];
             maxes[2] = a;
         } else if (a >= maxes[1]) {
+
             maxes[0] = maxes[1];
             maxes[1] = a;
         } else if (a > maxes[0]) {
+
             maxes[0] = a;
         }
     }
@@ -120,9 +121,11 @@ public class MaxProductOfThree {
     private static void updateMins(int a, int[] mins) {
 
         if (a <= mins[0]) {
-            mins[1] = mins[0];
+
             mins[0] = a;
+            mins[1] = mins[0];
         } else if (a < mins[1]) {
+
             mins[1] = a;
         }
     }

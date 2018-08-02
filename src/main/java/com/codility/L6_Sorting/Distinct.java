@@ -42,15 +42,15 @@ public class Distinct {
         /*
          * time complexity: O(N * log(N)) > O(N)
          * */
-        Map<Integer, Integer> frequencies = new HashMap<>();
+        Map<Integer, Integer> freq = new HashMap<>();
 
         for (int i = 0; i < A.length; i++) {
 
-            Integer value = frequencies.containsKey(A[i]) ? frequencies.get(A[i]) + 1 : 1;
-            frequencies.put(A[i], value);
+            int value = freq.containsKey(A[i]) ? freq.get(A[i]) + 1 : 1;
+            freq.put(A[i], value);
         }
 
-        return frequencies.size();
+        return freq.size();
     }
 
 
@@ -118,6 +118,7 @@ public class Distinct {
         int counter = 1;
 
         for (int i = 1; i < A.length; i++) {
+
             if (A[i - 1] < A[i]) {
                 counter++;
             }

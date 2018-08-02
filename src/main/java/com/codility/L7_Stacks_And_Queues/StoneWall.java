@@ -43,7 +43,6 @@ public class StoneWall {
      */
     public static int solution(int[] H) {
 
-
         Stack<Integer> stack = new Stack<Integer>();
 
         int count = 1;
@@ -82,8 +81,19 @@ public class StoneWall {
              * */
             else {
 
-                while (stack.size() > 0 && stack.peek() > H[i]) {
+                while (!stack.isEmpty() && H[i] < stack.peek()) {
                     stack.pop();
+                }
+
+                /*
+                 * the new entity is either in same elevation or higher
+                 * */
+
+                /*
+                 * if in same elevation, we already added the block, so keep iterating
+                 * */
+                if (!stack.isEmpty() && H[i] == stack.peek()) {
+                    continue;
                 }
 
                 stack.push(H[i]);
@@ -98,7 +108,7 @@ public class StoneWall {
     /*
      * solution - b
      */
-    public int solution1(int[] H) {
+    public static int solution1(int[] H) {
 
         int count = 0;
 
@@ -126,6 +136,7 @@ public class StoneWall {
                     if (H[i] == stack.peek()) {
                         count--;
                     }
+
                     stack.pop();
                 }
 
@@ -201,5 +212,23 @@ public class StoneWall {
         }
 
         return result;
+    }
+
+
+    public static void main(String[] args) {
+
+        int[] H = new int[9];
+
+        H[0] = 8;
+        H[1] = 8;
+        H[2] = 5;
+        H[3] = 7;
+        H[4] = 9;
+        H[5] = 8;
+        H[6] = 7;
+        H[7] = 4;
+        H[8] = 8;
+
+        System.out.println(solution1(H));
     }
 }
