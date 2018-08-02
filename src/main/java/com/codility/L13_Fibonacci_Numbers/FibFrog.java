@@ -141,6 +141,7 @@ public class FibFrog {
 
     public static int solution(int[] A) {
 
+
         List<Integer> fibs = getFibonaciNumbers(A.length + 1);
         boolean[] visited = new boolean[A.length];
 
@@ -472,6 +473,72 @@ public class FibFrog {
     }
 
 
+    /*
+     * solution - e
+     * */
+    public static int solution5(int[] A) {
+
+        int N = A.length;
+
+        List<Integer> list = getFibonaciNumbers(N + 1);
+
+        int size = list.size();
+        int[] fibs = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            fibs[i] = list.get(i);
+        }
+
+        int len = (int) (Math.log10(fibs[fibs.length - 1]) + 1);
+        int inf = (int) Math.pow(10, len);
+
+        int[] moves = new int[N + 1];
+
+        for (int i = 0; i <= N; i++) {
+            moves[i] = inf;
+        }
+
+        for (int i = 0; i < fibs.length; i++) {
+
+            if (fibs[i] - 1 < N && A[fibs[i] - 1] == 1) {
+                moves[fibs[i] - 1] = 1;
+            }
+
+            if (fibs[i] - 1 == N) {
+                moves[N] = 1;
+            }
+        }
+
+        for (int i = 0; i < N; i++) {
+
+            if (A[i] == 1)
+
+                for (int j = 0; j < fibs.length; j++) {
+
+                    if (i - fibs[j] >= 0 && moves[i - fibs[j]] != inf && moves[i] > moves[i - fibs[j]] + 1) {
+                        moves[i] = moves[i - fibs[j]] + 1;
+                    }
+                }
+        }
+
+
+        for (int i = N; i >= 0; i--) {
+
+            for (int j = 0; j < fibs.length; j++) {
+
+                if (i - fibs[j] >= 0 && moves[i - fibs[j]] != inf && moves[i] > moves[i - fibs[j]] + 1) {
+                    moves[i] = moves[i - fibs[j]] + 1;
+                }
+            }
+        }
+
+        if (moves[N] == -1) {
+            return -1;
+        }
+
+        return moves[N];
+    }
+
     public static void main(String[] args) {
 
 
@@ -492,5 +559,6 @@ public class FibFrog {
 //        int[] A = {0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0};
         int[] A = {0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0};
 
+        System.out.println(solution5(A));
     }
 }

@@ -54,12 +54,9 @@ public class CyclicRotation {
      * */
     public int[] solution(int[] A, int K) {
 
-        /*
-         * this is the only solution that you can do in place
-         * and you don't need to use additional storage
-         * */
+        int N = A.length;
 
-        if (A == null || K > A.length) {
+        if (A == null || K > N) {
             return null;
         }
 
@@ -71,9 +68,9 @@ public class CyclicRotation {
          * iii. reverse the array from K to end
          * */
 
-        reverse(A, 0, A.length - 1);
+        reverse(A, 0, N - 1);
         reverse(A, 0, K - 1);
-        reverse(A, K, A.length - 1);
+        reverse(A, K, N - 1);
 
         return A;
     }
@@ -142,7 +139,6 @@ public class CyclicRotation {
         int[] result = new int[A.length];
 
         int N = A.length;
-
 
         for (int i = 0; i < N; i++) {
             result[(i + K) % N] = A[i];

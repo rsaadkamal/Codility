@@ -142,11 +142,10 @@ public class PermCheck {
                 return 0;
             }
 
-            // convert the value to index
-            int index = A[i] - 1;
+            int j = A[i] - 1;
 
-            if (C[index] == -1) {
-                C[index] = A[i];
+            if (C[j] == -1) {
+                C[j] = A[i];
             }
         }
 

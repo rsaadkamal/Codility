@@ -94,7 +94,6 @@ public class MissingInteger {
         for (int i = 0; i < counter.length; i++) {
 
             if (!counter[i]) {
-
                 return i + 1;
             }
         }
@@ -153,11 +152,9 @@ public class MissingInteger {
             }
         }
 
-
         for (int i = 0; i < N; i++) {
 
             if (A[i] > 0) {
-
                 return i + 1;
             }
         }

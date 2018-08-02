@@ -40,53 +40,26 @@ public class PermMissingElem {
 
 
     /*
-     * sorting algorithm such as quick sort has time
-     * complexity of O(N log(N)) which is greater than
-     * O(N)
-     * */
-
-    /*
      * solution - a
      */
-    /*
-     * expected worst-case time complexity is O(N) and space complexity is O(1)
-     * */
     public static int solution(int[] A) {
 
-        // cant use additional storage
-        // int N = A.length;
+        int N = A.length;
 
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < N; i++) {
 
-            // if we already put a 0 in the index, just skip this index
             if (A[i] == 0) {
                 continue;
             }
 
-            int index = A[i] - 1;
+            int j = A[i] - 1;
 
-            /*
-             * there must be numbers with index lass than N. We will
-             * omit other numbers as not relevant for the solution
-             * */
-            // A = [2, 3, 1, 5]
+            while (j >= 0 && j < N) {
 
-            /*
-             *
-             * Algorithm
-             * ---------
-             *
-             * i.   take the value of index and converted to an updated index
-             * ii.  put 0 to the updated index
-             * iii. keep in iterating with the updated index
-             *
-             * */
-            while (index != -1 && index < A.length) {
+                int k = A[j] - 1;
 
-                int updatedIndex = A[index] - 1;
-
-                A[index] = 0;
-                index = updatedIndex;
+                A[j] = 0;
+                j = k;
             }
         }
 
@@ -106,12 +79,10 @@ public class PermMissingElem {
      * */
     public int solution1(int[] A) {
 
-        int N = A.length + 2;
 
-        /*
-         * we range of numbers within [1..(N + 1)]
-         * */
-        int sum = N * (N + 1) / 2;
+        int N = A.length;
+
+        int sum = ((N + 1) * (N + 2)) / 2;
 
         for (int a : A) {
             sum -= a;
@@ -122,46 +93,18 @@ public class PermMissingElem {
 
 
     /*
-     * solution - c
-     */
-    public int solution2(int[] A) {
-
-        int tSum = 0;
-        int N = A.length;
-
-        for (int i = 0; i < N; i++) {
-            tSum = tSum + A[i];
-        }
-
-        /*
-         * the largest value within the range of [1..(N + 1)] is (N+1)
-         * */
-        int sum = (N + 1) * (N + 2) / 2;
-
-        return (sum - tSum);
-    }
-
-
-    /*
      * solution - e
      */
     public int solution5(int[] A) {
 
         int N = A.length;
 
-        /*
-         * the largest value would be (N+1). We need an array of (N+2)
-         * spaces that can accommodate the index value of (N+1)
-         * */
         int[] C = new int[N + 2];
 
         for (int i = 0; i < N; i++) {
             C[A[i]] = -1;
         }
 
-        /*
-         * search from the index of 1 to upward
-         * */
         for (int i = 1; i < (N + 2); i++) {
 
             if (C[i] == 0) {
@@ -170,24 +113,6 @@ public class PermMissingElem {
         }
 
         return -1;
-    }
-
-
-    /*
-     * solution - f
-     */
-    public int solution6(int[] A) {
-
-        int N = A.length + 1;
-
-        BigInteger formula = BigInteger.valueOf(N).multiply(BigInteger.valueOf((N + 1))).divide(BigInteger.valueOf(2));
-        BigInteger sum = BigInteger.valueOf(0);
-
-        for (int a : A) {
-            sum = sum.add(BigInteger.valueOf(a));
-        }
-
-        return formula.subtract(sum).intValue();
     }
 
 

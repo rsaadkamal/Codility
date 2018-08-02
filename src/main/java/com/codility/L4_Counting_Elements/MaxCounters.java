@@ -29,11 +29,17 @@ the values of the counters after each consecutive operation will be:
     (3, 2, 2, 2, 2)
     (3, 2, 2, 3, 2)
     (3, 2, 2, 4, 2)
+
 The goal is to calculate the value of every counter after all operations.
 
 Write A function:
 
-class Solution { public int[] solution(int N, int[] A); }
+    class Solution {
+
+        public int[] solution(int N, int[] A){
+
+        }
+    }
 
 that, given an integer N and A non-empty array A consisting of M integers, returns A sequence of integers representing the values of the counters.
 
@@ -52,6 +58,7 @@ For example, given:
     A[4] = 1
     A[5] = 4
     A[6] = 4
+
 the function should return [3, 2, 2, 4, 2], as explained above.
 
 Assume that:
@@ -95,10 +102,11 @@ public class MaxCounters {
         /*
          * given N counters, initially set to 0
          * */
-        int[] C = new int[N];
+        int[] result = new int[N];
 
         int currMax = 0;
         int currMin = 0;
+
 
         for (int i = 0; i < A.length; i++) {
 
@@ -111,20 +119,22 @@ public class MaxCounters {
              * already defined, we only need to check A[K] <= N
              *
              * each element of array A is an integer within the range [1..N + 1]
+             *
+             * the condition for the 1 <= A[i] is not required
              * */
-            if (A[i] <= N) {
+            if (1 <= A[i] && A[i] <= N) {
 
-                C[A[i] - 1] = Math.max(currMin, C[A[i] - 1]);
-                C[A[i] - 1]++;
+                result[A[i] - 1] = Math.max(currMin, result[A[i] - 1]);
+                result[A[i] - 1]++;
 
                 /*
                  * store and update the max value in the currMax
                  * */
-                currMax = Math.max(currMax, C[A[i] - 1]);
+                currMax = Math.max(currMax, result[A[i] - 1]);
             }
 
             /*
-             * If A[K] = N + 1 then operation K is getMax counter,
+             * if A[K] = N + 1 then operation K is getMax counter,
              * use A storage to perform the lazy update to keep O(N)
              * */
             else if (A[i] == N + 1) {
@@ -135,11 +145,11 @@ public class MaxCounters {
         /*
          * update the indexes where its required
          * */
-        for (int i = 0; i < C.length; i++) {
-            C[i] = Math.max(C[i], currMin);
+        for (int i = 0; i < result.length; i++) {
+            result[i] = Math.max(result[i], currMin);
         }
 
-        return C;
+        return result;
     }
 
 
@@ -152,15 +162,17 @@ public class MaxCounters {
      * */
     public int[] solution1(int N, int[] A) {
 
-        int C[] = new int[N];
+        int[] C = new int[N];
 
-        int max = 0;
+        int currMax = 0;
         int currMin = 0;
 
         for (int i = 0; i < A.length; i++) {
 
-            // it's already 1 <= A[i] and hence, no need to check
-            if (A[i] <= N) {
+            /*
+             * it's already 1 <= A[i] and hence, no need to check
+             * */
+            if (1 <= A[i] && A[i] <= N) {
 
                 if (C[A[i] - 1] < currMin) {
                     C[A[i] - 1] = currMin;
@@ -168,14 +180,14 @@ public class MaxCounters {
 
                 C[A[i] - 1]++;
 
-                max = Math.max(max, C[A[i] - 1]);
+                currMax = Math.max(currMax, C[A[i] - 1]);
             }
 
             /*
              * perform for the cindition of A[K] == N + 1
              * */
             else if (A[i] == N + 1) {
-                currMin = max;
+                currMin = currMax;
             }
         }
 
@@ -199,10 +211,12 @@ public class MaxCounters {
 
         for (int i = 0; i < A.length; i++) {
 
-            if (A[i] == N + 1) {
-                maxCounter(P);
-            } else if (A[i] <= N) {
+            if (A[i] <= N) {
                 P[A[i] - 1]++;
+            } else if (A[i] == N + 1) {
+                maxCounter(P);
+            } else {
+
             }
         }
 

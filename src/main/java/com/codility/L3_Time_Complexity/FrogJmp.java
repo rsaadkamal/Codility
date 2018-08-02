@@ -68,17 +68,17 @@ public class FrogJmp {
      * */
     public int solution2(int X, int Y, int D) {
 
-        int res = 0;
+        int result = 0;
         int diff = Y - X;
 
         if (diff % D == 0) {
 
-            res = diff / D;
-            return res;
+            result = diff / D;
+            return result;
         } else {
 
-            res = diff / D + 1;
-            return res;
+            result = diff / D + 1;
+            return result;
         }
     }
 
@@ -93,13 +93,14 @@ public class FrogJmp {
         }
 
         int remainder = (Y - X) % D;
-        int step = (Y - remainder - X) / D;
+//        int step = (Y - remainder - X) / D;
+        int step = (Y - X) / D;
 
         if (remainder > 0) {
             return step + 1;
-        } else {
-            return step;
         }
+
+        return step;
     }
 
     /*

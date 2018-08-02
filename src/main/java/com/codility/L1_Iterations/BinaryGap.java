@@ -52,7 +52,8 @@ public class BinaryGap {
      * */
     public int solution1(int N) {
 
-        int max = Integer.MIN_VALUE;
+//        int max = Integer.MIN_VALUE;
+        int max = ((1 << 31) - 1);
 
         String binary = String.valueOf(Integer.toBinaryString(N));
 

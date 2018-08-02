@@ -52,9 +52,6 @@ public class OddOccurrencesInArray {
 
         int result = arr[0];
 
-        /*
-         * the equal elements will cancel each other
-         * */
         for (int i = 1; i < arr.length; i++) {
             result ^= arr[i];
         }
@@ -106,7 +103,7 @@ public class OddOccurrencesInArray {
 
         if (map.size() == 1) {
 
-            Integer value = (new ArrayList<Integer>(map.values())).get(0);
+            int value = (new ArrayList<Integer>(map.values())).get(0);
             return value;
         }
 

@@ -46,36 +46,23 @@ public class App {
 
         int N = A.length;
 
-        /*
-         * Mark A[i] as visited by making A[A[i] - 1] negative
-         * */
-        for (int i = 0; i < N; i++) {
+        int sum = ((N + 1) * (N + 2)) / 2;
 
-            /*
-             * we need the absolute value for the duplicates
-             * */
-            int j = Math.abs(A[i]) - 1;
-
-            if (j >= 0 && j < N && A[j] > 0) {
-                A[j] = -A[j];
-            }
+        for (int a : A) {
+            sum -= a;
         }
 
-
-        for (int i = 0; i < N; i++) {
-
-            if (A[i] > 0) {
-                return i + 1;
-            }
-        }
-
-        return N + 1;
+        return sum;
     }
 
     public static void main(String[] args) {
 
-        int[] A = {1, 3, 3, 4, 1, 2};
-        System.out.println(solution(A));
+        int value = 197;
+
+        int N = (int) (Math.log10(value) + 1);
+
+        int M = (int)Math.pow(10, N);
+        System.out.println(M);
     }
 }
 

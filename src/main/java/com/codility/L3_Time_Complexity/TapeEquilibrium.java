@@ -61,13 +61,10 @@ public class TapeEquilibrium {
     /*
      * solution - a
      * */
-    /*
-     * expected worst-case time complexity is O(N) and
-     * expected worst-case space complexity is O(N)
-     * */
     public static int solution(int[] A) {
 
-        int res = Integer.MAX_VALUE;
+//        int result = Integer.MAX_VALUE;
+        int result = (1 << 31);
 
         int tmp = 0;
         int sum = 0;
@@ -77,11 +74,12 @@ public class TapeEquilibrium {
         }
 
         for (int i = 0; i < A.length - 1; i++) {
+
             tmp += A[i];
-            res = Math.min(res, Math.abs(tmp - (sum - tmp)));
+            result = Math.min(result, Math.abs(tmp - (sum - tmp)));
         }
 
-        return res;
+        return result;
     }
 
 
@@ -97,9 +95,7 @@ public class TapeEquilibrium {
         }
 
         int sum = 0;
-
         int left = 0;
-
 
         for (int i = 0; i < N; i++) {
             sum += A[i];
