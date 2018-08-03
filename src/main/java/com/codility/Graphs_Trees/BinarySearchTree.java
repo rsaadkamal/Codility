@@ -74,10 +74,10 @@ public class BinarySearchTree {
             return 0;
         }
 
-        Node focusNode = root;
+        Node focus = root;
 
-        int leftHeight = focusNode.leftChild != null ? depth(focusNode.leftChild) : 0;
-        int rightHeight = focusNode.rightChild != null ? depth(focusNode.rightChild) : 0;
+        int leftHeight = focus.leftChild != null ? depth(focus.leftChild) : 0;
+        int rightHeight = focus.rightChild != null ? depth(focus.rightChild) : 0;
 
         return 1 + Math.max(leftHeight, rightHeight);
     }
@@ -122,7 +122,7 @@ public class BinarySearchTree {
         /*
          * determine the relationship with the parent
          * */
-        boolean isItALeftChild = true;
+        boolean isLeftChild = true;
 
         /*
          * we get the node needs to be removed,  it's parent and
@@ -134,16 +134,17 @@ public class BinarySearchTree {
 
             if (key < focus.key) {
 
-                isItALeftChild = true;
+                isLeftChild = true;
                 focus = focus.leftChild;
             } else {
 
-                isItALeftChild = false;
+                isLeftChild = false;
                 focus = focus.rightChild;
             }
 
-            if (focus == null)
+            if (focus == null) {
                 return false;
+            }
         }
 
         /*
@@ -153,7 +154,7 @@ public class BinarySearchTree {
 
             if (focus == root) {
                 root = null;
-            } else if (isItALeftChild) {
+            } else if (isLeftChild) {
                 parent.leftChild = null;
             } else {
                 parent.rightChild = null;
@@ -167,7 +168,7 @@ public class BinarySearchTree {
 
             if (focus == root) {
                 root = focus.leftChild;
-            } else if (isItALeftChild) {
+            } else if (isLeftChild) {
                 parent.leftChild = focus.leftChild;
             } else {
                 parent.rightChild = focus.leftChild;
@@ -182,7 +183,7 @@ public class BinarySearchTree {
 
             if (focus == root) {
                 root = focus.rightChild;
-            } else if (isItALeftChild) {
+            } else if (isLeftChild) {
                 parent.leftChild = focus.rightChild;
             } else {
                 parent.rightChild = focus.rightChild;
@@ -195,7 +196,7 @@ public class BinarySearchTree {
          * */
         else {
 
-            Node replacement = getReplacementNode(focus);
+            Node replacement = getReplacement(focus);
 
             /*
              * focus node doesn't have parent
@@ -207,7 +208,7 @@ public class BinarySearchTree {
             /*
              * focus node has parent
              * */
-            else if (isItALeftChild) {
+            else if (isLeftChild) {
                 parent.leftChild = replacement;
             } else {
                 parent.rightChild = replacement;
@@ -220,11 +221,12 @@ public class BinarySearchTree {
     }
 
 
-    public static Node getReplacementNode(Node replacedNode) {
+    public static Node getReplacement(Node replaced) {
 
-        Node replacementParent = replacedNode;
-        Node replacement = replacedNode;
-        Node focusNode = replacedNode.rightChild;
+        Node replacementParent = replaced;
+
+        Node replacement = replaced;
+        Node focusNode = replaced.rightChild;
 
         while (focusNode != null) {
 
@@ -234,10 +236,10 @@ public class BinarySearchTree {
         }
 
 
-        if (replacement != replacedNode.rightChild) {
+        if (replacement != replaced.rightChild) {
 
             replacementParent.leftChild = replacement.rightChild;
-            replacement.rightChild = replacedNode.rightChild;
+            replacement.rightChild = replaced.rightChild;
         }
 
         return replacement;
@@ -253,24 +255,21 @@ public class BinarySearchTree {
     algorithm being designed. The goal is speed, so pick the strategy that brings you
     the nodes you require the fastest.
 
-        i.   If you know you need to explore the roots before inspecting any leaves, you
+        i.   if you know you need to explore the roots before inspecting any leaves, you
         pick pre-order because you will encounter all the roots before all of the leaves.
 
-        ii.  If you know you need to explore all the leaves before any nodes, you select
+        ii.  if you know you need to explore all the leaves before any nodes, you select
         post-order because you don't waste any time inspecting roots in search for leaves.
 
-        iii. If you know that the tree has an inherent sequence in the nodes, and you want
+        iii. if you know that the tree has an inherent sequence in the nodes, and you want
         to flatten the tree back into its original sequence, than an in-order traversal
-        should be used. The tree would be flattened in the same way it was created. A
-        pre-order or post-order traversal might not unwind the tree back into the sequence
-        which was used to create it.
+        should be used. The tree would be flattened in the same way it was created.
     */
 
 
-    // METHODS FOR THE TREE TRAVERSAL
-
-    // inOrderTraverseTree : i) X.left ii) X iii) X.right
-    /* this prints the integers in ascending order */
+    /*
+     * in-order traversal with recursion
+     * */
     public void inOrderTraverseTree(Node focusNode) {
 
         if (focusNode != null) {
@@ -282,7 +281,9 @@ public class BinarySearchTree {
     }
 
 
-    /*In-order traversal w/ iteration*/
+    /*
+     * in-order traversal with iteration
+     * */
     public static void inOrderTraverseTree2(Node root) {
 
         if (root == null) {
@@ -292,7 +293,9 @@ public class BinarySearchTree {
         Node node = root;
         Stack<Node> stack = new Stack<Node>();
 
-        // take all the left nodes
+        /*
+         * take all the left nodes in a LIFO structure
+         * */
         while (node != null) {
 
             stack.push(node);
@@ -318,57 +321,54 @@ public class BinarySearchTree {
 
         }
     }
-	/*END of solution: In-order
-    traversal w/ iteration*/
 
-
-    // preOrderTraverseTree : i) X ii) X.left iii) X.right
-    public void preorderTraverseTree(Node focusNode) {
+    public void preOrderTraverseTree(Node focusNode) {
 
         if (focusNode != null) {
 
             System.out.println(focusNode);
-            preorderTraverseTree(focusNode.leftChild);
-            preorderTraverseTree(focusNode.rightChild);
+
+            preOrderTraverseTree(focusNode.leftChild);
+            preOrderTraverseTree(focusNode.rightChild);
         }
     }
 
 
-    // postOrderTraverseTree : i) X.left ii) X.right iii) X
     public void postOrderTraverseTree(Node focusNode) {
 
         if (focusNode != null) {
 
-            preorderTraverseTree(focusNode.leftChild);
-            preorderTraverseTree(focusNode.rightChild);
+            preOrderTraverseTree(focusNode.leftChild);
+            preOrderTraverseTree(focusNode.rightChild);
+
             System.out.println(focusNode);
         }
     }
 
 
-    public static boolean isWithinTree(int n) {
+    public static boolean isWithinTree(int key) {
 
-        if (n == root.key) {
+        if (key == root.key) {
             return true;
         } else {
 
-            Node focusNode = root;
+            Node focus = root;
             Node parent;
 
-            while (focusNode != null) {
+            while (focus != null) {
 
-                parent = focusNode;
+                parent = focus;
 
-                if (focusNode != null) {
+                if (focus != null) {
 
-                    if (n < focusNode.key) {
-                        focusNode = focusNode.leftChild;
+                    if (key < focus.key) {
+                        focus = focus.leftChild;
                     } else {
-                        focusNode = focusNode.rightChild;
+                        focus = focus.rightChild;
                     }
                 }
 
-                if (focusNode != null && n == focusNode.key) {
+                if (focus != null && key == focus.key) {
                     return true;
                 }
             }
@@ -377,30 +377,31 @@ public class BinarySearchTree {
         return false;
     }
 
-    public static Node getNode(int n) {
 
-        if (n == root.key) {
+    public static Node getNode(int key) {
+
+        if (key == root.key) {
             return root;
         } else {
 
-            Node focusNode = root;
+            Node focus = root;
             Node parent;
 
-            while (focusNode != null) {
+            while (focus != null) {
 
-                parent = focusNode;
+                parent = focus;
 
-                if (focusNode != null) {
+                if (focus != null) {
 
-                    if (n < focusNode.key) {
-                        focusNode = focusNode.leftChild;
+                    if (key < focus.key) {
+                        focus = focus.leftChild;
                     } else {
-                        focusNode = focusNode.rightChild;
+                        focus = focus.rightChild;
                     }
                 }
 
-                if (focusNode != null && n == focusNode.key) {
-                    return focusNode;
+                if (focus != null && key == focus.key) {
+                    return focus;
                 }
             }
         }
@@ -409,13 +410,17 @@ public class BinarySearchTree {
     }
 
 
-    public static Node getParent(int n) {
+    /*
+     * design an algorithm to get the parent of
+     * a node with provided key
+     * */
+    public static Node getParent(int key) {
 
-        if (!isWithinTree(n)) {
+        if (!isWithinTree(key)) {
             return null;
         }
 
-        if (n == root.key) {
+        if (key == root.key) {
             return null;
         } else {
 
@@ -427,14 +432,14 @@ public class BinarySearchTree {
 
                 if (focusNode != null) {
 
-                    if (n < focusNode.key) {
+                    if (key < focusNode.key) {
                         focusNode = focusNode.leftChild;
                     } else {
                         focusNode = focusNode.rightChild;
                     }
                 }
 
-                if (focusNode != null && n == focusNode.key) {
+                if (focusNode != null && key == focusNode.key) {
                     return parent;
                 }
             }
@@ -443,19 +448,32 @@ public class BinarySearchTree {
         return null;
     }
 
+
+    /*
+     * design an algorithm to check if a binary tree
+     * is valid tree using recursive method
+     * */
     public static boolean isValidBST(Node root, int min, int max) {
 
         if (root == null) {
             return true;
         }
 
-        return (root.key > min) &&
-                (root.key < max) &&
-                isValidBST(root.leftChild, min, root.key) &&
-                isValidBST(root.rightChild, root.key, max);
+        if (root.key > min && root.key < max) {
+
+            return isValidBST(root.leftChild, min, root.key)
+                    &&
+                    isValidBST(root.rightChild, root.key, max);
+        }
+
+        return false;
     }
 
 
+    /*
+     * design an algorithm to check if a binary tree
+     * is valid tree using iterative method
+     * */
     public static boolean isValidBST(Node root) {
 
         LinkedList<Node> queue = new LinkedList<Node>();
@@ -468,7 +486,9 @@ public class BinarySearchTree {
 
             Node cur = queue.poll();
 
-            if ((cur.leftChild != null && cur.key < cur.leftChild.key) || (cur.rightChild != null && cur.key > cur.rightChild.key)) {
+            if (cur.leftChild != null && cur.key < cur.leftChild.key) {
+                return false;
+            } else if (cur.rightChild != null && cur.key > cur.rightChild.key) {
                 return false;
             }
 
@@ -479,104 +499,52 @@ public class BinarySearchTree {
         return queue.isEmpty();
     }
 
-    public static boolean isValidBST1(Node node) {
 
-        if (node == null) {
-            return true;
-        }
+    /*
+     * create a BST using an unique array
+     * */
+    public static Node createBST(int[] array) {
 
-        if (node.leftChild != null &&
-                (node.key < node.leftChild.key || !isValidBST1(node.leftChild))) {
-            return false;
-        } else if (node.rightChild != null && (node.key > node.rightChild.key
-                || !isValidBST1(node.rightChild))) {
+        root = new Node(array[0]);
 
-            return false;
-        } else
-            return true;
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(root);
 
-    }
+        int i = 1;
 
-    public static boolean isValidBST2(Node root) {
+        while (true) {
 
-        LinkedList<Node> nodesToCheck = new LinkedList<>();
+            /*
+             * get the current element of the queue similar to peek
+             * */
+            Node node = (Node) queue.peek();
 
-        nodesToCheck.offer(root);
+            if (node.leftChild == null && array[i] < node.key) {
 
-        while (!nodesToCheck.isEmpty()) {
+                node.leftChild = new Node(array[i]);
+                queue.add(node.leftChild);
 
-            Node current = nodesToCheck.poll();
+                i++;
+            } else if (node.rightChild == null && array[i] > node.key) {
 
-            if (current.leftChild != null) {
+                node.rightChild = new Node(array[i]);
+                queue.add(node.rightChild);
 
-                if (current.key < current.leftChild.key)
-                    return false;
-
-                nodesToCheck.offer(current.leftChild);
-            }
-
-            if (current.rightChild != null) {
-
-                if (current.key > current.rightChild.key)
-                    return false;
-
-                nodesToCheck.offer(current.rightChild);
-            }
-        }
-
-        return true;
-    }
-
-
-    public static Node createBstFromArray(int[] array) {
-
-        /*
-         * assuming that we are using an unique array
-         * */
-        if (array.length > 0) {
-
-            root = new Node(array[0]);
-
-            Queue<Node> queue = new LinkedList<Node>();
-            queue.add(root);
-
-            boolean terminate = false;
-            int i = 1;
-
-            while (!terminate) {
+                i++;
+            } else {
 
                 /*
-                 * get the current element of the queue similar to peek
+                 * have child in both left and right sides
                  * */
-                Node node = (Node) queue.element();
-
-                if (node.leftChild == null && array[i] < node.key) {
-
-                    node.leftChild = new Node(array[i]);
-                    i++;
-                    queue.add(node.leftChild);
-                } else if (node.rightChild == null && array[i] > node.key) {
-
-                    node.rightChild = new Node(array[i]);
-                    i++;
-                    queue.add(node.rightChild);
-                } else {
-
-                    /*
-                     * have child in both left and right sides
-                     * */
-                    queue.remove();
-                }
-
-                if (i == array.length) {
-                    terminate = true;
-                }
+                queue.remove();
             }
 
-            return root;
+            if (i == array.length) {
+                break;
+            }
         }
 
-        return null;
+        return root;
     }
 
 
@@ -595,10 +563,10 @@ public class BinarySearchTree {
         }
     }
 
+
     /*
      * Q: create minimum binary search tree  from  a  sorted   array
      * */
-
     /*
     *
                       10
@@ -623,38 +591,42 @@ public class BinarySearchTree {
               4       9       14   17   20
     * */
 
+    public static Node createBalancedTree(int[] A) {
 
-    public static Node createBalancedTree(int array[]) {
+        Arrays.sort(A);
 
-        Arrays.sort(array);
-        root = createBalancedTree(array, 0, array.length - 1);
+        int N = A.length;
 
+        int low = 0;
+        int high = N - 1;
+
+        root = createBalancedTree(A, low, high);
         return root;
     }
 
-    private static Node createBalancedTree(int arr[], int start, int end) {
+    private static Node createBalancedTree(int[] arr, int low, int high) {
 
-        if (end < start) {
+        if (high < low) {
             return null;
         }
 
-        int mid = (start + end) / 2;
+        int mid = (low + high) / 2;
 
         Node node = new Node(arr[mid]);
 
-        node.leftChild = createBalancedTree(arr, start, mid - 1);
-        node.rightChild = createBalancedTree(arr, mid + 1, end);
+        node.leftChild = createBalancedTree(arr, low, mid - 1);
+        node.rightChild = createBalancedTree(arr, mid + 1, high);
 
         return node;
     }
 
 
     /*
-     * Q: create linked list of the same level of the tree with performBFS
+     * Q: create linked list of the same level of the tree using BFS
      * */
-    public static ArrayList<LinkedList<Node>> createLevelLinkedList(Node root) {
+    public static List<LinkedList<Node>> createLevelLinkedList(Node root) {
 
-        ArrayList<LinkedList<Node>> result = new ArrayList<LinkedList<Node>>();
+        List<LinkedList<Node>> result = new ArrayList<LinkedList<Node>>();
 
         LinkedList<Node> current = new LinkedList<Node>();
 
@@ -664,8 +636,8 @@ public class BinarySearchTree {
 
         while (current.size() > 0) {
 
-            result.add(current); // Add previous level
-            LinkedList<Node> parents = current; // Go to next level
+            result.add(current);
+            LinkedList<Node> parents = current;
 
             current = new LinkedList<Node>();
 
@@ -690,12 +662,12 @@ public class BinarySearchTree {
 
         for (LinkedList<Node> entry : result) {
 
-            Iterator<Node> i = entry.listIterator();
+            Iterator<Node> iterator = entry.listIterator();
             System.out.print("Link list at depth " + depth + ":");
 
-            while (i.hasNext()) {
+            while (iterator.hasNext()) {
 
-                System.out.print(" " + ((Node) i.next()).key);
+                System.out.print(" " + ((Node) iterator.next()).key);
             }
 
             System.out.println();
@@ -707,7 +679,7 @@ public class BinarySearchTree {
     /*
      * Q: create linked list of the same level of the tree with DFS
      * */
-    public static ArrayList<LinkedList<Node>> createLevelLinkedList1(Node root) {
+    public static List<LinkedList<Node>> createLevelLinkedList1(Node root) {
 
         ArrayList<LinkedList<Node>> lists = new ArrayList<LinkedList<Node>>();
 

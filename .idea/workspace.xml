@@ -3703,9 +3703,7 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/L13_Fibonacci_Numbers/FibFrog.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/L13_Fibonacci_Numbers/FibFrog.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/L13_Fibonacci_Numbers/FibFrog1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -4270,22 +4268,29 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="37" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="63" selection-end-column="37" />
+            <state relative-caret-position="221">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FibFrog.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog.java">
+      <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="476" column="19" lean-forward="true" selection-start-line="476" selection-start-column="19" selection-end-line="476" selection-end-column="19" />
+            <state relative-caret-position="191">
+              <caret line="685" column="0" lean-forward="true" selection-start-line="685" selection-start-column="0" selection-end-line="685" selection-end-column="0" />
               <folding>
-                <element signature="e#3299#3305#0" expanded="true" />
-                <element signature="e#5598#5607#0" expanded="true" />
-                <element signature="e#6579#6585#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#395#396#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+                <element signature="e#6749#6755#0" expanded="true" />
+                <element signature="e#10713#10719#0" expanded="true" />
+                <element signature="e#11432#11438#0" expanded="true" />
+                <element signature="e#14301#14319#0" expanded="true" />
+                <element signature="e#14373#14379#0" expanded="true" />
+                <element signature="e#15651#15669#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -4368,7 +4373,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/AStar.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/IHeap.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/BinaryHeap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountUneatenLeaves.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/SplitArray.java" />
@@ -4413,9 +4417,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L1_Iterations/BinaryGap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog1.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
       </list>
     </option>
   </component>
@@ -4456,7 +4461,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -4489,6 +4493,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="codility" type="462c0819:PsiDirectoryNode" />
+              <item name="Graphs_Trees" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
@@ -4533,8 +4546,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4847,11 +4861,12 @@
       <workItem from="1533037785016" duration="29933000" />
       <workItem from="1533175463825" duration="16014000" />
       <workItem from="1533223707939" duration="242000" />
+      <workItem from="1533273442994" duration="4454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417288000" />
+    <option name="totallyTimeSpent" value="421742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -4866,10 +4881,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29565218" sideWeight="0.48400852" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2536232" sideWeight="0.48400852" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -5296,13 +5311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="985" column="25" lean-forward="true" selection-start-line="985" selection-start-column="25" selection-end-line="985" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Geeks_For_Geeks/MinimumSlice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -5402,22 +5410,41 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog1.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="477" column="9" lean-forward="true" selection-start-line="477" selection-start-column="9" selection-end-line="477" selection-end-column="9" />
+          <folding>
+            <element signature="e#3299#3305#0" expanded="false" />
+            <element signature="e#5598#5607#0" expanded="false" />
+            <element signature="e#6579#6585#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="37" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="63" selection-end-column="37" />
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="476" column="19" lean-forward="true" selection-start-line="476" selection-start-column="19" selection-end-line="476" selection-end-column="19" />
+        <state relative-caret-position="191">
+          <caret line="685" column="0" lean-forward="true" selection-start-line="685" selection-start-column="0" selection-end-line="685" selection-end-column="0" />
           <folding>
-            <element signature="e#3299#3305#0" expanded="true" />
-            <element signature="e#5598#5607#0" expanded="true" />
-            <element signature="e#6579#6585#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#6749#6755#0" expanded="true" />
+            <element signature="e#10713#10719#0" expanded="true" />
+            <element signature="e#11432#11438#0" expanded="true" />
+            <element signature="e#14301#14319#0" expanded="true" />
+            <element signature="e#14373#14379#0" expanded="true" />
+            <element signature="e#15651#15669#0" expanded="true" />
           </folding>
         </state>
       </provider>

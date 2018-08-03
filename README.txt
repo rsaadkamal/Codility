@@ -3,7 +3,7 @@ CODILITY
 ————————
 
 The repo is for the solutions of the problems in the Codility platform. Generally, Codility
-problems comprehensive, formed with multiple arguments and helps to improve the abstract
+problems are comprehensive, formed with multiple arguments and helps to improve the abstract
 thinking. However, unless specified, these problems may not be suitable to prepare for the
 general coding interviews.
 
