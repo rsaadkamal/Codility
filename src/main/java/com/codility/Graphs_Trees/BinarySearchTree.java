@@ -596,7 +596,7 @@ public class BinarySearchTree {
     }
 
     /*
-     * create minimum binary search tree  from  a  sorted   array
+     * Q: create minimum binary search tree  from  a  sorted   array
      * */
 
     /*
@@ -650,7 +650,7 @@ public class BinarySearchTree {
 
 
     /*
-     * create linked list of the same level of the tree with performBFS
+     * Q: create linked list of the same level of the tree with performBFS
      * */
     public static ArrayList<LinkedList<Node>> createLevelLinkedList(Node root) {
 
@@ -705,7 +705,7 @@ public class BinarySearchTree {
 
 
     /*
-     * create linked list of the same level of the tree with DFS
+     * Q: create linked list of the same level of the tree with DFS
      * */
     public static ArrayList<LinkedList<Node>> createLevelLinkedList1(Node root) {
 
@@ -752,7 +752,7 @@ public class BinarySearchTree {
     }
 
     /*
-     * design an algorithm to find the ‘next’ node (e.g., in-order
+     * Q: design an algorithm to find the ‘next’ node (e.g., in-order
      * successor) of a given node in a binary search tree
      * */
     public static Node inOrderSuccessor(Node node) {
@@ -812,7 +812,7 @@ public class BinarySearchTree {
 
 
     /*
-     * find out the common ancestor of the two nodes
+     * Q: find out the common ancestor of the two nodes
      * */
     /*
      * solution - a
@@ -882,7 +882,7 @@ public class BinarySearchTree {
         }
 
         /*
-         * nodes are in opposite sides of the tree. Check if
+         * Q: nodes are in opposite sides of the tree. Check if
          * one of them is root
          * */
         else if (nodesFromLeft == 1) {
@@ -942,7 +942,7 @@ public class BinarySearchTree {
 
 
     /*
-     * two very large binary trees: T1, with millions of nodes, and T2,
+     * Q: two very large binary trees: T1, with millions of nodes, and T2,
      * with hundreds of nodes. Create an algorithm to decide if T2 is a
      * subtree of T1
      * */
@@ -992,7 +992,7 @@ public class BinarySearchTree {
 
 
     /*
-     * design an algorithm to find all the paths of
+     * Q: design an algorithm to find all the paths of
      * a BST which sums are equal to certain value
      * */
     public static void findSum(Node node, int sum) {

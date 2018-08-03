@@ -476,6 +476,9 @@ public class FibFrog {
     /*
      * solution - e
      * */
+    /*
+     * using the knapsack algorithms
+     * */
     public static int solution5(int[] A) {
 
         int N = A.length;
@@ -489,36 +492,42 @@ public class FibFrog {
             fibs[i] = list.get(i);
         }
 
-        int len = (int) (Math.log10(fibs[fibs.length - 1]) + 1);
-        int inf = (int) Math.pow(10, len);
+        int u = (int) (Math.log10(fibs[fibs.length - 1]) + 1);
 
-        int[] moves = new int[N + 1];
+        int v = (int) Math.pow(10, u * u) % (1 << 31);
+
+        int[] steps = new int[N + 1];
 
         for (int i = 0; i <= N; i++) {
-            moves[i] = inf;
+            steps[i] = v;
         }
 
         for (int i = 0; i < fibs.length; i++) {
 
-            if (fibs[i] - 1 < N && A[fibs[i] - 1] == 1) {
-                moves[fibs[i] - 1] = 1;
+            int j = fibs[i] - 1;
+
+            if (j < N && A[j] == 1) {
+                steps[j] = 1;
             }
 
-            if (fibs[i] - 1 == N) {
-                moves[N] = 1;
+            if (j == N) {
+                steps[N] = 1;
             }
         }
 
         for (int i = 0; i < N; i++) {
 
-            if (A[i] == 1)
+            if (A[i] == 1) {
 
                 for (int j = 0; j < fibs.length; j++) {
 
-                    if (i - fibs[j] >= 0 && moves[i - fibs[j]] != inf && moves[i] > moves[i - fibs[j]] + 1) {
-                        moves[i] = moves[i - fibs[j]] + 1;
+                    int k = i - fibs[j];
+
+                    if (k >= 0 && steps[k] != v && steps[i] > steps[k] + 1) {
+                        steps[i] = steps[k] + 1;
                     }
                 }
+            }
         }
 
 
@@ -526,38 +535,39 @@ public class FibFrog {
 
             for (int j = 0; j < fibs.length; j++) {
 
-                if (i - fibs[j] >= 0 && moves[i - fibs[j]] != inf && moves[i] > moves[i - fibs[j]] + 1) {
-                    moves[i] = moves[i - fibs[j]] + 1;
+                int k = i - fibs[j];
+
+                if (k >= 0 && steps[k] != v && steps[i] > steps[k] + 1) {
+                    steps[i] = steps[k] + 1;
                 }
             }
         }
 
-        if (moves[N] == -1) {
+        if (steps[N] == -1) {
             return -1;
         }
 
-        return moves[N];
+        return steps[N];
     }
 
     public static void main(String[] args) {
 
 
-//        int[] A = new int[11];
-//
-//        A[0] = 0;
-//        A[1] = 0;
-//        A[2] = 0;
-//        A[3] = 1;
-//        A[4] = 1;
-//        A[5] = 0;
-//        A[6] = 1;
-//        A[7] = 0;
-//        A[8] = 0;
-//        A[9] = 0;
-//        A[10] = 0;
+        int[] A = new int[11];
+
+        A[0] = 0;
+        A[1] = 0;
+        A[2] = 0;
+        A[3] = 1;
+        A[4] = 1;
+        A[5] = 0;
+        A[6] = 1;
+        A[7] = 0;
+        A[8] = 0;
+        A[9] = 0;
+        A[10] = 0;
 
 //        int[] A = {0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0};
-        int[] A = {0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0};
 
         System.out.println(solution5(A));
     }
