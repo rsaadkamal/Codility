@@ -59,7 +59,7 @@ public final class p109 implements EulerSolution {
 	
 	
 	// Number of ways to get exactly 'total' points in exactly 'throwz' throws, using
-	// items (unordered) from the 'points' list with index less than or equal to 'maxIndex'.
+	// items (unordered) from the 'points' list with index less than or equal to 'justMaximumIndex'.
 	private int ways(int throwz, int total, int maxIndex) {
 		if (ways[throwz][total][maxIndex] == -1) {
 			int result;

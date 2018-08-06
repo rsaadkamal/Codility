@@ -108,9 +108,9 @@ public class PhoneNumber {
 
 
     /*
-     * solution - d
+     * solution - c
      * */
-    public static String solution3(String input) {
+    public static String solution2(String input) {
 
         if (input == null) {
             return input;
@@ -176,9 +176,5 @@ public class PhoneNumber {
         String s1 = "0 - 22 1985--324";
 
         String s2 = "00-44  48 5555 8361";
-
-//        System.out.println(solution3(s));
-        System.out.println(solution3(s1));
-        System.out.println(solution3(s2));
     }
 }

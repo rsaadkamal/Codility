@@ -58,7 +58,7 @@ public final class p267 implements EulerSolution {
 			}
 		}
 		
-		// Calculate the cumulative probability: binomialSum = sum (n choose k) for 0 <= k < maxIndex
+		// Calculate the cumulative probability: binomialSum = sum (n choose k) for 0 <= k < justMaximumIndex
 		BigInteger binomialSum = BigInteger.ZERO;
 		for (int i = 0; i < maxIndex; i++)
 			binomialSum = binomialSum.add(Library.binomial(TRIALS, i));

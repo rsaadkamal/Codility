@@ -90,33 +90,18 @@ public class RestStops {
         Arrays.sort(B);
         Arrays.sort(C);
 
-        for (int j = 0; j < N; j++) {
+        for (int i = 0; i < N; i++) {
 
-            /*
-             * find the maximum index of an item in the
-             * sorted array A which is less than B[j]
-             * */
-            int maxIndex = maximumIndex(A, B[j]);
+            int maxIndex = maximumIndex(A, B[i]);
 
-            /*
-             * find the min index of an item in the
-             * sorted array C which is greater than B[j]
-             * */
-            int minIndex = minimumIndex(C, B[j]);
+            int minIndex = minimumIndex(C, B[i]);
 
-            /*
-             *
-             * [maxIndex == -1] is true that mean this value if lesser than all the values of array.
-             * However, as we sort ascending order, then larger value in the next iteration can still
-             * be in the array.
-             *
-             * A = [40, 50, 60]; B = [10, 45, 55]; C = [70, 80, 90] (please, notice that B[0] == 10
-             *
-             * The idea is that John can't stop at A[0] - it's too early for him to eat pizza: you
-             * get 0 (as expected) but you should keep on looping.
-             * */
             if (minIndex == -1) {
                 return count;
+            }
+
+            if (maxIndex == -1) {
+                continue;
             }
 
             count += (maxIndex + 1) * (N - minIndex);
@@ -126,6 +111,9 @@ public class RestStops {
     }
 
 
+    /*
+     * in binary search, the condition breaks at low <= high and after the break, low = middle = high +1
+     * */
     /*
      * maximum index of an item in the sorted array A which is less than x
      * */
@@ -162,12 +150,6 @@ public class RestStops {
                 low = middle + 1;
             } else {
 
-//                high = middle - 1;
-//                resultIndex = middle;
-
-                /*
-                 * we have a match A[middle] equals x
-                 * */
                 return (middle - 1);
             }
         }
@@ -177,7 +159,7 @@ public class RestStops {
 
 
     /*
-     * min index of an item in the sorted array C which is greater than x
+     * min index of an item in the sorted array C which is just greater than x
      * */
     public static int minimumIndex(int[] C, int x) {
 

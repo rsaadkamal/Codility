@@ -1,18 +1,28 @@
 package com.codility.L12_Euclidean_Algorithm;
 
+
 /*
-* A prime is A positive integer X that has exactly two distinct divisors: 1 and X. The first few prime integers are 2, 3, 5, 7, 11 and 13.
+A prime is A positive integer X that has exactly two distinct divisors: 1 and X. The first few prime integers
 
-A prime D is called A prime divisor of A positive integer P if there exists A positive integer K such that D * K = P. For example, 2 and 5 are prime divisors of 20.
+are 2, 3, 5, 7, 11 and 13. A prime D is called A prime divisor of A positive integer P if there exists A positive
 
-You are given two positive integers N and M. The goal is to check whether the sets of prime divisors of integers N and M are exactly the same.
+integer K such that D * K = P. For example, 2 and 5 are prime divisors of 20. You are given two positive integers
 
-For example, given:
+N and M. The goal is to check whether the sets of prime divisors of integers N and M are exactly the same.
 
-N = 15 and M = 75, the prime divisors are the same: {3, 5};
-N = 10 and M = 30, the prime divisors aren't the same: {2, 5} is not equal to {2, 3, 5};
-N = 9 and M = 5, the prime divisors aren't the same: {3} is not equal to {5}.
-Write A function:
+
+For example, given
+------------------
+
+    N = 15 and M = 75, the prime divisors are the same: {3, 5}
+
+    N = 10 and M = 30, the prime divisors aren't the same: {2, 5} is not equal to {2, 3, 5}
+
+    N = 9 and M = 5, the prime divisors aren't the same: {3} is not equal to {5}
+
+
+Write A function
+----------------
 
 class Solution { public int solution(int[] A, int[] B); }
 
@@ -21,8 +31,12 @@ that, given two non-empty arrays A and B of Z integers, returns the number of po
 For example, given:
 
     A[0] = 15   B[0] = 75
+
     A[1] = 10   B[1] = 30
+
     A[2] = 3    B[2] = 5
+
+
 the function should return 1, because only one pair (15, 75) has the same set of prime divisors.
 
 Assume that:
@@ -46,8 +60,8 @@ public class CommonPrimeDivisors {
      */
     private static int solution(int[] A, int[] B) {
 
-
         int count = 0;
+
         int N = A.length;
 
         for (int i = 0; i < N; i++) {
@@ -56,17 +70,20 @@ public class CommonPrimeDivisors {
             int y = B[i];
 
             int gcd = gcd(x, y);
-            int gcdTmp = 0;
+            int temp = 0;
 
+            /*
+             * we would like to reduce the x and y to 1
+             * */
             while (x != 1) {
 
-                gcdTmp = gcd(x, gcd);
+                temp = gcd(x, gcd);
 
-                if (gcdTmp == 1) {
+                if (temp == 1) {
                     break;
                 }
 
-                x /= gcdTmp;
+                x /= temp;
             }
 
             if (x != 1) {
@@ -75,13 +92,13 @@ public class CommonPrimeDivisors {
 
             while (y != 1) {
 
-                gcdTmp = gcd(y, gcd, 1);
+                temp = gcd(y, gcd, 1);
 
-                if (gcdTmp == 1) {
+                if (temp == 1) {
                     break;
                 }
 
-                y /= gcdTmp;
+                y /= temp;
             }
 
             if (y != 1) {

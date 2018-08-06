@@ -74,7 +74,7 @@ public class SplitArray {
      *
      * A = [5, 5, 1, 7, 2, 3, 5]
      *
-     * K equals 4, because: two of the elements of A[0..3] are equal to X,
+     * K equals 4, because: two of the elements of A[0..3] are equal to X = 5,
      *
      * namely A[0] = A[1] = X, and two of the elements of A[4..6] are different
      *
@@ -90,37 +90,32 @@ public class SplitArray {
      * */
     public int solution(int X, int[] A) {
 
-        int leftCount = 0, rightCount = 0;
+        int left = 0;
+        int right = 0;
 
         int N = A.length;
 
         for (int i = 0; i < N; i++) {
 
             if (A[i] == X) {
-                leftCount++;
+                left++;
             }
         }
 
 
         for (int i = N - 1; i >= 0; i--) {
 
-            /*
-             * decrease it ...now this many X are present to the left of i
-             * */
             if (A[i] == X) {
-                leftCount--;
+                left--;
             }
 
-            /*
-             *
-             * */
-            if (leftCount == (N - (i + 1)) - rightCount) {
+            if (left == (N - (i + 1)) - right) {
                 return (i + 1);
             }
 
 
             if (A[i] == X) {
-                rightCount++;
+                right++;
             }
         }
 

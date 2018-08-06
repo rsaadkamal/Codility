@@ -80,10 +80,6 @@ public class ChocolatesByNumbers {
      */
     private static int solution(int N, int M) {
 
-        /*
-         * LCM(x, y) * GCD(x, y) = x * y
-         * LCM(x, y) = (x * y) / GCD(x, y)
-         * */
         int a = gcd(N, M);
 
         return N / a;
