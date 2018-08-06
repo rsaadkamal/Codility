@@ -567,29 +567,6 @@ public class BinarySearchTree {
     /*
      * Q: create minimum binary search tree  from  a  sorted   array
      * */
-    /*
-    *
-                      10
-                      / \
-                     /   \
-                    /     \
-                   /       \
-                  /         \
-                 /           \
-                /             \
-               /               \
-               5               15
-              / \             / \
-             /   \           /   \
-            /     \         /     \
-           /       \       /       \
-           2       7       12       18
-          / \     / \     / \     / \
-         /   \   /   \   /   \   /   \
-         1   3   6   8   11   13   16   19
-              \       \       \   \   \
-              4       9       14   17   20
-    * */
 
     public static Node createBalancedTree(int[] A) {
 
@@ -681,13 +658,13 @@ public class BinarySearchTree {
      * */
     public static List<LinkedList<Node>> createLevelLinkedList1(Node root) {
 
-        ArrayList<LinkedList<Node>> lists = new ArrayList<LinkedList<Node>>();
+        List<LinkedList<Node>> lists = new ArrayList<LinkedList<Node>>();
 
         createLevelLinkedList1(root, lists, 0);
         return lists;
     }
 
-    public static void createLevelLinkedList1(Node root, ArrayList<LinkedList<Node>> lists, int level) {
+    public static void createLevelLinkedList1(Node root, List<LinkedList<Node>> lists, int level) {
 
         /*
         ALGORITHM
@@ -703,7 +680,6 @@ public class BinarySearchTree {
         iv.   continue the recursive process till where is no child
         */
 
-
         if (root == null) {
             return;
         }
@@ -711,9 +687,11 @@ public class BinarySearchTree {
         LinkedList<Node> list = null;
 
         if (lists.size() == level) {
+
             list = new LinkedList<Node>();
             lists.add(list);
         } else {
+
             list = lists.get(level);
         }
 
@@ -733,12 +711,35 @@ public class BinarySearchTree {
         ALGORITHM
         ---------
 
-        i.  if the parent node  does not exist or the right
-            child exist, return the left most child of right
-            child
+        i.  if the node  is root or the right child exist,
+            return the left most child of right child
 
         ii. if have parent and don't have the right child,
         */
+
+    /*
+    *
+                      10
+                      / \
+                     /   \
+                    /     \
+                   /       \
+                  /         \
+                 /           \
+                /             \
+               /               \
+               5               15
+              / \             /  \
+             /   \           /    \
+            /     \         /      \
+           /       \       /        \
+           2       7      12        18
+          / \     / \     / \        / \
+         /   \   /   \   /   \      /   \
+         1   3   6   8   11   13   16   19
+              \       \       \     \   \
+              4       9       14    17   20
+    * */
 
         if (node == null) {
             return null;
@@ -756,7 +757,12 @@ public class BinarySearchTree {
             Node child = node;
             Node parent = getParent(child.key);
 
+            /*
+             * iterate till the parent exists and the children
+             * is not the left children of parent
+             * */
             while (parent != null && parent.leftChild != child) {
+
                 child = parent;
                 parent = getParent(parent.key);
             }
@@ -791,6 +797,9 @@ public class BinarySearchTree {
      * */
     public static Node commonAncestor(Node root, Node p, Node q) {
 
+        if (q == p && (root.leftChild == q || root.rightChild == q)) {
+            return root;
+        }
 
         if (!covers(root, p) || !covers(root, q)) {
             return null;
@@ -827,34 +836,34 @@ public class BinarySearchTree {
          * both of the nodes are in the same sides of root. Check
          * if they are in the left or right side of the root
          * */
-        Node childSide = p_OnLeft ? node.leftChild : node.rightChild;
+        Node child = p_OnLeft ? node.leftChild : node.rightChild;
 
-        return commonAncestorHelper(childSide, p, q);
+        return commonAncestorHelper(child, p, q);
     }
 
 
     /*
      * solution - b
      * */
-    public static Node commonAncestor1(Node root, Node p, Node q) {
+    public static Node getCommonAncestor(Node root, Node p, Node q) {
 
         if (q == p && (root.leftChild == q || root.rightChild == q)) {
             return root;
         }
 
-        int nodesFromLeft = covers1(root.leftChild, p, q);
+        int nodesFromLeft = covered(root.leftChild, p, q);
 
         if (nodesFromLeft == 2) {
 
             if (root.leftChild == p || root.leftChild == q) {
                 return root.leftChild;
             } else {
-                return commonAncestor1(root.leftChild, p, q);
+                return getCommonAncestor(root.leftChild, p, q);
             }
         }
 
         /*
-         * Q: nodes are in opposite sides of the tree. Check if
+         * nodes are in opposite sides of the tree. Check if
          * one of them is root
          * */
         else if (nodesFromLeft == 1) {
@@ -864,23 +873,29 @@ public class BinarySearchTree {
             }
         }
 
+        /*
+         * both the p and q nodes are in the region
+         * defined by right child of tree
+         * */
+        else if (nodesFromLeft == 0) {
 
-        int nodesFromRight = covers1(root.rightChild, p, q);
+        }
+
+        int nodesFromRight = covered(root.rightChild, p, q);
 
         if (nodesFromRight == 2) {
 
-            if (root.rightChild == p || root.rightChild == q)
+            if (root.rightChild == p || root.rightChild == q) {
                 return root.rightChild;
+            } else {
+                return getCommonAncestor(root.rightChild, p, q);
+            }
 
-            else
-                return commonAncestor1(root.rightChild, p, q);
         } else if (nodesFromRight == 1) {
 
-            if (root == p)
-                return p;
-
-            else if (root == q)
-                return q;
+            if (p == root || q == root) {
+                return root;
+            }
         }
 
         if (nodesFromLeft == 1 && nodesFromRight == 1) {
@@ -891,7 +906,11 @@ public class BinarySearchTree {
     }
 
 
-    public static int covers1(Node node, Node p, Node q) {
+    /*
+     * check if any of the p and q nodes are below
+     * the zone defined by node (inclusive)
+     * */
+    public static int covered(Node node, Node p, Node q) {
 
         int count = 0;
 
@@ -903,20 +922,20 @@ public class BinarySearchTree {
             count += 1;
         }
 
-        count += covers1(node.leftChild, p, q);
+        count += covered(node.leftChild, p, q);
 
         if (count == 2) {
             return count;
         }
 
-        return count + covers1(node.rightChild, p, q);
+        return count + covered(node.rightChild, p, q);
     }
 
 
     /*
      * Q: two very large binary trees: T1, with millions of nodes, and T2,
      * with hundreds of nodes. Create an algorithm to decide if T2 is a
-     * subtree of T1
+     * subtree of T1 ie the leafs of the big tree matches with the smaller
      * */
     public static boolean containsTree(Node big, Node small) {
 
@@ -926,7 +945,6 @@ public class BinarySearchTree {
             return subTree(big, small);
         }
     }
-
 
     public static boolean subTree(Node big, Node small) {
 
@@ -967,7 +985,7 @@ public class BinarySearchTree {
      * Q: design an algorithm to find all the paths of
      * a BST which sums are equal to certain value
      * */
-    public static void findSum(Node node, int sum) {
+    public static void checkEqualSum(Node node, int sum) {
 
         int depth = depth(node);
 
@@ -976,34 +994,38 @@ public class BinarySearchTree {
          * */
         int[] path = new int[depth];
 
-        findSum(node, sum, path, 0);
+        checkEqualSum(node, sum, path, 0);
     }
 
-    public static void findSum(Node node, int sum, int[] path, int level) {
+    /*
+     * we will do backtracking to check if
+     * the sum equals to the provided value
+     * */
+    public static void checkEqualSum(Node node, int sum, int[] path, int level) {
 
         if (node == null) {
             return;
         }
 
         path[level] = node.key;
-        int t = 0;
+        int temp = 0;
 
         for (int i = level; i >= 0; i--) {
 
-            t += path[i];
+            temp += path[i];
 
-            if (t == sum) {
+            if (temp == sum) {
                 print(path, i, level);
             }
         }
 
-        findSum(node.leftChild, sum, path, level + 1);
-        findSum(node.rightChild, sum, path, level + 1);
+        checkEqualSum(node.leftChild, sum, path, level + 1);
+        checkEqualSum(node.rightChild, sum, path, level + 1);
 
         /*
-         * remove current node from path
+         * remove current node from path by inserting the MIN_VALUE
          * */
-        path[level] = Integer.MIN_VALUE;
+        path[level] = (1 << 31) - 1;
     }
 
     private static void print(int[] path, int start, int end) {
@@ -1013,17 +1035,15 @@ public class BinarySearchTree {
         }
     }
 
-
     public static void main(String[] args) {
 
         int[] A = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
-
 
         Node root = createBalancedTree(A);
         BTreePrinter.printNode(root);
 
 
-        findSum(root, 22);
+        checkEqualSum(root, 22);
     }
 }
 

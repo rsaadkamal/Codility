@@ -488,13 +488,17 @@ public class FibFrog {
         int size = list.size();
         int[] fibs = new int[size];
 
+
+        // int[] fibs1 = {1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025};
+
         for (int i = 0; i < size; i++) {
             fibs[i] = list.get(i);
         }
 
         int u = (int) (Math.log10(fibs[fibs.length - 1]) + 1);
 
-        int v = (int) Math.pow(10, u * u) % (1 << 31);
+//        int v = (int) Math.pow(10, u * u) % (1 << 31);
+        int v = 1000000000;
 
         int[] steps = new int[N + 1];
 

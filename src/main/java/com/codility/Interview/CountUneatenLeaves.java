@@ -58,42 +58,35 @@ K<-15, N<=10^9, we need to determine the number of uneaten leaves.
 
 
 
-Input:
+    Input:
 
+        N = No of uneaten leaves
 
+        K = No. of caterpillars
 
-N = No of uneaten leaves
+        A = Array of integer jump numbers
 
-K = No. of caterpillars
+    Output:
 
-A = Array of integer jump numbers
+        The integer nu. Of uneaten leaves
 
-Output:
+    Sample Input:
 
+        10
+        3
+        2
+        4
+        5
 
+    Output:
 
-The integer nu. Of uneaten leaves
+        4
 
+    Explanation:
 
+        [2, 4, 5] is a j member jump numbers, all leaves which are multiple of 2, 4, and 5 are
 
-Sample Input:
-
-
-
-10
-3
-2
-4
-5
-
-Output:
-4
-
-Explanation:
-
-[2, 4, 5] is a j member jump numbers, all leaves which are multiple of 2, 4, and 5 are
-
-eaten, leaves 1,3,7,9 are left, and thus the no. 4
+        eaten, leaves 1,3,7,9 are left, and thus the no. 4
 */
 
 
@@ -145,7 +138,6 @@ public class CountUneatenLeaves {
 
     private static int findGCD(int number1, int number2) {
 
-        //base case
         if (number2 == 0) {
             return number1;
         }
@@ -226,8 +218,11 @@ public class CountUneatenLeaves {
 
         int factors = 0;
         Map<Integer, List<Integer>> map = new HashMap<>();
+
         findFactorialsOfAllCombinations(0, A, 0, new int[A.length], map, N);
+
         for (int key : map.keySet()) {
+
             if ((key & 1) != 1) {
                 List<Integer> list = map.get(key);
                 for (int i : list) {
@@ -321,8 +316,11 @@ public class CountUneatenLeaves {
 
         // 1. find the multiple of the eatenLeaves
         for (int i = 0; i < array.length; i++) {
+
             eatenLeaves.add(array[i]);
+
             for (int j = 1; j < uneatenLeaves.size(); j++) {
+
                 if (array[i] * uneatenLeaves.get(j) <= n) {
                     eatenLeaves.add(array[i] * uneatenLeaves.get(j));
                 }
@@ -330,6 +328,7 @@ public class CountUneatenLeaves {
         }
 
         for (int i = 0; i < eatenLeaves.size(); i++) {
+
             for (int j = 1; j < uneatenLeaves.size(); j++) {
                 if (eatenLeaves.get(i) == uneatenLeaves.get(j)) {
                     uneatenLeaves.remove(uneatenLeaves.get(j));

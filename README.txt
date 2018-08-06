@@ -1,4 +1,5 @@
 
+
 CODILITY
 ————————
 
@@ -8,13 +9,21 @@ thinking. However, unless specified, these problems may not be suitable to prepa
 general coding interviews.
 
 I haven't write the solutions and are primarily collected for the educational purpose.
-However, I refactored the code and changed the logic if necessary. Occasionally, I don't
+However, I refactored the code and modified the logic if necessary. Occasionally, I don't
 find the solutions over online and write them myself. Obviously, These solutions are free
 to use. I will attain some tournament and update the repo overtime.
 
 
-Geeks for geeks: The code is collected for the educational purpose from their website.
+GEEKS FOR GEEKS
+---------------
 
-Project Euler: The code is collected for the educational purpose.
+The code is collected for the educational purpose from their website written by various authors.
+
+
+PROJECT EULER
+-------------
+
+The code is collected for the educational purpose. I intend to solve more problems overtime and
+update the repo.
 
 

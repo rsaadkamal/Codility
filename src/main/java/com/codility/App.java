@@ -1,7 +1,6 @@
 package com.codility;
 
 
-
 import java.util.*;
 
 /**
@@ -10,9 +9,10 @@ import java.util.*;
 public class App {
 
 
+
     public static void main(String[] args) {
 
-        System.out.println("Miami");
+        System.out.println("Miami".equals("Miami"));
     }
 }
 

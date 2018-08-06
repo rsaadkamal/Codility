@@ -72,7 +72,7 @@ public class Graph {
     private static int count;
 
 
-    private static LinkedList<Integer> adj[];
+    private static LinkedList<Integer>[] adj;
 
     Graph(int index) {
 
@@ -95,7 +95,7 @@ public class Graph {
      * prints performBFS traversal from a given
      * source S
      * */
-    public void performBFS(int S) {
+    public void performBFS(int s) {
 
         /*
          * mark all the vertices as not visited(By
@@ -105,22 +105,21 @@ public class Graph {
 
         LinkedList<Integer> queue = new LinkedList<Integer>();
 
-        visited[S] = true;
-        queue.add(S);
+        visited[s] = true;
+        queue.add(s);
 
-        while (queue.size() != 0) {
+        while (!queue.isEmpty()) {
 
-            S = queue.poll();
-            System.out.print(S + " ");
+            s = queue.poll();
+            System.out.print(s + " ");
 
-            Iterator<Integer> i = adj[S].listIterator();
+            Iterator<Integer> i = adj[s].listIterator();
 
             while (i.hasNext()) {
 
                 int n = i.next();
 
                 if (!visited[n]) {
-
                     visited[n] = true;
                     queue.add(n);
                 }
@@ -158,32 +157,30 @@ public class Graph {
      * */
     public static void depthFirstSearch(int[][] mat, int start) {
 
-        // we will count node# from 1 upwards
-        if (start < 1) {
+        if (start < 0) {
             return;
         }
 
         Stack<Integer> stack = new Stack<Integer>();
 
-        int numOfCols = mat[0].length;
+        int cols = mat[0].length;
         int row, col;
 
-        int[] visited = new int[numOfCols];
+        int[] visited = new int[cols];
 
         visited[start] = 1;
-        stack.push(start - 1);
-
+        stack.push(start);
 
         while (!stack.isEmpty()) {
 
             row = stack.peek();
             col = row;
 
-            while (col < numOfCols) {
+            while (col < cols) {
 
                 if (mat[row][col] == 1 && visited[col] == 0) {
 
-                    System.out.print(row + 1 + "\t");
+                    System.out.print(row + "\t");
 
                     stack.push(col);
                     visited[col] = 1;
@@ -216,7 +213,7 @@ public class Graph {
         if (!visited[row]) {
 
             visited[row] = true;
-            System.out.print((row + 1) + " ");
+            System.out.print(row + " ");
 
             for (int col = 0; col < mat[row].length; col++) {
 
@@ -237,25 +234,24 @@ public class Graph {
             return;
         }
 
-        int numOfCols = mat[0].length;
+        int cols = mat[0].length;
         int row, col;
 
-        int[] visited = new int[numOfCols];
+        int[] visited = new int[cols];
 
         Queue<Integer> queue = new LinkedList<Integer>();
 
         visited[start] = 1;
         queue.add(start);
 
-
         while (!queue.isEmpty()) {
 
             row = queue.remove();
             col = row;
 
-            System.out.print((col + 1) + " ");
+            System.out.print(col + " ");
 
-            while (col < numOfCols) {
+            while (col < cols) {
 
                 if (mat[row][col] == 1 && visited[col] == 0) {
 
@@ -270,12 +266,12 @@ public class Graph {
 
 
     /*
-     * breadth frist search in a graph with recursive algorithm
+     * breadth first search in a graph with recursive algorithm
      * */
-    public void recursiveBFS(Node root) {
+    public void recursiveBFS(Node node) {
 
         LinkedList<Node> queue = new LinkedList<>();
-        queue.add(root);
+        queue.add(node);
 
         recursiveBFSHelper(queue);
     }
@@ -288,7 +284,9 @@ public class Graph {
 
             System.out.println("Node: " + node);
 
-            for (Node n : node.getAdjacent()) {
+            Node[] nodes = node.getAdjacent();
+
+            for (Node n : nodes) {
                 queue.push(n);
             }
 

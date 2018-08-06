@@ -45,14 +45,18 @@ public final class p077 implements EulerSolution {
 	 * dynamic programming and can overwrite it in place.
 	 */
 	private static int search(int limit, int target) {
+
 		int[] partitions = new int[limit];
 		partitions[0] = 1;
+
 		for (int i = 0; i < partitions.length; i++) {
 			if (!Library.isPrime(i))
 				continue;
 			for (int j = i; j < partitions.length; j++)
 				partitions[j] += partitions[j - i];
 		}
+
+
 		for (int i = 0; i < limit; i++) {
 			if (partitions[i] > target)
 				return i;
