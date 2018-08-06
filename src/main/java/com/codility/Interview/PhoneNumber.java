@@ -2,14 +2,26 @@ package com.codility.Interview;
 
 
 /*
-Example test:    '00-44  48 5555 8361'
-WRONG ANSWER  (got 004-448-555-583-6- 8-361 expected 004-448-555-583-61)
+A string of phone number is provided. Write a program that format the according to certain
+rules provided below.
 
-Example test:    '0 - 22 1985--324'
-WRONG ANSWER  (got 022-198-532-5---324 expected 022-198-53-24)
 
-Example test:    '555372654'
+    i.   in the end if there are 3 digits, keep i as it is.
+
+    ii.  in the end if there are 4 digits, part it as 2 groups of 2 digits
+
+    ii.  in the end if there are 5 digits, part it as 2 groups of 3 digits and 2 digits
+
+
+All the groups needs to be adjoined with dashes ('-')
+
+    For example, '555372654' should be returned as '555-372-654'
+
+    For example, '0 - 22 1985--324' should be returned as '022-198-53-24'
+
+    For example, '00-44  48 5555 8361' should be returned as '004-448-555-583-61'
 */
+
 import java.util.stream.IntStream;
 
 
@@ -18,70 +30,70 @@ import java.util.stream.IntStream;
  */
 public class PhoneNumber {
 
-    /*solution-a*/
-    public static String formatPhoneNumber(String S) {
 
-        if (S == null || S.isEmpty() || S.length() < 2) {
-            return null;
+    /*
+     * solution - a
+     * */
+    public static String solution(String S) {
+
+        if (S == null || S.isEmpty()) {
+            return S;
         }
 
         String temp = "";
 
-        for (int j = 0; j < S.length(); j++) {
+        for (int i = 0; i < S.length(); i++) {
 
-            char value = S.charAt(j);
+            char value = S.charAt(i);
 
-            if (Character.isDigit(value)
-                    && Character.getNumericValue(value) >= 0
-                    && Character.getNumericValue(value) <= 200) {
-
-                temp += String.valueOf(value);
+            if (Character.isDigit(value)) {
+                temp += String.valueOf(Character.getNumericValue(value));
             }
         }
 
-        if (temp.length() == 2) {
+        int N = temp.length();
+
+        if (N <= 3) {
             return temp;
         }
 
         String result = "";
-        int len = temp.length();
 
         boolean bol = false;
 
-        if (len % 3 == 0)
+        if (N % 3 == 1) {
             bol = true;
+        }
 
-        for (int index = 0; index < len; index++) {
+        for (int i = 0; i < N; i++) {
 
-            int rest = len - (index + 1);
+            int r = N - (i + 1);
 
-            if (rest % 2 == 0 && rest % 3 != 0 && rest / 3 == 1 && !bol) {
+            if (r == 4 && bol) {
 
-                System.out.println(rest);
+                result += String.valueOf(temp.charAt(i));
 
-                result += String.valueOf(temp.charAt(index));
+                String rest = temp.substring(i + 1);
 
-                String restString = temp.substring(index + 1);
-
-                result += "-" + restString.substring(0, 2) + "-" + restString.substring(2);
+                result += "-" + rest.substring(0, 2) + "-" + rest.substring(2);
                 break;
             }
 
-            if ((index + 1) % 3 == 1 && index != 0) {
+            if (i > 0 && i % 3 == 0) {
                 result += "-";
             }
 
-            result += String.valueOf(temp.charAt(index));
-
+            result += String.valueOf(temp.charAt(i));
         }
 
         return result;
     }
-    /*END of solution-a*/
 
 
-    /*solution-b*/
-    public static String formatPhoneNumber1(String s) {
+    /*
+     * solution - b
+     * */
+    public static String solution1(String s) {
 
         if (s == null) {
             return null;
@@ -93,19 +105,17 @@ public class PhoneNumber {
                                 "(\\d{3})(?!$)",          // non-final group of 3 digits,
                         "$1$2-");                 // insert separator.
     }
-    /*END of solution-b*/
 
 
-    /*solution-c*/
-    // "Hello123 erere3435 efere 45 world.".replaceAll("[^\\d+]", "")
-    public static String formatPhoneNumber3(String input) {
+    /*
+     * solution - d
+     * */
+    public static String solution3(String input) {
 
-        // Guard
         if (input == null) {
             return input;
         }
 
-        // Strip junk
         StringBuilder phone = new StringBuilder();
 
         IntStream.range(0, input.length())
@@ -116,33 +126,59 @@ public class PhoneNumber {
             return phone.toString();
         }
 
-        // insert dashes... in reverse.
-        // special cases for last group
-        // set up the dash insert point for the end-of-groups.
-        int dash = (phone.length() / 3) * 3;
+        int N = phone.length();
 
-        switch (phone.length() % 3) {
+        int M = (N / 3) * 3;
+
+        switch (N % 3) {
 
             case 0:
-                // nothing to do for an exact grouping.
                 break;
+
+            /*
+             * insert the dash making  2-2 groups instead of 3-1
+             * */
             case 1:
-                // insert the dash making  2-2 groups instead of 3-1
-                phone.insert(dash - 1, '-');
+                phone.insert(M - 1, '-');
                 break;
+
+            /*
+             * end up with a 3-2 group
+             * */
             case 2:
-                // end up with a 3-2 group.
-                phone.insert(dash, '-');
+                phone.insert(M, '-');
                 break;
         }
 
-        // easy cases for first groups.
-        while (dash > 3) {
-            dash -= 3;
-            phone.insert(dash, '-');
+        while (M > 3) {
+            M -= 3;
+            phone.insert(M, '-');
         }
 
         return phone.toString();
     }
-    /*END of solution-c*/
+
+
+    public static void main(String[] args) {
+
+
+        /*
+        *
+        * For example, '555372654' should be returned as '555-372-654'
+
+    For example, '0 - 22 1985--324' should be returned as '022-198-53-24'
+
+    For example, '00-44  48 5555 8361' should be returned as '004-448-555-583-61'
+        * */
+
+        String s = "555372654";
+
+        String s1 = "0 - 22 1985--324";
+
+        String s2 = "00-44  48 5555 8361";
+
+//        System.out.println(solution3(s));
+        System.out.println(solution3(s1));
+        System.out.println(solution3(s2));
+    }
 }

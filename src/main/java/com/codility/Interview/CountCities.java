@@ -44,7 +44,8 @@ the following array T consisting of ten elements:
 
 
 
-T[adjacents] = parent
+T[children] = parent
+
 
 T[0] = 9
 
@@ -104,6 +105,7 @@ public class CountCities {
 
     private static class Node {
 
+
         private int key;
         private ArrayList<Node> adjacents;
 
@@ -116,8 +118,8 @@ public class CountCities {
             return this.key;
         }
 
-        public void addAdjacentNode(Node child) {
-            this.adjacents.add(child);
+        public void addAdjacentNode(Node node) {
+            this.adjacents.add(node);
         }
 
         public ArrayList<Node> getAdjacents() {
@@ -128,9 +130,10 @@ public class CountCities {
 
     private static Node root = null;
 
-    public static Node createGraphNetwork(int[] T) {
+    public static Node createGraph(int[] T) {
 
         int N = T.length;
+
         Node[] nodes = new Node[N];
 
         for (int i = 0; i < N; i++) {
@@ -155,6 +158,7 @@ public class CountCities {
      * */
     public static ArrayList<LinkedList<Node>> getSameLevelNodes(Node root) {
 
+
         ArrayList<LinkedList<Node>> result = new ArrayList<LinkedList<Node>>();
 
         LinkedList<Node> current = new LinkedList<Node>();
@@ -172,17 +176,19 @@ public class CountCities {
 
             for (Node node : parents) {
 
-                for (Node node1 : node.getAdjacents()) {
+//                for (Node node1 : node.getAdjacents()) {
+//
+//                    if (node1 != null) {
+//                        current.add(node1);
+//                    }
+//                }
 
-                    if (node1 != null) {
-                        current.add(node1);
-                    }
-                }
+                current.addAll(node.getAdjacents());
             }
-
         }
 
         result.remove(0);
+
         return result;
     }
 
@@ -242,7 +248,7 @@ public class CountCities {
      * */
     public static int[] solution(int[] T) {
 
-        Node root = createGraphNetwork(T);
+        Node root = createGraph(T);
         ArrayList<LinkedList<Node>> v = getSameLevelNodes(root);
 
         int index = 0;
@@ -270,7 +276,8 @@ public class CountCities {
      * */
     public static int[] solution1(int[] T) {
 
-        Node root = createGraphNetwork(T);
+
+        Node root = createGraph(T);
         int N = T.length;
 
         int[] result = new int[N - 1];
@@ -278,9 +285,6 @@ public class CountCities {
         List<Node> parent = new ArrayList<>();
         List<Node> children = null;
 
-        /*
-         * get the node in the next level of root
-         * */
         for (Node node : root.getAdjacents()) {
             parent.add(node);
         }
@@ -305,6 +309,7 @@ public class CountCities {
             if (children.size() == 0) {
                 break;
             }
+
             parent = children;
         }
 

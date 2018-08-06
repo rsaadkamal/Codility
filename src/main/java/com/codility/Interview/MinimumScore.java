@@ -101,21 +101,25 @@ public class MinimumScore {
      * */
     public static int getSmallestPositive(int[] A) {
 
-        boolean[] counter = new boolean[A.length + 1];
+
+        int N = A.length;
+
+        /*
+         * in case, we have positive numbers in the sequential order, the
+         * smallest positive number will be N requires to put in the (N+1)
+         * index
+         * */
+        boolean[] counter = new boolean[N + 1];
+        int M = counter.length;
 
         for (int a : A) {
 
-            /*
-             * Each element of array A is an integer within the range [−1,000,000..1,000,000]
-             * However, we will need to find the smallest positive integer and hence, don't need
-             * to consider all the numbers.
-             * */
-            if (a > 0 && a < counter.length) {
+            if (a > 0 && a < M) {
                 counter[a - 1] = true;
             }
         }
 
-        for (int j = 0; j < counter.length; j++) {
+        for (int j = 0; j < M; j++) {
 
             if (!counter[j]) {
                 return j + 1;

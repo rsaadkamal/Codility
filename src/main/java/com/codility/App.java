@@ -9,10 +9,16 @@ import java.util.*;
 public class App {
 
 
-
     public static void main(String[] args) {
 
-        System.out.println("Miami".equals("Miami"));
+        int N = 100000000;
+
+        for (int i = 1; i < N; i++) {
+
+            if ((i % 2 == 0) && (i % 3 != 0 && i / 3 == 1)) {
+                System.out.println(i);
+            }
+        }
     }
 }
 
