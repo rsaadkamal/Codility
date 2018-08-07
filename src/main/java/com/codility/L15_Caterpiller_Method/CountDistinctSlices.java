@@ -123,6 +123,44 @@ public class CountDistinctSlices {
      * */
     public static int solution1(int M, int[] A) {
 
+        boolean[] visited = new boolean[M + 1];
+
+        int N = A.length;
+        int i = 0;
+        int result = 0;
+
+        while (i < N) {
+
+            int count = 0;
+            while (i < N && !visited[A[i]]) {
+
+                visited[A[i]] = true;
+                count++;
+
+                i++;
+            }
+
+            int j = 0;
+
+            while (j < i) {
+                visited[A[j]] = false;
+                j++;
+            }
+
+            result += count * (count + 1) / 2;
+        }
+
+        result = result < 1000000000 ? result : 1000000000;
+
+        return result;
+    }
+
+
+    /*
+     * solution - c
+     * */
+    public static int solution2(int M, int[] A) {
+
 
         /*
          * The algorithm is that for each back the front points at the
@@ -189,9 +227,9 @@ public class CountDistinctSlices {
 
 
     /*
-     * solution - c
+     * solution - d
      * */
-    public int solution2(int M, int[] A) {
+    public int solution3(int M, int[] A) {
 
         boolean[] D = new boolean[M + 1];
 
@@ -260,9 +298,9 @@ public class CountDistinctSlices {
 
 
     /*
-     * solution - d
+     * solution - e
      * */
-    public int solution3(int M, int[] A) {
+    public int solution4(int M, int[] A) {
 
         boolean[] found = new boolean[M + 1];
 

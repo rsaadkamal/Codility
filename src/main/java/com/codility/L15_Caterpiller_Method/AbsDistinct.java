@@ -42,6 +42,7 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.IntStream;
 
 /**
@@ -200,7 +201,7 @@ public class AbsDistinct {
      * */
     public int solution4(int[] A) {
 
-        HashMap<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < A.length; i++) {
 
@@ -224,6 +225,10 @@ public class AbsDistinct {
 
         int N = A.length;
 
+        /*
+         * each element of array A is an integer within the range [−2,147,483,648..2,147,483,647]
+         * hence, this solution doesn't help
+         * */
         int M = Math.max(Math.abs(A[0]), Math.abs(A[N - 1]));
 
         int[] counter = new int[M + 1];

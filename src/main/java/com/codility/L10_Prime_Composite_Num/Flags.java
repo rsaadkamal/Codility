@@ -138,6 +138,9 @@ public class Flags {
                 }
             }
 
+            /*
+             * this is search for maximizing the k
+             * */
             if (count == K) {
                 result = count;
                 low = K + 1;

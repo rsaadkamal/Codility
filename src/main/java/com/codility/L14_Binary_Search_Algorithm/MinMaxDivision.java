@@ -89,11 +89,14 @@ public class MinMaxDivision {
          * */
         for (int i = 0; i < A.length; i++) {
 
-            max0 = max0 >= A[i] ? max0 : A[i];
+//            max0 = max0 >= A[i] ? max0 : A[i];
             sum0 += A[i];
         }
 
-        int min = Math.max((int) Math.ceil((double) sum0 / K), max0);
+        /*
+         * Every element of the array is not greater than M
+         * */
+        int min = Math.max((int) Math.ceil((double) sum0 / K), M);
         int max = sum0;
 
         int sum = 0;
