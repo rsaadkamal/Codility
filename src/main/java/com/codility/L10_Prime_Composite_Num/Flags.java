@@ -521,6 +521,65 @@ public class Flags {
     }
 
 
+    /*
+     *  ALGORITHM
+     *  ---------
+     *
+     *  i.   start with the maximum flag and gradually decrement to 1. The condition
+     *       is distance >= flags if we need to maximize ie distance = flags
+     *
+     *  ii.  as we set the flag number, use that as distance too to count the number of flags
+     *
+     *  iii. as we decrement the values, if we reached the condition flags = assumption, return
+     *       assumption as an answer
+     * */
+    /*
+     * solution - g
+     * */
+    public static int solution6(int[] A) {
+
+        int N = A.length;
+
+        List<Integer> peaks = new ArrayList<>();
+
+        for (int i = 1; i < N - 1; i++) {
+
+            if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
+                peaks.add(i);
+            }
+        }
+
+        int F = peaks.size();
+
+        for (int i = F; i >= 1; i--) {
+
+
+            int marked = peaks.get(0);
+            int count = 0;
+
+            for (int j = 0; j < F; j++) {
+
+                if (peaks.get(j) >= marked) {
+
+                    marked = peaks.get(j) + i;
+                    count++;
+
+                    // not necessary as the max value of count can be equal to the flags (ie peaks)
+//                    if(count == i){
+//                        break;
+//                    }
+                }
+            }
+
+            if (i == count) {
+                return count;
+            }
+        }
+
+        return 0;
+    }
+
+
     public static void main(String[] args) {
 
         int[] A = new int[12];

@@ -131,7 +131,34 @@ public class PermCheck {
     /*
      * solution - c
      */
-    public int solution2(int[] A) {
+    public static int solution2(int[] A) {
+
+        int N = A.length;
+        boolean[] check = new boolean[N];
+
+        for (int i = 0; i < N; i++) {
+
+            if(A[i] > N){
+                return 0;
+            }
+
+            int j = A[i] - 1;
+
+            if (check[j]) {
+                return 0;
+            }
+
+            check[j] = true;
+        }
+
+        return 1;
+    }
+
+
+    /*
+     * solution - d
+     */
+    public int solution3(int[] A) {
 
         int[] C = new int[A.length];
         Arrays.fill(C, -1);

@@ -105,12 +105,11 @@ public class CountCities {
 
     private static class Node {
 
-
         private int key;
         private ArrayList<Node> adjacents;
 
-        public Node(int nodeValue) {
-            this.key = nodeValue;
+        public Node(int v) {
+            this.key = v;
             this.adjacents = new ArrayList<Node>();
         }
 
