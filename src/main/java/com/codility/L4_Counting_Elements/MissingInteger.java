@@ -181,6 +181,18 @@ public class MissingInteger {
 
         int N = A.length;
 
+
+        /*
+         * if A = [-1,2] the solution breaks
+         * */
+        for (int i = 0; i < N; i++) {
+
+            if (A[i] < 0) {
+                A[i] = 0;
+            }
+        }
+
+
         /*
          * Mark A[i] as visited by making A[A[i] - 1] negative
          * */
