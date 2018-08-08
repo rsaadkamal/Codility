@@ -63,6 +63,8 @@ public class MinAbsSumOfTwo {
 
     /*
      * Find the minimal absolute value of a sum of two elements
+     *
+     * provides 100% test score
      * */
     /*
      * solution - a
@@ -92,7 +94,6 @@ public class MinAbsSumOfTwo {
         /*
          * we have mixtures of positive and negative elements
          * */
-
         int low = 0;
         int high = N - 1;
 
