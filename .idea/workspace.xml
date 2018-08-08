@@ -12,6 +12,11 @@
       <change beforePath="" afterPath="$USER_HOME$/.idea/uiDesigner.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/vcs.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountPrefix.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/Screen Shot 2018-08-08 at 12.51.32 PM.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueNodes.java" />
       <change beforePath="" afterPath="$USER_HOME$/Library/Preferences/CLion2018.1/options/editor.xml" />
       <change beforePath="" afterPath="$USER_HOME$/Library/Preferences/CLion2018.1/options/runner.layout.xml" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/Solarized Light.icls" />
@@ -3702,55 +3707,8 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/StrSymmetryPoint.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/StrSymmetryPoint.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/TreeHeight.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/TreeHeight.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2015_Challenge/SlalomSkiing.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2015_Challenge/SlalomSkiing.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/DwarfsRafting.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/DwarfsRafting.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/HilbertMaze.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/HilbertMaze.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/RectangleBuilderGreaterArea.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/RectangleBuilderGreaterArea.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountUneatenLeaves.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountUneatenLeaves.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/MinimumScore.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/MinimumScore.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountSemiprimes.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountSemiprimes.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/CountDistinctSlices.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/CountDistinctSlices.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxDoubleSliceSum.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxDoubleSliceSum.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p015.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p015.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p018.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p018.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p028.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p028.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p037.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p037.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p058.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p058.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p067.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p067.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p080.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p080.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p091.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p091.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p094.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p094.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p106.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p106.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p128.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p128.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p145.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p145.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p149.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p149.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p166.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p166.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p171.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p171.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p218.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p218.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p222.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p222.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p243.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p243.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p287.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p287.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p301.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p301.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p303.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p303.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p323.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p323.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p329.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p329.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p387.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p387.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p425.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p425.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p587.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p587.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/App.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/App.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/L4_Counting_Elements/MissingInteger.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/L4_Counting_Elements/MissingInteger.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/Test.md" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -4312,7 +4270,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-788">
@@ -4321,6 +4279,43 @@
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UniqueNodes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueNodes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountPrefix.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/CountPrefix.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NumPermutation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="80" column="16" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Screen Shot 2018-08-08 at 12.51.32 PM.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/Screen Shot 2018-08-08 at 12.51.32 PM.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -4410,10 +4405,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/Ladder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L14_Binary_Search_Algorithm/NailingPlanks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Nesting.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/Brackets.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/Dominator.java" />
@@ -4461,6 +4452,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MissingInteger.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountPrefix.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/Test.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueNodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" />
       </list>
     </option>
   </component>
@@ -4551,6 +4546,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
+              <item name="Interview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="codility" type="462c0819:PsiDirectoryNode" />
               <item name="L1_Iterations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -4622,22 +4626,22 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.codility.Interview" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/codility/L14_Binary_Search_Algorithm" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees" />
       <recent name="$PROJECT_DIR$/src/main/java/com/codility/Data_Structures/Interfaces" />
       <recent name="$PROJECT_DIR$/src/main/java/com/codility" />
       <recent name="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge" />
       <recent name="$PROJECT_DIR$/src/main/java/com/codility/Resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/codility/Interview" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/codility/L14_Binary_Search_Algorithm" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -4922,12 +4926,12 @@
       <workItem from="1533363951752" duration="3651000" />
       <workItem from="1533468227471" duration="14512000" />
       <workItem from="1533552244092" duration="28085000" />
-      <workItem from="1533704498816" duration="5016000" />
+      <workItem from="1533704498816" duration="6653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="479935000" />
+    <option name="totallyTimeSpent" value="481572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -4942,8 +4946,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.5028986" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27391306" sideWeight="0.48400852" order="0" side_tool="false" content_ui="combo" />
@@ -5058,41 +5062,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1000">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/Distinct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/MaxProductOfThree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1220">
-          <caret line="191" column="13" lean-forward="true" selection-start-line="191" selection-start-column="13" selection-end-line="191" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/PassingCars.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="71" column="13" lean-forward="true" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/GenomicRangeQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/MinAvgTwoSlice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -5431,6 +5400,46 @@
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/Test.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="102">
+            <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueNodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/CountPrefix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="80" column="16" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/Screen Shot 2018-08-08 at 12.51.32 PM.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
