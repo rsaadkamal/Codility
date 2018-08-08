@@ -123,7 +123,7 @@ public class MinAbsSum {
 
                 /*
                  * the value in r[j] then means how many of the current
-                 * values are left when we reached the value j
+                 * values are l when we reached the value j
                  * */
             }
         }

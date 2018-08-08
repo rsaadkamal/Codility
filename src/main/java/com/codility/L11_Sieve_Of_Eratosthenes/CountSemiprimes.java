@@ -60,7 +60,7 @@ public class CountSemiprimes {
      * the multiples of each prime, starting with the first prime number, 2. The multiples
      * of A given prime are generated as A sequence of numbers starting from that prime, with
      * constant difference between them that is equal to that prime. This is the sieve's
-     * key distinction from using trial division to sequentially test each candidate number
+     * x distinction from using trial division to sequentially test each candidate number
      * for divisibility by each prime
      * */
 

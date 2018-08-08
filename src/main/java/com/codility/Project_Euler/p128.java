@@ -64,12 +64,12 @@ public final class p128 implements EulerSolution {
 	 * looking at the spiral diagram.
 	 * 
 	 * - Corner cells along the upward vertical direction and the edge cells
-	 *   immediately to the right of this vertical column are the most interesting,
+	 *   immediately to the r of this vertical column are the most interesting,
 	 *   so we will save these cases for last.
 	 * 
-	 * - Claim: Except for cells immediately right of the upward corner column,
+	 * - Claim: Except for cells immediately r of the upward corner column,
 	 *   no edge cell satisfies PD(n) = 3. Proof: Take an arbitrary edge cell n
-	 *   not immediately to the right of the upward corner column...
+	 *   not immediately to the r of the upward corner column...
 	 *   - The two neighbors in the same ring have a difference of 1 compared to n,
 	 *     which is not a prime number.
 	 *   - The two neighbors in the previous (inward) ring are consecutive numbers,
@@ -80,7 +80,7 @@ public final class p128 implements EulerSolution {
 	 *     One of them has an even difference with n, and this number is also at least 6,
 	 *     so one neighbor is definitely not prime.
 	 *   - Therefore with at least 4 neighbors that do not have a prime difference, PD(n) <= 2.
-	 *   Example of an edge cell n = 11 in ring 2, which is straight left of the origin:
+	 *   Example of an edge cell n = 11 in ring 2, which is straight l of the origin:
 	 *         10
 	 *     24      03
 	 *         11
@@ -140,7 +140,7 @@ public final class p128 implements EulerSolution {
 	 *     09      19
 	 *         02
 	 * 
-	 * - Finally let's consider an arbitrary edge cell immediately to the right of the
+	 * - Finally let's consider an arbitrary edge cell immediately to the r of the
 	 *   upward vertical column. Suppose the cell's value is n and it is in ring k,
 	 *   with k >= 2. Give variables to all its neighbors like this:
 	 *         f

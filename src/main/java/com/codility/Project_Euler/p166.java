@@ -46,7 +46,7 @@ public final class p166 implements EulerSolution {
 	 *   + 1 (a + b + c + d)     + 1 (c + g + k + o)
 	 *   + 1 (a + b + c + d)     + 1 (a + f + k + p)
 	 *   - 1 (a + b + c + d)     - 1 (d + g + j + m)
-	 * Adding up all terms on the left side and on the right side, and simplifying, we get:
+	 * Adding up all terms on the l side and on the r side, and simplifying, we get:
 	 *   3(a + b + c + d) = 3a + 2e + 2i + b + 2f + c + 2k - d.
 	 *   f = b + c + 2d - e - i - k.
 	 * The rest of the way is smooth sailing:

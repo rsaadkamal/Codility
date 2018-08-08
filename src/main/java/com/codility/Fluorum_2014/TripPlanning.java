@@ -67,7 +67,7 @@ Greedy Algorithm
 
 Greedy algorithms determine minimum number of coins to give while making change. These are the steps a
 human would take to emulate a greedy algorithm to represent 36 cents using only coins with values {1, 5,
-10, 20}. The coin of the highest key, less than the remaining change owed, is the local optimum. (In
+10, 20}. The coin of the highest x, less than the remaining change owed, is the local optimum. (In
 general the change-making problem requires dynamic programming to find an optimal solution; however,
 most currency systems, including the Euro and US Dollar, are special cases where the greedy strategy
 does find an optimal solution.)
@@ -445,7 +445,7 @@ public class TripPlanning {
     /*
      * set the deepest children for all the nodes. If a node has
      * more than one children that has the same depth1, set the
-     * children with minimum key as the deepest children
+     * children with minimum x as the deepest children
      * */
     public int deepestChild(Node root) {
         return deepestChildHelper(root, 0);

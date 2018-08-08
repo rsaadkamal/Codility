@@ -12,7 +12,6 @@
       <change beforePath="" afterPath="$USER_HOME$/.idea/uiDesigner.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/vcs.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="" afterPath="$USER_HOME$/Library/Preferences/CLion2018.1/options/editor.xml" />
       <change beforePath="" afterPath="$USER_HOME$/Library/Preferences/CLion2018.1/options/runner.layout.xml" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/Solarized Light.icls" />
@@ -3702,6 +3701,56 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/second_example/output.txt" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/StrSymmetryPoint.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/StrSymmetryPoint.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/TreeHeight.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/TreeHeight.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2015_Challenge/SlalomSkiing.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2015_Challenge/SlalomSkiing.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/DwarfsRafting.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/DwarfsRafting.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/HilbertMaze.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/HilbertMaze.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/RectangleBuilderGreaterArea.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/RectangleBuilderGreaterArea.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountUneatenLeaves.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountUneatenLeaves.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/MinimumScore.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/MinimumScore.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountSemiprimes.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountSemiprimes.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/CountDistinctSlices.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/CountDistinctSlices.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxDoubleSliceSum.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxDoubleSliceSum.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p015.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p015.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p018.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p018.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p028.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p028.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p037.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p037.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p058.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p058.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p067.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p067.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p080.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p080.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p091.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p091.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p094.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p094.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p106.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p106.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p128.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p128.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p145.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p145.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p149.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p149.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p166.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p166.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p171.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p171.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p218.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p218.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p222.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p222.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p243.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p243.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p287.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p287.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p301.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p301.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p303.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p303.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p323.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p323.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p329.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p329.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p387.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p387.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p425.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p425.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p587.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p587.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/App.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/App.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/L4_Counting_Elements/MissingInteger.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/L4_Counting_Elements/MissingInteger.class" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -4266,8 +4315,20 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="-788">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="85" column="4" lean-forward="true" selection-start-line="85" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -4285,9 +4346,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>goal</find>
-      <find>*</find>
-      <find>i</find>
       <find>findMin</find>
       <find>static</find>
       <find>solution</find>
@@ -4315,6 +4373,9 @@
       <find>A.length</find>
       <find>i - fibs[j]</find>
       <find>BinarySearchTree.Node</find>
+      <find>Node</find>
+      <find>TreeNodeExtra</find>
+      <find>depth</find>
     </findStrings>
     <replaceStrings>
       <replace>rank</replace>
@@ -4328,6 +4389,7 @@
       <replace>N</replace>
       <replace>k</replace>
       <replace>Integer</replace>
+      <replace>Tree</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -4392,12 +4454,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountCities.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/PermCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Peaks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MissingInteger.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L10_Prime_Composite_Num/Flags.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L14_Binary_Search_Algorithm/MinMaxDivision.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/AbsDistinct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/CountDistinctSlices.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MissingInteger.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
       </list>
     </option>
@@ -4438,6 +4500,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -4478,7 +4542,52 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
-              <item name="L15_Caterpiller_Method" type="462c0819:PsiDirectoryNode" />
+              <item name="Graphs_Trees" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="codility" type="462c0819:PsiDirectoryNode" />
+              <item name="L1_Iterations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="codility" type="462c0819:PsiDirectoryNode" />
+              <item name="L2_Arrays" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="codility" type="462c0819:PsiDirectoryNode" />
+              <item name="L3_Time_Complexity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="codility" type="462c0819:PsiDirectoryNode" />
+              <item name="L4_Counting_Elements" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="codility" type="462c0819:PsiDirectoryNode" />
+              <item name="L5_Prefix_Sums" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -4495,9 +4604,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4814,12 +4921,13 @@
       <workItem from="1533309729786" duration="702000" />
       <workItem from="1533363951752" duration="3651000" />
       <workItem from="1533468227471" duration="14512000" />
-      <workItem from="1533552244092" duration="26578000" />
+      <workItem from="1533552244092" duration="28085000" />
+      <workItem from="1533704498816" duration="5016000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="473412000" />
+    <option name="totallyTimeSpent" value="479935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -4834,11 +4942,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.5028986" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26956522" sideWeight="0.48400852" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27391306" sideWeight="0.48400852" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251445" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -4896,7 +5004,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="424" />
+      <option name="time" value="431" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -4978,13 +5086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/CountDiv.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/GenomicRangeQuery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -5034,13 +5135,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MaxCounters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="129" column="18" lean-forward="true" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/FrogJmp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -5048,31 +5142,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/PermMissingElem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/TapeEquilibrium.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-254">
           <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -5084,13 +5157,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog1.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="1036" column="4" lean-forward="false" selection-start-line="1036" selection-start-column="4" selection-end-line="1036" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/CountUneatenLeaves.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2442">
@@ -5140,22 +5206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding>
-            <element signature="e#1665#1666#0" expanded="false" />
-            <element signature="e#1718#1719#0" expanded="false" />
-            <element signature="e#1757#1758#0" expanded="false" />
-            <element signature="e#1796#1797#0" expanded="false" />
-            <element signature="e#2648#2657#0" expanded="false" />
-            <element signature="e#3813#3822#0" expanded="false" />
-            <element signature="e#5409#5418#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/ElectionWinner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -5168,7 +5218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5191,7 +5240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5199,7 +5247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5207,7 +5254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
           <caret line="145" column="0" lean-forward="true" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5253,7 +5299,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="610">
           <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5269,15 +5314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="302" column="44" lean-forward="false" selection-start-line="302" selection-start-column="44" selection-end-line="302" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MissingInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="180" column="0" lean-forward="true" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5296,7 +5332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5324,11 +5359,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MissingInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="67" column="44" lean-forward="true" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/CountDiv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L3_Time_Complexity/PermMissingElem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MaxCounters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <caret line="77" column="13" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="274" column="0" lean-forward="true" selection-start-line="274" selection-start-column="0" selection-end-line="274" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="85" column="4" lean-forward="true" selection-start-line="85" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-788">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

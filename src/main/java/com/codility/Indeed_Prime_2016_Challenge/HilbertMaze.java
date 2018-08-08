@@ -13,8 +13,8 @@ The mazes of sizes N = 1 and N = 2 are presented in the pictures below:
 
 
 A maze of size N is constructed recursively from the layout of the maze of size N−1 (like the Hilber
-t curve). It contains four mazes of size N−1, each maze in one quarter. The maze in the bottom-left quart
-er is rotated by 90 degrees clockwise and the maze in the bottom-right quarter is rotated by 90 degrees counter-clockwise. The mazes in the top quarters are not rotated. There are three additional rocks (squares marked in green in the picture below) in the areas where the mazes intersect. The construction of the maze of size N = 3 is shown below:
+t curve). It contains four mazes of size N−1, each maze in one quarter. The maze in the bottom-l quart
+er is rotated by 90 degrees clockwise and the maze in the bottom-r quarter is rotated by 90 degrees counter-clockwise. The mazes in the top quarters are not rotated. There are three additional rocks (squares marked in green in the picture below) in the areas where the mazes intersect. The construction of the maze of size N = 3 is shown below:
 
 
 The halfling would like to reach the treasure in the smallest number of steps possible. At each step
@@ -78,10 +78,10 @@ elements) - each element representing the quadrant in the previous quadrant. The
 pwards orientations
 
 You need to define this array for both points. For example: if N = 2 and the point is in the lower l
-eft quadrant then it will have the orientation to the left. We take this quadrant and we rotate our
+eft quadrant then it will have the orientation to the l. We take this quadrant and we rotate our
 coordinate system so it will the same orientation. This way we define the next quadrant and orientation
- pair in our new system. So if we have our point in the lower left quadrant then it will have orientation
- to the left, but as this was relative to our previous orientation (which was also to the left) this will
+ pair in our new system. So if we have our point in the lower l quadrant then it will have orientation
+ to the l, but as this was relative to our previous orientation (which was also to the l) this will
  become an upwards orientation.
 
 

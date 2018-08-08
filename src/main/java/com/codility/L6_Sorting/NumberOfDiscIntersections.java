@@ -54,9 +54,9 @@ a. After prefix sum, The sum[i] stores the number of discs with the rightmost po
 
 
 
-b. In the last loop, left is the value of the leftmost point for the disc and the sum[left -1] is
+b. In the last loop, l is the value of the leftmost point for the disc and the sum[l -1] is
 
-the count for discs have rightmost point within 0 to (left-1). So, for that particular disc,
+the count for discs have rightmost point within 0 to (l-1). So, for that particular disc,
 
 there is no possibility for intersection with those discs and we need to deduct the count from
 
@@ -104,7 +104,7 @@ as N-1 when its > N-1
 *
 After prefix sum, The sum[i] stores the number of discs with the rightmost point within 0 to i (inclusive). If i = N-1, then it stores disc count of within 0 to i or higher (inclusive)
 
-In the last loop, left is the value of the leftmost point for the disc and the sum[left -1] is the count for discs have rightmost point within 0 to (left-1). So, for that particular disc, there is no possibility for intersection with those discs and we need to deduct the count from the maximum possible intersection.
+In the last loop, l is the value of the leftmost point for the disc and the sum[l -1] is the count for discs have rightmost point within 0 to (l-1). So, for that particular disc, there is no possibility for intersection with those discs and we need to deduct the count from the maximum possible intersection.
 
 Our intention is to find for a particular disc, the number of discs it doesn't intersect. For a particular disc with j-th index, the leftmost point would be j - A[j] and for all the discs with the center of i (variable), it wont intersect if i+ A[i] < j - A[j] suffices.
 
@@ -240,8 +240,8 @@ public class NumberOfDiscIntersections {
      * */
 
     /*
-     * for j > i and max value of center is N-1, we have intersection when the right
-     * most point of i-th circle is greater than or eqaul to left most point of j-th
+     * for j > i and max value of center is N-1, we have intersection when the r
+     * most point of i-th circle is greater than or eqaul to l most point of j-th
      * circle
      * */
 

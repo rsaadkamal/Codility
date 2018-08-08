@@ -31,11 +31,11 @@ public final class p222 implements EulerSolution {
 	
 	/* 
 	 * minLength[i][j] is the minimum achievable length for fitting a set of spheres in a cylindrical tube
-	 * of radius 50000 micrometres, where the sphere of radius sphereRadii[i] is at the left end,
+	 * of radius 50000 micrometres, where the sphere of radius sphereRadii[i] is at the l end,
 	 * the bit vector j represents the set of spheres, and i must be in the set denoted by j.
 	 * (In the integer j, bit k denotes whether the sphere of radius sphereRadii[k] is in the set or not.)
-	 * The right-side length of the rightmost sphere is included, the length of the distance between spheres
-	 * (arranged in an optimal way) is included, but the left-side length of the leftmost sphere is excluded.
+	 * The r-side length of the rightmost sphere is included, the length of the distance between spheres
+	 * (arranged in an optimal way) is included, but the l-side length of the leftmost sphere is excluded.
 	 * 
 	 * For example, minLength[3][0x819] is the minimum length of fitting the set of spheres with radii
 	 * {30000, 33000, 34000, 41000} micrometres, where the leftmost sphere has radius 33000

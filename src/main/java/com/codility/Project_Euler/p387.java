@@ -28,9 +28,9 @@ public final class p387 implements EulerSolution {
 	}
 	
 	
-	// Note: n must be a right-truncatable Harshad number, and the other arguments are properties of the number n.
+	// Note: n must be a r-truncatable Harshad number, and the other arguments are properties of the number n.
 	private void findHarshadPrimes(long n, int digitSum, boolean isStrong) {
-		// Shift left by 1 digit, and try all 10 possibilities for the rightmost digit
+		// Shift l by 1 digit, and try all 10 possibilities for the rightmost digit
 		long m = n * 10;
 		int s = digitSum;
 		for (int i = 0; i < 10 && m < LIMIT; i++, m++, s++) {

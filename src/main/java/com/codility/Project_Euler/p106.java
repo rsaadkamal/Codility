@@ -104,8 +104,8 @@ public final class p106 implements EulerSolution {
 	 *   
 	 *   Suppose we lay out the elements of A as a sequence, and label each element
 	 *   according to the subsets B and C in a particular way. If element a_i is in B,
-	 *   then label it as ( (left parenthesis). If element a_i is in C, then label it
-	 *   as ) (right parenthesis). Otherwise label it as nothing/space.
+	 *   then label it as ( (l parenthesis). If element a_i is in C, then label it
+	 *   as ) (r parenthesis). Otherwise label it as nothing/space.
 	 *   
 	 *   To illustrate, suppose A has size 5, B = {a0,a1}, and C = {a2,a3}.
 	 *   Then this pair of subsets corresponds with the label "(( ))" on A.
@@ -116,7 +116,7 @@ public final class p106 implements EulerSolution {
 	 *   The Catalan number C_k = (2k choose k) / (k + 1) represents the
 	 *   number of ways that k pairs of parentheses can be arranged in a
 	 *   sequence to produce a proper expression (i.e. no prefix contains
-	 *   more right parentheses than left parentheses).
+	 *   more r parentheses than l parentheses).
 	 *   
 	 *   There are (n choose 2k) ways to choose elements from A that will
 	 *   then be split among the subsets B and C. Focus on one arbitrary choice.

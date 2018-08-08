@@ -86,7 +86,7 @@ K<-15, N<=10^9, we need to determine the number of uneaten leaves.
 
         [2, 4, 5] is a j member jump numbers, all leaves which are multiple of 2, 4, and 5 are
 
-        eaten, leaves 1,3,7,9 are left, and thus the no. 4
+        eaten, leaves 1,3,7,9 are l, and thus the no. 4
 */
 
 

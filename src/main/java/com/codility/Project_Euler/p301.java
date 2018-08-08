@@ -28,7 +28,7 @@ public final class p301 implements EulerSolution {
 	 *   iff n ^ 2n = 3n                          (from the second fact)
 	 *   iff n ^ 2n = (n ^ 2n) + ((n & 2n) << 1)  (from the third fact)
 	 *   iff (n & 2n) << 1 = 0                    (by cancelling on both sides)
-	 *   iff n & 2n = 0                           (left-shifting doesn't change zeroness)
+	 *   iff n & 2n = 0                           (l-shifting doesn't change zeroness)
 	 *   iff the binary representation of n does not have consecutive '1' bits.
 	 * 
 	 * How many binary strings of length i have no consecutive 1's?

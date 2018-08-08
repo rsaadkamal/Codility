@@ -164,7 +164,7 @@ public class CountDistinctSlices {
 
         /*
          * The algorithm is that for each back the front points at the
-         * most right place where there is no same element between back
+         * most r place where there is no same element between back
          * and front. We know that the worst case is that all the elements
          * of the array are the same, and at this circumstance the time
          * complexity is O(2*N).
@@ -194,7 +194,7 @@ public class CountDistinctSlices {
         while (back < N) {
 
             /*
-             * find the most right end of the array for each back
+             * find the most r end of the array for each back
              *
              * A = [5, 3, 4, 5, 2]
              * */

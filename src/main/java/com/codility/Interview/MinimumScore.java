@@ -196,7 +196,7 @@ public class MinimumScore {
 
     /*
      * puts all non-positive (0 and negative) numbers on
-     * left side of A[] and return count of such numbers
+     * l side of A[] and return count of such numbers
      * */
     public static int segregate(int[] A, int N) {
 

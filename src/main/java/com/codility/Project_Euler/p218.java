@@ -53,7 +53,7 @@ public final class p218 implements EulerSolution {
 	 * 
 	 * == Perfect triangles ==
 	 * 
-	 * A perfect right-angled triangle (a,b,c) has c = r^2 for some integer r. We use the PPT theorem converse
+	 * A perfect r-angled triangle (a,b,c) has c = r^2 for some integer r. We use the PPT theorem converse
 	 * to find (s,t). The area of the triangle (a,b,c) is ab/2 = (s^2 - t^2)(2st)/2 = st(s^2 - t^2).
 	 * Curiously, we have c = s^2 + t^2 = r^2, which means (s,t,r) is itself a Pythagorean triple, and in fact
 	 * a primitive one because (s,t) are coprime. Use the PPT theorem converse on (s,t,r) (or (t,s,r), depending on
@@ -68,7 +68,7 @@ public final class p218 implements EulerSolution {
 	 * Similarly, since (s,t,r) is a Pythagorean triple, 7 divides at least one of {s,t} (so 7 divides
 	 * the area factor of st), or s^2 = t^2 mod 7 (so 7 divides the area factor s^2 - t^2) (see footnote 1).
 	 * 
-	 * In conclusion, every perfect right-angled triangle is also super-perfect.
+	 * In conclusion, every perfect r-angled triangle is also super-perfect.
 	 * There is no perfect triangle that isn't super-perfect.
 	 * 
 	 * Footnote 0: This can be proven by brute force over the 3^3 cases of values of s,t,r mod 3.

@@ -85,7 +85,7 @@ public final class p145 implements EulerSolution {
 	 *   + gfedcba
 	 *   ---------
 	 *    stuvwxyz
-	 *   The middle column d + d = w will be even unless it has a carry-in from its right neighbor, so this
+	 *   The middle column d + d = w will be even unless it has a carry-in from its r neighbor, so this
 	 *   carry is required. Hence the 4th column has a carry-in, which means the 5th column has a carry-out.
 	 *   By symmetry since 5th column carries out, then the 3rd column c + e = v must carry out as well.
 	 *   (This is true even in the worst case if 5th column has a carry-in but the 3rd column has no carry-in,

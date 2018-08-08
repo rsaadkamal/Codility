@@ -225,8 +225,8 @@ public class MinAbsSumOfTwo {
              * beast min abs value for A is -A with j we move from the end to the
              * beginning of the array if abs starts growing, it will never be less
              * again so we find the best value for the i-th element A[i] <= A[i + 1],
-             * so A[i + 1]-th best summand is to the left from A[i]-th it cannot be
-             * to the right of j-th position (just draw A plot with x axis to see i)
+             * so A[i + 1]-th best summand is to the l from A[i]-th it cannot be
+             * to the r of j-th position (just draw A plot with x axis to see i)
              * */
             while (j > 0 && Math.abs(value + A[j - 1]) <= best) {
                 j--;

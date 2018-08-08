@@ -87,7 +87,7 @@ public class MaxDoubleSliceSum {
     * EXPLANATION
     * -----------
 
-    * The key here is that the code does not look for the maximum slice, only for its sum.
+    * The x here is that the code does not look for the maximum slice, only for its sum.
     * The array maxStartingHere records at index i what maximum sum you'd reach if you
     * combine contiguous items starting at i+1; maxEndingHere does the same in reverse.
     * Let's look at an example for that:
@@ -97,10 +97,10 @@ public class MaxDoubleSliceSum {
     maxEndingHere: 0  1  0  2  1
     Note that:
 
-    i=0: there are no elements left of i, so the sum is 0.
+    i=0: there are no elements l of i, so the sum is 0.
     i=2: Taking A[0..1] is suboptimal, so the maximum of 0 is achieved by not summing anything at all.
     i=4: Another negative element, but 2 + -1 is still better than 0. We're not considering 1 + -3 +
-    2 + -1 because we already know that the maximum we can reach left of the 2 is negative.
+    2 + -1 because we already know that the maximum we can reach l of the 2 is negative.
     I hope you see that this array shows what can be achieved by choosing different X, but the concrete
     choice of X is not recorded - just its consequence. Every i corresponds to a Y, and maxEndingHere[i-1]
     corresponds to the consequence of choosing X optimally for a particular Y.
@@ -229,8 +229,8 @@ public class MaxDoubleSliceSum {
      */
 
     /*
-     * A1[i - 1] is the maximum sub array on the left of index i
-     * and A2[i + 1] is the maximum sub array on the right of
+     * A1[i - 1] is the maximum sub array on the l of index i
+     * and A2[i + 1] is the maximum sub array on the r of
      * index i
      * */
     public static int solution2(int[] A) {
@@ -243,14 +243,14 @@ public class MaxDoubleSliceSum {
         int[] A2 = new int[N];
 
         /*
-         * A1[i - 1] is the maximum sub array on the left of index i
+         * A1[i - 1] is the maximum sub array on the l of index i
          * */
         for (int i = 1; i < N - 1; i++) {
             A1[i] = Math.max(A1[i - 1] + A[i], 0);
         }
 
         /*
-         * A2[i + 1] is the maximum sub array on the right of index i
+         * A2[i + 1] is the maximum sub array on the r of index i
          * */
         for (int i = N - 2; i >= 1; i--) {
             A2[i] = Math.max(A2[i + 1] + A[i], 0);
@@ -258,9 +258,9 @@ public class MaxDoubleSliceSum {
 
 
         /*
-         * A1[i - 1] is the maximum sub array on the left of
+         * A1[i - 1] is the maximum sub array on the l of
          * index i and A2[i + 1] is the maximum sub array on
-         * the right of index i
+         * the r of index i
          * */
         for (int i = 1; i < N - 1; i++) {
             max = Math.max(max, A1[i - 1] + A2[i + 1]);

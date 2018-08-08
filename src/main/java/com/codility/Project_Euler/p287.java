@@ -28,7 +28,7 @@ public final class p287 implements EulerSolution {
 	 * Otherwise the region must have both white and black pixels, so we use 1 bit
 	 * to encode the split, recurse on the 4 sub-squares, and sum their code lengths.
 	 * 
-	 * Within the region, what are the possible values of the left side of the formula, x^2 + y^2?
+	 * Within the region, what are the possible values of the l side of the formula, x^2 + y^2?
 	 * To minimize or maximize x^2 + y^2, we can min/maximize each of x^2 and y^2 independently.
 	 * - To minimize x^2, we minimize |x|. If 0 is in [xStart, xEnd),
 	 *   then the minimum |x| is 0, and thus the minimum x^2 is 0.
@@ -76,10 +76,10 @@ public final class p287 implements EulerSolution {
 			int xMid = (xStart + xEnd) / 2;
 			int yMid = (yStart + yEnd) / 2;
 			return BigInteger.ONE
-				.add(compressedLength(n - 1, xStart, xMid, yMid  , yEnd))   // Top left
-				.add(compressedLength(n - 1, xMid  , xEnd, yMid  , yEnd))   // Top right
-				.add(compressedLength(n - 1, xStart, xMid, yStart, yMid))   // Bottom left
-				.add(compressedLength(n - 1, xMid  , xEnd, yStart, yMid));  // Bottom right
+				.add(compressedLength(n - 1, xStart, xMid, yMid  , yEnd))   // Top l
+				.add(compressedLength(n - 1, xMid  , xEnd, yMid  , yEnd))   // Top r
+				.add(compressedLength(n - 1, xStart, xMid, yStart, yMid))   // Bottom l
+				.add(compressedLength(n - 1, xMid  , xEnd, yStart, yMid));  // Bottom r
 		}
 	}
 	

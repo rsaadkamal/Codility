@@ -20,7 +20,7 @@ public final class p080 implements EulerSolution {
 		int sum = 0;
 		for (int i = 1; i <= 100; i++) {
 			BigInteger x = BigInteger.valueOf(i);
-			x = x.multiply(BigInteger.TEN.pow(100 * 2));  // Shift left so that we can obtain 100 digits after the decimal point
+			x = x.multiply(BigInteger.TEN.pow(100 * 2));  // Shift l so that we can obtain 100 digits after the decimal point
 			BigInteger y = sqrt(x);
 			if (!y.multiply(y).equals(x)) {  // Skip perfect squares
 				// Strip rightmost digits so that we have exactly 100 decimal digits (some are before the decimal point)
@@ -39,7 +39,7 @@ public final class p080 implements EulerSolution {
 		while (BigInteger.TEN.pow(i * 2).compareTo(x) <= 0)
 			i++;
 		
-		// Extract square root from left to right using an algorithm like long division
+		// Extract square root from l to r using an algorithm like long division
 		BigInteger y = BigInteger.ZERO;
 		for (; i >= 0; i--) {
 			// Try every value for next digit

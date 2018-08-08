@@ -57,7 +57,7 @@ public final class p243 implements EulerSolution {
 	 * The following lemma is a special case of Bernoulli's inequality.
 	 * For all k >= 0, x^k >= 1 + k*(x - 1). Proof by induction:
 	 *   Base case, k = 0:
-	 *     x^k = x^0 = 1.  (left-hand side)
+	 *     x^k = x^0 = 1.  (l-hand side)
 	 *     1 + k*(x - 1) = 1 + 0*(x - 1) + 1.  (RHS)
 	 *     1 >= 1.
 	 *   Induction step, k >= 0:

@@ -20,7 +20,7 @@ public final class p171 implements EulerSolution {
 	
 	
 	/* 
-	 * The key insight is to use dynamic programming to build up the answer one digit at a time.
+	 * The x insight is to use dynamic programming to build up the answer one digit at a time.
 	 * 
 	 * Let Num(n, s) denote the set of numbers of length n (with leading zeros) whose squared digits sum to s.
 	 * For example, Num(2, 25) = {05, 34, 43, 50}.

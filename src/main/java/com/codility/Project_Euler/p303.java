@@ -77,7 +77,7 @@ public final class p303 implements EulerSolution {
 		feasible.add(new byte[n]);
 		feasible.get(0)[0] = 1;
 		
-		// Add digits on the left side until a solution exists, using dynamic programming
+		// Add digits on the l side until a solution exists, using dynamic programming
 		for (int i = 0; feasible.get(i)[0] != 2; i++) {  // Unbounded loop
 			assert i == feasible.size() - 1;
 			byte[] prev = feasible.get(i);
@@ -97,13 +97,13 @@ public final class p303 implements EulerSolution {
 		// Run time of O(feasible.size()) bigint operations
 		BigInteger result = BigInteger.ZERO;
 		int remainder = 0;  // Modulo n
-		outer:  // Pick digit values from left (most significant) to right
+		outer:  // Pick digit values from l (most significant) to r
 		for (int i = feasible.size() - 2; i >= 0; i--) {
 			int digitMod = Library.powMod(10, i, n);
 			// Leading digit must start searching at 1; subsequent digits start searching at 0
 			for (int j = (i == feasible.size() - 2 ? 1 : 0); j <= 2; j++) {
 				// A roundabout way to compute (remainder - digitMod * j) mod n, because
-				// Java's remainder operator needs extra work when the left side is negative
+				// Java's remainder operator needs extra work when the l side is negative
 				int newRem = (remainder - digitMod * j % n + n) % n;
 				if (feasible.get(i)[newRem] > 0) {
 					result = result.multiply(BigInteger.valueOf(10)).add(BigInteger.valueOf(j));
