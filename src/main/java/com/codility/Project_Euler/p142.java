@@ -44,18 +44,18 @@ public final class p142 implements EulerSolution {
 	
 	
 	/* 
-	 * Finds any sum s = x+y+z such that s < limit, 0 < z < y < x, and these are
-	 * perfect squares: x+y, x-y, x+z, x-z, y+z, y-z. Returns -1 if none is found.
+	 * Finds any sum s = key+y+z such that s < limit, 0 < z < y < key, and these are
+	 * perfect squares: key+y, key-y, key+z, key-z, y+z, y-z. Returns -1 if none is found.
 	 * 
-	 * Suppose we let x + y = a^2 and x - y = b^2, so that they are always square.
-	 * Then x = (a^2 + b^2) / 2 and y = (a^2 - b^2) / 2. By ensuring a > b > 0, we have x > y > 0.
-	 * Now z < y and z < limit - x - y. Let y + z = c^2, then explicitly check
-	 * if x+z, x-z, and y-z are square.
+	 * Suppose we let key + y = a^2 and key - y = b^2, so that they are always square.
+	 * Then key = (a^2 + b^2) / 2 and y = (a^2 - b^2) / 2. By ensuring a > b > 0, we have key > y > 0.
+	 * Now z < y and z < limit - key - y. Let y + z = c^2, then explicitly check
+	 * if key+z, key-z, and y-z are square.
 	 */
 	private int findSum(int limit) {
 		for (int a = 1; a * a < limit; a++) {
 			for (int b = a - 1; b > 0; b--) {
-				if ((a + b) % 2 != 0)  // Need them to be both odd or both even so that we get integers for x and y
+				if ((a + b) % 2 != 0)  // Need them to be both odd or both even so that we get integers for key and y
 					continue;
 				int x = (a * a + b * b) / 2;
 				int y = (a * a - b * b) / 2;

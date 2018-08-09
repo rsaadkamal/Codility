@@ -25,24 +25,24 @@ public final class p271 implements EulerSolution {
 	 * 2 * 3 * 5 * 7 * 11 * 13 * 17 * 19 * 23 * 29 * 31 * 37 * 41 * 43,
 	 * which happens to be the product of the first 14 prime numbers.
 	 * 
-	 * Due to the laws of modular arithmetic, if x^3 = 1 mod (n*k),
-	 * then it is also true that x^3 = 1 mod n and x^3 = 1 mod k.
-	 * Hence the problem statement is equivalent to finding all x in the range (1, n) such that
-	 * (x^3 = 1 mod 2) and (x^3 = 1 mod 3) and (x^3 = 1 mod 5) and ... and (x^3 = 1 mod 43).
+	 * Due to the laws of modular arithmetic, if key^3 = 1 mod (n*k),
+	 * then it is also true that key^3 = 1 mod n and key^3 = 1 mod k.
+	 * Hence the problem statement is equivalent to finding all key in the range (1, n) such that
+	 * (key^3 = 1 mod 2) and (key^3 = 1 mod 3) and (key^3 = 1 mod 5) and ... and (key^3 = 1 mod 43).
 	 * 
-	 * When the main congruence of x^3 = 1 mod 13082761331670030 is broken up into a set of sub-congruences,
+	 * When the main congruence of key^3 = 1 mod 13082761331670030 is broken up into a set of sub-congruences,
 	 * because the sub-congruences have tiny moduli they are easy to solve by brute force. That is to say,
-	 * for x^3 = 1 mod n, we can find all the solutions for x in the range [1, k) just by testing all possibilities.
+	 * for key^3 = 1 mod n, we can find all the solutions for key in the range [1, k) just by testing all possibilities.
 	 * For example:
-	 * - x^3 = 1 mod  2 has the solutions (for 1 <= x <  2) of {1}.
-	 * - x^3 = 1 mod  7 has the solutions (for 1 <= x <  7) of {1, 2, 4}.
-	 * - x^3 = 1 mod 11 has the solutions (for 1 <= x < 11) of {1}.
-	 * - x^3 = 1 mod 43 has the solutions (for 1 <= x < 43) of {1, 6, 36}.
+	 * - key^3 = 1 mod  2 has the solutions (for 1 <= key <  2) of {1}.
+	 * - key^3 = 1 mod  7 has the solutions (for 1 <= key <  7) of {1, 2, 4}.
+	 * - key^3 = 1 mod 11 has the solutions (for 1 <= key < 11) of {1}.
+	 * - key^3 = 1 mod 43 has the solutions (for 1 <= key < 43) of {1, 6, 36}.
 	 * 
-	 * By the Chinese remainder theorem, the set of solutions for x^3 = 1 mod (n*k) has a bijection with
-	 * the set of ordered pairs of solutions for (x^3 = 1 mod n, x^3 = 1 mod k). Furthermore, if we know
-	 * all solutions of (x^3 = 1 mod n) and (x^3 = 1 mod k), then we can apply the CRT on these numbers to
-	 * compute all the solutions of x^3 = 1 mod (n*k). Using this fact, we build up the full set of solutions
+	 * By the Chinese remainder theorem, the set of solutions for key^3 = 1 mod (n*k) has a bijection with
+	 * the set of ordered pairs of solutions for (key^3 = 1 mod n, key^3 = 1 mod k). Furthermore, if we know
+	 * all solutions of (key^3 = 1 mod n) and (key^3 = 1 mod k), then we can apply the CRT on these numbers to
+	 * compute all the solutions of key^3 = 1 mod (n*k). Using this fact, we build up the full set of solutions
 	 * from the smallest factor to the largest factor.
 	 */
 	
@@ -84,7 +84,7 @@ public final class p271 implements EulerSolution {
 	
 	
 	// Assuming that p and q are coprime, 0 <= a < p, and 0 <= b < q, this returns the unique
-	// integer x in the range [0, p*q) such that x satisfies (x = a mod p) and (x = b mod q).
+	// integer key in the range [0, p*q) such that key satisfies (key = a mod p) and (key = b mod q).
 	private static BigInteger chineseRemainderTheorem(BigInteger a, BigInteger p, BigInteger b, BigInteger q) {
 		// (a + (b - a) * reciprocalMod(p, q) * p) mod (p * q)
 		return a.add(b.subtract(a).multiply(p.modInverse(q)).multiply(p)).mod(p.multiply(q));

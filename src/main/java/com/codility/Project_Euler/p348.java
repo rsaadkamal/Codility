@@ -96,7 +96,7 @@ public final class p348 implements EulerSolution {
 	}
 	
 	
-	// Returns floor(cbrt(x)) for x >= 0.
+	// Returns floor(cbrt(key)) for key >= 0.
 	private static int cbrt(int x) {
 		if (x < 0)
 			throw new IllegalArgumentException("Not implemented");

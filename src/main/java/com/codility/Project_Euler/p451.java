@@ -27,7 +27,7 @@ public final class p451 implements EulerSolution {
 	 * m = 1, n-1. It is easy to verify that these two numbers are solutions.
 	 * The equation factorizes as (m - 1)(m + 1) = 0 mod n. Because n is prime,
 	 * the numbers form a field, and there are no zero divisors (two arbitrary
-	 * non-zero numbers x and y such that xy = 0). Hence 1 and -1 mod n are
+	 * non-zero numbers key and y such that xy = 0). Hence 1 and -1 mod n are
 	 * the only possible solutions to the equation. (Note that for the excluded
 	 * special prime case where n = 2, the solutions 1 and -1 are the same number.)
 	 * 

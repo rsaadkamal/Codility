@@ -19,12 +19,12 @@ public final class p329 implements EulerSolution {
 	/* 
 	 * We simulate by brute force all the possible paths that the frog can take, and
 	 * multiply and sum the probabilities along the way. The frog is initially positioned
-	 * at one of the 500 squares and makes a croak. Then it jumps l or r 14 times
+	 * at one of the 500 squares and makes a croak. Then it jumps left or right 14 times
 	 * and makes a croak after each jump (thus there are 15 croaks per simulation).
 	 * Overall, there are exactly 500 * 2^14 = 8.192 million paths to examine.
 	 * 
 	 * Let's look at how the probabilities work for a particular path:
-	 * - Because the frog starts at each square with uniform probability and jumps l/r
+	 * - Because the frog starts at each square with uniform probability and jumps left/right
 	 *   with equal probability, the probability of any particular path is 1 / (500 * 2^14).
 	 * - For any given path, it can generate exactly 2^15 croak sequences, but each sequence
 	 *   doesn't have the same probability. Look at the sequence of numbers that the frog

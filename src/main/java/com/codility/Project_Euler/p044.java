@@ -50,9 +50,9 @@ public final class p044 implements EulerSolution {
 			return false;
 		
 		/* 
-		 * If y = pentagonalNumber(x) = x(3x-1) / 2,
-		 * then by the quadratic formula, the positive solution is x = (sqrt(24y + 1) + 1) / 6.
-		 * There exists a solution for x if and only if both of these conditions hold:
+		 * If y = pentagonalNumber(key) = key(3x-1) / 2,
+		 * then by the quadratic formula, the positive solution is key = (sqrt(24y + 1) + 1) / 6.
+		 * There exists a solution for key if and only if both of these conditions hold:
 		 * (24y + 1) is a perfect square, and sqrt(24y + 1) + 1 mod 6 = 0.
 		 * The second condition is equivalent to sqrt(24y + 1) = 5 mod 6.
 		 */

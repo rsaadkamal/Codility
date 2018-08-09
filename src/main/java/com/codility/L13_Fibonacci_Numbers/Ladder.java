@@ -160,7 +160,7 @@ public class Ladder {
 
             /*
              * we store values by mod 2**30. we can do it because
-             * (x mod A + y mod A) mod A == (x + y) mod A. later
+             * (key mod A + y mod A) mod A == (key + y) mod A. later
              * they are easily converted to modulo by power of 2
              * by removing bits. 0101 & 2**2 = 0101 & 0011
              * */

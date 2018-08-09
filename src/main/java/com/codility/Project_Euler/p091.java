@@ -33,7 +33,7 @@ public final class p091 implements EulerSolution {
 	}
 	
 	
-	// Tests whether the three points {(0,0), (x1,y1), (x2,y2)} form a r triangle.
+	// Tests whether the three points {(0,0), (x1,y1), (x2,y2)} form a right triangle.
 	private static boolean isRightTriangle(int x1, int y1, int x2, int y2) {
 		int a = x1 * x1 + y1 * y1;
 		int b = x2 * x2 + y2 * y2;

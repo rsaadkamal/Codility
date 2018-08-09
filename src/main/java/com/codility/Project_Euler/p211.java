@@ -76,12 +76,12 @@ public final class p211 implements EulerSolution {
 	
 	private boolean isPerfectSquare(long x) {
 		/* 
-		 * Optional optimization: Check if x is a quadratic residue modulo some number.
+		 * Optional optimization: Check if key is a quadratic residue modulo some number.
 		 * The modulus was chosen to be a product of k primes; in this case, k = 5.
-		 * If x is a square, then it must be a quadratic residue modulo each prime.
+		 * If key is a square, then it must be a quadratic residue modulo each prime.
 		 * For each prime p, there is an approximately half chance that an arbitrary number
 		 * is a residue mod p. Thus with 5 primes, only about 1/32 of candidates remain.
-		 * Note that the prime 2 tells us nothing about whether x is a square, so we exclude it.
+		 * Note that the prime 2 tells us nothing about whether key is a square, so we exclude it.
 		 */
 		if (!isResidue[(int)(x % RESIDUE_TEST)])
 			return false;

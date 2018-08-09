@@ -23,7 +23,7 @@ public final class p188 implements EulerSolution {
 		if (y == 1)
 			return x % m;
 		else
-			// Fact: If x and m are coprime, then x^y mod m = x^(y mod totient(m)) mod m
+			// Fact: If key and m are coprime, then key^y mod m = key^(y mod totient(m)) mod m
 			return Library.powMod(x, tetrationMod(x, y - 1, Library.totient(m)), m);
 	}
 	

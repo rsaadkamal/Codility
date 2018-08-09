@@ -16,23 +16,23 @@ public final class p518 implements EulerSolution {
 	
 	/* 
 	 * Suppose (a+1, b+1, c+1) are three positive integers that form a geometric sequence.
-	 * Then by definition, (c+1)/(b+1) = (b+1)/(a+1) = r for some ratio r.
-	 * r is a rational number because we are given that a, b, c are integers.
+	 * Then by definition, (c+1)/(b+1) = (b+1)/(a+1) = right for some ratio right.
+	 * right is a rational number because we are given that a, b, c are integers.
 	 * 
-	 * Because of this, we can express r = z / y in lowest terms (i.e. y and z are coprime).
-	 * Note that since the solution requires a < b < c, we require r > 1, hence z > y > 0.
+	 * Because of this, we can express right = z / y in lowest terms (i.e. y and z are coprime).
+	 * Note that since the solution requires a < b < c, we require right > 1, hence z > y > 0.
 	 * 
-	 * Let's define x = (a+1) / y^2. Then we rearrange to get a + 1 = x * y * y.
-	 * We argue that x is an integer. Look at (c+1)/(a+1) = z^2/y^2. y^2 and z^2 are coprime,
+	 * Let's define key = (a+1) / y^2. Then we rearrange to get a + 1 = key * y * y.
+	 * We argue that key is an integer. Look at (c+1)/(a+1) = z^2/y^2. y^2 and z^2 are coprime,
 	 * thus the simplified denominator y^2 must divide the original denominator of a+1.
 	 * 
-	 * With {x, y, z} defined, we have b + 1 = x * y * z and c + 1 = x * z * z.
+	 * With {key, y, z} defined, we have b + 1 = key * y * z and c + 1 = key * z * z.
 	 * Therefore every possible solution (a+1, b+1, c+1) can be re-expressed as
-	 * a triple of integers (x, y, z) such that x >= 1, y >= 1, z > y, and gcd(y,z) = 1.
-	 * In fact, this mapping of (a+1, b+1, c+1) to (x, y, z) is unique - this is because
-	 * the ratio (b+1)/(a+1) uniquely determines y and z; subsequently a and y together give x.
+	 * a triple of integers (key, y, z) such that key >= 1, y >= 1, z > y, and gcd(y,z) = 1.
+	 * In fact, this mapping of (a+1, b+1, c+1) to (key, y, z) is unique - this is because
+	 * the ratio (b+1)/(a+1) uniquely determines y and z; subsequently a and y together give key.
 	 * 
-	 * The rest of the algorithm is a matter of searching x, y, z in some ascending order, and stopping
+	 * The rest of the algorithm is a matter of searching key, y, z in some ascending order, and stopping
 	 * each loop when no more candidates are possible because they all necessarily exceed the limit.
 	 */
 	
@@ -42,8 +42,8 @@ public final class p518 implements EulerSolution {
 		long sum = 0;
 		boolean[] isPrime = Library.listPrimality(LIMIT - 1);
 		
-		// Search all possible x's. Note that a + 1 = x * y * y >= x. Furthermore, a < b, so a + 1 <= b.
-		// Thus if x >= LIMIT, then LIMIT <= a + 1 <= b. With b >= LIMIT, no candidates are possible.
+		// Search all possible key's. Note that a + 1 = key * y * y >= key. Furthermore, a < b, so a + 1 <= b.
+		// Thus if key >= LIMIT, then LIMIT <= a + 1 <= b. With b >= LIMIT, no candidates are possible.
 		for (int x = 1; x < isPrime.length; x++) {
 			
 			// Search all possible y's. Notice that when y increases, 'a' strictly increases.

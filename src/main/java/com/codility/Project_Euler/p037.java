@@ -27,13 +27,13 @@ public final class p037 implements EulerSolution {
 	
 	
 	private static boolean isTruncatablePrime(int n) {
-		// Test if l-truncatable
+		// Test if left-truncatable
 		for (long i = 10; i <= n; i *= 10) {
 			if (!Library.isPrime(n % (int)i))
 				return false;
 		}
 		
-		// Test if r-truncatable
+		// Test if right-truncatable
 		for (; n != 0; n /= 10) {
 			if (!Library.isPrime(n))
 				return false;

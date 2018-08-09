@@ -23,7 +23,7 @@ public final class p425 implements EulerSolution {
 	
 	/* 
 	 * Finding all the relatives of 2 can be seen as a single-source shortest path problem,
-	 * which we solve here using Dijkstra's algorithm. The x insight is that at each node (prime number),
+	 * which we solve here using Dijkstra's algorithm. The key insight is that at each node (prime number),
 	 * we consider the connection path from 2 to it, and store the maximum path number at the node.
 	 * It is amenable to dynamic programming because it's always best to minimize the maximum path number.
 	 * 

@@ -23,7 +23,7 @@ public final class p197 implements EulerSolution {
 		double y = -1;
 		long i = 0;
 		for (; i < ITERATIONS; i++) {
-			// Here at the top of the loop, x = f^i(-1) and y = f^{2i}(-1)
+			// Here at the top of the loop, key = f^i(-1) and y = f^{2i}(-1)
 			
 			if (i > 0 && x == y)  // This means index i is part of the cycle, and (2i - i) = i is some multiple of the true cycle length
 				break;

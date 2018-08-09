@@ -29,7 +29,7 @@ public final class p066 implements EulerSolution {
 	 * Let p/q (in lowest terms) = (a0, a1, ..., a_{n-1}, b0, b1, ..., b_{m-2}).
 	 * (This is a truncation of the continued fraction with only one period minus the last term.)
 	 * 
-	 * Then the minimum solution (x, y) for Pell's equation is given by:
+	 * Then the minimum solution (key, y) for Pell's equation is given by:
 	 * - (p, q) if m is even
 	 * - (p^2 + D q^2, 2pq) if m is odd
 	 */
@@ -49,7 +49,7 @@ public final class p066 implements EulerSolution {
 	}
 	
 	
-	// Returns the smallest x such that x > 0 and there exists some y such that x^2 - n y^2 = 1.
+	// Returns the smallest key such that key > 0 and there exists some y such that key^2 - n y^2 = 1.
 	// Requires n to not be a perfect square.
 	private static BigInteger smallestSolutionX(int n) {
 		List<BigInteger>[] contFrac = sqrtToContinuedFraction(n);

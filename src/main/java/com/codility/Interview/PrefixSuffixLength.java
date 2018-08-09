@@ -29,17 +29,44 @@ string S consists only of lowercase letters (a−z). Copyright 2009–2018 by Co
 
 
 /*
-* Correctness: 100%
-* Performance: 0%
-* */
+ * Correctness: 100%
+ * Performance: 0%
+ * */
 
 /**
  * Created by Chaklader on 8/8/18.
  */
-public class CountPrefix {
+public class PrefixSuffixLength {
 
 
+    /*
+     * solution - a
+     * */
     public static int solution(String S) {
+
+        int N = S.length();
+
+        for (int i = N - 1; i >= 1; i--) {
+
+            String prefix = S.substring(0, i);
+            String suffix = S.substring(N - i, N);
+
+            if (prefix.equals(suffix)) {
+
+                System.out.println("Prefix and Suffix = " + prefix);
+                return i;
+            }
+        }
+
+        return 0;
+    }
+
+
+
+    /*
+     * solution - b
+     * */
+    public static int solution1(String S) {
 
         List<String> prefixes = new ArrayList<>();
         List<String> suffixes = new ArrayList<>();
@@ -71,6 +98,13 @@ public class CountPrefix {
         }
 
         return result;
+    }
+
+
+    public static void main(String[] args) {
+
+        String s = "addadda";
+        System.out.println(solution(s));
     }
 
 }

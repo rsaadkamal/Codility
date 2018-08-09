@@ -29,7 +29,7 @@ final class Library {
 	}
 	
 	
-	// Returns floor(sqrt(x)), for x >= 0.
+	// Returns floor(sqrt(key)), for key >= 0.
 	public static int sqrt(int x) {
 		if (x < 0)
 			throw new IllegalArgumentException("Square root of negative number");
@@ -43,7 +43,7 @@ final class Library {
 	}
 	
 	
-	// Returns floor(sqrt(x)), for x >= 0.
+	// Returns floor(sqrt(key)), for key >= 0.
 	public static long sqrt(long x) {
 		if (x < 0)
 			throw new IllegalArgumentException("Square root of negative number");
@@ -57,7 +57,7 @@ final class Library {
 	}
 	
 	
-	// Returns floor(sqrt(x)), for x >= 0.
+	// Returns floor(sqrt(key)), for key >= 0.
 	public static BigInteger sqrt(BigInteger x) {
 		if (x.signum() == -1)
 			throw new IllegalArgumentException("Square root of negative number");
@@ -71,7 +71,7 @@ final class Library {
 	}
 	
 	
-	// Tests whether x is a perfect square, for any value x.
+	// Tests whether key is a perfect square, for any value key.
 	public static boolean isSquare(int x) {
 		if (x < 0)
 			return false;
@@ -80,7 +80,7 @@ final class Library {
 	}
 	
 	
-	// Returns x to the power of y, throwing an exception if the result overflows an int.
+	// Returns key to the power of y, throwing an exception if the result overflows an int.
 	public static int pow(int x, int y) {
 		if (x < 0)
 			throw new IllegalArgumentException("Negative base not supported");
@@ -96,7 +96,7 @@ final class Library {
 	}
 	
 	
-	// Returns x^y mod m.
+	// Returns key^y mod m.
 	public static int powMod(int x, int y, int m) {
 		if (x < 0)
 			throw new IllegalArgumentException("Negative base not supported");
@@ -118,8 +118,8 @@ final class Library {
 	}
 	
 	
-	// Returns x^-1 mod m, where the result is in the range [0, m).
-	// Note that (x * x^-1) mod m = (x^-1 * x) mod m = 1.
+	// Returns key^-1 mod m, where the result is in the range [0, m).
+	// Note that (key * key^-1) mod m = (key^-1 * key) mod m = 1.
 	public static int reciprocalMod(int x, int m) {
 		if (!(0 <= x && x < m))
 			throw new IllegalArgumentException();
@@ -166,7 +166,7 @@ final class Library {
 	}
 	
 	
-	// Returns the largest non-negative integer that divides both x and y.
+	// Returns the largest non-negative integer that divides both key and y.
 	public static int gcd(int x, int y) {
 		if (x < 0 || y < 0)
 			throw new IllegalArgumentException("Negative number");

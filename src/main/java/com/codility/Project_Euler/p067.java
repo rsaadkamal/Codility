@@ -22,8 +22,8 @@ public final class p067 implements EulerSolution {
 	 * 
 	 * If we start at a particular cell, what is the maximum path total? If the cell is at the
 	 * bottom of the big triangle, then it is simply the cell's value. Otherwise the answer is
-	 * the cell's value plus either {the maximum path total of the cell down and to the l}
-	 * or {the maximum path total of the cell down and to the r}, whichever is greater.
+	 * the cell's value plus either {the maximum path total of the cell down and to the left}
+	 * or {the maximum path total of the cell down and to the right}, whichever is greater.
 	 * By computing the blank triangle's values from bottom up, the dependent values are always
 	 * computed before they are utilized. This technique is known as dynamic programming.
 	 */

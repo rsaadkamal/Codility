@@ -40,9 +40,9 @@ public final class p145 implements EulerSolution {
 	 *   For the number to be considered reversible, every digit in
 	 *   the sum tuvwxyz needs to be odd, i.e. in the set {1,3,5,7,9}.
 	 *   
-	 *   First look at the middle two columns. If the 4th column d + c = x generates a carry-out, then
+	 *   First look at the middle two columns. If the 4th column d + c = key generates a carry-out, then
 	 *   the 3rd column c + d + 1 = w receives a carry-in. But this would in turn require the 4th column to
-	 *   have a carry-in, because otherwise x and w would have opposite evenness/oddness. Conversely if the
+	 *   have a carry-in, because otherwise key and w would have opposite evenness/oddness. Conversely if the
 	 *   4th column has no carry-out, then the 3rd column has no carry-in and also must have no carry-out.
 	 *     We can extend this argument outward from the middle. If the 5th column has a carry-out, then by
 	 *   the above argument it would cause the 4th and 3rd columns to have a carry-out, which implies
@@ -85,7 +85,7 @@ public final class p145 implements EulerSolution {
 	 *   + gfedcba
 	 *   ---------
 	 *    stuvwxyz
-	 *   The middle column d + d = w will be even unless it has a carry-in from its r neighbor, so this
+	 *   The middle column d + d = w will be even unless it has a carry-in from its right neighbor, so this
 	 *   carry is required. Hence the 4th column has a carry-in, which means the 5th column has a carry-out.
 	 *   By symmetry since 5th column carries out, then the 3rd column c + e = v must carry out as well.
 	 *   (This is true even in the worst case if 5th column has a carry-in but the 3rd column has no carry-in,

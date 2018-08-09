@@ -1,11 +1,16 @@
 package com.codility;
 
 
-import com.codility.Graphs_Trees.BinarySearchTree;
-
-import java.util.*;
-
 public class App {
+
+
+    class Tree {
+
+        public int x;
+
+        public Tree l;
+        public Tree r;
+    }
 
 
     public static void main(String[] args) {

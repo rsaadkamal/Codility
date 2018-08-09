@@ -115,21 +115,21 @@ public class RestStops {
      * in binary search, the condition breaks at low <= high and after the break, low = middle = high +1
      * */
     /*
-     * maximum index of an item in the sorted array A which is less than x
+     * maximum index of an item in the sorted array A which is less than key
      * */
     public static int maximumIndex(int[] A, int x) {
 
         int N = A.length;
 
         /*
-         * all items of A is larger than x
+         * all items of A is larger than key
          * */
         if (x < A[0]) {
             return -1;
         }
 
         /*
-         * all items of A is smaller than x
+         * all items of A is smaller than key
          * */
         if (x > A[N - 1]) {
             return (N - 1);
@@ -159,21 +159,21 @@ public class RestStops {
 
 
     /*
-     * min index of an item in the sorted array C which is just greater than x
+     * min index of an item in the sorted array C which is just greater than key
      * */
     public static int minimumIndex(int[] C, int x) {
 
         int N = C.length;
 
         /*
-         * x is lesser than all items of C
+         * key is lesser than all items of C
          * */
         if (x < C[0]) {
             return 0;
         }
 
         /*
-         * x is larger than all values of C
+         * key is larger than all values of C
          * */
         if (x > C[N - 1]) {
             return -1;
@@ -193,7 +193,7 @@ public class RestStops {
             } else {
 
                 /*
-                 * we have a match C[middle] equals x
+                 * we have a match C[middle] equals key
                  * */
                 return (middle + 1);
             }

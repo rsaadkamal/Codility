@@ -26,11 +26,11 @@ public final class p208 implements EulerSolution {
 	 * - Let each clockwise (rightward) move subtract 1 from the direction, modulo 5.
 	 * 
 	 * At each of the 5 possible facing directions, there are 2 possible moves.
-	 * What is the (x, y) displacement of each of these 10 possible moves?
+	 * What is the (key, y) displacement of each of these 10 possible moves?
 	 * 
 	 * We can figure this out by drawing a circle with 5 points evenly spaced 72
 	 * degrees apart. To align with the problem description, one of the points will
-	 * be on the positive x axis. For our convenience, the circle shall have radius 4.
+	 * be on the positive key axis. For our convenience, the circle shall have radius 4.
 	 * Doing some moderate algebra and trigonometry, we get these point coordinates:
 	 * - Point 0: (cos   0, sin   0)*4 = (+4, 0).
 	 * - Point 1: (cos  72, sin  72)*4 = (+(sqrt(5)-1), +sqrt(10+2sqrt(5))).
@@ -49,11 +49,11 @@ public final class p208 implements EulerSolution {
 	 * - point3 - point2 = (0           , -2sqrt(10-2sqrt(5))).
 	 * - point4 - point3 = (+2sqrt(5)   , -2sqrt( 5-2sqrt(5))).
 	 * - point0 - point4 = (+(5-sqrt(5)),  +sqrt(10+2sqrt(5))).
-	 * As for clockwise moves, simply take the displacements vectors above and negate the x values.
+	 * As for clockwise moves, simply take the displacements vectors above and negate the key values.
 	 * The mapping of displacement vectors to direction states also needs to be negated modulo 5.
 	 * 
 	 * Altogether, we have this table of valid moves:
-	 *    Direction | Move | x displacement |   y displacement
+	 *    Direction | Move | key displacement |   y displacement
 	 *   -----------+------+----------------+---------------------
 	 *        0     | ACW  |  -(5-sqrt(5))  | +sqrt(10+2sqrt(5))
 	 *        0     |  CW  |  +(5-sqrt(5))  | +sqrt(10+2sqrt(5))
@@ -67,8 +67,8 @@ public final class p208 implements EulerSolution {
 	 *        4     |  CW  |    +2sqrt(5)   | -2sqrt(5-2sqrt(5))
 	 * Note that -2sqrt(5-2sqrt(5)) = sqrt(10-2sqrt(5)) - sqrt(10+2sqrt(5)).
 	 * 
-	 * As the robot moves, it adds x components and y components to its displacement.
-	 * - At any given time, the x coordinate equals a unique integer-weighted
+	 * As the robot moves, it adds key components and y components to its displacement.
+	 * - At any given time, the key coordinate equals a unique integer-weighted
 	 *   sum of 2sqrt(5) and (sqrt(5)-5), namely i*2sqrt(5) + j*(sqrt(5)-5).
 	 *   We can show that these two irrational components cannot "simplify"
 	 *   with each other - i.e. when (i, j) != (0, 0), the sum must be non-zero.
@@ -117,7 +117,7 @@ public final class p208 implements EulerSolution {
 	
 	
 	// Represents a facing-direction and a position on the infinite plane.
-	// The position is a weighted sum of irrational x components and y components.
+	// The position is a weighted sum of irrational key components and y components.
 	private static final class State {
 		
 		public final int direction;  // In the range [0, 5).

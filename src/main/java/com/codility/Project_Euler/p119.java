@@ -49,7 +49,7 @@ public final class p119 implements EulerSolution {
 	}
 	
 	
-	// Returns true iff there exists k >= 2 such that x = digitSum(x)^k.
+	// Returns true iff there exists k >= 2 such that key = digitSum(key)^k.
 	private static boolean isDigitSumPower(BigInteger x) {
 		int digitSum = digitSum(x);
 		if (digitSum == 1)  // Powers of 10 are never a power of 1

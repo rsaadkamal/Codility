@@ -40,8 +40,8 @@ public final class p133 implements EulerSolution {
 	 *     this contradicts the definition of k = A(n), the smallest value such that R(k) = 0 mod n.
 	 *     Hence the supposition that R(m) = 0 mod n is false.
 	 * 
-	 * Does there exist an x such that R(10^x) is a multiple of n? By the lemma, this is true if and only if
-	 * there exists an x such that 10^x is a multiple of k. This means k must be a product of 2's and 5's.
+	 * Does there exist an key such that R(10^key) is a multiple of n? By the lemma, this is true if and only if
+	 * there exists an key such that 10^key is a multiple of k. This means k must be a product of 2's and 5's.
 	 * 
 	 * Actually, we don't need to compute k = A(n) to perform this test. If k = 2^a * 5^b, then all sufficiently large
 	 * powers of 10 are a multiple of k. (If k has other prime factors, then no power of 10 is a multiple of k.)

@@ -40,47 +40,47 @@ public final class p243 implements EulerSolution {
 	 * We examine the two values
 	 *   R(d') = (totient(c) * (p - 1) * p^(k - 1)) / (c * p^k - 1) = constant * f(p, c, k) and
 	 *   R(d ) = (totient(c) * (q - 1) * q^(k - 1)) / (c * q^k - 1) = constant * f(q, c, k),
-	 *   where f(x, c, k) = (x - 1) x^(k - 1) / (c * x^k - 1).
+	 *   where f(key, c, k) = (key - 1) key^(k - 1) / (c * key^k - 1).
 	 * 
 	 * Given the crucial fact that p < q, if we want to show that R(d') <= R(d) then it is
-	 * sufficient to show that f(x, c, k) is a non-strictly increasing function with respect to x
+	 * sufficient to show that f(key, c, k) is a non-strictly increasing function with respect to key
 	 * (with c and k being fixed). To achieve this, we take the partial derivative with respect
-	 * to x and derive the fact that it is always non-negative. So we begin:
+	 * to key and derive the fact that it is always non-negative. So we begin:
 	 * 
-	 *   d/dx f(x, c, k) = [x^(k - 2) * (c*x^k - x*k + k - 1)] / [(c*x^k - 1)^2].
+	 *   d/dx f(key, c, k) = [key^(k - 2) * (c*key^k - key*k + k - 1)] / [(c*key^k - 1)^2].
 	 *   (omitting a tedious but elementary algebraic derivation)
 	 * 
-	 * Because x >= 2 and c >= 1, clearly the part of the denominator (c*x^k - 1) > 0.
-	 * Also, clearly part of the numerator x^(k - 2) > 0.
-	 * So next we tackle the (c*x^k - x*k + k - 1) part indirectly.
+	 * Because key >= 2 and c >= 1, clearly the part of the denominator (c*key^k - 1) > 0.
+	 * Also, clearly part of the numerator key^(k - 2) > 0.
+	 * So next we tackle the (c*key^k - key*k + k - 1) part indirectly.
 	 * 
 	 * The following lemma is a special case of Bernoulli's inequality.
-	 * For all k >= 0, x^k >= 1 + k*(x - 1). Proof by induction:
+	 * For all k >= 0, key^k >= 1 + k*(key - 1). Proof by induction:
 	 *   Base case, k = 0:
-	 *     x^k = x^0 = 1.  (l-hand side)
-	 *     1 + k*(x - 1) = 1 + 0*(x - 1) + 1.  (RHS)
+	 *     key^k = key^0 = 1.  (left-hand side)
+	 *     1 + k*(key - 1) = 1 + 0*(key - 1) + 1.  (RHS)
 	 *     1 >= 1.
 	 *   Induction step, k >= 0:
-	 *     x^k >= 1 + k*(x - 1).  (by assumption)
-	 *     x * x^k >= x * (1 + k*(x - 1)).
-	 *     x^(k + 1) >= x + x*k*(x - 1).  (a)
-	 *     (x - 1)^2 >= 0.  (squares are non-negative)
-	 *     x^2 - 2*x + 1 >= 0.
-	 *     k*x^2 - 2*k*x + k >= 0.
-	 *     k*x^2 - k*x >= k*x - k.
-	 *     x + k*x^2 - k*x >= x + k*x - k
-	 *                      = 1 + x + k*x - k - 1
-	 *                      = 1 + (k + 1)(x - 1).
-	 *     x + x*k*(x - 1) >= 1 + (k + 1)(x - 1).  (b)
-	 *     x^(k + 1) >= 1 + (k + 1)(x - 1).  (combine (a) and (b))
+	 *     key^k >= 1 + k*(key - 1).  (by assumption)
+	 *     key * key^k >= key * (1 + k*(key - 1)).
+	 *     key^(k + 1) >= key + key*k*(key - 1).  (a)
+	 *     (key - 1)^2 >= 0.  (squares are non-negative)
+	 *     key^2 - 2*key + 1 >= 0.
+	 *     k*key^2 - 2*k*key + k >= 0.
+	 *     k*key^2 - k*key >= k*key - k.
+	 *     key + k*key^2 - k*key >= key + k*key - k
+	 *                      = 1 + key + k*key - k - 1
+	 *                      = 1 + (k + 1)(key - 1).
+	 *     key + key*k*(key - 1) >= 1 + (k + 1)(key - 1).  (b)
+	 *     key^(k + 1) >= 1 + (k + 1)(key - 1).  (combine (a) and (b))
 	 * 
-	 * Now we deduce: c*x^k - x*k + k - 1
-	 *   >= x^k - x*k + k - 1  (because c >= 1)
-	 *   >= (1 + k*(x - 1)) - x*k + k - 1 = 0.  (using the x^k inequality lemma)
+	 * Now we deduce: c*key^k - key*k + k - 1
+	 *   >= key^k - key*k + k - 1  (because c >= 1)
+	 *   >= (1 + k*(key - 1)) - key*k + k - 1 = 0.  (using the key^k inequality lemma)
 	 * 
-	 * To summarize: x^(k - 2) > 0, (c*x^k - x*k + k - 1) >= 0, and (c x^k - 1)^2 > 0. Therefore we
-	 * conclude that f'(x, c, k) >= 0 for all real x > 1, which means the function is non-strictly increasing
-	 * when x increases. Hence with p < q, we have f(p, c, k) <= f(q, c, k), and finally that R(d') <= R(d).
+	 * To summarize: key^(k - 2) > 0, (c*key^k - key*k + k - 1) >= 0, and (c key^k - 1)^2 > 0. Therefore we
+	 * conclude that f'(key, c, k) >= 0 for all real key > 1, which means the function is non-strictly increasing
+	 * when key increases. Hence with p < q, we have f(p, c, k) <= f(q, c, k), and finally that R(d') <= R(d).
 	 * 
 	 * The consequence of this lemma is that for any particular target, {the minimum value of d
 	 * satisfying R(d) < target} will have the property that d uses all of the smallest prime factors

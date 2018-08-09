@@ -55,7 +55,7 @@ public final class p323 implements EulerSolution {
 	 *   being set to 1, with probability (n choose k) / 2^n, and the rest of the
 	 *   expected value calculation reduces to the value of E[X_{n-k}]. Therefore:
 	 *   E[X_n] = sum((n choose k) * (1 + E[X_{n-k}]) / 2^n for k in [0, n]).
-	 *   Simplifying further so that E[X_n] only appears on the l side, we get:
+	 *   Simplifying further so that E[X_n] only appears on the left side, we get:
 	 *   (2^n - 1) * E[X_n] = 2^n + sum((n choose k) * E[X_{n-k}] for k in [0, n-1]).
 	 *   E[X_n] = (2^n + sum((n choose k) * E[X_{n-k}] for k in [0, n-1])) / (2^n - 1).
 	 * 

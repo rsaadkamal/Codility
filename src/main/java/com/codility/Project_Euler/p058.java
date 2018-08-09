@@ -17,11 +17,11 @@ public final class p058 implements EulerSolution {
 	/* 
 	 * From the diagram, let's observe the four corners of an n * n square (where n is odd).
 	 * It's not hard to convince yourself that:
-	 * - The bottom r corner always has the value n^2.
+	 * - The bottom right corner always has the value n^2.
 	 * Working clockwise (backwards):
-	 * - The bottom l corner has the value n^2 - (n - 1).
-	 * - The top l corner has the value n^2 - 2(n - 1).
-	 * - The top r has the value n^2 - 3(n - 1).
+	 * - The bottom left corner has the value n^2 - (n - 1).
+	 * - The top left corner has the value n^2 - 2(n - 1).
+	 * - The top right has the value n^2 - 3(n - 1).
 	 * 
 	 * Furthermore, the number of elements on the diagonal is 2n - 1.
 	 */

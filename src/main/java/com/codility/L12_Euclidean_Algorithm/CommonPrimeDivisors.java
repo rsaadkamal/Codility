@@ -73,7 +73,7 @@ public class CommonPrimeDivisors {
             int temp = 0;
 
             /*
-             * we would like to reduce the x and y to 1
+             * we would like to reduce the key and y to 1
              * */
             while (x != 1) {
 

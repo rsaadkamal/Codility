@@ -84,7 +84,7 @@ public final class p060 implements EulerSolution {
 	}
 	
 	
-	// Tests whether parseInt(toString(x) + toString(y)) is prime.
+	// Tests whether parseInt(toString(key) + toString(y)) is prime.
 	private boolean isConcatPrime(int x, int y) {
 		int index = x * primes.length + y;
 		if (isConcatPrimeKnown.get(index))

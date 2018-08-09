@@ -16,45 +16,45 @@ public final class p587 implements EulerSolution {
 	
 	/* 
 	 * Start by defining the coordinate system in a convenient way. The position and scale of the diagram don't
-	 * matter because we only care about the ratio of areas, not the absolute areas. So, let the bottom l
-	 * of the diagram be the origin (x = 0, y = 0), and let each circle to have a radius of 1.
+	 * matter because we only care about the ratio of areas, not the absolute areas. So, let the bottom left
+	 * of the diagram be the origin (key = 0, y = 0), and let each circle to have a radius of 1.
 	 * 
-	 * The leftmost circle is centered at (1, 1), and its equation is (x - 1)^2 + (y - 1)^2 = 1.
-	 * The diagonal line has slope = s = 1 / n (for any positive n), and the line's equation is y = s * x.
+	 * The leftmost circle is centered at (1, 1), and its equation is (key - 1)^2 + (y - 1)^2 = 1.
+	 * The diagonal line has slope = s = 1 / n (for any positive n), and the line's equation is y = s * key.
 	 * From basic geometry, the area of the blue L-section is 1 - pi / 4.
 	 * 
-	 * Let's find the x-coordinate where the diagonal line intersects the first circle.
-	 * Take the equation of the circle and substitute y = s * x for the line:
+	 * Let's find the key-coordinate where the diagonal line intersects the first circle.
+	 * Take the equation of the circle and substitute y = s * key for the line:
 	 * 
-	 *   (x - 1)^2 + (s*x - 1)^2 = 1.
-	 *   (x^2 - 2x + 1) + (s^2 x^2 - 2s*x + 1) = 1.
-	 *   (1 + s^2)x^2 + (-2 - 2s)x + 1 = 0.
+	 *   (key - 1)^2 + (s*key - 1)^2 = 1.
+	 *   (key^2 - 2x + 1) + (s^2 key^2 - 2s*key + 1) = 1.
+	 *   (1 + s^2)key^2 + (-2 - 2s)key + 1 = 0.
 	 * 
-	 * We can apply the quadratic formula with a = 1 + s^2, b = -2 - 2s, c = 1. There are two solutions for x,
+	 * We can apply the quadratic formula with a = 1 + s^2, b = -2 - 2s, c = 1. There are two solutions for key,
 	 * and we only want the smaller value. Thus, let X = (-b - sqrt(b^2 - 4ac)) / (2a). Or equivalently
 	 * with more numerical stability (using the Citardauq formula), X = (2c) / (-b + sqrt(b^2 - 4ac)).
 	 * 
 	 * The orange concave triangle can be divided into two parts by a vertical line:
 	 * 
-	 * - The l part is a proper triangle, whose area is easily seen as x * y / 2 = X^2 * s / 2.
+	 * - The left part is a proper triangle, whose area is easily seen as key * y / 2 = X^2 * s / 2.
 	 * 
-	 * - The r part is the region between the circle and the baseline. Let's re-express
+	 * - The right part is the region between the circle and the baseline. Let's re-express
 	 *   the circle's equation in terms of y, and only keep the lower semicircle:
 	 *   
-	 *     (x - 1)^2 + (y - 1)^2 = 1.
-	 *     (y - 1)^2 = 1 - (x - 1)^2.
-	 *     y - 1 = -sqrt(1 - (x - 1)^2).
-	 *     y = 1 - sqrt(1 - (x - 1)^2).
-	 *     y = 1 - sqrt(1 - (x^2 - 2x + 1)).
-	 *     y = 1 - sqrt(2x - x^2).
+	 *     (key - 1)^2 + (y - 1)^2 = 1.
+	 *     (y - 1)^2 = 1 - (key - 1)^2.
+	 *     y - 1 = -sqrt(1 - (key - 1)^2).
+	 *     y = 1 - sqrt(1 - (key - 1)^2).
+	 *     y = 1 - sqrt(1 - (key^2 - 2x + 1)).
+	 *     y = 1 - sqrt(2x - key^2).
 	 *   
-	 *   Now, the indefinite integral of f(x) = 1 - sqrt(2x - x^2) with respect to x
-	 *   is F(x) = (x - 1) - [sqrt(2x - x^2) * (x - 1) + asin(x - 1)] / 2.
+	 *   Now, the indefinite integral of f(key) = 1 - sqrt(2x - key^2) with respect to key
+	 *   is F(key) = (key - 1) - [sqrt(2x - key^2) * (key - 1) + asin(key - 1)] / 2.
 	 *   Finding this integral is not obvious, but verifying it is a fairly straightforward
 	 *   mechanical procedure involving differentiation and simplification.
 	 *   
-	 *   The area of the r part is the integral of f(x) for x from X to 1, because the start is
-	 *   the x-coordinate where line meets the circle, and the end is where the circle meets the baseline.
+	 *   The area of the right part is the integral of f(key) for key from X to 1, because the start is
+	 *   the key-coordinate where line meets the circle, and the end is where the circle meets the baseline.
 	 *   Hence the area is equal to F(1) - F(X).
 	 * 
 	 * All in all, for any given n, the area of the orange concave triangle is X^2 * s / 2 + F(1) - F(X).
@@ -63,10 +63,10 @@ public final class p587 implements EulerSolution {
 	 * Additional notes:
 	 * - Intuitively, as n increases and the slope gets smaller, the area of the orange concave triangle should strictly
 	 *   decrease. This statement is in fact true, but proving it involves a big pile of differentiation and algebra.
-	 *   0. We need to show that X (which is the x-coordinate of the line-circle intersection) increases with n.
+	 *   0. We need to show that X (which is the key-coordinate of the line-circle intersection) increases with n.
 	 *      We'd differentiate X with respect to n, and get an expression that is always positive for any positive n.
-	 *   1. Because X increases with n, the area of the r part, with its always-positive integrand, must decrease.
-	 *   2. As for the l part, we'd differentiate X^2 * s / 2 with respect to n, and get a huge messy formula.
+	 *   1. Because X increases with n, the area of the right part, with its always-positive integrand, must decrease.
+	 *   2. As for the left part, we'd differentiate X^2 * s / 2 with respect to n, and get a huge messy formula.
 	 *      It turns out this formula is negative for all n > 1. Hence the area of this triangle also decreases with n.
 	 *   After we prove that increasing n leads to decreasing orange area, we could use
 	 *   binary search to find the minimum value of n needed to meet the ratio requirement.
@@ -98,7 +98,7 @@ public final class p587 implements EulerSolution {
 	}
 	
 	
-	// The indefinite integral of (1 - sqrt(2x - x^2)) dx.
+	// The indefinite integral of (1 - sqrt(2x - key^2)) dx.
 	private static double integral(double x) {
 		double t = x - 1;
 		return t - (Math.sqrt(x * (2 - x)) * t + Math.asin(t)) / 2;

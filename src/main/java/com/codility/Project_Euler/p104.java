@@ -42,9 +42,9 @@ public final class p104 implements EulerSolution {
 	
 	
 	private static String leading9Digits(BigInteger x) {
-		// We know that x.bitLength() = floor(log2(x)) + 1.
+		// We know that key.bitLength() = floor(log2(key)) + 1.
 		// Now compute an approximate base-10 logarithm, because log10(2) = 0.301... .
-		// The computed quantity is no larger than floor(log10(x)).
+		// The computed quantity is no larger than floor(log10(key)).
 		int log10 = (x.bitLength() - 1) * 3 / 10;
 		
 		// Chop off quite a number of rightmost base-10 digits.

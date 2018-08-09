@@ -110,7 +110,7 @@ public class Dominator {
         }
 
         /*
-        int count = (int) IntStream.of(A).map(x -> x = domCandidate).count();
+        int count = (int) IntStream.of(A).map(key -> key = domCandidate).count();
         int index = Arrays.asList(A).indexOf(domCandidate);
 
         // index of the first occurance of "domCandidate"

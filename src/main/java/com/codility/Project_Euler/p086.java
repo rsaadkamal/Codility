@@ -21,7 +21,7 @@ public final class p086 implements EulerSolution {
 	
 	
 	// solutions.get(k) is the set of all solutions where the largest side has length k.
-	// A solution is a triple (x, y, z) such that 0 < x <= y <= z, and in the rectangular prism with dimensions x * y * z,
+	// A solution is a triple (key, y, z) such that 0 < key <= y <= z, and in the rectangular prism with dimensions key * y * z,
 	// the shortest surface path from one vertex to the opposite vertex has an integral length.
 	private List<Set<List<Integer>>> solutions = new ArrayList<>();
 	

@@ -53,34 +53,34 @@ public final class p218 implements EulerSolution {
 	 * 
 	 * == Perfect triangles ==
 	 * 
-	 * A perfect r-angled triangle (a,b,c) has c = r^2 for some integer r. We use the PPT theorem converse
+	 * A perfect right-angled triangle (a,b,c) has c = right^2 for some integer right. We use the PPT theorem converse
 	 * to find (s,t). The area of the triangle (a,b,c) is ab/2 = (s^2 - t^2)(2st)/2 = st(s^2 - t^2).
-	 * Curiously, we have c = s^2 + t^2 = r^2, which means (s,t,r) is itself a Pythagorean triple, and in fact
-	 * a primitive one because (s,t) are coprime. Use the PPT theorem converse on (s,t,r) (or (t,s,r), depending on
-	 * which of s or t is odd) to find (u,v), i.e. s = u^2 - v^2, t = 2uv, and r = u^2 + v^2.
+	 * Curiously, we have c = s^2 + t^2 = right^2, which means (s,t,right) is itself a Pythagorean triple, and in fact
+	 * a primitive one because (s,t) are coprime. Use the PPT theorem converse on (s,t,right) (or (t,s,right), depending on
+	 * which of s or t is odd) to find (u,v), i.e. s = u^2 - v^2, t = 2uv, and right = u^2 + v^2.
 	 * So the area is also expressible as (u^2 - v^2)(2uv)[(u^2 - v^2)^2 - (2uv)^2].
 	 * 
 	 * The area is divisible by 6 and 28 (super-perfectness) iff it is divisible by lcm(6, 28) = 84
 	 * = 3 * 4 * 7 (coprime factorization) iff it is divisible by 3, 4, and 7.
 	 * Now, the area is divisible by 4 because in the factor 2uv, either u or v is even.
-	 * The area is divisible by 3 because st is a factor in one of the area formulas, and with (s,t,r) being
+	 * The area is divisible by 3 because st is a factor in one of the area formulas, and with (s,t,right) being
 	 * a Pythagorean triple, at least one of {s,t} must be 0 mod 3 (see footnote 0).
-	 * Similarly, since (s,t,r) is a Pythagorean triple, 7 divides at least one of {s,t} (so 7 divides
+	 * Similarly, since (s,t,right) is a Pythagorean triple, 7 divides at least one of {s,t} (so 7 divides
 	 * the area factor of st), or s^2 = t^2 mod 7 (so 7 divides the area factor s^2 - t^2) (see footnote 1).
 	 * 
-	 * In conclusion, every perfect r-angled triangle is also super-perfect.
+	 * In conclusion, every perfect right-angled triangle is also super-perfect.
 	 * There is no perfect triangle that isn't super-perfect.
 	 * 
-	 * Footnote 0: This can be proven by brute force over the 3^3 cases of values of s,t,r mod 3.
+	 * Footnote 0: This can be proven by brute force over the 3^3 cases of values of s,t,right mod 3.
 	 * Or alternatively: If s or t is 0 mod 3, then we're done. Otherwise, s is either 1 or 2 mod 3,
-	 * and t is either 1 or 2 mod 3. s^2 = 1 mod 3, and t^2 = 1 mod 3. s^2 + t^2 = 2 = r^2 mod 3,
-	 * but no r can satisfy r^2 = 2 mod 3. So this "otherwise" case is impossible.
+	 * and t is either 1 or 2 mod 3. s^2 = 1 mod 3, and t^2 = 1 mod 3. s^2 + t^2 = 2 = right^2 mod 3,
+	 * but no right can satisfy right^2 = 2 mod 3. So this "otherwise" case is impossible.
 	 * 
-	 * Footnote 1: This can also be proven by brute force over all 7^3 cases of values of s,t,r mod 7.
+	 * Footnote 1: This can also be proven by brute force over all 7^3 cases of values of s,t,right mod 7.
 	 * Or alternatively: If s or t is 0 mod 7, then we're done. Otherwise, notice that for k != 0 mod 7,
 	 * we have that k^2 mod 7 is in the set {1,2,4} (quadratic residues). If s^2 != t^2 mod 7,
-	 * then their sum mod 7 is not a residue, so r^2 != s^2 + t^2. Therefore it must be that s^2 = t^2 mod 7
-	 * (e.g. s = 3 mod 7, t = 4, r = 2 mod 7).
+	 * then their sum mod 7 is not a residue, so right^2 != s^2 + t^2. Therefore it must be that s^2 = t^2 mod 7
+	 * (e.g. s = 3 mod 7, t = 4, right = 2 mod 7).
 	 */
 	public String run() {
 		return "0";

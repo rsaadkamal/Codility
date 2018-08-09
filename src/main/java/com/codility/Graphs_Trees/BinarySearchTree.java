@@ -162,7 +162,7 @@ public class BinarySearchTree {
         }
 
         /*
-         * has l child exist
+         * has left child exist
          * */
         else if (focus.rightChild == null) {
 
@@ -177,7 +177,7 @@ public class BinarySearchTree {
 
 
         /*
-         * has r child exit
+         * has right child exit
          * */
         else if (focus.leftChild == null) {
 
@@ -294,7 +294,7 @@ public class BinarySearchTree {
         Stack<Node> stack = new Stack<Node>();
 
         /*
-         * take all the l nodes in a LIFO structure
+         * take all the left nodes in a LIFO structure
          * */
         while (node != null) {
 
@@ -412,7 +412,7 @@ public class BinarySearchTree {
 
     /*
      * design an algorithm to get the parent of
-     * a node with provided x
+     * a node with provided key
      * */
     public static Node getParent(int key) {
 
@@ -534,7 +534,7 @@ public class BinarySearchTree {
             } else {
 
                 /*
-                 * have child in both l and r sides
+                 * have child in both left and right sides
                  * */
                 queue.remove();
             }
@@ -711,10 +711,10 @@ public class BinarySearchTree {
         ALGORITHM
         ---------
 
-        i.  if the node  is root or the r child exist,
-            return the l most child of r child
+        i.  if the node  is root or the right child exist,
+            return the left most child of right child
 
-        ii. if have parent and don't have the r child,
+        ii. if have parent and don't have the right child,
         */
 
     /*
@@ -750,7 +750,7 @@ public class BinarySearchTree {
         }
 
         /*
-         * have parent but no r child
+         * have parent but no right child
          * */
         else {
 
@@ -759,7 +759,7 @@ public class BinarySearchTree {
 
             /*
              * iterate till the parent exists and the children
-             * is not the l children of parent
+             * is not the left children of parent
              * */
             while (parent != null && parent.leftChild != child) {
 
@@ -773,7 +773,7 @@ public class BinarySearchTree {
 
 
     /*
-     * get the smallest node of the r sub-tree
+     * get the smallest node of the right sub-tree
      */
     public static Node leftMostChild(Node n) {
 
@@ -834,7 +834,7 @@ public class BinarySearchTree {
 
         /*
          * both of the nodes are in the same sides of root. Check
-         * if they are in the l or r side of the root
+         * if they are in the left or right side of the root
          * */
         Node child = p_OnLeft ? node.leftChild : node.rightChild;
 
@@ -875,7 +875,7 @@ public class BinarySearchTree {
 
         /*
          * both the p and q nodes are in the region
-         * defined by r child of tree
+         * defined by right child of tree
          * */
         else if (nodesFromLeft == 0) {
 

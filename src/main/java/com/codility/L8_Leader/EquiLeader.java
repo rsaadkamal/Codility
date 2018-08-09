@@ -124,14 +124,14 @@ public class EquiLeader {
              * PREMISE
              * -------
              *
-             * if certain number x has higher frequency than all other numbers of an
-             * array, x has occurance more than half of the total array size and is
+             * if certain number key has higher frequency than all other numbers of an
+             * array, key has occurance more than half of the total array size and is
              * a dominator
              *
              *
              *  Let the occurance of X in section of L is C. So the number of other  elements in L
              *  is L-C. So we have C > L-C, which is the same as 2C > L, or C > L/2. So, if
-             *  we can prove, x is greater than other types of element in A section, then x
+             *  we can prove, key is greater than other types of element in A section, then key
              *  will be the dominator.
              *
              *  Dominator is greater then half of current and rest section of the array.

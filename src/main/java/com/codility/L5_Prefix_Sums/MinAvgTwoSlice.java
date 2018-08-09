@@ -83,7 +83,7 @@ public class MinAvgTwoSlice {
 
 			iii. update the result comparing them
 
-			iv.  move forward the endIndex 1 step and repeat the process x
+			iv.  move forward the endIndex 1 step and repeat the process key
         */
 
         /*

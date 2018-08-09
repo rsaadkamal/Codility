@@ -95,10 +95,10 @@ public final class p122 implements EulerSolution {
 				if (x <= max)
 					break;  // Early exit due to ascending order
 				if (x <= LIMIT) {
-					// Append x to the current chain and recurse
+					// Append key to the current chain and recurse
 					chain.push(x);
 					if (minOperations[x] == -1) {
-						// For each unique value of x, we set minOperations[x] only once
+						// For each unique value of key, we set minOperations[key] only once
 						// because we do progressive deepening in the depth1-first search
 						minOperations[x] = chain.size - 1;
 						numUnknown--;

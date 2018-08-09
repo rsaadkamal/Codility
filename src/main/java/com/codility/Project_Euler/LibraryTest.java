@@ -90,10 +90,10 @@
 //	@Test public void testSqrtIntRandomly() {
 //		final int trials = 1000000;
 //		for (int i = 0; i < trials; i++) {
-//			int x = rand.nextInt() >>> 1;  // uint31
-//			int y = Library.sqrt(x);
-//			assertTrue(0 <= y && y <= x);
-//			assertTrue((long)y * y <= x && x < (y + 1L) * (y + 1L));
+//			int key = rand.nextInt() >>> 1;  // uint31
+//			int y = Library.sqrt(key);
+//			assertTrue(0 <= y && y <= key);
+//			assertTrue((long)y * y <= key && key < (y + 1L) * (y + 1L));
 //		}
 //	}
 //
@@ -138,11 +138,11 @@
 //	@Test public void testSqrtLongRandomly() {
 //		final int trials = 1000000;
 //		for (int i = 0; i < trials; i++) {
-//			long x = rand.nextLong() >>> 1;  // uint63
-//			long y = Library.sqrt(x);
-//			assertTrue(0 <= y && y <= x);
-//			if (x > 0)
-//				assertTrue(y <= x / y && x / (y + 1) < y + 1);
+//			long key = rand.nextLong() >>> 1;  // uint63
+//			long y = Library.sqrt(key);
+//			assertTrue(0 <= y && y <= key);
+//			if (key > 0)
+//				assertTrue(y <= key / y && key / (y + 1) < y + 1);
 //		}
 //	}
 //
@@ -282,15 +282,15 @@
 //			int mod = rand.nextInt() >>> 1;  // uint31
 //			if (mod < 2)
 //				continue;
-//			int x = rand.nextInt(mod);
-//			if (Library.gcd(x, mod) == 1) {
-//				int y = Library.reciprocalMod(x, mod);
+//			int key = rand.nextInt(mod);
+//			if (Library.gcd(key, mod) == 1) {
+//				int y = Library.reciprocalMod(key, mod);
 //				assertTrue(1 <= y && y < mod);
-//				assertEquals(1, (long)x * y % mod);
-//				assertEquals(x, Library.reciprocalMod(y, mod));
+//				assertEquals(1, (long)key * y % mod);
+//				assertEquals(key, Library.reciprocalMod(y, mod));
 //			} else {
 //				try {
-//					Library.reciprocalMod(x, mod);
+//					Library.reciprocalMod(key, mod);
 //					Assert.fail();
 //				} catch (IllegalArgumentException e) {}  // Pass
 //			}
@@ -369,15 +369,15 @@
 //	@Test public void testGcdRandomly() {
 //		final int trials = 1000000;
 //		for (int i = 0; i < trials; i++) {
-//			int x = rand.nextInt() >>> 1;  // uint31
+//			int key = rand.nextInt() >>> 1;  // uint31
 //			int y = rand.nextInt() >>> 1;  // uint31
-//			int z = Library.gcd(x, y);
-//			if (x == 0)
+//			int z = Library.gcd(key, y);
+//			if (key == 0)
 //				assertEquals(y, z);
 //			else if (y == 0)
-//				assertEquals(x, z);
-//			else  // x, y > 0
-//				assertTrue(0 < z && z <= x && z <= y && x % z == 0 && y % z == 0);
+//				assertEquals(key, z);
+//			else  // key, y > 0
+//				assertTrue(0 < z && z <= key && z <= y && key % z == 0 && y % z == 0);
 //		}
 //	}
 //

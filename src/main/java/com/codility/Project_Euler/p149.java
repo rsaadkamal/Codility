@@ -31,18 +31,18 @@ public final class p149 implements EulerSolution {
 		// Scan along all line directions and positions
 		int max = 0;
 		for (int i = 0; i < SIZE; i++) {
-			max = Math.max(getMaxSubstringSum(0, i, +1,  0), max);  // Horizontal from l edge
+			max = Math.max(getMaxSubstringSum(0, i, +1,  0), max);  // Horizontal from left edge
 			max = Math.max(getMaxSubstringSum(i, 0,  0, +1), max);  // Vertical from top edge
-			max = Math.max(getMaxSubstringSum(0, i, +1, +1), max);  // Diagonal from l edge
+			max = Math.max(getMaxSubstringSum(0, i, +1, +1), max);  // Diagonal from left edge
 			max = Math.max(getMaxSubstringSum(i, 0, +1, +1), max);  // Diagonal from top edge
 			max = Math.max(getMaxSubstringSum(i, 0, -1, +1), max);  // Anti-diagonal from top edge
-			max = Math.max(getMaxSubstringSum(SIZE - 1, i, -1, +1), max);  // Anti-diagonal from r edge
+			max = Math.max(getMaxSubstringSum(SIZE - 1, i, -1, +1), max);  // Anti-diagonal from right edge
 		}
 		return Integer.toString(max);
 	}
 	
 	
-	// For the sequence of numbers in the grid at positions (x, y), (x+dx, y+dy), (x+2*dx, y+2*dy), ... until the
+	// For the sequence of numbers in the grid at positions (key, y), (key+dx, y+dy), (key+2*dx, y+2*dy), ... until the
 	// last in-bounds indices, this function returns the maximum sum among all possible substrings of this sequence.
 	private int getMaxSubstringSum(int x, int y, int dx, int dy) {
 		int max = 0;

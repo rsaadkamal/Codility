@@ -86,7 +86,7 @@ K<-15, N<=10^9, we need to determine the number of uneaten leaves.
 
         [2, 4, 5] is a j member jump numbers, all leaves which are multiple of 2, 4, and 5 are
 
-        eaten, leaves 1,3,7,9 are l, and thus the no. 4
+        eaten, leaves 1,3,7,9 are left, and thus the no. 4
 */
 
 
@@ -159,7 +159,7 @@ public class CountUneatenLeaves {
         int combination[] = new int[K];
 
         // position of current index
-        //  if (r = 1)              r*
+        //  if (right = 1)              right*
         //  index ==>       0   |   1   |   2
         //  element ==>     A   |   B   |   C
 
@@ -171,12 +171,12 @@ public class CountUneatenLeaves {
 
 
             /*
-             * possible indexes for 1st position "r=0" are "0,1,2" --> "A,B,C"
-             * possible indexes for 2nd position "r=1" are "1,2,3" --> "B,C,D"
+             * possible indexes for 1st position "right=0" are "0,1,2" --> "A,B,C"
+             * possible indexes for 2nd position "right=1" are "1,2,3" --> "B,C,D"
              * */
 
             /*
-             * for r = 0 ==> index < (4+ (0 - 2)) = 2
+             * for right = 0 ==> index < (4+ (0 - 2)) = 2
              * */
             if (index <= (N + (r - K))) {
                 combination[r] = index;

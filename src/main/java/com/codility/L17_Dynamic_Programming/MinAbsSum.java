@@ -105,9 +105,9 @@ public class MinAbsSum {
         for (int i = 1; i < counts.length; i++) {
 
             /*
-             * we check r[j]. if it's not less than 0, then it means we've reached j
+             * we check right[j]. if it's not less than 0, then it means we've reached j
              * value with previous steps, so no need to spend current if it's less
-             * than 0, spend 1 current number if r[j - i] has been reached
+             * than 0, spend 1 current number if right[j - i] has been reached
              * */
             for (int j = 0; j < Total.length; j++) {
 
@@ -122,8 +122,8 @@ public class MinAbsSum {
                 }
 
                 /*
-                 * the value in r[j] then means how many of the current
-                 * values are l when we reached the value j
+                 * the value in right[j] then means how many of the current
+                 * values are left when we reached the value j
                  * */
             }
         }

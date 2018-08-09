@@ -16,7 +16,7 @@ public final class p094 implements EulerSolution {
 	
 	/* 
 	 * Consider an arbitrary almost equilateral triangle with side lengths (c, c, c +/- 1).
-	 * Split it down the middle to get a r triangle, and label the new sides.
+	 * Split it down the middle to get a right triangle, and label the new sides.
 	 *     /\               /|
 	 *  c /  \ c         c / | b
 	 *   /    \    -->    /  |
