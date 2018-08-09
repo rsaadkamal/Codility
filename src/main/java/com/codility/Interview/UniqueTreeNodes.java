@@ -134,9 +134,9 @@ public class UniqueTreeNodes {
 
         for (List<Integer> l : list) {
 
-            System.out.println(l);
-
             set = new HashSet<>();
+
+            System.out.println(l);
             set.addAll(l);
 
             max = max < set.size() ? set.size() : max;
@@ -164,9 +164,15 @@ public class UniqueTreeNodes {
             stack.push(node);
         }
 
-        if (!stack.isEmpty()) {
-            list = new ArrayList<>();
+        if (stack.peek().right != null) {
+            findPaths(stack.peek().right, lists, stack);
         }
+
+        if (!stack.isEmpty()) {
+            return;
+        }
+
+        list = new ArrayList<>();
 
         for (Node n : stack) {
             list.add(n.key);
@@ -176,22 +182,21 @@ public class UniqueTreeNodes {
 
         Node right = null;
 
-        while (stack.peek().right == null) {
+        /*
+         * i.    pop till the stack has elements
+         * ii.   delete the old left paths that are already included
+         * iii.  delete the old right path that are already included
+         *
+         * */
+        while (!stack.isEmpty() && (stack.peek().right == null || stack.peek().right.equals(right))) {
             right = stack.pop();
         }
 
-        /*
-         * there will be one path where all the child will be the right child of their parents
-         * after the poping, we need to check if the child is the right child unless we will go
-         * into an infinite loop
-         * */
-        if (stack.isEmpty() || stack.peek().right.equals(right)) {
-            return;
+        if (!stack.isEmpty()) {
+
+            right = stack.peek().right;
+            findPaths(right, lists, stack);
         }
-
-        right = stack.peek().right;
-
-        findPaths(right, lists, stack);
     }
 
 
@@ -279,17 +284,38 @@ public class UniqueTreeNodes {
                4    1   6
               /
              5
+
+                    4
+                  /  \
+                 5    6
+                /    / \
+               4    1   6
+              / \
+             5  12
+                 \
+                 13
+
         * */
 
         Node root = new Node(4);
 
         root.left = new Node(5);
+        root.left.right = new Node(15);
+        root.left.right.left = new Node(115);
+        root.left.right.right = new Node(215);
+
+
         root.left.left = new Node(4);
+
+
+        root.left.left.right = new Node(12);
+        root.left.left.right.right = new Node(13);
+
+
         root.left.left.left = new Node(5);
 
         root.right = new Node(6);
         root.right.left = new Node(1);
-
         root.right.right = new Node(6);
 
         System.out.println(solution(root));

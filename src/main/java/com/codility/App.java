@@ -1,6 +1,8 @@
 package com.codility;
 
 
+import java.util.Stack;
+
 public class App {
 
 
@@ -15,6 +17,9 @@ public class App {
 
     public static void main(String[] args) {
 
+        Stack<Integer> stack = new Stack<>();
+
+        System.out.println(stack.peek());
     }
 }
 

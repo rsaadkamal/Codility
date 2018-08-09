@@ -3704,90 +3704,8 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Fluorum_2014/TripPlanning.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/PolygonConcavityIndex.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/PolygonConcavityIndex.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/StrSymmetryPoint.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/StrSymmetryPoint.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/TreeHeight.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/TreeHeight.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/TreeHeightTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Future_Training/TreeHeightTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Geeks_For_Geeks/TwoDuplicates.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Geeks_For_Geeks/TwoDuplicates.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/Graph.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2015_Challenge/SlalomSkiing.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2015_Challenge/SlalomSkiing.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/DwarfsRafting.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/DwarfsRafting.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/HilbertMaze.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/HilbertMaze.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/RectangleBuilderGreaterArea.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Indeed_Prime_2016_Challenge/RectangleBuilderGreaterArea.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountPrefix.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountUneatenLeaves.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountUneatenLeaves.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/MinimumScore.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/MinimumScore.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/RestStops.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/RestStops.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueNodes.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountSemiprimes.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L11_Sieve_Of_Eratosthenes/CountSemiprimes.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L12_Euclidean_Algorithm/CommonPrimeDivisors.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L12_Euclidean_Algorithm/CommonPrimeDivisors.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/Ladder.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/Ladder.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/CountDistinctSlices.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/CountDistinctSlices.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L17_Dynamic_Programming/MinAbsSum.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/CyclicRotation.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/MinAvgTwoSlice.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/MinAvgTwoSlice.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L6_Sorting/NumberOfDiscIntersections.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L7_Stacks_And_Queues/StoneWall.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/Dominator.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/Dominator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/EquiLeader.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/EquiLeader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxDoubleSliceSum.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxDoubleSliceSum.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/Library.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/Library.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/LibraryTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/LibraryTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p005.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p005.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p015.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p015.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p018.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p018.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p028.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p028.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p032.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p032.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p037.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p037.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p044.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p044.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p058.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p058.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p060.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p060.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p066.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p066.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p067.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p067.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p080.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p080.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p086.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p086.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p091.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p091.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p094.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p094.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p100.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p100.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p104.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p104.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p106.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p106.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p108.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p108.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p119.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p119.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p122.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p122.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p128.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p128.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p133.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p133.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p135.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p135.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p142.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p142.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p145.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p145.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p149.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p149.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p166.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p166.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p171.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p171.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p188.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p188.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p197.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p197.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p208.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p208.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p211.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p211.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p218.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p218.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p222.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p222.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p243.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p243.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p271.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p271.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p287.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p287.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p301.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p301.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p303.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p303.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p323.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p323.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p329.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p329.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p348.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p348.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p387.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p387.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p425.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p425.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p433.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p433.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p451.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p451.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p518.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p518.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p587.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Project_Euler/p587.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/App.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/App.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/Interview/UniqueTreeNodes.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/Interview/UniqueTreeNodes.class" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -4352,12 +4270,22 @@
       <file leaf-file-name="UniqueTreeNodes.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+            <state relative-caret-position="235">
+              <caret line="170" column="12" lean-forward="false" selection-start-line="170" selection-start-column="12" selection-end-line="170" selection-end-column="12" />
               <folding>
                 <element signature="e#2566#2567#0" expanded="true" />
                 <element signature="e#2604#2605#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -4486,8 +4414,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountPrefix.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueNodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" />
       </list>
     </option>
@@ -4821,8 +4749,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.UniqueTreeNodes" />
-        <item index="1" class="java.lang.String" itemvalue="Application.PrefixSuffixLength" />
-        <item index="2" class="java.lang.String" itemvalue="Application.App" />
+        <item index="1" class="java.lang.String" itemvalue="Application.App" />
+        <item index="2" class="java.lang.String" itemvalue="Application.PrefixSuffixLength" />
         <item index="3" class="java.lang.String" itemvalue="Application.PhoneNumber" />
         <item index="4" class="java.lang.String" itemvalue="Application.FibFrog" />
       </list>
@@ -4907,12 +4835,12 @@
       <workItem from="1533552244092" duration="28085000" />
       <workItem from="1533704498816" duration="11279000" />
       <workItem from="1533742485453" duration="206000" />
-      <workItem from="1533789959143" duration="4903000" />
+      <workItem from="1533789959143" duration="11167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="491307000" />
+    <option name="totallyTimeSpent" value="497571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -4927,7 +4855,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.5028986" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -4938,7 +4866,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29130435" sideWeight="0.51599145" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32225433" sideWeight="0.49710146" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32225433" sideWeight="0.49710146" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -4986,10 +4914,120 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>159</line>
+          <properties />
+          <option name="timeStamp" value="450" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>161</line>
+          <properties />
+          <option name="timeStamp" value="451" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>162</line>
+          <properties />
+          <option name="timeStamp" value="452" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="453" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>166</line>
+          <properties />
+          <option name="timeStamp" value="454" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>167</line>
+          <properties />
+          <option name="timeStamp" value="455" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>170</line>
+          <properties />
+          <option name="timeStamp" value="456" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>177</line>
+          <properties />
+          <option name="timeStamp" value="458" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>180</line>
+          <properties />
+          <option name="timeStamp" value="459" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>182</line>
+          <properties />
+          <option name="timeStamp" value="460" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>190</line>
+          <properties />
+          <option name="timeStamp" value="461" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>191</line>
+          <properties />
+          <option name="timeStamp" value="462" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>198</line>
+          <properties />
+          <option name="timeStamp" value="463" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>201</line>
+          <properties />
+          <option name="timeStamp" value="464" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>204</line>
+          <properties />
+          <option name="timeStamp" value="465" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>209</line>
+          <properties />
+          <option name="timeStamp" value="466" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>200</line>
+          <properties />
+          <option name="timeStamp" value="468" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
+          <line>130</line>
+          <properties />
+          <option name="timeStamp" value="469" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="450" />
+      <option name="time" value="470" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -5361,13 +5399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/CountCities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -5376,10 +5407,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+        <state relative-caret-position="235">
+          <caret line="170" column="12" lean-forward="false" selection-start-line="170" selection-start-column="12" selection-end-line="170" selection-end-column="12" />
           <folding>
             <element signature="e#2566#2567#0" expanded="true" />
             <element signature="e#2604#2605#0" expanded="true" />
