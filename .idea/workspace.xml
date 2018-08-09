@@ -13,6 +13,7 @@
       <change beforePath="" afterPath="$USER_HOME$/.idea/vcs.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/workspace.xml" />
       <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java" />
       <change beforePath="" afterPath="$USER_HOME$/Library/Preferences/CLion2018.1/options/editor.xml" />
       <change beforePath="" afterPath="$USER_HOME$/Library/Preferences/CLion2018.1/options/runner.layout.xml" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/Solarized Light.icls" />
@@ -3704,7 +3705,14 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/App$Tree.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/App.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/App.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/Interview/NumPermutation.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/Interview/NumPermutation.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/Interview/PrefixSuffixLength.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/Interview/PrefixSuffixLength.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/Interview/UniqueTreeNodes$Tree.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/Interview/UniqueTreeNodes$Tree.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/codility/Interview/UniqueTreeNodes.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/Interview/UniqueTreeNodes.class" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
@@ -4267,24 +4275,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UniqueTreeNodes.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="170" column="12" lean-forward="false" selection-start-line="170" selection-start-column="12" selection-end-line="170" selection-end-column="12" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
-                <element signature="e#2566#2567#0" expanded="true" />
-                <element signature="e#2604#2605#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
+      <file leaf-file-name="GetChange.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="404">
+              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -4366,7 +4373,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/Dominator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L8_Leader/EquiLeader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxProfit.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L9_Maximum_Slice/MaxSliceSum.java" />
@@ -4411,12 +4417,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L15_Caterpiller_Method/MinAbsSumOfTwo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L4_Counting_Elements/MissingInteger.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/Test.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountPrefix.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueNodes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
       </list>
     </option>
   </component>
@@ -4563,7 +4570,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -4748,9 +4755,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.UniqueTreeNodes" />
-        <item index="1" class="java.lang.String" itemvalue="Application.App" />
-        <item index="2" class="java.lang.String" itemvalue="Application.PrefixSuffixLength" />
+        <item index="0" class="java.lang.String" itemvalue="Application.App" />
+        <item index="1" class="java.lang.String" itemvalue="Application.PrefixSuffixLength" />
+        <item index="2" class="java.lang.String" itemvalue="Application.UniqueTreeNodes" />
         <item index="3" class="java.lang.String" itemvalue="Application.PhoneNumber" />
         <item index="4" class="java.lang.String" itemvalue="Application.FibFrog" />
       </list>
@@ -4835,12 +4842,12 @@
       <workItem from="1533552244092" duration="28085000" />
       <workItem from="1533704498816" duration="11279000" />
       <workItem from="1533742485453" duration="206000" />
-      <workItem from="1533789959143" duration="11167000" />
+      <workItem from="1533789959143" duration="19237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="497571000" />
+    <option name="totallyTimeSpent" value="505641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -4866,7 +4873,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29130435" sideWeight="0.51599145" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32225433" sideWeight="0.49710146" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32225433" sideWeight="0.49710146" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -4914,120 +4921,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>159</line>
-          <properties />
-          <option name="timeStamp" value="450" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>161</line>
-          <properties />
-          <option name="timeStamp" value="451" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>162</line>
-          <properties />
-          <option name="timeStamp" value="452" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>163</line>
-          <properties />
-          <option name="timeStamp" value="453" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>166</line>
-          <properties />
-          <option name="timeStamp" value="454" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>167</line>
-          <properties />
-          <option name="timeStamp" value="455" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>170</line>
-          <properties />
-          <option name="timeStamp" value="456" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>177</line>
-          <properties />
-          <option name="timeStamp" value="458" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>180</line>
-          <properties />
-          <option name="timeStamp" value="459" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>182</line>
-          <properties />
-          <option name="timeStamp" value="460" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>190</line>
-          <properties />
-          <option name="timeStamp" value="461" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>191</line>
-          <properties />
-          <option name="timeStamp" value="462" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>198</line>
-          <properties />
-          <option name="timeStamp" value="463" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>201</line>
-          <properties />
-          <option name="timeStamp" value="464" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>204</line>
-          <properties />
-          <option name="timeStamp" value="465" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>209</line>
-          <properties />
-          <option name="timeStamp" value="466" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>200</line>
-          <properties />
-          <option name="timeStamp" value="468" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java</url>
-          <line>130</line>
-          <properties />
-          <option name="timeStamp" value="469" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="470" />
+      <option name="time" value="483" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -5081,13 +4978,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/L5_Prefix_Sums/MinAvgTwoSlice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Geeks_For_Geeks/MinimumSlice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -5378,24 +5268,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/Test.md" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/Screen Shot 2018-08-08 at 12.51.32 PM.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
           <caret line="85" column="4" lean-forward="true" selection-start-line="85" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -5407,22 +5283,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="33">
+          <caret line="139" column="9" lean-forward="true" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="79" column="21" lean-forward="true" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="170" column="12" lean-forward="false" selection-start-line="170" selection-start-column="12" selection-end-line="170" selection-end-column="12" />
+        <state relative-caret-position="620">
+          <caret line="198" column="0" lean-forward="true" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
           <folding>
-            <element signature="e#2566#2567#0" expanded="true" />
-            <element signature="e#2604#2605#0" expanded="true" />
+            <element signature="e#2566#2567#0" expanded="false" />
+            <element signature="e#2604#2605#0" expanded="false" />
+            <element signature="e#5031#5046#0" expanded="false" />
+            <element signature="e#5294#5303#0" expanded="false" />
+            <element signature="e#5546#5555#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
