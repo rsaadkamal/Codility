@@ -1,5 +1,7 @@
 package com.codility.Graphs_Trees;
 
+import com.codility.Interview.UniqueTreeNodes;
+
 import java.util.*;
 
 /**
@@ -562,6 +564,175 @@ public class BinarySearchTree {
             return isBalanced(root.leftChild) && isBalanced(root.rightChild);
         }
     }
+
+
+    /*
+     * Q: design a program to find all the paths of the binary tree
+     * */
+    /*
+     * solution - a
+     * */
+    private static void findPaths(Node node, List<List<Integer>> lists, Stack<Node> stack) {
+
+        if (node == null) {
+            return;
+        }
+
+        List<Integer> list = null;
+        Node right = null;
+
+        stack.push(node);
+
+        while (node.leftChild != null) {
+            node = node.leftChild;
+            stack.push(node);
+        }
+
+        if (stack.peek().rightChild != null) {
+
+            right = stack.peek().rightChild;
+            findPaths(right, lists, stack);
+        }
+
+        if (stack.isEmpty()) {
+            return;
+        }
+
+        list = new ArrayList<>();
+
+        for (Node n : stack) {
+            list.add(n.key);
+        }
+
+        lists.add(list);
+
+        /*
+         * i.    pop till the stack has elements
+         * ii.   delete the old left paths that are already included
+         * iii.  delete the old right path that are already included
+         *
+         * */
+        while (!stack.isEmpty() && (stack.peek().rightChild == null ||
+                stack.peek().rightChild.equals(right))) {
+
+            right = stack.pop();
+        }
+
+        if (!stack.isEmpty()) {
+
+            right = stack.peek().rightChild;
+            findPaths(right, lists, stack);
+        }
+    }
+
+
+    /*
+     * solution - b
+     * */
+    private static List<List<Integer>> findPaths1(Node node) {
+
+        if (node == null) {
+            return new ArrayList<List<Integer>>();
+        }
+
+        List<List<Integer>> paths = new ArrayList<List<Integer>>();
+
+        List<List<Integer>> left_subtree = findPaths1(node.leftChild);
+        List<List<Integer>> right_subtree = findPaths1(node.rightChild);
+
+
+        for (int i = 0; i < left_subtree.size(); ++i) {
+
+            List<Integer> new_path = new ArrayList<Integer>();
+
+            new_path.add(node.key);
+            new_path.addAll(left_subtree.get(i));
+            paths.add(new_path);
+        }
+
+        for (int i = 0; i < right_subtree.size(); ++i) {
+
+            List<Integer> new_path = new ArrayList<Integer>();
+
+            new_path.add(node.key);
+            new_path.addAll(right_subtree.get(i));
+            paths.add(new_path);
+        }
+
+
+        if (paths.size() == 0) {
+
+            paths.add(new ArrayList<Integer>());
+            paths.get(0).add(node.key);
+        }
+
+        return paths;
+    }
+
+
+    /*
+     * solution - c
+     * */
+    private static class Tree {
+
+        public int key;
+
+        public Tree left;
+        public Tree right;
+
+        boolean visited;
+
+        Tree(int v) {
+
+            this.key = v;
+            this.visited = false;
+        }
+    }
+
+
+    private static List<ArrayList<Integer>> findPaths2(Tree root) {
+
+        Stack<Tree> stack = new Stack<>();
+        List<ArrayList<Integer>> paths = new ArrayList<>();
+
+        stack.push(root);
+        root.visited = true;
+
+        while (!stack.isEmpty()) {
+
+            Tree node = stack.peek();
+
+            if (node.left != null && !node.left.visited) {
+
+                stack.push(node.left);
+                node.left.visited = true;
+            } else {
+
+                if (node.right == null) {
+
+                    ArrayList<Integer> list = new ArrayList<>();
+
+                    for (Tree t : stack) {
+                        list.add(t.key);
+                    }
+
+                    paths.add(list);
+                    stack.pop();
+                } else if (node.right != null && !node.right.visited) {
+
+                    stack.push(node.right);
+                    node.right.visited = true;
+                } else {
+
+                    stack.pop();
+                }
+            }
+        }
+
+        return paths;
+    }
+
+
 
 
     /*

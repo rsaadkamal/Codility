@@ -3701,7 +3701,9 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/second_example/output.txt" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -4263,23 +4265,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
+      <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="69">
+              <caret line="567" column="0" lean-forward="true" selection-start-line="567" selection-start-column="0" selection-end-line="567" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6797#6803#0" expanded="true" />
+                <element signature="e#10761#10767#0" expanded="true" />
+                <element signature="e#11480#11486#0" expanded="true" />
+                <element signature="e#14339#14354#0" expanded="true" />
+                <element signature="e#14612#14621#0" expanded="true" />
+                <element signature="e#14864#14873#0" expanded="true" />
+                <element signature="e#17470#17488#0" expanded="true" />
+                <element signature="e#17542#17548#0" expanded="true" />
+                <element signature="e#18815#18833#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetChange.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java">
+      <file leaf-file-name="UniqueTreeNodes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+            <state relative-caret-position="330">
+              <caret line="347" column="5" lean-forward="true" selection-start-line="304" selection-start-column="4" selection-end-line="347" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -4297,10 +4308,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>static</find>
-      <find>solution</find>
-      <find>createGraph1</find>
-      <find>createGraph</find>
       <find>(double)</find>
       <find>nativeSolution</find>
       <find>gcd1</find>
@@ -4327,6 +4334,10 @@
       <find>TreeNodeExtra</find>
       <find>depth</find>
       <find>findPaths1</find>
+      <find>.right</find>
+      <find>.left</find>
+      <find>UniqueTreeNodes.</find>
+      <find>rightChildChild</find>
     </findStrings>
     <replaceStrings>
       <replace>rank</replace>
@@ -4334,13 +4345,15 @@
       <replace>area</replace>
       <replace>key</replace>
       <replace>leftChild</replace>
-      <replace>rightChild</replace>
       <replace>int</replace>
       <replace>index</replace>
       <replace>N</replace>
       <replace>k</replace>
       <replace>Integer</replace>
       <replace>Tree</replace>
+      <replace>.rightChild</replace>
+      <replace>.leftChild</replace>
+      <replace>rightChild</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -4379,7 +4392,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L2_Arrays/OddOccurrencesInArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L1_Iterations/BinaryGap.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountUneatenLeaves.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/L13_Fibonacci_Numbers/FibFrog.java" />
         <option value="$PROJECT_DIR$/README.txt" />
@@ -4407,11 +4419,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/Test.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/CountPrefix.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueNodes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java" />
       </list>
     </option>
   </component>
@@ -4497,6 +4510,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="codility" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="codility" type="462c0819:PsiDirectoryNode" />
+              <item name="Graphs_Trees" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Codility" type="b2602c69:ProjectViewProjectNode" />
@@ -4831,12 +4853,12 @@
       <workItem from="1533704498816" duration="11279000" />
       <workItem from="1533742485453" duration="206000" />
       <workItem from="1533789959143" duration="19237000" />
-      <workItem from="1533957594765" duration="348000" />
+      <workItem from="1533957594765" duration="860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505989000" />
+    <option name="totallyTimeSpent" value="506501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -4851,8 +4873,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.5028986" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28695652" sideWeight="0.48400852" order="0" side_tool="false" content_ui="combo" />
@@ -5257,17 +5279,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/Test.md" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/Screen Shot 2018-08-08 at 12.51.32 PM.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="85" column="4" lean-forward="true" selection-start-line="85" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/CountCities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="222" column="0" lean-forward="true" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5285,28 +5301,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="198" column="0" lean-forward="true" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+        <state relative-caret-position="200">
+          <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+        <state relative-caret-position="330">
+          <caret line="347" column="5" lean-forward="true" selection-start-line="304" selection-start-column="4" selection-end-line="347" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Graphs_Trees/BinarySearchTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="567" column="0" lean-forward="true" selection-start-line="567" selection-start-column="0" selection-end-line="567" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6797#6803#0" expanded="true" />
+            <element signature="e#10761#10767#0" expanded="true" />
+            <element signature="e#11480#11486#0" expanded="true" />
+            <element signature="e#14339#14354#0" expanded="true" />
+            <element signature="e#14612#14621#0" expanded="true" />
+            <element signature="e#14864#14873#0" expanded="true" />
+            <element signature="e#17470#17488#0" expanded="true" />
+            <element signature="e#17542#17548#0" expanded="true" />
+            <element signature="e#18815#18833#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
