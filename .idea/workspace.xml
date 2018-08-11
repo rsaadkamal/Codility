@@ -12,8 +12,6 @@
       <change beforePath="" afterPath="$USER_HOME$/.idea/uiDesigner.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/vcs.xml" />
       <change beforePath="" afterPath="$USER_HOME$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java" />
       <change beforePath="" afterPath="$USER_HOME$/Library/Preferences/CLion2018.1/options/editor.xml" />
       <change beforePath="" afterPath="$USER_HOME$/Library/Preferences/CLion2018.1/options/runner.layout.xml" />
       <change beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/colors/Solarized Light.icls" />
@@ -3703,17 +3701,7 @@
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/second_example/output.txt" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/VisitorDemo.java" afterPath="" />
       <change beforePath="$USER_HOME$/Documents/Projects/OOrientedDesign/SourceMaking/Visitor/third_example/output.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/App$Tree.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/App.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/App.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/Interview/NumPermutation.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/Interview/NumPermutation.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/Interview/PrefixSuffixLength.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/Interview/PrefixSuffixLength.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/Interview/UniqueTreeNodes$Tree.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/Interview/UniqueTreeNodes$Tree.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codility/Interview/UniqueTreeNodes.class" afterPath="$PROJECT_DIR$/target/classes/com/codility/Interview/UniqueTreeNodes.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java" afterPath="$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/MergeSortWithThreads.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/App.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../MergeSortWithThreads/src/com/multi/main/java/MergeSort.java" afterPath="" />
@@ -4274,12 +4262,12 @@
     <favorites_list name="Codility" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -4290,8 +4278,8 @@
       <file leaf-file-name="GetChange.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="141">
+              <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -4422,8 +4410,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/UniqueTreeNodes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/PrefixSuffixLength.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/NumPermutation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codility/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java" />
       </list>
     </option>
   </component>
@@ -4463,7 +4451,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -4477,6 +4464,7 @@
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -4570,7 +4558,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.GetChange">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -4596,14 +4584,14 @@
       <module name="Codility" />
       <envs />
     </configuration>
-    <configuration name="FibFrog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="GetChange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.codility.L13_Fibonacci_Numbers.*" />
+          <option name="PATTERN" value="com.codility.Interview.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.codility.L13_Fibonacci_Numbers.FibFrog" />
+      <option name="MAIN_CLASS_NAME" value="com.codility.Interview.GetChange" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -4748,18 +4736,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.App" />
-      <item index="1" class="java.lang.String" itemvalue="Application.FibFrog" />
-      <item index="2" class="java.lang.String" itemvalue="Application.PhoneNumber" />
-      <item index="3" class="java.lang.String" itemvalue="Application.PrefixSuffixLength" />
-      <item index="4" class="java.lang.String" itemvalue="Application.UniqueTreeNodes" />
+      <item index="1" class="java.lang.String" itemvalue="Application.PhoneNumber" />
+      <item index="2" class="java.lang.String" itemvalue="Application.PrefixSuffixLength" />
+      <item index="3" class="java.lang.String" itemvalue="Application.UniqueTreeNodes" />
+      <item index="4" class="java.lang.String" itemvalue="Application.GetChange" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.App" />
-        <item index="1" class="java.lang.String" itemvalue="Application.PrefixSuffixLength" />
-        <item index="2" class="java.lang.String" itemvalue="Application.UniqueTreeNodes" />
-        <item index="3" class="java.lang.String" itemvalue="Application.PhoneNumber" />
-        <item index="4" class="java.lang.String" itemvalue="Application.FibFrog" />
+        <item index="0" class="java.lang.String" itemvalue="Application.GetChange" />
+        <item index="1" class="java.lang.String" itemvalue="Application.App" />
+        <item index="2" class="java.lang.String" itemvalue="Application.PrefixSuffixLength" />
+        <item index="3" class="java.lang.String" itemvalue="Application.UniqueTreeNodes" />
+        <item index="4" class="java.lang.String" itemvalue="Application.PhoneNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -4843,11 +4831,12 @@
       <workItem from="1533704498816" duration="11279000" />
       <workItem from="1533742485453" duration="206000" />
       <workItem from="1533789959143" duration="19237000" />
+      <workItem from="1533957594765" duration="348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505641000" />
+    <option name="totallyTimeSpent" value="505989000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1424" height="787" extended-state="0" />
@@ -4862,11 +4851,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.5028986" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32803467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29768786" sideWeight="0.49710146" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2826087" sideWeight="0.48400852" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28695652" sideWeight="0.48400852" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -5279,7 +5268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="222" column="0" lean-forward="true" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5287,7 +5275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
           <caret line="139" column="9" lean-forward="true" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5295,7 +5282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="79" column="21" lean-forward="true" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5303,20 +5289,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
           <caret line="198" column="0" lean-forward="true" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-          <folding>
-            <element signature="e#2566#2567#0" expanded="false" />
-            <element signature="e#2604#2605#0" expanded="false" />
-            <element signature="e#5031#5046#0" expanded="false" />
-            <element signature="e#5294#5303#0" expanded="false" />
-            <element signature="e#5546#5555#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -5325,8 +5304,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codility/Interview/GetChange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="141">
+          <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding />
         </state>
       </provider>

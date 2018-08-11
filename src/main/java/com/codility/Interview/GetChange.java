@@ -27,9 +27,16 @@ import java.util.Arrays;
 public class GetChange {
 
 
+    /*
+     * 1c, 5c, 10c, 25c, 50c, and $1
+     * */
     public static int[] solution(double M, double P) {
 
-        // 1c, 5c, 10c, 25c, 50c, and $1
+        int[] result = new int[6];
+
+        if (M < P) {
+            return result;
+        }
 
         double rest = (M - P) * 100;
 
@@ -37,24 +44,18 @@ public class GetChange {
 
         int[] divisors = {1, 5, 10, 25, 50, 100};
 
-        int[] result = new int[6];
+        while (index >= 0) {
 
-        while (rest > 0) {
-
-            if (index < 0) break;
-
-            int v = (int) rest / divisors[index];
-
-            rest -= v * divisors[index];
-
-            if (v > 0) {
-                result[index] = v;
-            }
+            result[index] = (int) rest / divisors[index];
+            rest -= result[index] * divisors[index];
 
             index--;
         }
 
         result[0] += Math.ceil(rest);
+
+
+        System.out.println("Rest = " + rest);
 
         return result;
     }
@@ -62,8 +63,12 @@ public class GetChange {
 
     public static void main(String[] args) {
 
+        System.out.println();
+
         System.out.println(Arrays.toString(solution(5.0, 0.99)));
         System.out.println(Arrays.toString(solution(3.14, 1.99)));
         System.out.println(Arrays.toString(solution(4.0, 3.14)));
+
+        System.out.println();
     }
 }
