@@ -15,13 +15,13 @@
 	
 	
 	GEEKS FOR GEEKS
-	---------------
+	———————————————
 	
 	The code is collected for the educational purpose from their website written by various authors.
 	
 	
 	PROJECT EULER
-	-------------
+	—————————————
 	
 	The code is collected for the educational purpose. I intend to solve more problems overtime and
 	update the repo.
