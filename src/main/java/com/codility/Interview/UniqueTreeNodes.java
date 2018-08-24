@@ -256,6 +256,87 @@ public class UniqueTreeNodes {
     /*
      * solution - c
      * */
+    public static int solution2(Node root) {
+
+        List<List<Node>> paths = new ArrayList<>();
+
+        List<List<Integer>> M = new ArrayList<>();
+        List<Integer> N = new ArrayList<>();
+
+        int max = 0;
+        HashSet<Integer> set = null;
+
+        findPaths2(root, paths);
+
+        for (List<Node> nodes : paths) {
+
+            String s = "";
+
+            for (Node node : nodes) {
+                s += String.valueOf(node.key);
+            }
+
+            System.out.println(s);
+        }
+
+
+//        for (List<Node> path : paths) {
+//
+//            set = new HashSet<>();
+//
+//            System.out.println(path);
+//            set.addAll(path);
+//
+//            max = max < set.size() ? set.size() : max;
+//        }
+
+
+        return max;
+    }
+
+
+    public static void findPaths2(Node root, List<List<Node>> paths) {
+
+        if (root == null) {
+            return;
+        }
+
+        List<Node> path = new ArrayList<>();
+
+        if (paths.size() > 0) {
+            for (List<Node> p : paths) {
+
+                if (p.get(p.size() - 1).equals(root)) {
+                    path = p;
+                }
+            }
+        }
+
+        if (paths.size() > 0 && path == null) {
+            return;
+        }
+
+        path.add(root);
+        paths.add(path);
+//        if (root.left == null && root.right == null) {
+//            paths.add(path);
+//        }
+
+        if (root.left != null) {
+            findPaths2(root.left, paths);
+        }
+
+        if (root.right != null) {
+            findPaths2(root.right, paths);
+        }
+
+        path.remove(path.size() - 1);
+    }
+
+
+    /*
+     * solution - d
+     * */
     private static class Tree {
 
         public int key;
@@ -273,7 +354,7 @@ public class UniqueTreeNodes {
 
     public static int solution2(Tree root) {
 
-        List<ArrayList<Integer>> paths = findPaths2(root);
+        List<ArrayList<Integer>> paths = findPaths3(root);
 
         int result = 0;
 
@@ -305,7 +386,7 @@ public class UniqueTreeNodes {
     /*
      * find all the paths of a binary tree
      * */
-    private static List<ArrayList<Integer>> findPaths2(Tree root) {
+    private static List<ArrayList<Integer>> findPaths3(Tree root) {
 
         Stack<Tree> stack = new Stack<>();
         List<ArrayList<Integer>> paths = new ArrayList<>();
@@ -372,26 +453,29 @@ public class UniqueTreeNodes {
 
         * */
 
-//        Node root = new Node(4);
-//
-//        root.left = new Node(5);
-//        root.left.right = new Node(15);
-//        root.left.right.left = new Node(115);
-//        root.left.right.right = new Node(215);
-//
-//
-//        root.left.left = new Node(4);
-//
-//
-//        root.left.left.right = new Node(12);
-//        root.left.left.right.right = new Node(13);
-//
-//
-//        root.left.left.left = new Node(5);
-//
-//        root.right = new Node(6);
-//        root.right.left = new Node(1);
-//        root.right.right = new Node(6);
+        Node root = new Node(4);
+
+        root.left = new Node(5);
+        root.left.right = new Node(15);
+        root.left.right.left = new Node(115);
+        root.left.right.right = new Node(215);
+
+
+        root.left.left = new Node(4);
+
+
+        root.left.left.right = new Node(12);
+        root.left.left.right.right = new Node(13);
+
+
+        root.left.left.left = new Node(5);
+
+        root.right = new Node(6);
+        root.right.left = new Node(1);
+        root.right.right = new Node(6);
+
+
+        solution2(root);
 
 
 //        Tree root = new Tree(4);

@@ -89,7 +89,7 @@ public final class p323 implements EulerSolution {
 		}
 		
 		// Round the fraction properly. This is the pedantically correct version of doing
-		// String.format("%.10f", ans.numerator.doubleValue() / ans.denominator.doubleValue())
+		// String.format("%.10f", answer.numerator.doubleValue() / answer.denominator.doubleValue())
 		Fraction ans = expect[SIZE];
 		assert ans.compareTo(Fraction.ZERO) >= 0;
 		

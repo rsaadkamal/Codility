@@ -22,7 +22,7 @@ public final class p127 implements EulerSolution {
 	 *      for (int a = 1; a < c; a++) {
 	 *        int b = c - a;
 	 *        if (isAbcHit(a, b, c))
-	 *          ans += c;
+	 *          answer += c;
 	 *      }
 	 *   }
 	 * 
