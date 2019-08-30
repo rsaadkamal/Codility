@@ -77,10 +77,6 @@ public class PermCheck {
                 return 0;
             }
 
-            /*
-             * each element of array A is an integer within the range [1..1,000,000,000]
-             * but we need the condition for the next steps
-             * */
             if (A[i] == 0) {
                 continue;
             }
@@ -93,7 +89,7 @@ public class PermCheck {
                 A[j] = 0;
 
                 j = k;
-            }
+            }                        
         }
 
         for (int i = 0; i < A.length; i++) {
@@ -138,12 +134,14 @@ public class PermCheck {
 
         for (int i = 0; i < N; i++) {
 
+            // this tackles the bigger number 
             if(A[i] > N){
                 return 0;
             }
 
             int j = A[i] - 1;
 
+            // this tackle the duplicate number 
             if (check[j]) {
                 return 0;
             }

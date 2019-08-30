@@ -1,4 +1,7 @@
+package com.codility.Interview;
 
+import java.util.ArrayList;
+import java.util.List;
 
 /*
 You are given a task of installing video cameras that will detect where cars are parked on one side of the street. Each camera can cover one or more parking spaces around it, as defined by cameraRange parameter. Camera will always be installed on top of a specific parking space.

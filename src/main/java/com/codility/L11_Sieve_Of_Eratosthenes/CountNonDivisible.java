@@ -76,29 +76,29 @@ public class CountNonDivisible {
         int[][] D = new int[2 * N + 1][2];
         int[] result = new int[N];
 
-
         /*
         * A = [3,1,2,3,6]
 
         D = [
-               0 -1
-               1  0
-               1  0
-               2  0
-               0 -1
-               0 -1
-               1  0
-               0 -1
-               0 -1
-               0 -1
-               0 -1
-            ]
+           0 -1
+           1  0
+           1  0
+           2  0
+           0 -1
+           0 -1
+           1  0
+           0 -1
+           0 -1
+           0 -1
+           0 -1
+        ]
         * */
 
         for (int i = 0; i < N; i++) {
             D[A[i]][0]++;
             D[A[i]][1] = -1;
         }
+
 
         for (int i = 0; i < N; i++) {
 

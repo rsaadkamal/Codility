@@ -52,10 +52,47 @@ public class CountDistinctSlices {
 
 
     /*
+     * solution - a
+     * */
+    public static int solution1(int M, int[] A) {
+
+        boolean[] visited = new boolean[M + 1];
+
+        int N = A.length;
+        int i = 0;
+        int result = 0;
+
+        while (i < N) {
+
+            int count = 0;
+            while (i < N && !visited[A[i]]) {
+
+                visited[A[i]] = true;
+                count++;
+
+                i++;
+            }
+
+            int j = 0;
+
+            while (j < i) {
+                visited[A[j]] = false;
+                j++;
+            }
+
+            result += count * (count + 1) / 2;
+        }
+
+        return Math.min(result, 1000000000);
+    }
+
+
+
+    /*
      * The goal is to calculate the number of distinct slices
      * */
     /*
-     * solution - a
+     * solution - b
      * */
     public static int solution(int[] A, int M) {
 
@@ -74,8 +111,10 @@ public class CountDistinctSlices {
 
         /*
          * int[] A = {3, 4, 5, 5, 2};
+         * N = 5
          * */
         while (front < N && back < N) {
+
 
             /*
              * Move forward till we find A member already visited. This
@@ -110,50 +149,9 @@ public class CountDistinctSlices {
             back++;
         }
 		
-		/*
-		If the number of distinct slices is greater than 1,000,000,000, 
-		the function should return 1,000,000,000.
-		*/
         return Math.min(result, 1000000000);
     }
 
-
-    /*
-     * solution - b
-     * */
-    public static int solution1(int M, int[] A) {
-
-        boolean[] visited = new boolean[M + 1];
-
-        int N = A.length;
-        int i = 0;
-        int result = 0;
-
-        while (i < N) {
-
-            int count = 0;
-            while (i < N && !visited[A[i]]) {
-
-                visited[A[i]] = true;
-                count++;
-
-                i++;
-            }
-
-            int j = 0;
-
-            while (j < i) {
-                visited[A[j]] = false;
-                j++;
-            }
-
-            result += count * (count + 1) / 2;
-        }
-
-        result = result < 1000000000 ? result : 1000000000;
-
-        return result;
-    }
 
 
     /*

@@ -171,7 +171,6 @@ public class TapeEquilibrium {
         int[] D = new int[A.length];
         D[D.length - 1] = A[D.length - 1];
 
-
         for (int i = A.length - 2; i >= 0; i--) {
             D[i] = D[i + 1] + A[i];
         }

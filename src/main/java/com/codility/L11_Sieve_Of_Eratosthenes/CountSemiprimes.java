@@ -54,6 +54,7 @@ import java.util.List;
  */
 public class CountSemiprimes {
 
+
     /*
      * sieve of Eratosthenes is A simple, ancient algorithm for finding all prime numbers up
      * to any given limit.It does so by iteratively marking as composite (i.e., not prime)
@@ -74,14 +75,22 @@ public class CountSemiprimes {
     /*
      * solution - a
      */
+
+    // A semiprime is a natural number that is the product of two (not necessarily distinct) prime numbers. 
     public static int[] solution(int[] A, int[] B, int N) {
 
-        int[] factArray = sieve(N);
 
-        int[] semiPrimes = new int[factArray.length];
+        int[] factArray = sieve(N);        
+        int[] semiPrimes = new int[N +1];
 
+        // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+        // [0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2,  0,  2,  0,  2,  3,  2,  0,  2,  0,  2,  3,  2,  0,  2,  5,  2]
+        // [0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,  1,  1,  0,  0,  1,  1]
+        // [0, 0, 0, 0, 1, 1, 2, 2, 2, 3, 4,  4,  4,  4,  5,  6,  6,  6,  6,  6,  6,  7,  8,  8,  8,  9,  10]
+        // [0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 5, 2]
         for (int i = 0; i < semiPrimes.length; i++) {
 
+            // int k = i / factArray[i]  factArray[k] == 0 means the number in the k index is prime
             if (factArray[i] != 0 && factArray[i / factArray[i]] == 0) {
                 semiPrimes[i] = 1;
             }
@@ -90,6 +99,24 @@ public class CountSemiprimes {
         int[] semiPrimesPreSum = prefixSum(semiPrimes);
         int[] res = new int[A.length];
 
+
+        /*
+            Q[0] = 26
+            Q[1] = 10
+            Q[2] = 20
+
+            P[0] = 1    
+            P[1] = 4    
+            P[2] = 16   
+        */
+
+
+        // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+        // [0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2,  0,  2,  0,  2,  3,  2,  0,  2,  0,  2,  3,  2,  0,  2,  5,  2]
+        // [0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,  1,  1,  0,  0,  1,  1]
+
+        // [0, 0, 0, 0, 1, 1, 2, 2, 2, 3, 4,  4,  4,  4,  5,  6,  6,  6,  6,  6,  6,  7,  8,  8,  8,  9,  10]
+
         for (int i = 0; i < B.length; i++) {
             res[i] = semiPrimesPreSum[B[i]] - semiPrimesPreSum[A[i] - 1];
         }
@@ -97,10 +124,25 @@ public class CountSemiprimes {
         return res;
     }
 
+
+    // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+    // [0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2,  0,  2,  0,  2,  3,  2,  0,  2,  0,  2,  3,  2,  0,  2,  5,  2]
+    // [0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,  1,  1,  0,  0,  1,  1]
+
+    // [0, 0, 0, 0, 1, 1, 2, 2, 2, 3, 4,  4,  4,  4,  5,  6,  6,  6,  6,  6,  6,  7,  8,  8,  8,  9,  10]
+
     /*
      * preparing array for factorization (array with primes)
      * [0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 0, 2, 3, 2, 0, 2, 5, 2]
      * */
+
+    /*
+        Initially, we have the set of all the numbers {2, 3,...,n}. At each step we choose the
+        smallest number in the set and remove all its multiples. Notice that every composite number
+        has a divisor of at most on. In particular, it has a divisor which is a prime number. It
+        is sucient to remove only multiples of prime numbers not exceeding Ôn. In this way, all
+        composite numbers will be removed.
+    */
     public static int[] sieve(int n) {
 
         int[] F = new int[n + 1];
@@ -121,11 +163,15 @@ public class CountSemiprimes {
         return F;
     }
 
+
+
+    // [0, 0, 0, 0, 1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 5, 6, 6, 6, 6, 6, 6, 7, 8, 8, 8, 9, 10]
     public static int[] prefixSum(int[] A) {
 
         int[] prefSum = new int[A.length];
 
         for (int i = 0; i < A.length; i++) {
+
             if (i == 0) {
                 prefSum[i] = A[i];
             } else {
@@ -135,6 +181,57 @@ public class CountSemiprimes {
 
         return prefSum;
     }
+
+
+    // sieve Of Eratosthenes 
+    public static List<Integer> findPrimesUsingSieve(int N) {
+
+        List<Integer> result = new ArrayList<>();
+        boolean[] isComposite = new boolean[N + 1];
+
+        for (int i = 2; i <= N; i++) {
+
+            if (!isComposite[i]) {
+
+                result.add(i);
+                int M = 2;
+
+                while (i * M <= N) {
+
+                    isComposite[i * M] = true;
+                    M++;
+                }
+            }
+        }
+
+        return result;
+    }
+
+
+    public static List<Integer> findPrimesUsingSieve2(int N) {
+
+        int[] F = new int[N + 1];
+        List<Integer> result = new ArrayList<>();
+
+        for (int i = 2; i <= N; i++) {
+
+            if (F[i] == 0) {
+
+                result.add(i);
+
+                for (int k = i * i; k <= N; k += i) {
+
+                    if (F[k] == 0) {
+                        F[k] = 1;
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
+
     // ENd of solution - a
 
 

@@ -42,7 +42,6 @@ public class FrogJmp {
      * solution - a
      * */
     public static int solution(int X, int Y, int D) {
-
         return (int) Math.ceil((float) (Y - X) / D);
     }
 
@@ -88,9 +87,9 @@ public class FrogJmp {
      */
     public int solution3(int X, int Y, int D) {
 
-        if (X >= Y) {
-            return 0;
-        }
+        // if (X >= Y) {
+        //     return 0;
+        // }
 
         int remainder = (Y - X) % D;
 //        int step = (Y - remainder - X) / D;

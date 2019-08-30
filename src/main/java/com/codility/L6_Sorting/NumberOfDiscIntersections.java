@@ -134,9 +134,10 @@ public class NumberOfDiscIntersections {
 
             if (N - 1 >= A[i] + i) {
                 right = i + A[i];
-            } else {
+            }             
+
+            else 
                 right = N - 1;
-            }
 
             sum[right]++;
         }
@@ -149,19 +150,23 @@ public class NumberOfDiscIntersections {
         }
 
         /*
+         * nCr = n! / r! * (n - r)!
+         * 
          * from N discs, if we pick 2 discs the maximum possible
          * number of intersection will be combination of C(N,R)
          * */
         int result = N * (N - 1) / 2;
-//        int result1 = combination(6,2);
 
         for (int j = 0; j < N; j++) {
 
             int left;
 
+            // the left point is (j - A[j]) and not the (A[j] - j)
             if (j - A[j] <= 0) {
                 left = 0;
-            } else {
+            } 
+
+            else {
                 left = j - A[j];
             }
 

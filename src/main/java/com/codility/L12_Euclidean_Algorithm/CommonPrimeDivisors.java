@@ -61,7 +61,6 @@ public class CommonPrimeDivisors {
     private static int solution(int[] A, int[] B) {
 
         int count = 0;
-
         int N = A.length;
 
         for (int i = 0; i < N; i++) {
@@ -69,6 +68,7 @@ public class CommonPrimeDivisors {
             int x = A[i];
             int y = B[i];
 
+            // Greatest Common Divisor (GCD)
             int gcd = gcd(x, y);
             int temp = 0;
 

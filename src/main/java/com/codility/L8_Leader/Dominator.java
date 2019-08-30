@@ -103,7 +103,6 @@ public class Dominator {
         for (int i = 0; i < A.length; i++) {
 
             if (A[i] == dom) {
-
                 count++;
                 index = i;
             }
@@ -154,6 +153,7 @@ public class Dominator {
             }
         }
 
+
         int candidate = -1;
 
         int count = 0;
@@ -200,6 +200,7 @@ public class Dominator {
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
 
             if (entry.getValue() > max) {
+
                 max = entry.getValue();
                 maxElement = entry.getKey();
             }

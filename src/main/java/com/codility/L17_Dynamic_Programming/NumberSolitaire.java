@@ -70,7 +70,6 @@ public class NumberSolitaire {
     public static int solution(int[] A) {
 
         int N = A.length;
-
         int[] result = new int[N];
 
         result[0] = A[0];
@@ -93,6 +92,9 @@ public class NumberSolitaire {
 
         return result[N - 1];
     }
+
+
+
 
     /*
      * solution - b

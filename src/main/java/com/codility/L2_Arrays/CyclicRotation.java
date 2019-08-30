@@ -43,6 +43,7 @@ In your solution, focus on correctness. The performance of your solution will no
 import java.util.HashMap;
 import java.util.Map;
 
+
 /**
  * Created by Chaklader on 6/23/18.
  */
@@ -100,7 +101,6 @@ public class CyclicRotation {
 
 
     public static int swap(int itself, int dummy) {
-
         return itself;
     }
 
@@ -118,7 +118,9 @@ public class CyclicRotation {
 
             if (i + K > N - 1) {
                 map.put(i + K - N, A[i]);
-            } else {
+            } 
+
+            else {
                 map.put(i + K, A[i]);
             }
         }

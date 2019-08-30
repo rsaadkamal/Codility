@@ -48,6 +48,7 @@ public class OddOccurrencesInArray {
     /*
      * solution - a
      * */
+    // 100 %
     public int solution(int[] arr) {
 
         int result = arr[0];
@@ -75,7 +76,8 @@ public class OddOccurrencesInArray {
             if (!list.contains(arr[i])) {
                 list.add(arr[i]);
             } else {
-                list.remove(arr[i]);
+                
+                list.remove(list.indexOf(A[i]));
             }
         }
 
@@ -103,9 +105,11 @@ public class OddOccurrencesInArray {
 
         if (map.size() == 1) {
 
-            int value = (new ArrayList<Integer>(map.values())).get(0);
+            int value = (new ArrayList<Integer>(map.keySet())).get(0);
             return value;
         }
+
+        // return map.size() == 1 ? map.entrySet().iterator().next().getKey() : -1;
 
         return -1;
     }
@@ -118,6 +122,16 @@ public class OddOccurrencesInArray {
 
 
     public static void main(String[] args) {
+
+        int[] A = new int[7];
+
+        A[0] = 9;
+        A[1] = 3;
+        A[2] = 9;
+        A[3] = 3;
+        A[4] = 9;
+        A[5] = 7;
+        A[6] = 9;
 
         System.out.println("Berlin");
     }

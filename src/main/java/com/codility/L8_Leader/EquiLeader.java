@@ -92,7 +92,6 @@ public class EquiLeader {
         int dominator = stack.peek();
         int numOfDominator = 0;
 
-
         for (int i = 0; i < A.length; i++) {
 
             if (A[i] == dominator) {
@@ -105,6 +104,8 @@ public class EquiLeader {
         }
 
         int numOfNonDominator = A.length - numOfDominator;
+
+        // clear the memory
         stack.clear();
 
         int dominatorInCurrentSec = 0;

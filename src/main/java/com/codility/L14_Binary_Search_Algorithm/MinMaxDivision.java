@@ -79,10 +79,16 @@ public class MinMaxDivision {
     /*
      * solution - a
      */
+
+    /*
+    * The goal is to minimize the large sum.
+    */
     public static int solution(int K, int M, int[] A) {
 
         int sum0 = 0;
         int max0 = 0;
+
+        int min = Integer.MAX_VALUE;
 
         /*
          * Get the sum and miximum value of the provided array
@@ -91,12 +97,14 @@ public class MinMaxDivision {
 
 //            max0 = max0 >= A[i] ? max0 : A[i];
             sum0 += A[i];
+            min = Math.min(A[i], min);
         }
 
         /*
          * Every element of the array is not greater than M
          * */
-        int min = Math.max((int) Math.ceil((double) sum0 / K), M);
+        // int min = Math.max((int) Math.ceil((double) sum0 / K), M);
+        min = Math.min(A[i], min);
         int max = sum0;
 
         int sum = 0;
@@ -113,6 +121,17 @@ public class MinMaxDivision {
          *     maximum block value with the intention to minimize block
          *     section
          * */
+
+        /********************************************************************/
+        /*
+            The array can be divided, for example, into the following blocks:
+
+                [2, 1, 5, 1, 2, 2, 2], [], [] with a large sum of 15;
+                [2], [1, 5, 1, 2], [2, 2] with a large sum of 9;
+                [2, 1, 5], [], [1, 2, 2, 2] with a large sum of 8;
+                [2, 1], [5, 1], [2, 2, 2] with a large sum of 6.
+        */
+        /********************************************************************/        
         while (min <= max) {
 
             int middle = (min + max) / 2;
@@ -158,7 +177,9 @@ public class MinMaxDivision {
 
             if (sum + A[i] <= middle) {
                 sum += A[i];
-            } else {
+            } 
+
+            else {
 
                 block++;
                 sum = A[i];

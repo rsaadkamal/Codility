@@ -71,7 +71,10 @@ public class FrogRiverOne {
 
         for (int i = 0; i < N; i++) {
 
-            if (A[i] <= X && !visited[A[i]]) {
+            // if (A[i] <= X && !visited[A[i]]) {
+
+            // the opposite bank is in the X distance
+            if (!visited[A[i]]) {
 
                 visited[A[i]] = true;
                 distance++;

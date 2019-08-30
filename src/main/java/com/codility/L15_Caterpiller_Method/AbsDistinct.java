@@ -54,6 +54,31 @@ public class AbsDistinct {
     /*
      * solution - a
      * */
+    public int solution(int[] A){
+
+        Set<Integer> set = new HashSet<>();
+
+        int N = A.length;
+
+
+        for (int i = 0; i < N; i++) {
+
+            int abs = Math.abs(A[i]);
+
+            if(set.contains(abs)){
+                continue;
+            }
+
+            set.add(abs);
+        }
+
+        return set.size();
+    }
+
+
+    /*
+     * solution - a
+     * */
     public static int solution(int[] A) {
 
         return (int) IntStream.of(A).map(v -> Math.abs(v)).distinct().count();
@@ -75,6 +100,7 @@ public class AbsDistinct {
             }
         }
 
+        // The array is sorted in non-decreasing order. 
         Arrays.sort(A);
 
         for (int i = 1; i < N; i++) {

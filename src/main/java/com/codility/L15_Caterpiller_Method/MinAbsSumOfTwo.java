@@ -72,7 +72,6 @@ public class MinAbsSumOfTwo {
     public static int solution(int[] A) {
 
         Arrays.sort(A);
-
         int N = A.length;
 
         /*

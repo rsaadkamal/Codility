@@ -61,8 +61,63 @@ import java.math.BigInteger;
 public class Ladder {
 
 
+
     /*
      * solution - a
+     */
+    public int[] solution1(int[] A, int[] B) {
+
+
+        int N = A.length;
+
+        int[] fib = new int[N + 2];
+        int[] result = new int[N];
+
+        fib[1] = 1;
+
+        // for (int i = 0; i < N; i++) {
+
+            
+        //      * 2^32-1 is the maximum value for a 32-bit unsigned integer
+        //      * (32 binary digits). 2^32 is the number of possible values
+        //      *
+        //      * Confirm that the fibonacci number will not
+        //      * exceed the max integer value of 1<<n = 2^n
+        //      * 
+
+        //     /*
+        //      * SIGNED INTEGER VALUE
+        //      * --------------------
+        //      *
+        //      * Integer.MAX_VALUE =  ((1 << 31) - 1)
+        //      * Integer.MIN_VALUE =  (1 << 31)
+        //      * */
+        //     int fIndex = i + 2;
+
+        //     fib[fIndex] = (fib[fIndex - 1] + fib[fIndex - 2]) % (1 << 30);
+        // }
+
+
+        // [0, 1, 1, 2, 3, 5, 8]
+        for (int i = 2; i < N; i++) {
+            
+            // fib[i] = fib[i - 1] + fib[i - 2];
+            fib[i] = (fib[i - 1] + fib[i - 2]) % (1 << 30);
+        }
+
+        // A is an integer within the range [1..L];
+        for (int i = 0; i < N; i++) {
+            result[i] = fib[A[i] + 1] % (1 << B[i]);
+        }
+
+        return result;
+    }
+
+
+
+
+    /*
+     * solution - b
      */
     public static int[] solution(int[] A, int[] B) {
 
@@ -98,48 +153,6 @@ public class Ladder {
     }
 
 
-    /*
-     * solution - b
-     */
-    public int[] solution1(int[] A, int[] B) {
-
-
-        int N = A.length;
-
-        int[] fib = new int[N + 2];
-        int[] result = new int[N];
-
-        fib[1] = 1;
-
-        for (int i = 0; i < N; i++) {
-
-            /*
-             *
-             * 2^32-1 is the maximum value for a 32-bit unsigned integer
-             * (32 binary digits). 2^32 is the number of possible values
-             *
-             * Confirm that the fibonacci number will not
-             * exceed the max integer value of 1<<n = 2^n
-             * */
-
-            /*
-             * SIGNED INTEGER VALUE
-             * --------------------
-             *
-             * Integer.MAX_VALUE =  ((1 << 31) - 1)
-             * Integer.MIN_VALUE =  (1 << 31)
-             * */
-            int fIndex = i + 2;
-
-            fib[fIndex] = (fib[fIndex - 1] + fib[fIndex - 2]) % (1 << 30);
-        }
-
-        for (int i = 0; i < N; i++) {
-            result[i] = fib[A[i] + 1] % (1 << B[i]);
-        }
-
-        return result;
-    }
 
 
     /*

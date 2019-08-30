@@ -27,6 +27,7 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 import java.util.*;
 import java.util.stream.IntStream;
 
+
 /**
  * Created by Chaklader on 6/24/18.
  */
@@ -37,7 +38,6 @@ public class Distinct {
      * solution - a
      */
     public static int solution(int[] A) {
-
 
         /*
          * time complexity: O(N * log(N)) > O(N)
@@ -82,6 +82,16 @@ public class Distinct {
      */
     public static int solution2(int[] A) {
 
+        int result = ((Long) Arrays.stream(A).boxed().distinct().count()).intValue();
+        return result;
+    }
+
+
+    /*
+     * solution - d
+     */
+    public static int solution3(int[] A) {
+
         /*
          * ---------------------------------------------
          *  Sorting       Best            Worst
@@ -108,7 +118,8 @@ public class Distinct {
     /*
      * solution - d
      */
-    public int solution3(int[] A) {
+    public int solution4(int[] A) {
+
 
         if (A.length == 0) {
             return 0;

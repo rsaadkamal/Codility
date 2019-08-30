@@ -131,10 +131,9 @@ public class MaxDoubleSliceSum {
         int[] A1 = new int[N];
         int[] A2 = new int[N];
 
-
         int max = 0;
 
-        for (int i = 1; i < (N - 2); i++) {
+        for (int i = 1; i < (N - 2); i++) {        
             max = (A[i] + max) > 0 ? (A[i] + max) : 0;
             A1[i] = max;
         }
@@ -145,7 +144,6 @@ public class MaxDoubleSliceSum {
             max = (A[i] + max) > 0 ? (A[i] + max) : 0;
             A2[i] = max;
         }
-
 
         max = 0;
 

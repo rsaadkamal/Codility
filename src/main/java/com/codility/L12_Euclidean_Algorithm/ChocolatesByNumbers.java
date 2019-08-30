@@ -57,6 +57,7 @@ public class ChocolatesByNumbers {
     public int solution1(int N, int M) {
 
         int[] X = new int[N];
+
         int i = 0;
         int count = 0;
 
@@ -81,11 +82,10 @@ public class ChocolatesByNumbers {
     private static int solution(int N, int M) {
 
         int a = gcd(N, M);
-
         return N / a;
     }
 
-
+    // Greatest Common Divisor (GCD)
     public static int gcd(int a, int b) {
 
         if (a % b == 0) {

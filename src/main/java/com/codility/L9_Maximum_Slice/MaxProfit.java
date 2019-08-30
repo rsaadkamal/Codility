@@ -41,6 +41,7 @@ expected worst-case space complexity is O(1) (not counting the storage required 
 
 import java.util.Arrays;
 
+
 /**
  * Created by Chaklader on 6/24/18.
  */
@@ -58,7 +59,7 @@ public class MaxProfit {
         int max = 0;
 
         for (int i = 1; i < N; i++) {
-
+                  
             max = Math.max(0, max + A[i] - A[i - 1]);
             result = Math.max(max, result);
         }

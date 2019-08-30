@@ -98,7 +98,6 @@ public class Peaks {
      */
     public static int solution(int[] A) {
 
-
         int N = A.length;
 
         ArrayList<Integer> peaks = new ArrayList<Integer>();
@@ -109,6 +108,9 @@ public class Peaks {
                 peaks.add(i);
             }
         }
+
+
+        // int[] A = new int[12];
 
         /*
          * i is the number of elements in the block
@@ -128,6 +130,7 @@ public class Peaks {
                 /*
                  * no peak till the i-th index, we have peaks at [3, 5, 10] and N = 12
                  * */
+                //  p/i <= count mean we have a peak in the range 
                 if (p / i > count) {
                     break;
                 }
@@ -167,9 +170,9 @@ public class Peaks {
             }
         }
 
-        int P = peaks.size();
+        int N = peaks.size();
 
-        for (int i = P; i >= 1; i--) {
+        for (int i = N; i >= 1; i--) {
 
             if (N % i != 0) {
                 continue;
@@ -226,7 +229,6 @@ public class Peaks {
         if (P[N - 1] == 0) {
             return 0;
         }
-
 
         for (int i = P[N - 1]; i > 1; i--) {
 

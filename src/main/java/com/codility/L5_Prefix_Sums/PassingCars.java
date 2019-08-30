@@ -52,14 +52,16 @@ public class PassingCars {
 
 
     /*
-     * solution - a
+     * solution - a (1)
      * */
     public static int solution(int[] A) {
 
         int result = 0;
         int ones = 0;
 
-        for (int i = A.length - 1; i >= 0; i--) {
+        int N = A.length;
+
+        for (int i =  N- 1; i >= 0; i--) {
 
             if (A[i] == 1) {
                 ones++;
@@ -74,6 +76,31 @@ public class PassingCars {
 
         return result;
     }
+
+
+    /*
+     * solution - a (2)
+     * */
+    public static int solution(int[] A) {
+
+        int N = A.length;
+
+        int countZero = 0;
+        int result = 0;
+
+        for (int i = 0; i < N; i++) {
+
+            if (A[i] == 0) {
+                countZero++;
+            } else {
+                result += countZero;
+            }
+        }
+
+        return result;
+    }
+
+
 
 
     /*

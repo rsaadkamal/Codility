@@ -107,29 +107,33 @@ public class MaxCounters {
         int currMax = 0;
         int currMin = 0;
 
-
         for (int i = 0; i < A.length; i++) {
 
-            /*
-             * if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X)
+            /**
              *
-             * Condition
-             * ---------
-             * 1 ≤ A[K] ≤ N. As the 1 <= A[k]
-             * already defined, we only need to check A[K] <= N
+             *  A[0] = 3
+             *  A[1] = 4
+             *  A[2] = 4
+             *  A[3] = 6
+             *  A[4] = 1
+             *  A[5] = 4
+             *  A[6] = 4
              *
-             * each element of array A is an integer within the range [1..N + 1]
+             *  (0, 0, 1, 0, 0)    (0, 0, 1, 0, 0)
+             *  (0, 0, 1, 1, 0)    (0, 0, 1, 1, 0)
+             *  (0, 0, 1, 2, 0)    (0, 0, 1, 2, 0)
+             *  (2, 2, 2, 2, 2)    (0, 0, 1, 2, 0)
+             *  (3, 2, 2, 2, 2)    (3, 0, 1, 2, 0)
+             *  (3, 2, 2, 3, 2)    (3, 0, 1, 3, 0)
+             *  (3, 2, 2, 4, 2)    (3, 0, 1, 4, 0)
              *
-             * the condition for the 1 <= A[i] is not required
-             * */
+             *                     (3, 2, 2, 4, 2)
+             */
             if (1 <= A[i] && A[i] <= N) {
 
                 result[A[i] - 1] = Math.max(currMin, result[A[i] - 1]);
                 result[A[i] - 1]++;
 
-                /*
-                 * store and update the max value in the currMax
-                 * */
                 currMax = Math.max(currMax, result[A[i] - 1]);
             }
 
@@ -151,6 +155,57 @@ public class MaxCounters {
 
         return result;
     }
+
+
+
+    /*
+    * solution - a1
+    */
+
+    public static int[] solution(int N, int[] A) {
+
+        int[] result = new int[N];
+
+        int L = A.length;
+        int max = Integer.MIN_VALUE;
+
+        boolean bol = false;
+        int curr = 0;
+
+        for (int i = 0; i < L; i++) {
+
+            if (1 <= A[i] && A[i] <= N) {
+
+                if (bol) {
+
+                    result[A[i] - 1] = curr + 1;
+                    bol = false;
+                    continue;
+                }
+
+//                result[A[i] -1] = Math.max(result[A[i]-1], curr);
+                result[A[i] - 1]++;
+
+                max = Math.max(max, result[A[i] - 1]);
+            } else if (A[i] == N + 1) {
+
+
+                bol = true;
+                curr = max;
+            }
+        }
+
+        for (int i = 0; i < N; i++) {
+
+            if (result[i] < curr) {
+                result[i] = curr;
+            }
+        }
+
+        return result;
+    }
+
+    
 
 
     /*

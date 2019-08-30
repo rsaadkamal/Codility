@@ -93,6 +93,7 @@ public class NailingPlanks {
      * The goal is to find the minimum number of nails that must be used until all the planks
      * are nailed.
      * */
+
     /*
      * solution - a
      */
@@ -106,6 +107,7 @@ public class NailingPlanks {
         int N = C.length;
 
         int[][] sortedNails = new int[N][2];
+
 
 		/*
             |------------------|
@@ -127,10 +129,12 @@ public class NailingPlanks {
             |    10 3          |
             --------------------
         */
+
         for (int i = 0; i < N; i++) {
             sortedNails[i][0] = C[i];
             sortedNails[i][1] = i;
         }
+
 
         /*
          * sort based on the size of the nail in ascending order
@@ -213,6 +217,7 @@ public class NailingPlanks {
             return -1;
         }
 
+
         /*
          * get the real index for the nail in the sortedNails matrix
          * */
@@ -237,6 +242,10 @@ public class NailingPlanks {
 
         return minIndex;
     }
+
+
+
+
 
 
     /*

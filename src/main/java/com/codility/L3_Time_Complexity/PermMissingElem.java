@@ -100,6 +100,7 @@ public class PermMissingElem {
         int N = A.length;
 
         int[] C = new int[N + 2];
+        C[0] = -1;
 
         for (int i = 0; i < N; i++) {
             C[A[i]] = -1;

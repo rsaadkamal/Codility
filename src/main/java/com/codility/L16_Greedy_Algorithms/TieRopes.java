@@ -17,6 +17,7 @@ For example, consider K = 4 and array A such that:
     A[4] = 1
     A[5] = 1
     A[6] = 3
+
 The ropes are shown in the figure below.
 
 
@@ -67,7 +68,6 @@ public class TieRopes {
     public static int solution(int[] A, int K) {
 
         int count = 0;
-
         int len = 0;
 
         for (int rope : A) {

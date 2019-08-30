@@ -41,6 +41,7 @@ public class MaxSliceSum {
      */
     public static int solution(int[] A) {
 
+
 //        int max = Integer.MIN_VALUE;
         int max = (1 << 31);
 
@@ -56,7 +57,7 @@ public class MaxSliceSum {
         int sum = 0;
 
         for (int i = 0; i < A.length; i++) {
-
+                                    
             sum = (sum + A[i]) > 0 ? (sum + A[i]) : 0;
             result = sum > result ? sum : result;
         }

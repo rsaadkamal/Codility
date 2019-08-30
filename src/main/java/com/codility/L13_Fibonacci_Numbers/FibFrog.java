@@ -133,7 +133,6 @@ public class FibFrog {
         int jumps;
 
         Jump(int pos, int jumps) {
-
             this.pos = pos;
             this.jumps = jumps;
         }
@@ -156,27 +155,28 @@ public class FibFrog {
          * The frog can jump between positions −1 and N (the
          * banks of the river) and every pos containing a leaf.
          * */
+
+
+        /*
+         * ALGORITHM
+         * ---------
+         *
+         * To find the minimum steps to reach the opposite bank,
+         *
+         * i.    Try to make the longest jump from the current position to reach opposite
+         *       bank. If possible, return the jump number as result
+         *
+         * ii.   Otherwise, remove the current position
+         *
+         * iii.  Meanwhile, store all the entities with leaves in the stack
+         *
+         * iv.   Start investigation from the longest entity from the set of current addition
+         *
+         * v.    Repeat the entire process
+         * */
         while (!stack.isEmpty()) {
 
             Jump curr = stack.pop();
-
-            /*
-             * ALGORITHM
-             * ---------
-             *
-             * To find the minimum steps to reach the opposite bank,
-             *
-             * i.    Try to make the longest jump from the current position to reach opposite
-             *       bank. If possible, return the jump number as result
-             *
-             * ii.   Otherwise, remove the current position
-             *
-             * iii.  Meanwhile, store all the entities with leaves in the stack
-             *
-             * iv.   Start investigation from the longest entity from the set of current addition
-             *
-             * v.    Repeat the entire process
-             * */
 
             /*
              * A    = [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0] and N = 11
@@ -200,14 +200,17 @@ public class FibFrog {
                     return curr.jumps + 1;
                 }
 
+
                 /*
                  * we are at a leaf and this pos is not visited yet
                  * */
                 if (A[index] == 1 && !visited[index]) {
+
                     stack.push(new Jump(index, curr.jumps + 1));
                     visited[index] = true;
                 }
             }
+            
         }
 
         return -1;
@@ -553,6 +556,147 @@ public class FibFrog {
 
         return steps[N];
     }
+
+
+
+    /*
+    * solution - f;  100% correctness provided 
+    */
+    typedef struct state {
+    int pos;
+    int step;
+    }state;
+
+    int solution(int A[], int N) {
+
+        int f1 = 0;
+        int f2 = 1;
+        int count = 2;
+        while(1)
+        {
+            int f3 =  f2 + f1;
+            if(f3 > N)
+                break;
+            f1 = f2;
+            f2 = f3;
+            ++count;
+        }
+        int fib[count+1];
+        fib[0] = 0;
+        fib[1] = 1;
+        int i = 2;
+        while(1)
+        {
+            fib[i] =  fib[i-1] + fib[i-2];
+            if(fib[i] > N)
+                break;
+            ++i;
+        }
+
+        for(int j = 0, k = count; j < count/2; j++,k--)
+        {
+            int t = fib[j];
+            fib[j] = fib[k];
+            fib[k] = t;
+        }
+        state q[N];
+        int front = 0 ;
+        int rear = 0;
+        q[0].pos = -1;
+        q[0].step = 0;
+        int que_s = 1;
+        while(que_s > 0)
+        {
+            state s =  q[front];
+            front++;
+            que_s--;
+            for(int i = 0; i <= count; i++)
+            {
+                int nextpo = s.pos + fib[i];
+                if(nextpo == N)
+                {
+                    return s.step+1;
+                }
+                else if(nextpo > N || nextpo < 0 || A[nextpo] == 0){
+
+                    continue;  
+                }
+                else
+                {
+                    q[++rear].pos = nextpo;
+                    q[rear].step = s.step + 1;
+                    que_s++;
+                    A[nextpo] = 0;
+                }
+            }
+        }
+        return -1;
+    }
+
+
+
+    /*
+    * solution - g
+    */
+    public class Jump {
+
+        int pos;
+        int move;
+        public Jump(int pos, int move) {
+            this.pos = pos;
+            this.move = move;
+        }
+    }
+
+    public int solution(int[] A) {
+
+        int n = A.length;
+        List < Integer > fibs = fibArray(n + 1);
+        Queue < Jump > positions = new LinkedList < Jump > ();
+        boolean[] visited = new boolean[n + 1];
+
+        if (A.length <= 2)
+            return 1;
+
+        for (int i = 0; i < fibs.size(); i++) {
+            int initPos = fibs.get(i) - 1;
+            if (A[initPos] == 0 || visited[initPos])
+                continue;
+            positions.add(new Jump(initPos, 1));
+            visited[initPos] = true;
+        }
+
+        while (!positions.isEmpty()) {
+            Jump jump = positions.remove();
+            for (int j = fibs.size() - 1; j >= 0; j--) {
+                int nextPos = jump.pos + fibs.get(j);
+                if (nextPos == n)
+                    return jump.move + 1;
+                else if (nextPos < n && A[nextPos] == 1 && !visited[nextPos]) {
+                    positions.add(new Jump(nextPos, jump.move + 1));
+                    visited[nextPos] = true;
+                }
+            }
+        }
+
+
+        return -1;
+    }
+
+
+    private List < Integer > fibArray(int n) {
+        List < Integer > fibs = new ArrayList < > ();
+        fibs.add(1);
+        fibs.add(2);
+        while (fibs.get(fibs.size() - 1) + fibs.get(fibs.size() - 2) <= n) {
+            fibs.add(fibs.get(fibs.size() - 1) + fibs.get(fibs.size() - 2));
+        }
+        return fibs;
+    }
+
+
+
+
 
     public static void main(String[] args) {
 

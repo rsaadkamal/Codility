@@ -59,11 +59,9 @@ public class MaxProductOfThree {
     public static int solution(int[] A) {
 
         Arrays.sort(A);
-
         int N = A.length;
 
         int all = A[N - 1] * A[N - 2] * A[N - 3];
-
         int mixtures = A[N - 1] * A[0] * A[1];
 
         return all > mixtures ? all : mixtures;
@@ -88,7 +86,7 @@ public class MaxProductOfThree {
         int[] mins = {Integer.MAX_VALUE, Integer.MAX_VALUE};
 
         for (int a : A) {
-
+                  
             updateMaxes(a, maxes);
             updateMins(a, mins);
         }
@@ -98,7 +96,6 @@ public class MaxProductOfThree {
 
         return Math.max(obvious, twoBigNegs);
     }
-
 
     private static void updateMaxes(int a, int[] maxes) {
 
@@ -117,15 +114,14 @@ public class MaxProductOfThree {
         }
     }
 
-
     private static void updateMins(int a, int[] mins) {
 
         if (a <= mins[0]) {
-
             mins[0] = a;
             mins[1] = mins[0];
-        } else if (a < mins[1]) {
+        } 
 
+        else if (a < mins[1]) {
             mins[1] = a;
         }
     }

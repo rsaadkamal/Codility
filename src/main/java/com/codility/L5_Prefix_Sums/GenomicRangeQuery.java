@@ -93,6 +93,7 @@ public class GenomicRangeQuery {
     }
 
 
+
     /*
      * solution - b
      * */
@@ -166,7 +167,7 @@ public class GenomicRangeQuery {
 
 
     /*
-     * solution - c
+     * solution -(c)
      * */
     /*
      * This solution uses prefix. Time complexity is O(N + M)
@@ -177,7 +178,6 @@ public class GenomicRangeQuery {
          * used jagged array to hold the prefix sums of each A, C
          * and G genoms we don't need to get prefix sums of T
          * */
-
         int[][] genoms = new int[3][S.length() + 1];
 
         /*

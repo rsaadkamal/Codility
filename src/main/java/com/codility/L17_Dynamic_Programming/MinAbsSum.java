@@ -69,7 +69,6 @@ public class MinAbsSum {
         for (int i = 0; i < N; i++) {
 
             int value = Math.abs(A[i]);
-
             sum += value;
 
             if (max < value) {
@@ -131,12 +130,12 @@ public class MinAbsSum {
         int result = sum;
 
         /*
-         * don't have to traverse all the arrays, since i - the sum of elements.
+         * Don't have to traverse all the arrays, since i - the sum of elements.
          * if it's reachable then (sum - i) - reachable as well. so if the value
          * is reachable then the difference is abs(i - (sum - i)), which is the
          * same as abs(sum - 2 * i)
          *
-         * BODMAS_RULE = {Brackets, Orders, Division, Multiplication, Addition, Subtraction}
+         * BODMAS RULE = {Brackets, Orders, Division, Multiplication, Addition, Subtraction}
          * */
         for (int i = 0; i < Total.length / 2 + 1; i++) {
 
@@ -166,7 +165,6 @@ public class MinAbsSum {
 
             max = Math.max(A[i], max);
         }
-
 
         int[] counts = new int[max + 1];
 
@@ -261,14 +259,28 @@ public class MinAbsSum {
             }
         }
 
+
+
         int result = sum;
 
-        for (int i = 0; i < sum / 2 + 1; i++) {
+        for (int i = 0; i < (sum/2) + 1; i++) {
 
             /*
              * i- th index if zero or positive
              * BODMAS  =  {Brackets, Orders, Division, Multiplication, Addition, Subtraction}
              * */
+
+            /*
+                BODMAS
+                ------
+
+                    Bracket
+                    Of
+                    Division
+                    Multiplication
+                    Addition
+                    Subtraction
+            */
             if (Total[i] >= 0) {
                 result = Math.min(result, sum - 2 * i);
             }

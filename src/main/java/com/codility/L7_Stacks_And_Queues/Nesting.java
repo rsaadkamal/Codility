@@ -49,7 +49,7 @@ public class Nesting {
         for (int i = 0; i < S.length(); i++) {
 
             if (S.charAt(i) == '(') {
-                stack.push(S.charAt(i));
+                stack.push('(');
             } else if (S.charAt(i) == ')' && stack.size() > 0) {
                 stack.pop();
             } else {

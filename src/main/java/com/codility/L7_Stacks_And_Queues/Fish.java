@@ -47,6 +47,7 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 
 import java.util.Stack;
 
+
 /**
  * Created by Chaklader on 6/24/18.
  */
@@ -57,7 +58,6 @@ public class Fish {
      * solution - a
      * */
     public static int solution(int[] A, int[] B) {
-
 
         Stack<Integer> stack = new Stack<Integer>();
 

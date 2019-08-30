@@ -101,14 +101,14 @@ public class Flags {
             }
         }
 
-        int P = flags.size();
+        int N = flags.size();
 
-        if (P == 0 || P == 1) {
-            return P;
+        if (N == 0 || N == 1) {
+            return N;
         }
 
         int low = 1;
-        int high = P;
+        int high = N;
 
         int result = 1;
 
@@ -125,7 +125,7 @@ public class Flags {
             int count = 0;
             int marked = flags.get(0);
 
-            for (int i = 0; i < P; i++) {
+            for (int i = 0; i < N; i++) {
 
                 if (flags.get(i) >= marked) {
 

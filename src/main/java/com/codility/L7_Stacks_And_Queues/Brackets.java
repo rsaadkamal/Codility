@@ -52,6 +52,7 @@ public class Brackets {
      */
     public static int solution(String S) {
 
+
         Stack<Character> stack = new Stack<Character>();
 
         for (int i = 0; i < S.length(); i++) {
@@ -115,8 +116,8 @@ public class Brackets {
                     } else {
                         stack.pop();
                     }
+                    
                     break;
-
 
                 case ']':
                     if (stack.isEmpty() || stack.peek() != '[') {

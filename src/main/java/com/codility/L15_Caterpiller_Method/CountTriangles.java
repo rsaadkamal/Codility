@@ -65,6 +65,7 @@ public class CountTriangles {
      * */
     public static int solution(int[] A) {
 
+
         int N = A.length;
         int result = 0;
 
@@ -76,6 +77,13 @@ public class CountTriangles {
 
         Arrays.sort(A);
 
+
+        /*
+        A[0] = 10    A[1] = 2    A[2] = 5
+        A[3] = 1     A[4] = 8    A[5] = 12
+
+        A = [1, 2, 5, 8, 10, 12]        
+        */
         for (int i = 0; i < N - 2; i++) {
 
             front = i + 2;
