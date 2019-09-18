@@ -39,6 +39,11 @@ public class CountFactors {
          * to reduece the number of iterations
          * we will iterate till, i * i <= N
          * */
+
+        // if we square the i value below, the result will be negative
+        // int i = 46340;
+        //  for (int i = 1; (i * i) > 0 && (i * i) <= N; i++) {
+        
         for (int i = 1; (long) i * i <= N; i++) {
 
             /*

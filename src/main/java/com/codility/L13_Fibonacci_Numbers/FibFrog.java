@@ -133,6 +133,7 @@ public class FibFrog {
         int jumps;
 
         Jump(int pos, int jumps) {
+
             this.pos = pos;
             this.jumps = jumps;
         }
@@ -199,7 +200,6 @@ public class FibFrog {
                 if (index == A.length) {
                     return curr.jumps + 1;
                 }
-
 
                 /*
                  * we are at a leaf and this pos is not visited yet
@@ -562,76 +562,120 @@ public class FibFrog {
     /*
     * solution - f;  100% correctness provided 
     */
-    typedef struct state {
-    int pos;
-    int step;
-    }state;
+    private static class State {
 
-    int solution(int A[], int N) {
+        int pos;
+        int step;
+
+        public State(int pos, int step) {
+
+            this.pos = pos;
+            this.step = step;
+        }
+    }
+
+    public static int solution(int A[]) {
+
+        int N = A.length;
 
         int f1 = 0;
         int f2 = 1;
+
         int count = 2;
-        while(1)
-        {
-            int f3 =  f2 + f1;
-            if(f3 > N)
+
+        while (true) {
+
+            int f3 = f2 + f1;
+
+            if (f3 > N) {
                 break;
+            }
+
             f1 = f2;
             f2 = f3;
+
             ++count;
         }
-        int fib[count+1];
+
+
+        int[] fib = new int[count + 1];
+
         fib[0] = 0;
         fib[1] = 1;
+
         int i = 2;
-        while(1)
-        {
-            fib[i] =  fib[i-1] + fib[i-2];
-            if(fib[i] > N)
+
+        while (true) {
+
+            fib[i] = fib[i - 1] + fib[i - 2];
+
+            if (fib[i] > N) {
                 break;
+            }
+
             ++i;
         }
 
-        for(int j = 0, k = count; j < count/2; j++,k--)
-        {
+        for (int j = 0, k = count; j < count / 2; j++, k--) {
+
             int t = fib[j];
+
             fib[j] = fib[k];
             fib[k] = t;
         }
-        state q[N];
-        int front = 0 ;
+
+        State[] q = new State[N];
+
+        for (int j = 0; j < N; j++) {
+
+            q[j] = new State(-1,0);
+        }
+
+        int front = 0;
         int rear = 0;
-        q[0].pos = -1;
-        q[0].step = 0;
+
+//        q[0].pos = -1;
+//        q[0].step = 0;
+
         int que_s = 1;
-        while(que_s > 0)
-        {
-            state s =  q[front];
+
+        while (que_s > 0) {
+
+            State s = q[front];
+
             front++;
             que_s--;
-            for(int i = 0; i <= count; i++)
-            {
-                int nextpo = s.pos + fib[i];
-                if(nextpo == N)
-                {
-                    return s.step+1;
-                }
-                else if(nextpo > N || nextpo < 0 || A[nextpo] == 0){
 
-                    continue;  
+            for (i = 0; i <= count; i++) {
+
+                int nextpo = s.pos + fib[i];
+
+                if (nextpo == N) {
+                    return s.step + 1;
                 }
-                else
-                {
+
+                //
+                else if (nextpo > N || nextpo < 0 || A[nextpo] == 0) {
+                    continue;
+                }
+
+                //
+                else {
+
                     q[++rear].pos = nextpo;
                     q[rear].step = s.step + 1;
+
                     que_s++;
+
                     A[nextpo] = 0;
                 }
             }
         }
+
         return -1;
     }
+
+
 
 
 

@@ -11,11 +11,12 @@ In other words, it is the absolute difference between the sum of the first part 
 
 For example, consider array A such that:
 
-  A[0] = 3
-  A[1] = 1
-  A[2] = 2
-  A[3] = 4
-  A[4] = 3
+    A[0] = 3
+    A[1] = 1
+    A[2] = 2
+    A[3] = 4
+    A[4] = 3
+
 We can split this tape in four places:
 
 P = 1, difference = |3 − 10| = 7
@@ -30,22 +31,27 @@ that, given A non-empty array A of N integers, returns the minimal difference th
 
 For example, given:
 
-  A[0] = 3
-  A[1] = 1
-  A[2] = 2
-  A[3] = 4
-  A[4] = 3
-the function should return 1, as explained above.
+    A[0] = 3
+    A[1] = 1
+    A[2] = 2
+    A[3] = 4
+    A[4] = 3
+
+The function should return 1, as explained above.
+
 
 Assume that:
 
-N is an integer within the range [2..100,000];
-each element of array A is an integer within the range [−1,000..1,000].
-Complexity:
 
-expected worst-case time complexity is O(N);
-expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
+    N is an integer within the range [2..100,000];
+    each element of array A is an integer within the range [−1,000..1,000].
+    Complexity:
+
+    expected worst-case time complexity is O(N);
+    expected worst-case space complexity is O(N) (not counting the storage required for input arguments).
 * */
+
+
 
 
 /**
@@ -62,6 +68,7 @@ public class TapeEquilibrium {
      * solution - a
      * */
     public static int solution(int[] A) {
+
 
 //        int result = Integer.MAX_VALUE;
         int result = (1 << 31);
@@ -87,6 +94,7 @@ public class TapeEquilibrium {
      * solution - b
      * */
     public int solution1(int[] A) {
+
 
         int N = A.length;
 
@@ -134,6 +142,7 @@ public class TapeEquilibrium {
      * */
     public int solution3(int[] A) {
 
+
         int sum = 0;
         int result = Integer.MAX_VALUE;
 
@@ -164,6 +173,7 @@ public class TapeEquilibrium {
         int[] C = new int[A.length];
         C[0] = A[0];
 
+
         for (int i = 1; i < A.length; i++) {
             C[i] = A[i] + C[i - 1];
         }
@@ -183,4 +193,7 @@ public class TapeEquilibrium {
 
         return min;
     }
+    // // // //// // 
+
+
 }

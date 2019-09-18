@@ -12,13 +12,15 @@ For example, consider integer N = 5 and array A such that:
     A[2] = 2
     A[3] = 3
     A[4] = 6
+
 For the following elements:
 
-A[0] = 3, the non-divisors are: 2, 6,
-A[1] = 1, the non-divisors are: 3, 2, 3, 6,
-A[2] = 2, the non-divisors are: 3, 3, 6,
-A[3] = 3, the non-divisors are: 2, 6,
-A[4] = 6, there aren't any non-divisors.
+    A[0] = 3, the non-divisors are: 2, 6,
+    A[1] = 1, the non-divisors are: 3, 2, 3, 6,
+    A[2] = 2, the non-divisors are: 3, 3, 6,
+    A[3] = 3, the non-divisors are: 2, 6,
+    A[4] = 6, there aren't any non-divisors.
+
 Write A function:
 
 class Solution { public int[] solution(int[] A); }
@@ -27,9 +29,10 @@ that, given an array A consisting of N integers, returns A sequence of integers 
 
 The sequence should be returned as:
 
-A structure Results (in C), or
-A vector of integers (in C++), or
-A record Results (in Pascal), or
+    A structure Results (in C), or
+    A vector of integers (in C++), or
+    A record Results (in Pascal), or
+
 an array of integers (in any other programming language).
 For example, given:
 
@@ -38,6 +41,7 @@ For example, given:
     A[2] = 2
     A[3] = 3
     A[4] = 6
+
 the function should return [2, 4, 3, 2, 0], as explained above.
 
 Assume that:
@@ -93,12 +97,11 @@ public class CountNonDivisible {
            0 -1
         ]
         * */
-
         for (int i = 0; i < N; i++) {
+
             D[A[i]][0]++;
             D[A[i]][1] = -1;
         }
-
 
         for (int i = 0; i < N; i++) {
 
@@ -146,6 +149,46 @@ public class CountNonDivisible {
             System.out.println(Arrays.toString(a));
         }
     }
+
+
+
+    /*
+    * solution - bb
+    */
+
+    public static int[] solution(int[] A) {
+
+
+        int N = A.length;
+
+        int[] result = new int[N];
+
+        List<Integer> list = Arrays.stream(A).boxed().collect(Collectors.toList());
+
+        for (int i = 0; i < N; i++) {
+
+            int temp = A[i];
+
+            List<Integer> copyOfList = new ArrayList<>(list);
+            copyOfList.remove(i);
+
+            int count = 0;
+
+            for (int j = 0; j < copyOfList.size(); j++) {
+
+                if (!(temp % copyOfList.get(j) == 0)) {
+                    count++;
+                }
+            }
+
+            result[i] = count;
+        }
+
+        return result;
+    }
+    /*
+    END of solution - bb
+    */
 
 
     /*

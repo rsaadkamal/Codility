@@ -60,6 +60,8 @@ import java.util.Arrays;
  */
 public class PermCheck {
 
+
+
     /*
      * Expected worst-case time complexity is O(N) and
      * expected worst-case space complexity is O(N)
@@ -107,6 +109,7 @@ public class PermCheck {
      * solution - b
      */
     public static int solution1(int[] A) {
+
 
         /*
          * the time complexity is O(N*log(N))

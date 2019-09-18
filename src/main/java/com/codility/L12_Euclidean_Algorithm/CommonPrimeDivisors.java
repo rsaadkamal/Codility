@@ -92,7 +92,7 @@ public class CommonPrimeDivisors {
 
             while (y != 1) {
 
-                temp = gcd(y, gcd, 1);
+                temp = gcd(y, gcd);
 
                 if (temp == 1) {
                     break;
@@ -111,7 +111,7 @@ public class CommonPrimeDivisors {
         return count;
     }
 
-
+    // Greatest Common Divisor (GCD)
     public static int gcd(int a, int b) {
 
         if (a % b == 0) {

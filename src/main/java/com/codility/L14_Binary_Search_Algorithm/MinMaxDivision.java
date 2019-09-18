@@ -2,14 +2,13 @@ package com.codility.L14_Binary_Search_Algorithm;
 
 /*
 * You are given integers K, M and A non-empty array A consisting of N integers. Every element of the array is not greater than M.
-
 You should divide this array into K blocks of consecutive elements. The size of the block is any integer between 0 and N. Every element of the array should belong to some block.
-
 The sum of the block from X to Y equals A[X] + A[X + 1] + ... + A[Y]. The sum of empty block equals 0.
-
 The large sum is the maximal sum of any block.
 
+
 For example, you are given integers K = 3, M = 5 and array A such that:
+
 
         A[0] = 2
         A[1] = 1
@@ -18,6 +17,7 @@ For example, you are given integers K = 3, M = 5 and array A such that:
         A[4] = 2
         A[5] = 2
         A[6] = 2
+
 
 The array can be divided, for example, into the following blocks:
 
@@ -84,6 +84,7 @@ public class MinMaxDivision {
     * The goal is to minimize the large sum.
     */
     public static int solution(int K, int M, int[] A) {
+
 
         int sum0 = 0;
         int max0 = 0;

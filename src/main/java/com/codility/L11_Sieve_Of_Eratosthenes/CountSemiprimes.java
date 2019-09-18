@@ -101,15 +101,14 @@ public class CountSemiprimes {
 
 
         /*
-            Q[0] = 26
-            Q[1] = 10
-            Q[2] = 20
+        Q[0] = 26
+        Q[1] = 10
+        Q[2] = 20
 
-            P[0] = 1    
-            P[1] = 4    
-            P[2] = 16   
+        P[0] = 1    
+        P[1] = 4    
+        P[2] = 16   
         */
-
 
         // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
         // [0, 0, 0, 0, 2, 0, 2, 0, 2, 3, 2,  0,  2,  0,  2,  3,  2,  0,  2,  0,  2,  3,  2,  0,  2,  5,  2]
@@ -183,34 +182,9 @@ public class CountSemiprimes {
     }
 
 
-    // sieve Of Eratosthenes 
-    public static List<Integer> findPrimesUsingSieve(int N) {
-
-        List<Integer> result = new ArrayList<>();
-        boolean[] isComposite = new boolean[N + 1];
-
-        for (int i = 2; i <= N; i++) {
-
-            if (!isComposite[i]) {
-
-                result.add(i);
-                int M = 2;
-
-                while (i * M <= N) {
-
-                    isComposite[i * M] = true;
-                    M++;
-                }
-            }
-        }
-
-        return result;
-    }
-
-
     public static List<Integer> findPrimesUsingSieve2(int N) {
 
-        int[] F = new int[N + 1];
+        int[] F = new int[N + 1];        
         List<Integer> result = new ArrayList<>();
 
         for (int i = 2; i <= N; i++) {
@@ -230,9 +204,120 @@ public class CountSemiprimes {
 
         return result;
     }
+    
+    // sieve Of Eratosthenes 
+    public static List<Integer> findPrimesUsingSieve(int N) {
 
+        List<Integer> result = new ArrayList<>();
 
+        boolean[] isComposite = new boolean[N + 1];
+
+        for (int i = 2; i <= N; i++) {
+
+            if (!isComposite[i]) {
+
+                result.add(i);
+                int M = 2;
+
+                while (i * M <= N) {
+
+                    isComposite[i * M] = true;
+                    M++;
+                }
+            }
+        }
+
+        return result;
+    }
     // ENd of solution - a
+
+
+
+
+    /*
+    solution - bb
+    */
+    public static int[] solution(int N, int[] P, int[] Q) {
+
+
+        List<Integer> primes = findSemiPrimes(26);
+        List<Integer> semiprimes = findSemiPrimes(N, primes);
+
+        int[] result = new int[P.length];
+
+
+        for (int i = 0; i < P.length; i++) {
+
+            int count = 0;
+
+            for (int j = 0; j < semiprimes.size(); j++) {
+
+                if (semiprimes.get(j) > Q[i]) {
+                    break;
+                }
+
+                if (P[i] <= semiprimes.get(j) && semiprimes.get(j) <= Q[i]) {
+                    count++;
+                }
+            }
+
+            result[i] = count;
+        }
+
+        return result;
+    }
+
+
+    public static List<Integer> findSemiPrimes(int N, List<Integer> primes) {
+
+        List<Integer> semiprimes = new ArrayList<>();
+        
+        for (int i = 0; i < primes.size(); i++) {
+
+            for (int j = i; j < primes.size(); j++) {
+
+                int temp = (primes.get(i) * primes.get(j));
+
+                if (temp > N) {
+                    break;
+                }
+
+                semiprimes.add(temp);
+            }
+        }
+
+        Collections.sort(semiprimes);
+
+        return semiprimes;
+    }
+
+    private static List<Integer> findSemiPrimes(int N) {
+
+        int[] A = new int[N + 1];
+
+        List<Integer> primes = new ArrayList<>();
+
+        for (int i = 2; i <= N; i++) {
+
+            if (A[i] == 0) {
+
+                primes.add(i);
+
+                for (int j = i; j <= N; j += i) {
+
+                    if (A[j] == 0) {
+
+                        A[j] = 1;
+                    }
+                }
+            }
+        }
+
+        return primes;
+    }
+    /*
+    END of solution bb
+    */
 
 
     /*

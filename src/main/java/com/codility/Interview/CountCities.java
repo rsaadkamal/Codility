@@ -1,7 +1,6 @@
 package com.codility.Interview;
 
 
-
 /*
 A network consisting of M cities and M − 1 roads connecting them is given. Cities are labeled
 
@@ -19,7 +18,7 @@ ten cities and nine roads: Cities 2 and 4 are connected directly, so the distanc
 
 is 1. Cities 4 and 7 are connected by a path consisting of the direct roads 4−0, 0−9 and 9−7;
 
-hence the distance between them is 3. One of the cities is the capital, and the goal is to count
+Hence the distance between them is 3. One of the cities is the capital, and the goal is to count
 
 the number of cities positioned away from it at each of the distances 1, 2, 3, ..., M − 1. If
 
@@ -30,7 +29,14 @@ would be as follows: 9 is at a distance of 1; 0, 3, 7 are at a distance of 2; 8,
 distance of 3; 2, 5, 6 are at A distance of 4. Write A function:
 
 
-class Solution { public int[] solution(int[] T); } that, given a non-empty array T consisting
+
+        class Solution { 
+
+            public int[] solution(int[] T); 
+        } 
+
+
+That, given a non-empty array T consisting
 
 of M integers describing a network of M cities and M − 1 roads, returns an array consisting of
 
@@ -44,39 +50,39 @@ the following array T consisting of ten elements:
 
 
 
-T[children] = parent
+    T[children] = parent
 
 
-T[0] = 9
+    T[0] = 9
 
-T[1] = 1
+    T[1] = 1
 
-T[2] = 4
+    T[2] = 4
 
-T[3] = 9
+    T[3] = 9
 
-T[4] = 0
+    T[4] = 0
 
-T[5] = 4
+    T[5] = 4
 
-T[6] = 8
+    T[6] = 8
 
-T[7] = 9
+    T[7] = 9
 
-T[8] = 0
+    T[8] = 0
 
-T[9] = 1
+    T[9] = 1
 
 
-         1
-         |
-         9
-       / | \
-      3  0  7
-        / \
-       4   8
-     / \  /
-    2  5 6
+                 1
+                 |
+                 9
+               / | \
+              3  0  7
+                / \
+               4   8
+             / \  /
+            2  5 6
 
 
 the function should return [1, 3, 2, 3, 0, 0, 0, 0, 0], as explained above. Assume that: M is a
@@ -103,7 +109,10 @@ import java.util.*;
 public class CountCities {
 
 
+
+
     private static class Node {
+
 
         private int key;
         private ArrayList<Node> adjacents;
@@ -159,7 +168,6 @@ public class CountCities {
 
 
         ArrayList<LinkedList<Node>> result = new ArrayList<LinkedList<Node>>();
-
         LinkedList<Node> current = new LinkedList<Node>();
 
         if (root != null) {
@@ -174,20 +182,11 @@ public class CountCities {
             current = new LinkedList<Node>();
 
             for (Node node : parents) {
-
-//                for (Node node1 : node.getAdjacents()) {
-//
-//                    if (node1 != null) {
-//                        current.add(node1);
-//                    }
-//                }
-
                 current.addAll(node.getAdjacents());
             }
         }
 
         result.remove(0);
-
         return result;
     }
 
@@ -205,7 +204,7 @@ public class CountCities {
         return lists;
     }
 
-    public static void getSameLevelNodes1(Node root, ArrayList<LinkedList<Node>> lists, int level) {
+    public static void getSameLevelNodes1(Node node, ArrayList<LinkedList<Node>> lists, int level) {
 
         /*
             ALGORITHM
@@ -220,8 +219,7 @@ public class CountCities {
             iv. continue the recursive process till where is no child
         */
 
-
-        if (root == null) {
+        if (node == null) {
             return;
         }
 
@@ -230,13 +228,15 @@ public class CountCities {
         if (lists.size() == level) {
             list = new LinkedList<Node>();
             lists.add(list);
-        } else {
+        } 
+
+        else {
             list = lists.get(level);
         }
 
-        list.add(root);
+        list.add(node);
 
-        for (Node node : root.getAdjacents()) {
+        for (Node node : node.getAdjacents()) {
             getSameLevelNodes1(node, lists, level + 1);
         }
     }
@@ -246,6 +246,7 @@ public class CountCities {
      * solution - a
      * */
     public static int[] solution(int[] T) {
+
 
         Node root = createGraph(T);
         ArrayList<LinkedList<Node>> v = getSameLevelNodes(root);
@@ -257,13 +258,15 @@ public class CountCities {
 
         for (LinkedList<Node> l : v) {
 
-            int count = 0;
+            // int count = 0;
 
-            for (Node node : l) {
-                count++;
-            }
+            // for (Node node : l) {
+            //     count++;
+            // }
 
-            result[index++] = count;
+            // result[index++] = count;
+
+            result[index++] = l.size();
         }
 
         return result;

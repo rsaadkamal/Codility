@@ -16,6 +16,11 @@ package com.codility.Interview;
 Example:
 getChange(5, 0.99) // should return [1,0,0,0,0,4]
 
+
+System.out.println(Arrays.toString(solution(5.0, 0.99)));
+System.out.println(Arrays.toString(solution(3.14, 1.99)));
+System.out.println(Arrays.toString(solution(4.0, 3.14)));
+
 * */
 
 
@@ -47,15 +52,13 @@ public class GetChange {
         while (index >= 0) {
 
             result[index] = (int) rest / divisors[index];
-            rest -= result[index] * divisors[index];
+            rest = Math.ceil(rest % divisors[index]);
+            
+            // rest -= result[index] * divisors[index];
+            // rest = Math.ceil(rest);
 
             index--;
         }
-
-        result[0] += Math.ceil(rest);
-
-
-        System.out.println("Rest = " + rest);
 
         return result;
     }

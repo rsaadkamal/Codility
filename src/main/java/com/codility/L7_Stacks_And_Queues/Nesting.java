@@ -29,10 +29,13 @@ expected worst-case space complexity is O(1) (not counting the storage required 
 
 import java.util.Stack;
 
+
+
 /**
  * Created by Chaklader on 6/24/18.
  */
 public class Nesting {
+
 
 
     /*
@@ -50,9 +53,15 @@ public class Nesting {
 
             if (S.charAt(i) == '(') {
                 stack.push('(');
-            } else if (S.charAt(i) == ')' && stack.size() > 0) {
+            } 
+
+            // 
+            else if (S.charAt(i) == ')' && stack.size() > 0) {
                 stack.pop();
-            } else {
+            }
+
+            // 
+            else {
                 return 0;
             }
         }
@@ -95,6 +104,7 @@ public class Nesting {
      */
     public int solution2(String S) {
 
+
         Stack<Character> stack = new Stack<Character>();
 
         for (int i = 0; i < S.length(); i++) {
@@ -110,7 +120,10 @@ public class Nesting {
 
                     if (stack.isEmpty() || stack.peek() != '(') {
                         return 0;
-                    } else {
+                    } 
+
+                    // 
+                    else {
                         stack.pop();
                     }
 

@@ -7,6 +7,7 @@ The leader of this array is the value that occurs in more than half of the eleme
 
 An equi leader is an index S such that 0 ≤ S < N − 1 and two sequences A[0], A[1], ..., A[S] and A[S + 1], A[S + 2], ..., A[N − 1] have leaders of the same value.
 
+
 For example, given array A such that:
 
     A[0] = 4
@@ -15,10 +16,14 @@ For example, given array A such that:
     A[3] = 4
     A[4] = 4
     A[5] = 2
-we can find two equi leaders:
 
-0, because sequences: (4) and (3, 4, 4, 4, 2) have the same leader, whose value is 4.
-2, because sequences: (4, 3, 4) and (4, 4, 2) have the same leader, whose value is 4.
+
+We can find two equi leaders:
+
+    0, because sequences: (4) and (3, 4, 4, 4, 2) have the same leader, whose value is 4.
+    2, because sequences: (4, 3, 4) and (4, 4, 2) have the same leader, whose value is 4.
+
+
 The goal is to count the number of equi leaders.
 
 Write A function:
@@ -77,7 +82,10 @@ public class EquiLeader {
 
             if (stack.peek() == A[i]) {
                 stack.push(A[i]);
-            } else {
+            } 
+
+            // 
+            else {
                 stack.pop();
             }
         }
@@ -121,22 +129,10 @@ public class EquiLeader {
                 nonDominatorInCurrentSec++;
             }
 
-            /*
-             * PREMISE
-             * -------
-             *
-             * if certain number key has higher frequency than all other numbers of an
-             * array, key has occurance more than half of the total array size and is
-             * a dominator
-             *
-             *
-             *  Let the occurance of X in section of L is C. So the number of other  elements in L
-             *  is L-C. So we have C > L-C, which is the same as 2C > L, or C > L/2. So, if
-             *  we can prove, key is greater than other types of element in A section, then key
-             *  will be the dominator.
-             *
-             *  Dominator is greater then half of current and rest section of the array.
-             * */
+            // a > L/2   (a + b) = L
+            // a > (a/2 + b/2)
+
+            // a/2 > b/2   and  a > b
 
             if (dominatorInCurrentSec > nonDominatorInCurrentSec && (numOfDominator - dominatorInCurrentSec) > (numOfNonDominator - nonDominatorInCurrentSec)) {
                 numOfEquiLeaders++;
@@ -147,10 +143,12 @@ public class EquiLeader {
     }
 
 
+
     /*
      * solution - b
      */
     public int solution1(int[] A) {
+
 
         if (A.length == 1) {
             return 0;
@@ -193,9 +191,12 @@ public class EquiLeader {
             return 0;
         }
 
+
         int leader = candidate;
+
         int equiCount = 0;
         int leaderCount = 0;
+
 
         for (int i = 0; i < A.length; i++) {
 

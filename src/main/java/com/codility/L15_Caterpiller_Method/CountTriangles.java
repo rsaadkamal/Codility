@@ -74,7 +74,6 @@ public class CountTriangles {
         }
 
         int front;
-
         Arrays.sort(A);
 
 

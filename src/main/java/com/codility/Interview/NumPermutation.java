@@ -22,7 +22,7 @@ Write a function: class Solution { public int solution(int N); } that, given a n
 
 the number of non-negative integers similar to N. For example, given N = 1213 the function should return 12
 
-because there are twelve integers similar to 1213, namely: 1123, 1132, 1213, 1231, 1312, 1321, 2113, 2131, 2311,
+because there are 12 integers similar to 1213, namely: 1123, 1132, 1213, 1231, 1312, 1321, 2113, 2131, 2311,
 
 3112, 3121 and 3211. Given N = 123 the function should return 6 because there are six integers similar to 123,
 
@@ -58,41 +58,16 @@ public class NumPermutation {
 
     public static int solution(int N) {
 
-        int result = 0;
-
-        String s = String.valueOf(N);
-        int M = s.length();
-
-        String t = s.substring(0, 1);
-        boolean check = false;
-
-        for (int i = 1; i < M; i++) {
-
-            if (!t.equals(s.substring(i, i + 1))) {
-                check = true;
-            }
-        }
-
-        /*
-         * all are same
-         * */
-        if (!check) {
+        if(N == 0){
             return 1;
         }
 
-        Set<String> set = permutation(s);
-
-        result = set.size();
-        return result;
-    }
-
-
-    public static Set<String> permutation(String str) {
-
+        String s = String.valueOf(N);
         Set<String> set = new HashSet<>();
 
-        permutation("", str, set);
-        return set;
+        permutation("", s, set);
+
+        return set.size();
     }
 
     private static void permutation(String prefix, String str, Set<String> set) {

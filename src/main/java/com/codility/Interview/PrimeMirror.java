@@ -6,7 +6,6 @@
      */
     public static List<Integer> solution(int N) {
 
-
         List<Integer> primes = findPrimes(N);
         Set<Integer> set = new LinkedHashSet<>();
 
@@ -24,6 +23,12 @@
                 continue;
             }
 
+            if(prime == mirror){
+                
+                set.add(prime);
+                continue;
+            }
+
             set.add(prime);
             set.add(mirror);
         }
@@ -37,6 +42,7 @@
      * */
     private static int findMirror(int P) {
 
+        // 154   451
         int R = 0;
 
         while (P != 0) {
@@ -48,6 +54,7 @@
 
         return R;
     }
+
 
     private static int hasMirror(int P, List<Integer> B) {
 
@@ -66,8 +73,8 @@
         return 0;
     }
 
-
     public static List<Integer> findPrimes(int N) {
+
 
         int[] F = new int[N + 1];
         List<Integer> result = new ArrayList<>();
@@ -77,9 +84,9 @@
             if (F[i] == 0) {
 
                 // the prime value need to be 2 digit for the mirror image
-                if (i < 10 || i == findMirror(i)) {
-                    continue;
-                }
+                // if (i < 10 || i == findMirror(i)) {
+                //     continue;
+                // }
 
                 result.add(i);
 

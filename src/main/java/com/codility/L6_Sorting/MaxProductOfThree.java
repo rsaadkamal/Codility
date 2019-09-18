@@ -104,11 +104,17 @@ public class MaxProductOfThree {
             maxes[0] = maxes[1];
             maxes[1] = maxes[2];
             maxes[2] = a;
-        } else if (a >= maxes[1]) {
+        } 
+
+        // 
+        else if (a >= maxes[1]) {
 
             maxes[0] = maxes[1];
             maxes[1] = a;
-        } else if (a > maxes[0]) {
+        } 
+
+        // 
+        else if (a > maxes[0]) {
 
             maxes[0] = a;
         }
@@ -130,6 +136,7 @@ public class MaxProductOfThree {
     /*
      * solution - c
      */
+
     /*
      * O(n) solution. O(n * log(n)) involves sorting, than calculation two
      * possible maximums. First, second, last (in case first and second are

@@ -3,6 +3,7 @@ package com.codility.Interview;
 
 import java.util.*;
 
+
 /*
 Q:1
 
@@ -37,10 +38,10 @@ Write a function:
 -----------------
 
 
-class Solution {
+    class Solution {
 
-    public int solution(Tree T);
-}
+        public int solution(Tree T);
+    }
 
 
 that, given a binary tree T consisting of N nodes, returns the maximum number of distinct values that appear on
@@ -71,23 +72,98 @@ left and right hold the left and right subtrees of the binary tree, respectively
 
 an integer within the range [1..50,000]; the height of tree T (number of edges on the longest path from root to
 
-leaf) is within the range [0..3,500]; each value in tree T is an integer within the range [1..N]. Complexity:
+leaf) is within the range [0...3,500]; each value in tree T is an integer within the range [1..N]. Complexity:
 
 
 
 Time and Space complexity
 -------------------------
 
-i.  expected worst-case time complexity is O(N)
+    i.  expected worst-case time complexity is O(N)
 
-ii. expected worst-case space complexity is O(N).
+    ii. expected worst-case space complexity is O(N).
 */
+
 
 
 /**
  * Created by Chaklader on 8/8/18.
  */
 public class UniqueTreeNodes {
+
+
+
+
+    /*
+    * solution - a
+    */
+    private static class Node {
+
+        int data;
+
+        Node left;
+        Node right;
+
+        public Node(int data) {
+            this.data = data;
+        }
+    }
+
+
+    public static List<List<Node>> findAllPaths(List<List<Node>> paths, Node node, List<Node> path) {
+
+        if (node == null) {
+            return paths;
+        }
+
+        path.add(node);
+
+        if (node.left == null && node.right == null) {
+
+            paths.add(path);
+            return paths;
+        }
+
+        //
+        else {
+            findAllPaths(paths, node.left, new ArrayList<>(path));
+            findAllPaths(paths, node.right, new ArrayList<>(path));
+        }
+
+        return paths;
+    }
+
+
+    public static int solution(Node root) {
+
+        List<List<Node>> paths = findAllPaths(new ArrayList<List<Node>>(), root, new ArrayList<Node>());
+
+        Set<Integer> set;
+
+        int max = Integer.MIN_VALUE;
+
+
+        for (List<Node> path : paths) {
+
+            set = new HashSet<>();
+
+            for (Node p : path) {
+                set.add(p.data);
+            }
+
+            System.out.println(Arrays.toString(set.toArray()));
+            max = set.size() > max ? set.size() : max;
+        }
+
+        return max;
+    }
+    /*
+     * END of solution - a
+     */
+
+
+
+
 
 
     private static class Node {
@@ -102,10 +178,12 @@ public class UniqueTreeNodes {
         }
     }
 
+
     /*
      * solution - a
      * */
     public static int solution(Node root) {
+
 
         List<List<Integer>> list = new ArrayList<>();
 
@@ -118,15 +196,15 @@ public class UniqueTreeNodes {
 
             set = new HashSet<>();
 
-            System.out.println(l);
+            // System.out.println(l);
             set.addAll(l);
 
             max = max < set.size() ? set.size() : max;
         }
 
-
         return max;
     }
+
 
 
     /*
@@ -149,7 +227,6 @@ public class UniqueTreeNodes {
         }
 
         if (stack.peek().right != null) {
-
             right = stack.peek().right;
             findPaths(right, lists, stack);
         }
@@ -167,12 +244,14 @@ public class UniqueTreeNodes {
         lists.add(list);
 
         /*
+         *
          * i.    pop till the stack has elements
          * ii.   delete the old left paths that are already included
          * iii.  delete the old right path that are already included
          *
          * */
-        while (!stack.isEmpty() && (stack.peek().right == null || stack.peek().right.equals(right))) {
+        while (!stack.isEmpty() && (stack.peek().right == null 
+            || stack.peek().right.equals(right))) {
 
             right = stack.pop();
         }
@@ -185,10 +264,12 @@ public class UniqueTreeNodes {
     }
 
 
+
     /*
      * solution - b
      * */
     public static int solution1(Node root) {
+
 
         List<List<Integer>> list = new ArrayList<>();
 
@@ -207,12 +288,16 @@ public class UniqueTreeNodes {
             max = max < set.size() ? set.size() : max;
         }
 
-
         return max;
     }
 
 
+
+    /* *
+     * The money needs to be the one for the working. 
+     */
     private static List<List<Integer>> findPaths1(Node node) {
+
 
         if (node == null) {
             return new ArrayList<List<Integer>>();
@@ -230,6 +315,7 @@ public class UniqueTreeNodes {
 
             new_path.add(node.key);
             new_path.addAll(left_subtree.get(i));
+            
             paths.add(new_path);
         }
 
@@ -239,9 +325,9 @@ public class UniqueTreeNodes {
 
             new_path.add(node.key);
             new_path.addAll(right_subtree.get(i));
+
             paths.add(new_path);
         }
-
 
         if (paths.size() == 0) {
 
@@ -253,10 +339,15 @@ public class UniqueTreeNodes {
     }
 
 
+
+
+
+
     /*
      * solution - c
      * */
     public static int solution2(Node root) {
+
 
         List<List<Node>> paths = new ArrayList<>();
 
@@ -290,12 +381,12 @@ public class UniqueTreeNodes {
 //            max = max < set.size() ? set.size() : max;
 //        }
 
-
         return max;
     }
 
 
     public static void findPaths2(Node root, List<List<Node>> paths) {
+
 
         if (root == null) {
             return;
@@ -304,6 +395,7 @@ public class UniqueTreeNodes {
         List<Node> path = new ArrayList<>();
 
         if (paths.size() > 0) {
+
             for (List<Node> p : paths) {
 
                 if (p.get(p.size() - 1).equals(root)) {
@@ -318,9 +410,10 @@ public class UniqueTreeNodes {
 
         path.add(root);
         paths.add(path);
-//        if (root.left == null && root.right == null) {
-//            paths.add(path);
-//        }
+
+        //        if (root.left == null && root.right == null) {
+        //            paths.add(path);
+        //        }
 
         if (root.left != null) {
             findPaths2(root.left, paths);
@@ -339,6 +432,7 @@ public class UniqueTreeNodes {
      * */
     private static class Tree {
 
+
         public int key;
 
         public Tree left;
@@ -354,11 +448,10 @@ public class UniqueTreeNodes {
 
     public static int solution2(Tree root) {
 
-        List<ArrayList<Integer>> paths = findPaths3(root);
-
         int result = 0;
-
         List<Integer> list = null;
+
+        List<ArrayList<Integer>> paths = findPaths3(root);
 
         for (ArrayList<Integer> path : paths) {
 
@@ -378,9 +471,10 @@ public class UniqueTreeNodes {
             result = Math.max(result, list.size());
         }
 
-
         return result;
     }
+
+
 
 
     /*
@@ -388,11 +482,13 @@ public class UniqueTreeNodes {
      * */
     private static List<ArrayList<Integer>> findPaths3(Tree root) {
 
+
         Stack<Tree> stack = new Stack<>();
         List<ArrayList<Integer>> paths = new ArrayList<>();
 
         stack.push(root);
         root.visited = true;
+
 
         while (!stack.isEmpty()) {
 
@@ -402,7 +498,9 @@ public class UniqueTreeNodes {
 
                 stack.push(node.left);
                 node.left.visited = true;
-            } else {
+            } 
+
+            else {
 
                 if (node.right == null) {
 
@@ -414,12 +512,14 @@ public class UniqueTreeNodes {
 
                     paths.add(list);
                     stack.pop();
-                } else if (node.right != null && !node.right.visited) {
+                } 
 
+                else if (node.right != null && !node.right.visited) {
                     stack.push(node.right);
                     node.right.visited = true;
-                } else {
+                } 
 
+                else {
                     stack.pop();
                 }
             }

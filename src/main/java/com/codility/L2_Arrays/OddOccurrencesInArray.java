@@ -12,9 +12,11 @@ the elements at indexes 0 and 2 have value 9,
 the elements at indexes 1 and 3 have value 3,
 the elements at indexes 4 and 6 have value 9,
 the element at index 5 has value 7 and is unpaired.
-Write FrogJmp function:
 
-class Solution { public int solution(int[] A); }
+
+      Write FrogJmp function:
+
+          class Solution { public int solution(int[] A); }
 
 that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.
 
@@ -43,6 +45,7 @@ import java.util.*;
  * Created by Chaklader on 6/23/18.
  */
 public class OddOccurrencesInArray {
+
 
 
     /*
@@ -75,8 +78,10 @@ public class OddOccurrencesInArray {
 
             if (!list.contains(arr[i])) {
                 list.add(arr[i]);
-            } else {
-                
+            } 
+
+            // list.remove works with the indexs 
+            else {                
                 list.remove(list.indexOf(A[i]));
             }
         }
@@ -85,10 +90,14 @@ public class OddOccurrencesInArray {
     }
 
 
+
+
+
     /*
      * solution - c
      * */
     public int solution2(int[] A) {
+
 
         int N = A.length;
 

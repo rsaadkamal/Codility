@@ -51,6 +51,46 @@ expected worst-case space complexity is O(M) (not counting the storage required 
 public class CountDistinctSlices {
 
 
+    public static int solution(int[] A) {
+
+        int N = A.length;
+
+        Arrays.sort(A);
+        int result = 0;
+
+        for (int i = 0; i < N - 2; i++) {
+
+            int k = i + 2;
+
+            for (int j = i + 1; j < N - 1; j++) {
+
+                int count = 0;
+
+                k = j + 1;
+
+                while (k < N && A[i] + A[j] > A[k]) {
+
+                    count++;
+                    k++;
+                }
+
+
+                result += count;
+            }
+        }
+
+        // If the number of distinct slices is greater than 1,000,000,000, the function should return 1,000,000,000.
+        if(result > 1000000000){
+            
+            return 1000000000;
+        }
+
+
+        return result;
+    }
+
+    
+
     /*
      * solution - a
      * */

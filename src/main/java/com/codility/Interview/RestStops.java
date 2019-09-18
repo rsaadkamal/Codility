@@ -27,7 +27,6 @@ A triplet of rest stops that he has used previously. Write A function:
 
 
 
-
 class Solution { public int solution(int[] A, int[] B, int[] C); } that, given three non-empty
 
 arrays A, B, C consisting of N integers each, denoting the locations of rest stops offering
@@ -83,6 +82,7 @@ public class RestStops {
      * */
     public static int solution(int[] A, int[] B, int[] C) {
 
+
         int N = A.length;
         int count = 0;
 
@@ -93,15 +93,14 @@ public class RestStops {
         for (int i = 0; i < N; i++) {
 
             int maxIndex = maximumIndex(A, B[i]);
-
             int minIndex = minimumIndex(C, B[i]);
+        
+            if (maxIndex == -1) {
+                continue;
+            }
 
             if (minIndex == -1) {
                 return count;
-            }
-
-            if (maxIndex == -1) {
-                continue;
             }
 
             count += (maxIndex + 1) * (N - minIndex);
@@ -112,7 +111,7 @@ public class RestStops {
 
 
     /*
-     * in binary search, the condition breaks at low <= high and after the break, low = middle = high +1
+     * in binary search, the condition breaks at low > high and after the break, low = middle = high +1
      * */
     /*
      * maximum index of an item in the sorted array A which is less than key
@@ -146,10 +145,13 @@ public class RestStops {
 
             if (x < A[middle]) {
                 high = middle - 1;
-            } else if (x > A[middle]) {
-                low = middle + 1;
-            } else {
+            } 
 
+            else if (x > A[middle]) {
+                low = middle + 1;
+            } 
+
+            else {
                 return (middle - 1);
             }
         }
@@ -188,9 +190,13 @@ public class RestStops {
 
             if (x < C[middle]) {
                 high = middle - 1;
-            } else if (x > C[middle]) {
+            } 
+
+            else if (x > C[middle]) {
                 low = middle + 1;
-            } else {
+            } 
+
+            else {
 
                 /*
                  * we have a match C[middle] equals key

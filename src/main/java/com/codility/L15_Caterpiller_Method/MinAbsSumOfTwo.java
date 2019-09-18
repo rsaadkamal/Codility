@@ -181,18 +181,13 @@ public class MinAbsSumOfTwo {
         int low = 0;
         int high = N - 1;
 
-//        int min = Math.abs(A[low] + A[high]);
         int min = Integer.MAX_VALUE;
 
         while (low <= high) {
 
             int sum = A[low] + A[high];
-
             min = Math.min(min, Math.abs(sum));
 
-            /*
-             * we move forward the sum towards 0
-             * */
             if (sum <= 0) {
                 low++;
             } else {

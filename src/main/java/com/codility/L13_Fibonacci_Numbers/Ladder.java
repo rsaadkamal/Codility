@@ -10,21 +10,23 @@ Your task is to count the number of different ways of climbing to the top of the
 
 For example, given N = 4, you have five different ways of climbing, ascending by:
 
-1, 1, 1 and 1 rung,
-1, 1 and 2 rungs,
-1, 2 and 1 rung,
-2, 1 and 1 rungs, and
-2 and 2 rungs.
+    1, 1, 1 and 1 rung,
+    1, 1 and 2 rungs,
+    1, 2 and 1 rung,
+    2, 1 and 1 rungs, and
+    2 and 2 rungs.
+
 Given N = 5, you have eight different ways of climbing, ascending by:
 
-1, 1, 1, 1 and 1 rung,
-1, 1, 1 and 2 rungs,
-1, 1, 2 and 1 rung,
-1, 2, 1 and 1 rung,
-1, 2 and 2 rungs,
-2, 1, 1 and 1 rungs,
-2, 1 and 2 rungs, and
-2, 2 and 1 rung.
+    1, 1, 1, 1 and 1 rung,
+    1, 1, 1 and 2 rungs,
+    1, 1, 2 and 1 rung,
+    1, 2, 1 and 1 rung,
+    1, 2 and 2 rungs,
+    2, 1, 1 and 1 rungs,
+    2, 1 and 2 rungs, and
+    2, 2 and 1 rung.
+
 The number of different ways can be very large, so it is sufficient to return the result modulo 2P, for A given integer P.
 
 Write A function:
@@ -65,19 +67,16 @@ public class Ladder {
     /*
      * solution - a
      */
-    public int[] solution1(int[] A, int[] B) {
 
+    public static int[] solution(int[] A, int[] B) {
 
         int N = A.length;
 
-        int[] fib = new int[N + 2];
-        int[] result = new int[N];
+        int[] F = new int[N + 1];
 
-        fib[1] = 1;
+        F[0] = 1;
+        F[1] = 1;
 
-        // for (int i = 0; i < N; i++) {
-
-            
         //      * 2^32-1 is the maximum value for a 32-bit unsigned integer
         //      * (32 binary digits). 2^32 is the number of possible values
         //      *
@@ -88,8 +87,9 @@ public class Ladder {
         //     /*
         //      * SIGNED INTEGER VALUE
         //      * --------------------
-        //      *
-        //      * Integer.MAX_VALUE =  ((1 << 31) - 1)
+        //      *  
+        //        Integer.MAX_VALUE =  2 ^ 30
+        //      * Integer.MAX_VALUE =  ((1 << 31) - 1)   can be expressed as (1 << 30)
         //      * Integer.MIN_VALUE =  (1 << 31)
         //      * */
         //     int fIndex = i + 2;
@@ -97,30 +97,26 @@ public class Ladder {
         //     fib[fIndex] = (fib[fIndex - 1] + fib[fIndex - 2]) % (1 << 30);
         // }
 
+        for (int i = 2; i < F.length; i++) {
 
-        // [0, 1, 1, 2, 3, 5, 8]
-        for (int i = 2; i < N; i++) {
-            
-            // fib[i] = fib[i - 1] + fib[i - 2];
-            fib[i] = (fib[i - 1] + fib[i - 2]) % (1 << 30);
+            // 2^30
+            F[i] = (F[i - 1] + F[i - 2])%(1<< 30) ;
         }
 
-        // A is an integer within the range [1..L];
+        int[] result = new int[N];
+
         for (int i = 0; i < N; i++) {
-            result[i] = fib[A[i] + 1] % (1 << B[i]);
+            result[i] = F[A[i]] % (1 << B[i]);
         }
 
         return result;
     }
 
 
-
-
     /*
      * solution - b
      */
     public static int[] solution(int[] A, int[] B) {
-
 
         /*
          * we will add 2 more elements in the

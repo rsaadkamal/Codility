@@ -11,10 +11,12 @@ class Solution { public int[] solution(int[] A, int K); }
 
 that, given an array A consisting of N integers and an integer K, returns the array A rotated K times.
 
+
 For example, given
 
     A = [3, 8, 9, 7, 6]
     K = 3
+
 the function should return [9, 7, 6, 3, 8]. Three rotations were made:
 
     [3, 8, 9, 7, 6] -> [6, 3, 8, 9, 7]
@@ -55,11 +57,22 @@ public class CyclicRotation {
      * */
     public int[] solution(int[] A, int K) {
 
+
         int N = A.length;
 
         if (A == null || K > N) {
             return null;
         }
+
+        if(N == K){
+            return A; 
+        }
+
+        // all of the elements of the array are equal
+        if(Arrays.stream(A).distinct().count() == 1){
+            return A;
+        }
+
 
         /*
          * Algorithm
@@ -139,7 +152,6 @@ public class CyclicRotation {
     public int[] solution2(int[] A, int K) {
 
         int[] result = new int[A.length];
-
         int N = A.length;
 
         for (int i = 0; i < N; i++) {

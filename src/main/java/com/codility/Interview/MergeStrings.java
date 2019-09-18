@@ -7,6 +7,7 @@ package com.codility.Interview;
  * string
  * */
 
+
 /**
  * Created by Chaklader on 7/5/18.
  */
@@ -18,8 +19,8 @@ public class MergeStrings {
      * */
     public static String solution(String a, String b) {
 
-        boolean eql = a.length() == b.length();
 
+        boolean eql = a.length() == b.length();
         boolean less = a.length() < b.length();
 
         int min = less ? a.length() : b.length();

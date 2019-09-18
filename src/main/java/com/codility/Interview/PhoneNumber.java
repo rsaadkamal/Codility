@@ -32,7 +32,54 @@ public class PhoneNumber {
 
 
     /*
-     * solution - a
+    * solution - a
+    */
+    public static String solution(String S) {
+
+        String result = "";
+
+        S = S.replaceAll("[^0-9]", "");
+        int N = S.length();
+
+        int i = 0;
+        int index = 0;
+
+
+        while (i < N / 3) {
+
+            int rest = N - 3 * i;
+
+            if (rest == 4) {
+
+                result += S.substring(index, index = index + 2) + "-";
+                result += S.substring(index, index = index + 2) + "-";
+
+                break;
+            }
+
+            //
+            else if (rest == 5) {
+
+                result += S.substring(index, index = index + 3) + "-";
+                result += S.substring(index, index = index + 2) + "-";
+
+                break;
+            }
+
+            result += S.substring(index, index = index + 3) + "-";
+            i++;
+        }
+
+        result = result.substring(0, result.length() - 1);
+        return result;
+    }
+
+
+
+
+
+    /*
+     * solution - b
      * */
     public static String solution(String S) {
 
@@ -72,7 +119,6 @@ public class PhoneNumber {
             if (r == 4 && bol) {
 
                 result += String.valueOf(temp.charAt(i));
-
                 String rest = temp.substring(i + 1);
 
                 result += "-" + rest.substring(0, 2) + "-" + rest.substring(2);
@@ -91,7 +137,7 @@ public class PhoneNumber {
 
 
     /*
-     * solution - b
+     * solution - c
      * */
     public static String solution1(String s) {
 
@@ -108,7 +154,7 @@ public class PhoneNumber {
 
 
     /*
-     * solution - c
+     * solution - d
      * */
     public static String solution2(String input) {
 
@@ -127,7 +173,6 @@ public class PhoneNumber {
         }
 
         int N = phone.length();
-
         int M = (N / 3) * 3;
 
         switch (N % 3) {

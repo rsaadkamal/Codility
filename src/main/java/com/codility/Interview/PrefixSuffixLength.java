@@ -5,7 +5,10 @@ import java.util.*;
 
 
 /*
+---
 Q:3
+---
+
 
 A prefix of a string S is any leading contiguous part of S. For example, the string "codility" has the following
 
@@ -27,8 +30,7 @@ characters, returns the length of the longest string that is both a proper prefi
 For example, given S = "abbabba" the function should return 4, because:
 
 
-
-proper prefixes of S are: "", "a", "ab", "abb", "abba", "abbab", "abbabb"; proper suffixes of
+Proper prefixes of S are: "", "a", "ab", "abb", "abba", "abbab", "abbabb"; proper suffixes of
 
 S are: "", "a", "ba", "bba", "abba", "babba", "bbabba"; string "abba" is both a proper prefix and a proper suffix
 
@@ -71,13 +73,14 @@ public class PrefixSuffixLength {
 
             if (prefix.equals(suffix)) {
 
-                System.out.println("Prefix and Suffix = " + prefix);
+                // System.out.println("Prefix and Suffix = " + prefix);
                 return i;
             }
         }
 
         return 0;
     }
+
 
 
     /*
@@ -102,7 +105,6 @@ public class PrefixSuffixLength {
         }
 
         int result = 0;
-
         int i = N / 2;
 
         // addadda

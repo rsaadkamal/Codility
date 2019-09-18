@@ -30,8 +30,7 @@ public class ElectionWinner {
             map.put(vote, value);
         }
 
-        List<String> keys = new ArrayList<String>();
-
+        List<String> keys = new ArrayList<String>();        
         int max = Collections.max(map.values());
 
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
@@ -67,7 +66,7 @@ public class ElectionWinner {
         }
 
         int max = Collections.max(map.values());
-
+        
         Iterator it = map.entrySet().iterator();
 
         while (it.hasNext()) {

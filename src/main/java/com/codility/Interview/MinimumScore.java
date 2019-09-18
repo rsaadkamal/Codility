@@ -6,10 +6,10 @@ You are playing A game with N cards. On each side of each card A positive intege
 written.
 The score of the game is smallest positive integer that doesn't appear on the cards'
 front faces.
-You may decide which cards you want to flip over. Having flipped them, you then read
+You may decide which card you want to flip over. Having flipped them, you then read
 
-the numbers on the front faces of all the cards. What is the minimum game score you c
-an achieve?
+the numbers on the front faces of all the cards. What is the minimum game score you can 
+achieve?
 
 
 Write A function:
@@ -36,6 +36,8 @@ ample,
  unction
  should return 3, as no matter how we flip the cards the front-facing numbers will be
  [1, 2].
+
+
  Assume that: N is an integer within the range [1..100,000]; each element of arrays A,
   B is
  an integer within the range [1..100,000]; input arrays are of equal size. Complexity:
@@ -54,6 +56,15 @@ import java.util.Arrays;
  */
 public class MinimumScore {
 
+    // 1, 4, 7, 9
+        // 2, 5, 8, 10
+
+    // System.out.println(solution(new int[]{1, 4, 7, 9}, new int[]{2, 5, 8, 10}));
+
+    // System.out.println(solution(new int[]{1, 2, 4, 3}, new int[]{1, 3, 2, 3}));
+    // System.out.println(solution(new int[]{3, 2, 1, 6, 5}, new int[]{4, 2, 1, 3, 3}));
+    // System.out.println(solution(new int[]{1,2}, new int[]{1,2}));
+
 
     /*
      * solution - a
@@ -61,7 +72,6 @@ public class MinimumScore {
     public static int solution(int[] A, int[] B) {
 
         int N = A.length;
-
         int smallestPositive = getSmallestPositive(A);
 
         /*
@@ -72,6 +82,9 @@ public class MinimumScore {
         }
 
         for (int i = 0; i < N; i++) {
+
+
+            // what if all of the items of A[] are smaller than the B[]
 
             /*
              * i.  if B[i] = A[i] its still the same array
@@ -87,6 +100,7 @@ public class MinimumScore {
             /*
              * B[i] is greater than A[i] which opens the slot of A[i]. We need to update only if A[i] < smallestPositive
              * */
+            // min = min > Math.min(c, A[i]) ? Math.min(c, A[i]) : min;
             if (A[i] < smallestPositive) {
                 smallestPositive = A[i];
             }
@@ -100,7 +114,6 @@ public class MinimumScore {
      * find the smallest positive missing number
      * */
     public static int getSmallestPositive(int[] A) {
-
 
         int N = A.length;
 

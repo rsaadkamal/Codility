@@ -131,6 +131,7 @@ public class NailingPlanks {
         */
 
         for (int i = 0; i < N; i++) {
+
             sortedNails[i][0] = C[i];
             sortedNails[i][1] = i;
         }
@@ -178,57 +179,30 @@ public class NailingPlanks {
          * */
         int resultIndex = -1;
 
-        /*
-         * find the minimum index of the nail for provided planks using binary search
-         * */
         while (low <= high) {
-
-            /*
-             * we will try to condition with the value and update
-             * it as result if conditions meet
-             * */
+            
             int middle = (low + high) / 2;
 
             if (sortedNails[middle][0] < plankStart) {
                 low = middle + 1;
-            } else if (sortedNails[middle][0] > plankEnd) {
-                high = middle - 1;
-            } else {
+            } 
 
-                /*
-                 * nails are sorted and we try to find a nail with lower length
-                 * in the next step we will look for the minimum indexs if available
-                 * */
+            else if (sortedNails[middle][0] > plankEnd) {
+                high = middle - 1;
+            } 
+
+            else {
                 high = middle - 1;
                 resultIndex = middle;
             }
         }
 
-        /*
-         * is it possble that sortedNails[resultIndex][0] <= plankEnd and result != -1
-         * but sortedNails[resultIndex][0] < plankStart
-         * */
-
-        /*
-         * low and middle value will be upper end and equal and
-         * high will be 1 less then them
-         * */
         if (resultIndex == -1 || sortedNails[resultIndex][0] > plankEnd) {
             return -1;
         }
 
-
-        /*
-         * get the real index for the nail in the sortedNails matrix
-         * */
         int minIndex = sortedNails[resultIndex][1];
 
-        /*
-         * go upward from the result index to see if a nail with lesser index
-         * would still suffice the condition ie <= the planks end. The found
-         * index has to be just above the old index to suffice the previous
-         * planks.
-         * */
         while (resultIndex < N && sortedNails[resultIndex][0] <= plankEnd) {
 
             minIndex = Math.min(minIndex, sortedNails[resultIndex][1]);

@@ -86,6 +86,46 @@ public class Flags {
      * that can be set on the peaks of the array.
      * */
 
+
+    public static int solution(int[] A) {
+
+        int N = A.length;
+        List<Integer> flags = new ArrayList<>();
+
+        for (int i = 1; i < N - 1; i++) {
+
+            if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
+                flags.add(i);
+            }
+        }
+
+        for (int i = flags.size(); i >= 1; i--) {
+
+            int k = flags.get(0);
+            int count = 1;
+
+            for (int j = 1; j < flags.size(); j++) {
+
+                if ((flags.get(j) - k) / i >= 1) {
+
+                    k = flags.get(j);
+                    count++;
+
+                    if (count == i) {
+                        return count;
+                    }
+                }
+            }
+        }
+
+        return -1;
+    }
+
+
+
+
+
+
     /*
      * solution - a
      */
@@ -144,13 +184,18 @@ public class Flags {
             if (count == K) {
                 result = count;
                 low = K + 1;
-            } else {
+            } 
+
+            // 
+            else {
                 high = K - 1;
             }
         }
 
         return result;
     }
+
+
 
 
     /*

@@ -65,9 +65,12 @@ public class AbsDistinct {
 
             int abs = Math.abs(A[i]);
 
-            if(set.contains(abs)){
-                continue;
-            }
+            /**
+             * It doesn't make sense as the Set<Integer> will make the distinct values
+             **/              
+            // if(set.contains(abs)){
+            //     continue;
+            // }
 
             set.add(abs);
         }

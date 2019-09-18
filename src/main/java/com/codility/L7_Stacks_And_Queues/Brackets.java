@@ -40,7 +40,7 @@ public class Brackets {
         i.   Parentheses ( )
         ii.  Square brackets [ ]
         iii. Braces { }
-        iv.  Angle brackets ⟨ ⟩
+        iv.  Angle brackets ⟨ ⟩ 
     */
 
 
@@ -52,17 +52,22 @@ public class Brackets {
      */
     public static int solution(String S) {
 
-
         Stack<Character> stack = new Stack<Character>();
 
         for (int i = 0; i < S.length(); i++) {
 
             if (stack.size() == 0) {
                 stack.push(S.charAt(i));
-            } else {
+            } 
+
+            // 
+            else {
+
                 if (isMatch(stack.peek(), S.charAt(i))) {
                     stack.pop();
-                } else {
+                } 
+
+                else {
                     stack.push(S.charAt(i));
                 }
             }
@@ -111,27 +116,38 @@ public class Brackets {
                     break;
 
                 case ')':
+                    
                     if (stack.isEmpty() || stack.peek() != '(') {
                         return 0;
-                    } else {
+                    } 
+
+                    // 
+                    else {
                         stack.pop();
                     }
                     
                     break;
 
                 case ']':
+
                     if (stack.isEmpty() || stack.peek() != '[') {
                         return 0;
-                    } else {
+                    } 
+
+                    else {
                         stack.pop();
                     }
+
                     break;
 
 
                 case '}':
+
                     if (stack.isEmpty() || stack.peek() != '{') {
                         return 0;
-                    } else {
+                    } 
+
+                    else {
                         stack.pop();
                     }
 
@@ -180,12 +196,16 @@ public class Brackets {
                 }
 
                 case ')': {
+
                     if (index > 0 && storage[index - 1] == '(') {
                         P--;
                         index--;
-                    } else {
+                    } 
+
+                    else {
                         return 0;
                     }
+
                     break;
                 }
 
@@ -200,12 +220,16 @@ public class Brackets {
                 }
 
                 case ']': {
+
                     if (index > 0 && storage[index - 1] == '[') {
                         S--;
                         index--;
-                    } else {
+                    } 
+
+                    else {
                         return 0;
                     }
+
                     break;
                 }
             }
@@ -231,6 +255,7 @@ public class Brackets {
      */
     public int solution4(String S) {
 
+
         Map<Character, Character> brackets = new HashMap<>();
 
         brackets.put(')', '(');
@@ -238,6 +263,8 @@ public class Brackets {
         brackets.put('}', '{');
 
         Stack<Character> stack = new Stack<>();
+
+
 
         for (int i = 0; i < S.length(); i++) {
 

@@ -31,12 +31,10 @@ For example, for N = 17, the shortest sequence is:
 Write a function:
 
 class Solution { public int solution(int N); }
-
-that, given a positive integer N, returns the length of the shortest possible
-
-sequence of integers satisfying the above conditions and ending with N.
-
-For example, given N = 17, the function should return 6, as explained above.
+    
+    that, given a positive integer N, returns the length of the shortest possible
+    sequence of integers satisfying the above conditions and ending with N.
+    For example, given N = 17, the function should return 6, as explained above.
 
 
 
@@ -44,17 +42,17 @@ For example, given N = 17, the function should return 6, as explained above.
 
 Assume that
 -----------
-
 N is an integer within the range [1..2,147,483,647].
 
 
 Complexity
 ----------
 
-Expected worst-case time complexity is O(log(N));
-
-Expected worst-case space complexity is O(1).. 1po
+    Expected worst-case time complexity is O(log(N));
+    Expected worst-case space complexity is O(1).. 1po
 */
+
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,20 +71,20 @@ public class ShortestSequence {
         List<Integer> list = new ArrayList<>();
         list.add(N);
 
-        boolean isRolling = true;
-
-        while (isRolling) {
-
-            int modulus = N % 2;
+        while (true) {
 
             if (N == 1) {
                 break;
             }
 
+            int modulus = N % 2;
+
             if (modulus == 0) {
                 N = N / 2;
                 list.add(0, N);
-            } else if (modulus == 1) {
+            } 
+
+            else if (modulus == 1) {
                 N = N - 1;
                 list.add(0, N);
             }

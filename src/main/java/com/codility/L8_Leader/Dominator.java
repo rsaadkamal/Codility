@@ -6,9 +6,11 @@ package com.codility.L8_Leader;
 
 For example, consider array A such that
 
- A[0] = 3    A[1] = 4    A[2] =  3
- A[3] = 2    A[4] = 3    A[5] = -1
- A[6] = 3    A[7] = 3
+     A[0] = 3    A[1] = 4    A[2] =  3
+     A[3] = 2    A[4] = 3    A[5] = -1
+     A[6] = 3    A[7] = 3
+
+
 The dominator of A is 3 because it occurs in 5 out of 8 elements of A (namely in those with indices 0, 2, 4, 6 and 7) and 5 is more than A half of 8.
 
 Write A function
@@ -85,9 +87,15 @@ public class Dominator {
 
             if (stack.isEmpty()) {
                 stack.push(a);
-            } else if (stack.peek() == a) {
+            } 
+
+            // 
+            else if (stack.peek() == a) {
                 stack.push(a);
-            } else {
+            } 
+
+            //
+            else {
                 stack.pop();
             }
         }
@@ -97,12 +105,14 @@ public class Dominator {
         }
 
         int dom = stack.peek();
+
         int count = 0;
         int index = -1;
 
         for (int i = 0; i < A.length; i++) {
 
             if (A[i] == dom) {
+
                 count++;
                 index = i;
             }
@@ -142,12 +152,20 @@ public class Dominator {
         for (int i = 0; i < A.length; i++) {
 
             if (size == 0) {
+
                 size++;
                 value = A[i];
-            } else {
+            } 
+
+            // 
+            else {
+
                 if (A[i] == value) {
                     size++;
-                } else {
+                } 
+
+                // 
+                else {
                     size--;
                 }
             }
@@ -183,13 +201,17 @@ public class Dominator {
      * */
     public int solution2(int[] A) {
 
+
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < A.length; i++) {
 
             if (!map.containsKey(A[i])) {
                 map.put(A[i], 1);
-            } else {
+            } 
+
+            // 
+            else {
                 map.put(A[i], map.get(A[i]) + 1);
             }
         }
@@ -197,6 +219,8 @@ public class Dominator {
         int max = Integer.MIN_VALUE;
         int maxElement = -1;
 
+
+        // int max = Collections.max(map.values());
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
 
             if (entry.getValue() > max) {

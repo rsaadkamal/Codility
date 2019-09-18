@@ -79,9 +79,6 @@ public class MissingInteger {
 
         for (int a : A) {
 
-            /*
-             * we consider only the numbers with range of  [1,2,3,....N]
-             * */
             if (a > 0 && a < M) {
 
                 int j = a - 1;
@@ -105,7 +102,7 @@ public class MissingInteger {
      * */
     public static int solution2(int[] A) {
 
-        // store the values sequentially 
+
         Set<Integer> set = new TreeSet<>();
 
         for (int a : A) {
@@ -140,6 +137,7 @@ public class MissingInteger {
     }
 
 
+
     /*
      * solution - d
      * */
@@ -151,9 +149,6 @@ public class MissingInteger {
 
         for (int i = 0; i < A.length; i++) {
 
-            /*
-             * we consider only the numbers with range of  [1,2,3,..,..,N]
-             * */
             if (A[i] > 0 && A[i] <= N) {
                 C[A[i] - 1] = A[i];
             }            
@@ -249,7 +244,6 @@ public class MissingInteger {
     public static int solution6(int[] A) {
 
         int N = A.length;
-
         Set<Integer> set = new TreeSet<>();
 
         for (int i = 0; i < N; i++) {
@@ -279,31 +273,20 @@ public class MissingInteger {
      * */
     public static int solution7(int[] A) {
 
+
         int N = A.length;
 
-        /*
-         * set positions of non-positive or out of
-         * range elements as free (use 0 as marker)
-         * */
         for (int i = 0; i < N; i++) {
 
-            if (A[i] <= 0 || A[i] > A.length) {
+            if (A[i] <= 0 || A[i] > N) {
                 A[i] = 0;
             }
         }
 
-        /*
-         * iterate through the whole array again
-         * mapping elements [1,n] to positions [0, n-1]
-         * */
         for (int i = 0; i < N; i++) {
 
             int prev = A[i];
 
-            /*
-             * while elements are not on their correct
-             * positions keep putting them there
-             * */
             while (prev > 0 && A[prev - 1] != prev) {
 
                 int next = A[prev - 1];
@@ -325,6 +308,7 @@ public class MissingInteger {
 
         return N + 1;
     }
+
 
 
     /*

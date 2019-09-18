@@ -115,7 +115,6 @@ public class Fish {
     public int solution1(int[] A, int[] B) {
 
         int upstreamFish = 0;
-
         int total = A.length;
 
         Stack<Integer> stack = new Stack<Integer>();
@@ -153,10 +152,13 @@ public class Fish {
     }
 
 
+
+
     /*
      * solution - c
      */
     public int solution2(int[] A, int[] B) {
+
 
         int N = A.length;
         int lenOfElements = 0;
@@ -165,19 +167,29 @@ public class Fish {
 
         for (int i = 0; i < A.length; i++) {
 
+
             if (B[i] == 1) {
                 storage[lenOfElements++] = A[i];
-            } else {
+            } 
+
+            // 
+            else {
 
                 while (true) {
 
                     if (lenOfElements == 0) {
                         break;
-                    } else {
+                    } 
+
+                    // 
+                    else {
+
                         if (storage[lenOfElements - 1] < A[i]) {
                             lenOfElements--;
                             N--;
-                        } else {
+                        } 
+
+                        else {
                             N--;
                             break;
                         }

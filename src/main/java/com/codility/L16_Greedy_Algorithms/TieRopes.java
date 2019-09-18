@@ -67,6 +67,7 @@ public class TieRopes {
      * */
     public static int solution(int[] A, int K) {
 
+
         int count = 0;
         int len = 0;
 

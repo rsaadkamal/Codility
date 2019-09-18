@@ -36,6 +36,45 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 public class MaxSliceSum {
 
 
+
+
+    /*
+     * solution - a
+     */
+    public static int solution(int[] A) {
+
+        int N = A.length;
+
+        int max = 0;
+        int result = 0;
+
+        int value = Integer.MIN_VALUE;
+
+        if( N == 1){
+            return  A[0];
+        }
+
+
+        for (int i = 0; i < N; i++) {
+
+            value = A[i] > value? A[i]: value;
+
+            max = (max + A[i]) > 0 ? (max + A[i]) : 0;
+            result = result > max ? result : max;
+        }
+
+        // all of the values are negatives 
+        if(value <=0){
+            return value;
+        }
+
+        return result;
+    }
+
+
+
+
+
     /*
      * solution - a
      */
@@ -143,6 +182,7 @@ public class MaxSliceSum {
      * solution - d
      * */
     public static int solution3(int[] A) {
+
 
         int end = A[0];
         int start = A[0];
