@@ -75,6 +75,7 @@ public class Nesting {
      */
     public static int solution1(String S) {
 
+
         int count = 0;
         char[] chars = S.toCharArray();
 
@@ -82,7 +83,9 @@ public class Nesting {
 
             if (c == '(') {
                 count++;
-            } else if (c == ')') {
+            } 
+
+            else if (c == ')') {
                 count--;
             }
 
@@ -149,7 +152,9 @@ public class Nesting {
 
             if (currentSymbol == closing) {
                 sum--;
-            } else {
+            } 
+
+            else {
                 sum++;
             }
 

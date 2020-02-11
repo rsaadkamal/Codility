@@ -12,7 +12,7 @@ For example, array A such that:
     A[2] = 3
     A[3] = 2
 
-is A permutation, but array A such that:
+Is a permutation, but array A such that:
 
     A[0] = 4
     A[1] = 1
@@ -73,6 +73,7 @@ public class PermCheck {
      */
     public static int solution(int[] A) {
 
+
         for (int i = 0; i < A.length; i++) {
 
             if (A[i] > A.length) {
@@ -85,7 +86,7 @@ public class PermCheck {
 
             int j = A[i] - 1;
 
-            while (j < A.length && A[j] > 0) {
+            while (A[j] > 0 && j < A.length) {
 
                 int k = A[j] - 1;
                 A[j] = 0;
@@ -105,11 +106,11 @@ public class PermCheck {
     }
 
 
+
     /*
      * solution - b
      */
     public static int solution1(int[] A) {
-
 
         /*
          * the time complexity is O(N*log(N))

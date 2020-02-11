@@ -125,6 +125,7 @@ public class NumberOfDiscIntersections {
      * */
     public static int solution(int[] A) {
 
+
         int N = A.length;
         int[] sum = new int[N];
 
@@ -136,8 +137,9 @@ public class NumberOfDiscIntersections {
                 right = i + A[i];
             }             
 
-            else 
+            else {
                 right = N - 1;
+            }
 
             sum[right]++;
         }
@@ -187,7 +189,6 @@ public class NumberOfDiscIntersections {
         return result;
     }
 
-
     /*
      * find the combination of C(N,R) = N!/(R!* (N−R)!)
      * */
@@ -196,6 +197,7 @@ public class NumberOfDiscIntersections {
         BigInteger ret = BigInteger.ONE;
 
         for (int k = 0; k < R; k++) {
+
             ret = ret.multiply(BigInteger.valueOf(N - k))
                     .divide(BigInteger.valueOf(k + 1));
         }
@@ -260,7 +262,6 @@ public class NumberOfDiscIntersections {
         for (int i = 0; i < A.length - 1; i++) {
 
             for (int j = i + 1; j < A.length; j++) {
-
 
                 if (A[i] + i >= j - A[j]) {
 

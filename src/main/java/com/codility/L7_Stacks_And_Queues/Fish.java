@@ -59,11 +59,11 @@ public class Fish {
      * */
     public static int solution(int[] A, int[] B) {
 
+
         Stack<Integer> stack = new Stack<Integer>();
 
         int deadFish = 0;
         int totalFish = A.length;
-
 
         /*
          * 0 represents A fish flowing upstream
@@ -72,34 +72,19 @@ public class Fish {
          * */
         for (int i = 0; i < totalFish; i++) {
 
-            /*
-             * fish flowing upstream
-             * */
             if (B[i] == 0) {
 
                 while (!stack.isEmpty()) {
 
                     deadFish++;
-
-                    /*
-                     * downstream fish eat the upstream fish
-                     * */
                     if (A[i] < A[stack.peek()]) {
                         break;
                     }
 
-                    /*
-                     * upstream fish eat the downstream fish
-                     * we will check if there are more  d/s
-                     * fish can be eaten by u/s
-                     * */
                     stack.pop();
                 }
             }
 
-            /*
-             * fish flowing downstream
-             * */
             else {
                 stack.push(i);
             }
@@ -114,11 +99,11 @@ public class Fish {
      */
     public int solution1(int[] A, int[] B) {
 
+
         int upstreamFish = 0;
         int total = A.length;
 
         Stack<Integer> stack = new Stack<Integer>();
-
 
         for (int i = 0; i < total; i++) {
 
@@ -167,7 +152,6 @@ public class Fish {
 
         for (int i = 0; i < A.length; i++) {
 
-
             if (B[i] == 1) {
                 storage[lenOfElements++] = A[i];
             } 
@@ -181,7 +165,6 @@ public class Fish {
                         break;
                     } 
 
-                    // 
                     else {
 
                         if (storage[lenOfElements - 1] < A[i]) {
@@ -207,6 +190,7 @@ public class Fish {
      */
     public int solution3(int[] A, int[] B) {
 
+
         Stack<Integer> upStream = new Stack<>();
         int survive = 0;
 
@@ -221,18 +205,26 @@ public class Fish {
                     while (upStream.size() > 0 && !eaten) {
 
                         if (A[i] > upStream.lastElement()) {
+                        
                             upStream.pop();
+
                             if (upStream.size() == 0) {
                                 survive++;
                             }
-                        } else {
+                        } 
+
+                        else {
                             eaten = true;
                         }
                     }
-                } else {
+                } 
+
+                else {
                     survive++;
                 }
-            } else {
+            } 
+
+            else {
                 upStream.push(A[i]);
             }
         }

@@ -1,63 +1,70 @@
 
 
+/*
+find the amicable numbers like 220 and 284
 
+
+solution(6000)  ->  4
+solution(10000) ->  5
+*/
+
+// 220
+// 284 
 
 public class AmicableNumbers{
-	
-	public static int findAmicablePairs(int N) {
 
 
+
+
+
+	/*
+	* solution - a
+	*/
+	public static int solution(int N) {
+
+
+        List<Integer> check = new ArrayList<>();
         int count = 0;
 
-        List<Integer> m2 = new ArrayList<>();
+        for (int i = 1; i <= N; i++) {
 
-        for (int i = N; i >= 1; i--) {
+            int u = findDivisors(i);
 
-            List<Integer> l1 = divisors(i);
-
-            int sum = 0;
-
-            for (int j = 0; j < l1.size(); j++) {
-                sum += l1.get(j);
+            if (u == i) {
+                continue;
             }
 
-            List<Integer> l2 = divisors(sum);
+            int v = findDivisors(u);
 
-            int sum2 = 0;
+            if (!check.contains(i) && i == v) {
 
-            for (int j = 0; j < l2.size(); j++) {
-                sum2 += l2.get(j);
-            }
-
-
-            // findAmicablePairs(10000) => 5 // plus (6232, 6368)
-            if (!m2.contains(i) && i == sum2 && i != sum) {
-
-                m2.add(i);
-                m2.add(sum);
-
+                check.add(u);
                 count++;
             }
-
         }
 
         return count;
     }
 
+    public static int findDivisors(int N) {
 
-    public static List<Integer> divisors(int N) {
+        List<Integer> res = new ArrayList<>();
 
-        List<Integer> list = new ArrayList<>();
+        for (int i = 1; i * i <= N; i++) {
 
-        int t = N / 2;
-
-        for (int i = 1; i <= t; i++) {
-
-            if (N % i == 0)
-                list.add(i);
+            if (N % i == 0) {
+                res.add(i);
+                res.add(N / i);
+            }
         }
 
-        return list;
+        Collections.sort(res);
+        res.remove(res.size() - 1);
+
+        int sum = res.stream().distinct().reduce(0, Integer::sum);
+
+        return sum;
     }
+
 
 }

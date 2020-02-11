@@ -34,13 +34,14 @@ import java.util.*;
  */
 public class Brackets {
 
+
     /*
-        Name of the brackets
-        --------------------
-        i.   Parentheses ( )
-        ii.  Square brackets [ ]
-        iii. Braces { }
-        iv.  Angle brackets ⟨ ⟩ 
+    Name of the brackets
+    --------------------
+    i.   Parentheses ( )
+    ii.  Square brackets [ ]
+    iii. Braces { }
+    iv.  Angle brackets ⟨ ⟩ 
     */
 
 
@@ -51,6 +52,7 @@ public class Brackets {
      * solution - a
      */
     public static int solution(String S) {
+
 
         Stack<Character> stack = new Stack<Character>();
 
@@ -76,7 +78,6 @@ public class Brackets {
         return stack.size() == 0 ? 1 : 0;
     }
 
-
     private static boolean isMatch(char a, char b) {
 
         switch (a) {
@@ -84,9 +85,11 @@ public class Brackets {
             case '{': {
                 return b == '}';
             }
+
             case '(': {
                 return b == ')';
             }
+
             case '[': {
                 return b == ']';
             }
@@ -101,6 +104,7 @@ public class Brackets {
      * solution - b
      */
     public int solution1(String S) {
+
 
         Stack<Character> stack = new Stack<Character>();
 
@@ -139,7 +143,6 @@ public class Brackets {
                     }
 
                     break;
-
 
                 case '}':
 
@@ -184,12 +187,14 @@ public class Brackets {
                 }
 
                 case '{': {
+
                     B++;
                     storage[index++] = ch;
                     break;
                 }
 
                 case '[': {
+
                     S++;
                     storage[index++] = ch;
                     break;
@@ -210,10 +215,12 @@ public class Brackets {
                 }
 
                 case '}': {
+
                     if (index > 0 && storage[index - 1] == '{') {
                         B--;
                         index--;
-                    } else {
+                    } 
+                    else {
                         return 0;
                     }
                     break;
@@ -255,7 +262,6 @@ public class Brackets {
      */
     public int solution4(String S) {
 
-
         Map<Character, Character> brackets = new HashMap<>();
 
         brackets.put(')', '(');
@@ -263,8 +269,6 @@ public class Brackets {
         brackets.put('}', '{');
 
         Stack<Character> stack = new Stack<>();
-
-
 
         for (int i = 0; i < S.length(); i++) {
 
@@ -275,25 +279,31 @@ public class Brackets {
                 if (stack.size() == 0) {
                     return 0;
                 }
+
                 if (stack.lastElement() != brackets.get(bracket)) {
                     return 0;
-                } else {
+                } 
+
+                else {
                     stack.pop();
                 }
-            } else {
+            } 
+
+            else {
                 stack.push(bracket);
             }
         }
+
         if (stack.size() != 0) {
             return 0;
         }
+
         return 1;
     }
 
     private boolean isClosingBracket(char bracket) {
         return new ArrayList<>(Arrays.asList(')', ']', '}')).contains(bracket);
     }
-
 
     public static void main(String[] args) {
 

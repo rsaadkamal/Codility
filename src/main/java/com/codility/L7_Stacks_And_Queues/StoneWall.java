@@ -65,37 +65,21 @@ public class StoneWall {
          * */
         for (int i = 1; i < H.length; i++) {
 
-
-            // same
             if (stack.peek() == H[i]) {
                 continue;
             }
 
-            /*
-             * new depth is higher than the previous depth
-             * */
-            else if (stack.peek() < H[i]) {
-                
+            else if (stack.peek() < H[i]) {                
                 stack.push(H[i]);
                 count++;
             }
 
-            /*
-             * new depth is lower than the previous depth
-             * */
             else {
 
                 while (!stack.isEmpty() && H[i] < stack.peek()) {
                     stack.pop();
                 }
 
-                /*
-                 * the new entity is either in same elevation or higher
-                 * */
-
-                /*
-                 * if in same elevation, we already added the block, so keep iterating
-                 * */
                 if (!stack.isEmpty() && H[i] == stack.peek()) {
                     continue;
                 }
@@ -113,6 +97,7 @@ public class StoneWall {
      * solution - b
      */
     public static int solution1(int[] H) {
+
 
         int count = 0;
 

@@ -76,7 +76,9 @@ public class CountFactors {
 
             if (i == (double) Math.sqrt(N)) {
                 result++;
-            } else if (N % i == 0) {
+            } 
+
+            else if (N % i == 0) {
                 result += 2;
             }
         }

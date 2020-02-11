@@ -70,7 +70,7 @@ public class TapeEquilibrium {
     public static int solution(int[] A) {
 
 
-//        int result = Integer.MAX_VALUE;
+//      int result = Integer.MAX_VALUE;
         int result = (1 << 31);
 
         int tmp = 0;
@@ -94,7 +94,6 @@ public class TapeEquilibrium {
      * solution - b
      * */
     public int solution1(int[] A) {
-
 
         int N = A.length;
 
@@ -131,7 +130,9 @@ public class TapeEquilibrium {
 
         if (a <= b) {
             return a;
-        } else {
+        } 
+
+        else {
             return b;
         }
     }
@@ -141,7 +142,6 @@ public class TapeEquilibrium {
      * solution - c
      * */
     public int solution3(int[] A) {
-
 
         int sum = 0;
         int result = Integer.MAX_VALUE;
@@ -172,7 +172,6 @@ public class TapeEquilibrium {
 
         int[] C = new int[A.length];
         C[0] = A[0];
-
 
         for (int i = 1; i < A.length; i++) {
             C[i] = A[i] + C[i - 1];

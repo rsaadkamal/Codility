@@ -57,7 +57,6 @@ public class CyclicRotation {
      * */
     public int[] solution(int[] A, int K) {
 
-
         int N = A.length;
 
         if (A == null || K > N) {
@@ -81,6 +80,12 @@ public class CyclicRotation {
          * ii.  reverse the array from 0 to (K-1)-th index
          * iii. reverse the array from K to end
          * */
+
+        // A = [3, 8, 9, 7, 6]
+        //     [6, 7, 9, 8, 3] 
+        //     [9, 7, 6, 8, 3]
+        //     [9, 7, 6, 3, 8]
+
 
         reverse(A, 0, N - 1);
         reverse(A, 0, K - 1);
@@ -112,11 +117,9 @@ public class CyclicRotation {
         }
     }
 
-
     public static int swap(int itself, int dummy) {
         return itself;
     }
-
 
     /*
      * solution - b

@@ -1,9 +1,10 @@
 package com.codility.L1_Iterations;
 
+
 /*
 * A binary gap within A positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
 
-For example, number 9 has binary representation 1001 and contains FrogJmp binary gap of length 2. The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3. The number 20 has binary representation 10100 and contains one binary gap of length 1. The number 15 has binary representation 1111 and has no binary gaps. The number 32 has binary representation 100000 and has no binary gaps.
+For example, number 9 has binary representation 1001 and contains the binary gap of length 2. The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3. The number 20 has binary representation 10100 and contains one binary gap of length 1. The number 15 has binary representation 1111 and has no binary gaps. The number 32 has binary representation 100000 and has no binary gaps.
 
 Write A function:
 
@@ -53,6 +54,7 @@ public class BinaryGap {
      * */
     public int solution1(int N) {
 
+
 //        int max = Integer.MIN_VALUE;
         int max = ((1 << 31) - 1);
 
@@ -69,6 +71,7 @@ public class BinaryGap {
             if (s == null) {
                 continue;
             }
+
             max = max > s.length() ? max : s.length();
         }
 
@@ -122,7 +125,9 @@ public class BinaryGap {
 
             if (binary.charAt(j) == '0') {
                 zerosCount++;
-            } else {
+            } 
+
+            else {
                 max = Math.max(zerosCount, max);
                 zerosCount = 0;
             }

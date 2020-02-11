@@ -66,16 +66,19 @@ public class EquiLeader {
      * the number of equi leaders.
      * */
 
+
     /*
      * solution - a
      */
     public static int solution(int[] A) {
+
 
         Stack<Integer> stack = new Stack<Integer>();
 
         for (int i = 0; i < A.length; i++) {
 
             if (stack.isEmpty()) {
+
                 stack.push(A[i]);
                 continue;
             }
@@ -90,9 +93,6 @@ public class EquiLeader {
             }
         }
 
-        /*
-         * there's no dominator
-         * */
         if (stack.isEmpty()) {
             return 0;
         }
@@ -113,7 +113,6 @@ public class EquiLeader {
 
         int numOfNonDominator = A.length - numOfDominator;
 
-        // clear the memory
         stack.clear();
 
         int dominatorInCurrentSec = 0;
@@ -125,7 +124,9 @@ public class EquiLeader {
 
             if (A[i] == dominator) {
                 dominatorInCurrentSec++;
-            } else {
+            } 
+
+            else {
                 nonDominatorInCurrentSec++;
             }
 
@@ -137,6 +138,7 @@ public class EquiLeader {
             if (dominatorInCurrentSec > nonDominatorInCurrentSec && (numOfDominator - dominatorInCurrentSec) > (numOfNonDominator - nonDominatorInCurrentSec)) {
                 numOfEquiLeaders++;
             }
+
         }
 
         return numOfEquiLeaders;
@@ -157,18 +159,21 @@ public class EquiLeader {
         int value = A[0];
         int size = 0;
 
-
         for (int i = 0; i < A.length; i++) {
 
             if (size == 0) {
 
                 size++;
                 value = A[i];
-            } else {
+            } 
+
+            else {
 
                 if (A[i] == value) {
                     size++;
-                } else {
+                } 
+
+                else {
                     size--;
                 }
             }
@@ -182,6 +187,7 @@ public class EquiLeader {
         }
 
         for (int i = 0; i < A.length; i++) {
+
             if (A[i] == candidate) {
                 count++;
             }
@@ -191,12 +197,10 @@ public class EquiLeader {
             return 0;
         }
 
-
         int leader = candidate;
 
         int equiCount = 0;
         int leaderCount = 0;
-
 
         for (int i = 0; i < A.length; i++) {
 
@@ -224,7 +228,10 @@ public class EquiLeader {
 
             if (stack.isEmpty()) {
                 stack.push(A[i]);
-            } else {
+            } 
+
+            else {
+            
                 if (stack.lastElement() != A[i]) {
                     stack.pop();
                 } else {

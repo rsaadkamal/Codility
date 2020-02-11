@@ -113,11 +113,11 @@ public class CountCities {
 
     private static class Node {
 
-
         private int key;
         private ArrayList<Node> adjacents;
 
         public Node(int v) {
+
             this.key = v;
             this.adjacents = new ArrayList<Node>();
         }
@@ -152,7 +152,9 @@ public class CountCities {
 
             if (T[i] == i) {
                 root = nodes[i];
-            } else {
+            } 
+
+            else {
                 nodes[T[i]].addAdjacentNode(nodes[i]);
             }
         }
@@ -204,11 +206,12 @@ public class CountCities {
         return lists;
     }
 
+
     public static void getSameLevelNodes1(Node node, ArrayList<LinkedList<Node>> lists, int level) {
 
         /*
-            ALGORITHM
-            ---------
+        ALGORITHM
+        ---------
 
             i.   if the list size is the same as the level, create a new instance of list
 
@@ -218,7 +221,6 @@ public class CountCities {
 
             iv. continue the recursive process till where is no child
         */
-
         if (node == null) {
             return;
         }
@@ -226,6 +228,7 @@ public class CountCities {
         LinkedList<Node> list = null;
 
         if (lists.size() == level) {
+
             list = new LinkedList<Node>();
             lists.add(list);
         } 
@@ -250,6 +253,7 @@ public class CountCities {
 
         Node root = createGraph(T);
         ArrayList<LinkedList<Node>> v = getSameLevelNodes(root);
+
 
         int index = 0;
         int N = T.length;

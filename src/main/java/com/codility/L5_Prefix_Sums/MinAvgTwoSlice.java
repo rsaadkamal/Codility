@@ -69,6 +69,7 @@ public class MinAvgTwoSlice {
      * */
     public static int solution(int[] A) {
 
+
         /*
 		ALGORITHM
 		---------
@@ -76,13 +77,9 @@ public class MinAvgTwoSlice {
 		PREMISE: The slice provides the min average will formed of 2 to 3 elements
 
 			0.   define the startIndex = 0 and endIndex = 1
-
 			i.   get the avg for the initial 2 elments (with these indexs)
-
 			ii.  get the avg for the initial 3 elments by moving the end index one step
-
 			iii. update the result comparing them
-
 			iv.  move forward the endIndex 1 step and repeat the process key
         */
 
@@ -128,6 +125,7 @@ public class MinAvgTwoSlice {
             temp = (double) sum / (head - tail + 1);
 
             if (temp < min) {
+
                 result = tail;
                 min = temp;
             }
@@ -142,7 +140,6 @@ public class MinAvgTwoSlice {
 
 
         int startIndex = 0;
-
         double min = (double) (A[0] + A[1]) / 2;
 
 

@@ -120,7 +120,6 @@ public class Distinct {
      */
     public int solution4(int[] A) {
 
-
         if (A.length == 0) {
             return 0;
         }

@@ -116,7 +116,9 @@ public class MinAbsSum {
                  * */
                 if (Total[j] >= 0) {
                     Total[j] = counts[i];
-                } else if (j - i >= 0 && Total[j - i] > 0) {
+                } 
+
+                else if (j - i >= 0 && Total[j - i] > 0) {
                     Total[j] = Total[j - i] - 1;
                 }
 

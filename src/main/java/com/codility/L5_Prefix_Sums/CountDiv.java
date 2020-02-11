@@ -49,6 +49,7 @@ public class CountDiv {
      */
     public static int solution(int A, int B, int K) {
 
+
         // if (A % K == 0) {
         if (A % K == 0 || B % K == 0) {
             return 1 + (B - A) / K;
@@ -80,15 +81,13 @@ public class CountDiv {
 
         int b = B / K;
 
-        int a = (A > 0 ? (A - 1) / K : 0);
-
+        int a = A > 0 ? (A - 1) / K : 0;
 
         /*
          * if A > 0,
          *
          * result is (B - A + 1)/K
          * */
-
         if (A == 0) {
             b++;
         }

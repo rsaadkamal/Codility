@@ -125,7 +125,6 @@ public class Dominator {
         // index of the first occurance of "domCandidate"
         int indexOfTwo = ArrayUtils.indexOf(A, domCandidate);
         */
-
         return count > A.length / 2 ? index : -1;
     }
 
@@ -152,25 +151,21 @@ public class Dominator {
         for (int i = 0; i < A.length; i++) {
 
             if (size == 0) {
-
                 size++;
                 value = A[i];
             } 
 
-            // 
             else {
 
                 if (A[i] == value) {
                     size++;
                 } 
 
-                // 
                 else {
                     size--;
                 }
             }
         }
-
 
         int candidate = -1;
 
@@ -192,8 +187,10 @@ public class Dominator {
         if (count > A.length / 2) {
             return index;
         }
+
         return -1;
     }
+
 
 
     /*

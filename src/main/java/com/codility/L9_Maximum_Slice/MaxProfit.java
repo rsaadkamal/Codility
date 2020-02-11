@@ -69,14 +69,13 @@ public class MaxProfit {
      */
     public static int solution(int[] A) {
 
-
         int N = A.length;
 
         int result = 0;
         int max = 0;
 
         for (int i = 1; i < N; i++) {
-                  
+                    
             max = Math.max(0, max + A[i] - A[i - 1]);
             result = Math.max(max, result);
         }
@@ -94,7 +93,6 @@ public class MaxProfit {
      * */
     public static int solution1(int[] A) {
 
-
         int min = Integer.MAX_VALUE;
         int result = 0;
 
@@ -108,7 +106,7 @@ public class MaxProfit {
 
             if (diff > result) {
                 result = diff;
-            }
+            }            
         }
 
         return result;

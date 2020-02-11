@@ -35,6 +35,7 @@ expected worst-case space complexity is O(1).
 * */
 
 
+
 /**
  * Created by Chaklader on 6/23/18.
  */
@@ -47,7 +48,6 @@ public class FrogJmp {
     public static int solution(int X, int Y, int D) {
         return (int) Math.ceil((float) (Y - X) / D);
     }
-
 
     /*
      * solution - b
@@ -70,11 +70,12 @@ public class FrogJmp {
      * */
     public int solution2(int X, int Y, int D) {
 
+
         int result = 0;
-        int diff = Y - X;
+        int diff = (Y - X);
 
         if (diff % D == 0) {
-
+                                    
             result = diff / D;
             return result;
         } 

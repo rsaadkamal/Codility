@@ -174,6 +174,7 @@ public class GenomicRangeQuery {
      * */
     public int[] solution2(String S, int[] P, int[] Q) {
 
+
         /*
          * used jagged array to hold the prefix sums of each A, C
          * and G genoms we don't need to get prefix sums of T

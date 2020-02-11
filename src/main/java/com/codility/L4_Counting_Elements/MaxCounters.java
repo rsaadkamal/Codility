@@ -13,6 +13,7 @@ if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
 if A[K] = N + 1 then operation K is getMax counter.
 For example, given integer N = 5 and array A such that:
 
+
     A[0] = 3
     A[1] = 4
     A[2] = 4
@@ -20,6 +21,7 @@ For example, given integer N = 5 and array A such that:
     A[4] = 1
     A[5] = 4
     A[6] = 4
+
 the values of the counters after each consecutive operation will be:
 
     (0, 0, 1, 0, 0)
@@ -34,12 +36,7 @@ The goal is to calculate the value of every counter after all operations.
 
 Write A function:
 
-    class Solution {
-
-        public int[] solution(int N, int[] A){
-
-        }
-    }
+    class Solution { public int[] solution(int N, int[] A){}}
 
 that, given an integer N and A non-empty array A consisting of M integers, returns A sequence of integers representing the values of the counters.
 
@@ -72,14 +69,19 @@ expected worst-case space complexity is O(N) (not counting the storage required 
 * */
 
 
+
+
 /**
  * Created by Chaklader on 6/23/18.
  */
 public class MaxCounters {
 
+
+
     /*
      * expected worst-case time complexity is O(N+M) and expected worst-case space complexity is O(N)
      * */
+
     /*
      * Algorithm
      * ---------
@@ -128,6 +130,7 @@ public class MaxCounters {
              *  (3, 2, 2, 4, 2)    (3, 0, 1, 4, 0)
              *
              *                     (3, 2, 2, 4, 2)
+             *
              */
             if (1 <= A[i] && A[i] <= N) {
 
@@ -161,7 +164,6 @@ public class MaxCounters {
     /*
     * solution - a1
     */
-
     public static int[] solution(int N, int[] A) {
 
         int[] result = new int[N];
@@ -185,11 +187,10 @@ public class MaxCounters {
 
 //                result[A[i] -1] = Math.max(result[A[i]-1], curr);
                 result[A[i] - 1]++;
-
                 max = Math.max(max, result[A[i] - 1]);
-            } else if (A[i] == N + 1) {
+            } 
 
-
+            else if (A[i] == N + 1) {
                 bol = true;
                 curr = max;
             }
@@ -217,6 +218,7 @@ public class MaxCounters {
      * */
     public int[] solution1(int N, int[] A) {
 
+
         int[] C = new int[N];
 
         int currMax = 0;
@@ -234,7 +236,6 @@ public class MaxCounters {
                 }
 
                 C[A[i] - 1]++;
-
                 currMax = Math.max(currMax, C[A[i] - 1]);
             }
 

@@ -63,11 +63,14 @@ public class PassingCars {
 
         int N = A.length;
 
-        for (int i =  N- 1; i >= 0; i--) {
+        for (int i = N-1; i >= 0; i--) {
 
             if (A[i] == 1) {
                 ones++;
-            } else {
+            } 
+
+            else {
+
                 result += ones;
 
                 if (result > 1000000000) {
@@ -94,7 +97,9 @@ public class PassingCars {
 
             if (A[i] == 0) {
                 countZero++;
-            } else {
+            } 
+
+            else {
                 result += countZero;
             }
         }
@@ -116,13 +121,12 @@ public class PassingCars {
         int pair = 0;
         int counter = 0;
 
+
         for (int i = A.length - 1; i >= 0; i--) {
 
             counter++;
 
-            if (A[i] == 1) {
-//                countOne++;
-            } else if (A[i] == 0) {
+            if (A[i] == 0) {
 
                 countZero++;
                 pair += counter - countZero;
@@ -163,6 +167,4 @@ public class PassingCars {
 
         return sum;
     }
-
-
 }

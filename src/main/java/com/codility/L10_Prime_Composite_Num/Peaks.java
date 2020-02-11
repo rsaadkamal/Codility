@@ -7,18 +7,19 @@ A peak is an array element which is larger than its neighbors. More precisely, i
 
 For example, the following array A:
 
-    A[0] = 1
-    A[1] = 2
-    A[2] = 3
-    A[3] = 4
-    A[4] = 3
-    A[5] = 4
-    A[6] = 1
-    A[7] = 2
-    A[8] = 3
-    A[9] = 4
-    A[10] = 6
-    A[11] = 2
+        A[0] = 1
+        A[1] = 2
+        A[2] = 3
+        A[3] = 4
+        A[4] = 3
+        A[5] = 4
+        A[6] = 1
+        A[7] = 2
+        A[8] = 3
+        A[9] = 4
+        A[10] = 6
+        A[11] = 2
+
 has exactly three peaks: 3, 5, 10.
 
 We want to divide this array into blocks containing the same number of elements. More precisely, we want to choose A number K that will yield the following blocks:
@@ -100,15 +101,14 @@ public class Peaks {
 
         int N = A.length;
 
-        ArrayList<Integer> peaks = new ArrayList<Integer>();
+        List<Integer> peaks = new ArrayList<Integer>();
 
-        for (int i = 1; i < A.length - 1; i++) {
+        for (int i = 1; i < (A.length - 1); i++) {
 
             if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
                 peaks.add(i);
             }
         }
-
 
         // int[] A = new int[12];
 
@@ -163,7 +163,7 @@ public class Peaks {
 
         List<Integer> peaks = new ArrayList<>();
 
-        for (int i = 1; i < N - 1; i++) {
+        for (int i = 1; i < (N - 1); i++) {
 
             if (A[i - 1] < A[i] && A[i] > A[i + 1]) {
                 peaks.add(i);

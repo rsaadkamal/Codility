@@ -127,6 +127,7 @@ public class MaxDoubleSliceSum {
     // corerctness: 100%
     public static int solution(int[] A) {
 
+
         int N = A.length;
 
         int[] A1 = new int[N];
@@ -135,6 +136,7 @@ public class MaxDoubleSliceSum {
         int max = 0;
 
         for (int i = 1; i < (N - 2); i++) {        
+
             max = (A[i] + max) > 0 ? (A[i] + max) : 0;
             A1[i] = max;
         }
@@ -142,6 +144,7 @@ public class MaxDoubleSliceSum {
         max = 0;
 
         for (int i = N - 2; i > 1; i--) {
+
             max = (A[i] + max) > 0 ? (A[i] + max) : 0;
             A2[i] = max;
         }
@@ -162,6 +165,7 @@ public class MaxDoubleSliceSum {
      * solution - a1
      * */
     public static int solution(int[] A) {
+
 
         int max = 0;
         int N = A.length;

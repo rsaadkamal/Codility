@@ -86,13 +86,13 @@ public class Flags {
      * that can be set on the peaks of the array.
      * */
 
-
     public static int solution(int[] A) {
+
 
         int N = A.length;
         List<Integer> flags = new ArrayList<>();
 
-        for (int i = 1; i < N - 1; i++) {
+        for (int i = 1; i < (N - 1); i++) {
 
             if (A[i] > A[i - 1] && A[i] > A[i + 1]) {
                 flags.add(i);

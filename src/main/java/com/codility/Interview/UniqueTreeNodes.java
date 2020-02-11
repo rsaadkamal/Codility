@@ -109,7 +109,6 @@ public class UniqueTreeNodes {
         }
     }
 
-
     public static List<List<Node>> findAllPaths(List<List<Node>> paths, Node node, List<Node> path) {
 
         if (node == null) {
