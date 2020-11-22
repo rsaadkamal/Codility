@@ -105,18 +105,15 @@ public class BinaryGap {
          *
          * */
 
-
         int j = 0;
 
         for (int i = 0; i < len; i++, j++) {
-
             if (binary.charAt(i) == '0') {
                 continue;
-            } else {
+            } 
+            else 
                 break;
-            }
         }
-
 
         int max = 0;
         int zerosCount = 0;
@@ -136,9 +133,7 @@ public class BinaryGap {
         return max;
     }
 
-
     public static void main(String[] args) {
-
         System.out.println(solution2(1041));
     }
 }

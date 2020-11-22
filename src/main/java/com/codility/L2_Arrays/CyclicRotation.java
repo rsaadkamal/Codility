@@ -72,7 +72,6 @@ public class CyclicRotation {
             return A;
         }
 
-
         /*
          * Algorithm
          * ---------
@@ -85,7 +84,6 @@ public class CyclicRotation {
         //     [6, 7, 9, 8, 3] 
         //     [9, 7, 6, 8, 3]
         //     [9, 7, 6, 3, 8]
-
 
         reverse(A, 0, N - 1);
         reverse(A, 0, K - 1);
@@ -100,7 +98,6 @@ public class CyclicRotation {
     public static void reverse(int[] A, int start, int end) {
 
         int i = start, j = end;
-
         while (i < j) {
 
             if (A[i] != A[j]) {
@@ -136,9 +133,8 @@ public class CyclicRotation {
                 map.put(i + K - N, A[i]);
             } 
 
-            else {
-                map.put(i + K, A[i]);
-            }
+            else 
+                map.put(i + K, A[i]);            
         }
 
         for (Map.Entry<Integer, Integer> e : map.entrySet()) {

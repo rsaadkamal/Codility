@@ -14,14 +14,10 @@ solution(10000) ->  5
 public class AmicableNumbers{
 
 
-
-
-
 	/*
 	* solution - a
 	*/
 	public static int solution(int N) {
-
 
         List<Integer> check = new ArrayList<>();
         int count = 0;
