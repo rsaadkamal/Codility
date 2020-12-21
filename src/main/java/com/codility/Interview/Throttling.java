@@ -534,4 +534,27 @@ public class App {
 
     }
 
+
+
+    public static int droppedRequests(List<Integer> requestTime) {
+
+        int[] requestTimeArr = requestTime.stream().mapToInt(i->i).toArray();
+
+        int dropped = 0;
+
+        for (int i = 0 ; i < requestTimeArr.length ; i++) {
+
+            if (i > 2 && requestTimeArr[i] == requestTimeArr[i-3]) {
+                ++dropped;
+            } else if (i > 19 && (requestTimeArr[i] - requestTimeArr[i-20]) < 10) {
+                ++dropped;
+            } else if (i > 59 && (requestTimeArr[i] - requestTimeArr[i-60]) < 60) {
+                ++dropped;
+            }
+        }
+
+        return dropped;
+    }
+
+
 }

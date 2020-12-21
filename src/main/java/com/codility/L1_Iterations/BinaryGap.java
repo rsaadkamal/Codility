@@ -104,7 +104,6 @@ public class BinaryGap {
          *
          *
          * */
-
         int j = 0;
 
         for (int i = 0; i < len; i++, j++) {
@@ -134,6 +133,7 @@ public class BinaryGap {
     }
 
     public static void main(String[] args) {
+
         System.out.println(solution2(1041));
     }
 }

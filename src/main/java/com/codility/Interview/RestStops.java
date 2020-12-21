@@ -86,9 +86,11 @@ public class RestStops {
         int N = A.length;
         int count = 0;
 
+
         Arrays.sort(A);
         Arrays.sort(B);
         Arrays.sort(C);
+
 
         for (int i = 0; i < N; i++) {
 
@@ -134,10 +136,12 @@ public class RestStops {
             return (N - 1);
         }
 
+
         int low = 0;
         int high = N - 1;
 
         int result = -1;
+
 
         while (low <= high) {
 
@@ -181,8 +185,10 @@ public class RestStops {
             return -1;
         }
 
+
         int low = 0;
         int high = N - 1;
+
 
         while (low <= high) {
 
